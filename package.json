@@ -1,0 +1,11 @@
+{
+  "name": "municipio-project-aggregator",
+  "version": "1.0.0",
+  "description": "Aggregates open GitHub issues and pull requests labelled 'municipio' into a static HTML dashboard.",
+  "scripts": {
+    "build": "node src/build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
