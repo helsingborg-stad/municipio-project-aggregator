@@ -3,9 +3,9 @@
 /**
  * Municipio Project Aggregator – Build Script
  *
- * Fetches all open GitHub issues and pull requests labelled "municipio"
- * from the helsingborg-stad organisation via the GitHub GraphQL API,
- * then generates a static HTML file at dist/index.html.
+ * Discovers GitHub repositories with the "getmunicipio" topic across all
+ * organisations, fetches their open issues and pull requests via the
+ * GitHub GraphQL API, then generates a static HTML file at dist/index.html.
  *
  * Requires the GITHUB_TOKEN environment variable to be set.
  */
@@ -16,8 +16,7 @@ const fs   = require('fs');
 const path = require('path');
 const https = require('https');
 
-const ORG_NAME    = 'helsingborg-stad';
-const LABEL       = 'municipio';
+const TOPIC       = 'getmunicipio';
 const GITHUB_API  = 'https://api.github.com/graphql';
 const OUT_DIR     = path.join(__dirname, '..', 'dist');
 const OUT_FILE    = path.join(OUT_DIR, 'index.html');
@@ -67,20 +66,47 @@ function httpPost(url, headers, body) {
 }
 
 /**
- * Builds the GraphQL query for a single page of search results.
+ * Builds the GraphQL query for a single page of repository search results
+ * filtered by the configured topic.
  *
- * @param {'issue'|'pr'} type       - Whether to search for issues or pull requests.
- * @param {string|null}  afterCursor - Pagination cursor (null for first page).
+ * @param {string|null} afterCursor - Pagination cursor (null for first page).
  * @returns {string} The GraphQL query string.
  */
-function buildQuery(type, afterCursor) {
+function buildRepoQuery(afterCursor) {
+  const queryStr = `topic:${TOPIC}`;
+  const after    = afterCursor ? `, after: "${afterCursor}"` : '';
+
+  return `{
+    search(query: "${queryStr}", type: REPOSITORY, first: ${PAGE_SIZE}${after}) {
+      pageInfo { hasNextPage endCursor }
+      nodes {
+        ... on Repository {
+          nameWithOwner
+          name
+          owner { login }
+        }
+      }
+    }
+  }`;
+}
+
+/**
+ * Builds the GraphQL query for a single page of issue or PR search results
+ * within a specific repository.
+ *
+ * @param {'issue'|'pr'} type         - Whether to search for issues or pull requests.
+ * @param {string}       repoFullName - Full repository name (owner/repo).
+ * @param {string|null}  afterCursor  - Pagination cursor (null for first page).
+ * @returns {string} The GraphQL query string.
+ */
+function buildItemQuery(type, repoFullName, afterCursor) {
   const isPr      = type === 'pr';
   const typeFlag  = isPr ? 'is:pr' : 'is:issue';
-  const queryStr  = `org:${ORG_NAME} label:${LABEL} ${typeFlag} is:open`;
+  const queryStr  = `repo:${repoFullName} ${typeFlag} is:open`;
   const after     = afterCursor ? `, after: "${afterCursor}"` : '';
   const fragment  = isPr
-    ? `... on PullRequest { title url createdAt repository { name } }`
-    : `... on Issue       { title url createdAt repository { name } }`;
+    ? `... on PullRequest { title url createdAt repository { nameWithOwner name } }`
+    : `... on Issue       { title url createdAt repository { nameWithOwner name } }`;
 
   return `{
     search(query: "${queryStr}", type: ISSUE, first: ${PAGE_SIZE}${after}) {
@@ -114,20 +140,53 @@ async function runQuery(token, query) {
 }
 
 /**
- * Fetches all pages of a given search type (issues or PRs) and returns
- * a flat array of normalised items.
+ * Fetches all repositories with the configured topic across all organisations.
  *
- * @param {string}       token - GitHub token.
- * @param {'issue'|'pr'} type  - Search type.
+ * @param {string} token - GitHub token.
+ * @returns {Promise<Array<{nameWithOwner: string, name: string, owner: string}>>}
+ */
+async function fetchRepositories(token) {
+  const repos  = [];
+  let cursor   = null;
+  let hasNext  = true;
+
+  while (hasNext) {
+    const query = buildRepoQuery(cursor);
+    const data  = await runQuery(token, query);
+    const page  = data.search;
+
+    for (const node of page.nodes) {
+      if (node && node.nameWithOwner) {
+        repos.push({
+          nameWithOwner: node.nameWithOwner,
+          name:          node.name,
+          owner:         node.owner.login,
+        });
+      }
+    }
+
+    hasNext = page.pageInfo.hasNextPage;
+    cursor  = page.pageInfo.endCursor;
+  }
+
+  return repos;
+}
+
+/**
+ * Fetches all open items (issues or PRs) for a single repository.
+ *
+ * @param {string}       token        - GitHub token.
+ * @param {'issue'|'pr'} type         - Search type.
+ * @param {string}       repoFullName - Full repository name (owner/repo).
  * @returns {Promise<Array<{title: string, url: string, repository: string, createdAt: string}>>}
  */
-async function fetchAll(token, type) {
+async function fetchItemsForRepo(token, type, repoFullName) {
   const items  = [];
   let cursor   = null;
   let hasNext  = true;
 
   while (hasNext) {
-    const query = buildQuery(type, cursor);
+    const query = buildItemQuery(type, repoFullName, cursor);
     const data  = await runQuery(token, query);
     const page  = data.search;
 
@@ -136,7 +195,7 @@ async function fetchAll(token, type) {
         items.push({
           title:      node.title,
           url:        node.url,
-          repository: node.repository.name,
+          repository: node.repository.nameWithOwner,
           createdAt:  node.createdAt,
         });
       }
@@ -439,8 +498,7 @@ function generateHtml(issues, prs) {
     <header class="site-header">
       <h1 class="site-header__title">Municipio Issues &amp; PRs</h1>
       <p class="site-header__subtitle">
-        Open items labelled <strong>${escapeHtml(LABEL)}</strong> across the
-        <strong>${escapeHtml(ORG_NAME)}</strong> organisation &mdash;
+        Open items from repositories with the <strong>${escapeHtml(TOPIC)}</strong> topic &mdash;
         last updated <time id="updated">${escapeHtml(updatedAt)}</time>
       </p>
     </header>
@@ -490,18 +548,29 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`Fetching issues for org: ${ORG_NAME}, label: ${LABEL} …`);
-  const [issues, prs] = await Promise.all([
-    fetchAll(token, 'issue'),
-    fetchAll(token, 'pr'),
-  ]);
+  console.log(`Fetching repositories with topic: ${TOPIC} …`);
+  const repos = await fetchRepositories(token);
+  console.log(`  Found ${repos.length} repository(ies).`);
 
-  issues.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-  prs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  const allIssues = [];
+  const allPrs    = [];
 
-  console.log(`  Found ${issues.length} issue(s) and ${prs.length} PR(s).`);
+  for (const repo of repos) {
+    console.log(`  Fetching issues and PRs for ${repo.nameWithOwner} …`);
+    const [issues, prs] = await Promise.all([
+      fetchItemsForRepo(token, 'issue', repo.nameWithOwner),
+      fetchItemsForRepo(token, 'pr', repo.nameWithOwner),
+    ]);
+    allIssues.push(...issues);
+    allPrs.push(...prs);
+  }
 
-  const html = generateHtml(issues, prs);
+  allIssues.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  allPrs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  console.log(`  Total: ${allIssues.length} issue(s) and ${allPrs.length} PR(s).`);
+
+  const html = generateHtml(allIssues, allPrs);
 
   if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR, { recursive: true });
