@@ -552,18 +552,19 @@ async function main() {
   const repos = await fetchRepositories(token);
   console.log(`  Found ${repos.length} repository(ies).`);
 
-  const allIssues = [];
-  const allPrs    = [];
+  const results = await Promise.all(
+    repos.map(async (repo) => {
+      console.log(`  Fetching issues and PRs for ${repo.nameWithOwner} …`);
+      const [issues, prs] = await Promise.all([
+        fetchItemsForRepo(token, 'issue', repo.nameWithOwner),
+        fetchItemsForRepo(token, 'pr', repo.nameWithOwner),
+      ]);
+      return { issues, prs };
+    })
+  );
 
-  for (const repo of repos) {
-    console.log(`  Fetching issues and PRs for ${repo.nameWithOwner} …`);
-    const [issues, prs] = await Promise.all([
-      fetchItemsForRepo(token, 'issue', repo.nameWithOwner),
-      fetchItemsForRepo(token, 'pr', repo.nameWithOwner),
-    ]);
-    allIssues.push(...issues);
-    allPrs.push(...prs);
-  }
+  const allIssues = results.flatMap((r) => r.issues);
+  const allPrs    = results.flatMap((r) => r.prs);
 
   allIssues.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   allPrs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
