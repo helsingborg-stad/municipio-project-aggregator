@@ -160,6 +160,8 @@ function FilterBar({ filters, filterOptions, onFilterChange }) {
 }
 
 function RepositoryCatalogPanel({ repositories }) {
+  const repositoryCardClassName = 'rounded-3xl border border-white/10 bg-slate-900/70 p-5';
+
   return (
     <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
       <CardHeader className="flex flex-col gap-4 border-b border-white/10 bg-white/5 md:flex-row md:items-end md:justify-between">
@@ -203,7 +205,7 @@ function RepositoryCatalogPanel({ repositories }) {
 
               if (!repository.url) {
                 return (
-                  <div key={repository.fullName} className="rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+                  <div key={repository.fullName} className={repositoryCardClassName}>
                     {content}
                   </div>
                 );
@@ -215,7 +217,7 @@ function RepositoryCatalogPanel({ repositories }) {
                   href={repository.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-cyan-300/40 hover:bg-slate-900"
+                  className={`group ${repositoryCardClassName} transition-colors hover:border-cyan-300/40 hover:bg-slate-900`}
                 >
                   {content}
                 </a>
@@ -229,6 +231,8 @@ function RepositoryCatalogPanel({ repositories }) {
 }
 
 function AuthorDirectoryPanel({ authors }) {
+  const authorCardClassName = 'rounded-3xl border border-white/10 bg-slate-900/70 p-5';
+
   return (
     <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
       <CardHeader className="flex flex-col gap-4 border-b border-white/10 bg-white/5 md:flex-row md:items-end md:justify-between">
@@ -252,7 +256,7 @@ function AuthorDirectoryPanel({ authors }) {
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {authors.map((author) => {
               const content = (
-                <div className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-fuchsia-300/40 hover:bg-slate-900">
+                <div className={author.url ? `group ${authorCardClassName} transition-colors hover:border-fuchsia-300/40 hover:bg-slate-900` : authorCardClassName}>
                   <div className="flex items-center gap-4">
                     <AvatarImage person={author} sizeClassName="h-14 w-14" fallbackTextClassName="text-base" />
                     <div className="min-w-0">
