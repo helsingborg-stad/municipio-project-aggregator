@@ -27,12 +27,15 @@ if ($token === false || $token === '') {
     exit(1);
 }
 
+$itemLookbackDays = resolveItemLookbackDays();
+
 $config = new BuildConfig(
     sourceScope: 'GitHub',
     topics: ['municipio-se', 'getmunicipio'],
     token: $token,
     outputDirectory: $projectRoot . '/public/data',
     generatedAt: new \DateTimeImmutable(),
+    itemLookbackDays: $itemLookbackDays,
 );
 
 $aggregator = new GitHubSourceAggregator(
@@ -46,4 +49,25 @@ foreach ([SourceType::Issues, SourceType::PullRequests] as $sourceType) {
     $payload = $aggregator->aggregate($sourceType, $config);
     $filePath = $writer->write($payload);
     fwrite(STDOUT, sprintf("  Wrote %s\n", $filePath));
+}
+
+/**
+ * @return int
+ */
+function resolveItemLookbackDays(): int
+{
+    $configuredValue = getenv('ITEM_LOOKBACK_DAYS');
+
+    if ($configuredValue === false || $configuredValue === '') {
+        return 365;
+    }
+
+    $lookbackDays = filter_var($configuredValue, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+
+    if (!is_int($lookbackDays)) {
+        fwrite(STDERR, "Error: ITEM_LOOKBACK_DAYS must be a positive integer.\n");
+        exit(1);
+    }
+
+    return $lookbackDays;
 }
