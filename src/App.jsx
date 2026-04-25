@@ -567,14 +567,13 @@ export default function App() {
           {status === 'ready' && (
             <Tabs defaultValue={sources[0].key} className="space-y-6">
               <TabsList
-                className="grid w-full max-w-4xl rounded-full border border-white/10 bg-slate-950/60 p-1"
-                style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}
+                className="grid w-full max-w-4xl grid-cols-2 rounded-3xl border border-white/10 bg-slate-950/60 p-1 sm:grid-cols-4 sm:rounded-full"
               >
                 {tabs.map((tab) => {
                   const Icon = tab.icon;
                   return (
-                    <TabsTrigger key={tab.key} value={tab.key} className="rounded-full data-[state=active]:bg-white data-[state=active]:text-slate-950">
-                      <Icon className="mr-2 h-4 w-4" />
+                    <TabsTrigger key={tab.key} value={tab.key} className="rounded-2xl py-3 data-[state=active]:bg-white data-[state=active]:text-slate-950 sm:rounded-full sm:py-2">
+                      <Icon className="mr-2 h-4 w-4 shrink-0" />
                       {tab.label}
                     </TabsTrigger>
                   );
