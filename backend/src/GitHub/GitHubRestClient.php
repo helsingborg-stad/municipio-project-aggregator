@@ -64,7 +64,12 @@ final class GitHubRestClient
                     $name = $repository['name'] ?? null;
 
                     if (is_string($owner) && $owner !== '' && is_string($name) && $name !== '') {
-                        $repositoriesByName[sprintf('%s/%s', $owner, $name)] = new RepositoryReference($owner, $name);
+                        $repositoriesByName[sprintf('%s/%s', $owner, $name)] = new RepositoryReference(
+                            $owner,
+                            $name,
+                            is_string($repository['description'] ?? null) ? $repository['description'] : '',
+                            is_string($repository['html_url'] ?? null) ? $repository['html_url'] : '',
+                        );
                     }
                 }
 

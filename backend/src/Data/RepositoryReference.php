@@ -12,10 +12,14 @@ final class RepositoryReference
     /**
      * @param string $owner Repository owner.
      * @param string $name Repository name.
+     * @param string $description Repository description.
+     * @param string $url Repository URL.
      */
     public function __construct(
         private readonly string $owner,
         private readonly string $name,
+        private readonly string $description = '',
+        private readonly string $url = '',
     ) {
     }
 
@@ -41,5 +45,35 @@ final class RepositoryReference
     public function fullName(): string
     {
         return sprintf('%s/%s', $this->owner, $this->name);
+    }
+
+    /**
+     * @return string
+     */
+    public function description(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function url(): string
+    {
+        return $this->url;
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public function toArray(): array
+    {
+        return [
+            'owner' => $this->owner,
+            'name' => $this->name,
+            'fullName' => $this->fullName(),
+            'description' => $this->description,
+            'url' => $this->url,
+        ];
     }
 }

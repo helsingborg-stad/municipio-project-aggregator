@@ -14,8 +14,59 @@ export function getRepositoryGroups(items) {
     .sort((left, right) => left.repository.localeCompare(right.repository));
 }
 
+export function getRepositoryCatalog(payloads) {
+  const repositoriesByName = new Map();
+  const itemCountsByRepository = new Map();
+
+  payloads
+    .flatMap((payload) => Array.isArray(payload.items) ? payload.items : [])
+    .forEach((item) => {
+      if (!item?.repository) {
+        return;
+      }
+
+      itemCountsByRepository.set(item.repository, (itemCountsByRepository.get(item.repository) ?? 0) + 1);
+    });
+
+  payloads
+    .flatMap((payload) => Array.isArray(payload.repositories) ? payload.repositories : [])
+    .forEach((repository) => {
+      if (!repository?.fullName) {
+        return;
+      }
+
+      repositoriesByName.set(repository.fullName, {
+        ...repository,
+        itemCount: itemCountsByRepository.get(repository.fullName) ?? 0,
+      });
+    });
+
+  return [...repositoriesByName.values()].sort((left, right) => left.fullName.localeCompare(right.fullName));
+}
+
 function getUniqueOptions(values) {
   return [...new Set(values.filter(Boolean))].sort((left, right) => left.localeCompare(right));
+}
+
+export function getAuthorDirectory(items) {
+  const authorsByLogin = new Map();
+
+  items.forEach((item) => {
+    const author = item?.author;
+    if (!author?.login) {
+      return;
+    }
+
+    const currentAuthor = authorsByLogin.get(author.login);
+    authorsByLogin.set(author.login, {
+      login: author.login,
+      avatarUrl: author.avatarUrl ?? currentAuthor?.avatarUrl ?? '',
+      url: author.url ?? currentAuthor?.url ?? '',
+      contributionCount: (currentAuthor?.contributionCount ?? 0) + 1,
+    });
+  });
+
+  return [...authorsByLogin.values()].sort((left, right) => left.login.localeCompare(right.login));
 }
 
 export function getFilterOptions(items) {
@@ -122,4 +173,17 @@ export function formatTimestamp(isoDate) {
     minute: '2-digit',
     timeZone: 'UTC',
   }).format(new Date(isoDate));
+}
+
+export function truncateText(value, maxLength = 140) {
+  if (typeof value !== 'string') {
+    return '';
+  }
+
+  const trimmedValue = value.trim();
+  if (trimmedValue.length <= maxLength) {
+    return trimmedValue;
+  }
+
+  return `${trimmedValue.slice(0, Math.max(0, maxLength - 1)).trimEnd()}…`;
 }

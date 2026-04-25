@@ -1,6 +1,6 @@
 # municipio-project-aggregator
 
-Aggregates open issues and pull requests from repositories tagged for Municipio work into separate JSON sources and renders them in a React dashboard.
+Aggregates open issues and pull requests from repositories tagged for Municipio work into separate JSON sources and renders them in a React dashboard with issue, pull request, repository, and contributor views.
 
 ## Architecture
 
