@@ -1,10 +1,21 @@
-import { AlertCircle, ArrowUpRight, FolderKanban, GitPullRequest, RefreshCcw, Ticket } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, FolderKanban, GitPullRequest, RefreshCcw, Ticket, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { filterItems, formatRelativeTime, formatTimestamp, getFilterOptions, getRepositoryGroups, hasRelationships, hasSubIssues } from '@/lib/dashboard';
+import {
+  filterItems,
+  formatRelativeTime,
+  formatTimestamp,
+  getAuthorDirectory,
+  getFilterOptions,
+  getRepositoryCatalog,
+  getRepositoryGroups,
+  hasRelationships,
+  hasSubIssues,
+  truncateText,
+} from '@/lib/dashboard';
 
 const sources = [
   { key: 'issues', label: 'Issues', icon: Ticket, accent: 'bg-rose-500/15 text-rose-200 ring-1 ring-rose-400/30' },
@@ -20,6 +31,22 @@ const emptyFilters = {
   relationships: 'all',
 };
 
+function AvatarImage({ person, sizeClassName = 'h-5 w-5', fallbackTextClassName = 'text-[10px]' }) {
+  if (!person?.login) {
+    return null;
+  }
+
+  if (person.avatarUrl) {
+    return <img src={person.avatarUrl} alt={person.login} className={`${sizeClassName} rounded-full object-cover`} loading="lazy" />;
+  }
+
+  return (
+    <div className={`flex ${sizeClassName} items-center justify-center rounded-full bg-cyan-300/15 font-semibold uppercase text-cyan-100 ${fallbackTextClassName}`}>
+      {person.login.slice(0, 1)}
+    </div>
+  );
+}
+
 function Avatar({ person, fallbackLabel }) {
   if (!person?.login) {
     return null;
@@ -27,13 +54,7 @@ function Avatar({ person, fallbackLabel }) {
 
   return (
     <div className="flex items-center gap-2 rounded-full bg-white/5 px-2.5 py-1 text-xs text-slate-200 ring-1 ring-white/10">
-      {person.avatarUrl ? (
-        <img src={person.avatarUrl} alt={person.login} className="h-5 w-5 rounded-full object-cover" loading="lazy" />
-      ) : (
-        <div className="flex h-5 w-5 items-center justify-center rounded-full bg-cyan-300/15 text-[10px] font-semibold uppercase text-cyan-100">
-          {person.login.slice(0, 1)}
-        </div>
-      )}
+      <AvatarImage person={person} />
       <span>
         {fallbackLabel ? `${fallbackLabel}: ` : ''}
         {person.login}
@@ -135,6 +156,114 @@ function FilterBar({ filters, filterOptions, onFilterChange }) {
         ]}
       />
     </div>
+  );
+}
+
+function RepositoryCatalogPanel({ repositories }) {
+  return (
+    <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
+      <CardHeader className="flex flex-col gap-4 border-b border-white/10 bg-white/5 md:flex-row md:items-end md:justify-between">
+        <div>
+          <CardTitle className="text-2xl text-white">Compatible plugins</CardTitle>
+          <CardDescription className="mt-2 max-w-2xl text-slate-300">
+            Repositories discovered from the tracked GitHub topics, ready to browse as compatible Municipio plugins.
+          </CardDescription>
+        </div>
+        <div className="inline-flex items-center gap-2 rounded-full bg-cyan-300/15 px-4 py-2 text-sm font-medium text-cyan-100 ring-1 ring-cyan-200/30">
+          <FolderKanban className="h-4 w-4" />
+          {repositories.length} repositories
+        </div>
+      </CardHeader>
+      <CardContent className="p-6">
+        {repositories.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
+            No compatible repositories are available yet.
+          </div>
+        ) : (
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {repositories.map((repository) => (
+              <a
+                key={repository.fullName}
+                href={repository.url || undefined}
+                target={repository.url ? '_blank' : undefined}
+                rel={repository.url ? 'noreferrer' : undefined}
+                className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-cyan-300/40 hover:bg-slate-900"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="space-y-2">
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{repository.name}</h3>
+                      <p className="text-sm text-slate-500">{repository.owner}</p>
+                    </div>
+                    <p className="text-sm text-slate-300">{truncateText(repository.description || 'No description available.', 140)}</p>
+                  </div>
+                  <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+                </div>
+                <div className="mt-4 flex items-center justify-between text-xs text-slate-400">
+                  <span>{repository.fullName}</span>
+                  <Badge variant="secondary">{repository.itemCount} tracked item{repository.itemCount === 1 ? '' : 's'}</Badge>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
+function AuthorDirectoryPanel({ authors }) {
+  return (
+    <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
+      <CardHeader className="flex flex-col gap-4 border-b border-white/10 bg-white/5 md:flex-row md:items-end md:justify-between">
+        <div>
+          <CardTitle className="text-2xl text-white">Contributors</CardTitle>
+          <CardDescription className="mt-2 max-w-2xl text-slate-300">
+            People behind the tracked GitHub issues and pull requests, highlighted for attribution across the Municipio ecosystem.
+          </CardDescription>
+        </div>
+        <div className="inline-flex items-center gap-2 rounded-full bg-fuchsia-400/15 px-4 py-2 text-sm font-medium text-fuchsia-100 ring-1 ring-fuchsia-300/30">
+          <Users className="h-4 w-4" />
+          {authors.length} authors
+        </div>
+      </CardHeader>
+      <CardContent className="p-6">
+        {authors.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
+            No authors are available yet.
+          </div>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {authors.map((author) => {
+              const content = (
+                <div className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-fuchsia-300/40 hover:bg-slate-900">
+                  <div className="flex items-center gap-4">
+                    <AvatarImage person={author} sizeClassName="h-14 w-14" fallbackTextClassName="text-base" />
+                    <div className="min-w-0">
+                      <h3 className="truncate text-lg font-semibold text-white">{author.login}</h3>
+                      <p className="text-sm text-slate-400">
+                        {author.contributionCount} tracked contribution{author.contributionCount === 1 ? '' : 's'}
+                      </p>
+                    </div>
+                    {author.url ? <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-fuchsia-200" /> : null}
+                  </div>
+                </div>
+              );
+
+              if (!author.url) {
+                return <div key={author.login}>{content}</div>;
+              }
+
+              return (
+                <a key={author.login} href={author.url} target="_blank" rel="noreferrer">
+                  {content}
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </CardContent>
+    </Card>
   );
 }
 
@@ -305,6 +434,15 @@ export default function App() {
   const [payloads, setPayloads] = useState({});
   const [status, setStatus] = useState('loading');
   const [errorMessage, setErrorMessage] = useState('');
+  const payloadList = Object.values(payloads);
+  const allItems = payloadList.flatMap((payload) => Array.isArray(payload.items) ? payload.items : []);
+  const repositories = getRepositoryCatalog(payloadList);
+  const authors = getAuthorDirectory(allItems);
+  const tabs = [
+    ...sources,
+    { key: 'repositories', label: 'Repositories', icon: FolderKanban },
+    { key: 'authors', label: 'Authors', icon: Users },
+  ];
 
   useEffect(() => {
     let isActive = true;
@@ -337,7 +475,7 @@ export default function App() {
     };
   }, []);
 
-  const generatedAt = Object.values(payloads)
+  const generatedAt = payloadList
     .map((payload) => payload.generatedAt)
     .filter(Boolean)
     .sort()
@@ -408,13 +546,16 @@ export default function App() {
 
           {status === 'ready' && (
             <Tabs defaultValue={sources[0].key} className="space-y-6">
-              <TabsList className="grid w-full max-w-xl grid-cols-2 rounded-full border border-white/10 bg-slate-950/60 p-1">
-                {sources.map((source) => {
-                  const Icon = source.icon;
+              <TabsList
+                className="grid w-full max-w-4xl rounded-full border border-white/10 bg-slate-950/60 p-1"
+                style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}
+              >
+                {tabs.map((tab) => {
+                  const Icon = tab.icon;
                   return (
-                    <TabsTrigger key={source.key} value={source.key} className="rounded-full data-[state=active]:bg-white data-[state=active]:text-slate-950">
+                    <TabsTrigger key={tab.key} value={tab.key} className="rounded-full data-[state=active]:bg-white data-[state=active]:text-slate-950">
                       <Icon className="mr-2 h-4 w-4" />
-                      {source.label}
+                      {tab.label}
                     </TabsTrigger>
                   );
                 })}
@@ -430,8 +571,16 @@ export default function App() {
                       accentClassName={source.accent}
                     />
                   </TabsContent>
-                );
-              })}
+                  );
+                })}
+
+              <TabsContent value="repositories">
+                <RepositoryCatalogPanel repositories={repositories} />
+              </TabsContent>
+
+              <TabsContent value="authors">
+                <AuthorDirectoryPanel authors={authors} />
+              </TabsContent>
             </Tabs>
           )}
         </main>

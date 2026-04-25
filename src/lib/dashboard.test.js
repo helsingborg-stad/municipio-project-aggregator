@@ -1,6 +1,16 @@
 import { describe, expect, it } from 'vitest';
 
-import { filterItems, formatRelativeTime, getFilterOptions, getRepositoryGroups, hasRelationships, hasSubIssues } from './dashboard';
+import {
+  filterItems,
+  formatRelativeTime,
+  getAuthorDirectory,
+  getFilterOptions,
+  getRepositoryCatalog,
+  getRepositoryGroups,
+  hasRelationships,
+  hasSubIssues,
+  truncateText,
+} from './dashboard';
 
 describe('getRepositoryGroups', () => {
   it('groups items by repository and sorts items newest first', () => {
@@ -45,6 +55,77 @@ describe('getFilterOptions', () => {
     expect(options.assignees).toEqual(['hubot', 'octocat']);
     expect(options.milestones).toEqual(['Q2']);
     expect(options.types).toEqual(['Feature']);
+  });
+});
+
+describe('getRepositoryCatalog', () => {
+  it('collects unique repositories and counts tracked items', () => {
+    const repositories = getRepositoryCatalog([
+      {
+        repositories: [
+          {
+            fullName: 'helsingborg-stad/plugin-a',
+            name: 'plugin-a',
+            owner: 'helsingborg-stad',
+            description: 'Plugin A',
+            url: 'https://github.com/helsingborg-stad/plugin-a',
+          },
+          {
+            fullName: 'helsingborg-stad/plugin-b',
+            name: 'plugin-b',
+            owner: 'helsingborg-stad',
+            description: 'Plugin B',
+            url: 'https://github.com/helsingborg-stad/plugin-b',
+          },
+        ],
+        items: [
+          { repository: 'helsingborg-stad/plugin-a' },
+          { repository: 'helsingborg-stad/plugin-a' },
+        ],
+      },
+      {
+        repositories: [
+          {
+            fullName: 'helsingborg-stad/plugin-b',
+            name: 'plugin-b',
+            owner: 'helsingborg-stad',
+            description: 'Plugin B',
+            url: 'https://github.com/helsingborg-stad/plugin-b',
+          },
+        ],
+        items: [{ repository: 'helsingborg-stad/plugin-b' }],
+      },
+    ]);
+
+    expect(repositories).toHaveLength(2);
+    expect(repositories[0].fullName).toBe('helsingborg-stad/plugin-a');
+    expect(repositories[0].itemCount).toBe(2);
+    expect(repositories[1].itemCount).toBe(1);
+  });
+});
+
+describe('getAuthorDirectory', () => {
+  it('collects unique authors with contribution counts', () => {
+    const authors = getAuthorDirectory([
+      { author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
+      { author: { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot' } },
+      { author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
+    ]);
+
+    expect(authors).toEqual([
+      {
+        login: 'hubot',
+        avatarUrl: 'https://example.com/hubot.png',
+        url: 'https://github.com/hubot',
+        contributionCount: 1,
+      },
+      {
+        login: 'octocat',
+        avatarUrl: 'https://example.com/octocat.png',
+        url: 'https://github.com/octocat',
+        contributionCount: 2,
+      },
+    ]);
   });
 });
 
@@ -103,5 +184,12 @@ describe('presence helpers', () => {
     expect(hasSubIssues({ subIssues: { total: 0 } })).toBe(false);
     expect(hasRelationships({ relationshipSummary: { linked: 0, blockedBy: 0, totalBlockedBy: 1, blocking: 0, totalBlocking: 0 } })).toBe(true);
     expect(hasRelationships({ relationshipSummary: { linked: 0, blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0 } })).toBe(false);
+  });
+});
+
+describe('truncateText', () => {
+  it('truncates long text while preserving short text', () => {
+    expect(truncateText('Short text', 20)).toBe('Short text');
+    expect(truncateText('This description is definitely longer than twenty characters.', 20)).toBe('This description is…');
   });
 });

@@ -30,8 +30,9 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
     public function aggregate(SourceType $sourceType, BuildConfig $config): SourcePayload
     {
         $itemsByUrl = [];
+        $repositories = $this->client->listRepositoriesByTopics($config->topics(), $config->token());
 
-        foreach ($this->client->listRepositoriesByTopics($config->topics(), $config->token()) as $repository) {
+        foreach ($repositories as $repository) {
             foreach ($this->client->listOpenItems($sourceType, $repository, $config->token()) as $itemData) {
                 if (empty($itemData['title']) || empty($itemData['html_url']) || empty($itemData['number'])) {
                     continue;
@@ -57,6 +58,7 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
             $config->sourceScope(),
             $config->topics(),
             $config->generatedAt()->format(DATE_ATOM),
+            $repositories,
             $items,
         );
     }

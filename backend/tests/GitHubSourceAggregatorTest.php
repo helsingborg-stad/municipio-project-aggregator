@@ -36,6 +36,8 @@ final class GitHubSourceAggregatorTest extends TestCase
                                 [
                                     'name' => 'municipio-site',
                                     'owner' => ['login' => 'municipio-se'],
+                                    'description' => 'Municipio site plugin',
+                                    'html_url' => 'https://github.com/municipio-se/municipio-site',
                                 ],
                             ],
                         ];
@@ -47,10 +49,14 @@ final class GitHubSourceAggregatorTest extends TestCase
                                 [
                                     'name' => 'styleguide',
                                     'owner' => ['login' => 'helsingborg-stad'],
+                                    'description' => 'Shared Municipio components',
+                                    'html_url' => 'https://github.com/helsingborg-stad/styleguide',
                                 ],
                                 [
                                     'name' => 'styleguide-blocks',
                                     'owner' => ['login' => 'helsingborg-stad'],
+                                    'description' => 'Block collection',
+                                    'html_url' => 'https://github.com/helsingborg-stad/styleguide-blocks',
                                 ],
                             ],
                         ];
@@ -199,6 +205,10 @@ final class GitHubSourceAggregatorTest extends TestCase
 
         self::assertSame(['municipio-se', 'getmunicipio'], $data['topics']);
         self::assertSame(2, $data['count']);
+        self::assertCount(3, $data['repositories']);
+        self::assertSame('municipio-se/municipio-site', $data['repositories'][0]['fullName']);
+        self::assertSame('Municipio site plugin', $data['repositories'][0]['description']);
+        self::assertSame('https://github.com/municipio-se/municipio-site', $data['repositories'][0]['url']);
         self::assertSame('GetMunicipio only PR', $data['items'][0]['title']);
         self::assertSame('Shared PR', $data['items'][1]['title']);
         self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
