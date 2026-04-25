@@ -1,0 +1,24 @@
+{
+  "name": "helsingborg-stad/municipio-project-aggregator",
+  "description": "Aggregates Municipio GitHub data into JSON files for the frontend UI.",
+  "type": "project",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "MunicipioProjectAggregator\\Backend\\": "backend/src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MunicipioProjectAggregator\\Tests\\": "backend/tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit --configuration backend/phpunit.xml"
+  }
+}

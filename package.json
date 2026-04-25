@@ -1,9 +1,36 @@
 {
   "name": "municipio-project-aggregator",
   "version": "1.0.0",
-  "description": "Aggregates open GitHub issues and pull requests labelled 'municipio' into a static HTML dashboard.",
+  "type": "module",
+  "description": "Aggregates open GitHub issues and pull requests labelled 'municipio' into JSON files and renders them in a React dashboard.",
   "scripts": {
-    "build": "node src/build.js"
+    "build:data": "php backend/bin/build.php",
+    "build:ui": "vite build",
+    "build": "npm run build:data && npm run build:ui",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test:ui": "vitest run",
+    "test": "npm run test:ui && composer test"
+  },
+  "dependencies": {
+    "@radix-ui/react-tabs": "^1.1.13",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "autoprefixer": "^10.4.21",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.4"
   },
   "engines": {
     "node": ">=18"
