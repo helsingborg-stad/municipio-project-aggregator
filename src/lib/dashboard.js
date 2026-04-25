@@ -66,7 +66,7 @@ export function getAuthorDirectory(items) {
     });
   });
 
-  return [...authorsByLogin.values()].sort((left, right) => left.login.localeCompare(right.login));
+  return [...authorsByLogin.values()].sort((left, right) => right.contributionCount - left.contributionCount);
 }
 
 export function getFilterOptions(items) {
