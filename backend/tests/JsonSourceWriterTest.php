@@ -43,8 +43,8 @@ final class JsonSourceWriterTest extends TestCase
         $writer = new JsonSourceWriter($this->outputDirectory);
         $payload = new SourcePayload(
             'issues',
-            'helsingborg-stad',
-            ['municipio', 'getmunicipio'],
+            'GitHub',
+            ['municipio-se', 'getmunicipio'],
             '2026-04-24T08:00:00+00:00',
             [new AggregatedItem('Title', 'https://example.com', 'municipio', '2026-04-23T08:00:00+00:00')],
         );

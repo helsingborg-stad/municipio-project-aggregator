@@ -12,14 +12,14 @@ use DateTimeImmutable;
 final class BuildConfig
 {
     /**
-     * @param string $organization GitHub organization name.
+     * @param string $sourceScope Display label for the repository discovery scope.
      * @param array<int, string> $topics Repository topics used to select repositories.
      * @param string $token GitHub access token.
      * @param string $outputDirectory Directory where JSON files are written.
      * @param DateTimeImmutable $generatedAt Timestamp for the aggregation run.
      */
     public function __construct(
-        private readonly string $organization,
+        private readonly string $sourceScope,
         private readonly array $topics,
         private readonly string $token,
         private readonly string $outputDirectory,
@@ -30,9 +30,9 @@ final class BuildConfig
     /**
      * @return string
      */
-    public function organization(): string
+    public function sourceScope(): string
     {
-        return $this->organization;
+        return $this->sourceScope;
     }
 
     /**

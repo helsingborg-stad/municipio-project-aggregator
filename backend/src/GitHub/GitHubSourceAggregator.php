@@ -31,13 +31,13 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
     {
         $itemsByUrl = [];
 
-        foreach ($this->client->listRepositoriesByTopics($config->organization(), $config->topics(), $config->token()) as $repository) {
-            foreach ($this->client->listOpenItems($sourceType, $config->organization(), $repository, $config->token()) as $itemData) {
+        foreach ($this->client->listRepositoriesByTopics($config->topics(), $config->token()) as $repository) {
+            foreach ($this->client->listOpenItems($sourceType, $repository, $config->token()) as $itemData) {
                 if (empty($itemData['title']) || empty($itemData['html_url'])) {
                     continue;
                 }
 
-                $item = AggregatedItem::fromRestItem($repository, $itemData);
+                $item = AggregatedItem::fromRestItem($repository->fullName(), $itemData);
                 $itemsByUrl[$itemData['html_url']] = $item;
             }
         }
@@ -51,7 +51,7 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
 
         return new SourcePayload(
             $sourceType->value,
-            $config->organization(),
+            $config->sourceScope(),
             $config->topics(),
             $config->generatedAt()->format(DATE_ATOM),
             $items,

@@ -28,8 +28,8 @@ if ($token === false || $token === '') {
 }
 
 $config = new BuildConfig(
-    organization: 'helsingborg-stad',
-    topics: ['municipio', 'getmunicipio'],
+    sourceScope: 'GitHub',
+    topics: ['municipio-se', 'getmunicipio'],
     token: $token,
     outputDirectory: $projectRoot . '/public/data',
     generatedAt: new \DateTimeImmutable(),

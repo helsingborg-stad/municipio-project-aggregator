@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace MunicipioProjectAggregator\Backend\GitHub;
 
 use MunicipioProjectAggregator\Backend\Contracts\HttpClientInterface;
+use MunicipioProjectAggregator\Backend\Data\RepositoryReference;
 use RuntimeException;
 
 /**
@@ -26,12 +27,11 @@ final class GitHubRestClient
     }
 
     /**
-     * @param string $organization
      * @param array<int, string> $topics
      * @param string $token
-     * @return array<int, string>
+     * @return array<int, RepositoryReference>
      */
-    public function listRepositoriesByTopics(string $organization, array $topics, string $token): array
+    public function listRepositoriesByTopics(array $topics, string $token): array
     {
         $repositoriesByName = [];
 
@@ -41,9 +41,8 @@ final class GitHubRestClient
             do {
                 $response = $this->getJson(
                     sprintf(
-                        '%s/search/repositories?q=org:%s+topic:%s+archived:false&per_page=%d&page=%d',
+                        '%s/search/repositories?q=topic:%s+archived:false&per_page=%d&page=%d',
                         self::API_URL,
-                        rawurlencode($organization),
                         rawurlencode($topic),
                         self::PAGE_SIZE,
                         $page,
@@ -57,8 +56,15 @@ final class GitHubRestClient
                 }
 
                 foreach ($items as $repository) {
-                    if (is_array($repository) && is_string($repository['name'] ?? null)) {
-                        $repositoriesByName[$repository['name']] = true;
+                    if (!is_array($repository)) {
+                        continue;
+                    }
+
+                    $owner = is_array($repository['owner'] ?? null) ? ($repository['owner']['login'] ?? null) : null;
+                    $name = $repository['name'] ?? null;
+
+                    if (is_string($owner) && $owner !== '' && is_string($name) && $name !== '') {
+                        $repositoriesByName[sprintf('%s/%s', $owner, $name)] = new RepositoryReference($owner, $name);
                     }
                 }
 
@@ -66,17 +72,16 @@ final class GitHubRestClient
             } while (count($items) === self::PAGE_SIZE);
         }
 
-        return array_keys($repositoriesByName);
+        return array_values($repositoriesByName);
     }
 
     /**
      * @param SourceType $sourceType
-     * @param string $organization
-     * @param string $repository
+     * @param RepositoryReference $repository
      * @param string $token
      * @return array<int, array<string, mixed>>
      */
-    public function listOpenItems(SourceType $sourceType, string $organization, string $repository, string $token): array
+    public function listOpenItems(SourceType $sourceType, RepositoryReference $repository, string $token): array
     {
         $items = [];
         $page = 1;
@@ -87,8 +92,8 @@ final class GitHubRestClient
                 sprintf(
                     '%s/repos/%s/%s/%s?state=open&per_page=%d&page=%d',
                     self::API_URL,
-                    rawurlencode($organization),
-                    rawurlencode($repository),
+                    rawurlencode($repository->owner()),
+                    rawurlencode($repository->name()),
                     $endpoint,
                     self::PAGE_SIZE,
                     $page,

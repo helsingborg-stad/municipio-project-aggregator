@@ -8,7 +8,7 @@ Aggregates open issues and pull requests from repositories tagged for Municipio 
 - `public/data/` contains generated JSON files such as `issues.json` and `pull-requests.json`.
 - `src/` contains the React UI built with Vite, Tailwind CSS, and shadcn-style components.
 - `dist/` contains the production build published by GitHub Pages.
-- Repository selection is based on GitHub repository topics, currently `municipio` and `getmunicipio`.
+- Repository selection is based on GitHub repository topics across all of GitHub, currently `municipio-se` and `getmunicipio`.
 
 ## Run locally
 
@@ -40,7 +40,7 @@ npm install
 npm run build:data
 ```
 
-Generates `public/data/issues.json` and `public/data/pull-requests.json` from repositories tagged with the tracked GitHub topics.
+Generates `public/data/issues.json` and `public/data/pull-requests.json` from repositories across GitHub tagged with the tracked topics.
 
 ```bash
 npm run dev

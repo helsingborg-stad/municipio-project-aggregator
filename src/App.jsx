@@ -23,7 +23,7 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
             <CardTitle className="text-2xl text-white">{payload.count} open {payload.source.replace('-', ' ')}</CardTitle>
             <CardDescription className="mt-2 max-w-2xl text-slate-300">
               Collected from repositories tagged <span className="font-semibold text-white">{trackedTopics}</span> in the{' '}
-              <span className="font-semibold text-white">{payload.organization}</span> organisation.
+              <span className="font-semibold text-white">{payload.sourceScope}</span> scope.
             </CardDescription>
           </div>
           <div className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium ${accentClassName}`}>
@@ -145,10 +145,10 @@ export default function App() {
               <Badge className="bg-cyan-300/15 text-cyan-100 ring-1 ring-cyan-200/30">Municipio project radar</Badge>
               <div className="space-y-3">
                 <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
-                  Separate data aggregation from the UI, without losing the operational view.
+                  Municipio Project Status
                 </h1>
                 <p className="max-w-2xl text-base text-slate-300 md:text-lg">
-                  PHP aggregates each GitHub source into its own JSON file. React reads those files and turns them into a faster, cleaner dashboard surface.
+                  A dashboard that visualizes open GitHub issues and pull requests related to the Municipio project across multiple repositories.
                 </p>
               </div>
             </div>

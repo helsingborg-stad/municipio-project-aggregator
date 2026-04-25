@@ -30,10 +30,13 @@ final class GitHubSourceAggregatorTest extends TestCase
             public function getJson(string $url, array $headers): array
             {
                 if (str_contains($url, '/search/repositories')) {
-                    if (str_contains($url, 'topic:municipio')) {
+                    if (str_contains($url, 'topic:municipio-se')) {
                         return [
                             'items' => [
-                                ['name' => 'styleguide'],
+                                [
+                                    'name' => 'municipio-site',
+                                    'owner' => ['login' => 'municipio-se'],
+                                ],
                             ],
                         ];
                     }
@@ -41,11 +44,21 @@ final class GitHubSourceAggregatorTest extends TestCase
                     if (str_contains($url, 'topic:getmunicipio')) {
                         return [
                             'items' => [
-                                ['name' => 'styleguide'],
-                                ['name' => 'styleguide-blocks'],
+                                [
+                                    'name' => 'styleguide',
+                                    'owner' => ['login' => 'helsingborg-stad'],
+                                ],
+                                [
+                                    'name' => 'styleguide-blocks',
+                                    'owner' => ['login' => 'helsingborg-stad'],
+                                ],
                             ],
                         ];
                     }
+                }
+
+                if (str_contains($url, '/repos/municipio-se/municipio-site/pulls')) {
+                    return [];
                 }
 
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide/pulls')) {
@@ -89,8 +102,8 @@ final class GitHubSourceAggregatorTest extends TestCase
         $payload = $aggregator->aggregate(
             SourceType::PullRequests,
             new BuildConfig(
-                'helsingborg-stad',
-                ['municipio', 'getmunicipio'],
+                'GitHub',
+                ['municipio-se', 'getmunicipio'],
                 'token',
                 '/tmp',
                 new DateTimeImmutable('2026-04-25T10:00:00+00:00'),
@@ -99,9 +112,10 @@ final class GitHubSourceAggregatorTest extends TestCase
 
         $data = $payload->toArray();
 
-        self::assertSame(['municipio', 'getmunicipio'], $data['topics']);
+        self::assertSame(['municipio-se', 'getmunicipio'], $data['topics']);
         self::assertSame(2, $data['count']);
         self::assertSame('GetMunicipio only PR', $data['items'][0]['title']);
         self::assertSame('Shared PR', $data['items'][1]['title']);
+        self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
     }
 }
