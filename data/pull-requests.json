@@ -5,212 +5,989 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-25T20:13:41+00:00",
+    "generatedAt": "2026-04-25T20:35:37+00:00",
     "count": 34,
     "items": [
         {
             "title": "feat: chat component",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1199",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-23T11:21:03Z"
+            "createdAt": "2026-04-23T11:21:03Z",
+            "number": 1199,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: chat for m7",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1899",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-22T09:36:57Z"
+            "createdAt": "2026-04-22T09:36:57Z",
+            "number": 1899,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "refactor: remove unused mixin button",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1194",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-20T13:35:10Z"
+            "createdAt": "2026-04-20T13:35:10Z",
+            "number": 1194,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "refactor: changing tab button styling",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1193",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-20T13:29:41Z"
+            "createdAt": "2026-04-20T13:29:41Z",
+            "number": 1193,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "refactor: rewriting accordion button styling",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1192",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-20T08:41:15Z"
+            "createdAt": "2026-04-20T08:41:15Z",
+            "number": 1192,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "refactor: init moving image gallery modal",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1169",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-14T14:31:39Z"
+            "createdAt": "2026-04-14T14:31:39Z",
+            "number": 1169,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "7.0",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1866",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-30T08:58:06Z"
+            "createdAt": "2026-03-30T08:58:06Z",
+            "number": 1866,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "build(deps-dev): bump handlebars from 4.7.8 to 4.7.9 in /Modularity",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1864",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-27T20:00:18Z"
+            "createdAt": "2026-03-27T20:00:18Z",
+            "number": 1864,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "build(deps-dev): bump handlebars from 4.7.8 to 4.7.9",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1862",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-26T23:04:14Z"
+            "createdAt": "2026-03-26T23:04:14Z",
+            "number": 1862,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: styleguide editor functionality",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1158",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-03-26T13:20:49Z"
+            "createdAt": "2026-03-26T13:20:49Z",
+            "number": 1158,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "build(deps): bump picomatch in /Modularity",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1856",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-25T22:14:21Z"
+            "createdAt": "2026-03-25T22:14:21Z",
+            "number": 1856,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "Dead code analysis across helsingborg-stad org",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1153",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-03-16T07:49:22Z"
+            "createdAt": "2026-03-16T07:49:22Z",
+            "number": 1153,
+            "author": {
+                "login": "Copilot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: migrate settings for updated styleguide",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1836",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-09T06:55:29Z"
+            "createdAt": "2026-03-09T06:55:29Z",
+            "number": 1836,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: heading structure formatter",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1834",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-06T14:37:47Z"
+            "createdAt": "2026-03-06T14:37:47Z",
+            "number": 1834,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "Convert additional components to token.create mixin usage",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1145",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-19T21:51:55Z"
+            "createdAt": "2026-02-19T21:51:55Z",
+            "number": 1145,
+            "author": {
+                "login": "Copilot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "chore(deps): bump qs from 6.14.1 to 6.14.2",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1143",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-13T08:25:32Z"
+            "createdAt": "2026-02-13T08:25:32Z",
+            "number": 1143,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: add header block",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1780",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-02-10T16:04:01Z"
+            "createdAt": "2026-02-10T16:04:01Z",
+            "number": 1780,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: add Site Editor color support via theme.json",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1779",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-02-10T13:37:44Z"
+            "createdAt": "2026-02-10T13:37:44Z",
+            "number": 1779,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: preloader no border utility",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1140",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-10T09:44:42Z"
+            "createdAt": "2026-02-10T09:44:42Z",
+            "number": 1140,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "fix: tags not working in preloader",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1139",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-09T11:01:44Z"
+            "createdAt": "2026-02-09T11:01:44Z",
+            "number": 1139,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "fix: progressbar no preloader styling",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1138",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-09T10:51:22Z"
+            "createdAt": "2026-02-09T10:51:22Z",
+            "number": 1138,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "Feat/css vars",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1135",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-06T13:54:22Z"
+            "createdAt": "2026-02-06T13:54:22Z",
+            "number": 1135,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Fix PostCSS parse error blocking CSS variables migration in PR #1135",
+                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1136",
+                    "repository": "helsingborg-stad/styleguide"
+                }
+            ]
         },
         {
             "title": "Enable full site editing",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1772",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-02-06T06:59:36Z"
+            "createdAt": "2026-02-06T06:59:36Z",
+            "number": 1772,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: utility to exclude elements from preloading by hiding them",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1134",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-05T14:33:10Z"
+            "createdAt": "2026-02-05T14:33:10Z",
+            "number": 1134,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: remove all sass variables",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1133",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-05T13:01:34Z"
+            "createdAt": "2026-02-05T13:01:34Z",
+            "number": 1133,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "chore(deps-dev): bump lodash from 4.17.21 to 4.17.23",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1130",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-01-22T00:06:05Z"
+            "createdAt": "2026-01-22T00:06:05Z",
+            "number": 1130,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "chore(deps): bump js-yaml from 3.14.1 to 3.14.2",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1115",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2025-11-17T16:10:40Z"
+            "createdAt": "2025-11-17T16:10:40Z",
+            "number": 1115,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "fix: replace container aware with openstreetmap",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1114",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2025-11-14T13:24:27Z"
+            "createdAt": "2025-11-14T13:24:27Z",
+            "number": 1114,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "fix: build refactor",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1592",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-11-04T15:39:32Z"
+            "createdAt": "2025-11-04T15:39:32Z",
+            "number": 1592,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: support for custom taxonomies for schema property to taxonomy ",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1556",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-10-13T16:10:36Z"
+            "createdAt": "2025-10-13T16:10:36Z",
+            "number": 1556,
+            "author": {
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
+                "url": "https://github.com/michaelclaesson"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: upgrade using wp cli",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1466",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-08-05T12:28:21Z"
+            "createdAt": "2025-08-05T12:28:21Z",
+            "number": 1466,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "test: safari font size external monitor",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1046",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2025-06-04T09:02:49Z"
+            "createdAt": "2025-06-04T09:02:49Z",
+            "number": 1046,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: support for cookie consent check on javascripts tags using Pressidium",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1406",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-05-16T17:27:07Z"
+            "createdAt": "2025-05-16T17:27:07Z",
+            "number": 1406,
+            "author": {
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
+                "url": "https://github.com/michaelclaesson"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "feat: implements css layers, in favour of !important on utils.",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1013",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2025-02-22T22:57:54Z"
+            "createdAt": "2025-02-22T22:57:54Z",
+            "number": 1013,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         }
     ]
 }

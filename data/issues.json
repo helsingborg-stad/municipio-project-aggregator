@@ -5,92 +5,419 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-25T20:13:41+00:00",
-    "count": 14,
+    "generatedAt": "2026-04-25T20:35:37+00:00",
+    "count": 12,
     "items": [
         {
             "title": "Check for multisite support instead of assuming",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1845",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-18T14:17:03Z"
+            "createdAt": "2026-03-18T14:17:03Z",
+            "number": 1845,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [
+                {
+                    "login": "thorbrink",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                    "url": "https://github.com/thorbrink"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Fix fatal error when SiteSwitcher is used on single-site WordPress installations",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1846",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "title": "Bugfix index to typesense",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1814",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-02-26T13:08:22Z"
+            "createdAt": "2026-02-26T13:08:22Z",
+            "number": 1814,
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+                "url": "https://github.com/camitzdennis"
+            },
+            "assignees": [
+                {
+                    "login": "camitzdennis",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+                    "url": "https://github.com/camitzdennis"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Patch fix for TypeError in algolia-index-typesense-provider",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1815",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "title": "Arguments with default values must be at the end of the argument list",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1612",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-11-19T07:40:31Z"
+            "createdAt": "2025-11-19T07:40:31Z",
+            "number": 1612,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Fix argument order in Template::renderView() method signature",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1613",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "title": "Applicators must be restructured into smaller SRI classes and follow basic SOLID principles better",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1567",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-10-17T14:07:05Z"
+            "createdAt": "2025-10-17T14:07:05Z",
+            "number": 1567,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Refactor Applicators to Follow SOLID Principles with Dependency Injection",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1568",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "title": "ImageConvert functionality (on the fly images) needs to perform better",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1504",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-09-06T09:20:47Z"
+            "createdAt": "2025-09-06T09:20:47Z",
+            "number": 1504,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Implement ImageConvert on-demand image resizing with minimal production-ready architecture",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1505",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "title": "Archive - post meta as date not working",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1247",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-01-14T14:16:38Z"
+            "createdAt": "2025-01-14T14:16:38Z",
+            "number": 1247,
+            "author": {
+                "login": "mange84a",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/6149816?v=4",
+                "url": "https://github.com/mange84a"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "Breadcrumb item missing on archive pages",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1137",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2024-11-18T09:57:37Z"
+            "createdAt": "2024-11-18T09:57:37Z",
+            "number": 1137,
+            "author": {
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
+                "url": "https://github.com/michaelclaesson"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "[version 1.0? - develop] Is Navigation caching broken?",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/332",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2022-09-26T10:14:13Z"
+            "createdAt": "2022-09-26T10:14:13Z",
+            "number": 332,
+            "author": {
+                "login": "Zerowalker",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1802933?v=4",
+                "url": "https://github.com/Zerowalker"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "3.0/develop missing dependencies",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/195",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2021-06-10T13:22:25Z"
+            "createdAt": "2021-06-10T13:22:25Z",
+            "number": 195,
+            "author": {
+                "login": "dnkmdg",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/6313551?v=4",
+                "url": "https://github.com/dnkmdg"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "End-of-life for the classic editor by the end of 2021",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/168",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2021-04-01T11:58:46Z"
+            "createdAt": "2021-04-01T11:58:46Z",
+            "number": 168,
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "Move to municipio-se organization",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/127",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2020-10-15T11:56:20Z"
+            "createdAt": "2020-10-15T11:56:20Z",
+            "number": 127,
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "Possible accessibility issues ",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/36",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2018-11-09T09:47:00Z"
-        },
-        {
-            "title": "Warnings (again) in Google search",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/13",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2017-01-19T09:39:38Z"
-        },
-        {
-            "title": "Alter HTML in Class methods",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/4",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2016-09-29T10:18:12Z"
+            "createdAt": "2018-11-09T09:47:00Z",
+            "number": 36,
+            "author": {
+                "login": "andersrehn",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/13356945?v=4",
+                "url": "https://github.com/andersrehn"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         }
     ]
 }
