@@ -5,8 +5,24 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-25T21:13:26+00:00",
+    "generatedAt": "2026-04-25T21:54:12+00:00",
     "count": 34,
+    "repositories": [
+        {
+            "owner": "helsingborg-stad",
+            "name": "Municipio",
+            "fullName": "helsingborg-stad/Municipio",
+            "description": "A theme specifically made for municipalities. ",
+            "url": "https://github.com/helsingborg-stad/Municipio"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "styleguide",
+            "fullName": "helsingborg-stad/styleguide",
+            "description": "Version 2.0 of the Helsingborg Stad styleguide",
+            "url": "https://github.com/helsingborg-stad/styleguide"
+        }
+    ],
     "items": [
         {
             "title": "feat: chat component",
