@@ -103,16 +103,16 @@ describe('App', () => {
 
     await screen.findByText('1 of 1 open issues');
 
-    fireEvent.click(screen.getByRole('tab', { name: 'Repositories' }));
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Repositories' }));
 
-    expect(screen.getByText('Compatible plugins')).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: 'Compatible plugins' })).toBeInTheDocument();
     expect(screen.getByText('plugin-alpha')).toBeInTheDocument();
     expect(screen.getByText('plugin-beta')).toBeInTheDocument();
     expect(screen.getByText('Compatible plugin beta')).toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole('tab', { name: 'Authors' }));
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
 
-    expect(screen.getByText('Contributors')).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
     expect(screen.getByText('2 tracked contributions')).toBeInTheDocument();
   });
 });

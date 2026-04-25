@@ -181,30 +181,46 @@ function RepositoryCatalogPanel({ repositories }) {
           </div>
         ) : (
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {repositories.map((repository) => (
-              <a
-                key={repository.fullName}
-                href={repository.url || undefined}
-                target={repository.url ? '_blank' : undefined}
-                rel={repository.url ? 'noreferrer' : undefined}
-                className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-cyan-300/40 hover:bg-slate-900"
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="space-y-2">
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">{repository.name}</h3>
-                      <p className="text-sm text-slate-500">{repository.owner}</p>
+            {repositories.map((repository) => {
+              const content = (
+                <>
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="space-y-2">
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">{repository.name}</h3>
+                        <p className="text-sm text-slate-500">{repository.owner}</p>
+                      </div>
+                      <p className="text-sm text-slate-300">{truncateText(repository.description || 'No description available.', 140)}</p>
                     </div>
-                    <p className="text-sm text-slate-300">{truncateText(repository.description || 'No description available.', 140)}</p>
+                    {repository.url ? <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" /> : null}
                   </div>
-                  <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
-                </div>
-                <div className="mt-4 flex items-center justify-between text-xs text-slate-400">
-                  <span>{repository.fullName}</span>
-                  <Badge variant="secondary">{repository.itemCount} tracked item{repository.itemCount === 1 ? '' : 's'}</Badge>
-                </div>
-              </a>
-            ))}
+                  <div className="mt-4 flex items-center justify-between text-xs text-slate-400">
+                    <span>{repository.fullName}</span>
+                    <Badge variant="secondary">{repository.itemCount} tracked item{repository.itemCount === 1 ? '' : 's'}</Badge>
+                  </div>
+                </>
+              );
+
+              if (!repository.url) {
+                return (
+                  <div key={repository.fullName} className="rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+                    {content}
+                  </div>
+                );
+              }
+
+              return (
+                <a
+                  key={repository.fullName}
+                  href={repository.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-cyan-300/40 hover:bg-slate-900"
+                >
+                  {content}
+                </a>
+              );
+            })}
           </div>
         )}
       </CardContent>
