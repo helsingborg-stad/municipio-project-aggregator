@@ -44,7 +44,7 @@ final class JsonSourceWriterTest extends TestCase
         $payload = new SourcePayload(
             'issues',
             'helsingborg-stad',
-            'municipio',
+            ['municipio', 'getmunicipio'],
             '2026-04-24T08:00:00+00:00',
             [new AggregatedItem('Title', 'https://example.com', 'municipio', '2026-04-23T08:00:00+00:00')],
         );
@@ -55,6 +55,7 @@ final class JsonSourceWriterTest extends TestCase
         $contents = file_get_contents($filePath);
         self::assertIsString($contents);
         self::assertStringContainsString('"source": "issues"', $contents);
+        self::assertStringContainsString('"topics": [', $contents);
         self::assertStringContainsString('"count": 1', $contents);
     }
 }

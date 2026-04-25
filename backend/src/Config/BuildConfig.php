@@ -13,14 +13,14 @@ final class BuildConfig
 {
     /**
      * @param string $organization GitHub organization name.
-     * @param string $label Label used to filter issues and pull requests.
+     * @param array<int, string> $topics Repository topics used to select repositories.
      * @param string $token GitHub access token.
      * @param string $outputDirectory Directory where JSON files are written.
      * @param DateTimeImmutable $generatedAt Timestamp for the aggregation run.
      */
     public function __construct(
         private readonly string $organization,
-        private readonly string $label,
+        private readonly array $topics,
         private readonly string $token,
         private readonly string $outputDirectory,
         private readonly DateTimeImmutable $generatedAt,
@@ -36,11 +36,11 @@ final class BuildConfig
     }
 
     /**
-     * @return string
+     * @return array<int, string>
      */
-    public function label(): string
+    public function topics(): array
     {
-        return $this->label;
+        return $this->topics;
     }
 
     /**

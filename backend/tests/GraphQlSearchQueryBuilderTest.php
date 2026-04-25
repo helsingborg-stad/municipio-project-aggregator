@@ -19,9 +19,9 @@ final class GraphQlSearchQueryBuilderTest extends TestCase
     {
         $builder = new GraphQlSearchQueryBuilder();
 
-        $query = $builder->build(SourceType::Issues, 'helsingborg-stad', 'municipio', null);
+        $query = $builder->build(SourceType::Issues, 'helsingborg-stad', 'getmunicipio', null);
 
-        self::assertStringContainsString('org:helsingborg-stad label:municipio is:issue is:open', $query);
+        self::assertStringContainsString('org:helsingborg-stad label:getmunicipio is:issue is:open', $query);
         self::assertStringContainsString('... on Issue', $query);
         self::assertStringNotContainsString('after:', $query);
     }

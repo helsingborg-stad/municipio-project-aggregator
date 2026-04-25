@@ -12,14 +12,14 @@ final class SourcePayload
     /**
      * @param string $source Source key used for the output filename.
      * @param string $organization GitHub organization name.
-     * @param string $label Label used in the query.
+     * @param array<int, string> $topics Repository topics used in the query.
      * @param string $generatedAt ISO 8601 aggregation timestamp.
      * @param array<int, AggregatedItem> $items Aggregated items.
      */
     public function __construct(
         private readonly string $source,
         private readonly string $organization,
-        private readonly string $label,
+        private readonly array $topics,
         private readonly string $generatedAt,
         private readonly array $items,
     ) {
@@ -41,7 +41,7 @@ final class SourcePayload
         return [
             'source' => $this->source,
             'organization' => $this->organization,
-            'label' => $this->label,
+            'topics' => $this->topics,
             'generatedAt' => $this->generatedAt,
             'count' => count($this->items),
             'items' => array_map(

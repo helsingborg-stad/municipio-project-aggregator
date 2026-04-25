@@ -15,12 +15,10 @@ use MunicipioProjectAggregator\Backend\Data\SourcePayload;
 final class GitHubSourceAggregator implements SourceAggregatorInterface
 {
     /**
-     * @param GraphQlSearchQueryBuilder $queryBuilder GraphQL query builder.
-     * @param GitHubGraphQlClient $client GitHub GraphQL client.
+     * @param GitHubRestClient $client GitHub REST client.
      */
     public function __construct(
-        private readonly GraphQlSearchQueryBuilder $queryBuilder,
-        private readonly GitHubGraphQlClient $client,
+        private readonly GitHubRestClient $client,
     ) {
     }
 
@@ -31,34 +29,20 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
      */
     public function aggregate(SourceType $sourceType, BuildConfig $config): SourcePayload
     {
-        $items = [];
-        $cursor = null;
-        $hasNextPage = true;
+        $itemsByUrl = [];
 
-        while ($hasNextPage) {
-            $query = $this->queryBuilder->build(
-                $sourceType,
-                $config->organization(),
-                $config->label(),
-                $cursor,
-            );
-
-            $data = $this->client->runQuery($config->token(), $query);
-            $search = is_array($data['search'] ?? null) ? $data['search'] : [];
-            $nodes = is_array($search['nodes'] ?? null) ? $search['nodes'] : [];
-
-            foreach ($nodes as $node) {
-                if (!is_array($node) || empty($node['title'])) {
+        foreach ($this->client->listRepositoriesByTopics($config->organization(), $config->topics(), $config->token()) as $repository) {
+            foreach ($this->client->listOpenItems($sourceType, $config->organization(), $repository, $config->token()) as $itemData) {
+                if (empty($itemData['title']) || empty($itemData['html_url'])) {
                     continue;
                 }
 
-                $items[] = AggregatedItem::fromNode($node);
+                $item = AggregatedItem::fromRestItem($repository, $itemData);
+                $itemsByUrl[$itemData['html_url']] = $item;
             }
-
-            $pageInfo = is_array($search['pageInfo'] ?? null) ? $search['pageInfo'] : [];
-            $hasNextPage = (bool) ($pageInfo['hasNextPage'] ?? false);
-            $cursor = is_string($pageInfo['endCursor'] ?? null) ? $pageInfo['endCursor'] : null;
         }
+
+        $items = array_values($itemsByUrl);
 
         usort(
             $items,
@@ -68,7 +52,7 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
         return new SourcePayload(
             $sourceType->value,
             $config->organization(),
-            $config->label(),
+            $config->topics(),
             $config->generatedAt()->format(DATE_ATOM),
             $items,
         );

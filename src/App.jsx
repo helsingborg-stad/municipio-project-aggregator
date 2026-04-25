@@ -13,6 +13,7 @@ const sources = [
 
 function SourcePanel({ payload, icon: Icon, accentClassName }) {
   const repositoryGroups = getRepositoryGroups(payload.items);
+  const trackedTopics = Array.isArray(payload.topics) ? payload.topics.join(', ') : '';
 
   return (
     <div className="space-y-6">
@@ -21,7 +22,7 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
           <div>
             <CardTitle className="text-2xl text-white">{payload.count} open {payload.source.replace('-', ' ')}</CardTitle>
             <CardDescription className="mt-2 max-w-2xl text-slate-300">
-              Filtered by the <span className="font-semibold text-white">{payload.label}</span> label across the{' '}
+              Collected from repositories tagged <span className="font-semibold text-white">{trackedTopics}</span> in the{' '}
               <span className="font-semibold text-white">{payload.organization}</span> organisation.
             </CardDescription>
           </div>

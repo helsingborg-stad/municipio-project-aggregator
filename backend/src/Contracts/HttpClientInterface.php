@@ -10,6 +10,15 @@ namespace MunicipioProjectAggregator\Backend\Contracts;
 interface HttpClientInterface
 {
     /**
+     * Perform a JSON GET request.
+     *
+     * @param string $url The target URL.
+     * @param array<string, string> $headers Request headers.
+     * @return array<mixed>
+     */
+    public function getJson(string $url, array $headers): array;
+
+    /**
      * Perform a JSON POST request.
      *
      * @param string $url The target URL.

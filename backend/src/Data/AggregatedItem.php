@@ -40,6 +40,23 @@ final class AggregatedItem
     }
 
     /**
+     * Create an item from a GitHub REST issue or pull request payload.
+     *
+     * @param string $repository Repository name.
+     * @param array<string, mixed> $item GitHub REST item.
+     * @return self
+     */
+    public static function fromRestItem(string $repository, array $item): self
+    {
+        return new self(
+            (string) ($item['title'] ?? ''),
+            (string) ($item['html_url'] ?? ''),
+            $repository,
+            (string) ($item['created_at'] ?? ''),
+        );
+    }
+
+    /**
      * @return array<string, string>
      */
     public function toArray(): array

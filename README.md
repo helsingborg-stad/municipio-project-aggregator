@@ -1,6 +1,6 @@
 # municipio-project-aggregator
 
-Aggregates Municipio-related GitHub issues and pull requests into separate JSON sources and renders them in a React dashboard.
+Aggregates open issues and pull requests from repositories tagged for Municipio work into separate JSON sources and renders them in a React dashboard.
 
 ## Architecture
 
@@ -8,12 +8,13 @@ Aggregates Municipio-related GitHub issues and pull requests into separate JSON 
 - `public/data/` contains generated JSON files such as `issues.json` and `pull-requests.json`.
 - `src/` contains the React UI built with Vite, Tailwind CSS, and shadcn-style components.
 - `dist/` contains the production build published by GitHub Pages.
+- Repository selection is based on GitHub repository topics, currently `municipio` and `getmunicipio`.
 
 ## Run locally
 
-The aggregator requires a GitHub token that can read organisation issues and pull requests.
+The aggregator can use a GitHub token for higher API limits, but it can also fall back to public GitHub REST endpoints for public repositories.
 
-1. Create a personal access token and make sure it can query the repositories you need.
+1. Create a personal access token if you need higher GitHub API limits.
 2. Provide the token in one of these ways:
 
 ```bash
@@ -39,7 +40,7 @@ npm install
 npm run build:data
 ```
 
-Generates `public/data/issues.json` and `public/data/pull-requests.json`.
+Generates `public/data/issues.json` and `public/data/pull-requests.json` from repositories tagged with the tracked GitHub topics.
 
 ```bash
 npm run dev
@@ -52,6 +53,12 @@ npm run build
 ```
 
 Runs the PHP aggregation step first and then builds the production UI into `dist/`.
+
+```bash
+composer serve
+```
+
+Serves the built site from `dist/` at `http://127.0.0.1:8000`. Run `npm run build` first so the latest UI and JSON files are available.
 
 ## Testing
 

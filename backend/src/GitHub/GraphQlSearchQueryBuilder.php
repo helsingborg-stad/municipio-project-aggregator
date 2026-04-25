@@ -16,7 +16,7 @@ final class GraphQlSearchQueryBuilder
      *
      * @param SourceType $sourceType Source type to query.
      * @param string $organization GitHub organization name.
-     * @param string $label Label to search for.
+        * @param string $label Label to search for.
      * @param string|null $afterCursor GraphQL pagination cursor.
      * @return string
      */

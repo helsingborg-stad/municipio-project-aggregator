@@ -3,11 +3,9 @@
 
 declare(strict_types=1);
 
-use DateTimeImmutable;
 use MunicipioProjectAggregator\Backend\Config\BuildConfig;
-use MunicipioProjectAggregator\Backend\GitHub\GitHubGraphQlClient;
+use MunicipioProjectAggregator\Backend\GitHub\GitHubRestClient;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubSourceAggregator;
-use MunicipioProjectAggregator\Backend\GitHub\GraphQlSearchQueryBuilder;
 use MunicipioProjectAggregator\Backend\GitHub\SourceType;
 use MunicipioProjectAggregator\Backend\Output\JsonSourceWriter;
 use MunicipioProjectAggregator\Backend\Support\LocalEnvironmentLoader;
@@ -31,15 +29,14 @@ if ($token === false || $token === '') {
 
 $config = new BuildConfig(
     organization: 'helsingborg-stad',
-    label: 'municipio',
+    topics: ['municipio', 'getmunicipio'],
     token: $token,
     outputDirectory: $projectRoot . '/public/data',
-    generatedAt: new DateTimeImmutable(),
+    generatedAt: new \DateTimeImmutable(),
 );
 
 $aggregator = new GitHubSourceAggregator(
-    new GraphQlSearchQueryBuilder(),
-    new GitHubGraphQlClient(new StreamHttpClient()),
+    new GitHubRestClient(new StreamHttpClient()),
 );
 
 $writer = new JsonSourceWriter($config->outputDirectory());
