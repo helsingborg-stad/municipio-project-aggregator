@@ -114,16 +114,16 @@ describe('getAuthorDirectory', () => {
 
     expect(authors).toEqual([
       {
-        login: 'hubot',
-        avatarUrl: 'https://example.com/hubot.png',
-        url: 'https://github.com/hubot',
-        contributionCount: 1,
-      },
-      {
         login: 'octocat',
         avatarUrl: 'https://example.com/octocat.png',
         url: 'https://github.com/octocat',
         contributionCount: 2,
+      },
+      {
+        login: 'hubot',
+        avatarUrl: 'https://example.com/hubot.png',
+        url: 'https://github.com/hubot',
+        contributionCount: 1,
       },
     ]);
   });
