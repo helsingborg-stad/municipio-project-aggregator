@@ -33,11 +33,14 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
 
         foreach ($this->client->listRepositoriesByTopics($config->topics(), $config->token()) as $repository) {
             foreach ($this->client->listOpenItems($sourceType, $repository, $config->token()) as $itemData) {
-                if (empty($itemData['title']) || empty($itemData['html_url'])) {
+                if (empty($itemData['title']) || empty($itemData['html_url']) || empty($itemData['number'])) {
                     continue;
                 }
 
-                $item = AggregatedItem::fromRestItem($repository->fullName(), $itemData);
+                $issueNumber = (int) $itemData['number'];
+                $issueDetails = $this->client->getIssueDetails($repository, $issueNumber, $config->token());
+                $timelineEvents = $this->client->listTimelineEvents($repository, $issueNumber, $config->token());
+                $item = AggregatedItem::fromRestItem($repository->fullName(), $itemData, $issueDetails, $timelineEvents);
                 $itemsByUrl[$itemData['html_url']] = $item;
             }
         }

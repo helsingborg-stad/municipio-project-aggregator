@@ -120,6 +120,55 @@ final class GitHubRestClient
     }
 
     /**
+     * @param RepositoryReference $repository
+     * @param int $issueNumber
+     * @param string $token
+     * @return array<string, mixed>
+     */
+    public function getIssueDetails(RepositoryReference $repository, int $issueNumber, string $token): array
+    {
+        $response = $this->getJson(
+            sprintf(
+                '%s/repos/%s/%s/issues/%d',
+                self::API_URL,
+                rawurlencode($repository->owner()),
+                rawurlencode($repository->name()),
+                $issueNumber,
+            ),
+            $token,
+        );
+
+        /** @var array<string, mixed> $response */
+        return $response;
+    }
+
+    /**
+     * @param RepositoryReference $repository
+     * @param int $issueNumber
+     * @param string $token
+     * @return array<int, array<string, mixed>>
+     */
+    public function listTimelineEvents(RepositoryReference $repository, int $issueNumber, string $token): array
+    {
+        $response = $this->getJson(
+            sprintf(
+                '%s/repos/%s/%s/issues/%d/timeline?per_page=100',
+                self::API_URL,
+                rawurlencode($repository->owner()),
+                rawurlencode($repository->name()),
+                $issueNumber,
+            ),
+            $token,
+        );
+
+        if (!is_array($response)) {
+            return [];
+        }
+
+        return array_values(array_filter($response, static fn (mixed $event): bool => is_array($event)));
+    }
+
+    /**
      * @param string $url
      * @param string $token
      * @return array<mixed>

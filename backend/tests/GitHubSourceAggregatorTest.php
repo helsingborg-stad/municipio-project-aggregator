@@ -66,11 +66,13 @@ final class GitHubSourceAggregatorTest extends TestCase
                         [
                             'title' => 'GetMunicipio only PR',
                             'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/2',
+                            'number' => 2,
                             'created_at' => '2026-04-25T09:00:00Z',
                         ],
                         [
                             'title' => 'Shared PR',
                             'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/1',
+                            'number' => 1,
                             'created_at' => '2026-04-24T09:00:00Z',
                         ],
                     ];
@@ -78,6 +80,89 @@ final class GitHubSourceAggregatorTest extends TestCase
 
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/pulls')) {
                     return [];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/2/timeline')) {
+                    return [[
+                        'event' => 'cross-referenced',
+                        'source' => [
+                            'issue' => [
+                                'title' => 'Roadmap card',
+                                'html_url' => 'https://github.com/helsingborg-stad/roadmap/issues/9',
+                                'repository' => [
+                                    'full_name' => 'helsingborg-stad/roadmap',
+                                ],
+                            ],
+                        ],
+                    ]];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1/timeline')) {
+                    return [];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/2')) {
+                    return [
+                        'title' => 'GetMunicipio only PR',
+                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/2',
+                        'number' => 2,
+                        'created_at' => '2026-04-25T09:00:00Z',
+                        'user' => [
+                            'login' => 'octocat',
+                            'avatar_url' => 'https://avatars.example.com/octocat.png',
+                            'html_url' => 'https://github.com/octocat',
+                        ],
+                        'assignees' => [[
+                            'login' => 'hubot',
+                            'avatar_url' => 'https://avatars.example.com/hubot.png',
+                            'html_url' => 'https://github.com/hubot',
+                        ]],
+                        'milestone' => [
+                            'title' => 'Q2',
+                            'html_url' => 'https://github.com/helsingborg-stad/styleguide/milestone/1',
+                            'due_on' => '2026-06-01T00:00:00Z',
+                        ],
+                        'type' => 'Feature',
+                        'sub_issues_summary' => [
+                            'total' => 3,
+                            'completed' => 1,
+                            'percent_completed' => 33,
+                        ],
+                        'issue_dependencies_summary' => [
+                            'blocked_by' => 1,
+                            'total_blocked_by' => 2,
+                            'blocking' => 0,
+                            'total_blocking' => 1,
+                        ],
+                    ];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1')) {
+                    return [
+                        'title' => 'Shared PR',
+                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/1',
+                        'number' => 1,
+                        'created_at' => '2026-04-24T09:00:00Z',
+                        'user' => [
+                            'login' => 'monalisa',
+                            'avatar_url' => 'https://avatars.example.com/monalisa.png',
+                            'html_url' => 'https://github.com/monalisa',
+                        ],
+                        'assignees' => [],
+                        'milestone' => null,
+                        'type' => null,
+                        'sub_issues_summary' => [
+                            'total' => 0,
+                            'completed' => 0,
+                            'percent_completed' => 0,
+                        ],
+                        'issue_dependencies_summary' => [
+                            'blocked_by' => 0,
+                            'total_blocked_by' => 0,
+                            'blocking' => 0,
+                            'total_blocking' => 0,
+                        ],
+                    ];
                 }
 
                 return [];
@@ -117,5 +202,13 @@ final class GitHubSourceAggregatorTest extends TestCase
         self::assertSame('GetMunicipio only PR', $data['items'][0]['title']);
         self::assertSame('Shared PR', $data['items'][1]['title']);
         self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
+        self::assertSame('octocat', $data['items'][0]['author']['login']);
+        self::assertSame('hubot', $data['items'][0]['assignees'][0]['login']);
+        self::assertSame('Q2', $data['items'][0]['milestone']['title']);
+        self::assertSame('Feature', $data['items'][0]['type']);
+        self::assertSame(3, $data['items'][0]['subIssues']['total']);
+        self::assertSame(1, $data['items'][0]['relationshipSummary']['blockedBy']);
+        self::assertSame(1, $data['items'][0]['relationshipSummary']['linked']);
+        self::assertSame('Roadmap card', $data['items'][0]['relationships'][0]['title']);
     }
 }

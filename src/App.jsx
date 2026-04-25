@@ -4,23 +4,163 @@ import { useEffect, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { formatRelativeTime, formatTimestamp, getRepositoryGroups } from '@/lib/dashboard';
+import { filterItems, formatRelativeTime, formatTimestamp, getFilterOptions, getRepositoryGroups, hasRelationships, hasSubIssues } from '@/lib/dashboard';
 
 const sources = [
   { key: 'issues', label: 'Issues', icon: Ticket, accent: 'bg-rose-500/15 text-rose-200 ring-1 ring-rose-400/30' },
   { key: 'pull-requests', label: 'Pull Requests', icon: GitPullRequest, accent: 'bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30' },
 ];
 
+const emptyFilters = {
+  author: '',
+  assignee: '',
+  milestone: '',
+  type: '',
+  subIssues: 'all',
+  relationships: 'all',
+};
+
+function Avatar({ person, fallbackLabel }) {
+  if (!person?.login) {
+    return null;
+  }
+
+  return (
+    <div className="flex items-center gap-2 rounded-full bg-white/5 px-2.5 py-1 text-xs text-slate-200 ring-1 ring-white/10">
+      {person.avatarUrl ? (
+        <img src={person.avatarUrl} alt={person.login} className="h-5 w-5 rounded-full object-cover" loading="lazy" />
+      ) : (
+        <div className="flex h-5 w-5 items-center justify-center rounded-full bg-cyan-300/15 text-[10px] font-semibold uppercase text-cyan-100">
+          {person.login.slice(0, 1)}
+        </div>
+      )}
+      <span>
+        {fallbackLabel ? `${fallbackLabel}: ` : ''}
+        {person.login}
+      </span>
+    </div>
+  );
+}
+
+function AssigneeStack({ assignees }) {
+  if (!assignees?.length) {
+    return <span className="text-xs text-slate-500">No assignees</span>;
+  }
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {assignees.map((assignee) => (
+        <Avatar key={assignee.login} person={assignee} />
+      ))}
+    </div>
+  );
+}
+
+function FilterSelect({ label, value, onChange, options }) {
+  return (
+    <label className="space-y-2 text-sm text-slate-300">
+      <span className="block text-xs font-medium uppercase tracking-[0.2em] text-slate-500">{label}</span>
+      <select
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-sm text-white outline-none transition-colors focus:border-cyan-300/50"
+      >
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function FilterBar({ filters, filterOptions, onFilterChange }) {
+  return (
+    <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <FilterSelect
+        label="Author"
+        value={filters.author}
+        onChange={(value) => onFilterChange('author', value)}
+        options={[{ value: '', label: 'All authors' }, ...filterOptions.authors.map((author) => ({ value: author, label: author }))]}
+      />
+      <FilterSelect
+        label="Assignee"
+        value={filters.assignee}
+        onChange={(value) => onFilterChange('assignee', value)}
+        options={[
+          { value: '', label: 'All assignees' },
+          { value: '__unassigned__', label: 'Unassigned' },
+          ...filterOptions.assignees.map((assignee) => ({ value: assignee, label: assignee })),
+        ]}
+      />
+      <FilterSelect
+        label="Milestone"
+        value={filters.milestone}
+        onChange={(value) => onFilterChange('milestone', value)}
+        options={[
+          { value: '', label: 'All milestones' },
+          { value: '__none__', label: 'No milestone' },
+          ...filterOptions.milestones.map((milestone) => ({ value: milestone, label: milestone })),
+        ]}
+      />
+      <FilterSelect
+        label="Type"
+        value={filters.type}
+        onChange={(value) => onFilterChange('type', value)}
+        options={[
+          { value: '', label: 'All types' },
+          { value: '__none__', label: 'Untyped' },
+          ...filterOptions.types.map((type) => ({ value: type, label: type })),
+        ]}
+      />
+      <FilterSelect
+        label="Sub-issues"
+        value={filters.subIssues}
+        onChange={(value) => onFilterChange('subIssues', value)}
+        options={[
+          { value: 'all', label: 'All sub-issue states' },
+          { value: 'with', label: 'Has sub-issues' },
+          { value: 'without', label: 'No sub-issues' },
+        ]}
+      />
+      <FilterSelect
+        label="Relationships"
+        value={filters.relationships}
+        onChange={(value) => onFilterChange('relationships', value)}
+        options={[
+          { value: 'all', label: 'All relationship states' },
+          { value: 'with', label: 'Has relationships' },
+          { value: 'without', label: 'No relationships' },
+        ]}
+      />
+    </div>
+  );
+}
+
 function SourcePanel({ payload, icon: Icon, accentClassName }) {
-  const repositoryGroups = getRepositoryGroups(payload.items);
+  const [filters, setFilters] = useState(emptyFilters);
+  const availableItems = Array.isArray(payload.items) ? payload.items : [];
+  const filterOptions = getFilterOptions(availableItems);
+  const visibleItems = filterItems(availableItems, filters);
+  const repositoryGroups = getRepositoryGroups(visibleItems);
   const trackedTopics = Array.isArray(payload.topics) ? payload.topics.join(', ') : '';
+
+  const updateFilter = (name, value) => {
+    setFilters((currentFilters) => ({
+      ...currentFilters,
+      [name]: value,
+    }));
+  };
+
+  const itemCountLabel = `${visibleItems.length} of ${payload.count} open ${payload.source.replace('-', ' ')}`;
 
   return (
     <div className="space-y-6">
       <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
         <CardHeader className="flex flex-col gap-4 border-b border-white/10 bg-white/5 md:flex-row md:items-end md:justify-between">
           <div>
-            <CardTitle className="text-2xl text-white">{payload.count} open {payload.source.replace('-', ' ')}</CardTitle>
+            <CardTitle className="text-2xl text-white">{itemCountLabel}</CardTitle>
             <CardDescription className="mt-2 max-w-2xl text-slate-300">
               Collected from repositories tagged <span className="font-semibold text-white">{trackedTopics}</span> in the{' '}
               <span className="font-semibold text-white">{payload.sourceScope}</span> scope.
@@ -33,11 +173,18 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
         </CardHeader>
         <CardContent className="p-6">
           {repositoryGroups.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
-              No items available for this source yet.
+            <div className="space-y-4">
+              <FilterBar filters={filters} filterOptions={filterOptions} onFilterChange={updateFilter} />
+
+              <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
+                No items match the current filters.
+              </div>
             </div>
           ) : (
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="space-y-4">
+              <FilterBar filters={filters} filterOptions={filterOptions} onFilterChange={updateFilter} />
+
+              <div className="grid gap-4 lg:grid-cols-2">
               {repositoryGroups.map(({ repository, items }) => (
                 <section
                   key={repository}
@@ -58,24 +205,85 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
                   <ul className="space-y-3">
                     {items.map((item) => (
                       <li key={item.url} className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
-                        <a href={item.url} target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-3">
-                          <div>
-                            <h4 className="text-sm font-medium text-slate-100 transition-colors group-hover:text-white">
-                              {item.title}
-                            </h4>
-                            <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
-                              <span>{formatRelativeTime(item.createdAt)}</span>
-                              <span className="text-slate-600">/</span>
-                              <span>{formatTimestamp(item.createdAt)}</span>
+                        <div className="space-y-4">
+                          <a href={item.url} target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-3">
+                            <div>
+                              <div className="flex flex-wrap items-center gap-2">
+                                <Badge variant="secondary">#{item.number}</Badge>
+                                {item.type ? <Badge variant="secondary">{item.type}</Badge> : null}
+                                {item.milestone?.title ? <Badge variant="secondary">{item.milestone.title}</Badge> : null}
+                                {hasSubIssues(item) ? <Badge variant="secondary">{item.subIssues.total} sub-issues</Badge> : null}
+                                {hasRelationships(item) ? (
+                                  <Badge variant="secondary">
+                                    {item.relationshipSummary.linked + item.relationshipSummary.totalBlockedBy + item.relationshipSummary.totalBlocking} relationships
+                                  </Badge>
+                                ) : null}
+                              </div>
+                              <h4 className="mt-3 text-sm font-medium text-slate-100 transition-colors group-hover:text-white">
+                                {item.title}
+                              </h4>
+                              <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
+                                <span>{formatRelativeTime(item.createdAt)}</span>
+                                <span className="text-slate-600">/</span>
+                                <span>{formatTimestamp(item.createdAt)}</span>
+                              </div>
                             </div>
+                            <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+                          </a>
+
+                          <div className="grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <Avatar person={item.author} fallbackLabel="Author" />
+                            </div>
+                            <div className="space-y-2">
+                              <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Assignees</p>
+                              <AssigneeStack assignees={item.assignees} />
+                            </div>
+                            <div className="grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
+                              <div className="rounded-2xl bg-white/5 px-3 py-2">
+                                <span className="block text-slate-500">Sub-issues</span>
+                                <span className="font-medium text-slate-100">
+                                  {item.subIssues.completed}/{item.subIssues.total} completed
+                                </span>
+                              </div>
+                              <div className="rounded-2xl bg-white/5 px-3 py-2">
+                                <span className="block text-slate-500">Dependencies</span>
+                                <span className="font-medium text-slate-100">
+                                  {item.relationshipSummary.totalBlockedBy} blocked by, {item.relationshipSummary.totalBlocking} blocking
+                                </span>
+                              </div>
+                            </div>
+                            {item.relationships?.length ? (
+                              <div className="space-y-2">
+                                <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Relationships</p>
+                                <ul className="space-y-2">
+                                  {item.relationships.slice(0, 3).map((relationship) => (
+                                    <li key={`${relationship.event}-${relationship.url}`}>
+                                      <a
+                                        href={relationship.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="flex items-center justify-between gap-3 rounded-2xl bg-white/5 px-3 py-2 text-xs text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
+                                      >
+                                        <span>
+                                          <span className="font-medium text-slate-100">{relationship.title}</span>
+                                          <span className="ml-2 text-slate-500">{relationship.repository}</span>
+                                        </span>
+                                        <Badge variant="secondary">{relationship.event}</Badge>
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : null}
                           </div>
-                          <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
-                        </a>
+                        </div>
                       </li>
                     ))}
                   </ul>
                 </section>
               ))}
+              </div>
             </div>
           )}
         </CardContent>

@@ -46,7 +46,20 @@ final class JsonSourceWriterTest extends TestCase
             'GitHub',
             ['municipio-se', 'getmunicipio'],
             '2026-04-24T08:00:00+00:00',
-            [new AggregatedItem('Title', 'https://example.com', 'municipio', '2026-04-23T08:00:00+00:00')],
+            [new AggregatedItem(
+                'Title',
+                'https://example.com',
+                'municipio',
+                '2026-04-23T08:00:00+00:00',
+                14,
+                ['login' => 'octocat', 'avatarUrl' => 'https://example.com/avatar.png', 'url' => 'https://github.com/octocat'],
+                [],
+                null,
+                'Bug',
+                ['total' => 1, 'completed' => 0, 'percentCompleted' => 0],
+                ['blockedBy' => 0, 'totalBlockedBy' => 0, 'blocking' => 0, 'totalBlocking' => 0, 'linked' => 0],
+                [],
+            )],
         );
 
         $filePath = $writer->write($payload);
@@ -57,5 +70,6 @@ final class JsonSourceWriterTest extends TestCase
         self::assertStringContainsString('"source": "issues"', $contents);
         self::assertStringContainsString('"topics": [', $contents);
         self::assertStringContainsString('"count": 1', $contents);
+        self::assertStringContainsString('"author"', $contents);
     }
 }
