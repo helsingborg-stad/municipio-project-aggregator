@@ -632,7 +632,9 @@ function AuthorDirectoryPanel({ authors }) {
           </div>
         )}
         <p className="mt-6 text-sm text-slate-400">
-          Contribution score footnote: each tracked issue is worth 0.1 and each tracked pull request is worth 1.0.
+          <span className="font-semibold text-slate-200">Contribution score footnote:</span>
+          {' '}
+          each tracked issue is worth 0.1 and each tracked pull request is worth 1.0.
         </p>
       </CardContent>
     </Card>

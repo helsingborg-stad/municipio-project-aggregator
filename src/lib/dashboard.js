@@ -116,16 +116,6 @@ function getContributionScore(item) {
 }
 
 /**
- * Rounds a contribution score to one decimal place.
- *
- * @param {number} value
- * @returns {number}
- */
-function roundContributionScore(value) {
-  return Math.round(value * 10) / 10;
-}
-
-/**
  * Builds the contributor directory with counts and weighted scores.
  *
  * @param {Array<Record<string, any>>} items
@@ -146,11 +136,16 @@ export function getAuthorDirectory(items) {
       avatarUrl: author.avatarUrl ?? currentAuthor?.avatarUrl ?? '',
       url: author.url ?? currentAuthor?.url ?? '',
       contributionCount: (currentAuthor?.contributionCount ?? 0) + 1,
-      contributionScore: roundContributionScore((currentAuthor?.contributionScore ?? 0) + getContributionScore(item)),
+      contributionScore: (currentAuthor?.contributionScore ?? 0) + getContributionScore(item),
     });
   });
 
-  return [...authorsByLogin.values()].sort((left, right) => {
+  return [...authorsByLogin.values()]
+    .map((author) => ({
+      ...author,
+      contributionScore: Math.round(author.contributionScore * 10) / 10,
+    }))
+    .sort((left, right) => {
     if (right.contributionScore !== left.contributionScore) {
       return right.contributionScore - left.contributionScore;
     }
@@ -160,7 +155,7 @@ export function getAuthorDirectory(items) {
     }
 
     return left.login.localeCompare(right.login);
-  });
+    });
 }
 
 export function getFilterOptions(items) {
