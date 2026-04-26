@@ -180,4 +180,23 @@ describe('App', () => {
       expect(window.localStorage.getItem(storageKey)).toBeNull();
     });
   });
+
+  it('renders source items in stacked layouts with container-aware cards', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    const issueCard = (await screen.findByText('Issue alpha')).closest('li');
+    expect(issueCard).toHaveClass('source-item-card');
+    expect(issueCard.closest('ul')).toHaveClass('space-y-3');
+
+    fireEvent.click(screen.getByRole('button', { name: 'List view' }));
+
+    await waitFor(() => {
+      const milestoneSection = screen.getByRole('heading', { name: 'Q2' }).closest('section');
+
+      expect(milestoneSection.parentElement).toHaveClass('source-panel__stack');
+      expect(milestoneSection.parentElement).not.toHaveClass('xl:grid-cols-2');
+    });
+  });
 });

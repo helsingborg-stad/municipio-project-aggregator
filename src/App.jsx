@@ -339,15 +339,15 @@ function ItemBadgeRow({ item }) {
 
 function ItemDetailPanel({ item }) {
   return (
-    <div className="grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
-      <div className="flex flex-wrap items-center gap-2">
+    <div className="source-item-card__details grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
+      <div className="source-item-card__meta-row flex flex-wrap items-center gap-2">
         <Avatar person={item.author} fallbackLabel="Author" />
       </div>
-      <div className="space-y-2">
+      <div className="source-item-card__meta-section space-y-2">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Assignees</p>
         <AssigneeStack assignees={item.assignees} />
       </div>
-      <div className="grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
+      <div className="source-item-card__stats grid gap-2 text-xs text-slate-400">
         <div className="rounded-2xl bg-white/5 px-3 py-2">
           <span className="block text-slate-500">Sub-issues</span>
           <span className="font-medium text-slate-100">
@@ -390,10 +390,15 @@ function ItemDetailPanel({ item }) {
 
 function TrackedItemCard({ item, showRepository = false }) {
   return (
-    <li className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
-      <div className="space-y-4">
-        <a href={item.url} target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-3">
-          <div>
+    <li className="source-item-card rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
+      <div className="source-item-card__content space-y-4">
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noreferrer"
+          className="source-item-card__link group flex items-start justify-between gap-3"
+        >
+          <div className="source-item-card__summary min-w-0">
             {showRepository ? (
               <div className="mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
                 <FolderKanban className="h-3.5 w-3.5" />
@@ -403,14 +408,15 @@ function TrackedItemCard({ item, showRepository = false }) {
             <ItemBadgeRow item={item} />
             <h4 className="mt-3 text-sm font-medium text-slate-100 transition-colors group-hover:text-white">
               {item.title}
+              <span className="sr-only"> (opens in a new tab)</span>
             </h4>
-            <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
+            <div className="source-item-card__timestamps mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
               <span>{formatRelativeTime(item.createdAt)}</span>
               <span className="text-slate-600">/</span>
               <span>{formatTimestamp(item.createdAt)}</span>
             </div>
           </div>
-          <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+          <ArrowUpRight className="source-item-card__icon mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
         </a>
 
         <ItemDetailPanel item={item} />
@@ -741,7 +747,7 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
   );
 
   const itemContent = viewMode === 'list' ? (
-    <div className="grid gap-4 xl:grid-cols-2">
+    <div className="source-panel__stack space-y-4">
       {milestoneGroups.map(({ milestone, items }) => {
         const visibleTreeItemCount = countTreeItems(items);
 
@@ -772,7 +778,7 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
       })}
     </div>
   ) : (
-    <div className="grid gap-4 lg:grid-cols-2">
+    <div className="source-panel__stack space-y-4">
       {repositoryGroups.map(({ repository, items }) => (
         <section
           key={repository}

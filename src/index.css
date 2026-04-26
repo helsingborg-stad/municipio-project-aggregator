@@ -37,3 +37,54 @@
     min-height: 100vh;
   }
 }
+
+@layer components {
+  .source-item-card {
+    container-type: inline-size;
+  }
+
+  @container (min-width: 36rem) {
+    .source-item-card__content {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 1fr);
+      align-items: start;
+    }
+
+    .source-item-card__details {
+      height: 100%;
+    }
+  }
+
+  @container (max-width: calc(36rem - 0.01px)) {
+    .source-item-card__link {
+      flex-direction: column;
+    }
+
+    .source-item-card__icon {
+      display: none;
+    }
+  }
+
+  @container (min-width: 28rem) {
+    .source-item-card__details {
+      grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .source-item-card__meta-row {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .source-item-card__meta-section {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .source-item-card__stats {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
