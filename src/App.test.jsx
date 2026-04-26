@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import App from './App';
@@ -87,9 +87,10 @@ const pullRequestsPayload = {
 describe('App', () => {
   afterEach(() => {
     vi.restoreAllMocks();
+    window.localStorage.clear();
   });
 
-  it('renders repository and author tabs from aggregated payload metadata', async () => {
+  function mockDashboardFetch() {
     vi.stubGlobal('fetch', vi.fn(async (input) => {
       const url = String(input);
 
@@ -98,6 +99,10 @@ describe('App', () => {
         json: async () => (url.includes('issues.json') ? issuesPayload : pullRequestsPayload),
       };
     }));
+  }
+
+  it('renders repository and author tabs from aggregated payload metadata', async () => {
+    mockDashboardFetch();
 
     render(<App />);
 
@@ -114,5 +119,40 @@ describe('App', () => {
 
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
     expect(screen.getByText('2 tracked contributions')).toBeInTheDocument();
+  });
+
+  it('remembers source filters and view mode and clears saved preferences', async () => {
+    mockDashboardFetch();
+
+    const storageKey = 'municipio-project-aggregator:source-panel:issues';
+    const { unmount } = render(<App />);
+
+    await screen.findByText('1 of 1 open issues');
+
+    fireEvent.change(screen.getByLabelText('Author'), { target: { value: 'octocat' } });
+    fireEvent.click(screen.getByRole('button', { name: 'List view' }));
+
+    await waitFor(() => {
+      expect(window.localStorage.getItem(storageKey)).toContain('"author":"octocat"');
+      expect(window.localStorage.getItem(storageKey)).toContain('"viewMode":"list"');
+    });
+
+    unmount();
+
+    render(<App />);
+
+    await screen.findByText('1 of 1 open issues');
+
+    expect(screen.getByLabelText('Author')).toHaveValue('octocat');
+    expect(screen.getByRole('button', { name: 'List view' })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByText('helsingborg-stad/plugin-alpha')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Clear saved view' }));
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('Author')).toHaveValue('');
+      expect(screen.getByRole('button', { name: 'Card view' })).toHaveAttribute('aria-pressed', 'true');
+      expect(window.localStorage.getItem(storageKey)).toBeNull();
+    });
   });
 });
