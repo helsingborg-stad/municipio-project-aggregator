@@ -1,4 +1,4 @@
-import { AlertCircle, ArrowUpRight, FolderKanban, GitPullRequest, RefreshCcw, Ticket, Users } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Ticket, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
@@ -30,6 +30,97 @@ const emptyFilters = {
   subIssues: 'all',
   relationships: 'all',
 };
+
+const defaultViewMode = 'cards';
+const sourcePanelStorageKeyPrefix = 'municipio-project-aggregator:source-panel';
+
+/**
+ * Returns a new filter state object with default values.
+ *
+ * @returns {typeof emptyFilters}
+ */
+function getEmptyFilters() {
+  return { ...emptyFilters };
+}
+
+/**
+ * Returns the local storage key for a source panel.
+ *
+ * @param {string} source
+ * @returns {string}
+ */
+function getSourcePanelStorageKey(source) {
+  return `${sourcePanelStorageKeyPrefix}:${source}`;
+}
+
+/**
+ * Normalizes a stored filter object to the supported filter shape.
+ *
+ * @param {unknown} storedFilters
+ * @returns {typeof emptyFilters}
+ */
+function normalizeStoredFilters(storedFilters) {
+  const filters = getEmptyFilters();
+
+  if (!storedFilters || typeof storedFilters !== 'object') {
+    return filters;
+  }
+
+  return Object.keys(filters).reduce((normalizedFilters, key) => ({
+    ...normalizedFilters,
+    [key]: typeof storedFilters[key] === 'string' ? storedFilters[key] : filters[key],
+  }), filters);
+}
+
+/**
+ * Normalizes the stored presentation mode.
+ *
+ * @param {unknown} viewMode
+ * @returns {'cards' | 'list'}
+ */
+function normalizeViewMode(viewMode) {
+  return viewMode === 'list' ? 'list' : defaultViewMode;
+}
+
+/**
+ * Reads saved source panel preferences from local storage.
+ *
+ * @param {string} source
+ * @returns {{filters: typeof emptyFilters, viewMode: 'cards' | 'list'}}
+ */
+function readSourcePanelPreferences(source) {
+  if (typeof window === 'undefined') {
+    return { filters: getEmptyFilters(), viewMode: defaultViewMode };
+  }
+
+  try {
+    const rawPreferences = window.localStorage.getItem(getSourcePanelStorageKey(source));
+
+    if (!rawPreferences) {
+      return { filters: getEmptyFilters(), viewMode: defaultViewMode };
+    }
+
+    const parsedPreferences = JSON.parse(rawPreferences);
+
+    return {
+      filters: normalizeStoredFilters(parsedPreferences.filters),
+      viewMode: normalizeViewMode(parsedPreferences.viewMode),
+    };
+  } catch {
+    return { filters: getEmptyFilters(), viewMode: defaultViewMode };
+  }
+}
+
+/**
+ * Determines whether the current panel state differs from the defaults.
+ *
+ * @param {typeof emptyFilters} filters
+ * @param {'cards' | 'list'} viewMode
+ * @returns {boolean}
+ */
+function hasCustomPanelPreferences(filters, viewMode) {
+  return Object.entries(emptyFilters).some(([name, value]) => filters[name] !== value) || viewMode !== defaultViewMode;
+}
 
 function AvatarImage({ person, sizeClassName = 'h-5 w-5', fallbackTextClassName = 'text-[10px]' }) {
   if (!person?.login) {
@@ -96,66 +187,202 @@ function FilterSelect({ label, value, onChange, options }) {
   );
 }
 
-function FilterBar({ filters, filterOptions, onFilterChange }) {
+function FilterBar({ filters, filterOptions, onFilterChange, viewMode, onViewModeChange, onClear, canClear }) {
   return (
-    <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-      <FilterSelect
-        label="Author"
-        value={filters.author}
-        onChange={(value) => onFilterChange('author', value)}
-        options={[{ value: '', label: 'All authors' }, ...filterOptions.authors.map((author) => ({ value: author, label: author }))]}
-      />
-      <FilterSelect
-        label="Assignee"
-        value={filters.assignee}
-        onChange={(value) => onFilterChange('assignee', value)}
-        options={[
-          { value: '', label: 'All assignees' },
-          { value: '__unassigned__', label: 'Unassigned' },
-          ...filterOptions.assignees.map((assignee) => ({ value: assignee, label: assignee })),
-        ]}
-      />
-      <FilterSelect
-        label="Milestone"
-        value={filters.milestone}
-        onChange={(value) => onFilterChange('milestone', value)}
-        options={[
-          { value: '', label: 'All milestones' },
-          { value: '__none__', label: 'No milestone' },
-          ...filterOptions.milestones.map((milestone) => ({ value: milestone, label: milestone })),
-        ]}
-      />
-      <FilterSelect
-        label="Type"
-        value={filters.type}
-        onChange={(value) => onFilterChange('type', value)}
-        options={[
-          { value: '', label: 'All types' },
-          { value: '__none__', label: 'Untyped' },
-          ...filterOptions.types.map((type) => ({ value: type, label: type })),
-        ]}
-      />
-      <FilterSelect
-        label="Sub-issues"
-        value={filters.subIssues}
-        onChange={(value) => onFilterChange('subIssues', value)}
-        options={[
-          { value: 'all', label: 'All sub-issue states' },
-          { value: 'with', label: 'Has sub-issues' },
-          { value: 'without', label: 'No sub-issues' },
-        ]}
-      />
-      <FilterSelect
-        label="Relationships"
-        value={filters.relationships}
-        onChange={(value) => onFilterChange('relationships', value)}
-        options={[
-          { value: 'all', label: 'All relationship states' },
-          { value: 'with', label: 'Has relationships' },
-          { value: 'without', label: 'No relationships' },
-        ]}
-      />
+    <div className="space-y-4">
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <div className="inline-flex w-full rounded-2xl border border-white/10 bg-slate-950/70 p-1 text-sm lg:w-auto">
+          <button
+            type="button"
+            aria-label="Card view"
+            aria-pressed={viewMode === 'cards'}
+            onClick={() => onViewModeChange('cards')}
+            className={`inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2 transition-colors lg:flex-none ${viewMode === 'cards' ? 'bg-white text-slate-950' : 'text-slate-300 hover:bg-white/5 hover:text-white'}`}
+          >
+            <LayoutGrid className="h-4 w-4" />
+            Cards
+          </button>
+          <button
+            type="button"
+            aria-label="List view"
+            aria-pressed={viewMode === 'list'}
+            onClick={() => onViewModeChange('list')}
+            className={`inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2 transition-colors lg:flex-none ${viewMode === 'list' ? 'bg-white text-slate-950' : 'text-slate-300 hover:bg-white/5 hover:text-white'}`}
+          >
+            <List className="h-4 w-4" />
+            List
+          </button>
+        </div>
+
+        <button
+          type="button"
+          aria-label="Clear saved view"
+          onClick={onClear}
+          disabled={!canClear}
+          className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          <RotateCcw className="h-4 w-4" />
+          Clear saved view
+        </button>
+      </div>
+
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        <FilterSelect
+          label="Author"
+          value={filters.author}
+          onChange={(value) => onFilterChange('author', value)}
+          options={[{ value: '', label: 'All authors' }, ...filterOptions.authors.map((author) => ({ value: author, label: author }))]}
+        />
+        <FilterSelect
+          label="Assignee"
+          value={filters.assignee}
+          onChange={(value) => onFilterChange('assignee', value)}
+          options={[
+            { value: '', label: 'All assignees' },
+            { value: '__unassigned__', label: 'Unassigned' },
+            ...filterOptions.assignees.map((assignee) => ({ value: assignee, label: assignee })),
+          ]}
+        />
+        <FilterSelect
+          label="Milestone"
+          value={filters.milestone}
+          onChange={(value) => onFilterChange('milestone', value)}
+          options={[
+            { value: '', label: 'All milestones' },
+            { value: '__none__', label: 'No milestone' },
+            ...filterOptions.milestones.map((milestone) => ({ value: milestone, label: milestone })),
+          ]}
+        />
+        <FilterSelect
+          label="Type"
+          value={filters.type}
+          onChange={(value) => onFilterChange('type', value)}
+          options={[
+            { value: '', label: 'All types' },
+            { value: '__none__', label: 'Untyped' },
+            ...filterOptions.types.map((type) => ({ value: type, label: type })),
+          ]}
+        />
+        <FilterSelect
+          label="Sub-issues"
+          value={filters.subIssues}
+          onChange={(value) => onFilterChange('subIssues', value)}
+          options={[
+            { value: 'all', label: 'All sub-issue states' },
+            { value: 'with', label: 'Has sub-issues' },
+            { value: 'without', label: 'No sub-issues' },
+          ]}
+        />
+        <FilterSelect
+          label="Relationships"
+          value={filters.relationships}
+          onChange={(value) => onFilterChange('relationships', value)}
+          options={[
+            { value: 'all', label: 'All relationship states' },
+            { value: 'with', label: 'Has relationships' },
+            { value: 'without', label: 'No relationships' },
+          ]}
+        />
+      </div>
     </div>
+  );
+}
+
+function ItemBadgeRow({ item }) {
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <Badge variant="secondary">#{item.number}</Badge>
+      {item.type ? <Badge variant="secondary">{item.type}</Badge> : null}
+      {item.milestone?.title ? <Badge variant="secondary">{item.milestone.title}</Badge> : null}
+      {hasSubIssues(item) ? <Badge variant="secondary">{item.subIssues.total} sub-issues</Badge> : null}
+      {hasRelationships(item) ? (
+        <Badge variant="secondary">
+          {item.relationshipSummary.linked + item.relationshipSummary.totalBlockedBy + item.relationshipSummary.totalBlocking} relationships
+        </Badge>
+      ) : null}
+    </div>
+  );
+}
+
+function ItemDetailPanel({ item }) {
+  return (
+    <div className="grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
+      <div className="flex flex-wrap items-center gap-2">
+        <Avatar person={item.author} fallbackLabel="Author" />
+      </div>
+      <div className="space-y-2">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Assignees</p>
+        <AssigneeStack assignees={item.assignees} />
+      </div>
+      <div className="grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
+        <div className="rounded-2xl bg-white/5 px-3 py-2">
+          <span className="block text-slate-500">Sub-issues</span>
+          <span className="font-medium text-slate-100">
+            {item.subIssues.completed}/{item.subIssues.total} completed
+          </span>
+        </div>
+        <div className="rounded-2xl bg-white/5 px-3 py-2">
+          <span className="block text-slate-500">Dependencies</span>
+          <span className="font-medium text-slate-100">
+            {item.relationshipSummary.totalBlockedBy} blocked by, {item.relationshipSummary.totalBlocking} blocking
+          </span>
+        </div>
+      </div>
+      {item.relationships?.length ? (
+        <div className="space-y-2">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Relationships</p>
+          <ul className="space-y-2">
+            {item.relationships.slice(0, 3).map((relationship) => (
+              <li key={`${relationship.event}-${relationship.url}`}>
+                <a
+                  href={relationship.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between gap-3 rounded-2xl bg-white/5 px-3 py-2 text-xs text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
+                >
+                  <span>
+                    <span className="font-medium text-slate-100">{relationship.title}</span>
+                    <span className="ml-2 text-slate-500">{relationship.repository}</span>
+                  </span>
+                  <Badge variant="secondary">{relationship.event}</Badge>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function TrackedItemCard({ item, showRepository = false }) {
+  return (
+    <li className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
+      <div className="space-y-4">
+        <a href={item.url} target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-3">
+          <div>
+            {showRepository ? (
+              <div className="mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
+                <FolderKanban className="h-3.5 w-3.5" />
+                <span>{item.repository}</span>
+              </div>
+            ) : null}
+            <ItemBadgeRow item={item} />
+            <h4 className="mt-3 text-sm font-medium text-slate-100 transition-colors group-hover:text-white">
+              {item.title}
+            </h4>
+            <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span>{formatRelativeTime(item.createdAt)}</span>
+              <span className="text-slate-600">/</span>
+              <span>{formatTimestamp(item.createdAt)}</span>
+            </div>
+          </div>
+          <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+        </a>
+
+        <ItemDetailPanel item={item} />
+      </div>
+    </li>
   );
 }
 
@@ -288,21 +515,110 @@ function AuthorDirectoryPanel({ authors }) {
 }
 
 function SourcePanel({ payload, icon: Icon, accentClassName }) {
-  const [filters, setFilters] = useState(emptyFilters);
+  const [panelPreferences, setPanelPreferences] = useState(() => readSourcePanelPreferences(payload.source));
+  const { filters, viewMode } = panelPreferences;
   const availableItems = Array.isArray(payload.items) ? payload.items : [];
   const filterOptions = getFilterOptions(availableItems);
   const visibleItems = filterItems(availableItems, filters);
   const repositoryGroups = getRepositoryGroups(visibleItems);
   const trackedTopics = Array.isArray(payload.topics) ? payload.topics.join(', ') : '';
+  const canClear = hasCustomPanelPreferences(filters, viewMode);
+
+  useEffect(() => {
+    setPanelPreferences(readSourcePanelPreferences(payload.source));
+  }, [payload.source]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const storageKey = getSourcePanelStorageKey(payload.source);
+
+    try {
+      if (!hasCustomPanelPreferences(filters, viewMode)) {
+        window.localStorage.removeItem(storageKey);
+        return;
+      }
+
+      window.localStorage.setItem(storageKey, JSON.stringify({ filters, viewMode }));
+    } catch {
+      // Ignore local storage write failures so the dashboard remains usable.
+    }
+  }, [filters, payload.source, viewMode]);
 
   const updateFilter = (name, value) => {
-    setFilters((currentFilters) => ({
-      ...currentFilters,
-      [name]: value,
+    setPanelPreferences((currentPreferences) => ({
+      ...currentPreferences,
+      filters: {
+        ...currentPreferences.filters,
+        [name]: value,
+      },
     }));
   };
 
+  const updateViewMode = (nextViewMode) => {
+    setPanelPreferences((currentPreferences) => ({
+      ...currentPreferences,
+      viewMode: normalizeViewMode(nextViewMode),
+    }));
+  };
+
+  const clearPreferences = () => {
+    setPanelPreferences({
+      filters: getEmptyFilters(),
+      viewMode: defaultViewMode,
+    });
+  };
+
   const itemCountLabel = `${visibleItems.length} of ${payload.count} open ${payload.source.replace('-', ' ')}`;
+
+  const filterBar = (
+    <FilterBar
+      filters={filters}
+      filterOptions={filterOptions}
+      onFilterChange={updateFilter}
+      viewMode={viewMode}
+      onViewModeChange={updateViewMode}
+      onClear={clearPreferences}
+      canClear={canClear}
+    />
+  );
+
+  const itemContent = viewMode === 'list' ? (
+    <ul className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
+      {visibleItems.map((item) => (
+        <TrackedItemCard key={item.url} item={item} showRepository />
+      ))}
+    </ul>
+  ) : (
+    <div className="grid gap-4 lg:grid-cols-2">
+      {repositoryGroups.map(({ repository, items }) => (
+        <section
+          key={repository}
+          className="rounded-3xl border border-white/10 bg-slate-900/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+        >
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="rounded-2xl bg-cyan-300/10 p-2 text-cyan-200">
+                <FolderKanban className="h-4 w-4" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">{repository}</h3>
+                <p className="text-sm text-slate-400">{items.length} tracked item{items.length === 1 ? '' : 's'}</p>
+              </div>
+            </div>
+            <Badge variant="secondary">{items.length}</Badge>
+          </div>
+          <ul className="space-y-3">
+            {items.map((item) => (
+              <TrackedItemCard key={item.url} item={item} />
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  );
 
   return (
     <div className="space-y-6">
@@ -323,7 +639,7 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
         <CardContent className="p-6">
           {repositoryGroups.length === 0 ? (
             <div className="space-y-4">
-              <FilterBar filters={filters} filterOptions={filterOptions} onFilterChange={updateFilter} />
+              {filterBar}
 
               <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
                 No items match the current filters.
@@ -331,108 +647,8 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
             </div>
           ) : (
             <div className="space-y-4">
-              <FilterBar filters={filters} filterOptions={filterOptions} onFilterChange={updateFilter} />
-
-              <div className="grid gap-4 lg:grid-cols-2">
-              {repositoryGroups.map(({ repository, items }) => (
-                <section
-                  key={repository}
-                  className="rounded-3xl border border-white/10 bg-slate-900/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
-                >
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <div className="rounded-2xl bg-cyan-300/10 p-2 text-cyan-200">
-                        <FolderKanban className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{repository}</h3>
-                        <p className="text-sm text-slate-400">{items.length} tracked item{items.length === 1 ? '' : 's'}</p>
-                      </div>
-                    </div>
-                    <Badge variant="secondary">{items.length}</Badge>
-                  </div>
-                  <ul className="space-y-3">
-                    {items.map((item) => (
-                      <li key={item.url} className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
-                        <div className="space-y-4">
-                          <a href={item.url} target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-3">
-                            <div>
-                              <div className="flex flex-wrap items-center gap-2">
-                                <Badge variant="secondary">#{item.number}</Badge>
-                                {item.type ? <Badge variant="secondary">{item.type}</Badge> : null}
-                                {item.milestone?.title ? <Badge variant="secondary">{item.milestone.title}</Badge> : null}
-                                {hasSubIssues(item) ? <Badge variant="secondary">{item.subIssues.total} sub-issues</Badge> : null}
-                                {hasRelationships(item) ? (
-                                  <Badge variant="secondary">
-                                    {item.relationshipSummary.linked + item.relationshipSummary.totalBlockedBy + item.relationshipSummary.totalBlocking} relationships
-                                  </Badge>
-                                ) : null}
-                              </div>
-                              <h4 className="mt-3 text-sm font-medium text-slate-100 transition-colors group-hover:text-white">
-                                {item.title}
-                              </h4>
-                              <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
-                                <span>{formatRelativeTime(item.createdAt)}</span>
-                                <span className="text-slate-600">/</span>
-                                <span>{formatTimestamp(item.createdAt)}</span>
-                              </div>
-                            </div>
-                            <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
-                          </a>
-
-                          <div className="grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
-                            <div className="flex flex-wrap items-center gap-2">
-                              <Avatar person={item.author} fallbackLabel="Author" />
-                            </div>
-                            <div className="space-y-2">
-                              <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Assignees</p>
-                              <AssigneeStack assignees={item.assignees} />
-                            </div>
-                            <div className="grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
-                              <div className="rounded-2xl bg-white/5 px-3 py-2">
-                                <span className="block text-slate-500">Sub-issues</span>
-                                <span className="font-medium text-slate-100">
-                                  {item.subIssues.completed}/{item.subIssues.total} completed
-                                </span>
-                              </div>
-                              <div className="rounded-2xl bg-white/5 px-3 py-2">
-                                <span className="block text-slate-500">Dependencies</span>
-                                <span className="font-medium text-slate-100">
-                                  {item.relationshipSummary.totalBlockedBy} blocked by, {item.relationshipSummary.totalBlocking} blocking
-                                </span>
-                              </div>
-                            </div>
-                            {item.relationships?.length ? (
-                              <div className="space-y-2">
-                                <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Relationships</p>
-                                <ul className="space-y-2">
-                                  {item.relationships.slice(0, 3).map((relationship) => (
-                                    <li key={`${relationship.event}-${relationship.url}`}>
-                                      <a
-                                        href={relationship.url}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="flex items-center justify-between gap-3 rounded-2xl bg-white/5 px-3 py-2 text-xs text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
-                                      >
-                                        <span>
-                                          <span className="font-medium text-slate-100">{relationship.title}</span>
-                                          <span className="ml-2 text-slate-500">{relationship.repository}</span>
-                                        </span>
-                                        <Badge variant="secondary">{relationship.event}</Badge>
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ) : null}
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              ))}
-              </div>
+              {filterBar}
+              {itemContent}
             </div>
           )}
         </CardContent>
@@ -590,8 +806,8 @@ export default function App() {
                       accentClassName={source.accent}
                     />
                   </TabsContent>
-                  );
-                })}
+                );
+              })}
 
               <TabsContent value="repositories">
                 <RepositoryCatalogPanel repositories={repositories} />
