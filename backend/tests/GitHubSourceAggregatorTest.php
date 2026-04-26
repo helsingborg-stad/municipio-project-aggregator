@@ -21,7 +21,109 @@ final class GitHubSourceAggregatorTest extends TestCase
      */
     public function testAggregateCollectsItemsFromRepositoriesWithTrackedTopics(): void
     {
-        $httpClient = new class () implements HttpClientInterface {
+        $aggregator = new GitHubSourceAggregator(
+            new GitHubRestClient($this->createHttpClient()),
+        );
+
+        $payload = $aggregator->aggregate(
+            SourceType::PullRequests,
+            new BuildConfig(
+                'GitHub',
+                ['municipio-se', 'getmunicipio'],
+                'token',
+                '/tmp',
+                new DateTimeImmutable('2026-04-25T10:00:00+00:00'),
+                365,
+            ),
+        );
+
+        $data = $payload->toArray();
+
+        self::assertSame(['municipio-se', 'getmunicipio'], $data['topics']);
+        self::assertSame(2, $data['count']);
+        self::assertCount(3, $data['repositories']);
+        self::assertSame('municipio-se/municipio-site', $data['repositories'][0]['fullName']);
+        self::assertSame('Municipio site plugin', $data['repositories'][0]['description']);
+        self::assertSame('https://github.com/municipio-se/municipio-site', $data['repositories'][0]['url']);
+        self::assertSame('GetMunicipio only PR', $data['items'][0]['title']);
+        self::assertSame('Shared PR', $data['items'][1]['title']);
+        self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
+        self::assertSame('octocat', $data['items'][0]['author']['login']);
+        self::assertSame('hubot', $data['items'][0]['assignees'][0]['login']);
+        self::assertSame('Q2', $data['items'][0]['milestone']['title']);
+        self::assertSame('Feature', $data['items'][0]['type']);
+        self::assertSame(3, $data['items'][0]['subIssues']['total']);
+        self::assertSame(1, $data['items'][0]['relationshipSummary']['blockedBy']);
+        self::assertSame(1, $data['items'][0]['relationshipSummary']['linked']);
+        self::assertSame('Roadmap card', $data['items'][0]['relationships'][0]['title']);
+    }
+
+    /**
+     * @return void
+     */
+    public function testAggregateExcludesItemsOlderThanConfiguredLookbackWindow(): void
+    {
+        $aggregator = new GitHubSourceAggregator(
+            new GitHubRestClient($this->createHttpClient()),
+        );
+
+        $payload = $aggregator->aggregate(
+            SourceType::PullRequests,
+            new BuildConfig(
+                'GitHub',
+                ['municipio-se', 'getmunicipio'],
+                'token',
+                '/tmp',
+                new DateTimeImmutable('2026-04-25T10:00:00+00:00'),
+                365,
+            ),
+        );
+
+        $data = $payload->toArray();
+
+        self::assertSame(2, $data['count']);
+        self::assertSame(
+            ['GetMunicipio only PR', 'Shared PR'],
+            array_column($data['items'], 'title'),
+        );
+    }
+
+    /**
+     * @return void
+     */
+    public function testAggregateAllowsConfiguringALongerLookbackWindow(): void
+    {
+        $aggregator = new GitHubSourceAggregator(
+            new GitHubRestClient($this->createHttpClient()),
+        );
+
+        $payload = $aggregator->aggregate(
+            SourceType::PullRequests,
+            new BuildConfig(
+                'GitHub',
+                ['municipio-se', 'getmunicipio'],
+                'token',
+                '/tmp',
+                new DateTimeImmutable('2026-04-25T10:00:00+00:00'),
+                800,
+            ),
+        );
+
+        $data = $payload->toArray();
+
+        self::assertSame(3, $data['count']);
+        self::assertSame(
+            ['GetMunicipio only PR', 'Shared PR', 'Obsolete PR'],
+            array_column($data['items'], 'title'),
+        );
+    }
+
+    /**
+     * @return HttpClientInterface
+     */
+    private function createHttpClient(): HttpClientInterface
+    {
+        return new class () implements HttpClientInterface {
             /**
              * @param string $url
              * @param array<string, string> $headers
@@ -85,7 +187,12 @@ final class GitHubSourceAggregatorTest extends TestCase
                 }
 
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/pulls')) {
-                    return [];
+                    return [[
+                        'title' => 'Obsolete PR',
+                        'html_url' => 'https://github.com/helsingborg-stad/styleguide-blocks/pull/3',
+                        'number' => 3,
+                        'created_at' => '2025-04-24T09:00:00Z',
+                    ]];
                 }
 
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/2/timeline')) {
@@ -104,6 +211,10 @@ final class GitHubSourceAggregatorTest extends TestCase
                 }
 
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1/timeline')) {
+                    return [];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/issues/3/timeline')) {
                     return [];
                 }
 
@@ -171,6 +282,34 @@ final class GitHubSourceAggregatorTest extends TestCase
                     ];
                 }
 
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/issues/3')) {
+                    return [
+                        'title' => 'Obsolete PR',
+                        'html_url' => 'https://github.com/helsingborg-stad/styleguide-blocks/pull/3',
+                        'number' => 3,
+                        'created_at' => '2025-04-24T09:00:00Z',
+                        'user' => [
+                            'login' => 'oldtimer',
+                            'avatar_url' => 'https://avatars.example.com/oldtimer.png',
+                            'html_url' => 'https://github.com/oldtimer',
+                        ],
+                        'assignees' => [],
+                        'milestone' => null,
+                        'type' => null,
+                        'sub_issues_summary' => [
+                            'total' => 0,
+                            'completed' => 0,
+                            'percent_completed' => 0,
+                        ],
+                        'issue_dependencies_summary' => [
+                            'blocked_by' => 0,
+                            'total_blocked_by' => 0,
+                            'blocking' => 0,
+                            'total_blocking' => 0,
+                        ],
+                    ];
+                }
+
                 return [];
             }
 
@@ -185,40 +324,5 @@ final class GitHubSourceAggregatorTest extends TestCase
                 return [];
             }
         };
-
-        $aggregator = new GitHubSourceAggregator(
-            new GitHubRestClient($httpClient),
-        );
-
-        $payload = $aggregator->aggregate(
-            SourceType::PullRequests,
-            new BuildConfig(
-                'GitHub',
-                ['municipio-se', 'getmunicipio'],
-                'token',
-                '/tmp',
-                new DateTimeImmutable('2026-04-25T10:00:00+00:00'),
-            ),
-        );
-
-        $data = $payload->toArray();
-
-        self::assertSame(['municipio-se', 'getmunicipio'], $data['topics']);
-        self::assertSame(2, $data['count']);
-        self::assertCount(3, $data['repositories']);
-        self::assertSame('municipio-se/municipio-site', $data['repositories'][0]['fullName']);
-        self::assertSame('Municipio site plugin', $data['repositories'][0]['description']);
-        self::assertSame('https://github.com/municipio-se/municipio-site', $data['repositories'][0]['url']);
-        self::assertSame('GetMunicipio only PR', $data['items'][0]['title']);
-        self::assertSame('Shared PR', $data['items'][1]['title']);
-        self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
-        self::assertSame('octocat', $data['items'][0]['author']['login']);
-        self::assertSame('hubot', $data['items'][0]['assignees'][0]['login']);
-        self::assertSame('Q2', $data['items'][0]['milestone']['title']);
-        self::assertSame('Feature', $data['items'][0]['type']);
-        self::assertSame(3, $data['items'][0]['subIssues']['total']);
-        self::assertSame(1, $data['items'][0]['relationshipSummary']['blockedBy']);
-        self::assertSame(1, $data['items'][0]['relationshipSummary']['linked']);
-        self::assertSame('Roadmap card', $data['items'][0]['relationships'][0]['title']);
     }
 }

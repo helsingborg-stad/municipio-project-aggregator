@@ -19,15 +19,17 @@ The aggregator can use a GitHub token for higher API limits, but it can also fal
 
 ```bash
 export GITHUB_TOKEN=your-token
+export ITEM_LOOKBACK_DAYS=365
 npm run build:data
 ```
 
 ```bash
-printf 'GITHUB_TOKEN=your-token\n' > .env.local
+printf 'GITHUB_TOKEN=your-token\nITEM_LOOKBACK_DAYS=365\n' > .env.local
 npm run build:data
 ```
 
 The PHP backend reads `.env` and `.env.local` from the project root for local debugging.
+`ITEM_LOOKBACK_DAYS` is optional and defaults to `365`, which limits gathered issues and pull requests to the last year.
 
 ## Commands
 

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace MunicipioProjectAggregator\Backend\GitHub;
 
+use DateTimeImmutable;
+use Exception;
 use MunicipioProjectAggregator\Backend\Config\BuildConfig;
 use MunicipioProjectAggregator\Backend\Contracts\SourceAggregatorInterface;
 use MunicipioProjectAggregator\Backend\Data\AggregatedItem;
@@ -31,10 +33,15 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
     {
         $itemsByUrl = [];
         $repositories = $this->client->listRepositoriesByTopics($config->topics(), $config->token());
+        $oldestIncludedCreatedAt = $config->oldestIncludedCreatedAt();
 
         foreach ($repositories as $repository) {
             foreach ($this->client->listOpenItems($sourceType, $repository, $config->token()) as $itemData) {
                 if (empty($itemData['title']) || empty($itemData['html_url']) || empty($itemData['number'])) {
+                    continue;
+                }
+
+                if (!$this->wasCreatedWithinWindow($itemData, $oldestIncludedCreatedAt)) {
                     continue;
                 }
 
@@ -61,5 +68,25 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
             $repositories,
             $items,
         );
+    }
+
+    /**
+     * @param array<string, mixed> $itemData
+     * @param DateTimeImmutable $oldestIncludedCreatedAt
+     * @return bool
+     */
+    private function wasCreatedWithinWindow(array $itemData, DateTimeImmutable $oldestIncludedCreatedAt): bool
+    {
+        $createdAt = $itemData['created_at'] ?? null;
+
+        if (!is_string($createdAt) || $createdAt === '') {
+            return false;
+        }
+
+        try {
+            return new DateTimeImmutable($createdAt) >= $oldestIncludedCreatedAt;
+        } catch (Exception) {
+            return false;
+        }
     }
 }
