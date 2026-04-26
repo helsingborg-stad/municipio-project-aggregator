@@ -18,6 +18,10 @@ final class GitHubRestClient
     private const PAGE_SIZE = 100;
 
     private bool $shouldUseAuthentication = true;
+    /**
+     * @var array<string, array<string, mixed>>
+     */
+    private array $userDetailsByLogin = [];
 
     /**
      * @param HttpClientInterface $httpClient HTTP client implementation.
@@ -171,6 +175,32 @@ final class GitHubRestClient
         }
 
         return array_values(array_filter($response, static fn (mixed $event): bool => is_array($event)));
+    }
+
+    /**
+     * @param string $login
+     * @param string $token
+     * @return array<string, mixed>
+     */
+    public function getUserDetails(string $login, string $token): array
+    {
+        if (isset($this->userDetailsByLogin[$login])) {
+            return $this->userDetailsByLogin[$login];
+        }
+
+        $response = $this->getJson(
+            sprintf(
+                '%s/users/%s',
+                self::API_URL,
+                rawurlencode($login),
+            ),
+            $token,
+        );
+
+        /** @var array<string, mixed> $response */
+        $this->userDetailsByLogin[$login] = $response;
+
+        return $response;
     }
 
     /**

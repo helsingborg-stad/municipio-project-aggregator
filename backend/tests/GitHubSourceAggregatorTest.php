@@ -49,6 +49,7 @@ final class GitHubSourceAggregatorTest extends TestCase
         self::assertSame('Shared PR', $data['items'][1]['title']);
         self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
         self::assertSame('octocat', $data['items'][0]['author']['login']);
+        self::assertSame('@github', $data['items'][0]['author']['company']);
         self::assertSame('hubot', $data['items'][0]['assignees'][0]['login']);
         self::assertSame('Q2', $data['items'][0]['milestone']['title']);
         self::assertSame('Feature', $data['items'][0]['type']);
@@ -167,6 +168,24 @@ final class GitHubSourceAggregatorTest extends TestCase
 
                 if (str_contains($url, '/repos/municipio-se/municipio-site/pulls')) {
                     return [];
+                }
+
+                if (str_contains($url, '/users/octocat')) {
+                    return [
+                        'company' => '@github',
+                    ];
+                }
+
+                if (str_contains($url, '/users/monalisa')) {
+                    return [
+                        'company' => 'Mona Lisa Studio',
+                    ];
+                }
+
+                if (str_contains($url, '/users/oldtimer')) {
+                    return [
+                        'company' => '',
+                    ];
                 }
 
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide/pulls')) {

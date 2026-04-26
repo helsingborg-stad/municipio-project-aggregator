@@ -107,8 +107,8 @@ describe('getRepositoryCatalog', () => {
 describe('getAuthorDirectory', () => {
   it('collects unique authors with contribution counts', () => {
     const authors = getAuthorDirectory([
-      { author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
-      { author: { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot' } },
+      { author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat', company: '@github' } },
+      { author: { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot', company: '' } },
       { author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
     ]);
 
@@ -117,12 +117,14 @@ describe('getAuthorDirectory', () => {
         login: 'octocat',
         avatarUrl: 'https://example.com/octocat.png',
         url: 'https://github.com/octocat',
+        company: '@github',
         contributionCount: 2,
       },
       {
         login: 'hubot',
         avatarUrl: 'https://example.com/hubot.png',
         url: 'https://github.com/hubot',
+        company: '',
         contributionCount: 1,
       },
     ]);

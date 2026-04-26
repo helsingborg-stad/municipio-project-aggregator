@@ -58,10 +58,12 @@ export function getAuthorDirectory(items) {
     }
 
     const currentAuthor = authorsByLogin.get(author.login);
+    const company = typeof author.company === 'string' ? author.company.trim() : '';
     authorsByLogin.set(author.login, {
       login: author.login,
       avatarUrl: author.avatarUrl ?? currentAuthor?.avatarUrl ?? '',
       url: author.url ?? currentAuthor?.url ?? '',
+      company: company || currentAuthor?.company || '',
       contributionCount: (currentAuthor?.contributionCount ?? 0) + 1,
     });
   });

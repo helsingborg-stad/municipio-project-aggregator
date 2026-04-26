@@ -29,6 +29,7 @@ const issuesPayload = {
         login: 'octocat',
         avatarUrl: 'https://avatars.example.com/octocat.png',
         url: 'https://github.com/octocat',
+        company: '@github',
       },
       assignees: [],
       milestone: null,
@@ -73,6 +74,7 @@ const pullRequestsPayload = {
         login: 'octocat',
         avatarUrl: 'https://avatars.example.com/octocat.png',
         url: 'https://github.com/octocat',
+        company: '@github',
       },
       assignees: [],
       milestone: null,
@@ -118,6 +120,7 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
 
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
+    expect(screen.getByText('@github')).toBeInTheDocument();
     expect(screen.getByText('2 tracked contributions')).toBeInTheDocument();
   });
 

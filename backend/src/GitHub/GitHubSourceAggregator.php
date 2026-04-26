@@ -48,7 +48,14 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
                 $issueNumber = (int) $itemData['number'];
                 $issueDetails = $this->client->getIssueDetails($repository, $issueNumber, $config->token());
                 $timelineEvents = $this->client->listTimelineEvents($repository, $issueNumber, $config->token());
-                $item = AggregatedItem::fromRestItem($repository->fullName(), $itemData, $issueDetails, $timelineEvents);
+                $authorProfile = $this->resolveAuthorProfile($issueDetails, $config->token());
+                $item = AggregatedItem::fromRestItem(
+                    $repository->fullName(),
+                    $itemData,
+                    $issueDetails,
+                    $timelineEvents,
+                    $authorProfile,
+                );
                 $itemsByUrl[$itemData['html_url']] = $item;
             }
         }
@@ -88,5 +95,22 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
         } catch (Exception) {
             return false;
         }
+    }
+
+    /**
+     * @param array<string, mixed> $issueDetails
+     * @param string $token
+     * @return array<string, mixed>
+     */
+    private function resolveAuthorProfile(array $issueDetails, string $token): array
+    {
+        $author = is_array($issueDetails['user'] ?? null) ? $issueDetails['user'] : null;
+        $authorLogin = is_string($author['login'] ?? null) ? $author['login'] : '';
+
+        if ($authorLogin === '') {
+            return [];
+        }
+
+        return $this->client->getUserDetails($authorLogin, $token);
     }
 }

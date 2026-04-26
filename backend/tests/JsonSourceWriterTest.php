@@ -53,7 +53,7 @@ final class JsonSourceWriterTest extends TestCase
                 'municipio',
                 '2026-04-23T08:00:00+00:00',
                 14,
-                ['login' => 'octocat', 'avatarUrl' => 'https://example.com/avatar.png', 'url' => 'https://github.com/octocat'],
+                ['login' => 'octocat', 'avatarUrl' => 'https://example.com/avatar.png', 'url' => 'https://github.com/octocat', 'company' => '@github'],
                 [],
                 null,
                 'Bug',
