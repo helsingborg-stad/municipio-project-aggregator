@@ -56,8 +56,7 @@
     }
   }
 
-  /* Keep this just below the 36rem container breakpoint above so there is no overlap or dead zone. */
-  @container (max-width: 35.99rem) {
+  @container (max-width: calc(36rem - 0.01px)) {
     .source-item-card__link {
       flex-direction: column;
     }
