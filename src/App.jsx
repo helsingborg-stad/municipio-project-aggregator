@@ -359,7 +359,13 @@ function TrackedItemCard({ item, showRepository = false }) {
   return (
     <li className="source-item-card rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
       <div className="source-item-card__content space-y-4">
-        <a href={item.url} target="_blank" rel="noreferrer" className="source-item-card__link group flex items-start gap-3">
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Open ${item.title} on GitHub in a new tab`}
+          className="source-item-card__link group flex items-start gap-3"
+        >
           <div className="source-item-card__summary min-w-0">
             {showRepository ? (
               <div className="mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
