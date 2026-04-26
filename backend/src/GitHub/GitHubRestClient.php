@@ -174,6 +174,65 @@ final class GitHubRestClient
     }
 
     /**
+     * @param RepositoryReference $repository
+     * @param int $issueNumber
+     * @param string $token
+     * @return array<int, array<string, mixed>>
+     */
+    public function listSubIssues(RepositoryReference $repository, int $issueNumber, string $token): array
+    {
+        $subIssues = [];
+        $page = 1;
+
+        do {
+            try {
+                $response = $this->getJson(
+                    sprintf(
+                        '%s/repos/%s/%s/issues/%d/sub_issues?per_page=%d&page=%d',
+                        self::API_URL,
+                        rawurlencode($repository->owner()),
+                        rawurlencode($repository->name()),
+                        $issueNumber,
+                        self::PAGE_SIZE,
+                        $page,
+                    ),
+                    $token,
+                );
+            } catch (RuntimeException $exception) {
+                if (!$this->shouldIgnoreMissingSubIssues($exception)) {
+                    throw $exception;
+                }
+
+                return [];
+            }
+
+            if (!is_array($response)) {
+                return $subIssues;
+            }
+
+            foreach ($response as $subIssue) {
+                if (is_array($subIssue)) {
+                    $subIssues[] = $subIssue;
+                }
+            }
+
+            $page++;
+        } while (count($response) === self::PAGE_SIZE);
+
+        return $subIssues;
+    }
+
+    /**
+     * @param RuntimeException $exception
+     * @return bool
+     */
+    private function shouldIgnoreMissingSubIssues(RuntimeException $exception): bool
+    {
+        return str_contains($exception->getMessage(), 'HTTP 404')
+            || str_contains($exception->getMessage(), 'HTTP 410');
+    }
+
+    /**
      * @param string $url
      * @param string $token
      * @return array<mixed>
