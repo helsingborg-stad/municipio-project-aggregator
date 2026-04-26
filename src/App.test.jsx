@@ -155,4 +155,21 @@ describe('App', () => {
       expect(window.localStorage.getItem(storageKey)).toBeNull();
     });
   });
+
+  it('renders source items in stacked layouts with container-aware cards', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    const issueCard = (await screen.findByText('Issue alpha')).closest('li');
+    expect(issueCard).toHaveClass('source-item-card');
+    expect(issueCard.closest('ul')).toHaveClass('space-y-3');
+
+    fireEvent.click(screen.getByRole('button', { name: 'List view' }));
+
+    await waitFor(() => {
+      expect(screen.getByText('helsingborg-stad/plugin-alpha').closest('li')).toHaveClass('source-item-card');
+      expect(screen.getByText('helsingborg-stad/plugin-alpha').closest('ul')).toHaveClass('source-panel__stack');
+    });
+  });
 });
