@@ -14,6 +14,49 @@ export function getRepositoryGroups(items) {
     .sort((left, right) => left.repository.localeCompare(right.repository));
 }
 
+/**
+ * Returns the milestone label used when grouping items.
+ *
+ * @param {Record<string, any>} item
+ * @returns {string}
+ */
+function getMilestoneLabel(item) {
+  return item.milestone?.title || 'No milestone';
+}
+
+/**
+ * Groups items by milestone and sorts items newest first.
+ *
+ * @param {Array<Record<string, any>>} items
+ * @returns {Array<{milestone: string, items: Array<Record<string, any>>}>}
+ */
+export function getMilestoneGroups(items) {
+  const grouped = items.reduce((result, item) => {
+    const milestone = getMilestoneLabel(item);
+    const collection = result.get(milestone) ?? [];
+    collection.push(item);
+    result.set(milestone, collection);
+    return result;
+  }, new Map());
+
+  return [...grouped.entries()]
+    .map(([milestone, milestoneItems]) => ({
+      milestone,
+      items: [...milestoneItems].sort((left, right) => right.createdAt.localeCompare(left.createdAt)),
+    }))
+    .sort((left, right) => {
+      if (left.milestone === 'No milestone') {
+        return 1;
+      }
+
+      if (right.milestone === 'No milestone') {
+        return -1;
+      }
+
+      return left.milestone.localeCompare(right.milestone);
+    });
+}
+
 export function getRepositoryCatalog(payloads) {
   const repositoriesByName = new Map();
   const itemCountsByRepository = new Map();
@@ -86,6 +129,45 @@ export function hasRelationships(item) {
   const summary = item.relationshipSummary ?? {};
   return [summary.blockedBy, summary.totalBlockedBy, summary.blocking, summary.totalBlocking, summary.linked]
     .some((value) => Number(value ?? 0) > 0);
+}
+
+/**
+ * Builds a nested tree from visible items and tracked sub-issue URLs.
+ *
+ * @param {Array<Record<string, any>>} items
+ * @returns {Array<Record<string, any> & {children: Array<Record<string, any>>}>}
+ */
+export function getItemTree(items) {
+  const orderByUrl = new Map(
+    items
+      .filter((item) => typeof item.url === 'string' && item.url !== '')
+      .map((item, index) => [item.url, index]),
+  );
+
+  const nodes = items.map((item) => ({ ...item, children: [] }));
+  const nodeByUrl = new Map(
+    nodes
+      .filter((item) => typeof item.url === 'string' && item.url !== '')
+      .map((item) => [item.url, item]),
+  );
+  const childUrls = new Set();
+
+  nodes.forEach((item) => {
+    const subIssueUrls = Array.isArray(item.subIssueUrls) ? item.subIssueUrls.filter((url) => typeof url === 'string' && url !== '') : [];
+
+    item.children = subIssueUrls
+      .map((url) => nodeByUrl.get(url))
+      .filter(Boolean)
+      .sort((left, right) => (orderByUrl.get(left.url) ?? 0) - (orderByUrl.get(right.url) ?? 0));
+
+    item.children.forEach((child) => {
+      childUrls.add(child.url);
+    });
+  });
+
+  return nodes
+    .filter((item) => !item.url || !childUrls.has(item.url))
+    .sort((left, right) => (orderByUrl.get(left.url) ?? 0) - (orderByUrl.get(right.url) ?? 0));
 }
 
 export function filterItems(items, filters) {
