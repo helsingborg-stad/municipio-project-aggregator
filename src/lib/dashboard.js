@@ -101,6 +101,36 @@ function isItemUrl(value) {
   return typeof value === 'string' && value !== '';
 }
 
+/**
+ * Returns the weighted contribution score for a tracked item.
+ *
+ * @param {Record<string, any>} item
+ * @returns {number}
+ */
+function getContributionScore(item) {
+  if (item?.source === 'pull-requests') {
+    return 1;
+  }
+
+  return 0.1;
+}
+
+/**
+ * Rounds a contribution score to one decimal place.
+ *
+ * @param {number} value
+ * @returns {number}
+ */
+function roundContributionScore(value) {
+  return Math.round(value * 10) / 10;
+}
+
+/**
+ * Builds the contributor directory with counts and weighted scores.
+ *
+ * @param {Array<Record<string, any>>} items
+ * @returns {Array<{login: string, avatarUrl: string, url: string, contributionCount: number, contributionScore: number}>}
+ */
 export function getAuthorDirectory(items) {
   const authorsByLogin = new Map();
 
@@ -116,10 +146,21 @@ export function getAuthorDirectory(items) {
       avatarUrl: author.avatarUrl ?? currentAuthor?.avatarUrl ?? '',
       url: author.url ?? currentAuthor?.url ?? '',
       contributionCount: (currentAuthor?.contributionCount ?? 0) + 1,
+      contributionScore: roundContributionScore((currentAuthor?.contributionScore ?? 0) + getContributionScore(item)),
     });
   });
 
-  return [...authorsByLogin.values()].sort((left, right) => right.contributionCount - left.contributionCount);
+  return [...authorsByLogin.values()].sort((left, right) => {
+    if (right.contributionScore !== left.contributionScore) {
+      return right.contributionScore - left.contributionScore;
+    }
+
+    if (right.contributionCount !== left.contributionCount) {
+      return right.contributionCount - left.contributionCount;
+    }
+
+    return left.login.localeCompare(right.login);
+  });
 }
 
 export function getFilterOptions(items) {

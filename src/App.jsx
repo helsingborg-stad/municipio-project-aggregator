@@ -611,7 +611,7 @@ function AuthorDirectoryPanel({ authors }) {
                     <div className="min-w-0">
                       <h3 className="truncate text-lg font-semibold text-white">{author.login}</h3>
                       <p className="text-sm text-slate-400">
-                        {author.contributionCount} tracked contribution{author.contributionCount === 1 ? '' : 's'}
+                        Contribution score: {author.contributionScore.toFixed(1)}
                       </p>
                     </div>
                     {author.url ? <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-fuchsia-200" /> : null}
@@ -631,6 +631,9 @@ function AuthorDirectoryPanel({ authors }) {
             })}
           </div>
         )}
+        <p className="mt-6 text-sm text-slate-400">
+          Contribution score footnote: each tracked issue is worth 0.1 and each tracked pull request is worth 1.0.
+        </p>
       </CardContent>
     </Card>
   );
@@ -851,7 +854,11 @@ export default function App() {
   const [status, setStatus] = useState('loading');
   const [errorMessage, setErrorMessage] = useState('');
   const payloadList = Object.values(payloads);
-  const allItems = payloadList.flatMap((payload) => Array.isArray(payload.items) ? payload.items : []);
+  const allItems = payloadList.flatMap((payload) => (
+    Array.isArray(payload.items)
+      ? payload.items.map((item) => ({ ...item, source: payload.source }))
+      : []
+  ));
   const repositories = getRepositoryCatalog(payloadList);
   const authors = getAuthorDirectory(allItems);
   const tabs = [
