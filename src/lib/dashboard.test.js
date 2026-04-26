@@ -5,6 +5,8 @@ import {
   formatRelativeTime,
   getAuthorDirectory,
   getFilterOptions,
+  getItemTree,
+  getMilestoneGroups,
   getRepositoryCatalog,
   getRepositoryGroups,
   hasRelationships,
@@ -23,6 +25,20 @@ describe('getRepositoryGroups', () => {
     expect(groups).toHaveLength(2);
     expect(groups[0].repository).toBe('alpha');
     expect(groups[1].items[0].createdAt).toBe('2026-04-22T10:00:00Z');
+  });
+});
+
+describe('getMilestoneGroups', () => {
+  it('groups items by milestone and keeps no-milestone items last', () => {
+    const groups = getMilestoneGroups([
+      { title: 'No milestone', createdAt: '2026-04-22T10:00:00Z', milestone: null },
+      { title: 'Q3 item', createdAt: '2026-04-24T10:00:00Z', milestone: { title: 'Q3' } },
+      { title: 'Q2 older', createdAt: '2026-04-20T10:00:00Z', milestone: { title: 'Q2' } },
+      { title: 'Q2 newer', createdAt: '2026-04-21T10:00:00Z', milestone: { title: 'Q2' } },
+    ]);
+
+    expect(groups.map((group) => group.milestone)).toEqual(['Q2', 'Q3', 'No milestone']);
+    expect(groups[0].items.map((item) => item.title)).toEqual(['Q2 newer', 'Q2 older']);
   });
 });
 
@@ -175,6 +191,51 @@ describe('filterItems', () => {
 
     expect(filtered).toHaveLength(1);
     expect(filtered[0].author.login).toBe('monalisa');
+  });
+});
+
+describe('getItemTree', () => {
+  it('nests visible sub-issues under their parent items', () => {
+    const tree = getItemTree([
+      {
+        title: 'Parent',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/1',
+        createdAt: '2026-04-24T10:00:00Z',
+        subIssueUrls: ['https://github.com/helsingborg-stad/plugin-alpha/issues/2'],
+      },
+      {
+        title: 'Child',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/2',
+        createdAt: '2026-04-24T09:00:00Z',
+        subIssueUrls: [],
+      },
+      {
+        title: 'Independent',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/3',
+        createdAt: '2026-04-24T08:00:00Z',
+        subIssueUrls: [],
+      },
+    ]);
+
+    expect(tree).toHaveLength(2);
+    expect(tree[0].title).toBe('Parent');
+    expect(tree[0].children.map((item) => item.title)).toEqual(['Child']);
+    expect(tree[1].title).toBe('Independent');
+  });
+
+  it('keeps child items at the root when the parent is not visible', () => {
+    const tree = getItemTree([
+      {
+        title: 'Child',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/2',
+        createdAt: '2026-04-24T09:00:00Z',
+        subIssueUrls: [],
+      },
+    ]);
+
+    expect(tree).toHaveLength(1);
+    expect(tree[0].title).toBe('Child');
+    expect(tree[0].children).toEqual([]);
   });
 });
 

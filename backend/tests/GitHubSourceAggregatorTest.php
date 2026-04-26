@@ -53,6 +53,7 @@ final class GitHubSourceAggregatorTest extends TestCase
         self::assertSame('Q2', $data['items'][0]['milestone']['title']);
         self::assertSame('Feature', $data['items'][0]['type']);
         self::assertSame(3, $data['items'][0]['subIssues']['total']);
+        self::assertSame(['https://github.com/helsingborg-stad/styleguide/issues/8'], $data['items'][0]['subIssueUrls']);
         self::assertSame(1, $data['items'][0]['relationshipSummary']['blockedBy']);
         self::assertSame(1, $data['items'][0]['relationshipSummary']['linked']);
         self::assertSame('Roadmap card', $data['items'][0]['relationships'][0]['title']);
@@ -208,6 +209,20 @@ final class GitHubSourceAggregatorTest extends TestCase
                             ],
                         ],
                     ]];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/2/sub_issues')) {
+                    return [[
+                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/issues/8',
+                    ]];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1/sub_issues')) {
+                    return [];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/issues/3/sub_issues')) {
+                    return [];
                 }
 
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1/timeline')) {

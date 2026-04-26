@@ -20,6 +20,7 @@ final class AggregatedItem
      * @param array<string, string|null>|null $milestone Milestone information.
      * @param string|null $type GitHub issue type.
      * @param array<string, int> $subIssues Sub-issue summary.
+     * @param array<int, string> $subIssueUrls Tracked sub-issue URLs.
      * @param array<string, int> $relationshipSummary Relationship summary counts.
      * @param array<int, array<string, string>> $relationships Relationship links.
      */
@@ -34,6 +35,7 @@ final class AggregatedItem
         private readonly ?array $milestone,
         private readonly ?string $type,
         private readonly array $subIssues,
+        private readonly array $subIssueUrls,
         private readonly array $relationshipSummary,
         private readonly array $relationships,
     ) {
@@ -58,6 +60,7 @@ final class AggregatedItem
             null,
             null,
             self::defaultSubIssues(),
+            [],
             self::defaultRelationshipSummary(),
             [],
         );
@@ -70,9 +73,10 @@ final class AggregatedItem
      * @param array<string, mixed> $item GitHub REST item.
      * @param array<string, mixed> $detail GitHub REST issue detail.
      * @param array<int, array<string, mixed>> $timelineEvents GitHub REST issue timeline events.
+     * @param array<int, array<string, mixed>> $subIssues GitHub REST sub-issue payloads.
      * @return self
      */
-    public static function fromRestItem(string $repository, array $item, array $detail, array $timelineEvents): self
+    public static function fromRestItem(string $repository, array $item, array $detail, array $timelineEvents, array $subIssues): self
     {
         $relationships = self::extractRelationships($timelineEvents);
 
@@ -87,6 +91,7 @@ final class AggregatedItem
             self::extractMilestone($detail['milestone'] ?? null),
             self::extractType($detail['type'] ?? null),
             self::extractSubIssues($detail['sub_issues_summary'] ?? null),
+            self::extractSubIssueUrls($subIssues),
             self::extractRelationshipSummary($detail['issue_dependencies_summary'] ?? null, $relationships),
             $relationships,
         );
@@ -108,6 +113,7 @@ final class AggregatedItem
             'milestone' => $this->milestone,
             'type' => $this->type,
             'subIssues' => $this->subIssues,
+            'subIssueUrls' => $this->subIssueUrls,
             'relationshipSummary' => $this->relationshipSummary,
             'relationships' => $this->relationships,
         ];
@@ -210,6 +216,25 @@ final class AggregatedItem
             'completed' => (int) ($summary['completed'] ?? 0),
             'percentCompleted' => (int) ($summary['percent_completed'] ?? 0),
         ];
+    }
+
+    /**
+     * @param array<int, array<string, mixed>> $subIssues
+     * @return array<int, string>
+     */
+    private static function extractSubIssueUrls(array $subIssues): array
+    {
+        $result = [];
+
+        foreach ($subIssues as $subIssue) {
+            if (!is_array($subIssue) || !is_string($subIssue['html_url'] ?? null) || $subIssue['html_url'] === '') {
+                continue;
+            }
+
+            $result[] = $subIssue['html_url'];
+        }
+
+        return array_values(array_unique($result));
     }
 
     /**
