@@ -363,7 +363,6 @@ function TrackedItemCard({ item, showRepository = false }) {
           href={item.url}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Open ${item.title} on GitHub in a new tab`}
           className="source-item-card__link group flex items-start justify-between gap-3"
         >
           <div className="source-item-card__summary min-w-0">
@@ -376,6 +375,7 @@ function TrackedItemCard({ item, showRepository = false }) {
             <ItemBadgeRow item={item} />
             <h4 className="mt-3 text-sm font-medium text-slate-100 transition-colors group-hover:text-white">
               {item.title}
+              <span className="sr-only"> (opens in a new tab)</span>
             </h4>
             <div className="source-item-card__timestamps mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
               <span>{formatRelativeTime(item.createdAt)}</span>
