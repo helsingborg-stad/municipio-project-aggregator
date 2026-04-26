@@ -58,6 +58,7 @@ final class JsonSourceWriterTest extends TestCase
                 null,
                 'Bug',
                 ['total' => 1, 'completed' => 0, 'percentCompleted' => 0],
+                [],
                 ['blockedBy' => 0, 'totalBlockedBy' => 0, 'blocking' => 0, 'totalBlocking' => 0, 'linked' => 0],
                 [],
             )],

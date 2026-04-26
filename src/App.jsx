@@ -1,4 +1,4 @@
-import { AlertCircle, ArrowUpRight, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Ticket, Users } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, ChevronDown, ChevronRight, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Ticket, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
@@ -10,6 +10,8 @@ import {
   formatTimestamp,
   getAuthorDirectory,
   getFilterOptions,
+  getItemTree,
+  getMilestoneGroups,
   getRepositoryCatalog,
   getRepositoryGroups,
   hasRelationships,
@@ -41,6 +43,19 @@ const sourcePanelStorageKeyPrefix = 'municipio-project-aggregator:source-panel';
  */
 function getEmptyFilters() {
   return { ...emptyFilters };
+}
+
+/**
+ * Returns the default source panel preferences.
+ *
+ * @returns {{filters: typeof emptyFilters, viewMode: 'cards' | 'list', expandedTreeItems: string[]}}
+ */
+function getDefaultSourcePanelPreferences() {
+  return {
+    filters: getEmptyFilters(),
+    viewMode: defaultViewMode,
+    expandedTreeItems: [],
+  };
 }
 
 /**
@@ -83,21 +98,35 @@ function normalizeViewMode(viewMode) {
 }
 
 /**
+ * Normalizes the stored expanded tree item state.
+ *
+ * @param {unknown} expandedTreeItems
+ * @returns {string[]}
+ */
+function normalizeStoredExpandedTreeItems(expandedTreeItems) {
+  if (!Array.isArray(expandedTreeItems)) {
+    return [];
+  }
+
+  return [...new Set(expandedTreeItems.filter((url) => typeof url === 'string' && url !== ''))];
+}
+
+/**
  * Reads saved source panel preferences from local storage.
  *
  * @param {string} source
- * @returns {{filters: typeof emptyFilters, viewMode: 'cards' | 'list'}}
+ * @returns {{filters: typeof emptyFilters, viewMode: 'cards' | 'list', expandedTreeItems: string[]}}
  */
 function readSourcePanelPreferences(source) {
   if (typeof window === 'undefined') {
-    return { filters: getEmptyFilters(), viewMode: defaultViewMode };
+    return getDefaultSourcePanelPreferences();
   }
 
   try {
     const rawPreferences = window.localStorage.getItem(getSourcePanelStorageKey(source));
 
     if (!rawPreferences) {
-      return { filters: getEmptyFilters(), viewMode: defaultViewMode };
+      return getDefaultSourcePanelPreferences();
     }
 
     const parsedPreferences = JSON.parse(rawPreferences);
@@ -105,9 +134,10 @@ function readSourcePanelPreferences(source) {
     return {
       filters: normalizeStoredFilters(parsedPreferences.filters),
       viewMode: normalizeViewMode(parsedPreferences.viewMode),
+      expandedTreeItems: normalizeStoredExpandedTreeItems(parsedPreferences.expandedTreeItems),
     };
   } catch {
-    return { filters: getEmptyFilters(), viewMode: defaultViewMode };
+    return getDefaultSourcePanelPreferences();
   }
 }
 
@@ -116,10 +146,13 @@ function readSourcePanelPreferences(source) {
  *
  * @param {typeof emptyFilters} filters
  * @param {'cards' | 'list'} viewMode
+ * @param {string[]} expandedTreeItems
  * @returns {boolean}
  */
-function hasCustomPanelPreferences(filters, viewMode) {
-  return Object.entries(emptyFilters).some(([name, value]) => filters[name] !== value) || viewMode !== defaultViewMode;
+function hasCustomPanelPreferences(filters, viewMode, expandedTreeItems) {
+  return Object.entries(emptyFilters).some(([name, value]) => filters[name] !== value)
+    || viewMode !== defaultViewMode
+    || expandedTreeItems.length > 0;
 }
 
 function AvatarImage({ person, sizeClassName = 'h-5 w-5', fallbackTextClassName = 'text-[10px]' }) {
@@ -306,15 +339,15 @@ function ItemBadgeRow({ item }) {
 
 function ItemDetailPanel({ item }) {
   return (
-    <div className="grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
-      <div className="flex flex-wrap items-center gap-2">
+    <div className="source-item-card__details grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
+      <div className="source-item-card__meta-row flex flex-wrap items-center gap-2">
         <Avatar person={item.author} fallbackLabel="Author" />
       </div>
-      <div className="space-y-2">
+      <div className="source-item-card__meta-section space-y-2">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Assignees</p>
         <AssigneeStack assignees={item.assignees} />
       </div>
-      <div className="grid gap-2 text-xs text-slate-400 sm:grid-cols-2">
+      <div className="source-item-card__stats grid gap-2 text-xs text-slate-400">
         <div className="rounded-2xl bg-white/5 px-3 py-2">
           <span className="block text-slate-500">Sub-issues</span>
           <span className="font-medium text-slate-100">
@@ -357,10 +390,15 @@ function ItemDetailPanel({ item }) {
 
 function TrackedItemCard({ item, showRepository = false }) {
   return (
-    <li className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
-      <div className="space-y-4">
-        <a href={item.url} target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-3">
-          <div>
+    <li className="source-item-card rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
+      <div className="source-item-card__content space-y-4">
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noreferrer"
+          className="source-item-card__link group flex items-start justify-between gap-3"
+        >
+          <div className="source-item-card__summary min-w-0">
             {showRepository ? (
               <div className="mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
                 <FolderKanban className="h-3.5 w-3.5" />
@@ -370,18 +408,108 @@ function TrackedItemCard({ item, showRepository = false }) {
             <ItemBadgeRow item={item} />
             <h4 className="mt-3 text-sm font-medium text-slate-100 transition-colors group-hover:text-white">
               {item.title}
+              <span className="sr-only"> (opens in a new tab)</span>
             </h4>
-            <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
+            <div className="source-item-card__timestamps mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
               <span>{formatRelativeTime(item.createdAt)}</span>
               <span className="text-slate-600">/</span>
               <span>{formatTimestamp(item.createdAt)}</span>
             </div>
           </div>
-          <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+          <ArrowUpRight className="source-item-card__icon mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
         </a>
 
         <ItemDetailPanel item={item} />
       </div>
+    </li>
+  );
+}
+
+/**
+ * Returns the total number of visible items in a tree.
+ *
+ * @param {Array<{children?: Array<any>}>} items
+ * @returns {number}
+ */
+function countTreeItems(items) {
+  return items.reduce((total, item) => total + 1 + countTreeItems(item.children ?? []), 0);
+}
+
+function TrackedItemTreeNode({ item, depth = 0, expandedTreeItems, onToggleExpand, showRepository = true }) {
+  const childItems = Array.isArray(item.children) ? item.children : [];
+  const hasChildren = childItems.length > 0;
+  const isExpanded = hasChildren ? expandedTreeItems.includes(item.url) : false;
+  const indentation = `${depth * 1.5}rem`;
+
+  return (
+    <li className="space-y-3">
+      <div className="rounded-2xl border border-white/10 bg-white/5 p-3 transition-colors hover:border-cyan-300/30 hover:bg-white/10">
+        <div className="flex items-start gap-3" style={{ paddingLeft: indentation }}>
+          {hasChildren ? (
+            <button
+              type="button"
+              aria-expanded={isExpanded}
+              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} sub-items for ${item.title}`}
+              onClick={() => onToggleExpand(item.url)}
+              className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-slate-950/60 text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-white"
+            >
+              {isExpanded ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+            </button>
+          ) : (
+            <div className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-slate-950/60 text-slate-500">
+              <span className="h-2 w-2 rounded-full bg-slate-500" />
+            </div>
+          )}
+
+          <div className="min-w-0 flex-1 space-y-3">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                {showRepository ? (
+                  <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
+                    <FolderKanban className="h-3.5 w-3.5 shrink-0" />
+                    <span className="truncate">{item.repository}</span>
+                  </div>
+                ) : null}
+                <ItemBadgeRow item={item} />
+                <a href={item.url} target="_blank" rel="noreferrer" className="mt-2 block text-sm font-medium text-slate-100 transition-colors hover:text-white">
+                  {item.title}
+                </a>
+              </div>
+
+              <a href={item.url} target="_blank" rel="noreferrer" className="rounded-xl p-1 text-slate-500 transition-colors hover:text-cyan-200">
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
+              {item.author?.login ? <Avatar person={item.author} /> : null}
+              <span>{formatRelativeTime(item.createdAt)}</span>
+              <span className="text-slate-600">/</span>
+              <span>{formatTimestamp(item.createdAt)}</span>
+              {hasChildren ? (
+                <Badge variant="secondary">
+                  {childItems.length} visible sub-item{childItems.length === 1 ? '' : 's'}
+                </Badge>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {hasChildren && isExpanded ? (
+        <ul className="space-y-3">
+          {childItems.map((childItem) => (
+            <TrackedItemTreeNode
+              key={childItem.url}
+              item={childItem}
+              depth={depth + 1}
+              expandedTreeItems={expandedTreeItems}
+              onToggleExpand={onToggleExpand}
+              showRepository={childItem.repository !== item.repository}
+            />
+          ))}
+        </ul>
+      ) : null}
     </li>
   );
 }
@@ -519,17 +647,40 @@ function AuthorDirectoryPanel({ authors }) {
 
 function SourcePanel({ payload, icon: Icon, accentClassName }) {
   const [panelPreferences, setPanelPreferences] = useState(() => readSourcePanelPreferences(payload.source));
-  const { filters, viewMode } = panelPreferences;
+  const { filters, viewMode, expandedTreeItems } = panelPreferences;
   const availableItems = Array.isArray(payload.items) ? payload.items : [];
   const filterOptions = getFilterOptions(availableItems);
   const visibleItems = filterItems(availableItems, filters);
   const repositoryGroups = getRepositoryGroups(visibleItems);
+  const treeItems = getItemTree(visibleItems);
+  const milestoneGroups = getMilestoneGroups(treeItems);
   const trackedTopics = Array.isArray(payload.topics) ? payload.topics.join(', ') : '';
-  const canClear = hasCustomPanelPreferences(filters, viewMode);
+  const canClear = hasCustomPanelPreferences(filters, viewMode, expandedTreeItems);
 
   useEffect(() => {
     setPanelPreferences(readSourcePanelPreferences(payload.source));
   }, [payload.source]);
+
+  useEffect(() => {
+    const availableItemUrls = new Set(
+      availableItems
+        .map((item) => item.url)
+        .filter((url) => typeof url === 'string' && url !== ''),
+    );
+
+    setPanelPreferences((currentPreferences) => {
+      const nextExpandedTreeItems = currentPreferences.expandedTreeItems.filter((url) => availableItemUrls.has(url));
+
+      if (nextExpandedTreeItems.length === currentPreferences.expandedTreeItems.length) {
+        return currentPreferences;
+      }
+
+      return {
+        ...currentPreferences,
+        expandedTreeItems: nextExpandedTreeItems,
+      };
+    });
+  }, [availableItems]);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -539,16 +690,16 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
     const storageKey = getSourcePanelStorageKey(payload.source);
 
     try {
-      if (!hasCustomPanelPreferences(filters, viewMode)) {
+      if (!hasCustomPanelPreferences(filters, viewMode, expandedTreeItems)) {
         window.localStorage.removeItem(storageKey);
         return;
       }
 
-      window.localStorage.setItem(storageKey, JSON.stringify({ filters, viewMode }));
+      window.localStorage.setItem(storageKey, JSON.stringify({ filters, viewMode, expandedTreeItems }));
     } catch {
       // Ignore local storage write failures so the dashboard remains usable.
     }
-  }, [filters, payload.source, viewMode]);
+  }, [expandedTreeItems, filters, payload.source, viewMode]);
 
   const updateFilter = (name, value) => {
     setPanelPreferences((currentPreferences) => ({
@@ -567,11 +718,21 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
     }));
   };
 
-  const clearPreferences = () => {
-    setPanelPreferences({
-      filters: getEmptyFilters(),
-      viewMode: defaultViewMode,
+  const toggleTreeItem = (itemUrl) => {
+    setPanelPreferences((currentPreferences) => {
+      const isExpanded = currentPreferences.expandedTreeItems.includes(itemUrl);
+
+      return {
+        ...currentPreferences,
+        expandedTreeItems: isExpanded
+          ? currentPreferences.expandedTreeItems.filter((url) => url !== itemUrl)
+          : [...currentPreferences.expandedTreeItems, itemUrl],
+      };
     });
+  };
+
+  const clearPreferences = () => {
+    setPanelPreferences(getDefaultSourcePanelPreferences());
   };
 
   const itemCountLabel = `${visibleItems.length} of ${payload.count} open ${payload.source.replace('-', ' ')}`;
@@ -589,13 +750,38 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
   );
 
   const itemContent = viewMode === 'list' ? (
-    <ul className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
-      {visibleItems.map((item) => (
-        <TrackedItemCard key={item.url} item={item} showRepository />
-      ))}
-    </ul>
+    <div className="source-panel__stack space-y-4">
+      {milestoneGroups.map(({ milestone, items }) => {
+        const visibleTreeItemCount = countTreeItems(items);
+
+        return (
+          <section
+            key={milestone}
+            className="rounded-3xl border border-white/10 bg-slate-900/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+          >
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <h3 className="text-lg font-semibold text-white">{milestone}</h3>
+                <p className="text-sm text-slate-400">{visibleTreeItemCount} visible item{visibleTreeItemCount === 1 ? '' : 's'}</p>
+              </div>
+              <Badge variant="secondary">{items.length} root item{items.length === 1 ? '' : 's'}</Badge>
+            </div>
+            <ul className="space-y-3">
+              {items.map((item) => (
+                <TrackedItemTreeNode
+                  key={item.url}
+                  item={item}
+                  expandedTreeItems={expandedTreeItems}
+                  onToggleExpand={toggleTreeItem}
+                />
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+    </div>
   ) : (
-    <div className="grid gap-4 lg:grid-cols-2">
+    <div className="source-panel__stack space-y-4">
       {repositoryGroups.map(({ repository, items }) => (
         <section
           key={repository}
@@ -722,7 +908,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.18),_transparent_28%),linear-gradient(180deg,_#020617_0%,_#0f172a_50%,_#111827_100%)] text-foreground">
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-screen flex-col px-4 py-8 sm:px-6 lg:px-8">
         <header className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur md:p-10">
           <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_right,_rgba(244,114,182,0.25),_transparent_45%)]" />
           <div className="relative grid gap-8 lg:grid-cols-[1.6fr_0.8fr] lg:items-end">

@@ -14,6 +14,49 @@ export function getRepositoryGroups(items) {
     .sort((left, right) => left.repository.localeCompare(right.repository));
 }
 
+/**
+ * Returns the milestone label used when grouping items.
+ *
+ * @param {Record<string, any>} item
+ * @returns {string}
+ */
+function getMilestoneLabel(item) {
+  return item.milestone?.title || 'No milestone';
+}
+
+/**
+ * Groups items by milestone and sorts items newest first.
+ *
+ * @param {Array<Record<string, any>>} items
+ * @returns {Array<{milestone: string, items: Array<Record<string, any>>}>}
+ */
+export function getMilestoneGroups(items) {
+  const grouped = items.reduce((result, item) => {
+    const milestone = getMilestoneLabel(item);
+    const collection = result.get(milestone) ?? [];
+    collection.push(item);
+    result.set(milestone, collection);
+    return result;
+  }, new Map());
+
+  return [...grouped.entries()]
+    .map(([milestone, milestoneItems]) => ({
+      milestone,
+      items: [...milestoneItems].sort((left, right) => right.createdAt.localeCompare(left.createdAt)),
+    }))
+    .sort((left, right) => {
+      if (left.milestone === 'No milestone') {
+        return 1;
+      }
+
+      if (right.milestone === 'No milestone') {
+        return -1;
+      }
+
+      return left.milestone.localeCompare(right.milestone);
+    });
+}
+
 export function getRepositoryCatalog(payloads) {
   const repositoriesByName = new Map();
   const itemCountsByRepository = new Map();
@@ -46,6 +89,16 @@ export function getRepositoryCatalog(payloads) {
 
 function getUniqueOptions(values) {
   return [...new Set(values.filter(Boolean))].sort((left, right) => left.localeCompare(right));
+}
+
+/**
+ * Determines whether a value is a non-empty item URL.
+ *
+ * @param {unknown} value
+ * @returns {boolean}
+ */
+function isItemUrl(value) {
+  return typeof value === 'string' && value !== '';
 }
 
 export function getAuthorDirectory(items) {
@@ -88,6 +141,45 @@ export function hasRelationships(item) {
   const summary = item.relationshipSummary ?? {};
   return [summary.blockedBy, summary.totalBlockedBy, summary.blocking, summary.totalBlocking, summary.linked]
     .some((value) => Number(value ?? 0) > 0);
+}
+
+/**
+ * Builds a nested tree from visible items and tracked sub-issue URLs.
+ *
+ * @param {Array<Record<string, any>>} items
+ * @returns {Array<Record<string, any> & {children: Array<Record<string, any>>}>}
+ */
+export function getItemTree(items) {
+  const orderByUrl = new Map(
+    items
+      .filter((item) => isItemUrl(item.url))
+      .map((item, index) => [item.url, index]),
+  );
+
+  const nodes = items.map((item) => ({ ...item, children: [] }));
+  const nodeByUrl = new Map(
+    nodes
+      .filter((item) => isItemUrl(item.url))
+      .map((item) => [item.url, item]),
+  );
+  const childUrls = new Set();
+
+  nodes.forEach((item) => {
+    const subIssueUrls = Array.isArray(item.subIssueUrls) ? item.subIssueUrls.filter(isItemUrl) : [];
+
+    item.children = subIssueUrls
+      .map((url) => nodeByUrl.get(url))
+      .filter(Boolean)
+      .sort((left, right) => (orderByUrl.get(left.url) ?? 0) - (orderByUrl.get(right.url) ?? 0));
+
+    item.children.forEach((child) => {
+      childUrls.add(child.url);
+    });
+  });
+
+  return nodes
+    .filter((item) => !item.url || !childUrls.has(item.url))
+    .sort((left, right) => (orderByUrl.get(left.url) ?? 0) - (orderByUrl.get(right.url) ?? 0));
 }
 
 export function filterItems(items, filters) {
@@ -159,7 +251,7 @@ export function formatRelativeTime(isoDate, now = new Date()) {
   for (const [unit, seconds] of units) {
     const value = Math.trunc(diffInSeconds / seconds);
     if (value !== 0) {
-      return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(value, unit);
+      return new Intl.RelativeTimeFormat(undefined, { numeric: 'auto' }).format(value, unit);
     }
   }
 
@@ -167,13 +259,12 @@ export function formatRelativeTime(isoDate, now = new Date()) {
 }
 
 export function formatTimestamp(isoDate) {
-  return new Intl.DateTimeFormat('en', {
+  return new Intl.DateTimeFormat(undefined, {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    timeZone: 'UTC',
   }).format(new Date(isoDate));
 }
 

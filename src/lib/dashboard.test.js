@@ -1,10 +1,13 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import {
   filterItems,
   formatRelativeTime,
+  formatTimestamp,
   getAuthorDirectory,
   getFilterOptions,
+  getItemTree,
+  getMilestoneGroups,
   getRepositoryCatalog,
   getRepositoryGroups,
   hasRelationships,
@@ -26,11 +29,59 @@ describe('getRepositoryGroups', () => {
   });
 });
 
+describe('getMilestoneGroups', () => {
+  it('groups items by milestone and keeps no-milestone items last', () => {
+    const groups = getMilestoneGroups([
+      { title: 'No milestone', createdAt: '2026-04-22T10:00:00Z', milestone: null },
+      { title: 'Q3 item', createdAt: '2026-04-24T10:00:00Z', milestone: { title: 'Q3' } },
+      { title: 'Q2 older', createdAt: '2026-04-20T10:00:00Z', milestone: { title: 'Q2' } },
+      { title: 'Q2 newer', createdAt: '2026-04-21T10:00:00Z', milestone: { title: 'Q2' } },
+    ]);
+
+    expect(groups.map((group) => group.milestone)).toEqual(['Q2', 'Q3', 'No milestone']);
+    expect(groups[0].items.map((item) => item.title)).toEqual(['Q2 newer', 'Q2 older']);
+  });
+});
+
 describe('formatRelativeTime', () => {
-  it('formats past dates relative to the supplied current time', () => {
+  it('formats past dates using the browser locale', () => {
+    const format = vi.fn().mockReturnValue('2 days ago');
+    const relativeTimeFormat = vi.spyOn(Intl, 'RelativeTimeFormat').mockImplementation((locale, options) => {
+      expect(locale).toBeUndefined();
+      expect(options).toEqual({ numeric: 'auto' });
+
+      return { format };
+    });
+
     const formatted = formatRelativeTime('2026-04-22T10:00:00Z', new Date('2026-04-24T10:00:00Z'));
 
     expect(formatted).toBe('2 days ago');
+    expect(format).toHaveBeenCalledWith(-2, 'day');
+    expect(relativeTimeFormat).toHaveBeenCalledOnce();
+  });
+});
+
+describe('formatTimestamp', () => {
+  it('formats timestamps using the browser locale and local timezone', () => {
+    const format = vi.fn().mockReturnValue('Apr 22, 2026, 12:00');
+    const dateTimeFormat = vi.spyOn(Intl, 'DateTimeFormat').mockImplementation((locale, options) => {
+      expect(locale).toBeUndefined();
+      expect(options).toEqual({
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      });
+
+      return { format };
+    });
+
+    const formatted = formatTimestamp('2026-04-22T10:00:00Z');
+
+    expect(formatted).toBe('Apr 22, 2026, 12:00');
+    expect(format).toHaveBeenCalledWith(expect.any(Date));
+    expect(dateTimeFormat).toHaveBeenCalledOnce();
   });
 });
 
@@ -177,6 +228,51 @@ describe('filterItems', () => {
 
     expect(filtered).toHaveLength(1);
     expect(filtered[0].author.login).toBe('monalisa');
+  });
+});
+
+describe('getItemTree', () => {
+  it('nests visible sub-issues under their parent items', () => {
+    const tree = getItemTree([
+      {
+        title: 'Parent',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/1',
+        createdAt: '2026-04-24T10:00:00Z',
+        subIssueUrls: ['https://github.com/helsingborg-stad/plugin-alpha/issues/2'],
+      },
+      {
+        title: 'Child',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/2',
+        createdAt: '2026-04-24T09:00:00Z',
+        subIssueUrls: [],
+      },
+      {
+        title: 'Independent',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/3',
+        createdAt: '2026-04-24T08:00:00Z',
+        subIssueUrls: [],
+      },
+    ]);
+
+    expect(tree).toHaveLength(2);
+    expect(tree[0].title).toBe('Parent');
+    expect(tree[0].children.map((item) => item.title)).toEqual(['Child']);
+    expect(tree[1].title).toBe('Independent');
+  });
+
+  it('keeps child items at the root when the parent is not visible', () => {
+    const tree = getItemTree([
+      {
+        title: 'Child',
+        url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/2',
+        createdAt: '2026-04-24T09:00:00Z',
+        subIssueUrls: [],
+      },
+    ]);
+
+    expect(tree).toHaveLength(1);
+    expect(tree[0].title).toBe('Child');
+    expect(tree[0].children).toEqual([]);
   });
 });
 

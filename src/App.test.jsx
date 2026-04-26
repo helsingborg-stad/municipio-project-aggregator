@@ -7,7 +7,7 @@ const issuesPayload = {
   source: 'issues',
   sourceScope: 'GitHub',
   generatedAt: '2026-04-25T10:00:00Z',
-  count: 1,
+  count: 2,
   topics: ['municipio-se', 'getmunicipio'],
   repositories: [
     {
@@ -32,9 +32,29 @@ const issuesPayload = {
         company: '@github',
       },
       assignees: [],
-      milestone: null,
+      milestone: { title: 'Q2', url: 'https://github.com/helsingborg-stad/plugin-alpha/milestone/1', dueOn: '2026-06-01T00:00:00Z' },
+      type: null,
+      subIssues: { total: 1, completed: 0, percentCompleted: 0 },
+      subIssueUrls: ['https://github.com/helsingborg-stad/plugin-alpha/issues/2'],
+      relationshipSummary: { blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0, linked: 0 },
+      relationships: [],
+    },
+    {
+      title: 'Issue alpha child',
+      url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/2',
+      repository: 'helsingborg-stad/plugin-alpha',
+      createdAt: '2026-04-25T08:00:00Z',
+      number: 2,
+      author: {
+        login: 'octocat',
+        avatarUrl: 'https://avatars.example.com/octocat.png',
+        url: 'https://github.com/octocat',
+      },
+      assignees: [],
+      milestone: { title: 'Q2', url: 'https://github.com/helsingborg-stad/plugin-alpha/milestone/1', dueOn: '2026-06-01T00:00:00Z' },
       type: null,
       subIssues: { total: 0, completed: 0, percentCompleted: 0 },
+      subIssueUrls: [],
       relationshipSummary: { blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0, linked: 0 },
       relationships: [],
     },
@@ -80,6 +100,7 @@ const pullRequestsPayload = {
       milestone: null,
       type: 'Feature',
       subIssues: { total: 0, completed: 0, percentCompleted: 0 },
+      subIssueUrls: [],
       relationshipSummary: { blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0, linked: 0 },
       relationships: [],
     },
@@ -108,7 +129,7 @@ describe('App', () => {
 
     render(<App />);
 
-    await screen.findByText('1 of 1 open issues');
+    await screen.findByText('2 of 2 open issues');
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Repositories' }));
 
@@ -121,7 +142,7 @@ describe('App', () => {
 
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
     expect(screen.getByText('@github')).toBeInTheDocument();
-    expect(screen.getByText('2 tracked contributions')).toBeInTheDocument();
+    expect(screen.getByText('3 tracked contributions')).toBeInTheDocument();
   });
 
   it('remembers source filters and view mode and clears saved preferences', async () => {
@@ -130,25 +151,29 @@ describe('App', () => {
     const storageKey = 'municipio-project-aggregator:source-panel:issues';
     const { unmount } = render(<App />);
 
-    await screen.findByText('1 of 1 open issues');
+    await screen.findByText('2 of 2 open issues');
 
     fireEvent.change(screen.getByLabelText('Author'), { target: { value: 'octocat' } });
     fireEvent.click(screen.getByRole('button', { name: 'List view' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Expand sub-items for Issue alpha' }));
 
     await waitFor(() => {
       expect(window.localStorage.getItem(storageKey)).toContain('"author":"octocat"');
       expect(window.localStorage.getItem(storageKey)).toContain('"viewMode":"list"');
+      expect(window.localStorage.getItem(storageKey)).toContain('https://github.com/helsingborg-stad/plugin-alpha/issues/1');
     });
 
     unmount();
 
     render(<App />);
 
-    await screen.findByText('1 of 1 open issues');
+    await screen.findByText('2 of 2 open issues');
 
     expect(screen.getByLabelText('Author')).toHaveValue('octocat');
     expect(screen.getByRole('button', { name: 'List view' })).toHaveAttribute('aria-pressed', 'true');
-    expect(screen.getByText('helsingborg-stad/plugin-alpha')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Collapse sub-items for Issue alpha' })).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByText('Issue alpha child')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Q2' })).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', { name: 'Clear saved view' }));
 
@@ -156,6 +181,25 @@ describe('App', () => {
       expect(screen.getByLabelText('Author')).toHaveValue('');
       expect(screen.getByRole('button', { name: 'Card view' })).toHaveAttribute('aria-pressed', 'true');
       expect(window.localStorage.getItem(storageKey)).toBeNull();
+    });
+  });
+
+  it('renders source items in stacked layouts with container-aware cards', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    const issueCard = (await screen.findByText('Issue alpha')).closest('li');
+    expect(issueCard).toHaveClass('source-item-card');
+    expect(issueCard.closest('ul')).toHaveClass('space-y-3');
+
+    fireEvent.click(screen.getByRole('button', { name: 'List view' }));
+
+    await waitFor(() => {
+      const milestoneSection = screen.getByRole('heading', { name: 'Q2' }).closest('section');
+
+      expect(milestoneSection.parentElement).toHaveClass('source-panel__stack');
+      expect(milestoneSection.parentElement).not.toHaveClass('xl:grid-cols-2');
     });
   });
 });
