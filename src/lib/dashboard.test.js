@@ -1,8 +1,9 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import {
   filterItems,
   formatRelativeTime,
+  formatTimestamp,
   getAuthorDirectory,
   getFilterOptions,
   getRepositoryCatalog,
@@ -27,10 +28,44 @@ describe('getRepositoryGroups', () => {
 });
 
 describe('formatRelativeTime', () => {
-  it('formats past dates relative to the supplied current time', () => {
+  it('formats past dates using the browser locale', () => {
+    const format = vi.fn().mockReturnValue('2 days ago');
+    const relativeTimeFormat = vi.spyOn(Intl, 'RelativeTimeFormat').mockImplementation((locale, options) => {
+      expect(locale).toBeUndefined();
+      expect(options).toEqual({ numeric: 'auto' });
+
+      return { format };
+    });
+
     const formatted = formatRelativeTime('2026-04-22T10:00:00Z', new Date('2026-04-24T10:00:00Z'));
 
     expect(formatted).toBe('2 days ago');
+    expect(format).toHaveBeenCalledWith(-2, 'day');
+    expect(relativeTimeFormat).toHaveBeenCalledOnce();
+  });
+});
+
+describe('formatTimestamp', () => {
+  it('formats timestamps using the browser locale and local timezone', () => {
+    const format = vi.fn().mockReturnValue('Apr 22, 2026, 12:00');
+    const dateTimeFormat = vi.spyOn(Intl, 'DateTimeFormat').mockImplementation((locale, options) => {
+      expect(locale).toBeUndefined();
+      expect(options).toEqual({
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      });
+
+      return { format };
+    });
+
+    const formatted = formatTimestamp('2026-04-22T10:00:00Z');
+
+    expect(formatted).toBe('Apr 22, 2026, 12:00');
+    expect(format).toHaveBeenCalledWith(expect.any(Date));
+    expect(dateTimeFormat).toHaveBeenCalledOnce();
   });
 });
 
