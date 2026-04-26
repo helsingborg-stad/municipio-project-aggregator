@@ -249,7 +249,7 @@ export function formatRelativeTime(isoDate, now = new Date()) {
   for (const [unit, seconds] of units) {
     const value = Math.trunc(diffInSeconds / seconds);
     if (value !== 0) {
-      return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(value, unit);
+      return new Intl.RelativeTimeFormat(undefined, { numeric: 'auto' }).format(value, unit);
     }
   }
 
@@ -257,13 +257,12 @@ export function formatRelativeTime(isoDate, now = new Date()) {
 }
 
 export function formatTimestamp(isoDate) {
-  return new Intl.DateTimeFormat('en', {
+  return new Intl.DateTimeFormat(undefined, {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    timeZone: 'UTC',
   }).format(new Date(isoDate));
 }
 
