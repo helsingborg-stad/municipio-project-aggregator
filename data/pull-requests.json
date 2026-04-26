@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-26T18:16:32+00:00",
-    "count": 33,
+    "generatedAt": "2026-04-26T19:19:59+00:00",
+    "count": 63,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -21,9 +21,122 @@
             "fullName": "helsingborg-stad/styleguide",
             "description": "Version 2.0 of the Helsingborg Stad styleguide",
             "url": "https://github.com/helsingborg-stad/styleguide"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-page-for-posttype",
+            "fullName": "helsingborg-stad/wp-page-for-posttype",
+            "description": "Adds the ability to place a page on an archive page and/or place a posttype archive on a page. ",
+            "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-event-manager",
+            "fullName": "helsingborg-stad/api-event-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-event-manager"
+        },
+        {
+            "owner": "municipio-se",
+            "name": "municipio-deployment",
+            "fullName": "municipio-se/municipio-deployment",
+            "description": "Deploy of Municpio by fork",
+            "url": "https://github.com/municipio-se/municipio-deployment"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "component-library",
+            "fullName": "helsingborg-stad/component-library",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/component-library"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "schema.org-transformer",
+            "fullName": "helsingborg-stad/schema.org-transformer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api.helsingborg.se",
+            "fullName": "helsingborg-stad/api.helsingborg.se",
+            "description": "Website for delivering events to the people",
+            "url": "https://github.com/helsingborg-stad/api.helsingborg.se"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-form-builder",
+            "fullName": "helsingborg-stad/modularity-form-builder",
+            "description": "Simple form builder that uses acf for forms. ",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
         }
     ],
     "items": [
+        {
+            "title": "Pios project",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/23",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-04-24T08:05:29Z",
+            "number": 23,
+            "author": {
+                "login": "jlarsson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
+                "url": "https://github.com/jlarsson"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "title": "feat: chat component",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1199",
@@ -43,6 +156,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -71,6 +185,36 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Bump python-dotenv from 1.0.1 to 1.2.2",
+            "url": "https://github.com/helsingborg-stad/redirect/pull/9",
+            "repository": "helsingborg-stad/redirect",
+            "createdAt": "2026-04-21T19:13:18Z",
+            "number": 9,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -99,6 +243,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -127,6 +272,105 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "refactor: using components for tabs buttons",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/638",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-04-20T13:28:21Z",
+            "number": 638,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "feat(flexite-handler): align with Flexite Swagger schema",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/132",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-20T11:51:00Z",
+            "number": 132,
+            "author": {
+                "login": "Copilot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "refactor: making accordion button use button component",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/637",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-04-20T08:43:42Z",
+            "number": 637,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -155,6 +399,94 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps-dev): bump phpunit/phpunit from 9.6.23 to 12.5.22",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/131",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-18T19:54:28Z",
+            "number": 131,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "feat: remove unique ID attribute from attributes array",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/636",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-04-17T09:25:43Z",
+            "number": 636,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps-dev): bump follow-redirects from 1.15.11 to 1.16.0",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/137",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-04-15T18:50:29Z",
+            "number": 137,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -183,6 +515,152 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Feat/copilot refactoring of claude refactoring",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/130",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-09T09:27:28Z",
+            "number": 130,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "feat: formbuilder copilot refactor",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/129",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-09T07:39:33Z",
+            "number": 129,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Feat/claude refactoring",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/128",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-09T07:37:27Z",
+            "number": 128,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump vite from 7.3.1 to 7.3.2",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/127",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-06T22:07:18Z",
+            "number": 127,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "6.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/172",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-03-30T11:01:21Z",
+            "number": 172,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -211,6 +689,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -219,6 +698,42 @@
                 "linked": 0
             },
             "relationships": []
+        },
+        {
+            "title": "build(deps): bump serialize-javascript and terser-webpack-plugin",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/125",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-03-29T13:22:17Z",
+            "number": 125,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "build(deps): bump serialize-javascript and terser-webpack-plugin",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/122",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                }
+            ]
         },
         {
             "title": "build(deps-dev): bump handlebars from 4.7.8 to 4.7.9 in /Modularity",
@@ -239,6 +754,36 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps-dev): bump handlebars from 4.7.8 to 4.7.9",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/124",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-03-27T01:54:54Z",
+            "number": 124,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -267,6 +812,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -295,6 +841,65 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump serialize-javascript and css-minimizer-webpack-plugin",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/136",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-03-26T11:34:46Z",
+            "number": 136,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump picomatch",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/123",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-03-26T08:48:53Z",
+            "number": 123,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -323,6 +928,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -362,6 +968,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -390,6 +997,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -418,6 +1026,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -426,6 +1035,292 @@
                 "linked": 0
             },
             "relationships": []
+        },
+        {
+            "title": "feat: remove auto promote feature from typography",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/624",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-03-06T14:32:52Z",
+            "number": 624,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump @tootallnate/once and jest-environment-jsdom",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/120",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-03-05T08:56:43Z",
+            "number": 120,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump @tootallnate/once and jest-environment-jsdom",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/133",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-03-05T06:36:13Z",
+            "number": 133,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump immutable from 5.1.4 to 5.1.5",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/119",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-03-04T23:45:17Z",
+            "number": 119,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump minimatch",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/118",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-03-01T16:54:32Z",
+            "number": 118,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump rollup from 4.55.3 to 4.59.0",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/117",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-03-01T00:57:50Z",
+            "number": 117,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "refactor: interface for each component",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/621",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-02-26T10:18:02Z",
+            "number": 621,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "refactor: typed component configuration and registration flow",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/620",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-02-26T09:23:40Z",
+            "number": 620,
+            "author": {
+                "login": "Copilot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "refactor: components use php config files",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/619",
+                    "repository": "helsingborg-stad/component-library"
+                }
+            ]
+        },
+        {
+            "title": "refactor: components use php config files",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/619",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-02-26T09:11:49Z",
+            "number": 619,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "url": "https://github.com/NiclasNorin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "refactor: typed component configuration and registration flow",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/620",
+                    "repository": "helsingborg-stad/component-library"
+                }
+            ]
         },
         {
             "title": "Convert additional components to token.create mixin usage",
@@ -457,6 +1352,36 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump qs",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/128",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-02-14T12:43:44Z",
+            "number": 128,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -485,6 +1410,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -513,6 +1439,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -541,6 +1468,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -569,6 +1497,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -597,6 +1526,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -625,6 +1555,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -653,6 +1584,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -688,6 +1620,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -716,6 +1649,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -744,6 +1678,65 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps-dev): bump phpunit/phpunit from 11.5.48 to 11.5.50",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/20",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-01-28T00:19:00Z",
+            "number": 20,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps-dev): bump phpunit/phpunit from 11.5.34 to 11.5.50",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager/pull/5",
+            "repository": "helsingborg-stad/api-exhibition-manager",
+            "createdAt": "2026-01-28T00:10:15Z",
+            "number": 5,
+            "author": {
+                "login": "dependabot[bot]",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -772,6 +1765,36 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "feat: add a example of flexite handler",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/92",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-01-16T13:22:51Z",
+            "number": 92,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -800,6 +1823,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -828,6 +1852,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -856,6 +1881,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -884,6 +1910,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -912,6 +1939,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -940,6 +1968,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -968,6 +1997,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,

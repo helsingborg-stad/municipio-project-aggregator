@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-26T18:16:32+00:00",
-    "count": 5,
+    "generatedAt": "2026-04-26T19:19:59+00:00",
+    "count": 8,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -21,6 +21,90 @@
             "fullName": "helsingborg-stad/styleguide",
             "description": "Version 2.0 of the Helsingborg Stad styleguide",
             "url": "https://github.com/helsingborg-stad/styleguide"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-page-for-posttype",
+            "fullName": "helsingborg-stad/wp-page-for-posttype",
+            "description": "Adds the ability to place a page on an archive page and/or place a posttype archive on a page. ",
+            "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-event-manager",
+            "fullName": "helsingborg-stad/api-event-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-event-manager"
+        },
+        {
+            "owner": "municipio-se",
+            "name": "municipio-deployment",
+            "fullName": "municipio-se/municipio-deployment",
+            "description": "Deploy of Municpio by fork",
+            "url": "https://github.com/municipio-se/municipio-deployment"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "component-library",
+            "fullName": "helsingborg-stad/component-library",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/component-library"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "schema.org-transformer",
+            "fullName": "helsingborg-stad/schema.org-transformer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api.helsingborg.se",
+            "fullName": "helsingborg-stad/api.helsingborg.se",
+            "description": "Website for delivering events to the people",
+            "url": "https://github.com/helsingborg-stad/api.helsingborg.se"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-form-builder",
+            "fullName": "helsingborg-stad/modularity-form-builder",
+            "description": "Simple form builder that uses acf for forms. ",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
         }
     ],
     "items": [
@@ -54,6 +138,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -100,6 +185,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -113,6 +199,147 @@
                     "title": "Patch fix for TypeError in algolia-index-typesense-provider",
                     "url": "https://github.com/helsingborg-stad/Municipio/pull/1815",
                     "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
+            "title": "The .mod-frontend-form__content element should animate its height when content is switched",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/101",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-01-20T14:22:14Z",
+            "number": 101,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Animate content height during form step transitions",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/102",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                }
+            ]
+        },
+        {
+            "title": "Security Review Task \u2013 WordPress Form Plugin",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/99",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-01-20T12:51:18Z",
+            "number": 99,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Security fixes: CSRF, SSRF, rate limiting, email injection",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/100",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                }
+            ]
+        },
+        {
+            "title": "Compose file causes all projects to be synced into every other project.",
+            "url": "https://github.com/municipio-se/municipio-deployment/issues/151",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-01-14T09:58:14Z",
+            "number": 151,
+            "author": {
+                "login": "NiklasBr",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/279826?v=4",
+                "url": "https://github.com/NiklasBr"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin"
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Fix: Scope devcontainer volume mount to project directory only",
+                    "url": "https://github.com/municipio-se/municipio-deployment/pull/152",
+                    "repository": "municipio-se/municipio-deployment"
                 }
             ]
         },
@@ -141,6 +368,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -182,6 +410,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
@@ -223,6 +452,7 @@
                 "completed": 0,
                 "percentCompleted": 0
             },
+            "subIssueUrls": [],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
