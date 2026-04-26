@@ -364,7 +364,7 @@ function TrackedItemCard({ item, showRepository = false }) {
           target="_blank"
           rel="noreferrer"
           aria-label={`Open ${item.title} on GitHub in a new tab`}
-          className="source-item-card__link group flex items-start gap-3"
+          className="source-item-card__link group flex items-start justify-between gap-3"
         >
           <div className="source-item-card__summary min-w-0">
             {showRepository ? (
