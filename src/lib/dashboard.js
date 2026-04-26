@@ -91,6 +91,16 @@ function getUniqueOptions(values) {
   return [...new Set(values.filter(Boolean))].sort((left, right) => left.localeCompare(right));
 }
 
+/**
+ * Determines whether a value is a non-empty item URL.
+ *
+ * @param {unknown} value
+ * @returns {boolean}
+ */
+function isItemUrl(value) {
+  return typeof value === 'string' && value !== '';
+}
+
 export function getAuthorDirectory(items) {
   const authorsByLogin = new Map();
 
@@ -140,20 +150,20 @@ export function hasRelationships(item) {
 export function getItemTree(items) {
   const orderByUrl = new Map(
     items
-      .filter((item) => typeof item.url === 'string' && item.url !== '')
+      .filter((item) => isItemUrl(item.url))
       .map((item, index) => [item.url, index]),
   );
 
   const nodes = items.map((item) => ({ ...item, children: [] }));
   const nodeByUrl = new Map(
     nodes
-      .filter((item) => typeof item.url === 'string' && item.url !== '')
+      .filter((item) => isItemUrl(item.url))
       .map((item) => [item.url, item]),
   );
   const childUrls = new Set();
 
   nodes.forEach((item) => {
-    const subIssueUrls = Array.isArray(item.subIssueUrls) ? item.subIssueUrls.filter((url) => typeof url === 'string' && url !== '') : [];
+    const subIssueUrls = Array.isArray(item.subIssueUrls) ? item.subIssueUrls.filter(isItemUrl) : [];
 
     item.children = subIssueUrls
       .map((url) => nodeByUrl.get(url))
