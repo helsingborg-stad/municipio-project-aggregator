@@ -140,7 +140,8 @@ describe('App', () => {
 
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
     expect(screen.getByText('Contribution score: 1.2')).toBeInTheDocument();
-    expect(screen.getByText('Contribution score footnote: each tracked issue is worth 0.1 and each tracked pull request is worth 1.0.')).toBeInTheDocument();
+    expect(screen.getByText('Contribution score footnote:')).toBeInTheDocument();
+    expect(screen.getByText('each tracked issue is worth 0.1 and each tracked pull request is worth 1.0.')).toBeInTheDocument();
   });
 
   it('remembers source filters and view mode and clears saved preferences', async () => {
