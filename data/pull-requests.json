@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-26T08:29:00+00:00",
-    "count": 34,
+    "generatedAt": "2026-04-26T09:22:09+00:00",
+    "count": 33,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -959,34 +959,6 @@
                 "login": "michaelclaesson",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
                 "url": "https://github.com/michaelclaesson"
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "feat: implements css layers, in favour of !important on utils.",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1013",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2025-02-22T22:57:54Z",
-            "number": 1013,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin"
             },
             "assignees": [],
             "milestone": null,
