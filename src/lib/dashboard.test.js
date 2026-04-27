@@ -203,6 +203,16 @@ describe('filterRepositories', () => {
     expect(repositories).toHaveLength(1);
     expect(repositories[0].name).toBe('plugin-a');
   });
+
+  it('supports fuzzy repository searches with minor typos', () => {
+    const repositories = filterRepositories([
+      { fullName: 'helsingborg-stad/municipio-project-aggregator', name: 'municipio-project-aggregator', owner: 'helsingborg-stad', description: 'Aggregator dashboard' },
+      { fullName: 'helsingborg-stad/plugin-b', name: 'plugin-b', owner: 'helsingborg-stad', description: 'Another repository' },
+    ], 'agregator');
+
+    expect(repositories).toHaveLength(1);
+    expect(repositories[0].name).toBe('municipio-project-aggregator');
+  });
 });
 
 describe('filterAuthors', () => {
@@ -277,6 +287,32 @@ describe('filterItems', () => {
 
     expect(filtered).toHaveLength(1);
     expect(filtered[0].author.login).toBe('octocat');
+  });
+
+  it('matches fuzzy free-text search terms across item metadata', () => {
+    const filtered = filterItems([
+      {
+        title: 'Improve dashboard aggregator search',
+        repository: 'helsingborg-stad/municipio-project-aggregator',
+        author: { login: 'octocat' },
+        assignees: [{ login: 'hubot' }],
+        milestone: { title: 'Q2' },
+        type: 'Feature',
+        subIssues: { total: 0 },
+        relationshipSummary: { linked: 0, blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0 },
+        relationships: [],
+      },
+    ], {
+      author: '',
+      assignee: '',
+      milestone: '',
+      type: '',
+      subIssues: 'all',
+      relationships: 'all',
+    }, 'dashbord agregator');
+
+    expect(filtered).toHaveLength(1);
+    expect(filtered[0].title).toBe('Improve dashboard aggregator search');
   });
 });
 

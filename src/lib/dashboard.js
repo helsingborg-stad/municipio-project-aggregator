@@ -91,6 +91,122 @@ function normalizeSearchQuery(searchQuery) {
   return typeof searchQuery === 'string' ? searchQuery.trim().toLowerCase() : '';
 }
 
+/**
+ * Normalizes a value for fuzzy search comparisons.
+ *
+ * @param {string} value
+ * @returns {string}
+ */
+function normalizeSearchValue(value) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+/**
+ * Returns whether the query characters appear in order within the value.
+ *
+ * @param {string} value
+ * @param {string} query
+ * @returns {boolean}
+ */
+function isSubsequenceMatch(value, query) {
+  let queryIndex = 0;
+
+  for (const character of value) {
+    if (character === query[queryIndex]) {
+      queryIndex += 1;
+    }
+
+    if (queryIndex === query.length) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+/**
+ * Returns the Levenshtein distance between two values.
+ *
+ * @param {string} left
+ * @param {string} right
+ * @returns {number}
+ */
+function getLevenshteinDistance(left, right) {
+  if (left === right) {
+    return 0;
+  }
+
+  if (!left.length) {
+    return right.length;
+  }
+
+  if (!right.length) {
+    return left.length;
+  }
+
+  const previousRow = Array.from({ length: right.length + 1 }, (_, index) => index);
+
+  for (let leftIndex = 0; leftIndex < left.length; leftIndex += 1) {
+    let previousDiagonal = previousRow[0];
+    previousRow[0] = leftIndex + 1;
+
+    for (let rightIndex = 0; rightIndex < right.length; rightIndex += 1) {
+      const upper = previousRow[rightIndex + 1];
+      const substitutionCost = left[leftIndex] === right[rightIndex] ? 0 : 1;
+
+      previousRow[rightIndex + 1] = Math.min(
+        previousRow[rightIndex] + 1,
+        upper + 1,
+        previousDiagonal + substitutionCost,
+      );
+
+      previousDiagonal = upper;
+    }
+  }
+
+  return previousRow[right.length];
+}
+
+/**
+ * Returns whether a value approximately matches a query.
+ *
+ * @param {string} value
+ * @param {string} query
+ * @returns {boolean}
+ */
+function isFuzzyMatch(value, query) {
+  const normalizedValue = normalizeSearchValue(value);
+  const normalizedQuery = normalizeSearchValue(query);
+
+  if (!normalizedValue || !normalizedQuery) {
+    return false;
+  }
+
+  if (normalizedValue.includes(normalizedQuery)) {
+    return true;
+  }
+
+  const compactValue = normalizedValue.replace(/\s+/g, '');
+  const compactQuery = normalizedQuery.replace(/\s+/g, '');
+
+  if (compactValue.includes(compactQuery) || isSubsequenceMatch(compactValue, compactQuery)) {
+    return true;
+  }
+
+  const queryTerms = normalizedQuery.split(/\s+/).filter(Boolean);
+  const valueTerms = normalizedValue.split(/\s+/).filter(Boolean);
+
+  return queryTerms.every((queryTerm) => valueTerms.some((valueTerm) => {
+    const distance = getLevenshteinDistance(valueTerm, queryTerm);
+    const allowedDistance = queryTerm.length >= 8 ? 2 : 1;
+
+    return distance <= allowedDistance;
+  }));
+}
+
 function matchesSearchQuery(values, searchQuery) {
   const normalizedSearchQuery = normalizeSearchQuery(searchQuery);
 
@@ -98,7 +214,7 @@ function matchesSearchQuery(values, searchQuery) {
     return true;
   }
 
-  return values.some((value) => typeof value === 'string' && value.toLowerCase().includes(normalizedSearchQuery));
+  return values.some((value) => typeof value === 'string' && isFuzzyMatch(value, normalizedSearchQuery));
 }
 
 function getUniqueOptions(values) {
