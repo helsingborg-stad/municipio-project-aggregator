@@ -221,7 +221,9 @@ describe('App', () => {
 
     const issueCard = (await screen.findByText('Issue alpha')).closest('li');
     expect(issueCard).toHaveClass('source-item-card');
-    expect(issueCard.closest('ul')).toHaveClass('space-y-3');
+    expect(issueCard.closest('ul')).toHaveClass('grid');
+    expect(issueCard.closest('ul')).toHaveClass('md:grid-cols-2');
+    expect(issueCard.closest('ul')).toHaveClass('xl:grid-cols-3');
 
     fireEvent.click(screen.getByRole('button', { name: 'List view' }));
 
