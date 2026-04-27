@@ -37,15 +37,19 @@ final class GitHubReleaseAggregatorTest extends TestCase
             'municipio-deployment',
         );
 
-        $data = $payload->toArray();
+        $pageIndexData = $payload->pageIndexPayload()->toArray();
+        $firstPageData = $payload->pagePayloads()[0]->toArray();
 
-        self::assertSame('releases', $data['source']);
-        self::assertSame('municipio-se/municipio-deployment', $data['repository']['fullName']);
-        self::assertSame(2, $data['count']);
-        self::assertSame('v3.2.1', $data['items'][0]['version']);
-        self::assertSame('Release 3.2.1', $data['items'][0]['title']);
-        self::assertStringContainsString('## Highlights', $data['items'][0]['body']);
-        self::assertTrue($data['items'][1]['isPrerelease']);
+        self::assertSame('releases', $pageIndexData['source']);
+        self::assertSame('municipio-se/municipio-deployment', $pageIndexData['repository']['fullName']);
+        self::assertSame(2, $pageIndexData['count']);
+        self::assertSame(10, $pageIndexData['pageSize']);
+        self::assertSame('page-1.json', $pageIndexData['pages'][0]['file']);
+        self::assertSame(1, $firstPageData['pageNumber']);
+        self::assertSame('v3.2.1', $firstPageData['items'][0]['version']);
+        self::assertSame('Release 3.2.1', $firstPageData['items'][0]['title']);
+        self::assertStringContainsString('## Highlights', $firstPageData['items'][0]['body']);
+        self::assertTrue($firstPageData['items'][1]['isPrerelease']);
     }
 
     /**

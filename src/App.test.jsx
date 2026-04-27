@@ -109,11 +109,13 @@ const pullRequestsPayload = {
   ],
 };
 
-const releasesPayload = {
+const releasePageIndexPayload = {
   source: 'releases',
   sourceScope: 'GitHub',
   generatedAt: '2026-04-26T11:00:00Z',
-  count: 2,
+  count: 12,
+  pageSize: 10,
+  pageCount: 2,
   repository: {
     owner: 'municipio-se',
     name: 'municipio-deployment',
@@ -121,11 +123,26 @@ const releasesPayload = {
     description: 'Deployment tooling',
     url: 'https://github.com/municipio-se/municipio-deployment',
   },
+  pages: [
+    { pageNumber: 1, file: 'page-1.json', itemCount: 10 },
+    { pageNumber: 2, file: 'page-2.json', itemCount: 2 },
+  ],
+};
+
+const releasePageOnePayload = {
+  source: 'releases',
+  sourceScope: 'GitHub',
+  generatedAt: '2026-04-26T11:00:00Z',
+  count: 12,
+  pageSize: 10,
+  pageNumber: 1,
+  pageCount: 2,
+  repository: releasePageIndexPayload.repository,
   items: [
     {
       title: 'Release 3.2.1',
       version: 'v3.2.1',
-      body: '## Highlights\n\n- Added rollout support\n- Improved logs',
+      body: '## Highlights\n\nUse `npm run build:data` before deployment.\n\n- Added rollout support\n- Improved logs',
       url: 'https://github.com/municipio-se/municipio-deployment/releases/tag/v3.2.1',
       publishedAt: '2026-04-26T08:00:00Z',
       isPrerelease: false,
@@ -138,6 +155,46 @@ const releasesPayload = {
       url: 'https://github.com/municipio-se/municipio-deployment/releases/tag/v3.2.0-rc1',
       publishedAt: '2026-04-20T08:00:00Z',
       isPrerelease: true,
+      isDraft: false,
+    },
+    ...Array.from({ length: 8 }, (_, index) => ({
+      title: `Release filler ${index + 1}`,
+      version: `v3.1.${index + 8}`,
+      body: 'Filler release notes',
+      url: `https://github.com/municipio-se/municipio-deployment/releases/tag/v3.1.${index + 8}`,
+      publishedAt: `2026-04-${String(18 - index).padStart(2, '0')}T08:00:00Z`,
+      isPrerelease: false,
+      isDraft: false,
+    })),
+  ],
+};
+
+const releasePageTwoPayload = {
+  source: 'releases',
+  sourceScope: 'GitHub',
+  generatedAt: '2026-04-26T11:00:00Z',
+  count: 12,
+  pageSize: 10,
+  pageNumber: 2,
+  pageCount: 2,
+  repository: releasePageIndexPayload.repository,
+  items: [
+    {
+      title: 'Release 3.0.1',
+      version: 'v3.0.1',
+      body: 'Maintenance release',
+      url: 'https://github.com/municipio-se/municipio-deployment/releases/tag/v3.0.1',
+      publishedAt: '2026-04-09T08:00:00Z',
+      isPrerelease: false,
+      isDraft: false,
+    },
+    {
+      title: 'Release 3.0.0',
+      version: 'v3.0.0',
+      body: 'Major release',
+      url: 'https://github.com/municipio-se/municipio-deployment/releases/tag/v3.0.0',
+      publishedAt: '2026-04-08T08:00:00Z',
+      isPrerelease: false,
       isDraft: false,
     },
   ],
@@ -168,11 +225,29 @@ describe('App', () => {
         };
       }
 
+      if (url.includes('releases/pageIndex.json')) {
+        return {
+          ok: true,
+          json: async () => releasePageIndexPayload,
+        };
+      }
+
+      if (url.includes('releases/page-2.json')) {
+        return {
+          ok: true,
+          json: async () => releasePageTwoPayload,
+        };
+      }
+
       return {
         ok: true,
-        json: async () => releasesPayload,
+        json: async () => releasePageOnePayload,
       };
     }));
+  }
+
+  function hasCombinedText(text) {
+    return (_, element) => element?.textContent === text;
   }
 
   it('renders repository and contributor tabs from aggregated payload metadata', async () => {
@@ -241,7 +316,9 @@ describe('App', () => {
     expect(screen.getByText('v3.2.1')).toBeInTheDocument();
     expect(screen.getByText('Highlights')).toBeInTheDocument();
     expect(screen.getByText('Added rollout support')).toBeInTheDocument();
+    expect(screen.getByText('npm run build:data')).toBeInTheDocument();
     expect(screen.getByText('Pre-release')).toBeInTheDocument();
+    expect(screen.getByText(hasCombinedText('Page 1 of 2'))).toBeInTheDocument();
     expect(window.location.search).toBe('?tab=releases');
   });
 
@@ -256,7 +333,25 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Release log' }));
 
     expect(await screen.findByText('Release 3.2.0-rc1')).toBeInTheDocument();
-    expect(screen.getByText('1 releases')).toBeInTheDocument();
+    expect(screen.getByText('12 releases')).toBeInTheDocument();
+  });
+
+  it('paginates release entries with page-backed JSON files', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    await screen.findByText('2 of 2 open issues');
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Release log' }));
+
+    expect(await screen.findByText('Release 3.2.1')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Release page 2' }));
+
+    await screen.findByText('Release 3.0.1');
+    expect(screen.queryByText('Release 3.2.1')).not.toBeInTheDocument();
+    expect(screen.getByText(hasCombinedText('Page 2 of 2'))).toBeInTheDocument();
   });
 
   it('restores the selected main tab from the url', async () => {

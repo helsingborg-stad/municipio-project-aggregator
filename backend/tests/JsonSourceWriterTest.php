@@ -6,7 +6,9 @@ namespace MunicipioProjectAggregator\Tests;
 
 use MunicipioProjectAggregator\Backend\Data\AggregatedItem;
 use MunicipioProjectAggregator\Backend\Data\ReleaseEntry;
-use MunicipioProjectAggregator\Backend\Data\ReleasePayload;
+use MunicipioProjectAggregator\Backend\Data\ReleasePage;
+use MunicipioProjectAggregator\Backend\Data\ReleasePageIndexPayload;
+use MunicipioProjectAggregator\Backend\Data\ReleasePagePayload;
 use MunicipioProjectAggregator\Backend\Data\RepositoryReference;
 use MunicipioProjectAggregator\Backend\Data\SourcePayload;
 use MunicipioProjectAggregator\Backend\Output\JsonSourceWriter;
@@ -33,6 +35,18 @@ final class JsonSourceWriterTest extends TestCase
 
         if (is_file($this->outputDirectory . '/releases.json')) {
             unlink($this->outputDirectory . '/releases.json');
+        }
+
+        if (is_file($this->outputDirectory . '/releases/pageIndex.json')) {
+            unlink($this->outputDirectory . '/releases/pageIndex.json');
+        }
+
+        if (is_file($this->outputDirectory . '/releases/page-1.json')) {
+            unlink($this->outputDirectory . '/releases/page-1.json');
+        }
+
+        if (is_dir($this->outputDirectory . '/releases')) {
+            rmdir($this->outputDirectory . '/releases');
         }
 
         if (is_dir($this->outputDirectory)) {
@@ -89,8 +103,8 @@ final class JsonSourceWriterTest extends TestCase
     public function testWritePersistsReleasePayloads(): void
     {
         $writer = new JsonSourceWriter($this->outputDirectory);
-        $payload = new ReleasePayload(
-            'releases',
+        $payload = new ReleasePagePayload(
+            'releases/page-1',
             'GitHub',
             new RepositoryReference(
                 'municipio-se',
@@ -99,6 +113,10 @@ final class JsonSourceWriterTest extends TestCase
                 'https://github.com/municipio-se/municipio-deployment',
             ),
             '2026-04-27T08:00:00+00:00',
+            1,
+            10,
+            1,
+            1,
             [new ReleaseEntry(
                 'Release 3.2.1',
                 'v3.2.1',
@@ -118,5 +136,38 @@ final class JsonSourceWriterTest extends TestCase
         self::assertStringContainsString('"source": "releases"', $contents);
         self::assertStringContainsString('"repository": {', $contents);
         self::assertStringContainsString('"version": "v3.2.1"', $contents);
+    }
+
+    /**
+     * @return void
+     */
+    public function testWritePersistsReleasePageIndexPayloads(): void
+    {
+        $writer = new JsonSourceWriter($this->outputDirectory);
+        $payload = new ReleasePageIndexPayload(
+            'releases/pageIndex',
+            'GitHub',
+            new RepositoryReference(
+                'municipio-se',
+                'municipio-deployment',
+                'Deployment helpers',
+                'https://github.com/municipio-se/municipio-deployment',
+            ),
+            '2026-04-27T08:00:00+00:00',
+            12,
+            10,
+            [
+                new ReleasePage(1, 'page-1.json', 10),
+                new ReleasePage(2, 'page-2.json', 2),
+            ],
+        );
+
+        $filePath = $writer->write($payload);
+
+        self::assertFileExists($filePath);
+        $contents = file_get_contents($filePath);
+        self::assertIsString($contents);
+        self::assertStringContainsString('"pageCount": 2', $contents);
+        self::assertStringContainsString('"file": "page-1.json"', $contents);
     }
 }

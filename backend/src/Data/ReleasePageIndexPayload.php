@@ -7,23 +7,27 @@ namespace MunicipioProjectAggregator\Backend\Data;
 use MunicipioProjectAggregator\Backend\Contracts\JsonOutputPayloadInterface;
 
 /**
- * Frontend payload for the release log.
+ * Frontend payload describing the release log page structure.
  */
-final class ReleasePayload implements JsonOutputPayloadInterface
+final class ReleasePageIndexPayload implements JsonOutputPayloadInterface
 {
     /**
      * @param string $source Source key used for the output filename.
      * @param string $sourceScope Display label for the data source.
      * @param RepositoryReference $repository Repository the releases belong to.
      * @param string $generatedAt ISO 8601 aggregation timestamp.
-     * @param array<int, ReleaseEntry> $items Release entries.
+     * @param int $totalCount Total number of releases.
+     * @param int $pageSize Number of releases per page.
+     * @param array<int, ReleasePage> $pages Available release pages.
      */
     public function __construct(
         private readonly string $source,
         private readonly string $sourceScope,
         private readonly RepositoryReference $repository,
         private readonly string $generatedAt,
-        private readonly array $items,
+        private readonly int $totalCount,
+        private readonly int $pageSize,
+        private readonly array $pages,
     ) {
     }
 
@@ -41,14 +45,16 @@ final class ReleasePayload implements JsonOutputPayloadInterface
     public function toArray(): array
     {
         return [
-            'source' => $this->source,
+            'source' => 'releases',
             'sourceScope' => $this->sourceScope,
             'generatedAt' => $this->generatedAt,
-            'count' => count($this->items),
+            'count' => $this->totalCount,
+            'pageSize' => $this->pageSize,
+            'pageCount' => count($this->pages),
             'repository' => $this->repository->toArray(),
-            'items' => array_map(
-                static fn (ReleaseEntry $item): array => $item->toArray(),
-                $this->items,
+            'pages' => array_map(
+                static fn (ReleasePage $page): array => $page->toArray(),
+                $this->pages,
             ),
         ];
     }

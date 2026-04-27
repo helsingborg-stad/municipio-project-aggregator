@@ -58,8 +58,13 @@ foreach ([SourceType::Issues, SourceType::PullRequests] as $sourceType) {
 
 fwrite(STDOUT, "Fetching releases...\n");
 $releasePayload = $releaseAggregator->aggregate($config, 'municipio-se', 'municipio-deployment');
-$releaseFilePath = $writer->write($releasePayload);
-fwrite(STDOUT, sprintf("  Wrote %s\n", $releaseFilePath));
+$releaseIndexFilePath = $writer->write($releasePayload->pageIndexPayload());
+fwrite(STDOUT, sprintf("  Wrote %s\n", $releaseIndexFilePath));
+
+foreach ($releasePayload->pagePayloads() as $pagePayload) {
+    $releasePageFilePath = $writer->write($pagePayload);
+    fwrite(STDOUT, sprintf("  Wrote %s\n", $releasePageFilePath));
+}
 
 /**
  * @return int

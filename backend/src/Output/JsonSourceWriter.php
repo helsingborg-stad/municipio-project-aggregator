@@ -30,6 +30,12 @@ final class JsonSourceWriter
         }
 
         $filePath = sprintf('%s/%s.json', rtrim($this->outputDirectory, '/'), $payload->source());
+        $fileDirectory = dirname($filePath);
+
+        if (!is_dir($fileDirectory) && !mkdir($fileDirectory, 0777, true) && !is_dir($fileDirectory)) {
+            throw new RuntimeException(sprintf('Unable to create output directory: %s', $fileDirectory));
+        }
+
         $encodedPayload = json_encode($payload->toArray(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
 
         $result = file_put_contents($filePath, $encodedPayload . PHP_EOL);

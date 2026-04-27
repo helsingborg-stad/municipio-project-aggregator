@@ -489,9 +489,14 @@ function ReleaseMarkdown({ body }) {
           li: ({ node, ...props }) => <li className="pl-1 leading-7" {...props} />,
           blockquote: ({ node, ...props }) => <blockquote className="mt-4 border-l-2 border-cyan-300/40 pl-4 italic text-slate-400" {...props} />,
           a: ({ node, ...props }) => <a className="font-medium text-cyan-200 underline decoration-cyan-300/40 underline-offset-4 transition-colors hover:text-white" target="_blank" rel="noreferrer" {...props} />,
-          code: ({ inline, className, children, ...props }) => inline
-            ? <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[13px] text-cyan-100" {...props}>{children}</code>
-            : <code className={`block overflow-x-auto rounded-2xl bg-slate-900/95 p-4 font-mono text-[13px] text-cyan-100 ${className || ''}`} {...props}>{children}</code>,
+          code: ({ className, children, ...props }) => {
+            const codeText = String(children ?? '');
+            const isInlineCode = !className && !codeText.includes('\n');
+
+            return isInlineCode
+              ? <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[13px] text-cyan-100" {...props}>{children}</code>
+              : <code className={`block overflow-x-auto rounded-2xl bg-slate-900/95 p-4 font-mono text-[13px] text-cyan-100 ${className || ''}`} {...props}>{children}</code>;
+          },
           pre: ({ node, ...props }) => <pre className="mt-4 overflow-x-auto" {...props} />,
           hr: ({ node, ...props }) => <hr className="my-6 border-white/10" {...props} />,
           table: ({ node, ...props }) => (
@@ -510,9 +515,11 @@ function ReleaseMarkdown({ body }) {
   );
 }
 
-function ReleaseTimelinePanel({ payload, searchQuery }) {
-  const repository = payload?.repository;
-  const releases = filterReleases(Array.isArray(payload?.items) ? payload.items : [], searchQuery);
+function ReleaseTimelinePanel({ pageIndex, pagePayload, searchQuery, currentPageNumber, onPageChange, isLoadingPage }) {
+  const repository = pageIndex?.repository;
+  const releases = filterReleases(Array.isArray(pagePayload?.items) ? pagePayload.items : [], searchQuery);
+  const pages = Array.isArray(pageIndex?.pages) ? pageIndex.pages : [];
+  const totalPages = Number(pageIndex?.pageCount ?? 0);
 
   return (
     <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
@@ -525,17 +532,64 @@ function ReleaseTimelinePanel({ payload, searchQuery }) {
         </div>
         <div className="inline-flex items-center gap-2 rounded-full bg-amber-400/15 px-4 py-2 text-sm font-medium text-amber-100 ring-1 ring-amber-300/30">
           <ScrollText className="h-4 w-4" />
-          {releases.length} releases
+          {pageIndex?.count ?? 0} releases
         </div>
       </CardHeader>
       <CardContent className="p-6">
+        {totalPages > 1 ? (
+          <div className="mb-6 flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/[0.03] p-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="text-sm text-slate-400">
+              Page <span className="font-semibold text-white">{currentPageNumber}</span> of <span className="font-semibold text-white">{totalPages}</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                aria-label="Previous release page"
+                onClick={() => onPageChange(currentPageNumber - 1)}
+                disabled={currentPageNumber <= 1 || isLoadingPage}
+                className="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                Previous
+              </button>
+              {pages.map((page) => (
+                <button
+                  key={page.pageNumber}
+                  type="button"
+                  aria-label={`Release page ${page.pageNumber}`}
+                  aria-pressed={page.pageNumber === currentPageNumber}
+                  onClick={() => onPageChange(page.pageNumber)}
+                  disabled={isLoadingPage}
+                  className={`rounded-full px-4 py-2 text-sm transition-colors ${page.pageNumber === currentPageNumber ? 'bg-white text-slate-950' : 'border border-white/10 bg-slate-950/70 text-slate-300 hover:border-cyan-300/40 hover:text-white'}`}
+                >
+                  {page.pageNumber}
+                </button>
+              ))}
+              <button
+                type="button"
+                aria-label="Next release page"
+                onClick={() => onPageChange(currentPageNumber + 1)}
+                disabled={currentPageNumber >= totalPages || isLoadingPage}
+                className="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        ) : null}
+
+        {isLoadingPage ? (
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
+            Loading release page...
+          </div>
+        ) : null}
+
         {releases.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
             No releases match the current search.
           </div>
         ) : (
           <div className="space-y-6">
-            {releases.map((release, index) => (
+            {releases.map((release) => (
               <article key={`${release.version}-${release.publishedAt}`} className="relative pl-10">
                 <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-cyan-300/60 via-white/10 to-transparent" aria-hidden="true" />
                 <div className="absolute left-[7px] top-5 h-4 w-4 rounded-full border-4 border-slate-950 bg-cyan-300 shadow-[0_0_0_4px_rgba(34,211,238,0.12)]" aria-hidden="true" />
@@ -564,11 +618,6 @@ function ReleaseTimelinePanel({ payload, searchQuery }) {
                           <span>{formatTimestamp(release.publishedAt)}</span>
                         </div>
                       </div>
-                    </div>
-
-                    <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-right text-xs uppercase tracking-[0.2em] text-slate-500">
-                      <div className="text-slate-400">Step</div>
-                      <div className="mt-1 text-lg font-semibold tracking-normal text-white">{String(index + 1).padStart(2, '0')}</div>
                     </div>
                   </div>
 
@@ -1190,18 +1239,25 @@ function SourcePanel({ payload, icon: Icon, accentClassName, searchQuery }) {
   );
 }
 
-async function fetchSource(key) {
-  const response = await fetch(`${import.meta.env.BASE_URL}data/${key}.json`);
+async function fetchDataFile(path) {
+  const response = await fetch(`${import.meta.env.BASE_URL}data/${path}`);
   if (!response.ok) {
-    throw new Error(`Failed to load ${key}.json (${response.status})`);
+    throw new Error(`Failed to load ${path} (${response.status})`);
   }
 
   return response.json();
 }
 
+async function fetchSource(key) {
+  return fetchDataFile(`${key}.json`);
+}
+
 export default function App() {
   const [payloads, setPayloads] = useState({});
-  const [releasePayload, setReleasePayload] = useState(null);
+  const [releasePageIndex, setReleasePageIndex] = useState(null);
+  const [releasePagePayload, setReleasePagePayload] = useState(null);
+  const [activeReleasePageNumber, setActiveReleasePageNumber] = useState(1);
+  const [isLoadingReleasePage, setIsLoadingReleasePage] = useState(false);
   const [status, setStatus] = useState('loading');
   const [errorMessage, setErrorMessage] = useState('');
   const [activeMainTab, setActiveMainTab] = useState(readMainTabFromUrl);
@@ -1221,17 +1277,24 @@ export default function App() {
     async function loadDashboard() {
       try {
         setStatus('loading');
-        const [entries, releases] = await Promise.all([
+        const [entries, nextReleasePageIndex] = await Promise.all([
           Promise.all(sources.map(async (source) => [source.key, await fetchSource(source.key)])),
-          fetchSource(releaseTab.key),
+          fetchDataFile('releases/pageIndex.json'),
         ]);
+
+        const firstReleasePageFile = nextReleasePageIndex?.pages?.[0]?.file;
+        const nextReleasePagePayload = firstReleasePageFile
+          ? await fetchDataFile(`releases/${firstReleasePageFile}`)
+          : null;
 
         if (!isActive) {
           return;
         }
 
         setPayloads(Object.fromEntries(entries));
-        setReleasePayload(releases);
+        setReleasePageIndex(nextReleasePageIndex);
+        setReleasePagePayload(nextReleasePagePayload);
+        setActiveReleasePageNumber(nextReleasePagePayload?.pageNumber ?? 1);
         setStatus('ready');
       } catch (error) {
         if (!isActive) {
@@ -1250,6 +1313,28 @@ export default function App() {
     };
   }, []);
 
+  const loadReleasePage = async (pageNumber) => {
+    const pages = Array.isArray(releasePageIndex?.pages) ? releasePageIndex.pages : [];
+    const nextPage = pages.find((page) => page.pageNumber === pageNumber);
+
+    if (!nextPage || nextPage.pageNumber === activeReleasePageNumber) {
+      return;
+    }
+
+    setIsLoadingReleasePage(true);
+
+    try {
+      const nextPagePayload = await fetchDataFile(`releases/${nextPage.file}`);
+      setReleasePagePayload(nextPagePayload);
+      setActiveReleasePageNumber(nextPage.pageNumber);
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'Unknown error while loading release page.');
+      setStatus('error');
+    } finally {
+      setIsLoadingReleasePage(false);
+    }
+  };
+
   useEffect(() => {
     writeMainTabToUrl(activeMainTab);
   }, [activeMainTab]);
@@ -1267,7 +1352,7 @@ export default function App() {
   }, []);
 
   const generatedAt = payloadList
-    .concat(releasePayload ? [releasePayload] : [])
+    .concat(releasePageIndex ? [releasePageIndex] : [])
     .map((payload) => payload.generatedAt)
     .filter(Boolean)
     .sort()
@@ -1305,7 +1390,7 @@ export default function App() {
                 {buildStatusTabs.map((tab) => (
                   <div key={tab.key} className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
                     <span>{tab.label}</span>
-                    <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePayload?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
+                    <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePageIndex?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
                   </div>
                 ))}
               </CardContent>
@@ -1315,8 +1400,8 @@ export default function App() {
 
         <main className="flex-1 py-8">
           {status === 'loading' && (
-            <div className="grid gap-4 md:grid-cols-2">
-              {sources.map((source) => (
+            <div className="grid gap-4 md:grid-cols-3">
+              {buildStatusTabs.map((source) => (
                 <div key={source.key} className="h-64 animate-pulse rounded-[1.75rem] border border-white/10 bg-white/5" />
               ))}
             </div>
@@ -1376,7 +1461,14 @@ export default function App() {
               </TabsContent>
 
               <TabsContent value="releases">
-                <ReleaseTimelinePanel payload={releasePayload} searchQuery={searchQuery} />
+                <ReleaseTimelinePanel
+                  pageIndex={releasePageIndex}
+                  pagePayload={releasePagePayload}
+                  searchQuery={searchQuery}
+                  currentPageNumber={activeReleasePageNumber}
+                  onPageChange={loadReleasePage}
+                  isLoadingPage={isLoadingReleasePage}
+                />
               </TabsContent>
 
               <TabsContent value="authors">
