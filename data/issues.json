@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T05:07:10+00:00",
+    "generatedAt": "2026-04-27T07:02:40+00:00",
     "count": 8,
     "repositories": [
         {
@@ -117,18 +117,21 @@
             "author": {
                 "login": "thorbrink",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
-                "url": "https://github.com/thorbrink"
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
             },
             "assignees": [
                 {
                     "login": "thorbrink",
                     "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
-                    "url": "https://github.com/thorbrink"
+                    "url": "https://github.com/thorbrink",
+                    "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -164,18 +167,21 @@
             "author": {
                 "login": "camitzdennis",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
-                "url": "https://github.com/camitzdennis"
+                "url": "https://github.com/camitzdennis",
+                "company": ""
             },
             "assignees": [
                 {
                     "login": "camitzdennis",
                     "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
-                    "url": "https://github.com/camitzdennis"
+                    "url": "https://github.com/camitzdennis",
+                    "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -211,18 +217,21 @@
             "author": {
                 "login": "sebastianthulin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin"
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [
                 {
                     "login": "sebastianthulin",
                     "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin"
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -258,18 +267,21 @@
             "author": {
                 "login": "sebastianthulin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin"
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [
                 {
                     "login": "sebastianthulin",
                     "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin"
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -305,18 +317,21 @@
             "author": {
                 "login": "NiklasBr",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/279826?v=4",
-                "url": "https://github.com/NiklasBr"
+                "url": "https://github.com/NiklasBr",
+                "company": ""
             },
             "assignees": [
                 {
                     "login": "sebastianthulin",
                     "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin"
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -352,13 +367,15 @@
             "author": {
                 "login": "thorbrink",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
-                "url": "https://github.com/thorbrink"
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
             },
             "assignees": [
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -394,13 +411,15 @@
             "author": {
                 "login": "sebastianthulin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin"
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -436,13 +455,15 @@
             "author": {
                 "login": "sebastianthulin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin"
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent"
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
                 }
             ],
             "milestone": null,
