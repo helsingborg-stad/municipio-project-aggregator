@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T14:59:19+00:00",
-    "count": 16,
+    "generatedAt": "2026-04-27T15:14:46+00:00",
+    "count": 17,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -1165,6 +1165,50 @@
                     "title": "Add custom CORS origins feature with ACF admin interface",
                     "url": "https://github.com/helsingborg-stad/wpmu-security/pull/10",
                     "repository": "helsingborg-stad/wpmu-security"
+                }
+            ]
+        },
+        {
+            "title": "Test coverage should be increased in order to validate the functionality thorughly.",
+            "url": "https://github.com/helsingborg-stad/broken-link-detector/issues/22",
+            "repository": "helsingborg-stad/broken-link-detector",
+            "createdAt": "2025-07-07T09:34:13Z",
+            "number": 22,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Significantly increase test coverage with comprehensive test suite for core plugin components",
+                    "url": "https://github.com/helsingborg-stad/broken-link-detector/pull/23",
+                    "repository": "helsingborg-stad/broken-link-detector"
                 }
             ]
         }

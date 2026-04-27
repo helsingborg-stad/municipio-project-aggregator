@@ -1,0 +1,699 @@
+{
+    "source": "releases",
+    "sourceScope": "GitHub",
+    "generatedAt": "2026-04-27T15:14:46+00:00",
+    "count": 76,
+    "repository": {
+        "owner": "municipio-se",
+        "name": "municipio-deployment",
+        "fullName": "municipio-se/municipio-deployment",
+        "description": "",
+        "url": "https://github.com/municipio-se/municipio-deployment"
+    },
+    "items": [
+        {
+            "title": "5.9.2",
+            "version": "5.9.2",
+            "body": "",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.2",
+            "publishedAt": "2026-04-16T11:18:11Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.9.1",
+            "version": "5.9.1",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-9-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.1",
+            "publishedAt": "2026-04-01T13:06:15Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.8",
+            "version": "5.8.8",
+            "body": "",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.8",
+            "publishedAt": "2026-02-25T12:14:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.3",
+            "version": "5.8.3",
+            "body": "Release notes @ https://getmunicipio.com/nyheter/municipio-5-8-3/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.3",
+            "publishedAt": "2026-01-13T09:59:30Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.1",
+            "version": "5.8.1",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.1",
+            "publishedAt": "2025-12-18T08:31:18Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.0",
+            "version": "5.8.0",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.0",
+            "publishedAt": "2025-12-17T15:23:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.7.2",
+            "version": "5.7.2",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-2/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.2",
+            "publishedAt": "2025-12-10T08:03:35Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.7.0",
+            "version": "5.7.0",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.0",
+            "publishedAt": "2025-12-04T09:06:52Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.6.1",
+            "version": "5.6.1",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-6-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.1",
+            "publishedAt": "2025-11-18T11:49:10Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.6.0",
+            "version": "5.6.0",
+            "body": "Releasedocs @ https://getmunicipio.com/nyheter/municipio-5-6-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.0",
+            "publishedAt": "2025-11-04T08:58:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Municipio 5.4.9",
+            "version": "5.4.9",
+            "body": "## Municipio 5.4.9\r\n\r\nVersion **5.4.9** of Municipio is a maintenance release that fixes some minor bugs and includes improvements to image handling.\r\n\r\n---\r\n\r\n### \ud83c\udfa8 Municipio Theme (5.175.3 \u2192 5.175.6)\r\n\r\n- Updated image rendering on Schools, making images display within a slider for better presentation.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.9",
+            "publishedAt": "2025-10-16T11:14:17Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.4.8",
+            "version": "5.4.8",
+            "body": "## Municipio 5.4.8\r\n\r\nVersion **5.4.8** of Municipio is a maintenance release that fixes some minor bugs and includes improvements across Modularity, the Municipio Theme, Component Library, and supporting plugins.\r\n\r\n---\r\n\r\n### \ud83e\udde9 Modularity (6.90.26 \u2192 6.90.36)\r\n\r\n- Improved security by cleaning and sanitizing post excerpts.  \r\n- Fixed an issue where pagination for posts could return outdated results due to caching.  \r\n- Enabled videos to be used as links in sliders.  \r\n- Updated and simplified the menu module\u2019s notification message.  \r\n- Removed unnecessary choice options from the menu module.  \r\n- Corrected language and text for menu notices.  \r\n- Fixed styling and behavior of the date badge.  \r\n- Removed the profile URL to prevent unwanted links from appearing.  \r\n- Improved layout handling by removing automatic column calculations.  \r\n- Fixed placement issues in the menu module.  \r\n\r\n---\r\n\r\n### \ud83c\udfa8 Municipio Theme (5.172.31 \u2192 5.175.3)\r\n\r\n- Fixed an issue where image normalization ran in the wrong order.  \r\n- Reduced complexity and improved structure in the Singular Event Controller.  \r\n- Updated and improved translations across the system.  \r\n- Added support to display event details based on occasions found in the event schedule.  \r\n- Upgraded the test framework for better reliability.  \r\n- Removed unused development dependencies.  \r\n- Removed outdated PHPUnit watcher configuration.  \r\n- Fixed an issue where getting queried objects could fail unexpectedly.  \r\n- Removed unnecessary test coverage files from version control.  \r\n- Fixed errors in the event schema for better data consistency.  \r\n- Ensured filters run correctly when generating intermediate image files.  \r\n- Added missing translations.  \r\n- Fixed an issue with event calendar links pointing to incorrect occasions.  \r\n- Improved file handling by removing unnecessary caching.  \r\n- Added support for multiple locations in schools and preschools.  \r\n- Suppressed non-critical warnings when normalizing images.  \r\n- Allowed administrators to manually synchronize external content.  \r\n- Fixed layout and display issues in the date badge.  \r\n- Added a new controller and view for event archives.  \r\n- Added a new customization section for the date badge.  \r\n- Removed duplicate code for `employmentType` and `datePosted`.  \r\n- Updated style guide.  \r\n- Improved namespacing in Schema controllers.  \r\n\r\n---\r\n\r\n### \ud83e\uddf1 Component Library (4.62.4 \u2192 4.62.13)\r\n\r\n- Fixed an issue that caused errors when counting certain data types.  \r\n- Corrected faulty test code related to maximum image size.  \r\n- Cleaned up article text by removing unsafe or invalid links.  \r\n- Fixed a problem where multiple files were added automatically when uploading.  \r\n- Fixed a button issue to ensure \u201cresolve\u201d actions work properly.  \r\n- Removed an incorrect parameter from video notices.  \r\n- Allowed slider items to include a call-to-action button even when no title is set.  \r\n- Adjusted menus so border styling only applies to top-level items.  \r\n- Improved the appearance and structure of the date badge.  \r\n- Updated and stabilized internal tests.  \r\n- Prevented segments from rendering empty elements.  \r\n\r\n---\r\n\r\n### \u2699\ufe0f WordPress Core (6.8.3)\r\n\r\n- Updated WordPress to **6.8.3**, which includes important security and bug fixes.\r\n\r\n---\r\n\r\n### \u2601\ufe0f S3 Local Index (1.1.20)\r\n\r\n- Added **S3 Local Index** plugin, which creates a local index of an S3 bucket to reduce the number of external calls to S3 or Swift storage.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.8",
+            "publishedAt": "2025-10-16T11:06:33Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.4.7",
+            "version": "5.4.7",
+            "body": "# Release Notes\r\n\r\n## Modularity (6.90.25 \u2192 6.90.26)\r\n- Resolved an issue where block IDs caused empty `getField` responses.  \r\n\r\n## Municipio Theme (5.172.27 \u2192 5.172.31)\r\n- Fixed an issue with the target selector on navigation menu items related to the item wrapper.  \r\n- Images imported by the External Content feature are now hidden in the media library.  \r\n- Images in the External Content feature are now handled as objects for better consistency.  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.7",
+            "publishedAt": "2025-09-30T12:57:46Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.4.6",
+            "version": "5.4.6",
+            "body": "# Release Notes\r\n\r\n## Active Directory API WP Integration (3.1.0 \u2192 3.1.5)\r\n- Fixed an issue that prevented users from logging in manually if their password wasn\u2019t stored before.  \r\n- Fixed an issue where accounts could not be synced in bulk.  \r\n- Updated the interval of bulk synchronization to one hour.  \r\n\r\n## API Alarm Integration (4.1.4 \u2192 4.1.6)\r\n- Changed alert level to automatically communicate to level 3 instead of level 2.  \r\n- Alarm list icons now use the icon select field.  \r\n\r\n## API Event Manager Integration (2.0.39 \u2192 2.0.40)\r\n- Updated the category dropdown to appear as checkboxes, allowing multi-select.  \r\n\r\n## Component Library (4.62.2 \u2192 4.62.4)\r\n- Allowed `isShortcode` as a known internal parameter that components silently accept.  \r\n- Fixed title markup in accordion titles to validate correctly.  \r\n\r\n## Modularity (6.90.21 \u2192 6.90.25)\r\n- Fixed pagination for post modules (URL escaping fix).  \r\n- Added support for extra CSS classes entered on block level in Gutenberg blocks.  \r\n- `getID` function now returns a valid ID when called on blocks (note: string return type now allowed).  \r\n- Normalized post headings in certain views to better fit the surrounding context.  \r\n\r\n## Municipio Theme (5.172.13 \u2192 5.172.27)\r\n- Updated the inline image component for better compatibility with PHP 8.4.  \r\n- Improved login time tracking.  \r\n- Ensured default roles are set correctly in multisite environments.  \r\n- Fixed issue with comment replies not working.  \r\n- General reliability and stability improvements.  \r\n\r\n## WordPress\r\n- Updated to WordPress 6.8.2.  \r\n\r\n## ACF Extended\r\n- Removed **ACF Extended**, which was deprecated in the previous release.  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.6",
+            "publishedAt": "2025-09-30T07:16:25Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.4.5",
+            "version": "5.4.5",
+            "body": "## Algolia-index (3.2.3\u20263.2.4)\r\n- Refactoring to allow multiple providers to be used.  \r\n- In this case Typesense as a drop-in replacement of Algolia.\r\n\r\n## Api Alarm Integration (4.1.3\u20264.1.4)\r\n- Removes a trailing slash sanitization from api-url.  \r\n- Allows query params to be sent in resource url.\r\n\r\n## Api Event Manager Integration (2.0.38\u20262.0.39)\r\n- Allows rendering when no tags are present.\r\n\r\n## Component Library (4.60.1\u20264.62.2)\r\n- **fix(Date):** allow format override  \r\n- **feat(Nav): extended dropdown view**  \r\n  - Added support for extended dropdown in nav component.  \r\n  - New Blade templates: `content.blade.php`, `extended.blade.php`  \r\n  - New option: `isExtendedDropdown` in `nav.json`  \r\n  - Async children support and extended dropdown styling  \r\n- **fix(Person):** add missing class and other attributes to person component  \r\n- **fix(Hero):** allow video without content  \r\n- **fix(Image):** reduce calls to resolver when building container query data  \r\n- **fix(Image):** avoid calling resolver more than needed  \r\n- **refactor(Nav):** restructured nav view, moved logic into `content.blade.php`\r\n\r\n## Modularity (6.90.13\u20266.90.21)\r\n- Fixed issue where shortcodes could render a module view twice  \r\n- Made module base more testable  \r\n- Added recommendation for extension usage  \r\n- Fixed warnings about missing view key  \r\n- Improved handling of public taxonomies (only show public ones)  \r\n- Rewritten headings in accordion post module for better structure  \r\n- Fixed issue when removing choices in fields  \r\n- Fixed error with post argument type in certain cases  \r\n\r\n## Modularity Timeline (4.1.1\u20264.1.2)\r\n- Adds the ability to render as a sequential timeline without dates.\r\n\r\n## Municipio Theme (5.164.3\u20265.172.13)\r\n- Fixed occasion text handling for exhibitions  \r\n- Hide gallery title if no gallery in exhibitions  \r\n- Added custom archive date format for exhibitions  \r\n- Added Customizer option for extended dropdown menu  \r\n- Implemented on-demand image resizing  \r\n- Fixed flexible header search button styling  \r\n- Added bordered setting for drawer menu  \r\n- Fixed password-protected page markup error  \r\n- Added background color support for dropdown menus  \r\n- Fixed circular structure issue in menus  \r\n- Added controllers and views for Elementary School and Preschool  \r\n- Integrated events into Preschool and Elementary School  \r\n- Allowed selecting post field columns for archive list view  \r\n- Sorted taxonomy filter options as numbers if all are numeric  \r\n- Fixed event price error display  \r\n- Sideload all images in schema objects  \r\n- Fixed schools page crash caused by missing image ID  \r\n- Added missing translations  \r\n\r\n## Modularity Dynamic Guides (1.4.8\u20261.4.10)\r\n- Removes the requirement of having Acf Extended installed.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.5",
+            "publishedAt": "2025-09-22T12:38:14Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.4.4",
+            "version": "5.4.4",
+            "body": "## Municipio Theme (5.165.1)\r\n- Updates the **ImageConvert** feature to support adding additional conversion strategies in the future.  \r\n- Introduces a new **object caching system** in ImageConvert to prevent repeated attempts to convert images that have already been processed or failed previously.  \r\n- Implements a **conversion tracking system** that provides real-time knowledge of ongoing conversions, preventing multiple concurrent conversions of the same asset on the same request or across concurrent requests.  \r\n- Adds a **detailed logging system** to ImageConvert, enabling identification of performance issues related to images that fail to convert or are frequently reprocessed.  \r\n\r\n## Modularity (6.90.15)\r\n- Removes **ACF Extended** as a required plugin dependency.  \r\n\r\n## Deployment\r\n- Adds an updated version of **ACF Extended** to the main deployment procedure, ensuring compatibility with the latest release of the **ACF Pro** plugin.  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.4",
+            "publishedAt": "2025-09-10T11:56:30Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.4.1",
+            "version": "5.4.1",
+            "body": "# Release Notes\r\n\r\nThis release focuses on upgrading the performance of the icon selector by replacing it with a custom field.  \r\nThis change decreases delivered DOM size in the admin interface, making the Gutenberg editor more performant.\r\n\r\n---\r\n\r\n## Municipio Theme (5.164.1)\r\n- Removes `PrefillIcon` class  \r\n- Implements replacement field for icon selector in all occurrences  \r\n- **Exhibition Event**\r\n  - Update exhibition event gallery position  \r\n  - Allow subtypes of Event schema to have `startDate` and `endDate` meta  \r\n  - Update position of date and place on exhibition event  \r\n  - Add missing expired event notice text  \r\n\r\n## Modularity (6.90.9)\r\n- Implements replacement field for icon selector in all occurrences  \r\n- Fixes an issue where post module could be saved without a selected view, causing a fatal error  \r\n\r\n## Acf Icon Field (0.2.42)\r\n- Introduces a new icon field providing a visual selector of Material icons  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.1",
+            "publishedAt": "2025-09-02T10:59:40Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.4.0",
+            "version": "5.4.0",
+            "body": "# Release Notes\r\n\r\nThis release focuses on resolving issues with the previous release.  \r\nIt introduces **Vite** for compiling scripts and styles in **Municipio Theme** and **Styleguide**.\r\n\r\n---\r\n\r\n## Municipio Theme (5.163.9)\r\n- Adds a **Trashed page** for media items, allowing users to revert trashed files.\r\n- Replaced **Webpack** with **Vite** as a build system.\r\n- Enqueue new Vite-compiled files as **modules**.\r\n- Adds **ExhibitionEvent Schema** view.\r\n- Add **alt text** to emblem placeholder when an image is missing.\r\n- Allow **font/ namespace** when populating the font selector for custom fonts in customizer.\r\n- Ensure that images are correctly rendered in **Gutenberg editor**.\r\n- Removes some obsolete code related to **TinyMCE editor (plugins)**.\r\n- **Splide Core** is now compiled as a separate asset.\r\n- Update language file for **Swedish translation**.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1312)\r\n- Updates to an **ESM compatible Leaflet MarkerCluster** that avoids monkeypatching of the global instance.\r\n- Update to new version of **Sass**, and uses **Vite** as build system.\r\n- **Slider steppers** are now unclickable, to meet clickable area size standards.\r\n- **Right alignment fix** for collection items.\r\n\r\n---\r\n\r\n## Component Library (4.60.0)\r\n- Links in **email addresses** now support **hyphens**.\r\n- Removes a direct call to a **WordPress function** in breadcrumb.\r\n- Do not include a link text if no link is found in **Card component**.\r\n- Adds a new modifier that places **link last** in collection items.\r\n\r\n---\r\n\r\n## ACF UX Collapse (2.0.7)\r\n- Declares a missing variable in **JavaScript**, preventing breakage in some cases.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.12)\r\n- Inactivates **block dragging**, to avoid issues with map.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.0",
+            "publishedAt": "2025-08-29T11:06:17Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.3.5",
+            "version": "5.3.5",
+            "body": "## Modularity Guides ([4.0.5](https://github.com/helsingborg-stad/modularity-guides/))\r\n* Converted javascript to typescript\r\n* Generating email content in the backend instead of frontend\r\n* New API to generate mail introduced\r\n* Transformer to group action items by subject\r\n* Updated all outdated external dependencies\r\n* Consolidated translations to separate class",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.5",
+            "publishedAt": "2025-08-28T09:35:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.3.4",
+            "version": "5.3.4",
+            "body": "# Release Notes\r\n\r\n## Municipio (5.3.4)\r\nPatch release that refines appearance on popular functions.\r\n\r\n---\r\n\r\n## Algolia Search JS (3.3.5)\r\n- Fix an issue where images in search results were not hidden on mobile devices.\r\n\r\n---\r\n\r\n## Alarm Integration (4.1.3)\r\n- Adds a new module that renders alarms in a refined way.  \r\n- This module consolidates similar alarms.  \r\n- Old alarm module will be deprecated after user feedback.\r\n\r\n---\r\n\r\n## Attachment Revisions (3.0.8)\r\n- Fix build of CSS/JS file.\r\n\r\n---\r\n\r\n## Broken Link Detector (4.2.12)\r\n- Improve detection of broken internal links (on-site).\r\n\r\n---\r\n\r\n## Component Library (4.59.9)\r\n- Adds detection of incompatible HTML in slots (e.g., `<a>` tags in slot content on already linked components).  \r\n- Silences a warning in timeline component.  \r\n- Updates contact module with a new view option.  \r\n- Image rendering now falls back to a default value when aspect ratio cannot be resolved (16/9).  \r\n- Adds a new layout option for hero module.  \r\n- Adjusted rendering class to reduce the risk of intermittent broken markup.  \r\n- Fixes broken markup in logotype grid component.  \r\n- Support for displaying the heading above the image in card component.  \r\n- Support for showing a clickable button instead of linking the whole item in card component.  \r\n- Updates to file input:\r\n  - Accepted file types  \r\n  - Error handling  \r\n  - Accepted file sizes  \r\n  - Preview of uploaded data  \r\n- Link component now handles hyphens in links correctly.  \r\n- Remove/check availability of WP function in breadcrumb component.\r\n\r\n---\r\n\r\n## Modularity Like Posts (2.14.5)\r\n- Fix an issue that caused data fetch to not have the user ID available.\r\n\r\n---\r\n\r\n## Modularity (6.90.0)\r\n- New layout option for contacts display (#896).  \r\n- Icon placed to the right in collection item (#913).  \r\n- Ensure blog name is added when appropriate in posts module (#903).  \r\n- Mitigate warnings in various locations.  \r\n- \"Read more\" fix with correct handling of default value (#893).  \r\n- Shortcodes are missing `<p>` tags for text module (#915).  \r\n- Allow map providers in CSP (#914).  \r\n- Posts module: remove a custom tag sanitizer (#894).  \r\n- Cleanup contacts module, making it more readable (#907).  \r\n- Refactor the **Edit Modules** button to a more standard implementation in block editor.\r\n\r\n---\r\n\r\n## Modularity Open Street Map (2.7.8)\r\n- Fixes a rendering issue causing `&amp;` to render as clear text.  \r\n- Improves performance in Gutenberg editor.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.11)\r\n- Improves performance in Gutenberg editor.\r\n\r\n---\r\n\r\n## Municipio Theme (5.159.18)\r\n- Common Field Group now resolves select fields that return labels instead of values correctly on subsites in a network.  \r\n- Fix to prevent images from being parsed more than once in content.  \r\n- Adds more language strings and translations.  \r\n- New feature: **Accessibility Declaration** (shareable across a whole network via Common Field Group).  \r\n- Fixes styling on the \"collapsible search\" feature in header.  \r\n- Introduces custom colors to a color palette for reuse throughout Municipio.  \r\n- Inline images now properly support captions.  \r\n- Allow more file formats:\r\n  - Variants of existing MIME types (e.g., `dwg`, `dotx`).  \r\n  - More file formats by default for editors/administrators.  \r\n- Fixes an issue where theme options were unavailable on translated sites in admin UI.  \r\n- Fixes an issue where URLs showed instead of labels on error pages.  \r\n- Fixes an issue where Table of Contents displayed even if the feature was turned off.  \r\n- Fixes an issue causing pages with Table of Contents to scroll to first section on load.  \r\n- Graphical adjustments on featured images in article layouts.  \r\n- Added validation on `getImage` function in post object to prevent broken image display.  \r\n- Fix Blade engine initialization causing intermittent rendering anomalies.\r\n\r\n---\r\n\r\n## Schema Posts\r\n- Creates fixed taxonomies for posts using schema.  \r\n- Posts from external sources do not allow editing schema data.  \r\n- Updated UI for editing local posts using schema type.  \r\n- Mirrored posts now link to the original URL instead of faking a local version.\r\n\r\n---\r\n\r\n## Focus Point (0.2.5)\r\n- Fixes general issues with JavaScript execution.  \r\n- Resolved an issue with JS loading that could crash WordPress Customizer.\r\n\r\n---\r\n\r\n## WP Security (1.8.3)\r\n- Added an admin interface to allow users to add custom domains to CSP policy.  \r\n- Improved domain handling, preserving port numbers during extraction.  \r\n- Improved content parsing to automatically add domains not detected before.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.4",
+            "publishedAt": "2025-08-21T13:05:44Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.3.3",
+            "version": "5.3.3",
+            "body": "# Release Notes\r\n\r\n## Component Library (4.54.6)\r\n\r\n### Fixes\r\n- Corrected sanitization of HTML IDs in the BaseController to prevent potential rendering issues.\r\n- Fixed aspect ratio issues for term icons to ensure consistent display.\r\n- Resolved a styling issue related to typography when using shortcodes in context.\r\n\r\n### Improvements and Refactoring\r\n- Refactored slider button functionality for better clarity and maintainability.\r\n- Removed unnecessary constructor requirement from `ImageFocusResolverInterface`, simplifying its implementation.\r\n\r\n---\r\n\r\n## Algolia Index JS Searchpage (3.3.4)\r\n\r\n### Features\r\n- Added a new **Typesense adapter** for search, allowing integration with the Typesense engine for improved relevance and performance.\r\n- Added additional domains to the **Content Security Policy (CSP)** configuration to ensure required external services are allowed and function correctly.\r\n\r\n---\r\n\r\n## Alarm Integration (4.0.11)\r\n\r\n### Features\r\n- Adds the ability to display an **automatic fire alarm banner** on each page when a fire alarm is set to high.\r\n\r\n---\r\n\r\n## Modularity Like Posts (2.14.4)\r\n\r\n### Fixes and Improvements\r\n- Prevented sticky posts from being retrieved when not intended.\r\n- Fixed an issue where only allowed post types should be set.\r\n- Improved markup handling to prevent rendering issues in views.\r\n- Fixed a bug where passing an empty list of posts could cause Blade template errors.\r\n- Removed unnecessary data (like `blogId`) from being passed to views.\r\n- Cleaned up legacy code, including the removal of unused `getPost()` calls and debug statements.\r\n\r\n### Refactoring\r\n- Improved support for handling private posts across multiple blogs.\r\n- Refactored list and collection views for better performance and maintainability.\r\n- Replaced internal permalink logic with `getPermalink()` for consistency.\r\n- Streamlined post type validation logic and corrected `blogId` usage.\r\n\r\n### Housekeeping\r\n- Added inline code comments for clarity.\r\n- Removed outdated or redundant code and comments.\r\n\r\n---\r\n\r\n## WP Security (1.6.10)\r\n\r\n### New Features\r\n- Split the logic into separate resolvers for better structure and maintainability.\r\n- Introduced support for a **CSP (Content Security Policy) hook** for flexible CSP configuration.\r\n- Added support for the **Permissions Policy** header.\r\n- Introduced a PHP-based test suite and build validation.\r\n\r\n### Fixes and Improvements\r\n- Improved DOM parsing to detect and extract relevant elements, including images inside `<script>` tags.\r\n- Better handling of inline scripts and updated test coverage.\r\n- Simplified and cleaned up test cases, fixtures, and attribute handling.\r\n- Improved normalization of parsed content via an internal normalizer.\r\n- Enhanced filtering of specific element types and attributes.\r\n- Adjusted handling of `<a>` tags (included but without using `href` value).\r\n- Resolved issues with malformed attributes, DOM element checks, and edge cases.\r\n- Allowed `unsafe-eval` in scripts to avoid CSP conflicts.\r\n- Added filter support and documentation for better CSP customization.\r\n- Multiple minor fixes and code cleanup (e.g., typo corrections, `.gitignore` updates).\r\n\r\n### Documentation\r\n- Updated README and added internal comments for clarity and maintainability.\r\n\r\n---\r\n\r\n## Modularity (6.87.7)\r\n\r\n### New Features\r\n- Added **user group visibility restrictions** for posts.\r\n- Introduced a new **hero layout** for enhanced presentation.\r\n- Posts module now uses a dedicated **image retrieval method** for better consistency.\r\n\r\n### Fixes and Improvements\r\n- Fixed pagination failure in post modules.\r\n- Corrected post status filtering.\r\n- Resolved bug with mocked user IDs in place of real ones.\r\n- Fixed missing blog name in the news list view.\r\n- Sticky posts are now correctly prioritized in multisite queries.\r\n- Sanitized post excerpts by removing unwanted `<a>` tags.\r\n- Used GMT post dates for accurate date comparisons.\r\n- Fixed malformed URLs in post archive filters.\r\n- Addressed language detector crash for large modules.\r\n- Fixed CSV module update failures.\r\n- Corrected shortcode context detection for rendering.\r\n\r\n### Refactoring and Styling\r\n- Updated file list styles to use heading font.\r\n- Changed input type to `search` and added icon for better UX.\r\n- Refactored Splide slider custom button implementation.\r\n\r\n### Development & Dependency Updates\r\n- Upgraded `league/commonmark` for compatibility and security.\r\n- Updated ACF service dependency to version 1.1.0.\r\n\r\n---\r\n\r\n## Municipio Theme (5.156.2)\r\n\r\n### New Features\r\n- **Table of Contents (ToC):** Auto-generates a clickable index for better navigation of long content.\r\n- **Error Page Customizer:** Customize 401, 403, and 404 error pages with headings, images, buttons, and toggleable error codes.\r\n- **Schema-specific Field Control:** Disable standard fields for specific schema types.\r\n- **Post Image Retrieval Method:** More reliable rendering by retrieving images directly from post objects.\r\n\r\n### Fixes and Improvements\r\n- **Image Rendering Across Blogs:** Sizes now resolve correctly when fetching images from other blogs.\r\n- **WYSIWYG Image Replacement:** Preserves clickable links when replacing images in rich text.\r\n- **Breadcrumbs Accuracy:** Improved archive page detection for correct breadcrumb paths.\r\n- **Menu Item Indicators:** Menu items with children now show correct visual cues.\r\n- **Hidden Menu Visibility:** Hidden pages are no longer shown to authenticated users.\r\n- **Navigation JS:** Improved handling of nonce values for safer scripting.\r\n- **TinyMCE Plugin Fix:** External plugins now load correctly in the editor.\r\n- **YouTube Link Consistency:** Defaults to `www.` domain for better reliability.\r\n- **Breadcrumb Archive Links:** Fixed broken archive links in breadcrumbs.\r\n- **Mirrored Posts:** Featured images now show properly for multisite mirrored posts.\r\n- **Embed Caching:** oEmbed cache clears correctly to prevent stale content.\r\n\r\n### Developer and Internal Enhancements\r\n- **ImageMagick Transparency Fix:** PNGs now converted with GD library to preserve alpha transparency.\r\n- **Improved Image Conversion Performance:** More memory and processing time allocated to prevent crashes.\r\n- **Simplified Heading Styles:** Removed per-module heading style configuration.\r\n- **Customizer Cleanup:** Refactored card and layout sections for clarity.\r\n- **Build Tools Update:** Updated `browsersync` and `webpack-dev-server` for stability.\r\n- **Codebase Refactoring:** Refactored Table of Contents and post decorators for maintainability.\r\n- **Test Maintenance:** Marked incomplete tests in preparation for larger refactor.\r\n\r\n### Other\r\n- Adds support for **FrankenPHP/Caddy** and quickstart with **SQLite server**.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.3",
+            "publishedAt": "2025-07-03T10:54:55Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.3.2",
+            "version": "5.3.2",
+            "body": "# Municipio 5.3.2\r\n\r\n**Municipio 5.3.2** is a patch release, fixing some minor bugs in the previous release.\r\n\r\n## Modularity\r\n\r\n- Fixes a typing error on query param for post module pagination.\r\n- Fixes pagination error on posts module.\r\n- Fixes a migration issue where private modules were ignored by the migration script.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.2",
+            "publishedAt": "2025-06-11T12:53:14Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.3.1",
+            "version": "5.3.1",
+            "body": "## Municipio Theme (5.153.5)\r\n\r\n- New Flexible Header component that displays a button to the user's group homepage, if it exists.\r\n- Fixed SEO redirect permalink fetching when using mirrored post objects.\r\n- Fixed attachment pages not redirecting to real files by default.\r\n- Fixed `fileExists` cache not caching files that were not found.\r\n\r\n## Component Library (4.54.1)\r\n\r\n- Fixed comment markup for the author by removing disallowed nesting in `<span>` elements.\r\n\r\n## Modularity (6.84.1)\r\n\r\n- Added an option to the Posts module allowing editors to force external links to open in a new window.\r\n- Posts module now supports pagination in multisite queries.\r\n- Fixed a type comparison error in network permalink resolving in the Posts module.\r\n- Module fragment cache now respects query parameters that may affect the cached state.\r\n\r\n## Modularity Like (2.14.1)\r\n\r\n- Patched the ability to unlike a post across networks.\r\n\r\n## Styleguide (0.11.1277)\r\n\r\n- Compressed lists now have a smaller font size and icon by default.\r\n\r\n## WP Security (1.3.4)\r\n\r\n- Disabled automatic CSP due to issues it caused on search pages.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.1",
+            "publishedAt": "2025-06-11T09:29:41Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.3.0",
+            "version": "5.3.0",
+            "body": "## Wp Security (1.1.0)\r\n\r\nA brand new security plugin has been developed in order to improve WordPress security. This plugin lacks settings but applies some automated headers and other security features:\r\n\r\n- Generic login error messages (prevents user enumeration)\r\n- Generic password reset responses (prevents user enumeration)\r\n- HTTP Strict Transport Security (HSTS) headers if SSL is detected\r\n- Automatic CORS configuration (defaults to current site; additional headers can be set with `.htaccess` if needed)\r\n- Subresource Integrity (SRI) for scripts and styles stored locally on disk\r\n- XML-RPC is automatically disabled\r\n- Improved comment sanitization\r\n- Automatic Content Security Policy (CSP) based on current output (no manual configuration needed)\r\n\r\n> **Note:** This is designed as a **MU-plugin**, and cannot be turned off.\r\n\r\n---\r\n\r\n## Municipio Theme (5.152.0)\r\n\r\n- Adds a place search REST endpoint to populate OpenStreetMap with query results\r\n- Improved feature to mirror posts from other sites in the network, including canonical tags and schema data\r\n- Schema data forms improved for schema posts; now utilizing a form factory\r\n- Sanitization of query parameters in the REST render endpoint for menu generation\r\n- Post visibility now respected on post type archive pages when a page is assigned as the archive\r\n- Automatic page tree menus now display private pages if the user is logged in\r\n- Improved custom font rendering by respecting native font-weight\r\n- Attachment pages now redirect to the actual file by default\r\n- Adds customizer settings for breadcrumb display\r\n\r\n---\r\n\r\n## Modularity (6.81.11)\r\n\r\n- Fixes HTML syntax error when modules were rendered inline in the Gutenberg editor\r\n- Removes inline templates in the admin panel (detected automatically)\r\n- Removes insecure JavaScript in the table module that was fetched from a remote service (DataTables)\r\n- Improves output sanitation in the text module\r\n- Mitigates two warnings in the post module regarding archive link placement\r\n- Fixes population of schema select dropdown in the posts module\r\n- Adjusts Text module heading size to align with other modules\r\n- Post module now correctly renders taxonomies\r\n- Adds settings to display module usage in list view, edit view, and frontend edit view\r\n\r\n---\r\n\r\n## Modularity Like (2.14.0)\r\n\r\n- Adds ability to like posts across pages in a network installation\r\n\r\n---\r\n\r\n## Open Street Map (2.7.5)\r\n\r\n- Now uses `PostObjectInterface` schema properly according to specification\r\n\r\n---\r\n\r\n## Simplify Admin Menus (1.3.0)\r\n\r\n- New plugin added to simplify the WordPress admin panel\r\n\r\n---\r\n\r\n## Event Manager Integration (2.0.32)\r\n\r\n- Fixes timezone error when rendering dates in some contexts (specifically archive lists)\r\n\r\n---\r\n\r\n## Algolia JS Searchpage Addon (3.3.2)\r\n\r\n- Declutters rendering by removing number of results and query from the response message (now only rendered in the input field)\r\n\r\n---\r\n\r\n## Active Directory Integration (3.1.0)\r\n\r\n- Sanitizes all `$_GET` and `$_POST` variables handled in the authentication process to prevent malicious requests\r\n\r\n---\r\n\r\n## Component Library (4.54.0)\r\n\r\n- **Breadcrumb:** Adds settings to show prefix label and hide home icon\r\n- **Timeline:** Adds support for sequential mode (without date/time) and current/active step\r\n\r\n---\r\n\r\n## Other\r\n\r\n- Added `publiccode.yml` declaration\r\n- Updated error page to improve rendering of error messages\r\n- Added `install.html` to remove list when deployment runs\r\n\r\n---\r\n\r\n## Unreleased\r\n\r\nThis is not yet released; we are currently working on documentation and release notes. This is public since we always try to be as transparent as possible.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.0",
+            "publishedAt": "2025-06-10T08:05:21Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.2.7",
+            "version": "5.2.7",
+            "body": "### Municipio 5.2.7\r\n- Fixes schema data issues.\r\n- Resolves a performance issue related to large lead texts.\r\n\r\n### Municipio (5.146.3)\r\n- Removes the `force_balance_tags` function, which was previously used to filter large amounts of text and avoid empty `<p>` tags.\r\n  - This practice is **not recommended** by WordPress documentation.\r\n\r\n### Styleguide (0.11.1251)\r\n- Reverts accordion animations that were mistakenly merged.\r\n\r\n### Component Library (4.52.13)\r\n- Removes XML headers from plus/minus reactive icons.\r\n\r\n### OpenStreetMap (2.7.5)\r\n- Adds a **hotfix** for issues with `lat/lng` data on the \"place\" schema type.\r\n  - A **permanent fix** will be included in the next release.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.7",
+            "publishedAt": "2025-04-29T13:31:43Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.2.6",
+            "version": "5.2.6",
+            "body": "### WordPress Core (6.8)\r\n- Update WordPress core to version 6.8.\r\n\r\n### Modularity (6.81.0)\r\n- Adds the option to display a link to the archive before the post list in the post module.\r\n- Authors can now set a custom label for the archive button.\r\n\r\n### Municipio Theme (5.144.9)\r\n- Taxonomy terms are now shown on archive and single post pages.\r\n- Reintroduces the progress bar data on the project schema type.\r\n- Fixes an issue with Quicklinks placement that caused the entire page to render incorrectly.\r\n- Container block now supports setting border radius and shadows.\r\n- Fixes an issue where lat/lng values were cached at runtime, causing all geo coordinates to appear in the same location.\r\n\r\n### Modularity Form Builder (3.4.11)\r\n- A default label will not be applied when the upload button label is set to empty.\r\n\r\n### Component Library (4.52.12)\r\n- **Fixed:** Headings get different styling even though they have the same heading level.\r\n- Fileinput now handles `max file limit = -1` as the maximum allowed number of files (50).\r\n\r\n### Styleguide (0.11.1251)\r\n- Correct button colors in the primary menu to align with colors on link items.\r\n\r\n### Visit Custom Posttypes Taxonomies (2.0.6)\r\n- Reflects name changed filter in Municipio handling quicklinks positioning.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.6",
+            "publishedAt": "2025-04-28T12:07:24Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.2.5",
+            "version": "5.2.5",
+            "body": "# Municipio 5.2.5\r\n\r\n**Release type:** Hotfix  \r\n**Summary:** Addresses various issues introduced in version 5.2.4.\r\n\r\n---\r\n\r\n## Alarm Integration (4.0.9)\r\n\r\n- Updates to the latest version of the Alarm Manager integration.\r\n  - Corrects colors and labels for warnings in the fire ban information module.\r\n\r\n---\r\n\r\n## Municipio Theme (5.142.7)\r\n\r\n- Adds a missing constructor parameter in the `E[NNN]` controller.  \r\n  \u27a4 This previously caused a fatal error on locked pages.\r\n- Defaults to `.woff` font format if the font type cannot be resolved.  \r\n  \u27a4 Most browsers support both `.woff` and `.woff2` when `.woff` is declared.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.10)\r\n\r\n- Fixes an issue where data could not be saved due to an unfired ACF hook.\r\n\r\n---\r\n\r\n## Component Library (4.52.10)\r\n\r\n- Ensures sliders with a single slide are displayed.  \r\n  \u27a4 Bypasses default Splide CSS when sliders haven't initialized.\r\n\r\n---\r\n\r\n## WPMU Focus Point (0.2.3)\r\n\r\n- Renames CSS and style file hooks to namespace assets in the global scope.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.5",
+            "publishedAt": "2025-04-16T11:28:09Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.2.4",
+            "version": "5.2.4",
+            "body": "## Municipio Theme (5.142.4)\r\n\r\n- Adds ability to indent vertical menus (drawer, sidebar). Enabled via Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds option to choose icon type (caret or plus/minus) for vertical menus in the Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for showing a \"current language\" button in language menus (configured per menu).  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Customizer settings now apply on AJAX requests for re-rendering components.\r\n- Image focus points can now be set in the media library. These act as defaults when the image contract is used.\r\n- Fixes CSS references for locally uploaded fonts.\r\n\r\n---\r\n\r\n## Modularity (6.77.2)\r\n\r\n- Improves `aria-labelledby` references in the Posts module.\r\n- Image module now properly implements `ImageInterface`.  \r\n  \u27a4 As a result, the ability to select image size has been removed.\r\n- Accordion module:  \r\n  \u27a4 Now supports spaced sections and headings outside the card.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for download icons and additional file type icons.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n\r\n---\r\n\r\n## Modularity Forms (3.4.10)\r\n\r\n- Adds new file and image upload fields.\r\n\r\n---\r\n\r\n## Event Manager Integration (2.0.31)\r\n\r\n- Adds support for the new file upload field when uploading an event image.\r\n\r\n---\r\n\r\n## Component Library (4.52.9)\r\n\r\n- Adds animated icons (on `aria-pressed`) for plus/minus and hamburger/close symbols.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n- Introduces `IconSection` wrapper component.  \r\n  \u27a4 `iconSection` renamed to `IconSection__item` and must now be used within the wrapper.\r\n\r\n---\r\n\r\n## OpenStreetMap Field (0.79.8)\r\n\r\n- Adds option to have filters open by default.\r\n- Fixes rendering issues in Gutenberg.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1251)\r\n\r\n- Updates third-party slider library **Splide** to the next major version.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n\r\n---\r\n\r\n## Algolia Index (3.2.3)\r\n\r\n- Ensures excerpts are properly sanitized before storing in the Algolia index.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.4",
+            "publishedAt": "2025-04-15T14:27:06Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.1.0",
+            "version": "5.1.0",
+            "body": "## Version 5.1.0  \r\n\r\nVersion 5.1.0 is a patch release for version 5.0.2, fixing some minor issues. This release is designed as a transition release for a plugin switch regarding cookie notices.  \r\n\r\n<!--more-->  \r\n\r\nWe have decided to phase out the [Cookies and Content Security Policy](https://wordpress.org/plugins/cookies-and-content-security-policy/) plugin in favor of [Pressidium Cookie Consent](https://wordpress.org/plugins/pressidium-cookie-consent/).  \r\n\r\n### Municipio Theme (5.129.12)  \r\n\r\n- Sites that are using a network subfolder structure now link the logotype to the main site ID instead of the current site.  \r\n- Fixes an issue with date handling.  \r\n- Fixes a fatal error when emptying the global notices configuration panel.  \r\n- Fixes a date issue (unformatted dates) in the archive type \"list\" for some columns.  \r\n- Fixed ordering issues for posts with identical date-time values by forcing the query to fall back on ascending order.  \r\n\r\n### Modularity (6.67.7)  \r\n\r\nThe notice module now supports (thanks to Consid and Alings\u00e5s Kommun):  \r\n\r\n- Action buttons  \r\n- Placement of action buttons  \r\n- Dismissable notices  \r\n\r\n### Component Library (4.48.3)  \r\n\r\n- The action button in the notice component can now be placed \"aside\" or \"below\" (thanks to Consid and Alings\u00e5s Kommun).  \r\n- Linked cards will now have a truncated version of the content in the card to shorten the reading time of links.  \r\n\r\n### Styleguide (0.11.1224)  \r\n\r\n- The signature component has been modified to resolve excessive spacing on edges.  \r\n\r\n### Cookies and Content Security Policy (2.24)  \r\n\r\n- This plugin is scheduled to be removed from the install in the upcoming minor release.  \r\n\r\n### Pressidium Cookie Consent (1.7.1)  \r\n\r\n- This plugin has been added to the install. It will need to be configured before use.  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.1.0",
+            "publishedAt": "2025-02-13T07:42:42Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.0.2",
+            "version": "5.0.2",
+            "body": "Version 5.0.2 is a patch release for version 5.0.1, fixing some minor issues that have been identified since the last release.\r\n\r\n### Municipio Theme (5.129.4)\r\n\r\n- **Bugfix:** Refined how timestamps are fetched in archives.\r\n- **Bugfix:** Refined how timestamps are fetched in singular pages.\r\n- **Bugfix:** Fixed ordering issues for posts with identical date-time values by adding an additional `ORDER BY ID` to date queries.\r\n- **Chore:** Adds a template & instructions for generating feature documentation with a LLM.\r\n- **Bugfix:** Resolves some issues with mobile adaption of collapsible search view.\r\n\r\n<sub>*Due to the overhaul of dates; events may have to be adjusted to your preference since the date badge has been hardcoded for this post type in some locations.*</sub>\r\n\r\n### Modularity (6.67.4)\r\n\r\n- **Feature:** Removed the option to specify the source of the post date. It will now automatically match the archive view setting from Municipio.\r\n- **Posts Module Enhancements:**\r\n  - Improved handling of sticky posts and pagination in `GetPosts.php`, addressing potential issues with post counts and page limits. Sticky posts are now correctly merged and sorted.\r\n  - Refactored post preparation and data handling in `Posts.php` and `AbstractController.php`, including adding sticky post data and default values for post objects. Highlighting logic was moved to a dedicated method.\r\n  - Updated template controllers (`ExpandableListTemplate.php`, `ListTemplate.php`) and views (`features-grid.blade.php`, `grid.blade.php`, `index.blade.php`, `news.blade.php`, `segment.blade.php`) to use the new post data structure and handle sticky posts correctly. Added `data-js-item-id` and `attributeList` to post elements for better tracking and extensibility.\r\n  - Modified partials (`box.blade.php`, `collection-item.blade.php`, `news-item.blade.php`) to utilize the updated post data and attributes.\r\n  - Module is now resolving event timestamps correctly. If multiple occasions are resolved, the closest date in the future will be used. If the event is passed, the last will be used.\r\n- **Search Module Update:** Adjusted button styling in `search.blade.php`.\r\n\r\n### Styleguide (0.11.1220)\r\n\r\n- **Bugfix:** Fix alignment in news items vertically.\r\n\r\n### Component Library (4.47.11)\r\n\r\n- **Block Component Enhancements:**\r\n  - Added support for date arrays and date badges in `Block.php`, `block.blade.php`, and `block.json`. Ratio class added. Content check added.\r\n\r\n- **Card Component Enhancements:**\r\n  - Added support for date arrays and date badges in `Card.php` and `card.json`. Added `has-datebadge` class.\r\n  - Updated date and date badge components in `components/date.blade.php` and `components/datebadge.blade.php` to handle date arrays.\r\n\r\n- **Date Component Overhaul:**\r\n  - Completely refactored the `Date` component (`Date.php`, `date.blade.php`) for improved date handling, formatting, and time since/until calculations. Introduced `DateFormatter`, `TimeSinceFormatter`, and `DateConfig` classes for better organization and maintainability. Added error handling for invalid dates. Supports `nowLabel`, `timeNowCap`, and date format setting.\r\n  - Added `DateConfig.php` to handle date formatting configuration.\r\n  - Added `DateFormatter.php` to handle localized date formatting.\r\n  - Added `TimeSinceFormatter.php` to handle time since calculations.\r\n\r\n- **News Item Component Enhancements:**\r\n  - Added support for date arrays in `NewsItem.php` and `newsItem.json`. Added standing class.\r\n  - Updated date partial in `partials/date.blade.php` to handle date arrays.\r\n\r\n- **Type Hinting Error Handling:** Improved error handling for type hinting issues in `Register.php`, excluding `lang` from the check.\r\n\r\n### Algolia Index (3.2.1)\r\n\r\n- A patch has been implemented to correctly remove content in `<style>` and `<script>` tags from indexed content.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.0.2",
+            "publishedAt": "2025-02-10T12:25:35Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.0.0",
+            "version": "5.0.0",
+            "body": "## Municipio Theme (5.121.1)\r\n- Protected pages: With usergroups; protected pages has been more important. Private pages will now give a 401 response and show a loginform if the user are logged out. If the private page cannot match to the currently logged in users group, a 403 header will be sent.\r\n- Fix Undefined Variables: Resolved an issue with undefined news item variables to prevent errors in rendering.\r\n- Customizable Mega Menu Subitems: Added options to style subitems in the mega menu as buttons for greater customization.\r\n- Term Icon Enhancements: Introduced a getTermIcon method in PostObject and improved decorators for term icon retrieval and caching.\r\n- Improved Block Rendering in Excerpt: Fixed block content rendering in post excerpts for better content presentation.\r\n- User Group Management: Added CRUD functionality for User Groups on the main site, integrating taxonomy-based user groups.\r\n- PostObject Icon Features: Enabled PostObject::getIcon() to resolve icons from terms, other blogs, and redirected posts.\r\n- SEO Enhancements for Permalinks: Updated permalink handling to support redirection and SEO optimizations across blogs.\r\n- Enhanced Modal Search and UI Update: Improved modal search stacking and optimized UI elements such as user coloring and sticky meta boxes.\r\n- Nonce Verification for Security: Implemented nonce verification helper class, ensuring secure updates.\r\n- Refactored Term and Post Icon Helpers: Introduced a Term helper class to replace static calls and improve maintainability.\r\n- Sticky Posts for Public Post Types: Added sticky post functionality for all post types.\r\n- Support for Multisite Settings: Enabled cross site setting fetching from the main site.\r\n- Code Cleanup and Linting: Updated material icons, refactored static caches, and applied linting for better performance and maintainability.\r\n- Toast Notifications: Introduced toast notifications for enhanced user interaction and feedback.\r\n\r\n## Modularity (6.64.1)\r\n- User Group Protection for Private Pages: Introduced robust private page functionality where logged-out users see a login form (401 response), and logged-in users without the correct group access receive a 403 error.\r\n- Sticky Posts Feature: Added support for sticky posts in the post module, allowing prioritized content display.\r\n- Custom Meta Key Sorting: Enabled manual input of custom meta keys for sorting private posts, providing more control over content organization.\r\n- Image Selection Interface Update: Upgraded the post module to use an image selection interface instead of radio buttons, improving usability and aesthetics.\r\n- Modules Missing Content: Enhanced handling for modules previously missing content, ensuring they are now fully supported.\r\n- User Group-Specific Modules: Introduced the ability to create modules restricted to specific user groups, enabling tailored content delivery.\r\n- Post Icon Refactor: Improved term icon handling by replacing termIcon with PostObject::getIcon() in post module templates, streamlining icon retrieval and caching.\r\n- Private Post Enhancements: Added support for private posts with improved sorting and better visibility management through custom meta keys.\r\n- Mega Menu Customization: Expanded customization options for mega menu subitems, allowing them to be styled as buttons for a more dynamic appearance.\r\n- Post Permalink Refactor: Enhanced the permalink generation by using the PostObject methods, ensuring consistency and improved management.\r\n- Slider Links Fix: Resolved an issue where invalid or hidden links were being displayed, ensuring only valid and visible links are rendered.\r\n\r\n## Broken Links (4.2.7)\r\n- Asset Enqueues: Improvement in how to determine if a asset should be enqueued or not.\r\n\r\n## Algolia Index (3.2.0)\r\n- Alt text: Algolia index now sends image alt-texts to index, in order to render images properly according to accessability guidelines.\r\n\r\n## Customer Feedback (4.0.11)\r\n- Bug fix: Fixes a bug that prevented Nested Pages plugin to sucessfully creating a new page in list view.\r\n\r\n## Modularity Like (2.13.1)\r\n- Tooltip Functionality: Added tooltips to enhance the user experience by providing additional context or information on hover.\r\n- Improved Compact Padding: Adjusted padding for compact layouts to ensure consistent spacing and alignment.\r\n\r\n## Component Library (4.47.0)\r\n- Dismissable Notices: Introduced support for dismissable notices, allowing users to close informational messages for a cleaner interface.\r\n- Toast Notifications: Added a toast notification component, enabling dynamic, non-intrusive alerts for improved user feedback.\r\n- Drawer Slot Support: Enhanced the drawer component by adding a slot for custom content, increasing its flexibility and usability.\r\n- Mega Menu Child Styling: Introduced new styles for mega menu child items, improving visual hierarchy and usability.\r\n- Signature Modifier for Missing Avatars: Added a signature modifier for use cases where no avatar is present, maintaining a consistent design.\r\n- Date Parsing Improvement: Dates are now processed more efficiently, ensuring greater accuracy when handling date strings.\r\n\r\n## Styleguide (0.11.1215)\r\n- Dismissable Notices: Added support for dismissable notices, allowing users to close informational messages dynamically for a cleaner user experience.\r\n- Toast Notifications: Introduced toast notification functionality, enabling dynamic, non-intrusive alerts for user feedback.\r\n- Brand Image Loading Optimization: Updated brand image handling to load the image before calculating its width, improving performance and visual consistency.\r\n\r\n## Open Street Map (2.7.2)\r\n- Pin Rendering: Fixes some minor bugs in pin rendering.\r\n- Update Post API: Updates to utilize the new PostObject api from Municipio.\r\n\r\n## Other Notes\r\n- The Ad Active Directory Integration plugin is planned to be deprecated shortly in favour for MiniOrange IdP integration plugin.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.0.0",
+            "publishedAt": "2025-01-28T12:47:26Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.9.4",
+            "version": "4.9.4",
+            "body": "## Municipio (v5.78.4)\r\n\r\n- Improved cache handling by clearing the applicator cache, ensuring smoother performance.\r\n- Updated the login page with enhanced styling for better user experience.\r\n- Added a new margin setting for flexible menu items, allowing for greater customization.\r\n- Introduced a site banner sidebar area to improve flexibility to place warnings, etc., above the header of the page.\r\n- Enhanced the `PdfArchiveEndpoint` with date filtering arguments for better data management.\r\n- Replaced deprecated ACF extended hidden fields with standard fields for more reliable functionality.\r\n- Resolved issues with deprecated tags to align with updated standards.\r\n\r\n## Component Library (v4.34.9)\r\n\r\n- Fixed an issue with the news item image to ensure proper display and alignment.\r\n- Added a container to news items for improved layout structure and consistency.\r\n\r\n## Styleguide (v0.11.1188)\r\n\r\n- Fixed an issue with the news item container for better layout and consistency.\r\n- Added specific rules for compact mode, ensuring proper display of icons and content.\r\n- Adjusted grid layout in the modal documentation for improved clarity.\r\n- Removed outdated and broken documentation to keep resources accurate and up-to-date.\r\n- Introduced the ability to trigger reindex modals via event listeners for better user interaction.\r\n\r\n## Broken Links (v4.2.2)\r\n\r\n- Fixed several issues related to the link updater, including caching of affected posts and retrieving real links.\r\n- Improved configuration functions and translations, alongside adjustments for better consistency.\r\n- Added a JavaScript event dispatch feature for client classification.\r\n- Introduced the ability to get the relative path of the plugin from the plugins directory.\r\n- Enhanced support by suggesting the Component Library if it\u2019s not present.\r\n- Added modal functionality to notify the user in a more expressive way, giving administrators the ability to guide the user to resolve a protected domain.\r\n\r\n## Modularity (v6.47.7)\r\n\r\n- Fixed issues with the post status check and disabled cache where applicable.\r\n- Resolved an incorrect permalink issue for posts on remote sites (`mod-posts`).\r\n- Improved post count handling in `mod-posts` to ensure accurate data.\r\n- Added a new search feature above cards for improved usability.\r\n- Introduced a new markdown module for enhanced content formatting.\r\n- Removed unused sort options in `mod-posts` to streamline the module.\r\n\r\n## Modularity Like (v2.9.0)\r\n\r\n- Removed a commented-out file to clean up the codebase.\r\n- Introduced new features related to appearances for better customization and styling options.\r\n- Added a list feature to enhance content display and organization.\r\n\r\n## Other\r\n\r\n- The error page when a critical error occurs has been updated to render a more visually appealing interface.\r\n- The deployment process has been adjusted to correctly include catalogues named \"conf\".",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.9.4",
+            "publishedAt": "2024-12-09T13:11:04Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.9.3",
+            "version": "4.9.3",
+            "body": "### Version 4.9.3 of Municipio\r\n\r\nVersion 4.9.3 of Municipio includes some fixes for issues in previous releases. This also reverts the functionality for post rendering with a common interface, due to some issues.\r\n\r\n---\r\n\r\n### Municipio (v5.75.1)\r\n\r\n- Some patches have been made to the customizer applicator to further improve its efficiency and cache handling.\r\n- The ability to set a color for the background of the login/logout alternative has been added.\r\n- Resolves a typing error in the `has_blocks` functionality to check for blocks on a page.\r\n- Postpones the `postRendering` functionality to the future due to a reprioritization.\r\n- A click outside the language menu will now close it.\r\n- Improved support for the \"Page for Post Type\" plugin when using templates on pages.\r\n\r\n---\r\n\r\n### Component Library (v4.34.7)\r\n\r\n- The brand component now automatically renders in the most optimal width (500px fixed value recalculates).\r\n- Minor adjustments in the handling of array values as modifiers on components have been implemented.\r\n- Adjustment to the image handling in cards to prevent possible fatal errors when passing an empty array as an image.\r\n- Updated the mega-menu to use common functionality to trigger menu expansion.\r\n\r\n---\r\n\r\n### Styleguide (v0.11.1188)\r\n\r\n- Introduced a new JavaScript functionality to retrieve the size of a `div` and append it to the styles tag to fill context knowledge gaps in CSS.\r\n- Fixes misaligned date badges on cards.\r\n- Simplifications for drawer colors and general color fixes.\r\n- Added styling for menu separators.\r\n\r\n---\r\n\r\n### Broken Links (v4.1.0)\r\n\r\n- The feature that automatically fixes links to a post when a permalink is updated has been disabled due to a bug.\r\n\r\n---\r\n\r\n### Modularity (v6.46.12)\r\n\r\n- Postpones the `postRendering` functionality to the future due to a reprioritization.\r\n- Minor patches to various functionalities of the plugin regarding cache and graphical details.\r\n- When rendering a block on the page, the `hasModule` function will now detect it as a rendered module (enables script enqueue).\r\n- An adjustment has been made to the check for pagination in the post module.\r\n\r\n---\r\n\r\n### Customer Feedback (v4.0.10)\r\n\r\n- Customer feedback no longer checks if the post contains any readable content. This is due to the increased use of modules and blocks to render content.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.9.3",
+            "publishedAt": "2024-12-02T13:19:31Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.8.2",
+            "version": "4.8.2",
+            "body": "Version 4.8.2 of Municipio includes some minor patches to various functionalities and introduces a third-party plugin for IdP authentication.\r\n\r\n#### Municipio Theme (v5.51.6)\r\n- Fixes an error that displayed a 404 page when an archive was missing posts for site visitors.\r\n- Adds fields to the user profile that match available options in the contact module.\r\n- Minor adjustment to category display in projects.\r\n- Fixes a GUID error when fetching cross-site posts.\r\n- The flexible header now correctly displays the desktop options for mobile devices if a mobile alternative is missing.\r\n- Fixes some context issues in the hero area.\r\n\r\n#### Component Library (v4.29.0)\r\n- Adjustment to the logotype alignment in the brand component for small devices.\r\n- Fix for the LinkedIn icon to appear in hosting environments that are case-sensitive.\r\n- Introduction of a new component representing a generic DOM element.\r\n- Added a new state to the button component, \u201cis-working,\u201d that displays a spinner.\r\n\r\n#### Modularity (v6.40.2)\r\n- Contact module updated to align with new fields in the user panel provided by Municipio Theme.\r\n- Corrected an issue with the context parameter in the slider module.\r\n- Implemented a fix for data filtering in the posts module.\r\n\r\n#### Mini Orange \u2013 SAML Single Signon (v5.1.9)\r\n- Added a new third-party plugin. The plugin has passed a security review and can be used to connect WordPress user login and management to various IdP providers (e.g., Active Directory).",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.2",
+            "publishedAt": "2024-10-30T14:04:49Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.8.1",
+            "version": "4.8.1",
+            "body": "## Version 4.8.1 of Municipio\r\n\r\nVersion 4.8.1 of Municipio includes some patches for the latest release, addressing minor issues.\r\n\r\n### Municipio Theme (v5.49.1)\r\n- A fatal error related to cross-network permalink functionality has been resolved.\r\n- The menu system has been patched to render child pages for post-type mapped pages.\r\n- A fix for the `archiveCamelCase` functionality has been added ([Credit: Michael Claesson @ Consid](https://github.com/helsingborg-stad/Municipio/pull/1082)).\r\n- A new feature to disable discussion (including existing comments) has been added.\r\n\r\n### Component Library (v4.27.6)\r\n- The image component now includes a parameter to disable automatic aspect ratio calculation, allowing the wrapping component to apply its own aspect ratio if needed.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.1",
+            "publishedAt": "2024-10-22T09:10:29Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.8.0",
+            "version": "4.8.0",
+            "body": "## Version 4.8.0 of Municipio\r\n\r\nVersion 4.8.0 of Municipio introduces significant updates to the menu system, which has been completely refactored under the hood.\r\n\r\n### Municipio Theme (v5.48.3)\r\n\r\n- Completely refactors the menu system to support multiple menus in a single location, creating a more flexible menu system. This renders in a smarter, more efficient way. This release adds support for:\r\n  - Multiple menus per menu location (enabled in drawer menu).\r\n  - Mixed menu mode: Define menu items and let the fallback page tree render the rest of the menu.\r\n  \r\n- A patch has been applied to the Customizer\u2019s Design Share feature to prevent rendering an empty panel without an explanation. The `DISABLE_DESIGNSHARE` constant has been replaced and now exclusively responds to the \u201cpublished\u201d blog option.\r\n\r\n- Images lacking a cover parameter will automatically resolve their aspect ratio to avoid overlapping with any content. This will be resolved either by the requested size (if width and height are given) or from the URL (via the size string, e.g., `100x100` will equal to `aspect-ratio: 100/100`).\r\n\r\n- The `IntlDateFormatter` will now handle UTC offset strings and make them IANA compatible to parse dates correctly.\r\n\r\n- A small fix for stripping timestamps from dates in the job schema type has been added.\r\n\r\n### Modularity (v6.38.0)\r\n\r\n- The contact module now uses the new `data-tooltip` to display numbers and email addresses in a readable format.\r\n\r\n- A feature has been added to enable cross-network queries in the Posts module.\r\n\r\n- A fix for event dates has been added to the Posts module, now correctly displaying the start date as the published date.\r\n\r\n- The edit modules link now appears correctly in the Gutenberg editor.\r\n\r\n- Users can now select a custom icon for each item in the manual input module.\r\n\r\n- The menu module now supports the new version of menu outputs.\r\n\r\n### Styleguide (v0.11.1152)\r\n\r\n- A `data-tooltip` may now be added to any element to display a tooltip with the value of the data parameter.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.0",
+            "publishedAt": "2024-10-21T13:49:10Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.7.1",
+            "version": "4.7.1",
+            "body": "This release focuses on bugfixes and patches. It also brings a few new features to the image system, to better handle large assets. An experimental feature for displaying known accessibility issues to editors is also introduced. A new search field option for expandable search has been added to the flexible header.\r\n\r\n### Component Library (v4.27.0):\r\n\r\n- A fix for the hero two-column layout has been implemented, forcing the image dimensions to 16/9 format.\r\n- The `aria-controls` attribute has been modified to correct an issue with accessibility in menu toggling.\r\n- Implemented `[data-a11y-error]` feature on images that are missing alt-text.\r\n- The card component now intelligently decides if an image should be displayed or not.\r\n\r\n### Modularity (v6.33.3):\r\n\r\n- The Contacts module has been reworked to simplify the module and prepare for the implementation of a component. This change reworks the user interface to be more clear. It also reduces the number of options for the editor by removing social media links (not a very popular feature) and the option to display the items as a list.\r\n- A max image size check has been added to the image conversion process to prevent images from being resized if they are too large. Images that are too large will be served from source and logged to the error log.\r\n\r\n### Municipio Theme (v5.40.5):\r\n\r\n- A new expandable search form for the flexible header has been contributed by [Adam Alexandersson](https://github.com/considadam) @ Consid, financed by [Alings\u00e5s Municipality](https://github.com/Alingsas-Kommun).  \r\n  ![Search Image](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/search-900x142.webp)\r\n- Implementation of a limit to prevent abnormally large images from being uploaded to the media library. This will make the frontend image process more efficient and prevent image conversion stalls.\r\n- Implement support for the `[data-a11y-error]` attribute. This will display a red warning label on elements that are considered to void common accessibility errors.  \r\n  ![Alt Text Warning](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/alt-text-warning-900x963.webp)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.7.1",
+            "publishedAt": "2024-10-18T10:10:53Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "V4.7.0",
+            "version": "4.7.0",
+            "body": "# Release Notes\r\n\r\nThis release addresses several issues with the new image rendering methods and includes general bug fixes.\r\n\r\n## Styleguide (v0.11.1149)\r\n- Various fixes for image rendering within segment components.\r\n\r\n## Component Library (v4.26.20)\r\n- The Image component now handles SVGs as a non-resizable format, effectively disabling container query rendering for this file type.\r\n- Improved placeholder handling, supporting multiple input formats (e.g., string, contract).\r\n\r\n## Modularity (v6.32.7)\r\n- Several improvements to image handling.\r\n- The Manual Input module now more intelligently determines when to display placeholders in card and segment views.\r\n- Images in collections are no longer rendered at a single size.\r\n\r\n## Modularity Sections (v3.1.3)\r\n- Enhanced image and placeholder handling.\r\n- Sections no longer require an image for rendering; placeholders will be shown instead.\r\n\r\n## Municipio Theme (v5.36.16)\r\n- Fixed synchronization of taxonomies for remote schema content.\r\n- Added Swedish translations to list columns in public archive views.\r\n- If API resources are undefined, the resource list will now appear empty.\r\n- Improved emblem rendering in placeholders by switching to the icon component, removing the need to detect if an emblem should be injected as an image source.\r\n- The intermediate image handler now checks for file existence before processing.\r\n- The intermediate image handler detects when GD is used and disables the automatic format conversion (default: WebP). Images will still be resized, but the source format will be retained.\r\n- Disabled container query images to resolve a rendering issue that caused images to overlap with other content.\r\n\r\n## Multisite Role Propagation (v3.0.6)\r\n- Fixed a fatal error in PHP 8.3 environments.\r\n\r\n## Event Manager Integration (v2.0.22)\r\n- Now uses the updated version of the Hbg-React library.\r\n\r\n## Tools\r\n### WpService (v2.0.4)\r\n- Updated WpService for plugins and themes to include all available public methods from WordPress core.\r\n- The required PHP version has been raised to 8.2 to support these updates.\r\n\r\n### Hbg React (v1.0.21)\r\n- A new release has been made. This publishes a usability fix for arrows in the pagination component.\r\n\r\n## Important Notice\r\n- The minimum PHP requirement for Municipio has been raised from 8.1 to 8.2 with this release.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.7.0",
+            "publishedAt": "2024-10-11T12:31:53Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "v4.6.0",
+            "version": "4.6.0",
+            "body": "Municipio 4.6.0\r\n===============\r\n\r\nWith this release, we focus on further implementing the ImageInterface on more components giving the Posts and manual input the new image feature.\r\n\r\n**Component Library (4.25.2):**\r\n\r\n*   Update the card api to cleanup and simplify the capabilities of the component. Allow ImageInterface to be provided as an image source.\r\n*   Remove some obsolete parameters from the block component.\r\n*   If an empty srcset is provided to the image component, it is removed from the output.\r\n\r\n**Modularity (6.32.0):**\r\n\r\n*   Implements the Image Interface in the posts & manual input modules.\r\n\r\n**Municipio Theme (5.34.0):**\r\n\r\n*   The prepare post functionality now adds a ImageContract item in the return object. This is implemented in the archive lists, making archives more flexible.\r\n*   Images that are added to the media library during a sync from an external source are now hidden to prevent manipulation of images that should only be used by the synced posts.\r\n\r\n**Styleguide (0.11.1133):**\u00a0\r\n\r\n*   Updates of styles for the card component.\r\n\r\n**Event manager integration (2.0.18):**\u00a0\r\n\r\n*   *   The react component displaying event items, has been updated to reflect the changes made in the card component.\r\n\r\nDeprecations\r\n------------\r\n\r\nThis release deprecates the following plugins ( removed from composer.json ). If you still want them to be avabile, please add them in composer.local.json.\r\n\r\n*   \u201dhelsingborg-stad/api-project-manager-integration\u201d: \u201d~2.0.3\u201d,",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.6.0",
+            "publishedAt": "2024-10-03T07:03:36Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.5.3",
+            "version": "4.5.3",
+            "body": "### Municipio Theme (5.32.5)\r\n* Minor changes to fix inconsistencies in project templates.\r\n\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.3",
+            "publishedAt": "2024-10-01T11:01:30Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.5.2",
+            "version": "4.5.2",
+            "body": "With this release, we focus on further implementing the ImageInterface on more components. We are also releasing a InnovationProject view, in order to display innovation project schemadata as archive items and single views.\r\n\r\n### Component Library (4.24.2)\r\n\r\n* Update the slider Item api in order to simplify it, and remove some old logic that isen\u2019t used anymore.\r\nModularity (6.30.0):\r\n* Implements the Image Interface in the slider module.\r\n\r\n### Municipio Theme (5.32.0)\r\n\r\n* Update the Schools view to fully support the new slider item api.\r\n* Add support for schema type \u201dProject\u201d.\r\n* Multiple minor additions to the behavior of ExternalContent that enables cleanup of unused content and images.\r\n* Add option \u201dSchema\u201d as a way to display a post types archive in the Customizer. This will use the specific Schema types archive presentation if one is available.\r\n\r\n### Styleguide (0.11.1130)\r\n\r\n* Minor adjustments to implement the slider item images.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.5.1...4.5.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.2",
+            "publishedAt": "2024-10-01T08:33:27Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.5.1",
+            "version": "4.5.1",
+            "body": "With this release, we focus on enhancing image handling across the board. From preventing errors in small images to streamlining the image component interface. We\u2019re also introducing better support for container-aware images in both modularity and content, ensuring a more optimized and responsive experience.\r\n\r\n### Component Library (4.23.9)\r\n\r\n- A fatal error in the `ImageInterface` where images too small for size variants would cause a crash. These images will now be handled gracefully.\r\n- All section variants now use the image component to display images consistently, with automatic sizes.\r\n- The image component\u2019s interface has been simplified, removing all modal support. Parameters have been streamlined for better coherence.\r\n\r\n### Modularity (6.29.0)\r\n\r\n- Video functionality in the header module now requires a poster image to ensure proper display.\r\n- The \"Manual Input\" module now leverages the `ImageInterface` to fetch images for the Segment view.\r\n\r\n### Modularity Sections (3.1.2)\r\n\r\n- All section/segment variants now implement the `ImageInterface` to make use of container-aware source sets when rendering images.\r\n\r\n### Municipio Theme (5.28.0)\r\n\r\n- Fixes applied to handle remote content correctly.\r\n- Images within content are now detected and converted to an image contract if they exist in the database. This ensures support for container query images in content.\r\n\r\n### Styleguide (0.11.1125)\r\n\r\n- Improvements in the image component, supporting the changed set of parameters in the component.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.1",
+            "publishedAt": "2024-09-27T09:26:12Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.5.0",
+            "version": "4.5.0",
+            "body": "Municipio 4.5.0 continues to optimize page size, with this release focusing on supporting source set like functionality. We\u2019re starting with a minimal implementation, gradually adding more modules over time. This incremental approach ensures minimal impact on website backend performance with each update.\r\n\r\n## Whats Changed\r\n\r\nStyleguide (0.11.1118): \r\n-Adjustments to ensure that the image component can behave like background images, with support for cover and object-fit properties.\r\n\r\nMunicipio (5.25.4): \r\n- Minor modifications to the image conversion process, allowing compatibility with conversions and resizing from other add-ons.\r\n- Patches on external content features regarding handling of terms and diff checking with checksums locally.\r\n\r\nModularity (6.28.1):\r\n- Implementation of image resolution functions required by the component library to handle source set requests effectively.\r\n\r\nComponent library (4.21.2):\r\n- Introduction of an image contract object, automatically detected and processed by the image component.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.0",
+            "publishedAt": "2024-09-24T08:18:54Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.4.2",
+            "version": "4.4.2",
+            "body": "## What's Changed\r\n### Municipio Theme (5.23.1)\r\n* Fixing a bug where the primary menu was visible for mobile devices.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.1...4.4.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.2",
+            "publishedAt": "2024-09-19T08:49:57Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.4.1",
+            "version": "4.4.1",
+            "body": "## What's Changed\r\n\r\n### Municipio Theme (5.21.1)\r\n* Fix issue with posts using Place as Schema type not getting Schema data populated as part of the post object.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.0...4.4.1",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.1",
+            "publishedAt": "2024-09-18T09:36:27Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.4.0",
+            "version": "4.4.0",
+            "body": "We are excited to announce the release of Version 4.4.0, which is mainly focused at the new External Content in the Municipio Theme. The External Content feature was made possible by the introduction of the previous release of Schema Data feature and brings the ability to create content from external sources that contains or responds with objects that adhere to the Schema.org standard.\r\n\r\n## Municipio Theme (5.21.0):\r\n\r\n* External Content: Allows creating content from either a Typesense API or local json file to create posts, taxonomies and terms from Schema.org formatted objects. This aims at making the Municipio theme responsible for syncing remote content to the local WordPress installation instead of implementing a number of similar content sync plugins to solve individual cases.\r\n* Error handling when image does not exist for recent released WebP image optimization.\r\n* Fixing first level only navigations not working as intended.\r\n* Changing Flexible header search button appearance.\r\n\r\n## Modularity (6.26.0): \r\n\r\n* Added more settings for the Search module.\r\n* Animations and effects for the Menu module.\r\n\r\n## Modularity Open Street Map (2.5.1):\r\n\r\n* Comply with Municipio Theme 5.21.0 changes to the fields storing information about what Schema Type is to be used by which post type.\r\n\r\n## AlgoliaIndex Js Searchpage Addon (3.2.2): \r\n\r\n* A smaller patch to correctly build the plugin assets has been implemented.\r\n* Lightweight library corrected and implemented.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.2.7...4.4.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.0",
+            "publishedAt": "2024-09-18T08:30:17Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Maintenance version 4.2.7",
+            "version": "4.2.7",
+            "body": "### Modularity (6.23.17)\r\n\r\n- Further improvements to Modularity UI regarding module lists.\r\n- **New Module: Audio**. Adds the ability to display a simple audio player.\r\n\r\n### Municipio Theme (5.15.10)\r\n\r\n- Prevents crash of page if a template that doesn't exist is defined in the database template field. Now gracefully falls back to \"page\" as a last resort.\r\n- Multiple minor patches to the flexible header.\r\n\r\n### Component Library (4.20.3)\r\n\r\n- Signature component no longer requires a published timestamp in order to display the last updated timestamp.\r\n- Comments component now correctly shows when the comment was made.\r\n\r\n### Modularity Form Builder (3.2.3)\r\n\r\n- Mitigations of errors when files are submitted with a form response.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.7",
+            "publishedAt": "2024-09-09T12:59:48Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Municipio 4.2.6 Release Notes",
+            "version": "4.2.6",
+            "body": "We\u2019re excited to introduce **Municipio 4.2.6**! This update enhances the user interface, resolves several bugs, and adds a brand-new module for an even better experience.\r\n\r\n## Styleguide (0.11.1106)\r\n\r\n- Allows selecting multiple instances of the same filter type.\r\n- Resolves a bug that made the user unable to expand compressed tags.\r\n\r\n## Component Library (4.19.1)\r\n\r\n- Adds the ability to truncate items in the breadcrumb component.\r\n- Forces dot icons on tags to be filled, not respecting icon style settings (improved visibility).\r\n- Fixed a bug in acceptance that prevented some JavaScripts from running.\r\n\r\n## Modularity (6.22.4)\r\n\r\n- Fixes the warning in the absence of a `classlist` provided for the breadcrumb component.\r\n- Introduced a new module for rendering menus (`Menu`, `mod-menu`).\r\n- Fixed broken icons in the editor, now being displayed properly with an improved UI and a more coherent interface.\r\n\r\n## Municipio (5.15.1)\r\n\r\n- Implements customizer capability to set the breadcrumb max length for labels before being truncated.\r\n- Adjustments made for flexible header alternative.\r\n- Fixes an issue that caused active menu items not being marked as active in manually entered menus.\r\n\r\n## Open Street Map (2.5.0)\r\n\r\n- The public filter now allows users to refine a hierarchical set of options.\r\n\r\n## Contact Banner (3.2.0)\r\n\r\n- Allows the user to select from a dropdown populated with icon alternatives rather than inputting a string representing a material icon.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.6",
+            "publishedAt": "2024-09-02T10:25:19Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Municipio 4.2.4 Release Notes",
+            "version": "4.2.4",
+            "body": "We are excited to announce the release of **Municipio 4.2.4**. This update has been rigorously tested for full compatibility with **PHP 8.3**, which we now recommend as the preferred PHP version for Municipio.\r\n\r\nBy upgrading to PHP 8.3 from the previously recommended PHP 8.2, you can experience up to a **40% faster page load time** when the object cache is primed.\r\n\r\n## General\r\n\r\n- The devcontainer now runs PHP 8.3, reflecting modern hosting environments and new default requirements for Municipio (we are still backwards compatible with PHP 8.2).\r\n\r\n## Municipio Theme (5.11.3)\r\n\r\n- **Related posts functionality** is now simplified. It only searches within the current post type and includes a `rand` in the query to generate more diverse results.\r\n- **View transitions** are now implemented by default. We intend to further explore this feature in the coming months to enhance the user experience.\r\n- **New header type: Flexible**. This header aims to replace the old \"Business\" and \"Casual\" headers by providing a drag-and-drop interface to build your own header layout.\r\n- **Bug fix:** Resolved an issue where post content was displayed on draft or private pages, even if the header response was sent as a 404.\r\n- **Resolved:** An issue where Kirki CSS rendering would stop functioning after applying new settings.\r\n\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.4",
+            "publishedAt": "2024-08-23T11:10:12Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.2.3",
+            "version": "4.2.3",
+            "body": "**Municipio Theme (5.8.11):**\r\n\r\n- Changes the filter to apply a default value of the icon type, to be able to explicitly set a overriding value locally where components are used.\r\n- Enqueues instantpage.js later on, so that the document has been fully loaded before init. This will enshure that instant page can work properly.\r\n- A fix has been made, to enable users to disable \"posts\" in the Theme Options.\r\n- Get related posts only runs on place templates. This may be changed in the future, when more types support this feature.\r\n\r\n**Component library(4.15.1):**\r\n\r\n- Adds support of default fill mode in the icon component.\r\n\r\n**Modaularity (6.19.0):**\r\n\r\n- Resolves an issue with like functionality for visit sites (main menu counter)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.3",
+            "publishedAt": "2024-08-19T09:55:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.2.2",
+            "version": "4.2.2",
+            "body": "We\u2019re excited to announce the release of Municipio 4.2.1, which focuses on addressing key bugs and improving performance. Below are the highlights of this update:\r\n\r\nMunicipio Theme (5.8.6):\r\n- Icon Translation Optimization: Improved the efficiency of icon translation handling.\r\n- Navigation Class Enhancement: Optimized the navigation class to retrieve pre-processed objects directly from the runtime cache, enhancing performance.\r\n- Upgrade: Introduced a script that clears all oEmbed caches due to updates in the HTML output for icons.\r\n- Customizer Fix: Resolved an issue where changes made in the Customizer were not reflected on the frontend.\r\n- Body Class Correction: Fixed a bug where the body class was not correctly applied across all templates.\r\n- Schema Object Handler: Addressed a warning issue in the schema object handler.\r\n\r\nOpen Street Map (2.3.7):\r\n- Corrected an issue where pins were not displaying correctly in the map component.\r\n\r\nStyleguide (0.11.1088):\r\n- Hero Component: The Hero component now respects the \"Reduce Motion\" accessibility preference.\r\n- Grid Objects Fix: Resolved an issue where grid objects were not respecting gutter sizes on smaller devices.\r\n\r\nModularity Like posts (2.6.0):\r\n- The \"heart\" symbol is now compatible with the default \"filled\" icons in municipio.\r\n\r\nDeployment:\u00a0\r\n- The deployment script now includes functionality to send a ping to New Relic and Sentry after each deployment.\r\n\r\nOther:\u00a0\r\n- The sentry plugin has now been removed from the deploy due to bad performance.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.2",
+            "publishedAt": "2024-08-15T13:23:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.2.1",
+            "version": "4.2.1",
+            "body": "* **Component Library (4.14.6):** [resolve issues where some data attributes where NaN or incorrectly handled.](https://github.com/helsingborg-stad/component-library/commit/82980f831fe490677d41a568733d80b7012bb893)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.1",
+            "publishedAt": "2024-08-13T10:09:31Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.2.0",
+            "version": "4.2.0",
+            "body": "This update is primarily focused on simplifying the implementation of schema data configuration an presentation.\r\n\r\n* **Municipio Theme (5.8.0):** Add feature for assigning schema type for post types as well as populating posts with values matching the selected schema type. Remove Content Type feature in favor of the new functionality available in schema types.\r\n* **Modularity Open Street Map (2.3.6):** Adapt to use Schema Type from Municipio instead of Content Type.\r\n*  **Component Library (4.14.5):** Fix issue with \"0\" as a string not being allowed to pass as value to attributeList property on components.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.0",
+            "publishedAt": "2024-08-13T06:26:05Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.1.2",
+            "version": "4.1.2",
+            "body": "A new maintenance release addresses issues caused by optimization actions in the previous release. This update includes the following corrections and improvements.\r\n\r\n**Municipio Theme (5.7.1):**\r\n\r\n- Customizer: Fixed an issue where dynamic theme settings were not properly loading in the customizer. This ensures that imported settings from the design library are correctly applied in the customizer context.\r\n- Favicons: Removes the custom favicon implementation, and migrates it to be done natively in WordPress using the \"site identity\" section in the customizer.\r\n- Icons: A optimization on the icon rendering has been made. This reduces the size of the material icons bundle up to 85%. This change also brings settings for choosing font style and weight.\r\n- General: Minor adjustments to correct an issue where the width settings were not being applied.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.2",
+            "publishedAt": "2024-08-12T09:51:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.1.0",
+            "version": "4.1.0",
+            "body": "Introducing Version 4.1.0! This update is designed to optimize performance for frontend tasks, offering significant improvements. It includes several fixes aimed at boosting site performance in both cached and uncached environments. Expect up to a 60% reduction in Time to First Byte (TTFB) on large sites, even when object caching is not enabled.\r\n\r\n- Municipio (5.5.2): Upgraded to statically render Applicators (generated css, component data and modifiers) reducing rendering time and unnecessary workloads. This change also enhances security by eliminating the use of eval for calculating conditionals.\r\n- Modularity (6.19.0): Multiple queries used to detect a page\u2019s available modules have been optimized to run more efficiently by reducing the amount of data searched in.\r\n- Open Street Map (2.2.2)*: The plugin has been completely rewritten to offload the initial request size using asynchronous data fetching.\r\n- Like posts (2.5.0)*: The functionality for determining where the liked posts list appears has been updated to execute only during the save_post action. This change reduces runtime calculations on the frontend, improving overall performance.\r\n- Items marked with (*) are breaking changes. These components may have to be configured, in order to work properly.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.0",
+            "publishedAt": "2024-08-05T11:09:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.10",
+            "version": "4.0.10",
+            "body": "## What's changed\r\n* Api Event Manager Integration (2.0.18): Event start dates in archive must return gmt.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.10",
+            "publishedAt": "2024-07-04T10:48:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.9",
+            "version": "4.0.9",
+            "body": "## What's changed\r\n* Municipio (5.0.1): Avoid cache overwrite caused by multiple posts with same ID.\r\n* Api Event Manager Integration (2.0.17): Output event start date as post date in event archives.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.9",
+            "publishedAt": "2024-07-01T10:23:50Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.8",
+            "version": "4.0.8",
+            "body": "## What's changed\r\n* WP Page for Term: Remove plugin because Municipio no longer has support for secondary query.\r\n* Modularity Open Street Map (2.1.3): FIx missing info list on map collection items.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.8",
+            "publishedAt": "2024-06-28T05:26:15Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.7",
+            "version": "4.0.7",
+            "body": "## What's changed\r\n* Municipio (5.0.0): Remove support for secondary query causing performance issues.\r\n* Modularity Open Street Map (2.1.1): Downgrade to play nice with Municipio 5.0.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.7",
+            "publishedAt": "2024-06-27T11:46:58Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.6",
+            "version": "4.0.6",
+            "body": "## What's changed\r\n* Modularity Form Builder (v3.2.2): Fix issue with conditional notifications not being sent.\r\n* Modularity Open Street Map: Pin to exact version (2.0.10) due to incompability with current version of Municipio.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.6",
+            "publishedAt": "2024-06-27T07:29:02Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.5",
+            "version": "4.0.5",
+            "body": "A new week brings an exciting new release! Introducing version 405 \u2013 Method Not Allowed. Here are the key updates in this release:\r\n\r\n## What's Changed\r\n- Municipio (v4.33.2): Improvements regarding the functionality to load themes into posttypes.\r\n- Modularity (v6.18.7): An automatic mode has been added to the language option. This feature automatically detects the language of a module and tags it with the appropriate language attributes based on the detection.\r\n- Event Manager Integration (v2.0.16): A fix has been implemented to list all available tags for events, removing the previous cap of 100 items. Now, all available tags are displayed in the dropdown menu.\r\n- Like posts (v2.4.17): Fixes an issue where the cron job might crash if the settings page has not been saved.\r\n\r\nThis will be the last scheduled release for this term. During the summer, releases may be done, but not according to out weekly schedule.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.5",
+            "publishedAt": "2024-06-10T12:49:49Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.4",
+            "version": "4.0.4",
+            "body": "We are pleased to announce the release of Municipio 4.0.4, which brings a set of changes intended to resolve a set of reported bugs.\r\n\r\n## What's Changed\r\n- Municipio Theme (v4.31.0): The ability to set a complementary colorscheme on any public post type. This feature was requested in order to implement a site-in-site apperance.\r\n- Modularity (v6.16.12): A new CLI command for upgrading database version [wp modularity upgrade]. This action do not run automatically anymore, due to some issues deploying on large high-traffic networks. In short; Multiple sites upgrading at the same time, could temporarily affect load time negatively.\r\n- Modularity (6.16.14): An issue with wp-rest refreshment of modules has been fixed when using page cache engines (nonce validation).\r\n- Modularity (v6.17.0): A correction of the previous migration has been made, to enshure proper migration of inner blocks.\r\n- Modularity (v6.17.2): A issue with saving post type modules has been corrected.\r\n- Modularity (v6.18.0): Information message in admin, when a upgraded database version was found.\r\n- Modularity (v6.19.1): Resolves an issue with modules not being saved to posts due to faulty usage of module-area inheritance (mis-match in module areas on different post types).",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.4",
+            "publishedAt": "2024-06-03T09:47:46Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.2",
+            "version": "4.0.2",
+            "body": "Primarily focuses on bug fixes to improve the stability and performance of our platform. Here are the key issues addressed in this release. \r\n\r\n## What's Changed\r\n\r\n**Breadcrumb Links to Non-existent Pages:** \r\nPreviously, breadcrumb links were generating URLs that led to 404 error pages when the target page did not exist. This issue has been resolved, and such breadcrumb links will no longer be created.\r\n\r\n**\u201dShow Archive\u201d Button Disappearing in the \u201dPosts\u201d Module:** \r\nAn issue was identified where the \u201dShow Archive\u201d button would disappear in the \u201dPosts\u201d module. This problem has now been fixed, ensuring the button remains visible and functional.\r\n\r\n**Conditional Form Fields with Identical Descriptive Text:** \r\nThere was a problem where fields in conditional forms had the same descriptive text, leading to confusion and potential errors. This issue has been corrected, and each field now has unique and accurate descriptive text.\r\n\r\n**Module Sidebar Incompatibility:** \r\nAn issue with the module sidebar compatibility function resulted in modules being unable to be linked to a page. Instead, users were displayed another page ID. This issue has now been resolved, ensuring that modules can be correctly linked to the intended page.\r\n\r\n**Instantpage.js Update:** \r\nThe Instantpage.js library has been updated to support the speculative API, enhancing the performance and speed of page loads.\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.0.1...4.0.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.2",
+            "publishedAt": "2024-05-20T11:56:46Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.1",
+            "version": "4.0.1",
+            "body": "Municipio 4.0.1 Maintanaince release. \r\nThis release focus is to improve some usability conserns raised by DIGG (Swedish Agency for Digital Government). \r\n\r\n## What's Changed\r\n- Icons that are purely decorative wont be read to the user. \r\n- Search result page now has a required h1 tag. \r\n- Field validation is now triggered on key-up event, to enable tabbing to submit buttons. \r\n- A fix for invisible :focus on some elements. \r\n- Language selector now identifies users current language, and changes the label.\r\n- Items in language selector now automatically includes the language of the item, and adds a nofollow reference. \r\n- Search icons now have a visible label\r\n- Fields for describing images are now sourced from the image metadata itself. \r\n- Social media icons added ontop of material icons. \r\n\r\n## What's Changed in deployment repo\r\n* fix: prevent script concatenation by default by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/20\r\n* feat: adding modularity-dynamic-guides plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/21\r\n* docs: update README to align with the 4.0.0 release by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/22\r\n* feat: adding remove user mu plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/23\r\n* fix: add a custom constant to identify devcontainers. by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/24\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.1",
+            "publishedAt": "2024-05-13T13:03:41Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.0",
+            "version": "4.0.0",
+            "body": "## What's Changed\r\n* chore: add redis and phpsab to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/13\r\n* chore: add ssl support to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/15\r\n* refactor: Use FS_METHOD direct in devcontainer by @annalinneajohansson in https://github.com/municipio-se/municipio-deployment/pull/16\r\n* Municipio 4.0.0 - Stable release (290224) by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/18\r\n\r\n## New Contributors\r\n* @annalinneajohansson made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/16\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.7.0...4.0.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.0",
+            "publishedAt": "2024-02-29T08:07:49Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "281123 - Stable Release",
+            "version": "3.7.0",
+            "body": "This update marks the deprecation of the Module Index, transferring legacy data to the newly introduced \"Manual Input\" module. This change is a pivotal step in a series of developments aimed at streamlining the posts module, ultimately phasing out manual input to enhance efficiency and user experience.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.7.0",
+            "publishedAt": "2023-11-28T10:51:00Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "091123 - Stable Release [Maintenance release]",
+            "version": "3.6.0",
+            "body": "**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.5.1...3.6.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.6.0",
+            "publishedAt": "2023-11-09T10:00:33Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "061123 - Stable Release [Maintenance release]",
+            "version": "3.5.1",
+            "body": "### Bug Fixes and Improvements\r\nHeader H1 Removal\r\n\r\nHeader H1 has been removed from the editor to enhance readability.\r\nEmpty Customer Feedback Emails\r\n\r\nCustomer feedback emails will no longer be sent empty if there is no feedback provided.\r\nSlider Start Page Issue\r\n\r\nThe slider now correctly starts from page 1 instead of page 2.\r\nDefault Customizer Colors\r\n\r\nDefault values in the customizer for colors have been reviewed and improved.\r\nPublished Changes\r\n\r\nFixes have been implemented to ensure that published changes are correctly displayed.\r\nSegment Manual Input Button Default Value\r\n\r\nDefault values for the Segment Manual Input button have been adjusted.\r\nHeading Level Issue\r\n\r\nCorrected a problem with heading levels in the content.\r\nManual Input Box Icons\r\n\r\nIcons within the manual input box now function as expected.\r\nManual Input Collection Items\r\n\r\nManual input collection items no longer display p-tags erroneously.\r\nManual Input Segment Button\r\n\r\nThe manual input segment button now appears only when a link is present.\r\nShortcodes in Post Module\r\n\r\nShortcodes are now visible in the post module as intended.\r\nSlider Area on Single Pages\r\n\r\nThe slider area will no longer disappear on single pages when the visit plugin is activated.\r\nConsistent \"Kort\" Manual Input Height\r\n\r\nEnsured a consistent height for \"kort\" manual input.\r\nAmpersand (&Amp) Issue\r\n\r\nAddressed and resolved the ampersand issue for improved rendering.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.5.1",
+            "publishedAt": "2023-11-06T12:49:09Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "231023 - Stable Release",
+            "version": "3.5.0",
+            "body": "## What's Changed\r\n* Fix: Modularity form builder correct version by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/10\r\n* Fix: Latest api-event-manager by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/11\r\n\r\n## New Contributors\r\n* @NiclasNorin made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/10\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.4.2...3.5.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.5.0",
+            "publishedAt": "2023-10-24T08:17:42Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "231003 - Stable Release",
+            "version": "3.4.0",
+            "body": "**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.3.0...3.4.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.4.0",
+            "publishedAt": "2023-10-03T11:51:47Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "230928 -  Stable Release",
+            "version": "3.3.0",
+            "body": "Installer is updated to require stable releases of each plugin. For development purposes, a devcontainer also is embedded into this install. \r\n\r\n## What's Changed\r\n* Created a dependency checker by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/6\r\n* Efficient build  by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/7\r\n* Update versions to latests for helsingborg-stad packages by @Sven65 in https://github.com/municipio-se/municipio-deployment/pull/9\r\n* feat: add devcontainer files by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/8\r\n\r\n## New Contributors\r\n* @sebastianthulin made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/6\r\n* @Sven65 made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/9\r\n* @thorbrink made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/8\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.2.4...3.3.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.3.0",
+            "publishedAt": "2023-09-28T14:09:32Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Maintenance version 3.2.4",
+            "version": "3.2.4",
+            "body": "This release includes an update for litespeed common settings and a real nonce field for the active directory integration, to accomodate the requirement of ESI cache bypassing. \r\n\r\nLitespeed needs to include _ad_nonce as a nonce esi include. ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.4",
+            "publishedAt": "2023-06-29T08:50:04Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "3.2.1",
+            "version": "3.2.1",
+            "body": "This release is a patch, including project manager integration to allow users to build innovation plugins.\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.2.0...3.2.1",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.1",
+            "publishedAt": "2023-06-15T07:24:16Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 3.2.0",
+            "version": "3.2.0",
+            "body": "## Release Notes - 3.2.0\r\n\r\n- Algolia search now supports searching for custom taxonomies/terms.\r\n- Herovideo now supports the \"poster\" attribute.\r\n- Added padding/margin to headers in the post module.\r\n- Improved visibility of the current page in the side navigation.\r\n- Tags are now compressed for optimized performance.\r\n- The heart icon now properly appears above the filtering list.\r\n- OpenStreetMap has undergone accessibility testing.\r\n\r\nBug Fixes:\r\n\r\n- The module now displays an appropriate icon in the module list.\r\n- Modified the message displayed when submitting an email address.\r\n- Empty required fields now validate correctly in general forms.\r\n- Added ListID for proper functionality.\r\n- Improved translation accuracy for the add-on.\r\n- Resolved the issue of oversized sliders on culture websites.\r\n- Enhanced the display of posts in the \"Right Sidebar\" on term pages.\r\n- Added hover effect for improved appearance of quick links row.\r\n- Removed manual input of link in linked card content.\r\n- Randomized the order of sidebar visits on archive pages.\r\n- Updated URL to reflect changes when new states are pushed on the map.\r\n- Removed title translation in place, improving translation.\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.0",
+            "publishedAt": "2023-06-14T08:57:04Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "3.1.0",
+            "version": "3.1.0",
+            "body": "Adds a parameter in the deployment process allowing a custom port number to deploy towards. A new secret must be defined for all deployment flows according to the following: \r\n\r\nDEPLOY_REMOTE_PORT_STAGE (use port 22 if in doubt)\r\nDEPLOY_REMOTE_PORT_PROD (use port 22 if in doubt)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.1.0",
+            "publishedAt": "2023-05-29T11:15:07Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Maintenance version 3.0.1",
+            "version": "3.0.1",
+            "body": "2023-01-05\r\n\r\nGeneral patches of bugs and improvements of usability. Some of the new key features are: \r\n\r\n- Support for dropdown menus in primary menu (Municipio).\r\n- Support for captions in uploaded videos (Modularity).\r\n- Aside tags for all modules in sidebars.\r\n- Better (automatic fetching) cover-art support for vimeo and youtube videos. \r\n- In content-images are now being rendered as a component. \r\n- HTML markup in event pages improved. \r\n- Gallery component improvement. ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.0.1",
+            "publishedAt": "2023-01-05T09:33:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        }
+    ]
+}
