@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T20:26:13+00:00",
-    "count": 12,
+    "generatedAt": "2026-04-27T21:24:35+00:00",
+    "count": 17,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -424,6 +424,56 @@
     ],
     "items": [
         {
+            "title": "Check for multisite support instead of assuming",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/1845",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-03-18T14:17:03Z",
+            "number": 1845,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [
+                {
+                    "login": "thorbrink",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                    "url": "https://github.com/thorbrink",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Fix fatal error when SiteSwitcher is used on single-site WordPress installations",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1846",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
             "title": "Plugins does not use SDK - Replace cURL with Typesense PHP SDK (installed with composer)",
             "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/issues/9",
             "repository": "helsingborg-stad/algolia-index-typesense-provider",
@@ -520,6 +570,56 @@
                     "title": "Use Typesense upsert to avoid 409 conflicts",
                     "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/pull/8",
                     "repository": "helsingborg-stad/algolia-index-typesense-provider"
+                }
+            ]
+        },
+        {
+            "title": "Bugfix index to typesense",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/1814",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-02-26T13:08:22Z",
+            "number": 1814,
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "camitzdennis",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+                    "url": "https://github.com/camitzdennis",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Patch fix for TypeError in algolia-index-typesense-provider",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1815",
+                    "repository": "helsingborg-stad/Municipio"
                 }
             ]
         },
@@ -718,6 +818,50 @@
             ]
         },
         {
+            "title": "Arguments with default values must be at the end of the argument list",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/1612",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2025-11-19T07:40:31Z",
+            "number": 1612,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Fix argument order in Template::renderView() method signature",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1613",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
             "title": "Index must support retriving metadata on files.",
             "url": "https://github.com/helsingborg-stad/s3-local-index/issues/36",
             "repository": "helsingborg-stad/s3-local-index",
@@ -758,6 +902,94 @@
                     "title": "Add file size metadata support to index",
                     "url": "https://github.com/helsingborg-stad/s3-local-index/pull/37",
                     "repository": "helsingborg-stad/s3-local-index"
+                }
+            ]
+        },
+        {
+            "title": "Applicators must be restructured into smaller SRI classes and follow basic SOLID principles better",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/1567",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2025-10-17T14:07:05Z",
+            "number": 1567,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Refactor Applicators to Follow SOLID Principles with Dependency Injection",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1568",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
+            "title": "ImageConvert functionality (on the fly images) needs to perform better",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/1504",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2025-09-06T09:20:47Z",
+            "number": 1504,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Implement ImageConvert on-demand image resizing with minimal production-ready architecture",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1505",
+                    "repository": "helsingborg-stad/Municipio"
                 }
             ]
         },
