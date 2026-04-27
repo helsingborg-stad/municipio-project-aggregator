@@ -109,6 +109,7 @@ describe('App', () => {
   afterEach(() => {
     vi.restoreAllMocks();
     window.localStorage.clear();
+    window.history.replaceState({}, '', '/');
   });
 
   function mockDashboardFetch() {
@@ -122,7 +123,7 @@ describe('App', () => {
     }));
   }
 
-  it('renders repository and author tabs from aggregated payload metadata', async () => {
+  it('renders repository and contributor tabs from aggregated payload metadata', async () => {
     mockDashboardFetch();
 
     render(<App />);
@@ -132,15 +133,38 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Repositories' }));
 
     expect(await screen.findByRole('heading', { name: 'Compatible plugins' })).toBeInTheDocument();
+    expect(window.location.search).toBe('?tab=repositories');
     expect(screen.getByText('plugin-alpha')).toBeInTheDocument();
     expect(screen.getByText('plugin-beta')).toBeInTheDocument();
     expect(screen.getByText('Compatible plugin beta')).toBeInTheDocument();
 
-    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Contributors' }));
 
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
+    expect(window.location.search).toBe('?tab=contributors');
     expect(screen.getByText('Score: 1.2')).toBeInTheDocument();
     expect(screen.getByText('Score is weighted by item type: each issue is worth 0.1 points and each pull request is worth 1.0 point.')).toBeInTheDocument();
+  });
+
+  it('restores the selected main tab from the url', async () => {
+    mockDashboardFetch();
+    window.history.replaceState({}, '', '/?tab=contributors');
+
+    render(<App />);
+
+    expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Contributors' })).toHaveAttribute('aria-selected', 'true');
+  });
+
+  it('maps the legacy authors url to contributors', async () => {
+    mockDashboardFetch();
+    window.history.replaceState({}, '', '/?tab=authors');
+
+    render(<App />);
+
+    expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Contributors' })).toHaveAttribute('aria-selected', 'true');
+    expect(window.location.search).toBe('?tab=contributors');
   });
 
   it('remembers source filters and view mode and clears saved preferences', async () => {
@@ -171,7 +195,7 @@ describe('App', () => {
     expect(screen.getByRole('button', { name: 'List view' })).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByRole('button', { name: 'Collapse sub-items for Issue alpha' })).toHaveAttribute('aria-expanded', 'true');
     expect(screen.getByText('Issue alpha child')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Q2' })).toBeInTheDocument();
+    expect(screen.getByText('Q2', { selector: 'span' })).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', { name: 'Clear saved view' }));
 
@@ -194,7 +218,7 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: 'List view' }));
 
     await waitFor(() => {
-      const milestoneSection = screen.getByRole('heading', { name: 'Q2' }).closest('section');
+      const milestoneSection = screen.getByText('Q2', { selector: 'span' }).closest('section');
 
       expect(milestoneSection.parentElement).toHaveClass('source-panel__stack');
       expect(milestoneSection.parentElement).not.toHaveClass('xl:grid-cols-2');

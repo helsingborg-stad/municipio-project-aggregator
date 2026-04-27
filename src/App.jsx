@@ -795,9 +795,9 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
           <section key={milestone} className="border-b border-white/[0.06] last:border-b-0">
             <div className="flex items-center gap-3 bg-white/[0.025] px-3 py-2">
               <div className={`h-2.5 w-2.5 shrink-0 rounded-sm ${accent.dot}`} />
-              <span className={`inline-flex items-center rounded px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${accent.badge}`}>
+              <h3 className={`inline-flex items-center rounded px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${accent.badge}`}>
                 {milestone}
-              </span>
+              </h3>
               <span className="text-xs text-slate-600">{visibleTreeItemCount}</span>
             </div>
 
