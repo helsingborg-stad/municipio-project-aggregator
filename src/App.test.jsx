@@ -139,7 +139,8 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
 
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
-    expect(screen.getByText('3 tracked contributions')).toBeInTheDocument();
+    expect(screen.getByText('Score: 1.2')).toBeInTheDocument();
+    expect(screen.getByText('Score is weighted by item type: each issue is worth 0.1 points and each pull request is worth 1.0 point.')).toBeInTheDocument();
   });
 
   it('remembers source filters and view mode and clears saved preferences', async () => {

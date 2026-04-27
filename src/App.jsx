@@ -435,82 +435,110 @@ function countTreeItems(items) {
   return items.reduce((total, item) => total + 1 + countTreeItems(item.children ?? []), 0);
 }
 
-function TrackedItemTreeNode({ item, depth = 0, expandedTreeItems, onToggleExpand, showRepository = true }) {
+function TrackedItemListRow({ item, depth = 0, expandedTreeItems, onToggleExpand }) {
   const childItems = Array.isArray(item.children) ? item.children : [];
   const hasChildren = childItems.length > 0;
   const isExpanded = hasChildren ? expandedTreeItems.includes(item.url) : false;
-  const indentation = `${depth * 1.5}rem`;
 
   return (
-    <li className="space-y-3">
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-3 transition-colors hover:border-cyan-300/30 hover:bg-white/10">
-        <div className="flex items-start gap-3" style={{ paddingLeft: indentation }}>
+    <>
+      <li
+        className="group flex items-center border-b border-white/[0.06] transition-colors hover:bg-white/[0.03] last:border-b-0"
+        style={{ paddingLeft: `${depth * 1.25}rem` }}
+      >
+        <div className="flex h-9 w-7 shrink-0 items-center justify-center">
           {hasChildren ? (
             <button
               type="button"
               aria-expanded={isExpanded}
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} sub-items for ${item.title}`}
               onClick={() => onToggleExpand(item.url)}
-              className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-slate-950/60 text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-white"
+              className="flex h-5 w-5 items-center justify-center rounded text-slate-500 transition-colors hover:text-slate-200"
             >
-              {isExpanded ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+              {isExpanded ? <ChevronDown className="h-3 w-3" /> : <ChevronRight className="h-3 w-3" />}
             </button>
-          ) : (
-            <div className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-slate-950/60 text-slate-500">
-              <span className="h-2 w-2 rounded-full bg-slate-500" />
-            </div>
-          )}
-
-          <div className="min-w-0 flex-1 space-y-3">
-            <div className="flex items-start justify-between gap-3">
-              <div className="min-w-0">
-                {showRepository ? (
-                  <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
-                    <FolderKanban className="h-3.5 w-3.5 shrink-0" />
-                    <span className="truncate">{item.repository}</span>
-                  </div>
-                ) : null}
-                <ItemBadgeRow item={item} />
-                <a href={item.url} target="_blank" rel="noreferrer" className="mt-2 block text-sm font-medium text-slate-100 transition-colors hover:text-white">
-                  {item.title}
-                </a>
-              </div>
-
-              <a href={item.url} target="_blank" rel="noreferrer" className="rounded-xl p-1 text-slate-500 transition-colors hover:text-cyan-200">
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
-              {item.author?.login ? <Avatar person={item.author} /> : null}
-              <span>{formatRelativeTime(item.createdAt)}</span>
-              <span className="text-slate-600">/</span>
-              <span>{formatTimestamp(item.createdAt)}</span>
-              {hasChildren ? (
-                <Badge variant="secondary">
-                  {childItems.length} visible sub-item{childItems.length === 1 ? '' : 's'}
-                </Badge>
-              ) : null}
-            </div>
-          </div>
+          ) : null}
         </div>
-      </div>
 
-      {hasChildren && isExpanded ? (
-        <ul className="space-y-3">
-          {childItems.map((childItem) => (
-            <TrackedItemTreeNode
-              key={childItem.url}
-              item={childItem}
+        <div className="flex h-9 w-6 shrink-0 items-center">
+          <div className="h-3.5 w-3.5 rounded-full border-2 border-slate-500/70" />
+        </div>
+
+        <div className="flex min-w-0 flex-1 items-center gap-2 py-2 pr-3">
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            className="truncate text-sm text-slate-200 transition-colors hover:text-white"
+          >
+            {item.title}
+          </a>
+          {item.type ? (
+            <Badge variant="secondary" className="shrink-0 text-[10px]">{item.type}</Badge>
+          ) : null}
+          {hasSubIssues(item) ? (
+            <span className="shrink-0 font-mono text-[10px] text-slate-500">
+              {item.subIssues.completed}/{item.subIssues.total}
+            </span>
+          ) : null}
+          {hasChildren ? (
+            <Badge variant="secondary" className="shrink-0 text-[10px]">
+              {childItems.length}
+            </Badge>
+          ) : null}
+        </div>
+
+        <div className="flex w-40 shrink-0 items-center gap-1.5 py-2 pr-3">
+          {item.repository ? (
+            <>
+              <FolderKanban className="h-3 w-3 shrink-0 text-slate-600" />
+              <span className="truncate text-xs text-slate-500">{item.repository}</span>
+            </>
+          ) : (
+            <span className="text-slate-700">—</span>
+          )}
+        </div>
+
+        <div className="flex w-20 shrink-0 items-center py-2">
+          {item.assignees?.length ? (
+            <div className="flex -space-x-1">
+              {item.assignees.slice(0, 3).map((assignee) => (
+                <AvatarImage key={assignee.login} person={assignee} sizeClassName="h-5 w-5 ring-1 ring-slate-900" />
+              ))}
+            </div>
+          ) : (
+            <span className="text-slate-700">—</span>
+          )}
+        </div>
+
+        <div className="w-28 shrink-0 py-2 text-xs text-slate-500">
+          {formatTimestamp(item.createdAt)}
+        </div>
+
+        <div className="flex w-8 shrink-0 items-center justify-center py-2 opacity-0 transition-opacity group-hover:opacity-100">
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-500 transition-colors hover:text-cyan-300"
+          >
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+        </div>
+      </li>
+
+      {hasChildren && isExpanded
+        ? childItems.map((child) => (
+            <TrackedItemListRow
+              key={child.url}
+              item={child}
               depth={depth + 1}
               expandedTreeItems={expandedTreeItems}
               onToggleExpand={onToggleExpand}
-              showRepository={childItem.repository !== item.repository}
             />
-          ))}
-        </ul>
-      ) : null}
-    </li>
+          ))
+        : null}
+    </>
   );
 }
 
@@ -617,7 +645,7 @@ function AuthorDirectoryPanel({ authors }) {
                     <div className="min-w-0">
                       <h3 className="truncate text-lg font-semibold text-white">{author.login}</h3>
                       <p className="text-sm text-slate-400">
-                        {author.contributionCount} tracked contribution{author.contributionCount === 1 ? '' : 's'}
+                        Score: {author.score.toFixed(1)}
                       </p>
                     </div>
                     {author.url ? <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-fuchsia-200" /> : null}
@@ -637,6 +665,9 @@ function AuthorDirectoryPanel({ authors }) {
             })}
           </div>
         )}
+        <p className="mt-6 text-xs text-slate-500">
+          Score is weighted by item type: each issue is worth 0.1 points and each pull request is worth 1.0 point.
+        </p>
       </CardContent>
     </Card>
   );
@@ -746,26 +777,43 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
     />
   );
 
+  const listGroupAccents = [
+    { dot: 'bg-yellow-400', badge: 'bg-yellow-400/10 text-yellow-200 ring-1 ring-yellow-400/25' },
+    { dot: 'bg-orange-400', badge: 'bg-orange-400/10 text-orange-200 ring-1 ring-orange-400/25' },
+    { dot: 'bg-rose-500', badge: 'bg-rose-500/10 text-rose-200 ring-1 ring-rose-500/25' },
+    { dot: 'bg-cyan-400', badge: 'bg-cyan-400/10 text-cyan-200 ring-1 ring-cyan-400/25' },
+    { dot: 'bg-violet-400', badge: 'bg-violet-400/10 text-violet-200 ring-1 ring-violet-400/25' },
+  ];
+
   const itemContent = viewMode === 'list' ? (
-    <div className="source-panel__stack space-y-4">
-      {milestoneGroups.map(({ milestone, items }) => {
+    <div className="source-panel__stack overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+      {milestoneGroups.map(({ milestone, items }, groupIndex) => {
         const visibleTreeItemCount = countTreeItems(items);
+        const accent = listGroupAccents[groupIndex % listGroupAccents.length];
 
         return (
-          <section
-            key={milestone}
-            className="rounded-3xl border border-white/10 bg-slate-900/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
-          >
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <div>
-                <h3 className="text-lg font-semibold text-white">{milestone}</h3>
-                <p className="text-sm text-slate-400">{visibleTreeItemCount} visible item{visibleTreeItemCount === 1 ? '' : 's'}</p>
-              </div>
-              <Badge variant="secondary">{items.length} root item{items.length === 1 ? '' : 's'}</Badge>
+          <section key={milestone} className="border-b border-white/[0.06] last:border-b-0">
+            <div className="flex items-center gap-3 bg-white/[0.025] px-3 py-2">
+              <div className={`h-2.5 w-2.5 shrink-0 rounded-sm ${accent.dot}`} />
+              <span className={`inline-flex items-center rounded px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${accent.badge}`}>
+                {milestone}
+              </span>
+              <span className="text-xs text-slate-600">{visibleTreeItemCount}</span>
             </div>
-            <ul className="space-y-3">
+
+            <div className="flex items-center border-b border-white/[0.06] text-[10px] uppercase tracking-wider text-slate-600">
+              <div className="w-7 shrink-0" />
+              <div className="w-6 shrink-0" />
+              <div className="flex-1 py-1.5 pr-3">Name</div>
+              <div className="w-40 shrink-0 py-1.5">Repository</div>
+              <div className="w-20 shrink-0 py-1.5">Assignee</div>
+              <div className="w-28 shrink-0 py-1.5">Created</div>
+              <div className="w-8 shrink-0" />
+            </div>
+
+            <ul>
               {items.map((item) => (
-                <TrackedItemTreeNode
+                <TrackedItemListRow
                   key={item.url}
                   item={item}
                   expandedTreeItems={expandedTreeItems}
@@ -857,7 +905,11 @@ export default function App() {
   const [status, setStatus] = useState('loading');
   const [errorMessage, setErrorMessage] = useState('');
   const payloadList = Object.values(payloads);
-  const allItems = payloadList.flatMap((payload) => Array.isArray(payload.items) ? payload.items : []);
+  const allItems = payloadList.flatMap((payload) => (
+    Array.isArray(payload.items)
+      ? payload.items.map((item) => ({ ...item, source: payload.source }))
+      : []
+  ));
   const repositories = getRepositoryCatalog(payloadList);
   const authors = getAuthorDirectory(allItems);
   const tabs = [

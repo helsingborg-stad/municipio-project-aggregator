@@ -38,6 +38,19 @@ composer install
 npm install
 ```
 
+## Dev Container
+
+The repository includes a `.devcontainer/devcontainer.json` setup for VS Code Dev Containers or GitHub Codespaces.
+It provisions Node.js, PHP 8.2, and Composer, then runs `npm install && composer install` after the container is created.
+
+After opening the project in the container, use the same project commands as usual:
+
+```bash
+npm run dev
+npm run build:data
+composer test
+```
+
 ```bash
 npm run build:data
 ```

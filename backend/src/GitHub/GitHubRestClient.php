@@ -18,6 +18,10 @@ final class GitHubRestClient
     private const PAGE_SIZE = 100;
 
     private bool $shouldUseAuthentication = true;
+    /**
+     * @var array<string, array<string, mixed>>
+     */
+    private array $userProfilesByLogin = [];
 
     /**
      * @param HttpClientInterface $httpClient HTTP client implementation.
@@ -144,6 +148,32 @@ final class GitHubRestClient
         );
 
         /** @var array<string, mixed> $response */
+        return $response;
+    }
+
+    /**
+     * @param string $login
+     * @param string $token
+     * @return array<string, mixed>
+     */
+    public function getUserProfile(string $login, string $token): array
+    {
+        if ($login === '') {
+            return [];
+        }
+
+        if (array_key_exists($login, $this->userProfilesByLogin)) {
+            return $this->userProfilesByLogin[$login];
+        }
+
+        $response = $this->getJson(
+            sprintf('%s/users/%s', self::API_URL, rawurlencode($login)),
+            $token,
+        );
+
+        /** @var array<string, mixed> $response */
+        $this->userProfilesByLogin[$login] = $response;
+
         return $response;
     }
 

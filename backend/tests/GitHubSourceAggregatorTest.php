@@ -49,6 +49,7 @@ final class GitHubSourceAggregatorTest extends TestCase
         self::assertSame('Shared PR', $data['items'][1]['title']);
         self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
         self::assertSame('octocat', $data['items'][0]['author']['login']);
+        self::assertSame('GitHub', $data['items'][0]['author']['company']);
         self::assertSame('hubot', $data['items'][0]['assignees'][0]['login']);
         self::assertSame('Q2', $data['items'][0]['milestone']['title']);
         self::assertSame('Feature', $data['items'][0]['type']);
@@ -269,6 +270,13 @@ final class GitHubSourceAggregatorTest extends TestCase
                     ];
                 }
 
+                if (str_contains($url, '/users/octocat')) {
+                    return [
+                        'login' => 'octocat',
+                        'company' => 'GitHub',
+                    ];
+                }
+
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1')) {
                     return [
                         'title' => 'Shared PR',
@@ -297,6 +305,13 @@ final class GitHubSourceAggregatorTest extends TestCase
                     ];
                 }
 
+                if (str_contains($url, '/users/monalisa')) {
+                    return [
+                        'login' => 'monalisa',
+                        'company' => 'Octo Arts',
+                    ];
+                }
+
                 if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/issues/3')) {
                     return [
                         'title' => 'Obsolete PR',
@@ -322,6 +337,13 @@ final class GitHubSourceAggregatorTest extends TestCase
                             'blocking' => 0,
                             'total_blocking' => 0,
                         ],
+                    ];
+                }
+
+                if (str_contains($url, '/users/oldtimer')) {
+                    return [
+                        'login' => 'oldtimer',
+                        'company' => 'Legacy Systems',
                     ];
                 }
 

@@ -156,11 +156,11 @@ describe('getRepositoryCatalog', () => {
 });
 
 describe('getAuthorDirectory', () => {
-  it('collects unique authors with contribution counts', () => {
+  it('collects unique authors with weighted scores', () => {
     const authors = getAuthorDirectory([
-      { author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
-      { author: { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot' } },
-      { author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
+      { source: 'issues', author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
+      { source: 'issues', author: { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot' } },
+      { source: 'pull-requests', author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
     ]);
 
     expect(authors).toEqual([
@@ -168,13 +168,13 @@ describe('getAuthorDirectory', () => {
         login: 'octocat',
         avatarUrl: 'https://example.com/octocat.png',
         url: 'https://github.com/octocat',
-        contributionCount: 2,
+        score: 1.1,
       },
       {
         login: 'hubot',
         avatarUrl: 'https://example.com/hubot.png',
         url: 'https://github.com/hubot',
-        contributionCount: 1,
+        score: 0.1,
       },
     ]);
   });

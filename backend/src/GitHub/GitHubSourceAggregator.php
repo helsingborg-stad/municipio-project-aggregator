@@ -47,9 +47,22 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
 
                 $issueNumber = (int) $itemData['number'];
                 $issueDetails = $this->client->getIssueDetails($repository, $issueNumber, $config->token());
+                $authorProfile = $this->client->getUserProfile(
+                    is_array($issueDetails['user'] ?? null) && is_string($issueDetails['user']['login'] ?? null)
+                        ? $issueDetails['user']['login']
+                        : '',
+                    $config->token(),
+                );
                 $timelineEvents = $this->client->listTimelineEvents($repository, $issueNumber, $config->token());
                 $subIssues = $this->client->listSubIssues($repository, $issueNumber, $config->token());
-                $item = AggregatedItem::fromRestItem($repository->fullName(), $itemData, $issueDetails, $timelineEvents, $subIssues);
+                $item = AggregatedItem::fromRestItem(
+                    $repository->fullName(),
+                    $itemData,
+                    $issueDetails,
+                    $authorProfile,
+                    $timelineEvents,
+                    $subIssues,
+                );
                 $itemsByUrl[$itemData['html_url']] = $item;
             }
         }

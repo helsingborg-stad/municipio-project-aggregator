@@ -115,11 +115,11 @@ export function getAuthorDirectory(items) {
       login: author.login,
       avatarUrl: author.avatarUrl ?? currentAuthor?.avatarUrl ?? '',
       url: author.url ?? currentAuthor?.url ?? '',
-      contributionCount: (currentAuthor?.contributionCount ?? 0) + 1,
+      score: Number(((currentAuthor?.score ?? 0) + (item.source === 'pull-requests' ? 1 : 0.1)).toFixed(1)),
     });
   });
 
-  return [...authorsByLogin.values()].sort((left, right) => right.contributionCount - left.contributionCount);
+  return [...authorsByLogin.values()].sort((left, right) => right.score - left.score);
 }
 
 export function getFilterOptions(items) {

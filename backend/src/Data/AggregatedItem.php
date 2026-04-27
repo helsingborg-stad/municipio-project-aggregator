@@ -72,11 +72,19 @@ final class AggregatedItem
      * @param string $repository Repository name.
      * @param array<string, mixed> $item GitHub REST item.
      * @param array<string, mixed> $detail GitHub REST issue detail.
+     * @param array<string, mixed> $authorProfile GitHub REST user payload.
      * @param array<int, array<string, mixed>> $timelineEvents GitHub REST issue timeline events.
      * @param array<int, array<string, mixed>> $subIssues GitHub REST sub-issue payloads.
      * @return self
      */
-    public static function fromRestItem(string $repository, array $item, array $detail, array $timelineEvents, array $subIssues): self
+    public static function fromRestItem(
+        string $repository,
+        array $item,
+        array $detail,
+        array $authorProfile,
+        array $timelineEvents,
+        array $subIssues,
+    ): self
     {
         $relationships = self::extractRelationships($timelineEvents);
 
@@ -86,7 +94,7 @@ final class AggregatedItem
             $repository,
             (string) ($item['created_at'] ?? ''),
             (int) ($item['number'] ?? 0),
-            self::extractUser($detail['user'] ?? null),
+            self::extractUser($detail['user'] ?? null, $authorProfile),
             self::extractUsers($detail['assignees'] ?? []),
             self::extractMilestone($detail['milestone'] ?? null),
             self::extractType($detail['type'] ?? null),
@@ -129,9 +137,10 @@ final class AggregatedItem
 
     /**
      * @param mixed $user
+     * @param array<string, mixed> $profile
      * @return array<string, string>|null
      */
-    private static function extractUser(mixed $user): ?array
+    private static function extractUser(mixed $user, array $profile = []): ?array
     {
         if (!is_array($user) || !is_string($user['login'] ?? null)) {
             return null;
@@ -141,6 +150,7 @@ final class AggregatedItem
             'login' => $user['login'],
             'avatarUrl' => is_string($user['avatar_url'] ?? null) ? $user['avatar_url'] : '',
             'url' => is_string($user['html_url'] ?? null) ? $user['html_url'] : '',
+            'company' => is_string($profile['company'] ?? null) ? trim($profile['company']) : '',
         ];
     }
 
