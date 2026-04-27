@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T07:02:40+00:00",
-    "count": 64,
+    "generatedAt": "2026-04-27T07:50:45+00:00",
+    "count": 63,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -174,36 +174,6 @@
             "repository": "helsingborg-stad/styleguide",
             "createdAt": "2026-04-23T11:21:03Z",
             "number": 1199,
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "feat: chat for m7",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/1899",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-22T09:36:57Z",
-            "number": 1899,
             "author": {
                 "login": "NiclasNorin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
