@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T15:36:38+00:00",
-    "count": 14,
+    "generatedAt": "2026-04-27T16:35:03+00:00",
+    "count": 3,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -367,10 +367,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "project-synchronizer",
-            "fullName": "helsingborg-stad/project-synchronizer",
+            "name": "algolia-index-typesense-provider",
+            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
-            "url": "https://github.com/helsingborg-stad/project-synchronizer"
+            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
         },
         {
             "owner": "helsingborg-stad",
@@ -388,10 +388,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-typesense-provider",
-            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
+            "name": "project-synchronizer",
+            "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
+            "url": "https://github.com/helsingborg-stad/project-synchronizer"
         },
         {
             "owner": "helsingborg-stad",
@@ -424,219 +424,19 @@
     ],
     "items": [
         {
-            "title": "Check for multisite support instead of assuming",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1845",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-18T14:17:03Z",
-            "number": 1845,
+            "title": "Compose file causes all projects to be synced into every other project.",
+            "url": "https://github.com/municipio-se/municipio-deployment/issues/151",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-01-14T09:58:14Z",
+            "number": 151,
             "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix fatal error when SiteSwitcher is used on single-site WordPress installations",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1846",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "title": "Plugins does not use SDK - Replace cURL with Typesense PHP SDK (installed with composer)",
-            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/issues/9",
-            "repository": "helsingborg-stad/algolia-index-typesense-provider",
-            "createdAt": "2026-02-27T08:24:24Z",
-            "number": 9,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Refactor Typesense provider to use official PHP SDK instead of cURL",
-                    "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/pull/10",
-                    "repository": "helsingborg-stad/algolia-index-typesense-provider"
-                }
-            ]
-        },
-        {
-            "title": "Typesense 409 Conflict \u2013 Document with Existing ID",
-            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/issues/7",
-            "repository": "helsingborg-stad/algolia-index-typesense-provider",
-            "createdAt": "2026-02-27T07:55:23Z",
-            "number": 7,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Use Typesense upsert to avoid 409 conflicts",
-                    "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/pull/8",
-                    "repository": "helsingborg-stad/algolia-index-typesense-provider"
-                }
-            ]
-        },
-        {
-            "title": "Bugfix index to typesense",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1814",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-02-26T13:08:22Z",
-            "number": 1814,
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
-                "url": "https://github.com/camitzdennis",
+                "login": "NiklasBr",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/279826?v=4",
+                "url": "https://github.com/NiklasBr",
                 "company": ""
             },
             "assignees": [
                 {
-                    "login": "camitzdennis",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
-                    "url": "https://github.com/camitzdennis",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Patch fix for TypeError in algolia-index-typesense-provider",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1815",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "title": "The .mod-frontend-form__content element should animate its height when content is switched",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/101",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-01-20T14:22:14Z",
-            "number": 101,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
                     "login": "sebastianthulin",
                     "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
                     "url": "https://github.com/sebastianthulin",
@@ -667,147 +467,9 @@
             "relationships": [
                 {
                     "event": "cross-referenced",
-                    "title": "Animate content height during form step transitions",
-                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/102",
-                    "repository": "helsingborg-stad/modularity-frontend-form"
-                }
-            ]
-        },
-        {
-            "title": "Security Review Task \u2013 WordPress Form Plugin",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/99",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-01-20T12:51:18Z",
-            "number": 99,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Security fixes: CSRF, SSRF, rate limiting, email injection",
-                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/100",
-                    "repository": "helsingborg-stad/modularity-frontend-form"
-                }
-            ]
-        },
-        {
-            "title": "Add When statement",
-            "url": "https://github.com/helsingborg-stad/wputilservice/issues/8",
-            "repository": "helsingborg-stad/wputilservice",
-            "createdAt": "2025-11-26T09:15:37Z",
-            "number": 8,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add when() for conditional asset enqueuing",
-                    "url": "https://github.com/helsingborg-stad/wputilservice/pull/9",
-                    "repository": "helsingborg-stad/wputilservice"
-                }
-            ]
-        },
-        {
-            "title": "Arguments with default values must be at the end of the argument list",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1612",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-11-19T07:40:31Z",
-            "number": 1612,
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix argument order in Template::renderView() method signature",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1613",
-                    "repository": "helsingborg-stad/Municipio"
+                    "title": "Fix: Scope devcontainer volume mount to project directory only",
+                    "url": "https://github.com/municipio-se/municipio-deployment/pull/152",
+                    "repository": "municipio-se/municipio-deployment"
                 }
             ]
         },
@@ -856,11 +518,11 @@
             ]
         },
         {
-            "title": "Applicators must be restructured into smaller SRI classes and follow basic SOLID principles better",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1567",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-10-17T14:07:05Z",
-            "number": 1567,
+            "title": "Adding custom Origins should be a feature (similar to adding stuff to csp policy).",
+            "url": "https://github.com/helsingborg-stad/wpmu-security/issues/9",
+            "repository": "helsingborg-stad/wpmu-security",
+            "createdAt": "2025-07-14T09:17:53Z",
+            "number": 9,
             "author": {
                 "login": "sebastianthulin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
@@ -893,184 +555,9 @@
             "relationships": [
                 {
                     "event": "cross-referenced",
-                    "title": "Refactor Applicators to Follow SOLID Principles with Dependency Injection",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1568",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "title": "ImageConvert functionality (on the fly images) needs to perform better",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1504",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-09-06T09:20:47Z",
-            "number": 1504,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Implement ImageConvert on-demand image resizing with minimal production-ready architecture",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1505",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "title": "Plugin causes performance issues when fetching guides/places",
-            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies/issues/17",
-            "repository": "helsingborg-stad/visit-custom-posttypes-taxonomies",
-            "createdAt": "2025-09-02T07:28:58Z",
-            "number": 17,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix performance issues when fetching guides/places through caching and query optimization",
-                    "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies/pull/18",
-                    "repository": "helsingborg-stad/visit-custom-posttypes-taxonomies"
-                }
-            ]
-        },
-        {
-            "title": "Plugin allows duplicate short link name causing redirect conflicts",
-            "url": "https://github.com/helsingborg-stad/custom-short-links/issues/4",
-            "repository": "helsingborg-stad/custom-short-links",
-            "createdAt": "2025-08-29T13:00:33Z",
-            "number": 4,
-            "author": {
-                "login": "considadam",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/122970703?v=4",
-                "url": "https://github.com/considadam",
-                "company": "Consid Bor\u00e5s AB"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "Test coverage should be increased in order to validate the functionality thorughly.",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector/issues/22",
-            "repository": "helsingborg-stad/broken-link-detector",
-            "createdAt": "2025-07-07T09:34:13Z",
-            "number": 22,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Significantly increase test coverage with comprehensive test suite for core plugin components",
-                    "url": "https://github.com/helsingborg-stad/broken-link-detector/pull/23",
-                    "repository": "helsingborg-stad/broken-link-detector"
+                    "title": "Add custom CORS origins feature with ACF admin interface",
+                    "url": "https://github.com/helsingborg-stad/wpmu-security/pull/10",
+                    "repository": "helsingborg-stad/wpmu-security"
                 }
             ]
         }
