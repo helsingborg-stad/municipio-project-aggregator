@@ -1,0 +1,108 @@
+{
+    "source": "releases",
+    "sourceScope": "GitHub",
+    "generatedAt": "2026-04-27T20:26:13+00:00",
+    "count": 76,
+    "pageSize": 10,
+    "pageNumber": 1,
+    "pageCount": 8,
+    "repository": {
+        "owner": "municipio-se",
+        "name": "municipio-deployment",
+        "fullName": "municipio-se/municipio-deployment",
+        "description": "",
+        "url": "https://github.com/municipio-se/municipio-deployment"
+    },
+    "items": [
+        {
+            "title": "5.9.2",
+            "version": "5.9.2",
+            "body": "",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.2",
+            "publishedAt": "2026-04-16T11:18:11Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.9.1",
+            "version": "5.9.1",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-9-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.1",
+            "publishedAt": "2026-04-01T13:06:15Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.8",
+            "version": "5.8.8",
+            "body": "",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.8",
+            "publishedAt": "2026-02-25T12:14:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.3",
+            "version": "5.8.3",
+            "body": "Release notes @ https://getmunicipio.com/nyheter/municipio-5-8-3/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.3",
+            "publishedAt": "2026-01-13T09:59:30Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.1",
+            "version": "5.8.1",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.1",
+            "publishedAt": "2025-12-18T08:31:18Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.0",
+            "version": "5.8.0",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.0",
+            "publishedAt": "2025-12-17T15:23:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.7.2",
+            "version": "5.7.2",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-2/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.2",
+            "publishedAt": "2025-12-10T08:03:35Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.7.0",
+            "version": "5.7.0",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.0",
+            "publishedAt": "2025-12-04T09:06:52Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.6.1",
+            "version": "5.6.1",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-6-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.1",
+            "publishedAt": "2025-11-18T11:49:10Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.6.0",
+            "version": "5.6.0",
+            "body": "Releasedocs @ https://getmunicipio.com/nyheter/municipio-5-6-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.0",
+            "publishedAt": "2025-11-04T08:58:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "source": "releases",
+    "sourceScope": "GitHub",
+    "generatedAt": "2026-04-27T20:26:13+00:00",
+    "count": 76,
+    "pageSize": 10,
+    "pageNumber": 6,
+    "pageCount": 8,
+    "repository": {
+        "owner": "municipio-se",
+        "name": "municipio-deployment",
+        "fullName": "municipio-se/municipio-deployment",
+        "description": "",
+        "url": "https://github.com/municipio-se/municipio-deployment"
+    },
+    "items": [
+        {
+            "title": "4.2.2",
+            "version": "4.2.2",
+            "body": "We\u2019re excited to announce the release of Municipio 4.2.1, which focuses on addressing key bugs and improving performance. Below are the highlights of this update:\r\n\r\nMunicipio Theme (5.8.6):\r\n- Icon Translation Optimization: Improved the efficiency of icon translation handling.\r\n- Navigation Class Enhancement: Optimized the navigation class to retrieve pre-processed objects directly from the runtime cache, enhancing performance.\r\n- Upgrade: Introduced a script that clears all oEmbed caches due to updates in the HTML output for icons.\r\n- Customizer Fix: Resolved an issue where changes made in the Customizer were not reflected on the frontend.\r\n- Body Class Correction: Fixed a bug where the body class was not correctly applied across all templates.\r\n- Schema Object Handler: Addressed a warning issue in the schema object handler.\r\n\r\nOpen Street Map (2.3.7):\r\n- Corrected an issue where pins were not displaying correctly in the map component.\r\n\r\nStyleguide (0.11.1088):\r\n- Hero Component: The Hero component now respects the \"Reduce Motion\" accessibility preference.\r\n- Grid Objects Fix: Resolved an issue where grid objects were not respecting gutter sizes on smaller devices.\r\n\r\nModularity Like posts (2.6.0):\r\n- The \"heart\" symbol is now compatible with the default \"filled\" icons in municipio.\r\n\r\nDeployment:\u00a0\r\n- The deployment script now includes functionality to send a ping to New Relic and Sentry after each deployment.\r\n\r\nOther:\u00a0\r\n- The sentry plugin has now been removed from the deploy due to bad performance.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.2",
+            "publishedAt": "2024-08-15T13:23:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.2.1",
+            "version": "4.2.1",
+            "body": "* **Component Library (4.14.6):** [resolve issues where some data attributes where NaN or incorrectly handled.](https://github.com/helsingborg-stad/component-library/commit/82980f831fe490677d41a568733d80b7012bb893)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.1",
+            "publishedAt": "2024-08-13T10:09:31Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.2.0",
+            "version": "4.2.0",
+            "body": "This update is primarily focused on simplifying the implementation of schema data configuration an presentation.\r\n\r\n* **Municipio Theme (5.8.0):** Add feature for assigning schema type for post types as well as populating posts with values matching the selected schema type. Remove Content Type feature in favor of the new functionality available in schema types.\r\n* **Modularity Open Street Map (2.3.6):** Adapt to use Schema Type from Municipio instead of Content Type.\r\n*  **Component Library (4.14.5):** Fix issue with \"0\" as a string not being allowed to pass as value to attributeList property on components.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.0",
+            "publishedAt": "2024-08-13T06:26:05Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 4.1.2",
+            "version": "4.1.2",
+            "body": "A new maintenance release addresses issues caused by optimization actions in the previous release. This update includes the following corrections and improvements.\r\n\r\n**Municipio Theme (5.7.1):**\r\n\r\n- Customizer: Fixed an issue where dynamic theme settings were not properly loading in the customizer. This ensures that imported settings from the design library are correctly applied in the customizer context.\r\n- Favicons: Removes the custom favicon implementation, and migrates it to be done natively in WordPress using the \"site identity\" section in the customizer.\r\n- Icons: A optimization on the icon rendering has been made. This reduces the size of the material icons bundle up to 85%. This change also brings settings for choosing font style and weight.\r\n- General: Minor adjustments to correct an issue where the width settings were not being applied.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.2",
+            "publishedAt": "2024-08-12T09:51:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.1.0",
+            "version": "4.1.0",
+            "body": "Introducing Version 4.1.0! This update is designed to optimize performance for frontend tasks, offering significant improvements. It includes several fixes aimed at boosting site performance in both cached and uncached environments. Expect up to a 60% reduction in Time to First Byte (TTFB) on large sites, even when object caching is not enabled.\r\n\r\n- Municipio (5.5.2): Upgraded to statically render Applicators (generated css, component data and modifiers) reducing rendering time and unnecessary workloads. This change also enhances security by eliminating the use of eval for calculating conditionals.\r\n- Modularity (6.19.0): Multiple queries used to detect a page\u2019s available modules have been optimized to run more efficiently by reducing the amount of data searched in.\r\n- Open Street Map (2.2.2)*: The plugin has been completely rewritten to offload the initial request size using asynchronous data fetching.\r\n- Like posts (2.5.0)*: The functionality for determining where the liked posts list appears has been updated to execute only during the save_post action. This change reduces runtime calculations on the frontend, improving overall performance.\r\n- Items marked with (*) are breaking changes. These components may have to be configured, in order to work properly.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.0",
+            "publishedAt": "2024-08-05T11:09:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.10",
+            "version": "4.0.10",
+            "body": "## What's changed\r\n* Api Event Manager Integration (2.0.18): Event start dates in archive must return gmt.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.10",
+            "publishedAt": "2024-07-04T10:48:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.9",
+            "version": "4.0.9",
+            "body": "## What's changed\r\n* Municipio (5.0.1): Avoid cache overwrite caused by multiple posts with same ID.\r\n* Api Event Manager Integration (2.0.17): Output event start date as post date in event archives.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.9",
+            "publishedAt": "2024-07-01T10:23:50Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.8",
+            "version": "4.0.8",
+            "body": "## What's changed\r\n* WP Page for Term: Remove plugin because Municipio no longer has support for secondary query.\r\n* Modularity Open Street Map (2.1.3): FIx missing info list on map collection items.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.8",
+            "publishedAt": "2024-06-28T05:26:15Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.7",
+            "version": "4.0.7",
+            "body": "## What's changed\r\n* Municipio (5.0.0): Remove support for secondary query causing performance issues.\r\n* Modularity Open Street Map (2.1.1): Downgrade to play nice with Municipio 5.0.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.7",
+            "publishedAt": "2024-06-27T11:46:58Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.6",
+            "version": "4.0.6",
+            "body": "## What's changed\r\n* Modularity Form Builder (v3.2.2): Fix issue with conditional notifications not being sent.\r\n* Modularity Open Street Map: Pin to exact version (2.0.10) due to incompability with current version of Municipio.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.6",
+            "publishedAt": "2024-06-27T07:29:02Z",
+            "isPrerelease": false,
+            "isDraft": false
+        }
+    ]
+}

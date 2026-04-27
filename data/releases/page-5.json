@@ -1,0 +1,108 @@
+{
+    "source": "releases",
+    "sourceScope": "GitHub",
+    "generatedAt": "2026-04-27T20:26:13+00:00",
+    "count": 76,
+    "pageSize": 10,
+    "pageNumber": 5,
+    "pageCount": 8,
+    "repository": {
+        "owner": "municipio-se",
+        "name": "municipio-deployment",
+        "fullName": "municipio-se/municipio-deployment",
+        "description": "",
+        "url": "https://github.com/municipio-se/municipio-deployment"
+    },
+    "items": [
+        {
+            "title": "4.5.2",
+            "version": "4.5.2",
+            "body": "With this release, we focus on further implementing the ImageInterface on more components. We are also releasing a InnovationProject view, in order to display innovation project schemadata as archive items and single views.\r\n\r\n### Component Library (4.24.2)\r\n\r\n* Update the slider Item api in order to simplify it, and remove some old logic that isen\u2019t used anymore.\r\nModularity (6.30.0):\r\n* Implements the Image Interface in the slider module.\r\n\r\n### Municipio Theme (5.32.0)\r\n\r\n* Update the Schools view to fully support the new slider item api.\r\n* Add support for schema type \u201dProject\u201d.\r\n* Multiple minor additions to the behavior of ExternalContent that enables cleanup of unused content and images.\r\n* Add option \u201dSchema\u201d as a way to display a post types archive in the Customizer. This will use the specific Schema types archive presentation if one is available.\r\n\r\n### Styleguide (0.11.1130)\r\n\r\n* Minor adjustments to implement the slider item images.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.5.1...4.5.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.2",
+            "publishedAt": "2024-10-01T08:33:27Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.5.1",
+            "version": "4.5.1",
+            "body": "With this release, we focus on enhancing image handling across the board. From preventing errors in small images to streamlining the image component interface. We\u2019re also introducing better support for container-aware images in both modularity and content, ensuring a more optimized and responsive experience.\r\n\r\n### Component Library (4.23.9)\r\n\r\n- A fatal error in the `ImageInterface` where images too small for size variants would cause a crash. These images will now be handled gracefully.\r\n- All section variants now use the image component to display images consistently, with automatic sizes.\r\n- The image component\u2019s interface has been simplified, removing all modal support. Parameters have been streamlined for better coherence.\r\n\r\n### Modularity (6.29.0)\r\n\r\n- Video functionality in the header module now requires a poster image to ensure proper display.\r\n- The \"Manual Input\" module now leverages the `ImageInterface` to fetch images for the Segment view.\r\n\r\n### Modularity Sections (3.1.2)\r\n\r\n- All section/segment variants now implement the `ImageInterface` to make use of container-aware source sets when rendering images.\r\n\r\n### Municipio Theme (5.28.0)\r\n\r\n- Fixes applied to handle remote content correctly.\r\n- Images within content are now detected and converted to an image contract if they exist in the database. This ensures support for container query images in content.\r\n\r\n### Styleguide (0.11.1125)\r\n\r\n- Improvements in the image component, supporting the changed set of parameters in the component.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.1",
+            "publishedAt": "2024-09-27T09:26:12Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.5.0",
+            "version": "4.5.0",
+            "body": "Municipio 4.5.0 continues to optimize page size, with this release focusing on supporting source set like functionality. We\u2019re starting with a minimal implementation, gradually adding more modules over time. This incremental approach ensures minimal impact on website backend performance with each update.\r\n\r\n## Whats Changed\r\n\r\nStyleguide (0.11.1118): \r\n-Adjustments to ensure that the image component can behave like background images, with support for cover and object-fit properties.\r\n\r\nMunicipio (5.25.4): \r\n- Minor modifications to the image conversion process, allowing compatibility with conversions and resizing from other add-ons.\r\n- Patches on external content features regarding handling of terms and diff checking with checksums locally.\r\n\r\nModularity (6.28.1):\r\n- Implementation of image resolution functions required by the component library to handle source set requests effectively.\r\n\r\nComponent library (4.21.2):\r\n- Introduction of an image contract object, automatically detected and processed by the image component.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.0",
+            "publishedAt": "2024-09-24T08:18:54Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.4.2",
+            "version": "4.4.2",
+            "body": "## What's Changed\r\n### Municipio Theme (5.23.1)\r\n* Fixing a bug where the primary menu was visible for mobile devices.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.1...4.4.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.2",
+            "publishedAt": "2024-09-19T08:49:57Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.4.1",
+            "version": "4.4.1",
+            "body": "## What's Changed\r\n\r\n### Municipio Theme (5.21.1)\r\n* Fix issue with posts using Place as Schema type not getting Schema data populated as part of the post object.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.0...4.4.1",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.1",
+            "publishedAt": "2024-09-18T09:36:27Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.4.0",
+            "version": "4.4.0",
+            "body": "We are excited to announce the release of Version 4.4.0, which is mainly focused at the new External Content in the Municipio Theme. The External Content feature was made possible by the introduction of the previous release of Schema Data feature and brings the ability to create content from external sources that contains or responds with objects that adhere to the Schema.org standard.\r\n\r\n## Municipio Theme (5.21.0):\r\n\r\n* External Content: Allows creating content from either a Typesense API or local json file to create posts, taxonomies and terms from Schema.org formatted objects. This aims at making the Municipio theme responsible for syncing remote content to the local WordPress installation instead of implementing a number of similar content sync plugins to solve individual cases.\r\n* Error handling when image does not exist for recent released WebP image optimization.\r\n* Fixing first level only navigations not working as intended.\r\n* Changing Flexible header search button appearance.\r\n\r\n## Modularity (6.26.0): \r\n\r\n* Added more settings for the Search module.\r\n* Animations and effects for the Menu module.\r\n\r\n## Modularity Open Street Map (2.5.1):\r\n\r\n* Comply with Municipio Theme 5.21.0 changes to the fields storing information about what Schema Type is to be used by which post type.\r\n\r\n## AlgoliaIndex Js Searchpage Addon (3.2.2): \r\n\r\n* A smaller patch to correctly build the plugin assets has been implemented.\r\n* Lightweight library corrected and implemented.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.2.7...4.4.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.0",
+            "publishedAt": "2024-09-18T08:30:17Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Maintenance version 4.2.7",
+            "version": "4.2.7",
+            "body": "### Modularity (6.23.17)\r\n\r\n- Further improvements to Modularity UI regarding module lists.\r\n- **New Module: Audio**. Adds the ability to display a simple audio player.\r\n\r\n### Municipio Theme (5.15.10)\r\n\r\n- Prevents crash of page if a template that doesn't exist is defined in the database template field. Now gracefully falls back to \"page\" as a last resort.\r\n- Multiple minor patches to the flexible header.\r\n\r\n### Component Library (4.20.3)\r\n\r\n- Signature component no longer requires a published timestamp in order to display the last updated timestamp.\r\n- Comments component now correctly shows when the comment was made.\r\n\r\n### Modularity Form Builder (3.2.3)\r\n\r\n- Mitigations of errors when files are submitted with a form response.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.7",
+            "publishedAt": "2024-09-09T12:59:48Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Municipio 4.2.6 Release Notes",
+            "version": "4.2.6",
+            "body": "We\u2019re excited to introduce **Municipio 4.2.6**! This update enhances the user interface, resolves several bugs, and adds a brand-new module for an even better experience.\r\n\r\n## Styleguide (0.11.1106)\r\n\r\n- Allows selecting multiple instances of the same filter type.\r\n- Resolves a bug that made the user unable to expand compressed tags.\r\n\r\n## Component Library (4.19.1)\r\n\r\n- Adds the ability to truncate items in the breadcrumb component.\r\n- Forces dot icons on tags to be filled, not respecting icon style settings (improved visibility).\r\n- Fixed a bug in acceptance that prevented some JavaScripts from running.\r\n\r\n## Modularity (6.22.4)\r\n\r\n- Fixes the warning in the absence of a `classlist` provided for the breadcrumb component.\r\n- Introduced a new module for rendering menus (`Menu`, `mod-menu`).\r\n- Fixed broken icons in the editor, now being displayed properly with an improved UI and a more coherent interface.\r\n\r\n## Municipio (5.15.1)\r\n\r\n- Implements customizer capability to set the breadcrumb max length for labels before being truncated.\r\n- Adjustments made for flexible header alternative.\r\n- Fixes an issue that caused active menu items not being marked as active in manually entered menus.\r\n\r\n## Open Street Map (2.5.0)\r\n\r\n- The public filter now allows users to refine a hierarchical set of options.\r\n\r\n## Contact Banner (3.2.0)\r\n\r\n- Allows the user to select from a dropdown populated with icon alternatives rather than inputting a string representing a material icon.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.6",
+            "publishedAt": "2024-09-02T10:25:19Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Municipio 4.2.4 Release Notes",
+            "version": "4.2.4",
+            "body": "We are excited to announce the release of **Municipio 4.2.4**. This update has been rigorously tested for full compatibility with **PHP 8.3**, which we now recommend as the preferred PHP version for Municipio.\r\n\r\nBy upgrading to PHP 8.3 from the previously recommended PHP 8.2, you can experience up to a **40% faster page load time** when the object cache is primed.\r\n\r\n## General\r\n\r\n- The devcontainer now runs PHP 8.3, reflecting modern hosting environments and new default requirements for Municipio (we are still backwards compatible with PHP 8.2).\r\n\r\n## Municipio Theme (5.11.3)\r\n\r\n- **Related posts functionality** is now simplified. It only searches within the current post type and includes a `rand` in the query to generate more diverse results.\r\n- **View transitions** are now implemented by default. We intend to further explore this feature in the coming months to enhance the user experience.\r\n- **New header type: Flexible**. This header aims to replace the old \"Business\" and \"Casual\" headers by providing a drag-and-drop interface to build your own header layout.\r\n- **Bug fix:** Resolved an issue where post content was displayed on draft or private pages, even if the header response was sent as a 404.\r\n- **Resolved:** An issue where Kirki CSS rendering would stop functioning after applying new settings.\r\n\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.4",
+            "publishedAt": "2024-08-23T11:10:12Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.2.3",
+            "version": "4.2.3",
+            "body": "**Municipio Theme (5.8.11):**\r\n\r\n- Changes the filter to apply a default value of the icon type, to be able to explicitly set a overriding value locally where components are used.\r\n- Enqueues instantpage.js later on, so that the document has been fully loaded before init. This will enshure that instant page can work properly.\r\n- A fix has been made, to enable users to disable \"posts\" in the Theme Options.\r\n- Get related posts only runs on place templates. This may be changed in the future, when more types support this feature.\r\n\r\n**Component library(4.15.1):**\r\n\r\n- Adds support of default fill mode in the icon component.\r\n\r\n**Modaularity (6.19.0):**\r\n\r\n- Resolves an issue with like functionality for visit sites (main menu counter)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.3",
+            "publishedAt": "2024-08-19T09:55:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        }
+    ]
+}

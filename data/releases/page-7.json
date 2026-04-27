@@ -1,0 +1,108 @@
+{
+    "source": "releases",
+    "sourceScope": "GitHub",
+    "generatedAt": "2026-04-27T20:26:13+00:00",
+    "count": 76,
+    "pageSize": 10,
+    "pageNumber": 7,
+    "pageCount": 8,
+    "repository": {
+        "owner": "municipio-se",
+        "name": "municipio-deployment",
+        "fullName": "municipio-se/municipio-deployment",
+        "description": "",
+        "url": "https://github.com/municipio-se/municipio-deployment"
+    },
+    "items": [
+        {
+            "title": "4.0.5",
+            "version": "4.0.5",
+            "body": "A new week brings an exciting new release! Introducing version 405 \u2013 Method Not Allowed. Here are the key updates in this release:\r\n\r\n## What's Changed\r\n- Municipio (v4.33.2): Improvements regarding the functionality to load themes into posttypes.\r\n- Modularity (v6.18.7): An automatic mode has been added to the language option. This feature automatically detects the language of a module and tags it with the appropriate language attributes based on the detection.\r\n- Event Manager Integration (v2.0.16): A fix has been implemented to list all available tags for events, removing the previous cap of 100 items. Now, all available tags are displayed in the dropdown menu.\r\n- Like posts (v2.4.17): Fixes an issue where the cron job might crash if the settings page has not been saved.\r\n\r\nThis will be the last scheduled release for this term. During the summer, releases may be done, but not according to out weekly schedule.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.5",
+            "publishedAt": "2024-06-10T12:49:49Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.4",
+            "version": "4.0.4",
+            "body": "We are pleased to announce the release of Municipio 4.0.4, which brings a set of changes intended to resolve a set of reported bugs.\r\n\r\n## What's Changed\r\n- Municipio Theme (v4.31.0): The ability to set a complementary colorscheme on any public post type. This feature was requested in order to implement a site-in-site apperance.\r\n- Modularity (v6.16.12): A new CLI command for upgrading database version [wp modularity upgrade]. This action do not run automatically anymore, due to some issues deploying on large high-traffic networks. In short; Multiple sites upgrading at the same time, could temporarily affect load time negatively.\r\n- Modularity (6.16.14): An issue with wp-rest refreshment of modules has been fixed when using page cache engines (nonce validation).\r\n- Modularity (v6.17.0): A correction of the previous migration has been made, to enshure proper migration of inner blocks.\r\n- Modularity (v6.17.2): A issue with saving post type modules has been corrected.\r\n- Modularity (v6.18.0): Information message in admin, when a upgraded database version was found.\r\n- Modularity (v6.19.1): Resolves an issue with modules not being saved to posts due to faulty usage of module-area inheritance (mis-match in module areas on different post types).",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.4",
+            "publishedAt": "2024-06-03T09:47:46Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.2",
+            "version": "4.0.2",
+            "body": "Primarily focuses on bug fixes to improve the stability and performance of our platform. Here are the key issues addressed in this release. \r\n\r\n## What's Changed\r\n\r\n**Breadcrumb Links to Non-existent Pages:** \r\nPreviously, breadcrumb links were generating URLs that led to 404 error pages when the target page did not exist. This issue has been resolved, and such breadcrumb links will no longer be created.\r\n\r\n**\u201dShow Archive\u201d Button Disappearing in the \u201dPosts\u201d Module:** \r\nAn issue was identified where the \u201dShow Archive\u201d button would disappear in the \u201dPosts\u201d module. This problem has now been fixed, ensuring the button remains visible and functional.\r\n\r\n**Conditional Form Fields with Identical Descriptive Text:** \r\nThere was a problem where fields in conditional forms had the same descriptive text, leading to confusion and potential errors. This issue has been corrected, and each field now has unique and accurate descriptive text.\r\n\r\n**Module Sidebar Incompatibility:** \r\nAn issue with the module sidebar compatibility function resulted in modules being unable to be linked to a page. Instead, users were displayed another page ID. This issue has now been resolved, ensuring that modules can be correctly linked to the intended page.\r\n\r\n**Instantpage.js Update:** \r\nThe Instantpage.js library has been updated to support the speculative API, enhancing the performance and speed of page loads.\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.0.1...4.0.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.2",
+            "publishedAt": "2024-05-20T11:56:46Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.1",
+            "version": "4.0.1",
+            "body": "Municipio 4.0.1 Maintanaince release. \r\nThis release focus is to improve some usability conserns raised by DIGG (Swedish Agency for Digital Government). \r\n\r\n## What's Changed\r\n- Icons that are purely decorative wont be read to the user. \r\n- Search result page now has a required h1 tag. \r\n- Field validation is now triggered on key-up event, to enable tabbing to submit buttons. \r\n- A fix for invisible :focus on some elements. \r\n- Language selector now identifies users current language, and changes the label.\r\n- Items in language selector now automatically includes the language of the item, and adds a nofollow reference. \r\n- Search icons now have a visible label\r\n- Fields for describing images are now sourced from the image metadata itself. \r\n- Social media icons added ontop of material icons. \r\n\r\n## What's Changed in deployment repo\r\n* fix: prevent script concatenation by default by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/20\r\n* feat: adding modularity-dynamic-guides plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/21\r\n* docs: update README to align with the 4.0.0 release by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/22\r\n* feat: adding remove user mu plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/23\r\n* fix: add a custom constant to identify devcontainers. by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/24\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.1",
+            "publishedAt": "2024-05-13T13:03:41Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.0.0",
+            "version": "4.0.0",
+            "body": "## What's Changed\r\n* chore: add redis and phpsab to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/13\r\n* chore: add ssl support to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/15\r\n* refactor: Use FS_METHOD direct in devcontainer by @annalinneajohansson in https://github.com/municipio-se/municipio-deployment/pull/16\r\n* Municipio 4.0.0 - Stable release (290224) by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/18\r\n\r\n## New Contributors\r\n* @annalinneajohansson made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/16\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.7.0...4.0.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.0",
+            "publishedAt": "2024-02-29T08:07:49Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "281123 - Stable Release",
+            "version": "3.7.0",
+            "body": "This update marks the deprecation of the Module Index, transferring legacy data to the newly introduced \"Manual Input\" module. This change is a pivotal step in a series of developments aimed at streamlining the posts module, ultimately phasing out manual input to enhance efficiency and user experience.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.7.0",
+            "publishedAt": "2023-11-28T10:51:00Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "091123 - Stable Release [Maintenance release]",
+            "version": "3.6.0",
+            "body": "**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.5.1...3.6.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.6.0",
+            "publishedAt": "2023-11-09T10:00:33Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "061123 - Stable Release [Maintenance release]",
+            "version": "3.5.1",
+            "body": "### Bug Fixes and Improvements\r\nHeader H1 Removal\r\n\r\nHeader H1 has been removed from the editor to enhance readability.\r\nEmpty Customer Feedback Emails\r\n\r\nCustomer feedback emails will no longer be sent empty if there is no feedback provided.\r\nSlider Start Page Issue\r\n\r\nThe slider now correctly starts from page 1 instead of page 2.\r\nDefault Customizer Colors\r\n\r\nDefault values in the customizer for colors have been reviewed and improved.\r\nPublished Changes\r\n\r\nFixes have been implemented to ensure that published changes are correctly displayed.\r\nSegment Manual Input Button Default Value\r\n\r\nDefault values for the Segment Manual Input button have been adjusted.\r\nHeading Level Issue\r\n\r\nCorrected a problem with heading levels in the content.\r\nManual Input Box Icons\r\n\r\nIcons within the manual input box now function as expected.\r\nManual Input Collection Items\r\n\r\nManual input collection items no longer display p-tags erroneously.\r\nManual Input Segment Button\r\n\r\nThe manual input segment button now appears only when a link is present.\r\nShortcodes in Post Module\r\n\r\nShortcodes are now visible in the post module as intended.\r\nSlider Area on Single Pages\r\n\r\nThe slider area will no longer disappear on single pages when the visit plugin is activated.\r\nConsistent \"Kort\" Manual Input Height\r\n\r\nEnsured a consistent height for \"kort\" manual input.\r\nAmpersand (&Amp) Issue\r\n\r\nAddressed and resolved the ampersand issue for improved rendering.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.5.1",
+            "publishedAt": "2023-11-06T12:49:09Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "231023 - Stable Release",
+            "version": "3.5.0",
+            "body": "## What's Changed\r\n* Fix: Modularity form builder correct version by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/10\r\n* Fix: Latest api-event-manager by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/11\r\n\r\n## New Contributors\r\n* @NiclasNorin made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/10\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.4.2...3.5.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.5.0",
+            "publishedAt": "2023-10-24T08:17:42Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "231003 - Stable Release",
+            "version": "3.4.0",
+            "body": "**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.3.0...3.4.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.4.0",
+            "publishedAt": "2023-10-03T11:51:47Z",
+            "isPrerelease": false,
+            "isDraft": false
+        }
+    ]
+}

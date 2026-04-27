@@ -1,10 +1,10 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-04-27T19:33:16+00:00",
-    "count": 0,
+    "generatedAt": "2026-04-27T20:26:13+00:00",
+    "count": 76,
     "pageSize": 10,
-    "pageCount": 0,
+    "pageCount": 8,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -12,5 +12,46 @@
         "description": "",
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
-    "pages": []
+    "pages": [
+        {
+            "pageNumber": 1,
+            "file": "page-1.json",
+            "itemCount": 10
+        },
+        {
+            "pageNumber": 2,
+            "file": "page-2.json",
+            "itemCount": 10
+        },
+        {
+            "pageNumber": 3,
+            "file": "page-3.json",
+            "itemCount": 10
+        },
+        {
+            "pageNumber": 4,
+            "file": "page-4.json",
+            "itemCount": 10
+        },
+        {
+            "pageNumber": 5,
+            "file": "page-5.json",
+            "itemCount": 10
+        },
+        {
+            "pageNumber": 6,
+            "file": "page-6.json",
+            "itemCount": 10
+        },
+        {
+            "pageNumber": 7,
+            "file": "page-7.json",
+            "itemCount": 10
+        },
+        {
+            "pageNumber": 8,
+            "file": "page-8.json",
+            "itemCount": 6
+        }
+    ]
 }

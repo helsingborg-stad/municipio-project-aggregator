@@ -1,0 +1,72 @@
+{
+    "source": "releases",
+    "sourceScope": "GitHub",
+    "generatedAt": "2026-04-27T20:26:13+00:00",
+    "count": 76,
+    "pageSize": 10,
+    "pageNumber": 8,
+    "pageCount": 8,
+    "repository": {
+        "owner": "municipio-se",
+        "name": "municipio-deployment",
+        "fullName": "municipio-se/municipio-deployment",
+        "description": "",
+        "url": "https://github.com/municipio-se/municipio-deployment"
+    },
+    "items": [
+        {
+            "title": "230928 -  Stable Release",
+            "version": "3.3.0",
+            "body": "Installer is updated to require stable releases of each plugin. For development purposes, a devcontainer also is embedded into this install. \r\n\r\n## What's Changed\r\n* Created a dependency checker by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/6\r\n* Efficient build  by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/7\r\n* Update versions to latests for helsingborg-stad packages by @Sven65 in https://github.com/municipio-se/municipio-deployment/pull/9\r\n* feat: add devcontainer files by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/8\r\n\r\n## New Contributors\r\n* @sebastianthulin made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/6\r\n* @Sven65 made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/9\r\n* @thorbrink made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/8\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.2.4...3.3.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.3.0",
+            "publishedAt": "2023-09-28T14:09:32Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Maintenance version 3.2.4",
+            "version": "3.2.4",
+            "body": "This release includes an update for litespeed common settings and a real nonce field for the active directory integration, to accomodate the requirement of ESI cache bypassing. \r\n\r\nLitespeed needs to include _ad_nonce as a nonce esi include. ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.4",
+            "publishedAt": "2023-06-29T08:50:04Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "3.2.1",
+            "version": "3.2.1",
+            "body": "This release is a patch, including project manager integration to allow users to build innovation plugins.\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.2.0...3.2.1",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.1",
+            "publishedAt": "2023-06-15T07:24:16Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 3.2.0",
+            "version": "3.2.0",
+            "body": "## Release Notes - 3.2.0\r\n\r\n- Algolia search now supports searching for custom taxonomies/terms.\r\n- Herovideo now supports the \"poster\" attribute.\r\n- Added padding/margin to headers in the post module.\r\n- Improved visibility of the current page in the side navigation.\r\n- Tags are now compressed for optimized performance.\r\n- The heart icon now properly appears above the filtering list.\r\n- OpenStreetMap has undergone accessibility testing.\r\n\r\nBug Fixes:\r\n\r\n- The module now displays an appropriate icon in the module list.\r\n- Modified the message displayed when submitting an email address.\r\n- Empty required fields now validate correctly in general forms.\r\n- Added ListID for proper functionality.\r\n- Improved translation accuracy for the add-on.\r\n- Resolved the issue of oversized sliders on culture websites.\r\n- Enhanced the display of posts in the \"Right Sidebar\" on term pages.\r\n- Added hover effect for improved appearance of quick links row.\r\n- Removed manual input of link in linked card content.\r\n- Randomized the order of sidebar visits on archive pages.\r\n- Updated URL to reflect changes when new states are pushed on the map.\r\n- Removed title translation in place, improving translation.\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.0",
+            "publishedAt": "2023-06-14T08:57:04Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "3.1.0",
+            "version": "3.1.0",
+            "body": "Adds a parameter in the deployment process allowing a custom port number to deploy towards. A new secret must be defined for all deployment flows according to the following: \r\n\r\nDEPLOY_REMOTE_PORT_STAGE (use port 22 if in doubt)\r\nDEPLOY_REMOTE_PORT_PROD (use port 22 if in doubt)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.1.0",
+            "publishedAt": "2023-05-29T11:15:07Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Maintenance version 3.0.1",
+            "version": "3.0.1",
+            "body": "2023-01-05\r\n\r\nGeneral patches of bugs and improvements of usability. Some of the new key features are: \r\n\r\n- Support for dropdown menus in primary menu (Municipio).\r\n- Support for captions in uploaded videos (Modularity).\r\n- Aside tags for all modules in sidebars.\r\n- Better (automatic fetching) cover-art support for vimeo and youtube videos. \r\n- In content-images are now being rendered as a component. \r\n- HTML markup in event pages improved. \r\n- Gallery component improvement. ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.0.1",
+            "publishedAt": "2023-01-05T09:33:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        }
+    ]
+}
