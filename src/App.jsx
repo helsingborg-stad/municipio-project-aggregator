@@ -543,10 +543,19 @@ function ItemDetailPanel({ item }) {
   );
 }
 
+function hasItemDetailContent(item) {
+  return hasSubIssues(item)
+    || item.relationshipSummary.totalBlockedBy > 0
+    || item.relationshipSummary.totalBlocking > 0
+    || (item.relationships?.length ?? 0) > 0;
+}
+
 function TrackedItemCard({ item, showRepository = false }) {
+  const hasDetailContent = hasItemDetailContent(item);
+
   return (
     <li className="source-item-card rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
-      <div className="source-item-card__content grid gap-4">
+      <div className={`source-item-card__content grid gap-4 ${hasDetailContent ? '' : 'source-item-card__content--summary-only'}`}>
         <a
           href={item.url}
           target="_blank"

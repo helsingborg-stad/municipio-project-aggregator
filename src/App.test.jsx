@@ -344,5 +344,6 @@ describe('App', () => {
     const issueChildCard = screen.getByText('Issue alpha child').closest('li');
 
     expect(issueChildCard.querySelector('.source-item-card__details')).toBeNull();
+    expect(issueChildCard.querySelector('.source-item-card__content')).toHaveClass('source-item-card__content--summary-only');
   });
 });

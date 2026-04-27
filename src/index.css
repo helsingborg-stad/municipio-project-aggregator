@@ -51,6 +51,10 @@
       align-items: start;
     }
 
+    .source-item-card__content--summary-only {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
     .source-item-card__details {
       height: 100%;
     }
