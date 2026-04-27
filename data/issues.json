@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T13:02:22+00:00",
+    "generatedAt": "2026-04-27T13:06:31+00:00",
     "count": 17,
     "repositories": [
         {
@@ -101,17 +101,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-testimonials",
-            "fullName": "helsingborg-stad/modularity-testimonials",
-            "description": "Modularity plugin to display testemonials",
-            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "webhooks-manager",
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-testimonials",
+            "fullName": "helsingborg-stad/modularity-testimonials",
+            "description": "Modularity plugin to display testemonials",
+            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
         },
         {
             "owner": "helsingborg-stad",
@@ -255,13 +255,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "acf-icon-field",
             "fullName": "helsingborg-stad/acf-icon-field",
             "description": "",
@@ -273,6 +266,13 @@
             "fullName": "helsingborg-stad/mod-my-pages",
             "description": "",
             "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
