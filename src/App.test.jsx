@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import App from './App';
@@ -251,5 +251,60 @@ describe('App', () => {
     });
 
     expect(screen.getByText(formatTimestamp(issuesPayload.items[0].createdAt)).closest('div')).toHaveClass('whitespace-nowrap');
+  });
+
+  it('shows people in the card corner and hides empty stats and cross-reference labels', async () => {
+    vi.stubGlobal('fetch', vi.fn(async (input) => {
+      const url = String(input);
+
+      if (url.includes('issues.json')) {
+        return {
+          ok: true,
+          json: async () => ({
+            ...issuesPayload,
+            items: issuesPayload.items.map((item) => ({
+              ...item,
+              subIssues: { total: 0, completed: 0, percentCompleted: 0 },
+              assignees: [{
+                login: 'octocat-with-a-very-long-name-that-should-not-overflow-the-card-layout',
+                avatarUrl: 'https://avatars.example.com/octocat-long.png',
+                url: 'https://github.com/octocat-with-a-very-long-name-that-should-not-overflow-the-card-layout',
+              }],
+              relationshipSummary: { blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0, linked: 1 },
+              relationships: [{
+                event: 'cross referenced',
+                title: 'Related issue gamma',
+                url: 'https://github.com/helsingborg-stad/plugin-alpha/issues/99',
+                repository: 'helsingborg-stad/plugin-alpha',
+              }],
+            })),
+          }),
+        };
+      }
+
+      return {
+        ok: true,
+        json: async () => pullRequestsPayload,
+      };
+    }));
+
+    render(<App />);
+
+    await screen.findByText('Issue alpha');
+    const issueCard = screen.getByText('Issue alpha').closest('li');
+    const authorAvatar = screen.getAllByTitle('Author: octocat')[0];
+    const authorTooltip = authorAvatar.lastElementChild;
+
+    expect(screen.getAllByTitle('Author: octocat').length).toBeGreaterThan(0);
+    expect(screen.getAllByTitle('Assignee: octocat-with-a-very-long-name-that-should-not-overflow-the-card-layout').length).toBeGreaterThan(0);
+    expect(authorAvatar).toHaveClass('group/avatar');
+    expect(authorTooltip).toHaveClass('group-hover/avatar:opacity-100');
+    expect(authorTooltip).not.toHaveClass('group-hover:opacity-100');
+    expect(within(issueCard).queryByText('Assignees')).not.toBeInTheDocument();
+    expect(within(issueCard).queryByText(/^Author:/)).not.toBeInTheDocument();
+    expect(within(issueCard).queryByText('Sub-issues')).not.toBeInTheDocument();
+    expect(within(issueCard).queryByText('Dependencies')).not.toBeInTheDocument();
+    expect(within(issueCard).getByText('Related issue gamma')).toBeInTheDocument();
+    expect(within(issueCard).queryByText('cross referenced')).not.toBeInTheDocument();
   });
 });

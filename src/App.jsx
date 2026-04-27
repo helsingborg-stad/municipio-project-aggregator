@@ -264,12 +264,53 @@ function Avatar({ person, fallbackLabel }) {
   }
 
   return (
-    <div className="flex items-center gap-2 rounded-full bg-white/5 px-2.5 py-1 text-xs text-slate-200 ring-1 ring-white/10">
+    <div className="flex max-w-full min-w-0 items-center gap-2 rounded-full bg-white/5 px-2.5 py-1 text-xs text-slate-200 ring-1 ring-white/10">
       <AvatarImage person={person} />
-      <span>
+      <span className="truncate">
         {fallbackLabel ? `${fallbackLabel}: ` : ''}
         {person.login}
       </span>
+    </div>
+  );
+}
+
+function PersonHoverAvatar({ person, roleLabel }) {
+  if (!person?.login) {
+    return null;
+  }
+
+  return (
+    <div className="group/avatar relative" title={`${roleLabel}: ${person.login}`}>
+      <div className="rounded-full ring-1 ring-white/10 transition-colors group-hover/avatar:ring-cyan-300/50">
+        <AvatarImage person={person} sizeClassName="h-8 w-8" fallbackTextClassName="text-xs" />
+      </div>
+      <div className="pointer-events-none absolute right-0 top-full z-10 mt-2 w-max max-w-48 rounded-xl border border-white/10 bg-slate-950/95 px-3 py-2 text-right text-xs text-slate-200 opacity-0 shadow-xl transition-opacity group-hover/avatar:opacity-100">
+        <div className="font-medium text-white">{person.login}</div>
+        <div className="mt-0.5 uppercase tracking-[0.2em] text-slate-500">{roleLabel}</div>
+      </div>
+    </div>
+  );
+}
+
+function CardPeopleCluster({ author, assignees }) {
+  const people = [
+    author?.login ? { key: `author:${author.login}`, person: author, roleLabel: 'Author' } : null,
+    ...(assignees ?? []).filter((assignee) => assignee?.login).map((assignee) => ({
+      key: `assignee:${assignee.login}`,
+      person: assignee,
+      roleLabel: 'Assignee',
+    })),
+  ].filter(Boolean);
+
+  if (people.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="flex flex-wrap justify-end gap-2">
+      {people.map(({ key, person, roleLabel }) => (
+        <PersonHoverAvatar key={key} person={person} roleLabel={roleLabel} />
+      ))}
     </div>
   );
 }
@@ -280,7 +321,7 @@ function AssigneeStack({ assignees }) {
   }
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex min-w-0 flex-wrap gap-2">
       {assignees.map((assignee) => (
         <Avatar key={assignee.login} person={assignee} />
       ))}
@@ -425,29 +466,31 @@ function ItemBadgeRow({ item }) {
 }
 
 function ItemDetailPanel({ item }) {
+  const showSubIssues = hasSubIssues(item);
+  const hasDependencySummary = item.relationshipSummary.totalBlockedBy > 0 || item.relationshipSummary.totalBlocking > 0;
+
   return (
     <div className="source-item-card__details grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
-      <div className="source-item-card__meta-row flex flex-wrap items-center gap-2">
-        <Avatar person={item.author} fallbackLabel="Author" />
-      </div>
-      <div className="source-item-card__meta-section space-y-2">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Assignees</p>
-        <AssigneeStack assignees={item.assignees} />
-      </div>
-      <div className="source-item-card__stats grid gap-2 text-xs text-slate-400">
-        <div className="rounded-2xl bg-white/5 px-3 py-2">
-          <span className="block text-slate-500">Sub-issues</span>
-          <span className="font-medium text-slate-100">
-            {item.subIssues.completed}/{item.subIssues.total} completed
-          </span>
+      {showSubIssues || hasDependencySummary ? (
+        <div className="source-item-card__stats grid gap-2 text-xs text-slate-400">
+          {showSubIssues ? (
+            <div className="rounded-2xl bg-white/5 px-3 py-2">
+              <span className="block text-slate-500">Sub-issues</span>
+              <span className="font-medium text-slate-100">
+                {item.subIssues.completed}/{item.subIssues.total} completed
+              </span>
+            </div>
+          ) : null}
+          {hasDependencySummary ? (
+            <div className="rounded-2xl bg-white/5 px-3 py-2">
+              <span className="block text-slate-500">Dependencies</span>
+              <span className="font-medium text-slate-100">
+                {item.relationshipSummary.totalBlockedBy} blocked by, {item.relationshipSummary.totalBlocking} blocking
+              </span>
+            </div>
+          ) : null}
         </div>
-        <div className="rounded-2xl bg-white/5 px-3 py-2">
-          <span className="block text-slate-500">Dependencies</span>
-          <span className="font-medium text-slate-100">
-            {item.relationshipSummary.totalBlockedBy} blocked by, {item.relationshipSummary.totalBlocking} blocking
-          </span>
-        </div>
-      </div>
+      ) : null}
       {item.relationships?.length ? (
         <div className="space-y-2">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Relationships</p>
@@ -464,7 +507,9 @@ function ItemDetailPanel({ item }) {
                     <span className="font-medium text-slate-100">{relationship.title}</span>
                     <span className="ml-2 text-slate-500">{relationship.repository}</span>
                   </span>
-                  <Badge variant="secondary">{relationship.event}</Badge>
+                  {relationship.event?.toLowerCase() !== 'cross referenced' ? (
+                    <Badge variant="secondary">{relationship.event}</Badge>
+                  ) : null}
                 </a>
               </li>
             ))}
@@ -483,9 +528,9 @@ function TrackedItemCard({ item, showRepository = false }) {
           href={item.url}
           target="_blank"
           rel="noreferrer"
-          className="source-item-card__link group flex items-start justify-between gap-3"
+          className="source-item-card__link group flex items-start justify-between gap-4"
         >
-          <div className="source-item-card__summary min-w-0">
+          <div className="source-item-card__summary min-w-0 flex-1">
             {showRepository ? (
               <div className="mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
                 <FolderKanban className="h-3.5 w-3.5" />
@@ -503,7 +548,10 @@ function TrackedItemCard({ item, showRepository = false }) {
               <span>{formatTimestamp(item.createdAt)}</span>
             </div>
           </div>
-          <ArrowUpRight className="source-item-card__icon mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+          <div className="flex shrink-0 flex-col items-end gap-3">
+            <CardPeopleCluster author={item.author} assignees={item.assignees} />
+            <ArrowUpRight className="source-item-card__icon mt-0.5 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+          </div>
         </a>
 
         <ItemDetailPanel item={item} />
