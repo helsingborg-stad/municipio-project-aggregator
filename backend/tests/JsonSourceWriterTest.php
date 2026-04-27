@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace MunicipioProjectAggregator\Tests;
 
 use MunicipioProjectAggregator\Backend\Data\AggregatedItem;
+use MunicipioProjectAggregator\Backend\Data\ReleaseEntry;
+use MunicipioProjectAggregator\Backend\Data\ReleasePayload;
+use MunicipioProjectAggregator\Backend\Data\RepositoryReference;
 use MunicipioProjectAggregator\Backend\Data\SourcePayload;
 use MunicipioProjectAggregator\Backend\Output\JsonSourceWriter;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -26,6 +29,10 @@ final class JsonSourceWriterTest extends TestCase
     {
         if (is_file($this->outputDirectory . '/issues.json')) {
             unlink($this->outputDirectory . '/issues.json');
+        }
+
+        if (is_file($this->outputDirectory . '/releases.json')) {
+            unlink($this->outputDirectory . '/releases.json');
         }
 
         if (is_dir($this->outputDirectory)) {
@@ -58,6 +65,7 @@ final class JsonSourceWriterTest extends TestCase
                 null,
                 'Bug',
                 ['total' => 1, 'completed' => 0, 'percentCompleted' => 0],
+                [],
                 ['blockedBy' => 0, 'totalBlockedBy' => 0, 'blocking' => 0, 'totalBlocking' => 0, 'linked' => 0],
                 [],
             )],
@@ -73,5 +81,42 @@ final class JsonSourceWriterTest extends TestCase
         self::assertStringContainsString('"count": 1', $contents);
         self::assertStringContainsString('"repositories": [', $contents);
         self::assertStringContainsString('"author"', $contents);
+    }
+
+    /**
+     * @return void
+     */
+    public function testWritePersistsReleasePayloads(): void
+    {
+        $writer = new JsonSourceWriter($this->outputDirectory);
+        $payload = new ReleasePayload(
+            'releases',
+            'GitHub',
+            new RepositoryReference(
+                'municipio-se',
+                'municipio-deployment',
+                'Deployment helpers',
+                'https://github.com/municipio-se/municipio-deployment',
+            ),
+            '2026-04-27T08:00:00+00:00',
+            [new ReleaseEntry(
+                'Release 3.2.1',
+                'v3.2.1',
+                '## Highlights',
+                'https://github.com/municipio-se/municipio-deployment/releases/tag/v3.2.1',
+                '2026-04-26T08:00:00+00:00',
+                false,
+                false,
+            )],
+        );
+
+        $filePath = $writer->write($payload);
+
+        self::assertFileExists($filePath);
+        $contents = file_get_contents($filePath);
+        self::assertIsString($contents);
+        self::assertStringContainsString('"source": "releases"', $contents);
+        self::assertStringContainsString('"repository": {', $contents);
+        self::assertStringContainsString('"version": "v3.2.1"', $contents);
     }
 }

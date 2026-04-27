@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MunicipioProjectAggregator\Backend\Output;
 
-use MunicipioProjectAggregator\Backend\Data\SourcePayload;
+use MunicipioProjectAggregator\Backend\Contracts\JsonOutputPayloadInterface;
 use RuntimeException;
 
 /**
@@ -20,10 +20,10 @@ final class JsonSourceWriter
     }
 
     /**
-     * @param SourcePayload $payload Payload to persist.
+    * @param JsonOutputPayloadInterface $payload Payload to persist.
      * @return string Written file path.
      */
-    public function write(SourcePayload $payload): string
+    public function write(JsonOutputPayloadInterface $payload): string
     {
         if (!is_dir($this->outputDirectory) && !mkdir($this->outputDirectory, 0777, true) && !is_dir($this->outputDirectory)) {
             throw new RuntimeException(sprintf('Unable to create output directory: %s', $this->outputDirectory));

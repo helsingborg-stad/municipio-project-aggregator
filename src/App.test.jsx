@@ -109,6 +109,40 @@ const pullRequestsPayload = {
   ],
 };
 
+const releasesPayload = {
+  source: 'releases',
+  sourceScope: 'GitHub',
+  generatedAt: '2026-04-26T11:00:00Z',
+  count: 2,
+  repository: {
+    owner: 'municipio-se',
+    name: 'municipio-deployment',
+    fullName: 'municipio-se/municipio-deployment',
+    description: 'Deployment tooling',
+    url: 'https://github.com/municipio-se/municipio-deployment',
+  },
+  items: [
+    {
+      title: 'Release 3.2.1',
+      version: 'v3.2.1',
+      body: '## Highlights\n\n- Added rollout support\n- Improved logs',
+      url: 'https://github.com/municipio-se/municipio-deployment/releases/tag/v3.2.1',
+      publishedAt: '2026-04-26T08:00:00Z',
+      isPrerelease: false,
+      isDraft: false,
+    },
+    {
+      title: 'Release 3.2.0-rc1',
+      version: 'v3.2.0-rc1',
+      body: 'Release candidate',
+      url: 'https://github.com/municipio-se/municipio-deployment/releases/tag/v3.2.0-rc1',
+      publishedAt: '2026-04-20T08:00:00Z',
+      isPrerelease: true,
+      isDraft: false,
+    },
+  ],
+};
+
 describe('App', () => {
   afterEach(() => {
     vi.restoreAllMocks();
@@ -120,9 +154,23 @@ describe('App', () => {
     vi.stubGlobal('fetch', vi.fn(async (input) => {
       const url = String(input);
 
+      if (url.includes('issues.json')) {
+        return {
+          ok: true,
+          json: async () => issuesPayload,
+        };
+      }
+
+      if (url.includes('pull-requests.json')) {
+        return {
+          ok: true,
+          json: async () => pullRequestsPayload,
+        };
+      }
+
       return {
         ok: true,
-        json: async () => (url.includes('issues.json') ? issuesPayload : pullRequestsPayload),
+        json: async () => releasesPayload,
       };
     }));
   }
@@ -178,6 +226,37 @@ describe('App', () => {
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
     expect(await screen.findByText('No authors match the current search.')).toBeInTheDocument();
+  });
+
+  it('renders a release log tab with markdown content', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    await screen.findByText('2 of 2 open issues');
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Release log' }));
+
+    expect(await screen.findByRole('heading', { name: 'Release log' })).toBeInTheDocument();
+    expect(screen.getByText('v3.2.1')).toBeInTheDocument();
+    expect(screen.getByText('Highlights')).toBeInTheDocument();
+    expect(screen.getByText('Added rollout support')).toBeInTheDocument();
+    expect(screen.getByText('Pre-release')).toBeInTheDocument();
+    expect(window.location.search).toBe('?tab=releases');
+  });
+
+  it('filters release entries with the shared search input', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    await screen.findByText('2 of 2 open issues');
+
+    fireEvent.change(screen.getByRole('searchbox', { name: 'Search all tabs' }), { target: { value: 'v3.2.0-rc1' } });
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Release log' }));
+
+    expect(await screen.findByText('Release 3.2.0-rc1')).toBeInTheDocument();
+    expect(screen.getByText('1 releases')).toBeInTheDocument();
   });
 
   it('restores the selected main tab from the url', async () => {

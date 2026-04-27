@@ -4,6 +4,7 @@
 declare(strict_types=1);
 
 use MunicipioProjectAggregator\Backend\Config\BuildConfig;
+use MunicipioProjectAggregator\Backend\GitHub\GitHubReleaseAggregator;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubRestClient;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubSourceAggregator;
 use MunicipioProjectAggregator\Backend\GitHub\SourceType;
@@ -42,6 +43,10 @@ $aggregator = new GitHubSourceAggregator(
     new GitHubRestClient(new StreamHttpClient()),
 );
 
+$releaseAggregator = new GitHubReleaseAggregator(
+    new GitHubRestClient(new StreamHttpClient()),
+);
+
 $writer = new JsonSourceWriter($config->outputDirectory());
 
 foreach ([SourceType::Issues, SourceType::PullRequests] as $sourceType) {
@@ -50,6 +55,11 @@ foreach ([SourceType::Issues, SourceType::PullRequests] as $sourceType) {
     $filePath = $writer->write($payload);
     fwrite(STDOUT, sprintf("  Wrote %s\n", $filePath));
 }
+
+fwrite(STDOUT, "Fetching releases...\n");
+$releasePayload = $releaseAggregator->aggregate($config, 'municipio-se', 'municipio-deployment');
+$releaseFilePath = $writer->write($releasePayload);
+fwrite(STDOUT, sprintf("  Wrote %s\n", $releaseFilePath));
 
 /**
  * @return int

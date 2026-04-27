@@ -7,24 +7,22 @@ namespace MunicipioProjectAggregator\Backend\Data;
 use MunicipioProjectAggregator\Backend\Contracts\JsonOutputPayloadInterface;
 
 /**
- * Frontend payload for one source file.
+ * Frontend payload for the release log.
  */
-final class SourcePayload implements JsonOutputPayloadInterface
+final class ReleasePayload implements JsonOutputPayloadInterface
 {
     /**
      * @param string $source Source key used for the output filename.
-     * @param string $sourceScope Display label for the repository discovery scope.
-     * @param array<int, string> $topics Repository topics used in the query.
+     * @param string $sourceScope Display label for the data source.
+     * @param RepositoryReference $repository Repository the releases belong to.
      * @param string $generatedAt ISO 8601 aggregation timestamp.
-     * @param array<int, RepositoryReference> $repositories Matched repositories.
-     * @param array<int, AggregatedItem> $items Aggregated items.
+     * @param array<int, ReleaseEntry> $items Release entries.
      */
     public function __construct(
         private readonly string $source,
         private readonly string $sourceScope,
-        private readonly array $topics,
+        private readonly RepositoryReference $repository,
         private readonly string $generatedAt,
-        private readonly array $repositories,
         private readonly array $items,
     ) {
     }
@@ -45,15 +43,11 @@ final class SourcePayload implements JsonOutputPayloadInterface
         return [
             'source' => $this->source,
             'sourceScope' => $this->sourceScope,
-            'topics' => $this->topics,
             'generatedAt' => $this->generatedAt,
             'count' => count($this->items),
-            'repositories' => array_map(
-                static fn (RepositoryReference $repository): array => $repository->toArray(),
-                $this->repositories,
-            ),
+            'repository' => $this->repository->toArray(),
             'items' => array_map(
-                static fn (AggregatedItem $item): array => $item->toArray(),
+                static fn (ReleaseEntry $item): array => $item->toArray(),
                 $this->items,
             ),
         ];

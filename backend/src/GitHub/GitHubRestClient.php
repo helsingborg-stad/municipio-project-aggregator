@@ -261,6 +261,45 @@ final class GitHubRestClient
     }
 
     /**
+     * @param RepositoryReference $repository
+     * @param string $token
+     * @return array<int, array<string, mixed>>
+     */
+    public function listReleases(RepositoryReference $repository, string $token): array
+    {
+        $releases = [];
+        $page = 1;
+
+        do {
+            $response = $this->getJson(
+                sprintf(
+                    '%s/repos/%s/%s/releases?per_page=%d&page=%d',
+                    self::API_URL,
+                    rawurlencode($repository->owner()),
+                    rawurlencode($repository->name()),
+                    self::PAGE_SIZE,
+                    $page,
+                ),
+                $token,
+            );
+
+            if (!is_array($response)) {
+                return $releases;
+            }
+
+            foreach ($response as $release) {
+                if (is_array($release)) {
+                    $releases[] = $release;
+                }
+            }
+
+            $page++;
+        } while (count($response) === self::PAGE_SIZE);
+
+        return $releases;
+    }
+
+    /**
      * @param RuntimeException $exception
      * @return bool
      */

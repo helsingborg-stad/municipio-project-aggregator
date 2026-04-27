@@ -207,7 +207,7 @@ function isFuzzyMatch(value, query) {
   }));
 }
 
-function matchesSearchQuery(values, searchQuery) {
+export function matchesSearchQuery(values, searchQuery) {
   const normalizedSearchQuery = normalizeSearchQuery(searchQuery);
 
   if (!normalizedSearchQuery) {
@@ -269,6 +269,15 @@ export function filterAuthors(authors, searchQuery) {
     author.login,
     author.company,
     author.url,
+  ], searchQuery));
+}
+
+export function filterReleases(releases, searchQuery) {
+  return releases.filter((release) => matchesSearchQuery([
+    release.title,
+    release.version,
+    release.body,
+    release.url,
   ], searchQuery));
 }
 

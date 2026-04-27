@@ -1,5 +1,7 @@
-import { AlertCircle, ArrowUpRight, Building2, ChevronDown, ChevronRight, FolderGit2, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Search, Ticket, Users } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, Building2, ChevronDown, ChevronRight, FolderGit2, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, ScrollText, Search, Ticket, Users } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
+import remarkGfm from 'remark-gfm';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   filterAuthors,
   filterItems,
+  filterReleases,
   filterRepositories,
   formatRelativeTime,
   formatTimestamp,
@@ -26,12 +29,14 @@ const sources = [
   { key: 'pull-requests', label: 'Pull Requests', icon: GitPullRequest, accent: 'bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30' },
 ];
 
+const releaseTab = { key: 'releases', label: 'Release log', icon: ScrollText };
+
 const auxiliaryTabs = [
   { key: 'repositories', label: 'Repositories', icon: FolderKanban },
   { key: 'authors', label: 'Authors', icon: Users },
 ];
 
-const mainTabs = [...sources, ...auxiliaryTabs];
+const mainTabs = [...sources, releaseTab, ...auxiliaryTabs];
 
 const emptyFilters = {
   author: '',
@@ -460,10 +465,123 @@ function GlobalSearchInput({ value, onChange }) {
         type="search"
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        placeholder="Search titles, repositories, authors, assignees..."
+        placeholder="Search titles, repositories, authors, assignees, versions..."
         className="w-full rounded-2xl border border-white/10 bg-slate-950/70 py-3 pl-11 pr-4 text-sm text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/50"
       />
     </label>
+  );
+}
+
+function ReleaseMarkdown({ body }) {
+  const markdown = typeof body === 'string' && body.trim() !== '' ? body : '_No release notes were provided for this release._';
+
+  return (
+    <div className="release-log__markdown overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-sm text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          h1: ({ node, ...props }) => <h3 className="mt-6 text-xl font-semibold text-white first:mt-0" {...props} />,
+          h2: ({ node, ...props }) => <h4 className="mt-6 text-lg font-semibold text-white first:mt-0" {...props} />,
+          h3: ({ node, ...props }) => <h5 className="mt-5 text-base font-semibold text-white first:mt-0" {...props} />,
+          p: ({ node, ...props }) => <p className="mt-3 leading-7 text-slate-300 first:mt-0" {...props} />,
+          ul: ({ node, ...props }) => <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-300 marker:text-cyan-300" {...props} />,
+          ol: ({ node, ...props }) => <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-300 marker:text-cyan-300" {...props} />,
+          li: ({ node, ...props }) => <li className="pl-1 leading-7" {...props} />,
+          blockquote: ({ node, ...props }) => <blockquote className="mt-4 border-l-2 border-cyan-300/40 pl-4 italic text-slate-400" {...props} />,
+          a: ({ node, ...props }) => <a className="font-medium text-cyan-200 underline decoration-cyan-300/40 underline-offset-4 transition-colors hover:text-white" target="_blank" rel="noreferrer" {...props} />,
+          code: ({ inline, className, children, ...props }) => inline
+            ? <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[13px] text-cyan-100" {...props}>{children}</code>
+            : <code className={`block overflow-x-auto rounded-2xl bg-slate-900/95 p-4 font-mono text-[13px] text-cyan-100 ${className || ''}`} {...props}>{children}</code>,
+          pre: ({ node, ...props }) => <pre className="mt-4 overflow-x-auto" {...props} />,
+          hr: ({ node, ...props }) => <hr className="my-6 border-white/10" {...props} />,
+          table: ({ node, ...props }) => (
+            <div className="mt-4 overflow-x-auto rounded-2xl border border-white/10">
+              <table className="min-w-full divide-y divide-white/10 text-left text-sm" {...props} />
+            </div>
+          ),
+          thead: ({ node, ...props }) => <thead className="bg-white/5" {...props} />,
+          th: ({ node, ...props }) => <th className="px-4 py-3 font-semibold text-white" {...props} />,
+          td: ({ node, ...props }) => <td className="px-4 py-3 align-top text-slate-300" {...props} />,
+        }}
+      >
+        {markdown}
+      </ReactMarkdown>
+    </div>
+  );
+}
+
+function ReleaseTimelinePanel({ payload, searchQuery }) {
+  const repository = payload?.repository;
+  const releases = filterReleases(Array.isArray(payload?.items) ? payload.items : [], searchQuery);
+
+  return (
+    <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
+      <CardHeader className="flex flex-col gap-4 border-b border-white/10 bg-white/5 md:flex-row md:items-end md:justify-between">
+        <div>
+          <CardTitle className="text-2xl text-white">Release log</CardTitle>
+          <CardDescription className="mt-2 max-w-2xl text-slate-300">
+            Release notes from <span className="font-semibold text-white">{repository?.fullName ?? 'municipio-se/municipio-deployment'}</span>, presented as a chronological deployment flow.
+          </CardDescription>
+        </div>
+        <div className="inline-flex items-center gap-2 rounded-full bg-amber-400/15 px-4 py-2 text-sm font-medium text-amber-100 ring-1 ring-amber-300/30">
+          <ScrollText className="h-4 w-4" />
+          {releases.length} releases
+        </div>
+      </CardHeader>
+      <CardContent className="p-6">
+        {releases.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
+            No releases match the current search.
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {releases.map((release, index) => (
+              <article key={`${release.version}-${release.publishedAt}`} className="relative pl-10">
+                <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-cyan-300/60 via-white/10 to-transparent" aria-hidden="true" />
+                <div className="absolute left-[7px] top-5 h-4 w-4 rounded-full border-4 border-slate-950 bg-cyan-300 shadow-[0_0_0_4px_rgba(34,211,238,0.12)]" aria-hidden="true" />
+
+                <div className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.95),rgba(15,23,42,0.75))] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                  <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                    <div className="space-y-3">
+                      <div className="flex flex-wrap items-center gap-2">
+                        {release.version ? <Badge variant="secondary">{release.version}</Badge> : null}
+                        {release.isPrerelease ? <Badge variant="secondary" className="bg-amber-400/10 text-amber-100 ring-1 ring-amber-300/20">Pre-release</Badge> : null}
+                        {release.isDraft ? <Badge variant="secondary" className="bg-slate-400/10 text-slate-200 ring-1 ring-slate-300/20">Draft</Badge> : null}
+                      </div>
+                      <div>
+                        <a
+                          href={release.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="group inline-flex items-start gap-2 text-left"
+                        >
+                          <h3 className="text-2xl font-semibold text-white transition-colors group-hover:text-cyan-100">{release.title}</h3>
+                          <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+                        </a>
+                        <div className="mt-2 flex flex-wrap gap-2 text-sm text-slate-400">
+                          <span>{formatRelativeTime(release.publishedAt)}</span>
+                          <span className="text-slate-600">/</span>
+                          <span>{formatTimestamp(release.publishedAt)}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-right text-xs uppercase tracking-[0.2em] text-slate-500">
+                      <div className="text-slate-400">Step</div>
+                      <div className="mt-1 text-lg font-semibold tracking-normal text-white">{String(index + 1).padStart(2, '0')}</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-6">
+                    <ReleaseMarkdown body={release.body} />
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+      </CardContent>
+    </Card>
   );
 }
 
@@ -1083,11 +1201,13 @@ async function fetchSource(key) {
 
 export default function App() {
   const [payloads, setPayloads] = useState({});
+  const [releasePayload, setReleasePayload] = useState(null);
   const [status, setStatus] = useState('loading');
   const [errorMessage, setErrorMessage] = useState('');
   const [activeMainTab, setActiveMainTab] = useState(readMainTabFromUrl);
   const [searchQuery, setSearchQuery] = useState('');
   const payloadList = Object.values(payloads);
+  const buildStatusTabs = [...sources, releaseTab];
   const allItems = payloadList.flatMap((payload) => (
     Array.isArray(payload.items)
       ? payload.items.map((item) => ({ ...item, source: payload.source }))
@@ -1101,13 +1221,17 @@ export default function App() {
     async function loadDashboard() {
       try {
         setStatus('loading');
-        const entries = await Promise.all(sources.map(async (source) => [source.key, await fetchSource(source.key)]));
+        const [entries, releases] = await Promise.all([
+          Promise.all(sources.map(async (source) => [source.key, await fetchSource(source.key)])),
+          fetchSource(releaseTab.key),
+        ]);
 
         if (!isActive) {
           return;
         }
 
         setPayloads(Object.fromEntries(entries));
+        setReleasePayload(releases);
         setStatus('ready');
       } catch (error) {
         if (!isActive) {
@@ -1143,6 +1267,7 @@ export default function App() {
   }, []);
 
   const generatedAt = payloadList
+    .concat(releasePayload ? [releasePayload] : [])
     .map((payload) => payload.generatedAt)
     .filter(Boolean)
     .sort()
@@ -1177,10 +1302,10 @@ export default function App() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="grid gap-3 text-sm text-slate-300">
-                {sources.map((source) => (
-                  <div key={source.key} className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
-                    <span>{source.label}</span>
-                    <span className="font-semibold text-white">{payloads[source.key]?.count ?? 0}</span>
+                {buildStatusTabs.map((tab) => (
+                  <div key={tab.key} className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
+                    <span>{tab.label}</span>
+                    <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePayload?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
                   </div>
                 ))}
               </CardContent>
@@ -1215,7 +1340,7 @@ export default function App() {
             <Tabs value={activeMainTab} onValueChange={setActiveMainTab} className="space-y-6">
               <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
                 <TabsList
-                  className="grid w-full max-w-4xl grid-cols-2 rounded-3xl border border-white/10 bg-slate-950/60 p-1 sm:grid-cols-4 sm:rounded-full"
+                  className="grid w-full max-w-5xl grid-cols-2 rounded-3xl border border-white/10 bg-slate-950/60 p-1 sm:grid-cols-5 sm:rounded-full"
                 >
                   {mainTabs.map((tab) => {
                     const Icon = tab.icon;
@@ -1248,6 +1373,10 @@ export default function App() {
 
               <TabsContent value="repositories">
                 <RepositoryCatalogPanel repositories={repositories} searchQuery={searchQuery} />
+              </TabsContent>
+
+              <TabsContent value="releases">
+                <ReleaseTimelinePanel payload={releasePayload} searchQuery={searchQuery} />
               </TabsContent>
 
               <TabsContent value="authors">
