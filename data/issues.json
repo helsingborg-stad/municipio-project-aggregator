@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T15:14:46+00:00",
-    "count": 17,
+    "generatedAt": "2026-04-27T15:36:38+00:00",
+    "count": 14,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -402,13 +402,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-js-searchpage-addon",
-            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
-            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -420,6 +413,13 @@
             "fullName": "helsingborg-stad/wputilservice",
             "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
             "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-js-searchpage-addon",
+            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
+            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
         }
     ],
     "items": [
@@ -724,56 +724,6 @@
             ]
         },
         {
-            "title": "Compose file causes all projects to be synced into every other project.",
-            "url": "https://github.com/municipio-se/municipio-deployment/issues/151",
-            "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-01-14T09:58:14Z",
-            "number": 151,
-            "author": {
-                "login": "NiklasBr",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/279826?v=4",
-                "url": "https://github.com/NiklasBr",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix: Scope devcontainer volume mount to project directory only",
-                    "url": "https://github.com/municipio-se/municipio-deployment/pull/152",
-                    "repository": "municipio-se/municipio-deployment"
-                }
-            ]
-        },
-        {
             "title": "Add When statement",
             "url": "https://github.com/helsingborg-stad/wputilservice/issues/8",
             "repository": "helsingborg-stad/wputilservice",
@@ -1038,50 +988,6 @@
             ]
         },
         {
-            "title": "Field does not work in Gutenberg",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field/issues/3",
-            "repository": "helsingborg-stad/acf-icon-field",
-            "createdAt": "2025-09-02T05:09:25Z",
-            "number": 3,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix ACF Icon Field initialization in Gutenberg blocks",
-                    "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/4",
-                    "repository": "helsingborg-stad/acf-icon-field"
-                }
-            ]
-        },
-        {
             "title": "Plugin allows duplicate short link name causing redirect conflicts",
             "url": "https://github.com/helsingborg-stad/custom-short-links/issues/4",
             "repository": "helsingborg-stad/custom-short-links",
@@ -1123,50 +1029,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "title": "Adding custom Origins should be a feature (similar to adding stuff to csp policy).",
-            "url": "https://github.com/helsingborg-stad/wpmu-security/issues/9",
-            "repository": "helsingborg-stad/wpmu-security",
-            "createdAt": "2025-07-14T09:17:53Z",
-            "number": 9,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add custom CORS origins feature with ACF admin interface",
-                    "url": "https://github.com/helsingborg-stad/wpmu-security/pull/10",
-                    "repository": "helsingborg-stad/wpmu-security"
-                }
-            ]
         },
         {
             "title": "Test coverage should be increased in order to validate the functionality thorughly.",
