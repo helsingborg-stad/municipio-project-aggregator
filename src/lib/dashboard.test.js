@@ -1,7 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
 
 import {
+  filterAuthors,
   filterItems,
+  filterRepositories,
   formatRelativeTime,
   formatTimestamp,
   getAuthorDirectory,
@@ -180,6 +182,30 @@ describe('getAuthorDirectory', () => {
   });
 });
 
+describe('filterRepositories', () => {
+  it('filters repositories by name, owner, and description', () => {
+    const repositories = filterRepositories([
+      { fullName: 'helsingborg-stad/plugin-a', name: 'plugin-a', owner: 'helsingborg-stad', description: 'Searchable alpha plugin' },
+      { fullName: 'helsingborg-stad/plugin-b', name: 'plugin-b', owner: 'helsingborg-stad', description: 'Another repository' },
+    ], 'alpha');
+
+    expect(repositories).toHaveLength(1);
+    expect(repositories[0].name).toBe('plugin-a');
+  });
+});
+
+describe('filterAuthors', () => {
+  it('filters authors by login', () => {
+    const authors = filterAuthors([
+      { login: 'octocat', url: 'https://github.com/octocat' },
+      { login: 'hubot', url: 'https://github.com/hubot' },
+    ], 'octo');
+
+    expect(authors).toHaveLength(1);
+    expect(authors[0].login).toBe('octocat');
+  });
+});
+
 describe('filterItems', () => {
   const items = [
     {
@@ -226,6 +252,20 @@ describe('filterItems', () => {
 
     expect(filtered).toHaveLength(1);
     expect(filtered[0].author.login).toBe('monalisa');
+  });
+
+  it('filters items by free-text search across item metadata', () => {
+    const filtered = filterItems(items, {
+      author: '',
+      assignee: '',
+      milestone: '',
+      type: '',
+      subIssues: 'all',
+      relationships: 'all',
+    }, 'hubot');
+
+    expect(filtered).toHaveLength(1);
+    expect(filtered[0].author.login).toBe('octocat');
   });
 });
 

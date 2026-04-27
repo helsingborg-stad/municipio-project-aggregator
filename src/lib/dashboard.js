@@ -87,6 +87,20 @@ export function getRepositoryCatalog(payloads) {
   return [...repositoriesByName.values()].sort((left, right) => left.fullName.localeCompare(right.fullName));
 }
 
+function normalizeSearchQuery(searchQuery) {
+  return typeof searchQuery === 'string' ? searchQuery.trim().toLowerCase() : '';
+}
+
+function matchesSearchQuery(values, searchQuery) {
+  const normalizedSearchQuery = normalizeSearchQuery(searchQuery);
+
+  if (!normalizedSearchQuery) {
+    return true;
+  }
+
+  return values.some((value) => typeof value === 'string' && value.toLowerCase().includes(normalizedSearchQuery));
+}
+
 function getUniqueOptions(values) {
   return [...new Set(values.filter(Boolean))].sort((left, right) => left.localeCompare(right));
 }
@@ -120,6 +134,22 @@ export function getAuthorDirectory(items) {
   });
 
   return [...authorsByLogin.values()].sort((left, right) => right.score - left.score);
+}
+
+export function filterRepositories(repositories, searchQuery) {
+  return repositories.filter((repository) => matchesSearchQuery([
+    repository.fullName,
+    repository.name,
+    repository.owner,
+    repository.description,
+  ], searchQuery));
+}
+
+export function filterAuthors(authors, searchQuery) {
+  return authors.filter((author) => matchesSearchQuery([
+    author.login,
+    author.url,
+  ], searchQuery));
 }
 
 export function getFilterOptions(items) {
@@ -180,8 +210,20 @@ export function getItemTree(items) {
     .sort((left, right) => (orderByUrl.get(left.url) ?? 0) - (orderByUrl.get(right.url) ?? 0));
 }
 
-export function filterItems(items, filters) {
+export function filterItems(items, filters, searchQuery = '') {
   return items.filter((item) => {
+    if (!matchesSearchQuery([
+      item.title,
+      item.repository,
+      item.author?.login,
+      item.milestone?.title,
+      item.type,
+      ...(item.assignees?.map((assignee) => assignee.login) ?? []),
+      ...(item.relationships?.flatMap((relationship) => [relationship.title, relationship.repository, relationship.event]) ?? []),
+    ], searchQuery)) {
+      return false;
+    }
+
     if (filters.author && item.author?.login !== filters.author) {
       return false;
     }

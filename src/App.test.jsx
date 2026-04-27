@@ -154,6 +154,28 @@ describe('App', () => {
     expect(window.location.search).toBe('?tab=pull-requests');
   });
 
+  it('filters all tabs with the shared free-text search', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    await screen.findByText('2 of 2 open issues');
+
+    fireEvent.change(screen.getByRole('searchbox', { name: 'Search all tabs' }), { target: { value: 'beta' } });
+
+    expect(screen.getByText('0 of 2 open issues')).toBeInTheDocument();
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Pull Requests' }));
+    expect(await screen.findByText('Pull request beta')).toBeInTheDocument();
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Repositories' }));
+    expect(await screen.findByText('plugin-beta')).toBeInTheDocument();
+    expect(screen.queryByText('plugin-alpha')).not.toBeInTheDocument();
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
+    expect(await screen.findByText('No authors match the current search.')).toBeInTheDocument();
+  });
+
   it('restores the selected main tab from the url', async () => {
     mockDashboardFetch();
     window.history.replaceState({}, '', '/?tab=authors');

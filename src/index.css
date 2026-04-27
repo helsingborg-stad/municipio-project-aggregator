@@ -54,6 +54,10 @@
     .source-item-card__details {
       height: 100%;
     }
+
+    .source-item-card__relationships > :not([hidden]) ~ :not([hidden]) {
+      margin-top: 0;
+    }
   }
 
   @container (max-width: calc(36rem - 0.01px)) {

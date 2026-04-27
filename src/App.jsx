@@ -1,11 +1,13 @@
-import { AlertCircle, ArrowUpRight, Building2, ChevronDown, ChevronRight, FolderGit2, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Ticket, Users } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, Building2, ChevronDown, ChevronRight, FolderGit2, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Search, Ticket, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
+  filterAuthors,
   filterItems,
+  filterRepositories,
   formatRelativeTime,
   formatTimestamp,
   getAuthorDirectory,
@@ -449,6 +451,22 @@ function FilterBar({ filters, filterOptions, onFilterChange, viewMode, onViewMod
   );
 }
 
+function GlobalSearchInput({ value, onChange }) {
+  return (
+    <label className="relative block w-full xl:max-w-md">
+      <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
+      <span className="sr-only">Search all tabs</span>
+      <input
+        type="search"
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        placeholder="Search titles, repositories, authors, assignees..."
+        className="w-full rounded-2xl border border-white/10 bg-slate-950/70 py-3 pl-11 pr-4 text-sm text-white outline-none transition-colors placeholder:text-slate-500 focus:border-cyan-300/50"
+      />
+    </label>
+  );
+}
+
 function ItemBadgeRow({ item }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
@@ -492,7 +510,7 @@ function ItemDetailPanel({ item }) {
         </div>
       ) : null}
       {item.relationships?.length ? (
-        <div className="space-y-2">
+        <div className="source-item-card__relationships space-y-2">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Relationships</p>
           <ul className="space-y-2">
             {item.relationships.slice(0, 3).map((relationship) => (
@@ -507,7 +525,7 @@ function ItemDetailPanel({ item }) {
                     <span className="font-medium text-slate-100">{relationship.title}</span>
                     <span className="ml-2 text-slate-500">{relationship.repository}</span>
                   </span>
-                  {relationship.event?.toLowerCase() !== 'cross referenced' ? (
+                  {!['cross referenced', 'cross-referenced'].includes(relationship.event?.toLowerCase()) ? (
                     <Badge variant="secondary">{relationship.event}</Badge>
                   ) : null}
                 </a>
@@ -688,8 +706,9 @@ function TrackedItemListRow({ item, depth = 0, expandedTreeItems, onToggleExpand
   );
 }
 
-function RepositoryCatalogPanel({ repositories }) {
+function RepositoryCatalogPanel({ repositories, searchQuery }) {
   const repositoryCardClassName = 'rounded-3xl border border-white/10 bg-slate-900/70 p-5';
+  const visibleRepositories = filterRepositories(repositories, searchQuery);
 
   return (
     <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
@@ -702,17 +721,17 @@ function RepositoryCatalogPanel({ repositories }) {
         </div>
         <div className="inline-flex items-center gap-2 rounded-full bg-cyan-300/15 px-4 py-2 text-sm font-medium text-cyan-100 ring-1 ring-cyan-200/30">
           <FolderKanban className="h-4 w-4" />
-          {repositories.length} repositories
+          {visibleRepositories.length} repositories
         </div>
       </CardHeader>
       <CardContent className="p-6">
-        {repositories.length === 0 ? (
+        {visibleRepositories.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
-            No compatible repositories are available yet.
+            No repositories match the current search.
           </div>
         ) : (
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {repositories.map((repository) => {
+            {visibleRepositories.map((repository) => {
               const content = (
                 <>
                   <div className="flex items-start justify-between gap-3">
@@ -759,8 +778,9 @@ function RepositoryCatalogPanel({ repositories }) {
   );
 }
 
-function AuthorDirectoryPanel({ authors }) {
+function AuthorDirectoryPanel({ authors, searchQuery }) {
   const authorCardClassName = 'rounded-3xl border border-white/10 bg-slate-900/70 p-5';
+  const visibleAuthors = filterAuthors(authors, searchQuery);
 
   return (
     <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
@@ -773,17 +793,17 @@ function AuthorDirectoryPanel({ authors }) {
         </div>
         <div className="inline-flex items-center gap-2 rounded-full bg-fuchsia-400/15 px-4 py-2 text-sm font-medium text-fuchsia-100 ring-1 ring-fuchsia-300/30">
           <Users className="h-4 w-4" />
-          {authors.length} authors
+          {visibleAuthors.length} authors
         </div>
       </CardHeader>
       <CardContent className="p-6">
-        {authors.length === 0 ? (
+        {visibleAuthors.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
-            No authors are available yet.
+            No authors match the current search.
           </div>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {authors.map((author) => {
+            {visibleAuthors.map((author) => {
               const content = (
                 <div className={author.url ? `group ${authorCardClassName} transition-colors hover:border-fuchsia-300/40 hover:bg-slate-900` : authorCardClassName}>
                   <div className="flex items-center gap-4">
@@ -819,12 +839,12 @@ function AuthorDirectoryPanel({ authors }) {
   );
 }
 
-function SourcePanel({ payload, icon: Icon, accentClassName }) {
+function SourcePanel({ payload, icon: Icon, accentClassName, searchQuery }) {
   const [panelPreferences, setPanelPreferences] = useState(() => readSourcePanelPreferences(payload.source));
   const { filters, viewMode, expandedTreeItems } = panelPreferences;
   const availableItems = Array.isArray(payload.items) ? payload.items : [];
   const filterOptions = getFilterOptions(availableItems);
-  const visibleItems = filterItems(availableItems, filters);
+  const visibleItems = filterItems(availableItems, filters, searchQuery);
   const repositoryGroups = getRepositoryGroups(visibleItems);
   const treeItems = getItemTree(visibleItems);
   const milestoneGroups = getMilestoneGroups(treeItems);
@@ -1051,6 +1071,7 @@ export default function App() {
   const [status, setStatus] = useState('loading');
   const [errorMessage, setErrorMessage] = useState('');
   const [activeMainTab, setActiveMainTab] = useState(readMainTabFromUrl);
+  const [searchQuery, setSearchQuery] = useState('');
   const payloadList = Object.values(payloads);
   const allItems = payloadList.flatMap((payload) => (
     Array.isArray(payload.items)
@@ -1177,19 +1198,24 @@ export default function App() {
 
           {status === 'ready' && (
             <Tabs value={activeMainTab} onValueChange={setActiveMainTab} className="space-y-6">
-              <TabsList
-                className="grid w-full max-w-4xl grid-cols-2 rounded-3xl border border-white/10 bg-slate-950/60 p-1 sm:grid-cols-4 sm:rounded-full"
-              >
-                {mainTabs.map((tab) => {
-                  const Icon = tab.icon;
-                  return (
-                    <TabsTrigger key={tab.key} value={tab.key} className="rounded-2xl py-3 data-[state=active]:bg-white data-[state=active]:text-slate-950 sm:rounded-full sm:py-2">
-                      <Icon className="mr-2 h-4 w-4 shrink-0" />
-                      {tab.label}
-                    </TabsTrigger>
-                  );
-                })}
-              </TabsList>
+              <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+                <TabsList
+                  className="grid w-full max-w-4xl grid-cols-2 rounded-3xl border border-white/10 bg-slate-950/60 p-1 sm:grid-cols-4 sm:rounded-full"
+                >
+                  {mainTabs.map((tab) => {
+                    const Icon = tab.icon;
+                    return (
+                      <TabsTrigger key={tab.key} value={tab.key} className="rounded-2xl py-3 data-[state=active]:bg-white data-[state=active]:text-slate-950 sm:rounded-full sm:py-2">
+                        <Icon className="mr-2 h-4 w-4 shrink-0" />
+                        {tab.label}
+                      </TabsTrigger>
+                    );
+                  })}
+                </TabsList>
+                <div className="xl:flex xl:justify-end">
+                  <GlobalSearchInput value={searchQuery} onChange={setSearchQuery} />
+                </div>
+              </div>
 
               {sources.map((source) => {
                 const Icon = source.icon;
@@ -1199,17 +1225,18 @@ export default function App() {
                       payload={payloads[source.key]}
                       icon={Icon}
                       accentClassName={source.accent}
+                      searchQuery={searchQuery}
                     />
                   </TabsContent>
                 );
               })}
 
               <TabsContent value="repositories">
-                <RepositoryCatalogPanel repositories={repositories} />
+                <RepositoryCatalogPanel repositories={repositories} searchQuery={searchQuery} />
               </TabsContent>
 
               <TabsContent value="authors">
-                <AuthorDirectoryPanel authors={authors} />
+                <AuthorDirectoryPanel authors={authors} searchQuery={searchQuery} />
               </TabsContent>
             </Tabs>
           )}
