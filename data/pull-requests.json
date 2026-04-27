@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T14:43:00+00:00",
-    "count": 170,
+    "generatedAt": "2026-04-27T14:59:19+00:00",
+    "count": 171,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -423,6 +423,49 @@
         }
     ],
     "items": [
+        {
+            "title": "[WIP] Fix duplicate short link name causing redirect conflicts",
+            "url": "https://github.com/helsingborg-stad/custom-short-links/pull/7",
+            "repository": "helsingborg-stad/custom-short-links",
+            "createdAt": "2026-04-27T14:58:06Z",
+            "number": 7,
+            "author": {
+                "login": "Copilot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "title": "build(deps): bump postcss from 8.5.6 to 8.5.12 in /Modularity",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1908",
