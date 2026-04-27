@@ -815,6 +815,7 @@ function AuthorDirectoryPanel({ authors, searchQuery }) {
                     <AvatarImage person={author} sizeClassName="h-14 w-14" fallbackTextClassName="text-base" />
                     <div className="min-w-0">
                       <h3 className="truncate text-lg font-semibold text-white">{author.login}</h3>
+                      {author.company ? <p className="truncate text-sm text-slate-500">{author.company}</p> : null}
                       <p className="text-sm text-slate-400">
                         Score: {author.score.toFixed(1)}
                       </p>

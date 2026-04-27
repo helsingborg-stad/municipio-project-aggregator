@@ -29,6 +29,7 @@ const issuesPayload = {
       author: {
         login: 'octocat',
         avatarUrl: 'https://avatars.example.com/octocat.png',
+        company: 'GitHub',
         url: 'https://github.com/octocat',
       },
       assignees: [],
@@ -48,6 +49,7 @@ const issuesPayload = {
       author: {
         login: 'octocat',
         avatarUrl: 'https://avatars.example.com/octocat.png',
+        company: 'GitHub',
         url: 'https://github.com/octocat',
       },
       assignees: [],
@@ -93,6 +95,7 @@ const pullRequestsPayload = {
       author: {
         login: 'octocat',
         avatarUrl: 'https://avatars.example.com/octocat.png',
+        company: 'GitHub',
         url: 'https://github.com/octocat',
       },
       assignees: [],
@@ -145,6 +148,7 @@ describe('App', () => {
 
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
     expect(window.location.search).toBe('?tab=authors');
+    expect(screen.getByText('GitHub')).toBeInTheDocument();
     expect(screen.getByText('Score: 1.2')).toBeInTheDocument();
     expect(screen.getByText('Score is weighted by item type: each issue is worth 0.1 points and each pull request is worth 1.0 point.')).toBeInTheDocument();
 

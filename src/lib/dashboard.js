@@ -125,9 +125,12 @@ export function getAuthorDirectory(items) {
     }
 
     const currentAuthor = authorsByLogin.get(author.login);
+    const normalizedCompany = typeof author.company === 'string' ? author.company.trim() : '';
+
     authorsByLogin.set(author.login, {
       login: author.login,
       avatarUrl: author.avatarUrl ?? currentAuthor?.avatarUrl ?? '',
+      company: normalizedCompany || currentAuthor?.company || '',
       url: author.url ?? currentAuthor?.url ?? '',
       score: Number(((currentAuthor?.score ?? 0) + (item.source === 'pull-requests' ? 1 : 0.1)).toFixed(1)),
     });
@@ -148,6 +151,7 @@ export function filterRepositories(repositories, searchQuery) {
 export function filterAuthors(authors, searchQuery) {
   return authors.filter((author) => matchesSearchQuery([
     author.login,
+    author.company,
     author.url,
   ], searchQuery));
 }

@@ -169,16 +169,27 @@ describe('getAuthorDirectory', () => {
       {
         login: 'octocat',
         avatarUrl: 'https://example.com/octocat.png',
+        company: '',
         url: 'https://github.com/octocat',
         score: 1.1,
       },
       {
         login: 'hubot',
         avatarUrl: 'https://example.com/hubot.png',
+        company: '',
         url: 'https://github.com/hubot',
         score: 0.1,
       },
     ]);
+  });
+
+  it('preserves the latest known company for each author', () => {
+    const authors = getAuthorDirectory([
+      { source: 'issues', author: { login: 'octocat', company: 'GitHub', avatarUrl: '', url: 'https://github.com/octocat' } },
+      { source: 'pull-requests', author: { login: 'octocat', company: '', avatarUrl: '', url: 'https://github.com/octocat' } },
+    ]);
+
+    expect(authors[0].company).toBe('GitHub');
   });
 });
 
@@ -195,14 +206,14 @@ describe('filterRepositories', () => {
 });
 
 describe('filterAuthors', () => {
-  it('filters authors by login', () => {
+  it('filters authors by login and company', () => {
     const authors = filterAuthors([
-      { login: 'octocat', url: 'https://github.com/octocat' },
-      { login: 'hubot', url: 'https://github.com/hubot' },
-    ], 'octo');
+      { login: 'octocat', company: 'GitHub', url: 'https://github.com/octocat' },
+      { login: 'hubot', company: 'Acme', url: 'https://github.com/hubot' },
+    ], 'acme');
 
     expect(authors).toHaveLength(1);
-    expect(authors[0].login).toBe('octocat');
+    expect(authors[0].login).toBe('hubot');
   });
 });
 
