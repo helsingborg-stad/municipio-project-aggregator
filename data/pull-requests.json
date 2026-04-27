@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-27T10:41:23+00:00",
-    "count": 63,
+    "generatedAt": "2026-04-27T11:35:35+00:00",
+    "count": 64,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -108,6 +108,36 @@
         }
     ],
     "items": [
+        {
+            "title": "5.9.6",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/183",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-04-27T11:32:21Z",
+            "number": 183,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "title": "build(deps): bump postcss from 8.5.6 to 8.5.12 in /Modularity",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1908",
