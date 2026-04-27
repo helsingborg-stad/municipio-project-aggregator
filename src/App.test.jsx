@@ -329,4 +329,16 @@ describe('App', () => {
     expect(within(issueCard).getByText('Related issue gamma')).toBeInTheDocument();
     expect(within(issueCard).queryByText('cross referenced')).not.toBeInTheDocument();
   });
+
+  it('hides the card detail panel when an item has no detail content', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    await screen.findByText('Issue alpha child');
+
+    const issueChildCard = screen.getByText('Issue alpha child').closest('li');
+
+    expect(issueChildCard.querySelector('.source-item-card__details')).toBeNull();
+  });
 });

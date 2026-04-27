@@ -486,6 +486,11 @@ function ItemBadgeRow({ item }) {
 function ItemDetailPanel({ item }) {
   const showSubIssues = hasSubIssues(item);
   const hasDependencySummary = item.relationshipSummary.totalBlockedBy > 0 || item.relationshipSummary.totalBlocking > 0;
+  const hasRelationshipsList = (item.relationships?.length ?? 0) > 0;
+
+  if (!showSubIssues && !hasDependencySummary && !hasRelationshipsList) {
+    return null;
+  }
 
   return (
     <div className="source-item-card__details grid gap-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3 text-sm text-slate-300">
@@ -509,7 +514,7 @@ function ItemDetailPanel({ item }) {
           ) : null}
         </div>
       ) : null}
-      {item.relationships?.length ? (
+      {hasRelationshipsList ? (
         <div className="source-item-card__relationships space-y-2">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Relationships</p>
           <ul className="space-y-2">
@@ -541,7 +546,7 @@ function ItemDetailPanel({ item }) {
 function TrackedItemCard({ item, showRepository = false }) {
   return (
     <li className="source-item-card rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-300/40 hover:bg-white/10">
-      <div className="source-item-card__content space-y-4">
+      <div className="source-item-card__content grid gap-4">
         <a
           href={item.url}
           target="_blank"
