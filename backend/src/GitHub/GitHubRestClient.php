@@ -166,10 +166,18 @@ final class GitHubRestClient
             return $this->userProfilesByLogin[$login];
         }
 
-        $response = $this->getJson(
-            sprintf('%s/users/%s', self::API_URL, rawurlencode($login)),
-            $token,
-        );
+        try {
+            $response = $this->getJson(
+                sprintf('%s/users/%s', self::API_URL, rawurlencode($login)),
+                $token,
+            );
+        } catch (RuntimeException $exception) {
+            if (!$this->shouldIgnoreMissingUserProfile($exception)) {
+                throw $exception;
+            }
+
+            $response = [];
+        }
 
         /** @var array<string, mixed> $response */
         $this->userProfilesByLogin[$login] = $response;
@@ -260,6 +268,15 @@ final class GitHubRestClient
     {
         return str_contains($exception->getMessage(), 'HTTP 404')
             || str_contains($exception->getMessage(), 'HTTP 410');
+    }
+
+    /**
+     * @param RuntimeException $exception
+     * @return bool
+     */
+    private function shouldIgnoreMissingUserProfile(RuntimeException $exception): bool
+    {
+        return str_contains($exception->getMessage(), 'HTTP 404');
     }
 
     /**

@@ -12,6 +12,7 @@ use MunicipioProjectAggregator\Backend\GitHub\GitHubSourceAggregator;
 use MunicipioProjectAggregator\Backend\GitHub\SourceType;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 
 #[CoversClass(GitHubSourceAggregator::class)]
 final class GitHubSourceAggregatorTest extends TestCase
@@ -118,6 +119,34 @@ final class GitHubSourceAggregatorTest extends TestCase
             ['GetMunicipio only PR', 'Shared PR', 'Obsolete PR'],
             array_column($data['items'], 'title'),
         );
+    }
+
+    /**
+     * @return void
+     */
+    public function testAggregateContinuesWhenAuthorProfileIsMissing(): void
+    {
+        $aggregator = new GitHubSourceAggregator(
+            new GitHubRestClient($this->createHttpClientWithMissingAuthorProfile()),
+        );
+
+        $payload = $aggregator->aggregate(
+            SourceType::PullRequests,
+            new BuildConfig(
+                'GitHub',
+                ['getmunicipio'],
+                'token',
+                '/tmp',
+                new DateTimeImmutable('2026-04-25T10:00:00+00:00'),
+                365,
+            ),
+        );
+
+        $data = $payload->toArray();
+
+        self::assertSame(1, $data['count']);
+        self::assertSame('ghost-user', $data['items'][0]['author']['login']);
+        self::assertSame('', $data['items'][0]['author']['company']);
     }
 
     /**
@@ -345,6 +374,95 @@ final class GitHubSourceAggregatorTest extends TestCase
                         'login' => 'oldtimer',
                         'company' => 'Legacy Systems',
                     ];
+                }
+
+                return [];
+            }
+
+            /**
+             * @param string $url
+             * @param array<string, string> $headers
+             * @param array<string, mixed> $body
+             * @return array<string, mixed>
+             */
+            public function postJson(string $url, array $headers, array $body): array
+            {
+                return [];
+            }
+        };
+    }
+
+    /**
+     * @return HttpClientInterface
+     */
+    private function createHttpClientWithMissingAuthorProfile(): HttpClientInterface
+    {
+        return new class () implements HttpClientInterface {
+            /**
+             * @param string $url
+             * @param array<string, string> $headers
+             * @return array<mixed>
+             */
+            public function getJson(string $url, array $headers): array
+            {
+                if (str_contains($url, '/search/repositories') && str_contains($url, 'topic:getmunicipio')) {
+                    return [
+                        'items' => [[
+                            'name' => 'styleguide',
+                            'owner' => ['login' => 'helsingborg-stad'],
+                            'description' => 'Shared Municipio components',
+                            'html_url' => 'https://github.com/helsingborg-stad/styleguide',
+                        ]],
+                    ];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/pulls')) {
+                    return [[
+                        'title' => 'PR from missing profile',
+                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/7',
+                        'number' => 7,
+                        'created_at' => '2026-04-25T09:00:00Z',
+                    ]];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/7/timeline')) {
+                    return [];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/7/sub_issues')) {
+                    return [];
+                }
+
+                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/7')) {
+                    return [
+                        'title' => 'PR from missing profile',
+                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/7',
+                        'number' => 7,
+                        'created_at' => '2026-04-25T09:00:00Z',
+                        'user' => [
+                            'login' => 'ghost-user',
+                            'avatar_url' => 'https://avatars.example.com/ghost-user.png',
+                            'html_url' => 'https://github.com/ghost-user',
+                        ],
+                        'assignees' => [],
+                        'milestone' => null,
+                        'type' => null,
+                        'sub_issues_summary' => [
+                            'total' => 0,
+                            'completed' => 0,
+                            'percent_completed' => 0,
+                        ],
+                        'issue_dependencies_summary' => [
+                            'blocked_by' => 0,
+                            'total_blocked_by' => 0,
+                            'blocking' => 0,
+                            'total_blocking' => 0,
+                        ],
+                    ];
+                }
+
+                if (str_contains($url, '/users/ghost-user')) {
+                    throw new RuntimeException('HTTP 404: {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}');
                 }
 
                 return [];
