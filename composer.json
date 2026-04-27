@@ -19,7 +19,6 @@
     }
   },
   "scripts": {
-    "test": "phpunit --configuration backend/phpunit.xml",
-    "serve": "@php -S 127.0.0.1:8000 -t dist"
+    "test": "phpunit --configuration backend/phpunit.xml"
   }
 }

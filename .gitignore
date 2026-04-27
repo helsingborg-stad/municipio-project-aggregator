@@ -9,6 +9,9 @@ node_modules/
 # PHP dependencies
 vendor/
 
+# Local tool cache
+.tools/
+
 # Local development environment variables
 .env
 .env.local

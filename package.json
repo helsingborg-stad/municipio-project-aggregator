@@ -9,6 +9,7 @@
     "build": "npm run build:data && npm run build:ui",
     "dev": "vite",
     "preview": "vite preview",
+    "preview:caddy": "bash ./scripts/serve-with-caddy.sh",
     "test:ui": "vitest run",
     "test": "npm run test:ui && composer test"
   },

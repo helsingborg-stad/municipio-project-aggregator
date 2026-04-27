@@ -8,14 +8,14 @@
     }
   },
   "postCreateCommand": "npm install && composer install",
-  "forwardPorts": [5173, 8000],
+  "forwardPorts": [5173, 5400],
   "portsAttributes": {
     "5173": {
       "label": "Vite dev server",
       "onAutoForward": "notify"
     },
-    "8000": {
-      "label": "PHP preview server",
+    "5400": {
+      "label": "Caddy preview server",
       "onAutoForward": "notify"
     }
   },

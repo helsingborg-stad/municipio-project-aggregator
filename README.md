@@ -70,10 +70,10 @@ npm run build
 Runs the PHP aggregation step first and then builds the production UI into `dist/`.
 
 ```bash
-composer serve
+npm run preview:caddy
 ```
 
-Serves the built site from `dist/` at `http://127.0.0.1:8000`. Run `npm run build` first so the latest UI and JSON files are available.
+Serves the built site from `dist/` through Caddy at `http://127.0.0.1:5400`. Run `npm run build` first so the latest UI and JSON files are available.
 
 ## Testing
 
