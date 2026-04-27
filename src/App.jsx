@@ -822,10 +822,10 @@ function AuthorDirectoryPanel({ authors, searchQuery }) {
                 <div className={author.url ? `group ${authorCardClassName} transition-colors hover:border-fuchsia-300/40 hover:bg-slate-900` : authorCardClassName}>
                   <div className="flex items-center gap-4">
                     <AvatarImage person={author} sizeClassName="h-14 w-14" fallbackTextClassName="text-base" />
-                    <div className="min-w-0">
+                    <div className="flex min-h-14 min-w-0 flex-1 flex-col">
                       <h3 className="truncate text-lg font-semibold text-white">{author.login}</h3>
                       {author.company ? <p className="truncate text-sm text-slate-500">{author.company}</p> : null}
-                      <p className="text-sm text-slate-400">
+                      <p className="mt-auto text-sm text-slate-400">
                         Score: {author.score.toFixed(1)}
                       </p>
                     </div>
