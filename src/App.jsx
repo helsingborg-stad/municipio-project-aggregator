@@ -1,4 +1,4 @@
-import { AlertCircle, ArrowUpRight, ChevronDown, ChevronRight, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Ticket, Users } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, Building2, ChevronDown, ChevronRight, FolderGit2, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, Ticket, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
@@ -23,6 +23,13 @@ const sources = [
   { key: 'issues', label: 'Issues', icon: Ticket, accent: 'bg-rose-500/15 text-rose-200 ring-1 ring-rose-400/30' },
   { key: 'pull-requests', label: 'Pull Requests', icon: GitPullRequest, accent: 'bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30' },
 ];
+
+const auxiliaryTabs = [
+  { key: 'repositories', label: 'Repositories', icon: FolderKanban },
+  { key: 'authors', label: 'Authors', icon: Users },
+];
+
+const mainTabs = [...sources, ...auxiliaryTabs];
 
 const emptyFilters = {
   author: '',
@@ -155,6 +162,86 @@ function hasCustomPanelPreferences(filters, viewMode, expandedTreeItems) {
     || expandedTreeItems.length > 0;
 }
 
+/**
+ * Returns the normalized main tab key.
+ *
+ * @param {string | null | undefined} tabKey
+ * @returns {string}
+ */
+function normalizeMainTabKey(tabKey) {
+  if (tabKey === 'contributors') {
+    return 'authors';
+  }
+
+  return mainTabs.some((tab) => tab.key === tabKey) ? tabKey : sources[0].key;
+}
+
+/**
+ * Reads the selected main tab from the current URL.
+ *
+ * @returns {string}
+ */
+function readMainTabFromUrl() {
+  if (typeof window === 'undefined') {
+    return sources[0].key;
+  }
+
+  const searchParams = new URLSearchParams(window.location.search);
+
+  return normalizeMainTabKey(searchParams.get('tab'));
+}
+
+/**
+ * Writes the selected main tab to the current URL.
+ *
+ * @param {string} tabKey
+ * @returns {void}
+ */
+function writeMainTabToUrl(tabKey) {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  const url = new URL(window.location.href);
+  url.searchParams.set('tab', normalizeMainTabKey(tabKey));
+  window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+}
+
+/**
+ * Splits a repository full name into owner and repository name parts.
+ *
+ * @param {string | null | undefined} repository
+ * @returns {{owner: string, name: string, fullName: string} | null}
+ */
+function getRepositoryNameParts(repository) {
+  if (typeof repository !== 'string') {
+    return null;
+  }
+
+  const fullName = repository.trim();
+
+  if (!fullName) {
+    return null;
+  }
+
+  const [owner = '', ...nameParts] = fullName.split('/');
+  const name = nameParts.join('/');
+
+  if (!owner || !name) {
+    return {
+      owner: fullName,
+      name: '',
+      fullName,
+    };
+  }
+
+  return {
+    owner,
+    name,
+    fullName,
+  };
+}
+
 function AvatarImage({ person, sizeClassName = 'h-5 w-5', fallbackTextClassName = 'text-[10px]' }) {
   if (!person?.login) {
     return null;
@@ -224,7 +311,7 @@ function FilterBar({ filters, filterOptions, onFilterChange, viewMode, onViewMod
   return (
     <div className="space-y-4">
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-        <div className="inline-flex w-full rounded-2xl border border-white/10 bg-slate-950/70 p-1 text-sm lg:w-auto">
+        <div className="inline-flex w-full rounded-full border border-white/10 bg-slate-950/70 p-1 text-sm lg:w-auto">
           <button
             type="button"
             aria-label="Card view"
@@ -439,6 +526,7 @@ function TrackedItemListRow({ item, depth = 0, expandedTreeItems, onToggleExpand
   const childItems = Array.isArray(item.children) ? item.children : [];
   const hasChildren = childItems.length > 0;
   const isExpanded = hasChildren ? expandedTreeItems.includes(item.url) : false;
+  const repositoryNameParts = getRepositoryNameParts(item.repository);
 
   return (
     <>
@@ -488,11 +576,21 @@ function TrackedItemListRow({ item, depth = 0, expandedTreeItems, onToggleExpand
           ) : null}
         </div>
 
-        <div className="flex w-40 shrink-0 items-center gap-1.5 py-2 pr-3">
-          {item.repository ? (
+        <div className="flex w-52 shrink-0 items-center gap-1.5 py-2 pr-3">
+          {repositoryNameParts ? (
             <>
-              <FolderKanban className="h-3 w-3 shrink-0 text-slate-600" />
-              <span className="truncate text-xs text-slate-500">{item.repository}</span>
+              <span className="min-w-0 space-y-1 text-xs leading-4 text-slate-500">
+                <span className="flex items-start gap-1.5">
+                  <Building2 className="mt-0.5 h-3 w-3 shrink-0 text-slate-600" />
+                  <span className="block break-all text-slate-400">{repositoryNameParts.owner}</span>
+                </span>
+                {repositoryNameParts.name ? (
+                  <span className="flex items-start gap-1.5">
+                    <FolderGit2 className="mt-0.5 h-3 w-3 shrink-0 text-slate-500" />
+                    <span className="block break-all font-medium text-slate-300">{repositoryNameParts.name}</span>
+                  </span>
+                ) : null}
+              </span>
             </>
           ) : (
             <span className="text-slate-700">—</span>
@@ -511,7 +609,7 @@ function TrackedItemListRow({ item, depth = 0, expandedTreeItems, onToggleExpand
           )}
         </div>
 
-        <div className="w-28 shrink-0 py-2 text-xs text-slate-500">
+        <div className="w-28 shrink-0 whitespace-nowrap py-2 text-xs text-slate-500">
           {formatTimestamp(item.createdAt)}
         </div>
 
@@ -805,7 +903,7 @@ function SourcePanel({ payload, icon: Icon, accentClassName }) {
               <div className="w-7 shrink-0" />
               <div className="w-6 shrink-0" />
               <div className="flex-1 py-1.5 pr-3">Name</div>
-              <div className="w-40 shrink-0 py-1.5">Repository</div>
+              <div className="w-52 shrink-0 py-1.5">Repository</div>
               <div className="w-20 shrink-0 py-1.5">Assignee</div>
               <div className="w-28 shrink-0 py-1.5">Created</div>
               <div className="w-8 shrink-0" />
@@ -904,6 +1002,7 @@ export default function App() {
   const [payloads, setPayloads] = useState({});
   const [status, setStatus] = useState('loading');
   const [errorMessage, setErrorMessage] = useState('');
+  const [activeMainTab, setActiveMainTab] = useState(readMainTabFromUrl);
   const payloadList = Object.values(payloads);
   const allItems = payloadList.flatMap((payload) => (
     Array.isArray(payload.items)
@@ -912,12 +1011,6 @@ export default function App() {
   ));
   const repositories = getRepositoryCatalog(payloadList);
   const authors = getAuthorDirectory(allItems);
-  const tabs = [
-    ...sources,
-    { key: 'repositories', label: 'Repositories', icon: FolderKanban },
-    { key: 'authors', label: 'Authors', icon: Users },
-  ];
-
   useEffect(() => {
     let isActive = true;
 
@@ -949,6 +1042,22 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    writeMainTabToUrl(activeMainTab);
+  }, [activeMainTab]);
+
+  useEffect(() => {
+    function syncMainTabFromUrl() {
+      setActiveMainTab(readMainTabFromUrl());
+    }
+
+    window.addEventListener('popstate', syncMainTabFromUrl);
+
+    return () => {
+      window.removeEventListener('popstate', syncMainTabFromUrl);
+    };
+  }, []);
+
   const generatedAt = payloadList
     .map((payload) => payload.generatedAt)
     .filter(Boolean)
@@ -962,13 +1071,13 @@ export default function App() {
           <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_right,_rgba(244,114,182,0.25),_transparent_45%)]" />
           <div className="relative grid gap-8 lg:grid-cols-[1.6fr_0.8fr] lg:items-end">
             <div className="space-y-4">
-              <Badge className="bg-cyan-300/15 text-cyan-100 ring-1 ring-cyan-200/30">Municipio project radar</Badge>
+              <Badge className="bg-cyan-300/15 text-cyan-100 ring-1 ring-cyan-200/30">Municipio</Badge>
               <div className="space-y-3">
                 <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
-                  Municipio Project Status
+                  Project overview
                 </h1>
                 <p className="max-w-2xl text-base text-slate-300 md:text-lg">
-                  A dashboard that visualizes open GitHub issues and pull requests related to the Municipio project across multiple repositories.
+                  A dashboard that visualizes open GitHub issues and pull requests related to the Municipio project across multiple organizations.
                 </p>
               </div>
             </div>
@@ -1019,11 +1128,11 @@ export default function App() {
           )}
 
           {status === 'ready' && (
-            <Tabs defaultValue={sources[0].key} className="space-y-6">
+            <Tabs value={activeMainTab} onValueChange={setActiveMainTab} className="space-y-6">
               <TabsList
                 className="grid w-full max-w-4xl grid-cols-2 rounded-3xl border border-white/10 bg-slate-950/60 p-1 sm:grid-cols-4 sm:rounded-full"
               >
-                {tabs.map((tab) => {
+                {mainTabs.map((tab) => {
                   const Icon = tab.icon;
                   return (
                     <TabsTrigger key={tab.key} value={tab.key} className="rounded-2xl py-3 data-[state=active]:bg-white data-[state=active]:text-slate-950 sm:rounded-full sm:py-2">
