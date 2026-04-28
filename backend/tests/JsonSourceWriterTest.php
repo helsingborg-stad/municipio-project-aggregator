@@ -10,6 +10,9 @@ use MunicipioProjectAggregator\Backend\Data\ReleasePage;
 use MunicipioProjectAggregator\Backend\Data\ReleasePageIndexPayload;
 use MunicipioProjectAggregator\Backend\Data\ReleasePagePayload;
 use MunicipioProjectAggregator\Backend\Data\RepositoryReference;
+use MunicipioProjectAggregator\Backend\Data\SprintBucket;
+use MunicipioProjectAggregator\Backend\Data\SprintEntry;
+use MunicipioProjectAggregator\Backend\Data\SprintPayload;
 use MunicipioProjectAggregator\Backend\Data\SourcePayload;
 use MunicipioProjectAggregator\Backend\Output\JsonSourceWriter;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -43,6 +46,10 @@ final class JsonSourceWriterTest extends TestCase
 
         if (is_file($this->outputDirectory . '/releases/page-1.json')) {
             unlink($this->outputDirectory . '/releases/page-1.json');
+        }
+
+        if (is_file($this->outputDirectory . '/sprints.json')) {
+            unlink($this->outputDirectory . '/sprints.json');
         }
 
         if (is_dir($this->outputDirectory . '/releases')) {
@@ -176,5 +183,57 @@ final class JsonSourceWriterTest extends TestCase
         self::assertIsString($contents);
         self::assertStringContainsString('"pageCount": 2', $contents);
         self::assertStringContainsString('"file": "page-1.json"', $contents);
+    }
+
+    /**
+     * @return void
+     */
+    public function testWritePersistsSprintPayloads(): void
+    {
+        $writer = new JsonSourceWriter($this->outputDirectory);
+        $payload = new SprintPayload(
+            'sprints',
+            'GitHub',
+            '2026-04-28T08:00:00+00:00',
+            [
+                'owner' => 'helsingborg-stad',
+                'number' => 7,
+                'title' => 'Roadmap',
+                'url' => 'https://github.com/orgs/helsingborg-stad/projects/7',
+            ],
+            [
+                'id' => 'PVTV_1',
+                'name' => 'Board',
+                'number' => 1,
+                'layout' => 'BOARD_LAYOUT',
+                'filter' => 'status:Todo',
+            ],
+            'status:Todo',
+            new SprintBucket(
+                'Current Sprint',
+                'Sprint 14',
+                '2026-04-28',
+                '2026-05-11',
+                [new SprintEntry(
+                    'Implement sprint tab',
+                    'https://github.com/helsingborg-stad/municipio-project-aggregator/issues/1',
+                    1,
+                    'helsingborg-stad/municipio-project-aggregator',
+                    'Issue',
+                    'Open',
+                    'In progress',
+                )],
+            ),
+            null,
+        );
+
+        $filePath = $writer->write($payload);
+
+        self::assertFileExists($filePath);
+        $contents = file_get_contents($filePath);
+        self::assertIsString($contents);
+        self::assertStringContainsString('"source": "sprints"', $contents);
+        self::assertStringContainsString('"currentFilter": "status:Todo"', $contents);
+        self::assertStringContainsString('"Current Sprint"', $contents);
     }
 }

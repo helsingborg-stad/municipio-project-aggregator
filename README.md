@@ -57,14 +57,17 @@ composer test
 npm run build:data
 ```
 
-Generates `public/data/issues.json` and `public/data/pull-requests.json` from repositories across GitHub tagged with the tracked topics.
+Generates `public/data/issues.json`, `public/data/pull-requests.json`, and release pages from repositories across GitHub tagged with the tracked topics.
 
 Use `BUILD_TARGETS` to refresh only the datasets you need:
 
 ```bash
 BUILD_TARGETS=issues php backend/bin/build.php
 BUILD_TARGETS=pull-requests,releases php backend/bin/build.php
+BUILD_TARGETS=sprints php backend/bin/build.php
 ```
+
+Sprint refreshes query GitHub Project v2 data and require a token with project read access, including the `read:project` scope.
 
 ```bash
 npm run dev
@@ -83,6 +86,7 @@ The GitHub Actions deployment is split so pushes rebuild only the UI bundle, whi
 - minute `5`: issues
 - minute `25`: pull requests
 - minute `45`: releases
+- minute `55`: sprints
 
 That keeps the published app shell stable and lowers the peak GitHub API usage per run.
 

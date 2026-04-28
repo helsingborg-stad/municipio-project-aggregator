@@ -39,5 +39,9 @@ final class GraphQlSearchQueryBuilderTest extends TestCase
         self::assertStringContainsString('repo:helsingborg-stad/styleguide is:pr is:open sort:created-desc', $query);
         self::assertStringContainsString('after: "cursor-123"', $query);
         self::assertStringContainsString('... on PullRequest', $query);
+        self::assertStringNotContainsString('issueType', $query);
+        self::assertStringNotContainsString('subIssuesSummary', $query);
+        self::assertStringNotContainsString('subIssues(first: 100)', $query);
+        self::assertStringNotContainsString('issueDependenciesSummary', $query);
     }
 }

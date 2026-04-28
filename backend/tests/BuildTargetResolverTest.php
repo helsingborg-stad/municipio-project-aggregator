@@ -16,13 +16,25 @@ final class BuildTargetResolverTest extends TestCase
     /**
      * @return void
      */
-    public function testResolveReturnsAllTargetsWhenConfigurationIsMissing(): void
+    public function testResolveReturnsDefaultTargetsWhenConfigurationIsMissing(): void
     {
         $resolver = new BuildTargetResolver();
 
         $targets = $resolver->resolve(false);
 
-        self::assertSame(BuildTarget::all(), $targets);
+        self::assertSame(BuildTarget::defaults(), $targets);
+    }
+
+    /**
+     * @return void
+     */
+    public function testResolveReturnsDefaultTargetsWhenConfigurationIsBlank(): void
+    {
+        $resolver = new BuildTargetResolver();
+
+        $targets = $resolver->resolve('   ');
+
+        self::assertSame(BuildTarget::defaults(), $targets);
     }
 
     /**
@@ -32,9 +44,9 @@ final class BuildTargetResolverTest extends TestCase
     {
         $resolver = new BuildTargetResolver();
 
-        $targets = $resolver->resolve('issues, pull-requests,issues');
+        $targets = $resolver->resolve('issues, pull-requests,sprints,issues');
 
-        self::assertSame([BuildTarget::Issues, BuildTarget::PullRequests], $targets);
+        self::assertSame([BuildTarget::Issues, BuildTarget::PullRequests, BuildTarget::Sprints], $targets);
     }
 
     /**

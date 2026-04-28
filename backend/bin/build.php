@@ -6,6 +6,7 @@ declare(strict_types=1);
 use MunicipioProjectAggregator\Backend\Config\BuildConfig;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubReleaseAggregator;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubGraphQlClient;
+use MunicipioProjectAggregator\Backend\GitHub\GitHubProjectSprintAggregator;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubRestClient;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubSourceAggregator;
 use MunicipioProjectAggregator\Backend\GitHub\GraphQlSearchQueryBuilder;
@@ -15,7 +16,6 @@ use MunicipioProjectAggregator\Backend\Support\BuildTarget;
 use MunicipioProjectAggregator\Backend\Support\BuildTargetResolver;
 use MunicipioProjectAggregator\Backend\Support\LocalEnvironmentLoader;
 use MunicipioProjectAggregator\Backend\Support\StreamHttpClient;
-use RuntimeException;
 
 require dirname(__DIR__, 2) . '/vendor/autoload.php';
 
@@ -55,6 +55,10 @@ $releaseAggregator = new GitHubReleaseAggregator(
     new GitHubRestClient(new StreamHttpClient()),
 );
 
+$sprintAggregator = new GitHubProjectSprintAggregator(
+    new GitHubGraphQlClient(new StreamHttpClient()),
+);
+
 $writer = new JsonSourceWriter($config->outputDirectory());
 
 foreach ($buildTargets as $buildTarget) {
@@ -65,6 +69,11 @@ foreach ($buildTargets as $buildTarget) {
 
     if ($buildTarget === BuildTarget::PullRequests) {
         writeSourcePayload($aggregator, SourceType::PullRequests, $config, $writer);
+        continue;
+    }
+
+    if ($buildTarget === BuildTarget::Sprints) {
+        writeSprintPayload($sprintAggregator, $config, $writer);
         continue;
     }
 
@@ -144,4 +153,21 @@ function writeReleasePayloads(
         $releasePageFilePath = $writer->write($pagePayload);
         fwrite(STDOUT, sprintf("  Wrote %s\n", $releasePageFilePath));
     }
+}
+
+/**
+ * @param GitHubProjectSprintAggregator $sprintAggregator
+ * @param BuildConfig $config
+ * @param JsonSourceWriter $writer
+ * @return void
+ */
+function writeSprintPayload(
+    GitHubProjectSprintAggregator $sprintAggregator,
+    BuildConfig $config,
+    JsonSourceWriter $writer,
+): void {
+    fwrite(STDOUT, "Fetching sprints...\n");
+    $payload = $sprintAggregator->aggregate($config, 'helsingborg-stad', 7);
+    $filePath = $writer->write($payload);
+    fwrite(STDOUT, sprintf("  Wrote %s\n", $filePath));
 }

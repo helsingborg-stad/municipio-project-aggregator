@@ -4,6 +4,7 @@ import {
   filterAuthors,
   filterItems,
   filterRepositories,
+  filterSprintItems,
   formatRelativeTime,
   formatTimestamp,
   getAuthorDirectory,
@@ -271,6 +272,33 @@ describe('filterAuthors', () => {
 
     expect(authors).toHaveLength(1);
     expect(authors[0].login).toBe('hubot');
+  });
+});
+
+describe('filterSprintItems', () => {
+  it('filters sprint items by title, repository, type, state, and status', () => {
+    const items = [
+      {
+        title: 'Implement sprint tab',
+        repository: 'helsingborg-stad/municipio-project-aggregator',
+        type: 'Issue',
+        state: 'Open',
+        status: 'In progress',
+        url: 'https://github.com/helsingborg-stad/municipio-project-aggregator/issues/1',
+      },
+      {
+        title: 'Ship sprint view',
+        repository: 'helsingborg-stad/municipio-project-aggregator',
+        type: 'Pull Request',
+        state: 'Merged',
+        status: 'Done',
+        url: 'https://github.com/helsingborg-stad/municipio-project-aggregator/pull/2',
+      },
+    ];
+
+    expect(filterSprintItems(items, 'in progress')).toHaveLength(1);
+    expect(filterSprintItems(items, 'merged')[0].title).toBe('Ship sprint view');
+    expect(filterSprintItems(items, 'agregator')).toHaveLength(2);
   });
 });
 

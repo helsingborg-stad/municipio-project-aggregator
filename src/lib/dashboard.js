@@ -304,6 +304,17 @@ export function filterReleases(releases, searchQuery) {
   ], searchQuery));
 }
 
+export function filterSprintItems(items, searchQuery) {
+  return items.filter((item) => matchesSearchQuery([
+    item.title,
+    item.repository,
+    item.type,
+    item.state,
+    item.status,
+    item.url,
+  ], searchQuery));
+}
+
 export function getFilterOptions(items) {
   return {
     authors: getUniqueOptions(items.map((item) => item.author?.login ?? '')),

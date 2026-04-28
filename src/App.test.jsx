@@ -157,6 +157,72 @@ const releasePageIndexPayload = {
   ],
 };
 
+const sprintPayload = {
+  source: 'sprints',
+  sourceScope: 'GitHub',
+  generatedAt: '2026-04-28T11:00:00Z',
+  count: 3,
+  project: {
+    owner: 'helsingborg-stad',
+    number: 7,
+    title: 'Roadmap',
+    url: 'https://github.com/orgs/helsingborg-stad/projects/7',
+  },
+  view: {
+    id: 'PVTV_1',
+    name: 'Board',
+    number: 1,
+    layout: 'BOARD_LAYOUT',
+    filter: 'status:Todo',
+  },
+  currentFilter: 'status:Todo',
+  currentSprint: {
+    label: 'Current Sprint',
+    title: 'Sprint 14',
+    startDate: '2026-04-28',
+    endDate: '2026-05-11',
+    itemCount: 1,
+    items: [
+      {
+        title: 'Implement sprint tab',
+        url: 'https://github.com/helsingborg-stad/municipio-project-aggregator/issues/1',
+        number: 1,
+        repository: 'helsingborg-stad/municipio-project-aggregator',
+        type: 'Issue',
+        state: 'Open',
+        status: 'In progress',
+      },
+    ],
+  },
+  nextSprint: {
+    label: 'Next Sprint',
+    title: 'Sprint 15',
+    startDate: '2026-05-12',
+    endDate: '2026-05-25',
+    itemCount: 2,
+    items: [
+      {
+        title: 'Track project filter',
+        url: 'https://github.com/helsingborg-stad/municipio-project-aggregator/issues/2',
+        number: 2,
+        repository: 'helsingborg-stad/municipio-project-aggregator',
+        type: 'Issue',
+        state: 'Open',
+        status: 'Todo',
+      },
+      {
+        title: 'Ship sprint view',
+        url: 'https://github.com/helsingborg-stad/municipio-project-aggregator/pull/3',
+        number: 3,
+        repository: 'helsingborg-stad/municipio-project-aggregator',
+        type: 'Pull Request',
+        state: 'Merged',
+        status: 'Done',
+      },
+    ],
+  },
+};
+
 const releasePageOnePayload = {
   source: 'releases',
   sourceScope: 'GitHub',
@@ -235,42 +301,39 @@ describe('App', () => {
     window.history.replaceState({}, '', '/');
   });
 
+  function jsonResponse(payload) {
+    return {
+      ok: true,
+      headers: new Headers({ 'content-type': 'application/json' }),
+      json: async () => payload,
+    };
+  }
+
   function mockDashboardFetch() {
     vi.stubGlobal('fetch', vi.fn(async (input) => {
       const url = String(input);
 
       if (url.includes('issues.json')) {
-        return {
-          ok: true,
-          json: async () => issuesPayload,
-        };
+        return jsonResponse(issuesPayload);
       }
 
       if (url.includes('pull-requests.json')) {
-        return {
-          ok: true,
-          json: async () => pullRequestsPayload,
-        };
+        return jsonResponse(pullRequestsPayload);
+      }
+
+      if (url.includes('sprints.json')) {
+        return jsonResponse(sprintPayload);
       }
 
       if (url.includes('releases/pageIndex.json')) {
-        return {
-          ok: true,
-          json: async () => releasePageIndexPayload,
-        };
+        return jsonResponse(releasePageIndexPayload);
       }
 
       if (url.includes('releases/page-2.json')) {
-        return {
-          ok: true,
-          json: async () => releasePageTwoPayload,
-        };
+        return jsonResponse(releasePageTwoPayload);
       }
 
-      return {
-        ok: true,
-        json: async () => releasePageOnePayload,
-      };
+      return jsonResponse(releasePageOnePayload);
     }));
   }
 
@@ -305,6 +368,16 @@ describe('App', () => {
     expect(screen.getByText('monalisa')).toBeInTheDocument();
     expect(screen.queryByText('Score: 1.2')).not.toBeInTheDocument();
 
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
+
+    expect(await screen.findByRole('heading', { name: 'Sprints' })).toBeInTheDocument();
+    expect(screen.getByText('Current filter:')).toBeInTheDocument();
+    expect(screen.getByText('status:Todo')).toBeInTheDocument();
+    expect(screen.getByText('Implement sprint tab')).toBeInTheDocument();
+    expect(screen.getByText('Ship sprint view')).toBeInTheDocument();
+    expect(screen.getByText('In progress')).toBeInTheDocument();
+    expect(screen.getByText('Merged')).toBeInTheDocument();
+
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Pull Requests' }));
 
     expect(await screen.findByText('Pull request beta')).toBeInTheDocument();
@@ -331,6 +404,11 @@ describe('App', () => {
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
     expect(await screen.findByText('No authors match the current search.')).toBeInTheDocument();
+
+    fireEvent.change(screen.getByRole('searchbox', { name: 'Search all tabs' }), { target: { value: 'merged' } });
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
+    expect(await screen.findByText('Ship sprint view')).toBeInTheDocument();
+    expect(screen.queryByText('Implement sprint tab')).not.toBeInTheDocument();
   });
 
   it('renders a release log tab with markdown content', async () => {
@@ -490,6 +568,7 @@ describe('App', () => {
       if (url.includes('issues.json')) {
         return {
           ok: true,
+          headers: new Headers({ 'content-type': 'application/json' }),
           json: async () => ({
             ...issuesPayload,
             items: issuesPayload.items.map((item) => ({
@@ -514,6 +593,7 @@ describe('App', () => {
 
       return {
         ok: true,
+        headers: new Headers({ 'content-type': 'application/json' }),
         json: async () => pullRequestsPayload,
       };
     }));
@@ -536,6 +616,49 @@ describe('App', () => {
     expect(within(issueCard).queryByText('Dependencies')).not.toBeInTheDocument();
     expect(within(issueCard).getByText('Related issue gamma')).toBeInTheDocument();
     expect(within(issueCard).queryByText('cross referenced')).not.toBeInTheDocument();
+  });
+
+  it('renders when sprint data is missing from the preview build', async () => {
+    vi.stubGlobal('fetch', vi.fn(async (input) => {
+      const url = String(input);
+
+      if (url.includes('issues.json')) {
+        return jsonResponse(issuesPayload);
+      }
+
+      if (url.includes('pull-requests.json')) {
+        return jsonResponse(pullRequestsPayload);
+      }
+
+      if (url.includes('sprints.json')) {
+        return {
+          ok: true,
+          headers: new Headers({ 'content-type': 'text/html; charset=utf-8' }),
+          json: async () => {
+            throw new SyntaxError('Unexpected token < in JSON at position 0');
+          },
+        };
+      }
+
+      if (url.includes('releases/pageIndex.json')) {
+        return jsonResponse(releasePageIndexPayload);
+      }
+
+      if (url.includes('releases/page-2.json')) {
+        return jsonResponse(releasePageTwoPayload);
+      }
+
+      return jsonResponse(releasePageOnePayload);
+    }));
+
+    render(<App />);
+
+    await screen.findByText('2 of 2 open issues');
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
+
+    expect(await screen.findByRole('heading', { name: 'Sprints' })).toBeInTheDocument();
+    expect(screen.getAllByText('No sprint data is available for this section.')).toHaveLength(2);
   });
 
   it('hides the card detail panel when an item has no detail content', async () => {

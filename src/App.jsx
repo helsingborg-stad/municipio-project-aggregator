@@ -1,4 +1,4 @@
-import { AlertCircle, ArrowUpRight, Building2, ChevronDown, ChevronRight, FolderGit2, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, ScrollText, Search, Ticket, Users } from 'lucide-react';
+import { AlertCircle, ArrowUpRight, Building2, CalendarDays, ChevronDown, ChevronRight, FolderGit2, FolderKanban, GitPullRequest, LayoutGrid, List, RefreshCcw, RotateCcw, ScrollText, Search, Ticket, Users } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
@@ -11,6 +11,7 @@ import {
   filterItems,
   filterReleases,
   filterRepositories,
+  filterSprintItems,
   formatRelativeTime,
   formatTimestamp,
   getAuthorDirectory,
@@ -29,6 +30,7 @@ const sources = [
   { key: 'pull-requests', label: 'Pull Requests', icon: GitPullRequest, accent: 'bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30' },
 ];
 
+const sprintTab = { key: 'sprints', label: 'Sprints', icon: CalendarDays };
 const releaseTab = { key: 'releases', label: 'Release log', icon: ScrollText };
 
 const auxiliaryTabs = [
@@ -36,7 +38,7 @@ const auxiliaryTabs = [
   { key: 'authors', label: 'Authors', icon: Users },
 ];
 
-const mainTabs = [...sources, releaseTab, ...auxiliaryTabs];
+const mainTabs = [...sources, sprintTab, releaseTab, ...auxiliaryTabs];
 
 const emptyFilters = {
   author: '',
@@ -1046,6 +1048,122 @@ function AuthorDirectoryPanel({ authors, searchQuery }) {
   );
 }
 
+function formatDateOnly(value) {
+  if (!value) {
+    return 'Unknown date';
+  }
+
+  return new Intl.DateTimeFormat(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(new Date(`${value}T00:00:00Z`));
+}
+
+function formatSprintRange(startDate, endDate) {
+  return `${formatDateOnly(startDate)} - ${formatDateOnly(endDate)}`;
+}
+
+function SprintPanel({ payload, searchQuery }) {
+  const currentSprintItems = filterSprintItems(payload?.currentSprint?.items ?? [], searchQuery);
+  const nextSprintItems = filterSprintItems(payload?.nextSprint?.items ?? [], searchQuery);
+  const visibleItemCount = currentSprintItems.length + nextSprintItems.length;
+
+  function renderSprintSection(sprint, visibleItems) {
+    if (!sprint) {
+      return (
+        <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
+          No sprint data is available for this section.
+        </div>
+      );
+    }
+
+    return (
+      <section className="space-y-4">
+        <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-white">{sprint.label}</h3>
+            <p className="text-sm text-slate-400">{sprint.title}</p>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-slate-400">
+            <span>{formatSprintRange(sprint.startDate, sprint.endDate)}</span>
+            <Badge variant="secondary">{visibleItems.length} linked item{visibleItems.length === 1 ? '' : 's'}</Badge>
+          </div>
+        </div>
+
+        {visibleItems.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-6 text-center text-slate-300">
+            No linked issues or pull requests match the current search.
+          </div>
+        ) : (
+          <div className="grid gap-4 xl:grid-cols-2">
+            {visibleItems.map((item) => (
+              <a
+                key={item.url}
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-cyan-300/40 hover:bg-slate-900"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="min-w-0 flex-1 space-y-3">
+                    <div>
+                      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
+                        <span>{item.type}</span>
+                        <span>#{item.number}</span>
+                      </div>
+                      <h4 className="mt-2 text-lg font-semibold text-white">{item.title}</h4>
+                      <p className="mt-1 text-sm text-slate-400">{item.repository}</p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Badge variant="secondary">{item.status || 'No status'}</Badge>
+                      <Badge variant="secondary">{item.state}</Badge>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  }
+
+  return (
+    <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
+      <CardHeader className="flex flex-col gap-4 border-b border-white/10 bg-white/5 md:flex-row md:items-end md:justify-between">
+        <div>
+          <CardTitle className="text-2xl text-white">Sprints</CardTitle>
+          <CardDescription className="mt-2 max-w-2xl text-slate-300">
+            Linked issues and pull requests from the GitHub project board, grouped by the active and upcoming sprint iterations.
+          </CardDescription>
+        </div>
+        <div className="inline-flex items-center gap-2 rounded-full bg-cyan-400/15 px-4 py-2 text-sm font-medium text-cyan-100 ring-1 ring-cyan-300/30">
+          <CalendarDays className="h-4 w-4" />
+          {visibleItemCount} sprint item{visibleItemCount === 1 ? '' : 's'}
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-8 p-6">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-white">{payload?.project?.title || 'GitHub Project'}</p>
+            <p className="text-sm text-slate-400">
+              {payload?.view?.name ? `View: ${payload.view.name}` : 'Default project view'}
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-300">
+            <span className="font-medium text-white">Current filter:</span>{' '}
+            {payload?.currentFilter || 'No filter exposed by GitHub for this view.'}
+          </div>
+        </div>
+        {renderSprintSection(payload?.currentSprint, currentSprintItems)}
+        {renderSprintSection(payload?.nextSprint, nextSprintItems)}
+      </CardContent>
+    </Card>
+  );
+}
+
 function SourcePanel({ payload, icon: Icon, accentClassName, searchQuery }) {
   const [panelPreferences, setPanelPreferences] = useState(() => readSourcePanelPreferences(payload.source));
   const { filters, viewMode, expandedTreeItems } = panelPreferences;
@@ -1273,12 +1391,28 @@ async function fetchDataFile(path) {
   return response.json();
 }
 
+async function fetchOptionalDataFile(path) {
+  const response = await fetch(`${import.meta.env.BASE_URL}data/${path}`);
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const contentType = response.headers.get('content-type') ?? '';
+  if (!contentType.toLowerCase().includes('application/json')) {
+    return null;
+  }
+
+  return response.json();
+}
+
 async function fetchSource(key) {
   return fetchDataFile(`${key}.json`);
 }
 
 export default function App() {
   const [payloads, setPayloads] = useState({});
+  const [sprintPayload, setSprintPayload] = useState(null);
   const [releasePageIndex, setReleasePageIndex] = useState(null);
   const [releasePagePayload, setReleasePagePayload] = useState(null);
   const [activeReleasePageNumber, setActiveReleasePageNumber] = useState(1);
@@ -1288,7 +1422,7 @@ export default function App() {
   const [activeMainTab, setActiveMainTab] = useState(readMainTabFromUrl);
   const [searchQuery, setSearchQuery] = useState('');
   const payloadList = Object.values(payloads);
-  const buildStatusTabs = [...sources, releaseTab];
+  const buildStatusTabs = [...sources, sprintTab, releaseTab];
   const allItems = payloadList.flatMap((payload) => (
     Array.isArray(payload.items)
       ? payload.items.map((item) => ({ ...item, source: payload.source }))
@@ -1302,8 +1436,9 @@ export default function App() {
     async function loadDashboard() {
       try {
         setStatus('loading');
-        const [entries, nextReleasePageIndex] = await Promise.all([
+        const [entries, nextSprintPayload, nextReleasePageIndex] = await Promise.all([
           Promise.all(sources.map(async (source) => [source.key, await fetchSource(source.key)])),
+          fetchOptionalDataFile('sprints.json'),
           fetchDataFile('releases/pageIndex.json'),
         ]);
 
@@ -1317,6 +1452,7 @@ export default function App() {
         }
 
         setPayloads(Object.fromEntries(entries));
+        setSprintPayload(nextSprintPayload);
         setReleasePageIndex(nextReleasePageIndex);
         setReleasePagePayload(nextReleasePagePayload);
         setActiveReleasePageNumber(nextReleasePagePayload?.pageNumber ?? 1);
@@ -1415,7 +1551,7 @@ export default function App() {
                 {buildStatusTabs.map((tab) => (
                   <div key={tab.key} className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
                     <span>{tab.label}</span>
-                    <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePageIndex?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
+                    <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePageIndex?.count ?? 0 : tab.key === sprintTab.key ? sprintPayload?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
                   </div>
                 ))}
               </CardContent>
@@ -1480,6 +1616,10 @@ export default function App() {
                   </TabsContent>
                 );
               })}
+
+              <TabsContent value="sprints">
+                <SprintPanel payload={sprintPayload} searchQuery={searchQuery} />
+              </TabsContent>
 
               <TabsContent value="repositories">
                 <RepositoryCatalogPanel repositories={repositories} searchQuery={searchQuery} />

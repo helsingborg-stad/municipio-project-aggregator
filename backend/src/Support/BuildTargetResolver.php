@@ -18,7 +18,7 @@ final class BuildTargetResolver
     public function resolve(string|false $configuredTargets): array
     {
         if ($configuredTargets === false || trim($configuredTargets) === '') {
-            return BuildTarget::all();
+            return BuildTarget::defaults();
         }
 
         $resolvedTargets = [];
@@ -44,7 +44,7 @@ final class BuildTargetResolver
         }
 
         if ($resolvedTargets === []) {
-            return BuildTarget::all();
+            return BuildTarget::defaults();
         }
 
         return array_values($resolvedTargets);
