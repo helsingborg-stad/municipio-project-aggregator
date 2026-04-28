@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-28T09:02:29+00:00",
-    "count": 105,
+    "generatedAt": "2026-04-28T09:57:00+00:00",
+    "count": 103,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -101,10 +101,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-testimonials",
-            "fullName": "helsingborg-stad/modularity-testimonials",
-            "description": "Modularity plugin to display testemonials",
-            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -115,10 +115,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
+            "name": "modularity-testimonials",
+            "fullName": "helsingborg-stad/modularity-testimonials",
+            "description": "Modularity plugin to display testemonials",
+            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
         },
         {
             "owner": "helsingborg-stad",
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -231,20 +231,6 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -395,6 +381,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api-sponsor-manager",
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
@@ -424,9 +424,81 @@
     ],
     "authors": [
         {
+            "login": "AlexAlterya",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/128726787?v=4",
+            "url": "https://github.com/AlexAlterya",
+            "company": ""
+        },
+        {
+            "login": "Copilot",
+            "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+            "url": "https://github.com/apps/copilot-swe-agent",
+            "company": ""
+        },
+        {
+            "login": "DMarby",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/174626?v=4",
+            "url": "https://github.com/DMarby",
+            "company": ""
+        },
+        {
+            "login": "JockeTF",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/532268?v=4",
+            "url": "https://github.com/JockeTF",
+            "company": ""
+        },
+        {
+            "login": "MasterKenth",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/2890987?v=4",
+            "url": "https://github.com/MasterKenth",
+            "company": ""
+        },
+        {
+            "login": "Muckbuck",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/11438804?v=4",
+            "url": "https://github.com/Muckbuck",
+            "company": ""
+        },
+        {
+            "login": "NiclasNorin",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+            "url": "https://github.com/NiclasNorin",
+            "company": ""
+        },
+        {
             "login": "NiklasBr",
             "avatarUrl": "https://avatars.githubusercontent.com/u/279826?u=35034ee24065a068c14d3ea5a077afeefc0a54ec&v=4",
             "url": "https://github.com/NiklasBr",
+            "company": ""
+        },
+        {
+            "login": "Okkido",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/312146?v=4",
+            "url": "https://github.com/Okkido",
+            "company": ""
+        },
+        {
+            "login": "RuslanaLogosha",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/63247495?v=4",
+            "url": "https://github.com/RuslanaLogosha",
+            "company": ""
+        },
+        {
+            "login": "Svanmark",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/457482?v=4",
+            "url": "https://github.com/Svanmark",
+            "company": ""
+        },
+        {
+            "login": "Sven65",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?v=4",
+            "url": "https://github.com/Sven65",
+            "company": ""
+        },
+        {
+            "login": "WilliamLundqvist",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?v=4",
+            "url": "https://github.com/WilliamLundqvist",
             "company": ""
         },
         {
@@ -436,16 +508,52 @@
             "company": ""
         },
         {
+            "login": "actions-user",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
+            "url": "https://github.com/actions-user",
+            "company": ""
+        },
+        {
+            "login": "alexanderbomanskoug2",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/39676080?v=4",
+            "url": "https://github.com/alexanderbomanskoug2",
+            "company": ""
+        },
+        {
             "login": "andersrehn",
             "avatarUrl": "https://avatars.githubusercontent.com/u/13356945?u=110c0ff20b7e86acbff99a7c665ac02948533468&v=4",
             "url": "https://github.com/andersrehn",
             "company": ""
         },
         {
+            "login": "annaeklov",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/54768095?v=4",
+            "url": "https://github.com/annaeklov",
+            "company": ""
+        },
+        {
+            "login": "annalinneajohansson82",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/232372534?v=4",
+            "url": "https://github.com/annalinneajohansson82",
+            "company": ""
+        },
+        {
             "login": "camitzdennis",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
             "url": "https://github.com/camitzdennis",
             "company": "@helsingborg-stad"
+        },
+        {
+            "login": "cedrikvonheiroth",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/64852452?v=4",
+            "url": "https://github.com/cedrikvonheiroth",
+            "company": ""
+        },
+        {
+            "login": "colesmedia",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/54745265?v=4",
+            "url": "https://github.com/colesmedia",
+            "company": ""
         },
         {
             "login": "considadam",
@@ -454,15 +562,99 @@
             "company": "Consid Bor\u00e5s AB"
         },
         {
+            "login": "dannil76",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/768077?v=4",
+            "url": "https://github.com/dannil76",
+            "company": ""
+        },
+        {
+            "login": "davidohlin",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/864179?v=4",
+            "url": "https://github.com/davidohlin",
+            "company": ""
+        },
+        {
+            "login": "denniscamitz",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/152498846?v=4",
+            "url": "https://github.com/denniscamitz",
+            "company": ""
+        },
+        {
+            "login": "dependabot[bot]",
+            "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+            "url": "https://github.com/apps/dependabot",
+            "company": ""
+        },
+        {
             "login": "dnkmdg",
             "avatarUrl": "https://avatars.githubusercontent.com/u/6313551?u=2b061680adc78ada3141cba3f3bfde6be8434fcb&v=4",
             "url": "https://github.com/dnkmdg",
             "company": "String Furniture AB"
         },
         {
+            "login": "ergr1001",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/97021637?v=4",
+            "url": "https://github.com/ergr1001",
+            "company": ""
+        },
+        {
+            "login": "faejr",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/752642?v=4",
+            "url": "https://github.com/faejr",
+            "company": ""
+        },
+        {
+            "login": "gexen2",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/51493362?v=4",
+            "url": "https://github.com/gexen2",
+            "company": ""
+        },
+        {
+            "login": "hissamkhanbabar",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/28749319?v=4",
+            "url": "https://github.com/hissamkhanbabar",
+            "company": ""
+        },
+        {
+            "login": "hissmconsid",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/117655220?v=4",
+            "url": "https://github.com/hissmconsid",
+            "company": ""
+        },
+        {
+            "login": "hultsfredskommun",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1646885?v=4",
+            "url": "https://github.com/hultsfredskommun",
+            "company": ""
+        },
+        {
             "login": "jeanfredrik",
             "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
             "url": "https://github.com/jeanfredrik",
+            "company": ""
+        },
+        {
+            "login": "jlarsson",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
+            "url": "https://github.com/jlarsson",
+            "company": ""
+        },
+        {
+            "login": "jonatanhanson",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/21363149?v=4",
+            "url": "https://github.com/jonatanhanson",
+            "company": ""
+        },
+        {
+            "login": "jwinding",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/7421890?v=4",
+            "url": "https://github.com/jwinding",
+            "company": ""
+        },
+        {
+            "login": "malinkytta",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/113056103?v=4",
+            "url": "https://github.com/malinkytta",
             "company": ""
         },
         {
@@ -473,9 +665,33 @@
         },
         {
             "login": "michaelclaesson",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
             "url": "https://github.com/michaelclaesson",
             "company": "Consid Bor\u00e5s"
+        },
+        {
+            "login": "mikael-stromgren",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/8775561?v=4",
+            "url": "https://github.com/mikael-stromgren",
+            "company": ""
+        },
+        {
+            "login": "mikael102030",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/184387911?v=4",
+            "url": "https://github.com/mikael102030",
+            "company": ""
+        },
+        {
+            "login": "nRamstedt",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/16800993?v=4",
+            "url": "https://github.com/nRamstedt",
+            "company": ""
+        },
+        {
+            "login": "pbrotherton",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/19387424?v=4",
+            "url": "https://github.com/pbrotherton",
+            "company": ""
         },
         {
             "login": "perifer",
@@ -484,16 +700,70 @@
             "company": ""
         },
         {
+            "login": "petter-a",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?v=4",
+            "url": "https://github.com/petter-a",
+            "company": ""
+        },
+        {
+            "login": "rsj10736",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/30775156?v=4",
+            "url": "https://github.com/rsj10736",
+            "company": ""
+        },
+        {
+            "login": "rubikuo",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/46818235?v=4",
+            "url": "https://github.com/rubikuo",
+            "company": ""
+        },
+        {
             "login": "sebastianthulin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
             "url": "https://github.com/sebastianthulin",
             "company": "Helsingborgs stad"
         },
         {
+            "login": "silvergrund",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/4200504?v=4",
+            "url": "https://github.com/silvergrund",
+            "company": ""
+        },
+        {
+            "login": "sqws",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/31953682?v=4",
+            "url": "https://github.com/sqws",
+            "company": ""
+        },
+        {
             "login": "thorbrink",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
             "url": "https://github.com/thorbrink",
             "company": "@helsingborg-stad"
+        },
+        {
+            "login": "tommymo",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/18282944?v=4",
+            "url": "https://github.com/tommymo",
+            "company": ""
+        },
+        {
+            "login": "viktor7ltz",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/78755786?v=4",
+            "url": "https://github.com/viktor7ltz",
+            "company": ""
+        },
+        {
+            "login": "yo-l1982",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/154269?v=4",
+            "url": "https://github.com/yo-l1982",
+            "company": ""
+        },
+        {
+            "login": "zilaei",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/186287?v=4",
+            "url": "https://github.com/zilaei",
+            "company": ""
         }
     ],
     "items": [
@@ -1818,36 +2088,6 @@
             "relationships": []
         },
         {
-            "title": "[TW] [WARNING] Undefined variable $published",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1957",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:24:00Z",
-            "number": 1957,
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "title": "[TW] [WARNING] Undefined variable $name",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1956",
             "repository": "helsingborg-stad/Municipio",
@@ -3028,36 +3268,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "[TW] [WARNING] Undefined array key \"mod_hero_byline\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1935",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T07:18:40Z",
-            "number": 1935,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "milestone": null,
