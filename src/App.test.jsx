@@ -19,6 +19,20 @@ const issuesPayload = {
       url: 'https://github.com/helsingborg-stad/plugin-alpha',
     },
   ],
+  authors: [
+    {
+      login: 'octocat',
+      avatarUrl: 'https://avatars.example.com/octocat.png',
+      company: 'GitHub',
+      url: 'https://github.com/octocat',
+    },
+    {
+      login: 'hubot',
+      avatarUrl: 'https://avatars.example.com/hubot.png',
+      company: 'Acme',
+      url: 'https://github.com/hubot',
+    },
+  ],
   items: [
     {
       title: 'Issue alpha',
@@ -83,6 +97,20 @@ const pullRequestsPayload = {
       fullName: 'helsingborg-stad/plugin-beta',
       description: 'Compatible plugin beta',
       url: 'https://github.com/helsingborg-stad/plugin-beta',
+    },
+  ],
+  authors: [
+    {
+      login: 'octocat',
+      avatarUrl: 'https://avatars.example.com/octocat.png',
+      company: 'GitHub',
+      url: 'https://github.com/octocat',
+    },
+    {
+      login: 'monalisa',
+      avatarUrl: 'https://avatars.example.com/monalisa.png',
+      company: 'Octo Arts',
+      url: 'https://github.com/monalisa',
     },
   ],
   items: [
@@ -272,8 +300,10 @@ describe('App', () => {
     expect(await screen.findByRole('heading', { name: 'Contributors' })).toBeInTheDocument();
     expect(window.location.search).toBe('?tab=authors');
     expect(screen.getByText('GitHub')).toBeInTheDocument();
-    expect(screen.getByText('Score: 1.2')).toBeInTheDocument();
-    expect(screen.getByText('Score is weighted by item type: each issue is worth 0.1 points and each pull request is worth 1.0 point.')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Current activity' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Historic contributors' })).toBeInTheDocument();
+    expect(screen.getByText('monalisa')).toBeInTheDocument();
+    expect(screen.queryByText('Score: 1.2')).not.toBeInTheDocument();
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Pull Requests' }));
 

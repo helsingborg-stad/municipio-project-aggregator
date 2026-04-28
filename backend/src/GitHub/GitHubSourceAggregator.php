@@ -34,11 +34,24 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
     public function aggregate(SourceType $sourceType, BuildConfig $config): SourcePayload
     {
         $itemsByUrl = [];
+        $authorsByLogin = [];
         $repositories = $this->restClient->listRepositoriesByTopics($config->topics(), $config->token());
         $oldestIncludedCreatedAt = $config->oldestIncludedCreatedAt();
 
         foreach ($repositories as $repository) {
-            foreach ($this->listGraphQlItems($sourceType, $repository->owner(), $repository->name(), $config->token(), $oldestIncludedCreatedAt) as $itemNode) {
+            $searchResult = $this->listGraphQlItemsAndAuthors(
+                $sourceType,
+                $repository->owner(),
+                $repository->name(),
+                $config->token(),
+                $oldestIncludedCreatedAt,
+            );
+
+            foreach ($searchResult['authors'] as $author) {
+                $this->rememberAuthor($authorsByLogin, $author);
+            }
+
+            foreach ($searchResult['items'] as $itemNode) {
                 $item = AggregatedItem::fromNode($itemNode);
                 $itemData = $item->toArray();
 
@@ -51,10 +64,16 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
         }
 
         $items = array_values($itemsByUrl);
+        $authors = array_values($authorsByLogin);
 
         usort(
             $items,
             static fn (AggregatedItem $left, AggregatedItem $right): int => strcmp($right->createdAt(), $left->createdAt()),
+        );
+
+        usort(
+            $authors,
+            static fn (array $left, array $right): int => strcmp($left['login'] ?? '', $right['login'] ?? ''),
         );
 
         return new SourcePayload(
@@ -63,6 +82,7 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
             $config->topics(),
             $config->generatedAt()->format(DATE_ATOM),
             $repositories,
+            $authors,
             $items,
         );
     }
@@ -93,9 +113,9 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
      * @param string $repositoryName
      * @param string $token
      * @param DateTimeImmutable $oldestIncludedCreatedAt
-     * @return array<int, array<string, mixed>>
+     * @return array{items: array<int, array<string, mixed>>, authors: array<int, array<string, string>>}
      */
-    private function listGraphQlItems(
+    private function listGraphQlItemsAndAuthors(
         SourceType $sourceType,
         string $owner,
         string $repositoryName,
@@ -103,6 +123,7 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
         DateTimeImmutable $oldestIncludedCreatedAt,
     ): array {
         $items = [];
+        $authorsByLogin = [];
         $afterCursor = null;
 
         do {
@@ -114,29 +135,79 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
             $search = is_array($response['search'] ?? null) ? $response['search'] : [];
             $nodes = is_array($search['nodes'] ?? null) ? $search['nodes'] : [];
             $pageInfo = is_array($search['pageInfo'] ?? null) ? $search['pageInfo'] : [];
-            $reachedLookbackBoundary = false;
 
             foreach ($nodes as $node) {
+                if (!is_array($node)) {
+                    continue;
+                }
+
+                $this->rememberAuthor($authorsByLogin, $this->extractGraphQlAuthor($node['author'] ?? null));
+
                 if (!is_array($node) || empty($node['title']) || empty($node['url']) || empty($node['number'])) {
                     continue;
                 }
 
                 if (!$this->wasCreatedWithinWindow(['created_at' => $node['createdAt'] ?? null], $oldestIncludedCreatedAt)) {
-                    $reachedLookbackBoundary = true;
-                    break;
+                    continue;
                 }
 
                 $items[] = $node;
-            }
-
-            if ($reachedLookbackBoundary) {
-                break;
             }
 
             $hasNextPage = ($pageInfo['hasNextPage'] ?? false) === true;
             $afterCursor = is_string($pageInfo['endCursor'] ?? null) ? $pageInfo['endCursor'] : null;
         } while ($hasNextPage && $afterCursor !== null);
 
-        return $items;
+        return [
+            'items' => $items,
+            'authors' => array_values($authorsByLogin),
+        ];
+    }
+
+    /**
+     * @param mixed $author
+     * @return array<string, string>|null
+     */
+    private function extractGraphQlAuthor(mixed $author): ?array
+    {
+        if (!is_array($author) || !is_string($author['login'] ?? null) || $author['login'] === '') {
+            return null;
+        }
+
+        $company = is_string($author['company'] ?? null) ? trim($author['company']) : '';
+
+        return [
+            'login' => $author['login'],
+            'avatarUrl' => is_string($author['avatarUrl'] ?? null) ? $author['avatarUrl'] : '',
+            'url' => is_string($author['url'] ?? null) ? $author['url'] : '',
+            'company' => $company,
+        ];
+    }
+
+    /**
+     * @param array<string, array<string, string>> $authorsByLogin
+     * @param array<string, string>|null $author
+     * @return void
+     */
+    private function rememberAuthor(array &$authorsByLogin, ?array $author): void
+    {
+        if ($author === null) {
+            return;
+        }
+
+        $login = $author['login'] ?? '';
+
+        if ($login === '') {
+            return;
+        }
+
+        $currentAuthor = $authorsByLogin[$login] ?? null;
+
+        $authorsByLogin[$login] = [
+            'login' => $login,
+            'avatarUrl' => $author['avatarUrl'] !== '' ? $author['avatarUrl'] : ($currentAuthor['avatarUrl'] ?? ''),
+            'url' => $author['url'] !== '' ? $author['url'] : ($currentAuthor['url'] ?? ''),
+            'company' => $author['company'] !== '' ? $author['company'] : ($currentAuthor['company'] ?? ''),
+        ];
     }
 }

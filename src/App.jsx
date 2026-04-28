@@ -962,6 +962,39 @@ function RepositoryCatalogPanel({ repositories, searchQuery }) {
 function AuthorDirectoryPanel({ authors, searchQuery }) {
   const authorCardClassName = 'rounded-3xl border border-white/10 bg-slate-900/70 p-5';
   const visibleAuthors = filterAuthors(authors, searchQuery);
+  const activeAuthors = visibleAuthors.filter((author) => author.score > 0);
+  const historicAuthors = visibleAuthors.filter((author) => author.score <= 0);
+
+  function renderAuthors(authorList) {
+    return (
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        {authorList.map((author) => {
+          const content = (
+            <div className={author.url ? `group ${authorCardClassName} transition-colors hover:border-fuchsia-300/40 hover:bg-slate-900` : authorCardClassName}>
+              <div className="flex items-center gap-4">
+                <AvatarImage person={author} sizeClassName="h-14 w-14" fallbackTextClassName="text-base" />
+                <div className="flex min-h-14 min-w-0 flex-1 flex-col">
+                  <h3 className="truncate text-lg font-semibold text-white">{author.login}</h3>
+                  {author.company ? <p className="truncate text-sm text-slate-500">{author.company}</p> : null}
+                </div>
+                {author.url ? <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-fuchsia-200" /> : null}
+              </div>
+            </div>
+          );
+
+          if (!author.url) {
+            return <div key={author.login}>{content}</div>;
+          }
+
+          return (
+            <a key={author.login} href={author.url} target="_blank" rel="noreferrer">
+              {content}
+            </a>
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <Card className="overflow-hidden border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
@@ -983,39 +1016,31 @@ function AuthorDirectoryPanel({ authors, searchQuery }) {
             No authors match the current search.
           </div>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {visibleAuthors.map((author) => {
-              const content = (
-                <div className={author.url ? `group ${authorCardClassName} transition-colors hover:border-fuchsia-300/40 hover:bg-slate-900` : authorCardClassName}>
-                  <div className="flex items-center gap-4">
-                    <AvatarImage person={author} sizeClassName="h-14 w-14" fallbackTextClassName="text-base" />
-                    <div className="flex min-h-14 min-w-0 flex-1 flex-col">
-                      <h3 className="truncate text-lg font-semibold text-white">{author.login}</h3>
-                      {author.company ? <p className="truncate text-sm text-slate-500">{author.company}</p> : null}
-                      <p className="mt-auto text-sm text-slate-400">
-                        Score: {author.score.toFixed(1)}
-                      </p>
-                    </div>
-                    {author.url ? <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-fuchsia-200" /> : null}
-                  </div>
+          <div className="space-y-8">
+            {activeAuthors.length > 0 ? (
+              <section className="space-y-4" aria-label="Current activity contributors">
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Current activity</h3>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Contributors with tracked issues or pull requests are listed first.
+                  </p>
                 </div>
-              );
-
-              if (!author.url) {
-                return <div key={author.login}>{content}</div>;
-              }
-
-              return (
-                <a key={author.login} href={author.url} target="_blank" rel="noreferrer">
-                  {content}
-                </a>
-              );
-            })}
+                {renderAuthors(activeAuthors)}
+              </section>
+            ) : null}
+            {historicAuthors.length > 0 ? (
+              <section className="space-y-4" aria-label="Historic contributors">
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Historic contributors</h3>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Remaining contributors are shown alphabetically to keep the full author directory available.
+                  </p>
+                </div>
+                {renderAuthors(historicAuthors)}
+              </section>
+            ) : null}
           </div>
         )}
-        <p className="mt-6 text-xs text-slate-500">
-          Score is weighted by item type: each issue is worth 0.1 points and each pull request is worth 1.0 point.
-        </p>
       </CardContent>
     </Card>
   );
@@ -1270,7 +1295,7 @@ export default function App() {
       : []
   ));
   const repositories = getRepositoryCatalog(payloadList);
-  const authors = getAuthorDirectory(allItems);
+  const authors = getAuthorDirectory(payloadList, allItems);
   useEffect(() => {
     let isActive = true;
 

@@ -158,10 +158,21 @@ describe('getRepositoryCatalog', () => {
 });
 
 describe('getAuthorDirectory', () => {
-  it('collects unique authors with weighted scores', () => {
+  it('collects unique authors with weighted scores and historic authors', () => {
     const authors = getAuthorDirectory([
+      {
+        authors: [
+          { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat', company: 'GitHub' },
+          { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot', company: 'Acme' },
+        ],
+      },
+      {
+        authors: [
+          { login: 'oldtimer', avatarUrl: 'https://example.com/oldtimer.png', url: 'https://github.com/oldtimer', company: 'Legacy Systems' },
+        ],
+      },
+    ], [
       { source: 'issues', author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
-      { source: 'issues', author: { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot' } },
       { source: 'pull-requests', author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
     ]);
 
@@ -169,27 +180,63 @@ describe('getAuthorDirectory', () => {
       {
         login: 'octocat',
         avatarUrl: 'https://example.com/octocat.png',
-        company: '',
+        company: 'GitHub',
         url: 'https://github.com/octocat',
         score: 1.1,
       },
       {
         login: 'hubot',
         avatarUrl: 'https://example.com/hubot.png',
-        company: '',
+        company: 'Acme',
         url: 'https://github.com/hubot',
-        score: 0.1,
+        score: 0,
+      },
+      {
+        login: 'oldtimer',
+        avatarUrl: 'https://example.com/oldtimer.png',
+        company: 'Legacy Systems',
+        url: 'https://github.com/oldtimer',
+        score: 0,
       },
     ]);
   });
 
+  it('falls back to alphabetical order when scores are equal', () => {
+    const authors = getAuthorDirectory([
+      {
+        authors: [
+          { login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot', company: '' },
+          { login: 'ada', avatarUrl: 'https://example.com/ada.png', url: 'https://github.com/ada', company: '' },
+        ],
+      },
+    ], []);
+
+    expect(authors.map((author) => author.login)).toEqual(['ada', 'hubot']);
+  });
+
   it('preserves the latest known company for each author', () => {
     const authors = getAuthorDirectory([
+      {
+        authors: [{ login: 'octocat', company: '', avatarUrl: '', url: 'https://github.com/octocat' }],
+      },
+    ], [
       { source: 'issues', author: { login: 'octocat', company: 'GitHub', avatarUrl: '', url: 'https://github.com/octocat' } },
       { source: 'pull-requests', author: { login: 'octocat', company: '', avatarUrl: '', url: 'https://github.com/octocat' } },
     ]);
 
     expect(authors[0].company).toBe('GitHub');
+  });
+
+  it('keeps active contributors ahead of historic-only authors', () => {
+    const authors = getAuthorDirectory([
+      {
+        authors: [{ login: 'hubot', avatarUrl: 'https://example.com/hubot.png', url: 'https://github.com/hubot', company: '' }],
+      },
+    ], [
+      { source: 'issues', author: { login: 'octocat', avatarUrl: 'https://example.com/octocat.png', url: 'https://github.com/octocat' } },
+    ]);
+
+    expect(authors.map((author) => author.login)).toEqual(['octocat', 'hubot']);
   });
 });
 
@@ -230,6 +277,8 @@ describe('filterAuthors', () => {
 describe('filterItems', () => {
   const items = [
     {
+      title: 'Improve dashboard aggregator search',
+      repository: 'helsingborg-stad/municipio-project-aggregator',
       author: { login: 'octocat' },
       assignees: [{ login: 'hubot' }],
       milestone: { title: 'Q2' },
@@ -238,6 +287,8 @@ describe('filterItems', () => {
       relationshipSummary: { linked: 1, blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0 },
     },
     {
+      title: 'Cleanup filters',
+      repository: 'helsingborg-stad/plugin-beta',
       author: { login: 'monalisa' },
       assignees: [],
       milestone: null,
@@ -289,20 +340,8 @@ describe('filterItems', () => {
     expect(filtered[0].author.login).toBe('octocat');
   });
 
-  it('matches fuzzy free-text search terms across item metadata', () => {
-    const filtered = filterItems([
-      {
-        title: 'Improve dashboard aggregator search',
-        repository: 'helsingborg-stad/municipio-project-aggregator',
-        author: { login: 'octocat' },
-        assignees: [{ login: 'hubot' }],
-        milestone: { title: 'Q2' },
-        type: 'Feature',
-        subIssues: { total: 0 },
-        relationshipSummary: { linked: 0, blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0 },
-        relationships: [],
-      },
-    ], {
+  it('supports fuzzy item searches with minor typos', () => {
+    const filtered = filterItems(items, {
       author: '',
       assignee: '',
       milestone: '',

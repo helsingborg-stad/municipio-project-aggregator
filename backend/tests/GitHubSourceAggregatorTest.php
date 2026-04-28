@@ -51,6 +51,8 @@ final class GitHubSourceAggregatorTest extends TestCase
         self::assertSame('https://github.com/municipio-se/municipio-site', $data['repositories'][0]['url']);
         self::assertSame('GetMunicipio only PR', $data['items'][0]['title']);
         self::assertSame('Shared PR', $data['items'][1]['title']);
+        self::assertSame(['monalisa', 'octocat', 'oldtimer'], array_column($data['authors'], 'login'));
+        self::assertSame('Legacy Systems', $data['authors'][2]['company']);
         self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
         self::assertSame('octocat', $data['items'][0]['author']['login']);
         self::assertSame('GitHub', $data['items'][0]['author']['company']);

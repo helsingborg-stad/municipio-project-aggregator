@@ -221,6 +221,29 @@ function getUniqueOptions(values) {
   return [...new Set(values.filter(Boolean))].sort((left, right) => left.localeCompare(right));
 }
 
+function normalizeAuthorValue(value) {
+  return typeof value === 'string' ? value.trim() : '';
+}
+
+function rememberAuthor(authorsByLogin, author, scoreIncrement = 0) {
+  if (!author?.login) {
+    return;
+  }
+
+  const currentAuthor = authorsByLogin.get(author.login);
+  const nextAvatarUrl = normalizeAuthorValue(author.avatarUrl);
+  const nextCompany = normalizeAuthorValue(author.company);
+  const nextUrl = normalizeAuthorValue(author.url);
+
+  authorsByLogin.set(author.login, {
+    login: author.login,
+    avatarUrl: nextAvatarUrl || currentAuthor?.avatarUrl || '',
+    company: nextCompany || currentAuthor?.company || '',
+    url: nextUrl || currentAuthor?.url || '',
+    score: Number(((currentAuthor?.score ?? 0) + scoreIncrement).toFixed(1)),
+  });
+}
+
 /**
  * Determines whether a value is a non-empty item URL.
  *
@@ -231,28 +254,28 @@ function isItemUrl(value) {
   return typeof value === 'string' && value !== '';
 }
 
-export function getAuthorDirectory(items) {
+export function getAuthorDirectory(payloads, items) {
   const authorsByLogin = new Map();
 
-  items.forEach((item) => {
-    const author = item?.author;
-    if (!author?.login) {
-      return;
-    }
+  payloads.forEach((payload) => {
+    const authors = Array.isArray(payload?.authors) ? payload.authors : [];
 
-    const currentAuthor = authorsByLogin.get(author.login);
-    const normalizedCompany = typeof author.company === 'string' ? author.company.trim() : '';
-
-    authorsByLogin.set(author.login, {
-      login: author.login,
-      avatarUrl: author.avatarUrl ?? currentAuthor?.avatarUrl ?? '',
-      company: normalizedCompany || currentAuthor?.company || '',
-      url: author.url ?? currentAuthor?.url ?? '',
-      score: Number(((currentAuthor?.score ?? 0) + (item.source === 'pull-requests' ? 1 : 0.1)).toFixed(1)),
+    authors.forEach((author) => {
+      rememberAuthor(authorsByLogin, author);
     });
   });
 
-  return [...authorsByLogin.values()].sort((left, right) => right.score - left.score);
+  items.forEach((item) => {
+    rememberAuthor(authorsByLogin, item?.author, item.source === 'pull-requests' ? 1 : 0.1);
+  });
+
+  return [...authorsByLogin.values()].sort((left, right) => {
+    if (right.score !== left.score) {
+      return right.score - left.score;
+    }
+
+    return left.login.localeCompare(right.login);
+  });
 }
 
 export function filterRepositories(repositories, searchQuery) {

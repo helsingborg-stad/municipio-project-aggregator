@@ -17,6 +17,7 @@ final class SourcePayload implements JsonOutputPayloadInterface
      * @param array<int, string> $topics Repository topics used in the query.
      * @param string $generatedAt ISO 8601 aggregation timestamp.
      * @param array<int, RepositoryReference> $repositories Matched repositories.
+     * @param array<int, array<string, string>> $authors Authors discovered across the repository history.
      * @param array<int, AggregatedItem> $items Aggregated items.
      */
     public function __construct(
@@ -25,6 +26,7 @@ final class SourcePayload implements JsonOutputPayloadInterface
         private readonly array $topics,
         private readonly string $generatedAt,
         private readonly array $repositories,
+        private readonly array $authors,
         private readonly array $items,
     ) {
     }
@@ -52,6 +54,7 @@ final class SourcePayload implements JsonOutputPayloadInterface
                 static fn (RepositoryReference $repository): array => $repository->toArray(),
                 $this->repositories,
             ),
+            'authors' => $this->authors,
             'items' => array_map(
                 static fn (AggregatedItem $item): array => $item->toArray(),
                 $this->items,

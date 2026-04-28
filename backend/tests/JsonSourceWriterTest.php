@@ -68,6 +68,12 @@ final class JsonSourceWriterTest extends TestCase
             ['municipio-se', 'getmunicipio'],
             '2026-04-24T08:00:00+00:00',
             [],
+            [[
+                'login' => 'hubot',
+                'avatarUrl' => 'https://example.com/hubot.png',
+                'url' => 'https://github.com/hubot',
+                'company' => 'Acme',
+            ]],
             [new AggregatedItem(
                 'Title',
                 'https://example.com',
@@ -94,6 +100,7 @@ final class JsonSourceWriterTest extends TestCase
         self::assertStringContainsString('"topics": [', $contents);
         self::assertStringContainsString('"count": 1', $contents);
         self::assertStringContainsString('"repositories": [', $contents);
+        self::assertStringContainsString('"authors": [', $contents);
         self::assertStringContainsString('"author"', $contents);
     }
 
