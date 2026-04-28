@@ -1020,20 +1020,20 @@ function AuthorDirectoryPanel({ authors, searchQuery }) {
         ) : (
           <div className="space-y-8">
             {activeAuthors.length > 0 ? (
-              <section className="space-y-4" aria-label="Current activity contributors">
+              <section className="space-y-4" aria-label="Contributors">
                 <div>
-                  <h3 className="text-lg font-semibold text-white">Current activity</h3>
+                  <h3 className="text-lg font-semibold text-white">Contributors</h3>
                   <p className="mt-1 text-sm text-slate-400">
-                    Contributors with tracked issues or pull requests are listed first.
+                    Contributors with open issues or pull requests.
                   </p>
                 </div>
                 {renderAuthors(activeAuthors)}
               </section>
             ) : null}
             {historicAuthors.length > 0 ? (
-              <section className="space-y-4" aria-label="Historic contributors">
+              <section className="space-y-4" aria-label="Contributors">
                 <div>
-                  <h3 className="text-lg font-semibold text-white">Historic contributors</h3>
+                  <h3 className="text-lg font-semibold text-white">Contributors</h3>
                   <p className="mt-1 text-sm text-slate-400">
                     Remaining contributors are shown alphabetically to keep the full author directory available.
                   </p>
