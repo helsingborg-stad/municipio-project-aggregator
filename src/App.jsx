@@ -1547,9 +1547,9 @@ export default function App() {
                   {generatedAt ? `Last data refresh ${formatTimestamp(generatedAt)}` : 'Run the aggregator to generate the JSON sources.'}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="grid gap-3 text-sm text-slate-300">
+              <CardContent className="flex flex-wrap gap-3 text-sm text-slate-300">
                 {buildStatusTabs.map((tab) => (
-                  <div key={tab.key} className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
+                  <div key={tab.key} className="flex min-w-[9rem] flex-1 items-center justify-between gap-3 rounded-2xl bg-white/5 px-4 py-3">
                     <span>{tab.label}</span>
                     <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePageIndex?.count ?? 0 : tab.key === sprintTab.key ? sprintPayload?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
                   </div>
