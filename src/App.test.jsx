@@ -441,6 +441,39 @@ describe('App', () => {
     expect(screen.getByText('Prepare sprint planning')).toBeInTheDocument();
   });
 
+  it('remembers sprint view mode in local storage', async () => {
+    mockDashboardFetch();
+
+    const storageKey = 'municipio-project-aggregator:sprint-panel';
+    const { unmount } = render(<App />);
+
+    await screen.findByRole('tab', { name: 'Sprints' });
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
+    fireEvent.click(await screen.findByRole('button', { name: 'Sprint list view' }));
+
+    await waitFor(() => {
+      expect(window.localStorage.getItem(storageKey)).toContain('"viewMode":"list"');
+    });
+
+    unmount();
+
+    render(<App />);
+
+    await screen.findByRole('tab', { name: 'Sprints' });
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
+
+    expect(await screen.findByRole('button', { name: 'Sprint list view' })).toHaveAttribute('aria-pressed', 'true');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Clear saved sprint view' }));
+
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: 'Sprint card view' })).toHaveAttribute('aria-pressed', 'true');
+      expect(window.localStorage.getItem(storageKey)).toBeNull();
+    });
+  });
+
   it('renders a release log tab with markdown content', async () => {
     mockDashboardFetch();
 

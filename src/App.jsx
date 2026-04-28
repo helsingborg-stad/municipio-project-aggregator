@@ -51,6 +51,7 @@ const emptyFilters = {
 
 const defaultViewMode = 'cards';
 const sourcePanelStorageKeyPrefix = 'municipio-project-aggregator:source-panel';
+const sprintPanelStorageKey = 'municipio-project-aggregator:sprint-panel';
 
 /**
  * Returns a new filter state object with default values.
@@ -111,6 +112,33 @@ function normalizeStoredFilters(storedFilters) {
  */
 function normalizeViewMode(viewMode) {
   return viewMode === 'list' ? 'list' : defaultViewMode;
+}
+
+/**
+ * Reads saved sprint panel preferences from local storage.
+ *
+ * @returns {{viewMode: 'cards' | 'list'}}
+ */
+function readSprintPanelPreferences() {
+  if (typeof window === 'undefined') {
+    return { viewMode: defaultViewMode };
+  }
+
+  try {
+    const rawPreferences = window.localStorage.getItem(sprintPanelStorageKey);
+
+    if (!rawPreferences) {
+      return { viewMode: defaultViewMode };
+    }
+
+    const parsedPreferences = JSON.parse(rawPreferences);
+
+    return {
+      viewMode: normalizeViewMode(parsedPreferences.viewMode),
+    };
+  } catch {
+    return { viewMode: defaultViewMode };
+  }
 }
 
 /**
@@ -1060,10 +1088,6 @@ function formatDateOnly(value) {
   }).format(new Date(`${value}T00:00:00Z`));
 }
 
-function formatSprintRange(startDate, endDate) {
-  return `${formatDateOnly(startDate)} - ${formatDateOnly(endDate)}`;
-}
-
 const sprintStatusOrder = ['Backlog', 'Ready', 'In Progress', 'In Review', 'Done'];
 
 const sprintStatusStyles = {
@@ -1168,10 +1192,28 @@ function SprintViewSwitcher({ viewMode, onViewModeChange }) {
 }
 
 function SprintPanel({ payload, searchQuery }) {
-  const [viewMode, setViewMode] = useState('cards');
+  const [viewMode, setViewMode] = useState(() => readSprintPanelPreferences().viewMode);
   const currentSprintItems = filterSprintItems(payload?.currentSprint?.items ?? [], searchQuery);
   const nextSprintItems = filterSprintItems(payload?.nextSprint?.items ?? [], searchQuery);
   const visibleItemCount = currentSprintItems.length + nextSprintItems.length;
+  const canClear = viewMode !== defaultViewMode;
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      if (viewMode === defaultViewMode) {
+        window.localStorage.removeItem(sprintPanelStorageKey);
+        return;
+      }
+
+      window.localStorage.setItem(sprintPanelStorageKey, JSON.stringify({ viewMode }));
+    } catch {
+      // Ignore local storage write failures so the dashboard remains usable.
+    }
+  }, [viewMode]);
 
   function renderSprintCardItem(item) {
     const itemKey = `${item.url || item.title}-${item.number || 0}`;
@@ -1327,10 +1369,8 @@ function SprintPanel({ payload, searchQuery }) {
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div>
             <h3 className="text-lg font-semibold text-white">{sprint.label}</h3>
-            <p className="text-sm text-slate-400">{sprint.title}</p>
           </div>
           <div className="flex items-center gap-3 text-sm text-slate-400">
-            <span>{formatSprintRange(sprint.startDate, sprint.endDate)}</span>
             <Badge variant="secondary">{visibleItems.length} linked item{visibleItems.length === 1 ? '' : 's'}</Badge>
           </div>
         </div>
@@ -1355,20 +1395,24 @@ function SprintPanel({ payload, searchQuery }) {
             Linked issues and pull requests from the GitHub project board, grouped by the active and upcoming sprint iterations.
           </CardDescription>
         </div>
-        <div className="inline-flex items-center gap-2 rounded-full bg-cyan-400/15 px-4 py-2 text-sm font-medium text-cyan-100 ring-1 ring-cyan-300/30">
+        <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30">
           <CalendarDays className="h-4 w-4" />
           {visibleItemCount} sprint item{visibleItemCount === 1 ? '' : 's'}
         </div>
       </CardHeader>
       <CardContent className="space-y-8 p-6">
-        <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
-          <div className="space-y-2">
-            <p className="text-sm font-medium text-white">{payload?.project?.title || 'GitHub Project'}</p>
-            <p className="text-sm text-slate-400">
-              {payload?.view?.name ? `View: ${payload.view.name}` : 'Default project view'}
-            </p>
-          </div>
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           <SprintViewSwitcher viewMode={viewMode} onViewModeChange={setViewMode} />
+          <button
+            type="button"
+            aria-label="Clear saved sprint view"
+            onClick={() => setViewMode(defaultViewMode)}
+            disabled={!canClear}
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-cyan-300/40 hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            <RotateCcw className="h-4 w-4" />
+            Clear saved view
+          </button>
         </div>
         {renderSprintSection(payload?.currentSprint, currentSprintItems)}
         {renderSprintSection(payload?.nextSprint, nextSprintItems)}
