@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-04-28T05:09:47+00:00",
-    "count": 76,
+    "generatedAt": "2026-04-28T06:57:15+00:00",
+    "count": 78,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "5.9.6",
+            "version": "5.9.6",
+            "body": "# Municipio 5.9.6\r\n\r\nAdds beta version of AI chat in Municipio, improves multilingual navigation and async menu loading, and fixes post list behavior and REST endpoint handling. Supporting modules also harden form payload handling and prevent front-end rendering issues when translations are missing.\r\n\r\n---\r\n\r\n## Modularity Form Builder [4.0.8\u20264.0.10]\r\nhttps://github.com/helsingborg-stad/modularity-form-builder/compare/4.0.8...4.0.10\r\n\r\n- **Form Payload Handling:** Invalid or malformed encrypted payloads are now ignored safely instead of being decrypted, reducing the risk of broken form processing.\r\n\r\n---\r\n\r\n## Modularity JSON Render [4.0.4\u20264.0.6]\r\nhttps://github.com/helsingborg-stad/modularity-json-render/compare/4.0.4...4.0.6\r\n\r\n- **Translation Safety:** The front-end now checks for missing translations before rendering, preventing broken output when translated labels are incomplete.\r\n\r\n---\r\n\r\n## Modularity Open Street Map [3.1.6\u20263.1.8]\r\nhttps://github.com/helsingborg-stad/modularity-open-street-map/compare/3.1.6...3.1.8\r\n\r\n- **Upstream Changelog:** No user-facing functional changes were listed in the available compare data for this patch release.\r\n\r\n---\r\n\r\n## Municipio Theme [6.38.19\u20266.40.4]\r\nhttps://github.com/helsingborg-stad/Municipio/compare/6.38.19...6.40.4\r\n\r\n- **AI Chat (BETA):** Adds an optional Eneo-based chat feature with configurable assistants, a global chat bubble, page module support, and streamed responses.\r\n- **Navigation API:** Fixes async child-menu REST URLs and improves branch resolution so nested navigation loads more reliably.\r\n- **Polylang Navigation:** Improves translated page, post type, archive, and breadcrumb links to reduce broken paths in multilingual navigation.\r\n- **Posts Module:** Excludes the current post from post queries to prevent self-referential loops in related or listed content.\r\n- **Async Posts List:** Removes the requirement for a filter form so async post lists continue working when no form is present.\r\n- **Backdrop Banner:** Fixes slider height behavior and cleans up navigation content visibility in the banner layout.\r\n\r\n---\r\n\r\n## WP Page for Post Type [2.0.12\u20262.0.14]\r\nhttps://github.com/helsingborg-stad/wp-page-for-post-type/compare/2.0.12...2.0.14\r\n\r\n- **Upstream Changelog:** No user-facing functional changes were listed in the available compare data for this patch release.\r\n\r\n---\r\n\r\n## Remove User Endpoint [0.2.2\u20260.2.3]\r\nhttps://github.com/helsingborg-stad/wpmu-remove-user-endpoint/compare/0.2.2...0.2.3\r\n\r\n- **REST API Protection:** User endpoints are now fully unregistered for logged-out visitors instead of being blocked later in the request.\r\n- **Error Handling:** Prevents access-control errors from bubbling up through the REST stack and causing secondary failures.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.6",
+            "publishedAt": "2026-04-28T06:32:16Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "5.9.2",
             "version": "5.9.2",
@@ -38,6 +47,15 @@
             "body": "",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.8",
             "publishedAt": "2026-02-25T12:14:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "Release 5.8.7",
+            "version": "5.8.7",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-8-7/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.7",
+            "publishedAt": "2026-02-23T12:05:37Z",
             "isPrerelease": false,
             "isDraft": false
         },
@@ -83,24 +101,6 @@
             "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-0/",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.0",
             "publishedAt": "2025-12-04T09:06:52Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.6.1",
-            "version": "5.6.1",
-            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-6-1/",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.1",
-            "publishedAt": "2025-11-18T11:49:10Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.6.0",
-            "version": "5.6.0",
-            "body": "Releasedocs @ https://getmunicipio.com/nyheter/municipio-5-6-0/",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.0",
-            "publishedAt": "2025-11-04T08:58:01Z",
             "isPrerelease": false,
             "isDraft": false
         }

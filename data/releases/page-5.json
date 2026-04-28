@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-04-28T05:09:47+00:00",
-    "count": 76,
+    "generatedAt": "2026-04-28T06:57:15+00:00",
+    "count": 78,
     "pageSize": 10,
     "pageNumber": 5,
     "pageCount": 8,
@@ -14,6 +14,24 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "v4.6.0",
+            "version": "4.6.0",
+            "body": "Municipio 4.6.0\r\n===============\r\n\r\nWith this release, we focus on further implementing the ImageInterface on more components giving the Posts and manual input the new image feature.\r\n\r\n**Component Library (4.25.2):**\r\n\r\n*   Update the card api to cleanup and simplify the capabilities of the component. Allow ImageInterface to be provided as an image source.\r\n*   Remove some obsolete parameters from the block component.\r\n*   If an empty srcset is provided to the image component, it is removed from the output.\r\n\r\n**Modularity (6.32.0):**\r\n\r\n*   Implements the Image Interface in the posts & manual input modules.\r\n\r\n**Municipio Theme (5.34.0):**\r\n\r\n*   The prepare post functionality now adds a ImageContract item in the return object. This is implemented in the archive lists, making archives more flexible.\r\n*   Images that are added to the media library during a sync from an external source are now hidden to prevent manipulation of images that should only be used by the synced posts.\r\n\r\n**Styleguide (0.11.1133):**\u00a0\r\n\r\n*   Updates of styles for the card component.\r\n\r\n**Event manager integration (2.0.18):**\u00a0\r\n\r\n*   *   The react component displaying event items, has been updated to reflect the changes made in the card component.\r\n\r\nDeprecations\r\n------------\r\n\r\nThis release deprecates the following plugins ( removed from composer.json ). If you still want them to be avabile, please add them in composer.local.json.\r\n\r\n*   \u201dhelsingborg-stad/api-project-manager-integration\u201d: \u201d~2.0.3\u201d,",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.6.0",
+            "publishedAt": "2024-10-03T07:03:36Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "4.5.3",
+            "version": "4.5.3",
+            "body": "### Municipio Theme (5.32.5)\r\n* Minor changes to fix inconsistencies in project templates.\r\n\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.3",
+            "publishedAt": "2024-10-01T11:01:30Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.5.2",
             "version": "4.5.2",
@@ -83,24 +101,6 @@
             "body": "We\u2019re excited to introduce **Municipio 4.2.6**! This update enhances the user interface, resolves several bugs, and adds a brand-new module for an even better experience.\r\n\r\n## Styleguide (0.11.1106)\r\n\r\n- Allows selecting multiple instances of the same filter type.\r\n- Resolves a bug that made the user unable to expand compressed tags.\r\n\r\n## Component Library (4.19.1)\r\n\r\n- Adds the ability to truncate items in the breadcrumb component.\r\n- Forces dot icons on tags to be filled, not respecting icon style settings (improved visibility).\r\n- Fixed a bug in acceptance that prevented some JavaScripts from running.\r\n\r\n## Modularity (6.22.4)\r\n\r\n- Fixes the warning in the absence of a `classlist` provided for the breadcrumb component.\r\n- Introduced a new module for rendering menus (`Menu`, `mod-menu`).\r\n- Fixed broken icons in the editor, now being displayed properly with an improved UI and a more coherent interface.\r\n\r\n## Municipio (5.15.1)\r\n\r\n- Implements customizer capability to set the breadcrumb max length for labels before being truncated.\r\n- Adjustments made for flexible header alternative.\r\n- Fixes an issue that caused active menu items not being marked as active in manually entered menus.\r\n\r\n## Open Street Map (2.5.0)\r\n\r\n- The public filter now allows users to refine a hierarchical set of options.\r\n\r\n## Contact Banner (3.2.0)\r\n\r\n- Allows the user to select from a dropdown populated with icon alternatives rather than inputting a string representing a material icon.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.6",
             "publishedAt": "2024-09-02T10:25:19Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Municipio 4.2.4 Release Notes",
-            "version": "4.2.4",
-            "body": "We are excited to announce the release of **Municipio 4.2.4**. This update has been rigorously tested for full compatibility with **PHP 8.3**, which we now recommend as the preferred PHP version for Municipio.\r\n\r\nBy upgrading to PHP 8.3 from the previously recommended PHP 8.2, you can experience up to a **40% faster page load time** when the object cache is primed.\r\n\r\n## General\r\n\r\n- The devcontainer now runs PHP 8.3, reflecting modern hosting environments and new default requirements for Municipio (we are still backwards compatible with PHP 8.2).\r\n\r\n## Municipio Theme (5.11.3)\r\n\r\n- **Related posts functionality** is now simplified. It only searches within the current post type and includes a `rand` in the query to generate more diverse results.\r\n- **View transitions** are now implemented by default. We intend to further explore this feature in the coming months to enhance the user experience.\r\n- **New header type: Flexible**. This header aims to replace the old \"Business\" and \"Casual\" headers by providing a drag-and-drop interface to build your own header layout.\r\n- **Bug fix:** Resolved an issue where post content was displayed on draft or private pages, even if the header response was sent as a 404.\r\n- **Resolved:** An issue where Kirki CSS rendering would stop functioning after applying new settings.\r\n\r\n",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.4",
-            "publishedAt": "2024-08-23T11:10:12Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.2.3",
-            "version": "4.2.3",
-            "body": "**Municipio Theme (5.8.11):**\r\n\r\n- Changes the filter to apply a default value of the icon type, to be able to explicitly set a overriding value locally where components are used.\r\n- Enqueues instantpage.js later on, so that the document has been fully loaded before init. This will enshure that instant page can work properly.\r\n- A fix has been made, to enable users to disable \"posts\" in the Theme Options.\r\n- Get related posts only runs on place templates. This may be changed in the future, when more types support this feature.\r\n\r\n**Component library(4.15.1):**\r\n\r\n- Adds support of default fill mode in the icon component.\r\n\r\n**Modaularity (6.19.0):**\r\n\r\n- Resolves an issue with like functionality for visit sites (main menu counter)",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.3",
-            "publishedAt": "2024-08-19T09:55:13Z",
             "isPrerelease": false,
             "isDraft": false
         }

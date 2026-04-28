@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-04-28T05:09:47+00:00",
-    "count": 76,
+    "generatedAt": "2026-04-28T06:57:15+00:00",
+    "count": 78,
     "pageSize": 10,
     "pageNumber": 8,
     "pageCount": 8,
@@ -14,6 +14,24 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "231023 - Stable Release",
+            "version": "3.5.0",
+            "body": "## What's Changed\r\n* Fix: Modularity form builder correct version by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/10\r\n* Fix: Latest api-event-manager by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/11\r\n\r\n## New Contributors\r\n* @NiclasNorin made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/10\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.4.2...3.5.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.5.0",
+            "publishedAt": "2023-10-24T08:17:42Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
+        {
+            "title": "231003 - Stable Release",
+            "version": "3.4.0",
+            "body": "**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.3.0...3.4.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.4.0",
+            "publishedAt": "2023-10-03T11:51:47Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "230928 -  Stable Release",
             "version": "3.3.0",
