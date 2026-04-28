@@ -314,6 +314,57 @@ final class GitHubRestClient
     }
 
     /**
+     * @param RepositoryReference $repository
+     * @param string $token
+     * @return array<int, array<string, string>>
+     */
+    public function listContributors(RepositoryReference $repository, string $token): array
+    {
+        $contributorsByLogin = [];
+        $page = 1;
+
+        do {
+            $response = $this->getJson(
+                sprintf(
+                    '%s/repos/%s/%s/contributors?per_page=%d&page=%d',
+                    self::API_URL,
+                    rawurlencode($repository->owner()),
+                    rawurlencode($repository->name()),
+                    self::PAGE_SIZE,
+                    $page,
+                ),
+                $token,
+            );
+
+            if (!is_array($response)) {
+                return array_values($contributorsByLogin);
+            }
+
+            foreach ($response as $contributor) {
+                if (!is_array($contributor)) {
+                    continue;
+                }
+
+                $login = is_string($contributor['login'] ?? null) ? trim($contributor['login']) : '';
+                if ($login === '') {
+                    continue;
+                }
+
+                $contributorsByLogin[$login] = [
+                    'login' => $login,
+                    'avatarUrl' => is_string($contributor['avatar_url'] ?? null) ? $contributor['avatar_url'] : '',
+                    'url' => is_string($contributor['html_url'] ?? null) ? $contributor['html_url'] : '',
+                    'company' => '',
+                ];
+            }
+
+            $page++;
+        } while (count($response) === self::PAGE_SIZE);
+
+        return array_values($contributorsByLogin);
+    }
+
+    /**
      * @param RuntimeException $exception
      * @return bool
      */

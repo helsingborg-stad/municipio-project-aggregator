@@ -39,6 +39,10 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
         $oldestIncludedCreatedAt = $config->oldestIncludedCreatedAt();
 
         foreach ($repositories as $repository) {
+            foreach ($this->restClient->listContributors($repository, $config->token()) as $contributor) {
+                $this->rememberAuthor($authorsByLogin, $contributor);
+            }
+
             $searchResult = $this->listGraphQlItemsAndAuthors(
                 $sourceType,
                 $repository->owner(),
