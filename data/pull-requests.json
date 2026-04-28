@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-28T06:57:15+00:00",
-    "count": 171,
+    "generatedAt": "2026-04-28T09:11:49+00:00",
+    "count": 163,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-allow-cors",
-            "fullName": "helsingborg-stad/wpmu-allow-cors",
-            "description": "Allows cors with *",
-            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-allow-cors",
+            "fullName": "helsingborg-stad/wpmu-allow-cors",
+            "description": "Allows cors with *",
+            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "helsingborg-stad",
@@ -290,34 +290,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "attachment-revisions",
-            "fullName": "helsingborg-stad/attachment-revisions",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/attachment-revisions"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-local-index",
-            "fullName": "helsingborg-stad/s3-local-index",
-            "description": "Stores a local index to make common file operations faster",
-            "url": "https://github.com/helsingborg-stad/s3-local-index"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "custom-short-links",
-            "fullName": "helsingborg-stad/custom-short-links",
-            "description": "Create shorter versions of url:s ",
-            "url": "https://github.com/helsingborg-stad/custom-short-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-contact-banner",
-            "fullName": "helsingborg-stad/modularity-contact-banner",
-            "description": "Stores and presents general contact information to the organization",
-            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-exhibition-manager",
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
@@ -364,6 +336,34 @@
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
             "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "attachment-revisions",
+            "fullName": "helsingborg-stad/attachment-revisions",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/attachment-revisions"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "s3-local-index",
+            "fullName": "helsingborg-stad/s3-local-index",
+            "description": "Stores a local index to make common file operations faster",
+            "url": "https://github.com/helsingborg-stad/s3-local-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "custom-short-links",
+            "fullName": "helsingborg-stad/custom-short-links",
+            "description": "Create shorter versions of url:s ",
+            "url": "https://github.com/helsingborg-stad/custom-short-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-contact-banner",
+            "fullName": "helsingborg-stad/modularity-contact-banner",
+            "description": "Stores and presents general contact information to the organization",
+            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
         },
         {
             "owner": "helsingborg-stad",
@@ -422,6 +422,68 @@
             "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
         }
     ],
+    "authors": [
+        {
+            "login": "NiclasNorin",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+            "url": "https://github.com/NiclasNorin",
+            "company": ""
+        },
+        {
+            "login": "NiklasBr",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/279826?u=35034ee24065a068c14d3ea5a077afeefc0a54ec&v=4",
+            "url": "https://github.com/NiklasBr",
+            "company": ""
+        },
+        {
+            "login": "WilliamLundqvist",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
+            "url": "https://github.com/WilliamLundqvist",
+            "company": ""
+        },
+        {
+            "login": "andersrehn",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/13356945?u=110c0ff20b7e86acbff99a7c665ac02948533468&v=4",
+            "url": "https://github.com/andersrehn",
+            "company": ""
+        },
+        {
+            "login": "copilot-swe-agent",
+            "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+            "url": "https://github.com/apps/copilot-swe-agent",
+            "company": ""
+        },
+        {
+            "login": "dependabot",
+            "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+            "url": "https://github.com/apps/dependabot",
+            "company": ""
+        },
+        {
+            "login": "jlarsson",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
+            "url": "https://github.com/jlarsson",
+            "company": ""
+        },
+        {
+            "login": "michaelclaesson",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
+            "url": "https://github.com/michaelclaesson",
+            "company": "Consid Bor\u00e5s"
+        },
+        {
+            "login": "sebastianthulin",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+            "url": "https://github.com/sebastianthulin",
+            "company": "Helsingborgs stad"
+        },
+        {
+            "login": "thorbrink",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
+            "url": "https://github.com/thorbrink",
+            "company": "@helsingborg-stad"
+        }
+    ],
     "items": [
         {
             "title": "Prevent duplicate shortlink slugs from being saved",
@@ -430,7 +492,7 @@
             "createdAt": "2026-04-27T14:58:06Z",
             "number": 7,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -438,14 +500,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -462,9 +524,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Plugin allows duplicate short link name causing redirect conflicts",
+                    "url": "https://github.com/helsingborg-stad/custom-short-links/issues/4",
+                    "repository": "helsingborg-stad/custom-short-links"
+                }
+            ]
         },
         {
             "title": "build(deps): bump postcss from 8.5.6 to 8.5.12 in /Modularity",
@@ -473,7 +542,7 @@
             "createdAt": "2026-04-27T06:05:39Z",
             "number": 1908,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -504,7 +573,7 @@
             "number": 23,
             "author": {
                 "login": "WilliamLundqvist",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
                 "url": "https://github.com/WilliamLundqvist",
                 "company": ""
             },
@@ -564,7 +633,7 @@
             "number": 1199,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -593,7 +662,7 @@
             "createdAt": "2026-04-21T19:13:18Z",
             "number": 9,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -624,7 +693,7 @@
             "number": 1194,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -654,7 +723,7 @@
             "number": 1193,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -684,7 +753,7 @@
             "number": 638,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -713,7 +782,7 @@
             "createdAt": "2026-04-20T11:51:00Z",
             "number": 132,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -721,14 +790,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -757,7 +826,7 @@
             "number": 637,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -787,7 +856,7 @@
             "number": 1192,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -816,7 +885,7 @@
             "createdAt": "2026-04-19T14:19:33Z",
             "number": 1,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -846,7 +915,7 @@
             "createdAt": "2026-04-18T20:21:25Z",
             "number": 21,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -883,7 +952,7 @@
             "createdAt": "2026-04-18T20:21:24Z",
             "number": 15,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -913,7 +982,7 @@
             "createdAt": "2026-04-18T19:55:57Z",
             "number": 8,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -950,7 +1019,7 @@
             "createdAt": "2026-04-18T19:54:28Z",
             "number": 131,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -980,7 +1049,7 @@
             "createdAt": "2026-04-18T11:12:05Z",
             "number": 2,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1017,7 +1086,7 @@
             "createdAt": "2026-04-18T10:48:46Z",
             "number": 77,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1054,7 +1123,7 @@
             "createdAt": "2026-04-18T10:45:21Z",
             "number": 5,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1084,7 +1153,7 @@
             "createdAt": "2026-04-18T10:44:51Z",
             "number": 6,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1114,7 +1183,7 @@
             "createdAt": "2026-04-18T10:33:14Z",
             "number": 16,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1151,7 +1220,7 @@
             "createdAt": "2026-04-18T10:33:01Z",
             "number": 28,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1188,7 +1257,7 @@
             "createdAt": "2026-04-18T10:32:34Z",
             "number": 31,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1225,7 +1294,7 @@
             "createdAt": "2026-04-18T10:32:32Z",
             "number": 7,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1262,7 +1331,7 @@
             "createdAt": "2026-04-18T10:32:26Z",
             "number": 11,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1299,7 +1368,7 @@
             "createdAt": "2026-04-18T10:23:06Z",
             "number": 42,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1337,7 +1406,7 @@
             "number": 636,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -1366,7 +1435,7 @@
             "createdAt": "2026-04-15T19:01:20Z",
             "number": 76,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1396,7 +1465,7 @@
             "createdAt": "2026-04-15T18:50:29Z",
             "number": 137,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1427,7 +1496,7 @@
             "number": 1169,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -1456,7 +1525,7 @@
             "createdAt": "2026-04-12T11:12:57Z",
             "number": 75,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1487,103 +1556,13 @@
             ]
         },
         {
-            "title": "Feat/copilot refactoring of claude refactoring",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/130",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-04-09T09:27:28Z",
-            "number": 130,
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "feat: formbuilder copilot refactor",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/129",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-04-09T07:39:33Z",
-            "number": 129,
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "Feat/claude refactoring",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/128",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-04-09T07:37:27Z",
-            "number": 128,
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "title": "build(deps): bump picomatch from 2.3.1 to 2.3.2",
             "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore/pull/7",
             "repository": "helsingborg-stad/ACF-UX-collapse-explore",
             "createdAt": "2026-04-07T20:02:48Z",
             "number": 7,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1613,7 +1592,7 @@
             "createdAt": "2026-04-07T15:35:27Z",
             "number": 7,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1643,7 +1622,7 @@
             "createdAt": "2026-04-07T13:13:35Z",
             "number": 11,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1673,7 +1652,7 @@
             "createdAt": "2026-04-07T10:59:35Z",
             "number": 22,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1703,7 +1682,7 @@
             "createdAt": "2026-04-06T23:29:43Z",
             "number": 7,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1733,7 +1712,7 @@
             "createdAt": "2026-04-06T23:07:11Z",
             "number": 25,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1763,7 +1742,7 @@
             "createdAt": "2026-04-06T22:51:27Z",
             "number": 30,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1793,7 +1772,7 @@
             "createdAt": "2026-04-06T22:19:08Z",
             "number": 74,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1823,7 +1802,7 @@
             "createdAt": "2026-04-06T22:07:18Z",
             "number": 127,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1853,7 +1832,7 @@
             "createdAt": "2026-04-06T21:37:27Z",
             "number": 34,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1884,7 +1863,7 @@
             "number": 172,
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -1914,7 +1893,7 @@
             "number": 1866,
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -1943,7 +1922,7 @@
             "createdAt": "2026-03-29T17:22:13Z",
             "number": 6,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -1973,7 +1952,7 @@
             "createdAt": "2026-03-29T17:02:41Z",
             "number": 10,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2003,7 +1982,7 @@
             "createdAt": "2026-03-29T16:49:01Z",
             "number": 21,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2033,7 +2012,7 @@
             "createdAt": "2026-03-29T16:19:31Z",
             "number": 6,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2063,7 +2042,7 @@
             "createdAt": "2026-03-29T13:22:17Z",
             "number": 125,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2100,7 +2079,7 @@
             "createdAt": "2026-03-27T20:00:18Z",
             "number": 1864,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2130,7 +2109,7 @@
             "createdAt": "2026-03-27T04:05:05Z",
             "number": 5,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2160,7 +2139,7 @@
             "createdAt": "2026-03-27T01:54:54Z",
             "number": 124,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2190,7 +2169,7 @@
             "createdAt": "2026-03-27T00:45:47Z",
             "number": 29,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2220,7 +2199,7 @@
             "createdAt": "2026-03-27T00:13:22Z",
             "number": 73,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2250,7 +2229,7 @@
             "createdAt": "2026-03-27T00:08:44Z",
             "number": 24,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2280,7 +2259,7 @@
             "createdAt": "2026-03-26T23:04:14Z",
             "number": 1862,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2310,7 +2289,7 @@
             "createdAt": "2026-03-26T23:00:08Z",
             "number": 33,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2340,7 +2319,7 @@
             "createdAt": "2026-03-26T22:59:28Z",
             "number": 13,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2371,7 +2350,7 @@
             "number": 1158,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -2400,7 +2379,7 @@
             "createdAt": "2026-03-26T13:07:55Z",
             "number": 4,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2430,7 +2409,7 @@
             "createdAt": "2026-03-26T11:34:46Z",
             "number": 136,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2460,7 +2439,7 @@
             "createdAt": "2026-03-26T09:17:28Z",
             "number": 15,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2490,7 +2469,7 @@
             "createdAt": "2026-03-26T08:48:53Z",
             "number": 123,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2520,7 +2499,7 @@
             "createdAt": "2026-03-26T08:47:30Z",
             "number": 6,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2550,7 +2529,7 @@
             "createdAt": "2026-03-26T07:20:30Z",
             "number": 28,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2580,7 +2559,7 @@
             "createdAt": "2026-03-25T23:35:04Z",
             "number": 72,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2610,7 +2589,7 @@
             "createdAt": "2026-03-25T22:24:56Z",
             "number": 12,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2640,7 +2619,7 @@
             "createdAt": "2026-03-25T22:16:04Z",
             "number": 23,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2670,7 +2649,7 @@
             "createdAt": "2026-03-25T22:14:21Z",
             "number": 1856,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2700,7 +2679,7 @@
             "createdAt": "2026-03-16T07:49:22Z",
             "number": 1153,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -2708,14 +2687,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -2744,7 +2723,7 @@
             "number": 1836,
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2774,7 +2753,7 @@
             "number": 19,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -2804,7 +2783,7 @@
             "number": 1834,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -2834,7 +2813,7 @@
             "number": 624,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -2863,7 +2842,7 @@
             "createdAt": "2026-03-05T09:58:33Z",
             "number": 5,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2893,7 +2872,7 @@
             "createdAt": "2026-03-05T09:26:02Z",
             "number": 5,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2923,7 +2902,7 @@
             "createdAt": "2026-03-05T08:56:43Z",
             "number": 120,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2953,7 +2932,7 @@
             "createdAt": "2026-03-05T08:54:54Z",
             "number": 20,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -2983,7 +2962,7 @@
             "createdAt": "2026-03-05T08:38:33Z",
             "number": 9,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3013,7 +2992,7 @@
             "createdAt": "2026-03-05T06:36:13Z",
             "number": 133,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3043,7 +3022,7 @@
             "createdAt": "2026-03-04T23:57:53Z",
             "number": 4,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3073,7 +3052,7 @@
             "createdAt": "2026-03-04T23:57:03Z",
             "number": 4,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3103,7 +3082,7 @@
             "createdAt": "2026-03-04T23:52:19Z",
             "number": 14,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3133,7 +3112,7 @@
             "createdAt": "2026-03-04T23:45:17Z",
             "number": 119,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3163,7 +3142,7 @@
             "createdAt": "2026-03-04T23:45:15Z",
             "number": 22,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3193,7 +3172,7 @@
             "createdAt": "2026-03-04T23:22:41Z",
             "number": 19,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3223,7 +3202,7 @@
             "createdAt": "2026-03-04T23:01:54Z",
             "number": 8,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3253,7 +3232,7 @@
             "createdAt": "2026-03-04T22:53:35Z",
             "number": 27,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3283,7 +3262,7 @@
             "createdAt": "2026-03-04T22:51:13Z",
             "number": 3,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3313,7 +3292,7 @@
             "createdAt": "2026-03-04T22:41:40Z",
             "number": 11,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3343,7 +3322,7 @@
             "createdAt": "2026-03-02T05:03:17Z",
             "number": 3,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3373,7 +3352,7 @@
             "createdAt": "2026-03-02T03:45:11Z",
             "number": 18,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3403,7 +3382,7 @@
             "createdAt": "2026-03-01T16:54:32Z",
             "number": 118,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3433,7 +3412,7 @@
             "createdAt": "2026-03-01T11:08:32Z",
             "number": 26,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3463,7 +3442,7 @@
             "createdAt": "2026-03-01T02:15:39Z",
             "number": 25,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3493,7 +3472,7 @@
             "createdAt": "2026-03-01T02:01:27Z",
             "number": 30,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3523,7 +3502,7 @@
             "createdAt": "2026-03-01T01:37:12Z",
             "number": 21,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3553,7 +3532,7 @@
             "createdAt": "2026-03-01T00:57:50Z",
             "number": 117,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3583,7 +3562,7 @@
             "createdAt": "2026-02-28T23:25:15Z",
             "number": 70,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3613,7 +3592,7 @@
             "createdAt": "2026-02-28T22:35:53Z",
             "number": 5,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3643,7 +3622,7 @@
             "createdAt": "2026-02-28T16:19:01Z",
             "number": 2,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3673,7 +3652,7 @@
             "createdAt": "2026-02-28T15:11:35Z",
             "number": 10,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3703,7 +3682,7 @@
             "createdAt": "2026-02-28T10:28:20Z",
             "number": 7,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3733,7 +3712,7 @@
             "createdAt": "2026-02-28T08:37:23Z",
             "number": 3,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3763,7 +3742,7 @@
             "createdAt": "2026-02-28T06:27:47Z",
             "number": 69,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3793,7 +3772,7 @@
             "createdAt": "2026-02-28T04:41:38Z",
             "number": 20,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3823,7 +3802,7 @@
             "createdAt": "2026-02-28T03:49:13Z",
             "number": 29,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -3853,7 +3832,7 @@
             "createdAt": "2026-02-27T08:25:28Z",
             "number": 10,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -3861,14 +3840,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -3896,7 +3875,7 @@
             "createdAt": "2026-02-27T07:56:42Z",
             "number": 8,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -3904,14 +3883,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -3940,7 +3919,7 @@
             "number": 621,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -3969,7 +3948,7 @@
             "createdAt": "2026-02-26T09:23:40Z",
             "number": 620,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -3977,14 +3956,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -4020,7 +3999,7 @@
             "number": 619,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -4057,7 +4036,7 @@
             "number": 40,
             "author": {
                 "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
                 "url": "https://github.com/michaelclaesson",
                 "company": "Consid Bor\u00e5s"
             },
@@ -4087,7 +4066,7 @@
             "number": 20,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -4116,7 +4095,7 @@
             "createdAt": "2026-02-20T09:43:59Z",
             "number": 1,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4146,7 +4125,7 @@
             "createdAt": "2026-02-19T21:51:55Z",
             "number": 1145,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -4154,14 +4133,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -4189,7 +4168,7 @@
             "createdAt": "2026-02-14T12:43:44Z",
             "number": 128,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4219,7 +4198,7 @@
             "createdAt": "2026-02-13T08:25:32Z",
             "number": 1143,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4250,7 +4229,7 @@
             "number": 16,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -4280,7 +4259,7 @@
             "number": 1780,
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4310,7 +4289,7 @@
             "number": 1779,
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4340,7 +4319,7 @@
             "number": 1140,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -4370,7 +4349,7 @@
             "number": 1139,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -4400,7 +4379,7 @@
             "number": 1138,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -4429,7 +4408,7 @@
             "createdAt": "2026-02-07T17:26:15Z",
             "number": 15,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4459,7 +4438,7 @@
             "createdAt": "2026-02-07T17:25:15Z",
             "number": 6,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4489,7 +4468,7 @@
             "createdAt": "2026-02-07T17:05:26Z",
             "number": 2,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4519,7 +4498,7 @@
             "createdAt": "2026-02-07T14:57:19Z",
             "number": 2,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4549,7 +4528,7 @@
             "createdAt": "2026-02-07T12:20:16Z",
             "number": 17,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4580,7 +4559,7 @@
             "number": 1135,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -4617,7 +4596,7 @@
             "number": 1772,
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4647,7 +4626,7 @@
             "number": 1134,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -4677,7 +4656,7 @@
             "number": 1133,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -4706,7 +4685,7 @@
             "createdAt": "2026-02-03T20:30:47Z",
             "number": 14,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4736,7 +4715,7 @@
             "createdAt": "2026-01-28T01:24:56Z",
             "number": 28,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4766,7 +4745,7 @@
             "createdAt": "2026-01-28T00:19:00Z",
             "number": 20,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4796,7 +4775,7 @@
             "createdAt": "2026-01-28T00:17:23Z",
             "number": 19,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4826,7 +4805,7 @@
             "createdAt": "2026-01-28T00:16:13Z",
             "number": 32,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4856,7 +4835,7 @@
             "createdAt": "2026-01-28T00:14:39Z",
             "number": 12,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4886,7 +4865,7 @@
             "createdAt": "2026-01-28T00:13:20Z",
             "number": 8,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4916,7 +4895,7 @@
             "createdAt": "2026-01-28T00:11:10Z",
             "number": 64,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -4946,40 +4925,10 @@
             "createdAt": "2026-01-28T00:10:15Z",
             "number": 5,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "feat: add scoper to contain requirements for dev env",
-            "url": "https://github.com/helsingborg-stad/modularity-like/pull/78",
-            "repository": "helsingborg-stad/modularity-like",
-            "createdAt": "2026-01-27T14:09:34Z",
-            "number": 78,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "milestone": null,
@@ -5006,37 +4955,7 @@
             "createdAt": "2026-01-22T00:06:05Z",
             "number": 1130,
             "author": {
-                "login": "dependabot[bot]",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "build(deps): bump diff from 4.0.2 to 4.0.4",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/13",
-            "repository": "helsingborg-stad/acf-icon-field",
-            "createdAt": "2026-01-20T23:38:16Z",
-            "number": 13,
-            "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -5067,7 +4986,7 @@
             "number": 92,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -5097,7 +5016,7 @@
             "number": 64,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -5127,39 +5046,9 @@
             "number": 39,
             "author": {
                 "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
                 "url": "https://github.com/michaelclaesson",
                 "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "fix: detect context by first context matching",
-            "url": "https://github.com/helsingborg-stad/wputilservice/pull/11",
-            "repository": "helsingborg-stad/wputilservice",
-            "createdAt": "2025-12-08T09:53:27Z",
-            "number": 11,
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "milestone": null,
@@ -5187,7 +5076,7 @@
             "number": 16,
             "author": {
                 "login": "NiklasBr",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/279826?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/279826?u=35034ee24065a068c14d3ea5a077afeefc0a54ec&v=4",
                 "url": "https://github.com/NiklasBr",
                 "company": ""
             },
@@ -5216,7 +5105,7 @@
             "createdAt": "2025-11-26T09:15:49Z",
             "number": 9,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -5224,14 +5113,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -5259,7 +5148,7 @@
             "createdAt": "2025-11-18T11:05:37Z",
             "number": 12,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -5289,7 +5178,7 @@
             "createdAt": "2025-11-18T09:12:10Z",
             "number": 37,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -5297,14 +5186,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -5332,7 +5221,7 @@
             "createdAt": "2025-11-17T16:10:40Z",
             "number": 1115,
             "author": {
-                "login": "dependabot[bot]",
+                "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
                 "company": ""
@@ -5363,7 +5252,7 @@
             "number": 1114,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -5393,7 +5282,7 @@
             "number": 1592,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -5416,80 +5305,6 @@
             "relationships": []
         },
         {
-            "title": "build(deps): bump vite from 7.1.4 to 7.1.11",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/10",
-            "repository": "helsingborg-stad/acf-icon-field",
-            "createdAt": "2025-10-20T22:54:54Z",
-            "number": 10,
-            "author": {
-                "login": "dependabot[bot]",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "build(deps): bump vite from 7.1.4 to 7.1.5",
-                    "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/9",
-                    "repository": "helsingborg-stad/acf-icon-field"
-                }
-            ]
-        },
-        {
-            "title": "Bump vite from 7.1.4 to 7.1.11",
-            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate/pull/8",
-            "repository": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
-            "createdAt": "2025-10-20T21:09:20Z",
-            "number": 8,
-            "author": {
-                "login": "dependabot[bot]",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Bump vite from 7.1.4 to 7.1.5",
-                    "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate/pull/7",
-                    "repository": "helsingborg-stad/Wordpress-Plugin-Boilerplate"
-                }
-            ]
-        },
-        {
             "title": "feat: support for custom taxonomies for schema property to taxonomy ",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1556",
             "repository": "helsingborg-stad/Municipio",
@@ -5497,7 +5312,7 @@
             "number": 1556,
             "author": {
                 "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
                 "url": "https://github.com/michaelclaesson",
                 "company": "Consid Bor\u00e5s"
             },
@@ -5526,7 +5341,7 @@
             "createdAt": "2025-09-02T07:29:45Z",
             "number": 18,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -5534,14 +5349,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -5570,7 +5385,7 @@
             "number": 13,
             "author": {
                 "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
@@ -5600,7 +5415,7 @@
             "number": 15,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -5630,7 +5445,7 @@
             "number": 12,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -5660,7 +5475,7 @@
             "number": 1466,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -5689,7 +5504,7 @@
             "createdAt": "2025-07-14T09:18:25Z",
             "number": 10,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -5697,14 +5512,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -5732,7 +5547,7 @@
             "createdAt": "2025-07-07T09:34:23Z",
             "number": 23,
             "author": {
-                "login": "Copilot",
+                "login": "copilot-swe-agent",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
                 "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
@@ -5740,14 +5555,14 @@
             "assignees": [
                 {
                     "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                     "url": "https://github.com/sebastianthulin",
                     "company": ""
                 },
                 {
                     "login": "Copilot",
                     "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/apps/copilot-swe-agent",
+                    "url": "https://github.com/Copilot",
                     "company": ""
                 }
             ],
@@ -5776,7 +5591,7 @@
             "number": 1046,
             "author": {
                 "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
@@ -5806,7 +5621,7 @@
             "number": 1406,
             "author": {
                 "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
                 "url": "https://github.com/michaelclaesson",
                 "company": "Consid Bor\u00e5s"
             },
