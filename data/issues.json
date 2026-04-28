@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-28T17:41:04+00:00",
+    "generatedAt": "2026-04-28T18:44:28+00:00",
     "count": 104,
     "repositories": [
         {
@@ -129,6 +129,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-form-builder",
+            "fullName": "helsingborg-stad/modularity-form-builder",
+            "description": "Simple form builder that uses acf for forms. ",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-guides",
             "fullName": "helsingborg-stad/modularity-guides",
             "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
@@ -140,13 +147,6 @@
             "fullName": "helsingborg-stad/wpmu-security",
             "description": "Adds basic security features to WordPress",
             "url": "https://github.com/helsingborg-stad/wpmu-security"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-form-builder",
-            "fullName": "helsingborg-stad/modularity-form-builder",
-            "description": "Simple form builder that uses acf for forms. ",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
         },
         {
             "owner": "helsingborg-stad",
@@ -164,17 +164,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -192,17 +192,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
             "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -231,6 +231,13 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -392,13 +399,6 @@
             "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/project-synchronizer"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         },
         {
             "owner": "helsingborg-stad",
