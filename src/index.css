@@ -39,6 +39,37 @@
 }
 
 @layer components {
+  .main-tabs {
+    container-type: inline-size;
+  }
+
+  .main-tabs__trigger {
+    gap: 0.5rem;
+  }
+
+  @container (max-width: 52rem) {
+    .main-tabs__trigger {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      font-size: 0.75rem;
+    }
+
+    .main-tabs__trigger .main-tabs__label {
+      letter-spacing: -0.01em;
+    }
+  }
+
+  @container (max-width: 40rem) {
+    .main-tabs__trigger {
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+
+    .main-tabs__trigger .main-tabs__label {
+      display: none;
+    }
+  }
+
   .source-item-card {
     container-type: inline-size;
   }

@@ -1586,14 +1586,18 @@ export default function App() {
             <Tabs value={activeMainTab} onValueChange={setActiveMainTab} className="space-y-6">
               <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
                 <TabsList
-                  className="grid w-full max-w-5xl grid-cols-2 rounded-3xl border border-white/10 bg-slate-950/60 p-1 sm:grid-cols-5 sm:rounded-full"
+                  className="main-tabs grid w-full max-w-5xl grid-flow-col auto-cols-fr rounded-full border border-white/10 bg-slate-950/60 p-1"
                 >
                   {mainTabs.map((tab) => {
                     const Icon = tab.icon;
                     return (
-                      <TabsTrigger key={tab.key} value={tab.key} className="rounded-2xl py-3 data-[state=active]:bg-white data-[state=active]:text-slate-950 sm:rounded-full sm:py-2">
-                        <Icon className="mr-2 h-4 w-4 shrink-0" />
-                        {tab.label}
+                      <TabsTrigger
+                        key={tab.key}
+                        value={tab.key}
+                        className="main-tabs__trigger min-w-0 rounded-full px-2 py-2.5 text-xs data-[state=active]:bg-white data-[state=active]:text-slate-950 sm:text-sm"
+                      >
+                        <Icon className="main-tabs__icon h-4 w-4 shrink-0" />
+                        <span className="main-tabs__label truncate">{tab.label}</span>
                       </TabsTrigger>
                     );
                   })}
