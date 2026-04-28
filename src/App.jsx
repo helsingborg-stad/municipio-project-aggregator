@@ -1064,10 +1064,254 @@ function formatSprintRange(startDate, endDate) {
   return `${formatDateOnly(startDate)} - ${formatDateOnly(endDate)}`;
 }
 
+const sprintStatusOrder = ['Backlog', 'Ready', 'In Progress', 'In Review', 'Done'];
+
+const sprintStatusStyles = {
+  Backlog: {
+    section: 'border-amber-300/25 bg-amber-400/10',
+    badge: 'bg-amber-400/15 text-amber-100 ring-1 ring-amber-300/30',
+    dot: 'bg-amber-300',
+  },
+  Ready: {
+    section: 'border-cyan-300/25 bg-cyan-400/10',
+    badge: 'bg-cyan-400/15 text-cyan-100 ring-1 ring-cyan-300/30',
+    dot: 'bg-cyan-300',
+  },
+  'In Progress': {
+    section: 'border-sky-300/25 bg-sky-400/10',
+    badge: 'bg-sky-400/15 text-sky-100 ring-1 ring-sky-300/30',
+    dot: 'bg-sky-300',
+  },
+  'In Review': {
+    section: 'border-fuchsia-300/25 bg-fuchsia-400/10',
+    badge: 'bg-fuchsia-400/15 text-fuchsia-100 ring-1 ring-fuchsia-300/30',
+    dot: 'bg-fuchsia-300',
+  },
+  Done: {
+    section: 'border-emerald-300/25 bg-emerald-400/10',
+    badge: 'bg-emerald-400/15 text-emerald-100 ring-1 ring-emerald-300/30',
+    dot: 'bg-emerald-300',
+  },
+  default: {
+    section: 'border-violet-300/20 bg-violet-400/10',
+    badge: 'bg-violet-400/15 text-violet-100 ring-1 ring-violet-300/30',
+    dot: 'bg-violet-300',
+  },
+};
+
+function normalizeSprintStatus(status) {
+  const normalizedStatus = typeof status === 'string' ? status.trim().toLowerCase() : '';
+
+  return {
+    backlog: 'Backlog',
+    ready: 'Ready',
+    'in progress': 'In Progress',
+    inprogress: 'In Progress',
+    'in review': 'In Review',
+    inreview: 'In Review',
+    done: 'Done',
+  }[normalizedStatus] || (typeof status === 'string' && status.trim() ? status.trim() : 'No status');
+}
+
+function getSprintStatusStyle(status) {
+  return sprintStatusStyles[status] || sprintStatusStyles.default;
+}
+
+function getSprintStatusGroups(items) {
+  const groups = items.reduce((result, item) => {
+    const status = normalizeSprintStatus(item.status);
+    const collection = result.get(status) ?? [];
+    collection.push({ ...item, status });
+    result.set(status, collection);
+    return result;
+  }, new Map());
+
+  const preferredGroups = sprintStatusOrder
+    .filter((status) => groups.has(status))
+    .map((status) => [status, groups.get(status)]);
+
+  const additionalGroups = [...groups.entries()]
+    .filter(([status]) => !sprintStatusOrder.includes(status))
+    .sort(([left], [right]) => left.localeCompare(right));
+
+  return [...preferredGroups, ...additionalGroups].map(([status, statusItems]) => ({
+    status,
+    items: statusItems,
+  }));
+}
+
+function SprintViewSwitcher({ viewMode, onViewModeChange }) {
+  return (
+    <div className="inline-flex w-full rounded-full border border-white/10 bg-slate-950/70 p-1 text-sm sm:w-auto">
+      <button
+        type="button"
+        aria-label="Sprint card view"
+        aria-pressed={viewMode === 'cards'}
+        onClick={() => onViewModeChange('cards')}
+        className={`inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2 transition-colors sm:flex-none ${viewMode === 'cards' ? 'bg-white text-slate-950' : 'text-slate-300 hover:bg-white/5 hover:text-white'}`}
+      >
+        <LayoutGrid className="h-4 w-4" />
+        Cards
+      </button>
+      <button
+        type="button"
+        aria-label="Sprint list view"
+        aria-pressed={viewMode === 'list'}
+        onClick={() => onViewModeChange('list')}
+        className={`inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2 transition-colors sm:flex-none ${viewMode === 'list' ? 'bg-white text-slate-950' : 'text-slate-300 hover:bg-white/5 hover:text-white'}`}
+      >
+        <List className="h-4 w-4" />
+        List
+      </button>
+    </div>
+  );
+}
+
 function SprintPanel({ payload, searchQuery }) {
+  const [viewMode, setViewMode] = useState('cards');
   const currentSprintItems = filterSprintItems(payload?.currentSprint?.items ?? [], searchQuery);
   const nextSprintItems = filterSprintItems(payload?.nextSprint?.items ?? [], searchQuery);
   const visibleItemCount = currentSprintItems.length + nextSprintItems.length;
+
+  function renderSprintCardItem(item) {
+    const itemKey = `${item.url || item.title}-${item.number || 0}`;
+    const content = (
+      <div className="flex items-start gap-3">
+        <div className="min-w-0 flex-1 space-y-3">
+          <div>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
+              <span>{item.type}</span>
+              {item.number > 0 ? <span>#{item.number}</span> : null}
+            </div>
+            <h4 className="mt-2 text-lg font-semibold text-white">{item.title}</h4>
+            {item.repository ? <p className="mt-1 text-sm text-slate-400">{item.repository}</p> : null}
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="secondary">{item.status || 'No status'}</Badge>
+            <Badge variant="secondary">{item.state}</Badge>
+          </div>
+        </div>
+        {item.url ? <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" /> : null}
+      </div>
+    );
+
+    if (item.url) {
+      return (
+        <a key={itemKey} href={item.url} target="_blank" rel="noreferrer" className="block">
+          {content}
+        </a>
+      );
+    }
+
+    return <div key={itemKey}>{content}</div>;
+  }
+
+  function renderSprintListItem(item, status) {
+    const itemKey = `${status}-${item.url || item.title}-${item.number || 0}`;
+    const repositoryNameParts = getRepositoryNameParts(item.repository);
+    const content = (
+      <div className="group flex min-w-0 items-center gap-3 text-sm">
+        <div className="min-w-0 flex-1 py-2.5">
+          <div className="flex min-w-0 items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-slate-500">
+            <span>{item.type}</span>
+            {item.number > 0 ? <span>#{item.number}</span> : null}
+            <Badge variant="secondary" className="shrink-0 px-2 py-0 text-[10px]">{item.state}</Badge>
+          </div>
+          <div className="mt-1 flex min-w-0 items-center gap-2">
+            <span className="truncate font-medium text-slate-100 transition-colors group-hover:text-white">{item.title}</span>
+            {item.url ? <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" /> : null}
+          </div>
+        </div>
+        <div className="hidden w-52 shrink-0 py-2 text-xs leading-4 text-slate-400 lg:block">
+          {repositoryNameParts ? (
+            <>
+              <div className="truncate text-slate-500">{repositoryNameParts.owner}</div>
+              {repositoryNameParts.name ? <div className="truncate text-slate-300">{repositoryNameParts.name}</div> : null}
+            </>
+          ) : (
+            <span className="text-slate-600">—</span>
+          )}
+        </div>
+      </div>
+    );
+
+    if (item.url) {
+      return (
+        <a key={itemKey} href={item.url} target="_blank" rel="noreferrer" className="block px-4 transition-colors hover:bg-white/[0.03]">
+          {content}
+        </a>
+      );
+    }
+
+    return <div key={itemKey} className="px-4">{content}</div>;
+  }
+
+  function renderSprintStatusGroups(visibleItems) {
+    const statusGroups = getSprintStatusGroups(visibleItems);
+
+    if (viewMode === 'list') {
+      return (
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60">
+          {statusGroups.map((group) => {
+            const style = getSprintStatusStyle(group.status);
+
+            return (
+              <section key={group.status} className="border-b border-white/[0.06] last:border-b-0">
+                <div className={`flex items-center justify-between gap-3 px-4 py-2.5 ${style.section}`}>
+                  <div className="flex items-center gap-3">
+                    <span className={`h-2 w-2 rounded-full ${style.dot}`} />
+                    <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] ${style.badge}`}>
+                      {group.status}
+                    </span>
+                  </div>
+                  <span className="text-xs text-slate-200">{group.items.length}</span>
+                </div>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={`${group.status}-${item.url || item.title}-${item.number || 0}`} className="border-t border-white/[0.06] first:border-t-0">
+                      {renderSprintListItem(item, group.status)}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            );
+          })}
+        </div>
+      );
+    }
+
+    return (
+      <div className="space-y-4">
+        {statusGroups.map((group) => {
+          const style = getSprintStatusStyle(group.status);
+
+          return (
+            <section key={group.status} className={`rounded-3xl border p-4 ${style.section}`}>
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <span className={`h-3 w-3 rounded-full ${style.dot}`} />
+                  <h4 className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${style.badge}`}>
+                    {group.status}
+                  </h4>
+                </div>
+                <Badge variant="secondary">{group.items.length}</Badge>
+              </div>
+              <div className="grid gap-4 xl:grid-cols-2">
+                {group.items.map((item) => (
+                  <div
+                    key={`${group.status}-${item.url || item.title}-${item.number || 0}`}
+                    className={`rounded-3xl border border-white/10 bg-slate-900/70 p-5 ${item.url ? 'group transition-colors hover:border-cyan-300/40 hover:bg-slate-900' : ''}`}
+                  >
+                    {renderSprintCardItem(item)}
+                  </div>
+                ))}
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    );
+  }
 
   function renderSprintSection(sprint, visibleItems) {
     if (!sprint) {
@@ -1096,35 +1340,7 @@ function SprintPanel({ payload, searchQuery }) {
             No linked issues or pull requests match the current search.
           </div>
         ) : (
-          <div className="grid gap-4 xl:grid-cols-2">
-            {visibleItems.map((item) => (
-              <a
-                key={item.url}
-                href={item.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition-colors hover:border-cyan-300/40 hover:bg-slate-900"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="min-w-0 flex-1 space-y-3">
-                    <div>
-                      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
-                        <span>{item.type}</span>
-                        <span>#{item.number}</span>
-                      </div>
-                      <h4 className="mt-2 text-lg font-semibold text-white">{item.title}</h4>
-                      <p className="mt-1 text-sm text-slate-400">{item.repository}</p>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <Badge variant="secondary">{item.status || 'No status'}</Badge>
-                      <Badge variant="secondary">{item.state}</Badge>
-                    </div>
-                  </div>
-                  <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-cyan-200" />
-                </div>
-              </a>
-            ))}
-          </div>
+          renderSprintStatusGroups(visibleItems)
         )}
       </section>
     );
@@ -1145,17 +1361,14 @@ function SprintPanel({ payload, searchQuery }) {
         </div>
       </CardHeader>
       <CardContent className="space-y-8 p-6">
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
+        <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
           <div className="space-y-2">
             <p className="text-sm font-medium text-white">{payload?.project?.title || 'GitHub Project'}</p>
             <p className="text-sm text-slate-400">
               {payload?.view?.name ? `View: ${payload.view.name}` : 'Default project view'}
             </p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-300">
-            <span className="font-medium text-white">Current filter:</span>{' '}
-            {payload?.currentFilter || 'No filter exposed by GitHub for this view.'}
-          </div>
+          <SprintViewSwitcher viewMode={viewMode} onViewModeChange={setViewMode} />
         </div>
         {renderSprintSection(payload?.currentSprint, currentSprintItems)}
         {renderSprintSection(payload?.nextSprint, nextSprintItems)}
@@ -1523,7 +1736,7 @@ export default function App() {
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.18),_transparent_28%),linear-gradient(180deg,_#020617_0%,_#0f172a_50%,_#111827_100%)] text-foreground">
       <div className="mx-auto flex min-h-screen flex-col px-4 py-8 sm:px-6 lg:px-8">
         <header className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur md:p-10">
-          <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_right,_rgba(244,114,182,0.25),_transparent_45%)]" />
+          <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top_right,_rgba(244,114,182,0.25),_transparent_45%)]" />
           <div className="relative grid gap-8 lg:grid-cols-[1.6fr_0.8fr] lg:items-end">
             <div className="space-y-4">
               <Badge className="bg-cyan-300/15 text-cyan-100 ring-1 ring-cyan-200/30">Municipio</Badge>

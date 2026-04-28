@@ -219,6 +219,15 @@ const sprintPayload = {
         state: 'Merged',
         status: 'Done',
       },
+      {
+        title: 'Prepare sprint planning',
+        url: '',
+        number: 0,
+        repository: '',
+        type: 'Draft Issue',
+        state: 'Draft',
+        status: 'Todo',
+      },
     ],
   },
 };
@@ -375,8 +384,10 @@ describe('App', () => {
     expect(screen.getByText('status:Todo')).toBeInTheDocument();
     expect(screen.getByText('Implement sprint tab')).toBeInTheDocument();
     expect(screen.getByText('Ship sprint view')).toBeInTheDocument();
+    expect(screen.getByText('Prepare sprint planning')).toBeInTheDocument();
     expect(screen.getByText('In progress')).toBeInTheDocument();
     expect(screen.getByText('Merged')).toBeInTheDocument();
+    expect(screen.getByText('Draft')).toBeInTheDocument();
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Pull Requests' }));
 
@@ -409,6 +420,25 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
     expect(await screen.findByText('Ship sprint view')).toBeInTheDocument();
     expect(screen.queryByText('Implement sprint tab')).not.toBeInTheDocument();
+  });
+
+  it('groups sprint items by status and supports list view', async () => {
+    mockDashboardFetch();
+
+    render(<App />);
+
+    await screen.findByText('2 of 2 open issues');
+
+    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
+
+    expect((await screen.findAllByText('In Progress')).length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Done').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Todo').length).toBeGreaterThan(0);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Sprint list view' }));
+
+    expect(screen.getByRole('button', { name: 'Sprint list view' })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByText('Prepare sprint planning')).toBeInTheDocument();
   });
 
   it('renders a release log tab with markdown content', async () => {

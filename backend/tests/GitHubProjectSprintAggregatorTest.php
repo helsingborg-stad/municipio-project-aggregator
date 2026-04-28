@@ -47,11 +47,14 @@ final class GitHubProjectSprintAggregatorTest extends TestCase
         self::assertSame('Sprint 14', $data['currentSprint']['title']);
         self::assertSame('2026-05-11', $data['currentSprint']['endDate']);
         self::assertSame('Sprint 15', $data['nextSprint']['title']);
-        self::assertSame(3, $data['count']);
+        self::assertSame(4, $data['count']);
         self::assertSame('Implement sprint tab', $data['currentSprint']['items'][0]['title']);
         self::assertSame('In progress', $data['currentSprint']['items'][0]['status']);
-        self::assertSame('Pull Request', $data['nextSprint']['items'][0]['type']);
-        self::assertSame('Merged', $data['nextSprint']['items'][0]['state']);
+        self::assertSame('Draft Issue', $data['nextSprint']['items'][0]['type']);
+        self::assertSame('Prepare sprint planning', $data['nextSprint']['items'][0]['title']);
+        self::assertSame('Draft', $data['nextSprint']['items'][0]['state']);
+        self::assertSame('Pull Request', $data['nextSprint']['items'][1]['type']);
+        self::assertSame('Merged', $data['nextSprint']['items'][1]['state']);
     }
 
     /**
@@ -270,9 +273,24 @@ final class GitHubProjectSprintAggregatorTest extends TestCase
                                             'id' => 'item-4',
                                             'content' => [
                                                 '__typename' => 'DraftIssue',
+                                                'title' => 'Prepare sprint planning',
                                             ],
                                             'fieldValues' => [
-                                                'nodes' => [],
+                                                'nodes' => [
+                                                    [
+                                                        '__typename' => 'ProjectV2ItemFieldIterationValue',
+                                                        'title' => 'Sprint 15',
+                                                        'startDate' => '2026-05-12',
+                                                        'duration' => 14,
+                                                        'iterationId' => 'iteration-next',
+                                                        'field' => ['name' => 'Iteration'],
+                                                    ],
+                                                    [
+                                                        '__typename' => 'ProjectV2ItemFieldSingleSelectValue',
+                                                        'name' => 'Todo',
+                                                        'field' => ['name' => 'Status'],
+                                                    ],
+                                                ],
                                             ],
                                         ],
                                     ],

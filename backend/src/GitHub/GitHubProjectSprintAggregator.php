@@ -160,6 +160,9 @@ query {
           id
           content {
             __typename
+                        ... on DraftIssue {
+                            title
+                        }
             ... on Issue {
               title
               url
@@ -353,7 +356,7 @@ GRAPHQL;
             }
 
             $typeName = $content['__typename'];
-            if ($typeName !== 'Issue' && $typeName !== 'PullRequest') {
+            if ($typeName !== 'Issue' && $typeName !== 'PullRequest' && $typeName !== 'DraftIssue') {
                 continue;
             }
 
@@ -365,20 +368,44 @@ GRAPHQL;
             }
 
             $entriesByIterationId[$iterationId] ??= [];
-            $entriesByIterationId[$iterationId][] = new SprintEntry(
-                is_string($content['title'] ?? null) ? $content['title'] : 'Untitled item',
-                is_string($content['url'] ?? null) ? $content['url'] : '',
-                is_int($content['number'] ?? null) ? $content['number'] : 0,
-                is_array($content['repository'] ?? null) && is_string($content['repository']['nameWithOwner'] ?? null)
-                    ? $content['repository']['nameWithOwner']
-                    : 'unknown',
-                $typeName === 'PullRequest' ? 'Pull Request' : 'Issue',
-                $this->normalizeState(is_string($content['state'] ?? null) ? $content['state'] : ''),
+            $entriesByIterationId[$iterationId][] = $this->createSprintEntry($content, $fieldValues);
+        }
+
+        return $entriesByIterationId;
+    }
+
+    /**
+     * @param array<string, mixed> $content
+     * @param array<int, array<string, mixed>> $fieldValues
+     * @return SprintEntry
+     */
+    private function createSprintEntry(array $content, array $fieldValues): SprintEntry
+    {
+        $typeName = is_string($content['__typename'] ?? null) ? $content['__typename'] : 'DraftIssue';
+
+        if ($typeName === 'DraftIssue') {
+            return new SprintEntry(
+                is_string($content['title'] ?? null) ? $content['title'] : 'Untitled draft issue',
+                '',
+                0,
+                '',
+                'Draft Issue',
+                'Draft',
                 $this->extractStatus($fieldValues),
             );
         }
 
-        return $entriesByIterationId;
+        return new SprintEntry(
+            is_string($content['title'] ?? null) ? $content['title'] : 'Untitled item',
+            is_string($content['url'] ?? null) ? $content['url'] : '',
+            is_int($content['number'] ?? null) ? $content['number'] : 0,
+            is_array($content['repository'] ?? null) && is_string($content['repository']['nameWithOwner'] ?? null)
+                ? $content['repository']['nameWithOwner']
+                : 'unknown',
+            $typeName === 'PullRequest' ? 'Pull Request' : 'Issue',
+            $this->normalizeState(is_string($content['state'] ?? null) ? $content['state'] : ''),
+            $this->extractStatus($fieldValues),
+        );
     }
 
     /**
