@@ -22,6 +22,10 @@ final class GitHubRestClient
      * @var array<string, array<string, mixed>>
      */
     private array $userProfilesByLogin = [];
+    /**
+     * @var array<string, array<int, RepositoryReference>>
+     */
+    private array $repositoriesByTopicSet = [];
 
     /**
      * @param HttpClientInterface $httpClient HTTP client implementation.
@@ -37,6 +41,14 @@ final class GitHubRestClient
      */
     public function listRepositoriesByTopics(array $topics, string $token): array
     {
+        $sortedTopics = $topics;
+        sort($sortedTopics);
+        $cacheKey = implode('|', $sortedTopics);
+
+        if (array_key_exists($cacheKey, $this->repositoriesByTopicSet)) {
+            return $this->repositoriesByTopicSet[$cacheKey];
+        }
+
         $repositoriesByName = [];
 
         foreach ($topics as $topic) {
@@ -81,7 +93,9 @@ final class GitHubRestClient
             } while (count($items) === self::PAGE_SIZE);
         }
 
-        return array_values($repositoriesByName);
+        $this->repositoriesByTopicSet[$cacheKey] = array_values($repositoriesByName);
+
+        return $this->repositoriesByTopicSet[$cacheKey];
     }
 
     /**

@@ -15,17 +15,17 @@ final class GraphQlSearchQueryBuilder
      * Build a paginated GraphQL search query.
      *
      * @param SourceType $sourceType Source type to query.
-     * @param string $organization GitHub organization name.
-        * @param string $label Label to search for.
+     * @param string $owner GitHub repository owner.
+     * @param string $repositoryName GitHub repository name.
      * @param string|null $afterCursor GraphQL pagination cursor.
      * @return string
      */
-    public function build(SourceType $sourceType, string $organization, string $label, ?string $afterCursor): string
+    public function build(SourceType $sourceType, string $owner, string $repositoryName, ?string $afterCursor): string
     {
         $queryString = sprintf(
-            'org:%s label:%s %s is:open',
-            $organization,
-            $label,
+            'repo:%s/%s %s is:open sort:created-desc',
+            $owner,
+            $repositoryName,
             $sourceType->searchQualifier(),
         );
 

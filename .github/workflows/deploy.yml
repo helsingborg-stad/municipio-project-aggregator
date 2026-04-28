@@ -5,21 +5,70 @@ on:
     branches:
       - main
   schedule:
-    # Run every hour at minute 0
-    - cron: '0 * * * *'
+    - cron: '5 * * * *'
+    - cron: '25 * * * *'
+    - cron: '45 * * * *'
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
+concurrency:
+  group: deploy-dashboard
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
-    name: Build and Deploy
+  deploy-ui:
+    name: Build and Deploy UI
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Build UI bundle
+        run: npm run build:ui
+
+      - name: Checkout GitHub Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Preserve deployed data files
+        run: rsync -av --delete --exclude 'data' dist/ gh-pages/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./gh-pages
+          publish_branch: gh-pages
+
+  refresh-data:
+    name: Refresh Deployed Data
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Checkout GitHub Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
@@ -27,12 +76,6 @@ jobs:
           php-version: '8.2'
           tools: composer:v2
           coverage: none
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
 
       - name: Cache Composer dependencies
         uses: actions/cache@v4
@@ -47,17 +90,41 @@ jobs:
           COMPOSER_CACHE_DIR: /tmp/composer-cache
         run: composer install --no-dev --prefer-dist --no-interaction
 
-      - name: Install Node.js dependencies
-        run: npm ci
+      - name: Resolve scheduled build targets
+        id: build-targets
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "targets=issues,pull-requests,releases" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "5 * * * *" ]; then
+            echo "targets=issues" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "25 * * * *" ]; then
+            echo "targets=pull-requests" >> "$GITHUB_OUTPUT"
+          else
+            echo "targets=releases" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Build aggregated data and UI
+      - name: Build selected data files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run build
+          BUILD_TARGETS: ${{ steps.build-targets.outputs.targets }}
+        run: php backend/bin/build.php
+
+      - name: Sync refreshed data into deployed site
+        run: |
+          mkdir -p gh-pages/data
+          for target in $(printf '%s' "${{ steps.build-targets.outputs.targets }}" | tr ',' ' '); do
+            if [ "$target" = "releases" ]; then
+              rm -rf gh-pages/data/releases
+              mkdir -p gh-pages/data/releases
+              rsync -av --delete public/data/releases/ gh-pages/data/releases/
+            else
+              cp "public/data/$target.json" "gh-pages/data/$target.json"
+            fi
+          done
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./gh-pages
           publish_branch: gh-pages

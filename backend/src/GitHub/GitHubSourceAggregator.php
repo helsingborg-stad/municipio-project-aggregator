@@ -20,7 +20,9 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
      * @param GitHubRestClient $client GitHub REST client.
      */
     public function __construct(
-        private readonly GitHubRestClient $client,
+        private readonly GitHubRestClient $restClient,
+        private readonly GitHubGraphQlClient $graphQlClient,
+        private readonly GraphQlSearchQueryBuilder $queryBuilder,
     ) {
     }
 
@@ -32,38 +34,19 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
     public function aggregate(SourceType $sourceType, BuildConfig $config): SourcePayload
     {
         $itemsByUrl = [];
-        $repositories = $this->client->listRepositoriesByTopics($config->topics(), $config->token());
+        $repositories = $this->restClient->listRepositoriesByTopics($config->topics(), $config->token());
         $oldestIncludedCreatedAt = $config->oldestIncludedCreatedAt();
 
         foreach ($repositories as $repository) {
-            foreach ($this->client->listOpenItems($sourceType, $repository, $config->token()) as $itemData) {
-                if (empty($itemData['title']) || empty($itemData['html_url']) || empty($itemData['number'])) {
+            foreach ($this->listGraphQlItems($sourceType, $repository->owner(), $repository->name(), $config->token(), $oldestIncludedCreatedAt) as $itemNode) {
+                $item = AggregatedItem::fromNode($itemNode);
+                $itemData = $item->toArray();
+
+                if ($itemData['url'] === '') {
                     continue;
                 }
 
-                if (!$this->wasCreatedWithinWindow($itemData, $oldestIncludedCreatedAt)) {
-                    continue;
-                }
-
-                $issueNumber = (int) $itemData['number'];
-                $issueDetails = $this->client->getIssueDetails($repository, $issueNumber, $config->token());
-                $authorProfile = $this->client->getUserProfile(
-                    is_array($issueDetails['user'] ?? null) && is_string($issueDetails['user']['login'] ?? null)
-                        ? $issueDetails['user']['login']
-                        : '',
-                    $config->token(),
-                );
-                $timelineEvents = $this->client->listTimelineEvents($repository, $issueNumber, $config->token());
-                $subIssues = $this->client->listSubIssues($repository, $issueNumber, $config->token());
-                $item = AggregatedItem::fromRestItem(
-                    $repository->fullName(),
-                    $itemData,
-                    $issueDetails,
-                    $authorProfile,
-                    $timelineEvents,
-                    $subIssues,
-                );
-                $itemsByUrl[$itemData['html_url']] = $item;
+                $itemsByUrl[$itemData['url']] = $item;
             }
         }
 
@@ -102,5 +85,58 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
         } catch (Exception) {
             return false;
         }
+    }
+
+    /**
+     * @param SourceType $sourceType
+     * @param string $owner
+     * @param string $repositoryName
+     * @param string $token
+     * @param DateTimeImmutable $oldestIncludedCreatedAt
+     * @return array<int, array<string, mixed>>
+     */
+    private function listGraphQlItems(
+        SourceType $sourceType,
+        string $owner,
+        string $repositoryName,
+        string $token,
+        DateTimeImmutable $oldestIncludedCreatedAt,
+    ): array {
+        $items = [];
+        $afterCursor = null;
+
+        do {
+            $response = $this->graphQlClient->runQuery(
+                $token,
+                $this->queryBuilder->build($sourceType, $owner, $repositoryName, $afterCursor),
+            );
+
+            $search = is_array($response['search'] ?? null) ? $response['search'] : [];
+            $nodes = is_array($search['nodes'] ?? null) ? $search['nodes'] : [];
+            $pageInfo = is_array($search['pageInfo'] ?? null) ? $search['pageInfo'] : [];
+            $reachedLookbackBoundary = false;
+
+            foreach ($nodes as $node) {
+                if (!is_array($node) || empty($node['title']) || empty($node['url']) || empty($node['number'])) {
+                    continue;
+                }
+
+                if (!$this->wasCreatedWithinWindow(['created_at' => $node['createdAt'] ?? null], $oldestIncludedCreatedAt)) {
+                    $reachedLookbackBoundary = true;
+                    break;
+                }
+
+                $items[] = $node;
+            }
+
+            if ($reachedLookbackBoundary) {
+                break;
+            }
+
+            $hasNextPage = ($pageInfo['hasNextPage'] ?? false) === true;
+            $afterCursor = is_string($pageInfo['endCursor'] ?? null) ? $pageInfo['endCursor'] : null;
+        } while ($hasNextPage && $afterCursor !== null);
+
+        return $items;
     }
 }

@@ -7,12 +7,13 @@ namespace MunicipioProjectAggregator\Tests;
 use DateTimeImmutable;
 use MunicipioProjectAggregator\Backend\Config\BuildConfig;
 use MunicipioProjectAggregator\Backend\Contracts\HttpClientInterface;
+use MunicipioProjectAggregator\Backend\GitHub\GitHubGraphQlClient;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubRestClient;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubSourceAggregator;
+use MunicipioProjectAggregator\Backend\GitHub\GraphQlSearchQueryBuilder;
 use MunicipioProjectAggregator\Backend\GitHub\SourceType;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use RuntimeException;
 
 #[CoversClass(GitHubSourceAggregator::class)]
 final class GitHubSourceAggregatorTest extends TestCase
@@ -24,6 +25,8 @@ final class GitHubSourceAggregatorTest extends TestCase
     {
         $aggregator = new GitHubSourceAggregator(
             new GitHubRestClient($this->createHttpClient()),
+            new GitHubGraphQlClient($this->createHttpClient()),
+            new GraphQlSearchQueryBuilder(),
         );
 
         $payload = $aggregator->aggregate(
@@ -68,6 +71,8 @@ final class GitHubSourceAggregatorTest extends TestCase
     {
         $aggregator = new GitHubSourceAggregator(
             new GitHubRestClient($this->createHttpClient()),
+            new GitHubGraphQlClient($this->createHttpClient()),
+            new GraphQlSearchQueryBuilder(),
         );
 
         $payload = $aggregator->aggregate(
@@ -98,6 +103,8 @@ final class GitHubSourceAggregatorTest extends TestCase
     {
         $aggregator = new GitHubSourceAggregator(
             new GitHubRestClient($this->createHttpClient()),
+            new GitHubGraphQlClient($this->createHttpClient()),
+            new GraphQlSearchQueryBuilder(),
         );
 
         $payload = $aggregator->aggregate(
@@ -128,6 +135,8 @@ final class GitHubSourceAggregatorTest extends TestCase
     {
         $aggregator = new GitHubSourceAggregator(
             new GitHubRestClient($this->createHttpClientWithMissingAuthorProfile()),
+            new GitHubGraphQlClient($this->createHttpClientWithMissingAuthorProfile()),
+            new GraphQlSearchQueryBuilder(),
         );
 
         $payload = $aggregator->aggregate(
@@ -196,186 +205,6 @@ final class GitHubSourceAggregatorTest extends TestCase
                     }
                 }
 
-                if (str_contains($url, '/repos/municipio-se/municipio-site/pulls')) {
-                    return [];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/pulls')) {
-                    return [
-                        [
-                            'title' => 'GetMunicipio only PR',
-                            'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/2',
-                            'number' => 2,
-                            'created_at' => '2026-04-25T09:00:00Z',
-                        ],
-                        [
-                            'title' => 'Shared PR',
-                            'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/1',
-                            'number' => 1,
-                            'created_at' => '2026-04-24T09:00:00Z',
-                        ],
-                    ];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/pulls')) {
-                    return [[
-                        'title' => 'Obsolete PR',
-                        'html_url' => 'https://github.com/helsingborg-stad/styleguide-blocks/pull/3',
-                        'number' => 3,
-                        'created_at' => '2025-04-24T09:00:00Z',
-                    ]];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/2/timeline')) {
-                    return [[
-                        'event' => 'cross-referenced',
-                        'source' => [
-                            'issue' => [
-                                'title' => 'Roadmap card',
-                                'html_url' => 'https://github.com/helsingborg-stad/roadmap/issues/9',
-                                'repository' => [
-                                    'full_name' => 'helsingborg-stad/roadmap',
-                                ],
-                            ],
-                        ],
-                    ]];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/2/sub_issues')) {
-                    return [[
-                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/issues/8',
-                    ]];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1/sub_issues')) {
-                    return [];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/issues/3/sub_issues')) {
-                    return [];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1/timeline')) {
-                    return [];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/issues/3/timeline')) {
-                    return [];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/2')) {
-                    return [
-                        'title' => 'GetMunicipio only PR',
-                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/2',
-                        'number' => 2,
-                        'created_at' => '2026-04-25T09:00:00Z',
-                        'user' => [
-                            'login' => 'octocat',
-                            'avatar_url' => 'https://avatars.example.com/octocat.png',
-                            'html_url' => 'https://github.com/octocat',
-                        ],
-                        'assignees' => [[
-                            'login' => 'hubot',
-                            'avatar_url' => 'https://avatars.example.com/hubot.png',
-                            'html_url' => 'https://github.com/hubot',
-                        ]],
-                        'milestone' => [
-                            'title' => 'Q2',
-                            'html_url' => 'https://github.com/helsingborg-stad/styleguide/milestone/1',
-                            'due_on' => '2026-06-01T00:00:00Z',
-                        ],
-                        'type' => 'Feature',
-                        'sub_issues_summary' => [
-                            'total' => 3,
-                            'completed' => 1,
-                            'percent_completed' => 33,
-                        ],
-                        'issue_dependencies_summary' => [
-                            'blocked_by' => 1,
-                            'total_blocked_by' => 2,
-                            'blocking' => 0,
-                            'total_blocking' => 1,
-                        ],
-                    ];
-                }
-
-                if (str_contains($url, '/users/octocat')) {
-                    return [
-                        'login' => 'octocat',
-                        'company' => 'GitHub',
-                    ];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/1')) {
-                    return [
-                        'title' => 'Shared PR',
-                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/1',
-                        'number' => 1,
-                        'created_at' => '2026-04-24T09:00:00Z',
-                        'user' => [
-                            'login' => 'monalisa',
-                            'avatar_url' => 'https://avatars.example.com/monalisa.png',
-                            'html_url' => 'https://github.com/monalisa',
-                        ],
-                        'assignees' => [],
-                        'milestone' => null,
-                        'type' => null,
-                        'sub_issues_summary' => [
-                            'total' => 0,
-                            'completed' => 0,
-                            'percent_completed' => 0,
-                        ],
-                        'issue_dependencies_summary' => [
-                            'blocked_by' => 0,
-                            'total_blocked_by' => 0,
-                            'blocking' => 0,
-                            'total_blocking' => 0,
-                        ],
-                    ];
-                }
-
-                if (str_contains($url, '/users/monalisa')) {
-                    return [
-                        'login' => 'monalisa',
-                        'company' => 'Octo Arts',
-                    ];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide-blocks/issues/3')) {
-                    return [
-                        'title' => 'Obsolete PR',
-                        'html_url' => 'https://github.com/helsingborg-stad/styleguide-blocks/pull/3',
-                        'number' => 3,
-                        'created_at' => '2025-04-24T09:00:00Z',
-                        'user' => [
-                            'login' => 'oldtimer',
-                            'avatar_url' => 'https://avatars.example.com/oldtimer.png',
-                            'html_url' => 'https://github.com/oldtimer',
-                        ],
-                        'assignees' => [],
-                        'milestone' => null,
-                        'type' => null,
-                        'sub_issues_summary' => [
-                            'total' => 0,
-                            'completed' => 0,
-                            'percent_completed' => 0,
-                        ],
-                        'issue_dependencies_summary' => [
-                            'blocked_by' => 0,
-                            'total_blocked_by' => 0,
-                            'blocking' => 0,
-                            'total_blocking' => 0,
-                        ],
-                    ];
-                }
-
-                if (str_contains($url, '/users/oldtimer')) {
-                    return [
-                        'login' => 'oldtimer',
-                        'company' => 'Legacy Systems',
-                    ];
-                }
-
                 return [];
             }
 
@@ -387,7 +216,163 @@ final class GitHubSourceAggregatorTest extends TestCase
              */
             public function postJson(string $url, array $headers, array $body): array
             {
-                return [];
+                $query = (string) ($body['query'] ?? '');
+
+                if (str_contains($query, 'repo:municipio-se/municipio-site')) {
+                    return [
+                        'data' => [
+                            'search' => [
+                                'pageInfo' => ['hasNextPage' => false, 'endCursor' => null],
+                                'nodes' => [],
+                            ],
+                        ],
+                    ];
+                }
+
+                if (str_contains($query, 'repo:helsingborg-stad/styleguide ') && !str_contains($query, 'after:')) {
+                    return [
+                        'data' => [
+                            'search' => [
+                                'pageInfo' => ['hasNextPage' => false, 'endCursor' => null],
+                                'nodes' => [
+                                    $this->createPullRequestNode(
+                                        title: 'GetMunicipio only PR',
+                                        url: 'https://github.com/helsingborg-stad/styleguide/pull/2',
+                                        number: 2,
+                                        createdAt: '2026-04-25T09:00:00Z',
+                                        authorLogin: 'octocat',
+                                        authorCompany: 'GitHub',
+                                        milestoneTitle: 'Q2',
+                                        typeName: 'Feature',
+                                        subIssueTotal: 3,
+                                        subIssueUrl: 'https://github.com/helsingborg-stad/styleguide/issues/8',
+                                        blockedBy: 1,
+                                        linkedTitle: 'Roadmap card',
+                                    ),
+                                    $this->createPullRequestNode(
+                                        title: 'Shared PR',
+                                        url: 'https://github.com/helsingborg-stad/styleguide/pull/1',
+                                        number: 1,
+                                        createdAt: '2026-04-24T09:00:00Z',
+                                        authorLogin: 'monalisa',
+                                        authorCompany: 'Octo Arts',
+                                    ),
+                                ],
+                            ],
+                        ],
+                    ];
+                }
+
+                if (str_contains($query, 'repo:helsingborg-stad/styleguide-blocks') && !str_contains($query, 'after:')) {
+                    return [
+                        'data' => [
+                            'search' => [
+                                'pageInfo' => ['hasNextPage' => false, 'endCursor' => null],
+                                'nodes' => [
+                                    $this->createPullRequestNode(
+                                        title: 'Obsolete PR',
+                                        url: 'https://github.com/helsingborg-stad/styleguide-blocks/pull/3',
+                                        number: 3,
+                                        createdAt: '2025-04-24T09:00:00Z',
+                                        authorLogin: 'oldtimer',
+                                        authorCompany: 'Legacy Systems',
+                                    ),
+                                ],
+                            ],
+                        ],
+                    ];
+                }
+
+                return ['data' => ['search' => ['pageInfo' => ['hasNextPage' => false, 'endCursor' => null], 'nodes' => []]]];
+            }
+
+            /**
+             * @param string $title
+             * @param string $url
+             * @param int $number
+             * @param string $createdAt
+             * @param string $authorLogin
+             * @param string $authorCompany
+             * @param string|null $milestoneTitle
+             * @param string|null $typeName
+             * @param int $subIssueTotal
+             * @param string|null $subIssueUrl
+             * @param int $blockedBy
+             * @param string|null $linkedTitle
+             * @return array<string, mixed>
+             */
+            private function createPullRequestNode(
+                string $title,
+                string $url,
+                int $number,
+                string $createdAt,
+                string $authorLogin,
+                string $authorCompany,
+                ?string $milestoneTitle = null,
+                ?string $typeName = null,
+                int $subIssueTotal = 0,
+                ?string $subIssueUrl = null,
+                int $blockedBy = 0,
+                ?string $linkedTitle = null,
+            ): array {
+                return [
+                    'title' => $title,
+                    'url' => $url,
+                    'number' => $number,
+                    'createdAt' => $createdAt,
+                    'repository' => [
+                        'name' => 'styleguide',
+                        'nameWithOwner' => str_contains($url, 'styleguide-blocks') ? 'helsingborg-stad/styleguide-blocks' : 'helsingborg-stad/styleguide',
+                        'owner' => ['login' => 'helsingborg-stad'],
+                        'description' => str_contains($url, 'styleguide-blocks') ? 'Block collection' : 'Shared Municipio components',
+                        'url' => str_contains($url, 'styleguide-blocks') ? 'https://github.com/helsingborg-stad/styleguide-blocks' : 'https://github.com/helsingborg-stad/styleguide',
+                    ],
+                    'author' => [
+                        'login' => $authorLogin,
+                        'avatarUrl' => sprintf('https://avatars.example.com/%s.png', $authorLogin),
+                        'url' => sprintf('https://github.com/%s', $authorLogin),
+                        'company' => $authorCompany,
+                    ],
+                    'assignees' => [
+                        'nodes' => $title === 'GetMunicipio only PR' ? [[
+                            'login' => 'hubot',
+                            'avatarUrl' => 'https://avatars.example.com/hubot.png',
+                            'url' => 'https://github.com/hubot',
+                        ]] : [],
+                    ],
+                    'milestone' => $milestoneTitle === null ? null : [
+                        'title' => $milestoneTitle,
+                        'url' => 'https://github.com/helsingborg-stad/styleguide/milestone/1',
+                        'dueOn' => '2026-06-01T00:00:00Z',
+                    ],
+                    'issueType' => $typeName === null ? null : ['name' => $typeName],
+                    'subIssuesSummary' => [
+                        'total' => $subIssueTotal,
+                        'completed' => $subIssueTotal > 0 ? 1 : 0,
+                        'percentCompleted' => $subIssueTotal > 0 ? 33 : 0,
+                    ],
+                    'subIssues' => [
+                        'nodes' => $subIssueUrl === null ? [] : [['url' => $subIssueUrl]],
+                    ],
+                    'issueDependenciesSummary' => [
+                        'blockedBy' => $blockedBy,
+                        'totalBlockedBy' => $blockedBy > 0 ? 2 : 0,
+                        'blocking' => 0,
+                        'totalBlocking' => $blockedBy > 0 ? 1 : 0,
+                    ],
+                    'timelineItems' => [
+                        'nodes' => $linkedTitle === null ? [] : [[
+                            '__typename' => 'CrossReferencedEvent',
+                            'source' => [
+                                'title' => $linkedTitle,
+                                'url' => 'https://github.com/helsingborg-stad/roadmap/issues/9',
+                                'repository' => [
+                                    'nameWithOwner' => 'helsingborg-stad/roadmap',
+                                ],
+                            ],
+                        ]],
+                    ],
+                ];
             }
         };
     }
@@ -416,55 +401,6 @@ final class GitHubSourceAggregatorTest extends TestCase
                     ];
                 }
 
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/pulls')) {
-                    return [[
-                        'title' => 'PR from missing profile',
-                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/7',
-                        'number' => 7,
-                        'created_at' => '2026-04-25T09:00:00Z',
-                    ]];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/7/timeline')) {
-                    return [];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/7/sub_issues')) {
-                    return [];
-                }
-
-                if (str_contains($url, '/repos/helsingborg-stad/styleguide/issues/7')) {
-                    return [
-                        'title' => 'PR from missing profile',
-                        'html_url' => 'https://github.com/helsingborg-stad/styleguide/pull/7',
-                        'number' => 7,
-                        'created_at' => '2026-04-25T09:00:00Z',
-                        'user' => [
-                            'login' => 'ghost-user',
-                            'avatar_url' => 'https://avatars.example.com/ghost-user.png',
-                            'html_url' => 'https://github.com/ghost-user',
-                        ],
-                        'assignees' => [],
-                        'milestone' => null,
-                        'type' => null,
-                        'sub_issues_summary' => [
-                            'total' => 0,
-                            'completed' => 0,
-                            'percent_completed' => 0,
-                        ],
-                        'issue_dependencies_summary' => [
-                            'blocked_by' => 0,
-                            'total_blocked_by' => 0,
-                            'blocking' => 0,
-                            'total_blocking' => 0,
-                        ],
-                    ];
-                }
-
-                if (str_contains($url, '/users/ghost-user')) {
-                    throw new RuntimeException('HTTP 404: {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}');
-                }
-
                 return [];
             }
 
@@ -476,7 +412,38 @@ final class GitHubSourceAggregatorTest extends TestCase
              */
             public function postJson(string $url, array $headers, array $body): array
             {
-                return [];
+                return [
+                    'data' => [
+                        'search' => [
+                            'pageInfo' => ['hasNextPage' => false, 'endCursor' => null],
+                            'nodes' => [[
+                                'title' => 'PR from missing profile',
+                                'url' => 'https://github.com/helsingborg-stad/styleguide/pull/7',
+                                'number' => 7,
+                                'createdAt' => '2026-04-25T09:00:00Z',
+                                'repository' => [
+                                    'name' => 'styleguide',
+                                    'nameWithOwner' => 'helsingborg-stad/styleguide',
+                                    'owner' => ['login' => 'helsingborg-stad'],
+                                    'description' => 'Shared Municipio components',
+                                    'url' => 'https://github.com/helsingborg-stad/styleguide',
+                                ],
+                                'author' => [
+                                    'login' => 'ghost-user',
+                                    'avatarUrl' => 'https://avatars.example.com/ghost-user.png',
+                                    'url' => 'https://github.com/ghost-user',
+                                ],
+                                'assignees' => ['nodes' => []],
+                                'milestone' => null,
+                                'issueType' => null,
+                                'subIssuesSummary' => ['total' => 0, 'completed' => 0, 'percentCompleted' => 0],
+                                'subIssues' => ['nodes' => []],
+                                'issueDependenciesSummary' => ['blockedBy' => 0, 'totalBlockedBy' => 0, 'blocking' => 0, 'totalBlocking' => 0],
+                                'timelineItems' => ['nodes' => []],
+                            ]],
+                        ],
+                    ],
+                ];
             }
         };
     }

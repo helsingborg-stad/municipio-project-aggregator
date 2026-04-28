@@ -49,20 +49,24 @@ final class AggregatedItem
      */
     public static function fromNode(array $node): self
     {
+        $relationships = self::extractGraphQlRelationships($node['timelineItems']['nodes'] ?? []);
+
         return new self(
             (string) ($node['title'] ?? ''),
             (string) ($node['url'] ?? ''),
-            (string) (($node['repository']['name'] ?? 'unknown')),
+            is_array($node['repository'] ?? null) && is_string($node['repository']['nameWithOwner'] ?? null)
+                ? $node['repository']['nameWithOwner']
+                : 'unknown',
             (string) ($node['createdAt'] ?? ''),
             (int) ($node['number'] ?? 0),
-            null,
-            [],
-            null,
-            null,
-            self::defaultSubIssues(),
-            [],
-            self::defaultRelationshipSummary(),
-            [],
+            self::extractGraphQlUser($node['author'] ?? null),
+            self::extractGraphQlUsers($node['assignees']['nodes'] ?? []),
+            self::extractGraphQlMilestone($node['milestone'] ?? null),
+            self::extractType($node['issueType'] ?? null),
+            self::extractGraphQlSubIssues($node['subIssuesSummary'] ?? null),
+            self::extractGraphQlSubIssueUrls($node['subIssues']['nodes'] ?? []),
+            self::extractGraphQlRelationshipSummary($node['issueDependenciesSummary'] ?? null, $relationships),
+            $relationships,
         );
     }
 
@@ -178,6 +182,64 @@ final class AggregatedItem
     }
 
     /**
+     * @param mixed $user
+     * @return array<string, string>|null
+     */
+    private static function extractGraphQlUser(mixed $user): ?array
+    {
+        if (!is_array($user) || !is_string($user['login'] ?? null)) {
+            return null;
+        }
+
+        return [
+            'login' => $user['login'],
+            'avatarUrl' => is_string($user['avatarUrl'] ?? null) ? $user['avatarUrl'] : '',
+            'url' => is_string($user['url'] ?? null) ? $user['url'] : '',
+            'company' => is_string($user['company'] ?? null) ? trim($user['company']) : '',
+        ];
+    }
+
+    /**
+     * @param mixed $users
+     * @return array<int, array<string, string>>
+     */
+    private static function extractGraphQlUsers(mixed $users): array
+    {
+        if (!is_array($users)) {
+            return [];
+        }
+
+        $result = [];
+
+        foreach ($users as $user) {
+            $normalizedUser = self::extractGraphQlUser($user);
+
+            if ($normalizedUser !== null) {
+                $result[] = $normalizedUser;
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param mixed $milestone
+     * @return array<string, string|null>|null
+     */
+    private static function extractGraphQlMilestone(mixed $milestone): ?array
+    {
+        if (!is_array($milestone) || !is_string($milestone['title'] ?? null)) {
+            return null;
+        }
+
+        return [
+            'title' => $milestone['title'],
+            'url' => is_string($milestone['url'] ?? null) ? $milestone['url'] : null,
+            'dueOn' => is_string($milestone['dueOn'] ?? null) ? $milestone['dueOn'] : null,
+        ];
+    }
+
+    /**
      * @param mixed $milestone
      * @return array<string, string|null>|null
      */
@@ -229,6 +291,23 @@ final class AggregatedItem
     }
 
     /**
+     * @param mixed $summary
+     * @return array<string, int>
+     */
+    private static function extractGraphQlSubIssues(mixed $summary): array
+    {
+        if (!is_array($summary)) {
+            return self::defaultSubIssues();
+        }
+
+        return [
+            'total' => (int) ($summary['total'] ?? 0),
+            'completed' => (int) ($summary['completed'] ?? 0),
+            'percentCompleted' => (int) ($summary['percentCompleted'] ?? 0),
+        ];
+    }
+
+    /**
      * @param array<int, array<string, mixed>> $subIssues
      * @return array<int, string>
      */
@@ -242,6 +321,29 @@ final class AggregatedItem
             }
 
             $result[] = $subIssue['html_url'];
+        }
+
+        return array_values(array_unique($result));
+    }
+
+    /**
+     * @param mixed $subIssues
+     * @return array<int, string>
+     */
+    private static function extractGraphQlSubIssueUrls(mixed $subIssues): array
+    {
+        if (!is_array($subIssues)) {
+            return [];
+        }
+
+        $result = [];
+
+        foreach ($subIssues as $subIssue) {
+            if (!is_array($subIssue) || !is_string($subIssue['url'] ?? null) || $subIssue['url'] === '') {
+                continue;
+            }
+
+            $result[] = $subIssue['url'];
         }
 
         return array_values(array_unique($result));
@@ -265,6 +367,28 @@ final class AggregatedItem
             'totalBlockedBy' => (int) ($summary['total_blocked_by'] ?? 0),
             'blocking' => (int) ($summary['blocking'] ?? 0),
             'totalBlocking' => (int) ($summary['total_blocking'] ?? 0),
+            'linked' => count($relationships),
+        ];
+    }
+
+    /**
+     * @param mixed $summary
+     * @param array<int, array<string, string>> $relationships
+     * @return array<string, int>
+     */
+    private static function extractGraphQlRelationshipSummary(mixed $summary, array $relationships): array
+    {
+        if (!is_array($summary)) {
+            $result = self::defaultRelationshipSummary();
+            $result['linked'] = count($relationships);
+            return $result;
+        }
+
+        return [
+            'blockedBy' => (int) ($summary['blockedBy'] ?? 0),
+            'totalBlockedBy' => (int) ($summary['totalBlockedBy'] ?? 0),
+            'blocking' => (int) ($summary['blocking'] ?? 0),
+            'totalBlocking' => (int) ($summary['totalBlocking'] ?? 0),
             'linked' => count($relationships),
         ];
     }
@@ -298,6 +422,61 @@ final class AggregatedItem
                 'url' => $sourceIssue['html_url'],
                 'repository' => is_array($sourceIssue['repository'] ?? null) && is_string($sourceIssue['repository']['full_name'] ?? null)
                     ? $sourceIssue['repository']['full_name']
+                    : 'unknown',
+            ];
+        }
+
+        return array_values($relationshipsByUrl);
+    }
+
+    /**
+     * @param mixed $timelineItems
+     * @return array<int, array<string, string>>
+     */
+    private static function extractGraphQlRelationships(mixed $timelineItems): array
+    {
+        if (!is_array($timelineItems)) {
+            return [];
+        }
+
+        $relationshipsByUrl = [];
+
+        foreach ($timelineItems as $timelineItem) {
+            if (!is_array($timelineItem)) {
+                continue;
+            }
+
+            $eventType = is_string($timelineItem['__typename'] ?? null) ? $timelineItem['__typename'] : '';
+            $eventName = match ($eventType) {
+                'ConnectedEvent' => 'connected',
+                'CrossReferencedEvent' => 'cross-referenced',
+                'DisconnectedEvent' => 'disconnected',
+                default => '',
+            };
+
+            if ($eventName === '') {
+                continue;
+            }
+
+            $relatedItem = null;
+
+            foreach (['subject', 'source'] as $relationKey) {
+                if (is_array($timelineItem[$relationKey] ?? null)) {
+                    $relatedItem = $timelineItem[$relationKey];
+                    break;
+                }
+            }
+
+            if ($relatedItem === null || !is_string($relatedItem['url'] ?? null)) {
+                continue;
+            }
+
+            $relationshipsByUrl[$relatedItem['url']] = [
+                'event' => $eventName,
+                'title' => is_string($relatedItem['title'] ?? null) ? $relatedItem['title'] : 'Related item',
+                'url' => $relatedItem['url'],
+                'repository' => is_array($relatedItem['repository'] ?? null) && is_string($relatedItem['repository']['nameWithOwner'] ?? null)
+                    ? $relatedItem['repository']['nameWithOwner']
                     : 'unknown',
             ];
         }

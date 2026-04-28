@@ -5,12 +5,17 @@ declare(strict_types=1);
 
 use MunicipioProjectAggregator\Backend\Config\BuildConfig;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubReleaseAggregator;
+use MunicipioProjectAggregator\Backend\GitHub\GitHubGraphQlClient;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubRestClient;
 use MunicipioProjectAggregator\Backend\GitHub\GitHubSourceAggregator;
+use MunicipioProjectAggregator\Backend\GitHub\GraphQlSearchQueryBuilder;
 use MunicipioProjectAggregator\Backend\GitHub\SourceType;
 use MunicipioProjectAggregator\Backend\Output\JsonSourceWriter;
+use MunicipioProjectAggregator\Backend\Support\BuildTarget;
+use MunicipioProjectAggregator\Backend\Support\BuildTargetResolver;
 use MunicipioProjectAggregator\Backend\Support\LocalEnvironmentLoader;
 use MunicipioProjectAggregator\Backend\Support\StreamHttpClient;
+use RuntimeException;
 
 require dirname(__DIR__, 2) . '/vendor/autoload.php';
 
@@ -29,6 +34,7 @@ if ($token === false || $token === '') {
 }
 
 $itemLookbackDays = resolveItemLookbackDays();
+$buildTargets = resolveBuildTargets();
 
 $config = new BuildConfig(
     sourceScope: 'GitHub',
@@ -41,6 +47,8 @@ $config = new BuildConfig(
 
 $aggregator = new GitHubSourceAggregator(
     new GitHubRestClient(new StreamHttpClient()),
+    new GitHubGraphQlClient(new StreamHttpClient()),
+    new GraphQlSearchQueryBuilder(),
 );
 
 $releaseAggregator = new GitHubReleaseAggregator(
@@ -49,21 +57,18 @@ $releaseAggregator = new GitHubReleaseAggregator(
 
 $writer = new JsonSourceWriter($config->outputDirectory());
 
-foreach ([SourceType::Issues, SourceType::PullRequests] as $sourceType) {
-    fwrite(STDOUT, sprintf("Fetching %s...\n", strtolower($sourceType->label())));
-    $payload = $aggregator->aggregate($sourceType, $config);
-    $filePath = $writer->write($payload);
-    fwrite(STDOUT, sprintf("  Wrote %s\n", $filePath));
-}
+foreach ($buildTargets as $buildTarget) {
+    if ($buildTarget === BuildTarget::Issues) {
+        writeSourcePayload($aggregator, SourceType::Issues, $config, $writer);
+        continue;
+    }
 
-fwrite(STDOUT, "Fetching releases...\n");
-$releasePayload = $releaseAggregator->aggregate($config, 'municipio-se', 'municipio-deployment');
-$releaseIndexFilePath = $writer->write($releasePayload->pageIndexPayload());
-fwrite(STDOUT, sprintf("  Wrote %s\n", $releaseIndexFilePath));
+    if ($buildTarget === BuildTarget::PullRequests) {
+        writeSourcePayload($aggregator, SourceType::PullRequests, $config, $writer);
+        continue;
+    }
 
-foreach ($releasePayload->pagePayloads() as $pagePayload) {
-    $releasePageFilePath = $writer->write($pagePayload);
-    fwrite(STDOUT, sprintf("  Wrote %s\n", $releasePageFilePath));
+    writeReleasePayloads($releaseAggregator, $config, $writer);
 }
 
 /**
@@ -85,4 +90,58 @@ function resolveItemLookbackDays(): int
     }
 
     return $lookbackDays;
+}
+
+/**
+ * @return array<int, BuildTarget>
+ */
+function resolveBuildTargets(): array
+{
+    try {
+        return (new BuildTargetResolver())->resolve(getenv('BUILD_TARGETS'));
+    } catch (RuntimeException $exception) {
+        fwrite(STDERR, sprintf("Error: %s\n", $exception->getMessage()));
+        exit(1);
+    }
+}
+
+/**
+ * @param GitHubSourceAggregator $aggregator
+ * @param SourceType $sourceType
+ * @param BuildConfig $config
+ * @param JsonSourceWriter $writer
+ * @return void
+ */
+function writeSourcePayload(
+    GitHubSourceAggregator $aggregator,
+    SourceType $sourceType,
+    BuildConfig $config,
+    JsonSourceWriter $writer,
+): void {
+    fwrite(STDOUT, sprintf("Fetching %s...\n", strtolower($sourceType->label())));
+    $payload = $aggregator->aggregate($sourceType, $config);
+    $filePath = $writer->write($payload);
+    fwrite(STDOUT, sprintf("  Wrote %s\n", $filePath));
+}
+
+/**
+ * @param GitHubReleaseAggregator $releaseAggregator
+ * @param BuildConfig $config
+ * @param JsonSourceWriter $writer
+ * @return void
+ */
+function writeReleasePayloads(
+    GitHubReleaseAggregator $releaseAggregator,
+    BuildConfig $config,
+    JsonSourceWriter $writer,
+): void {
+    fwrite(STDOUT, "Fetching releases...\n");
+    $releasePayload = $releaseAggregator->aggregate($config, 'municipio-se', 'municipio-deployment');
+    $releaseIndexFilePath = $writer->write($releasePayload->pageIndexPayload());
+    fwrite(STDOUT, sprintf("  Wrote %s\n", $releaseIndexFilePath));
+
+    foreach ($releasePayload->pagePayloads() as $pagePayload) {
+        $releasePageFilePath = $writer->write($pagePayload);
+        fwrite(STDOUT, sprintf("  Wrote %s\n", $releasePageFilePath));
+    }
 }

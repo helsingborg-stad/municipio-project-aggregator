@@ -2,6 +2,8 @@
 
 Aggregates open issues and pull requests from repositories tagged for Municipio work into separate JSON sources and renders them in a React dashboard with issue, pull request, repository, and contributor views.
 
+Issue and pull request aggregation uses GitHub repository-topic discovery plus paginated GraphQL item queries per matched repository, which reduces the number of follow-up API calls compared with expanding every item through multiple REST endpoints.
+
 ## Architecture
 
 - `backend/` contains the PHP aggregation layer. It follows a small SOLID-oriented structure with explicit contracts, immutable data objects, and source-specific services.
@@ -57,6 +59,13 @@ npm run build:data
 
 Generates `public/data/issues.json` and `public/data/pull-requests.json` from repositories across GitHub tagged with the tracked topics.
 
+Use `BUILD_TARGETS` to refresh only the datasets you need:
+
+```bash
+BUILD_TARGETS=issues php backend/bin/build.php
+BUILD_TARGETS=pull-requests,releases php backend/bin/build.php
+```
+
 ```bash
 npm run dev
 ```
@@ -68,6 +77,14 @@ npm run build
 ```
 
 Runs the PHP aggregation step first and then builds the production UI into `dist/`.
+
+The GitHub Actions deployment is split so pushes rebuild only the UI bundle, while scheduled jobs refresh deployed data files directly once per hour in staggered slices:
+
+- minute `5`: issues
+- minute `25`: pull requests
+- minute `45`: releases
+
+That keeps the published app shell stable and lowers the peak GitHub API usage per run.
 
 ```bash
 npm run preview:caddy

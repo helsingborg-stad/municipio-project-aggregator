@@ -19,10 +19,11 @@ final class GraphQlSearchQueryBuilderTest extends TestCase
     {
         $builder = new GraphQlSearchQueryBuilder();
 
-        $query = $builder->build(SourceType::Issues, 'helsingborg-stad', 'getmunicipio', null);
+        $query = $builder->build(SourceType::Issues, 'helsingborg-stad', 'styleguide', null);
 
-        self::assertStringContainsString('org:helsingborg-stad label:getmunicipio is:issue is:open', $query);
+        self::assertStringContainsString('repo:helsingborg-stad/styleguide is:issue is:open sort:created-desc', $query);
         self::assertStringContainsString('... on Issue', $query);
+        self::assertStringContainsString('subIssuesSummary', $query);
         self::assertStringNotContainsString('after:', $query);
     }
 
@@ -33,9 +34,9 @@ final class GraphQlSearchQueryBuilderTest extends TestCase
     {
         $builder = new GraphQlSearchQueryBuilder();
 
-        $query = $builder->build(SourceType::PullRequests, 'helsingborg-stad', 'municipio', 'cursor-123');
+        $query = $builder->build(SourceType::PullRequests, 'helsingborg-stad', 'styleguide', 'cursor-123');
 
-        self::assertStringContainsString('org:helsingborg-stad label:municipio is:pr is:open', $query);
+        self::assertStringContainsString('repo:helsingborg-stad/styleguide is:pr is:open sort:created-desc', $query);
         self::assertStringContainsString('after: "cursor-123"', $query);
         self::assertStringContainsString('... on PullRequest', $query);
     }
