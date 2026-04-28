@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-28T10:08:05+00:00",
+    "generatedAt": "2026-04-28T11:06:30+00:00",
     "count": 162,
     "repositories": [
         {
@@ -101,13 +101,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "webhooks-manager",
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
@@ -119,6 +112,13 @@
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
             "url": "https://github.com/helsingborg-stad/modularity-testimonials"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -143,13 +143,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-form-builder",
-            "fullName": "helsingborg-stad/modularity-form-builder",
-            "description": "Simple form builder that uses acf for forms. ",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -161,6 +154,13 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-form-builder",
+            "fullName": "helsingborg-stad/modularity-form-builder",
+            "description": "Simple form builder that uses acf for forms. ",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
         },
         {
             "owner": "helsingborg-stad",
@@ -290,27 +290,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-exhibition-manager",
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
@@ -336,6 +315,27 @@
             "fullName": "helsingborg-stad/algolia-index",
             "description": "Manages algolia index.",
             "url": "https://github.com/helsingborg-stad/algolia-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
         },
         {
             "owner": "helsingborg-stad",
@@ -395,13 +395,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -420,6 +413,13 @@
             "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
             "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
             "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         }
     ],
     "authors": [
