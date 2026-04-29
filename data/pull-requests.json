@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-29T16:03:02+00:00",
-    "count": 163,
+    "generatedAt": "2026-04-29T16:56:06+00:00",
+    "count": 167,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -1850,6 +1850,96 @@
                     "repository": "helsingborg-stad/algolia-index-js-searchpage-addon"
                 }
             ]
+        },
+        {
+            "title": "Feat/copilot refactoring of claude refactoring",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/130",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-09T09:27:28Z",
+            "number": 130,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "feat: formbuilder copilot refactor",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/129",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-09T07:39:33Z",
+            "number": 129,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Feat/claude refactoring",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/128",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-04-09T07:37:27Z",
+            "number": 128,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
         },
         {
             "title": "build(deps): bump picomatch from 2.3.1 to 2.3.2",
@@ -5569,6 +5659,43 @@
                 "linked": 0
             },
             "relationships": []
+        },
+        {
+            "title": "build(deps): bump vite from 7.1.4 to 7.1.11",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/10",
+            "repository": "helsingborg-stad/acf-icon-field",
+            "createdAt": "2025-10-20T22:54:54Z",
+            "number": 10,
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "build(deps): bump vite from 7.1.4 to 7.1.5",
+                    "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/9",
+                    "repository": "helsingborg-stad/acf-icon-field"
+                }
+            ]
         },
         {
             "title": "Bump vite from 7.1.4 to 7.1.11",
