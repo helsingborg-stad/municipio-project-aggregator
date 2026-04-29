@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-29T17:54:08+00:00",
-    "count": 167,
+    "generatedAt": "2026-04-29T18:53:30+00:00",
+    "count": 168,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -5405,6 +5405,36 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
                 "url": "https://github.com/michaelclaesson",
                 "company": "Consid Bor\u00e5s"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "fix: detect context by first context matching",
+            "url": "https://github.com/helsingborg-stad/wputilservice/pull/11",
+            "repository": "helsingborg-stad/wputilservice",
+            "createdAt": "2025-12-08T09:53:27Z",
+            "number": 11,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "milestone": null,
