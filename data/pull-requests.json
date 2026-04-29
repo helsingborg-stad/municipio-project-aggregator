@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-29T01:12:31+00:00",
-    "count": 164,
+    "generatedAt": "2026-04-29T02:08:02+00:00",
+    "count": 165,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -5280,6 +5280,36 @@
             "repository": "helsingborg-stad/styleguide",
             "createdAt": "2026-01-22T00:06:05Z",
             "number": 1130,
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "build(deps): bump diff from 4.0.2 to 4.0.4",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/13",
+            "repository": "helsingborg-stad/acf-icon-field",
+            "createdAt": "2026-01-20T23:38:16Z",
+            "number": 13,
             "author": {
                 "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
