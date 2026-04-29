@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-29T12:57:14+00:00",
+    "generatedAt": "2026-04-29T14:06:34+00:00",
     "count": 164,
     "repositories": [
         {
@@ -185,17 +185,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
             "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
@@ -283,34 +283,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index",
-            "fullName": "helsingborg-stad/algolia-index",
-            "description": "Manages algolia index.",
-            "url": "https://github.com/helsingborg-stad/algolia-index"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "attachment-revisions",
             "fullName": "helsingborg-stad/attachment-revisions",
             "description": "",
@@ -336,6 +308,34 @@
             "fullName": "helsingborg-stad/modularity-contact-banner",
             "description": "Stores and presents general contact information to the organization",
             "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index",
+            "fullName": "helsingborg-stad/algolia-index",
+            "description": "Manages algolia index.",
+            "url": "https://github.com/helsingborg-stad/algolia-index"
         },
         {
             "owner": "helsingborg-stad",
