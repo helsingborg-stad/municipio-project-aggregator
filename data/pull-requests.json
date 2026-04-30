@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-04-30T09:08:27+00:00",
-    "count": 168,
+    "generatedAt": "2026-04-30T10:06:56+00:00",
+    "count": 169,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -276,34 +276,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index",
-            "fullName": "helsingborg-stad/algolia-index",
-            "description": "Manages algolia index.",
-            "url": "https://github.com/helsingborg-stad/algolia-index"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "attachment-revisions",
             "fullName": "helsingborg-stad/attachment-revisions",
             "description": "",
@@ -350,6 +322,34 @@
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
             "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index",
+            "fullName": "helsingborg-stad/algolia-index",
+            "description": "Manages algolia index.",
+            "url": "https://github.com/helsingborg-stad/algolia-index"
         },
         {
             "owner": "helsingborg-stad",
@@ -768,6 +768,36 @@
         }
     ],
     "items": [
+        {
+            "title": "Feat/chat presidio pii anonymization",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2004",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-04-30T09:31:41Z",
+            "number": 2004,
+            "author": {
+                "login": "MasterKenth",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/2890987?v=4",
+                "url": "https://github.com/MasterKenth",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "title": "fix(views): replace @section/@show with @yield/@hasSection in article partial",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/1996",
