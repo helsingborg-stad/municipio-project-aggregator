@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-01T07:16:15+00:00",
+    "generatedAt": "2026-05-01T08:07:19+00:00",
     "count": 170,
     "repositories": [
         {
@@ -381,20 +381,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-arcgis-map",
-            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-llm-addon",
             "fullName": "helsingborg-stad/algolia-index-llm-addon",
             "description": "",
@@ -406,6 +392,20 @@
             "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
             "description": "Exploration clone of ACF-UX-collapse for better deployment",
             "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-arcgis-map",
+            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
         },
         {
             "owner": "helsingborg-stad",
