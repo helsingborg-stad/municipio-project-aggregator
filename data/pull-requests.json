@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-02T09:45:23+00:00",
-    "count": 170,
+    "generatedAt": "2026-05-02T10:38:56+00:00",
+    "count": 171,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -768,6 +768,56 @@
         }
     ],
     "items": [
+        {
+            "title": "Preload hero-area images from modules and widget-backed modules",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2007",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-02T10:01:22Z",
+            "number": 2007,
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Preload images appearing in hero widget area",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2006",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
         {
             "title": "fix: don't process files that no longer exist",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2005",
