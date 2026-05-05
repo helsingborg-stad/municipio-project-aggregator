@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-05T12:49:59+00:00",
-    "count": 169,
+    "generatedAt": "2026-05-05T16:57:14+00:00",
+    "count": 170,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -276,34 +276,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "attachment-revisions",
-            "fullName": "helsingborg-stad/attachment-revisions",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/attachment-revisions"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-local-index",
-            "fullName": "helsingborg-stad/s3-local-index",
-            "description": "Stores a local index to make common file operations faster",
-            "url": "https://github.com/helsingborg-stad/s3-local-index"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "custom-short-links",
-            "fullName": "helsingborg-stad/custom-short-links",
-            "description": "Create shorter versions of url:s ",
-            "url": "https://github.com/helsingborg-stad/custom-short-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-contact-banner",
-            "fullName": "helsingborg-stad/modularity-contact-banner",
-            "description": "Stores and presents general contact information to the organization",
-            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-litespeed-common-settings",
             "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
             "description": "Use blog 1 as the master for all settings in litespeed configuration",
@@ -378,6 +350,34 @@
             "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "attachment-revisions",
+            "fullName": "helsingborg-stad/attachment-revisions",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/attachment-revisions"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "s3-local-index",
+            "fullName": "helsingborg-stad/s3-local-index",
+            "description": "Stores a local index to make common file operations faster",
+            "url": "https://github.com/helsingborg-stad/s3-local-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "custom-short-links",
+            "fullName": "helsingborg-stad/custom-short-links",
+            "description": "Create shorter versions of url:s ",
+            "url": "https://github.com/helsingborg-stad/custom-short-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-contact-banner",
+            "fullName": "helsingborg-stad/modularity-contact-banner",
+            "description": "Stores and presents general contact information to the organization",
+            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
         },
         {
             "owner": "helsingborg-stad",
@@ -768,6 +768,56 @@
         }
     ],
     "items": [
+        {
+            "title": "Add global Matomo `_paq` click tracking with backend-driven component targeting",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2013",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-05T13:08:29Z",
+            "number": 2013,
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Add support for matiomo js paq.push()",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2012",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
         {
             "title": "5.9.7",
             "url": "https://github.com/municipio-se/municipio-deployment/pull/184",
