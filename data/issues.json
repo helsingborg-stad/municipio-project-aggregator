@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-05T07:47:15+00:00",
-    "count": 94,
+    "generatedAt": "2026-05-05T08:57:38+00:00",
+    "count": 93,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -276,20 +276,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-exhibition-manager",
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
@@ -392,6 +378,20 @@
             "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -774,43 +774,6 @@
         }
     ],
     "items": [
-        {
-            "title": "Can't choose post type Evenemang in manually picked posts in posts module",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2009",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-05T07:17:35Z",
-            "number": 2009,
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": "Bug",
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
         {
             "title": "[TW] [ERROR] Invalid value for \"query\" parameter, expected string shorter than 512 bytes in /var/www/prod/vendor/algolia/algoliasearch-client-php/src/RetryStrategy/ApiWrapper.php:219",
             "url": "https://github.com/helsingborg-stad/algolia-index/issues/33",
