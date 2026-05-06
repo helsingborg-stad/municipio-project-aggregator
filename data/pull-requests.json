@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-06T12:02:39+00:00",
+    "generatedAt": "2026-05-06T13:00:46+00:00",
     "count": 169,
     "repositories": [
         {
@@ -192,13 +192,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
@@ -231,6 +224,13 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,36 @@
     ],
     "items": [
         {
+            "title": "fix: resolve empty text modules",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2021",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-06T12:12:46Z",
+            "number": 2021,
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "title": "Add global Matomo `_paq` click tracking with backend-driven component targeting",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2013",
             "repository": "helsingborg-stad/Municipio",
@@ -958,36 +988,6 @@
                 "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
                 "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "feat: add 'Open in new tab' option for recommendation links",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/23",
-            "repository": "helsingborg-stad/modularity-recommend",
-            "createdAt": "2026-04-24T12:43:02Z",
-            "number": 23,
-            "author": {
-                "login": "WilliamLundqvist",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
-                "url": "https://github.com/WilliamLundqvist",
                 "company": ""
             },
             "assignees": [],
