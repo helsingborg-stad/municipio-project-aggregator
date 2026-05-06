@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-05-06T10:28:37+00:00",
-    "count": 78,
+    "generatedAt": "2026-05-06T11:24:08+00:00",
+    "count": 79,
     "pageSize": 10,
     "pageNumber": 4,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.2.4",
+            "version": "5.2.4",
+            "body": "## Municipio Theme (5.142.4)\r\n\r\n- Adds ability to indent vertical menus (drawer, sidebar). Enabled via Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds option to choose icon type (caret or plus/minus) for vertical menus in the Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for showing a \"current language\" button in language menus (configured per menu).  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Customizer settings now apply on AJAX requests for re-rendering components.\r\n- Image focus points can now be set in the media library. These act as defaults when the image contract is used.\r\n- Fixes CSS references for locally uploaded fonts.\r\n\r\n---\r\n\r\n## Modularity (6.77.2)\r\n\r\n- Improves `aria-labelledby` references in the Posts module.\r\n- Image module now properly implements `ImageInterface`.  \r\n  \u27a4 As a result, the ability to select image size has been removed.\r\n- Accordion module:  \r\n  \u27a4 Now supports spaced sections and headings outside the card.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for download icons and additional file type icons.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n\r\n---\r\n\r\n## Modularity Forms (3.4.10)\r\n\r\n- Adds new file and image upload fields.\r\n\r\n---\r\n\r\n## Event Manager Integration (2.0.31)\r\n\r\n- Adds support for the new file upload field when uploading an event image.\r\n\r\n---\r\n\r\n## Component Library (4.52.9)\r\n\r\n- Adds animated icons (on `aria-pressed`) for plus/minus and hamburger/close symbols.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n- Introduces `IconSection` wrapper component.  \r\n  \u27a4 `iconSection` renamed to `IconSection__item` and must now be used within the wrapper.\r\n\r\n---\r\n\r\n## OpenStreetMap Field (0.79.8)\r\n\r\n- Adds option to have filters open by default.\r\n- Fixes rendering issues in Gutenberg.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1251)\r\n\r\n- Updates third-party slider library **Splide** to the next major version.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n\r\n---\r\n\r\n## Algolia Index (3.2.3)\r\n\r\n- Ensures excerpts are properly sanitized before storing in the Algolia index.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.4",
+            "publishedAt": "2025-04-15T14:27:06Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.1.0",
             "version": "5.1.0",
@@ -92,15 +101,6 @@
             "body": "This release focuses on bugfixes and patches. It also brings a few new features to the image system, to better handle large assets. An experimental feature for displaying known accessibility issues to editors is also introduced. A new search field option for expandable search has been added to the flexible header.\r\n\r\n### Component Library (v4.27.0):\r\n\r\n- A fix for the hero two-column layout has been implemented, forcing the image dimensions to 16/9 format.\r\n- The `aria-controls` attribute has been modified to correct an issue with accessibility in menu toggling.\r\n- Implemented `[data-a11y-error]` feature on images that are missing alt-text.\r\n- The card component now intelligently decides if an image should be displayed or not.\r\n\r\n### Modularity (v6.33.3):\r\n\r\n- The Contacts module has been reworked to simplify the module and prepare for the implementation of a component. This change reworks the user interface to be more clear. It also reduces the number of options for the editor by removing social media links (not a very popular feature) and the option to display the items as a list.\r\n- A max image size check has been added to the image conversion process to prevent images from being resized if they are too large. Images that are too large will be served from source and logged to the error log.\r\n\r\n### Municipio Theme (v5.40.5):\r\n\r\n- A new expandable search form for the flexible header has been contributed by [Adam Alexandersson](https://github.com/considadam) @ Consid, financed by [Alings\u00e5s Municipality](https://github.com/Alingsas-Kommun).  \r\n  ![Search Image](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/search-900x142.webp)\r\n- Implementation of a limit to prevent abnormally large images from being uploaded to the media library. This will make the frontend image process more efficient and prevent image conversion stalls.\r\n- Implement support for the `[data-a11y-error]` attribute. This will display a red warning label on elements that are considered to void common accessibility errors.  \r\n  ![Alt Text Warning](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/alt-text-warning-900x963.webp)",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.7.1",
             "publishedAt": "2024-10-18T10:10:53Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "V4.7.0",
-            "version": "4.7.0",
-            "body": "# Release Notes\r\n\r\nThis release addresses several issues with the new image rendering methods and includes general bug fixes.\r\n\r\n## Styleguide (v0.11.1149)\r\n- Various fixes for image rendering within segment components.\r\n\r\n## Component Library (v4.26.20)\r\n- The Image component now handles SVGs as a non-resizable format, effectively disabling container query rendering for this file type.\r\n- Improved placeholder handling, supporting multiple input formats (e.g., string, contract).\r\n\r\n## Modularity (v6.32.7)\r\n- Several improvements to image handling.\r\n- The Manual Input module now more intelligently determines when to display placeholders in card and segment views.\r\n- Images in collections are no longer rendered at a single size.\r\n\r\n## Modularity Sections (v3.1.3)\r\n- Enhanced image and placeholder handling.\r\n- Sections no longer require an image for rendering; placeholders will be shown instead.\r\n\r\n## Municipio Theme (v5.36.16)\r\n- Fixed synchronization of taxonomies for remote schema content.\r\n- Added Swedish translations to list columns in public archive views.\r\n- If API resources are undefined, the resource list will now appear empty.\r\n- Improved emblem rendering in placeholders by switching to the icon component, removing the need to detect if an emblem should be injected as an image source.\r\n- The intermediate image handler now checks for file existence before processing.\r\n- The intermediate image handler detects when GD is used and disables the automatic format conversion (default: WebP). Images will still be resized, but the source format will be retained.\r\n- Disabled container query images to resolve a rendering issue that caused images to overlap with other content.\r\n\r\n## Multisite Role Propagation (v3.0.6)\r\n- Fixed a fatal error in PHP 8.3 environments.\r\n\r\n## Event Manager Integration (v2.0.22)\r\n- Now uses the updated version of the Hbg-React library.\r\n\r\n## Tools\r\n### WpService (v2.0.4)\r\n- Updated WpService for plugins and themes to include all available public methods from WordPress core.\r\n- The required PHP version has been raised to 8.2 to support these updates.\r\n\r\n### Hbg React (v1.0.21)\r\n- A new release has been made. This publishes a usability fix for arrows in the pagination component.\r\n\r\n## Important Notice\r\n- The minimum PHP requirement for Municipio has been raised from 8.1 to 8.2 with this release.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.7.0",
-            "publishedAt": "2024-10-11T12:31:53Z",
             "isPrerelease": false,
             "isDraft": false
         }

@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-05-06T10:28:37+00:00",
-    "count": 78,
+    "generatedAt": "2026-05-06T11:24:08+00:00",
+    "count": 79,
     "pageSize": 10,
     "pageNumber": 2,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.7.0",
+            "version": "5.7.0",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.0",
+            "publishedAt": "2025-12-04T09:06:52Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.6.1",
             "version": "5.6.1",
@@ -92,15 +101,6 @@
             "body": "# Release Notes\r\n\r\nThis release focuses on upgrading the performance of the icon selector by replacing it with a custom field.  \r\nThis change decreases delivered DOM size in the admin interface, making the Gutenberg editor more performant.\r\n\r\n---\r\n\r\n## Municipio Theme (5.164.1)\r\n- Removes `PrefillIcon` class  \r\n- Implements replacement field for icon selector in all occurrences  \r\n- **Exhibition Event**\r\n  - Update exhibition event gallery position  \r\n  - Allow subtypes of Event schema to have `startDate` and `endDate` meta  \r\n  - Update position of date and place on exhibition event  \r\n  - Add missing expired event notice text  \r\n\r\n## Modularity (6.90.9)\r\n- Implements replacement field for icon selector in all occurrences  \r\n- Fixes an issue where post module could be saved without a selected view, causing a fatal error  \r\n\r\n## Acf Icon Field (0.2.42)\r\n- Introduces a new icon field providing a visual selector of Material icons  ",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.1",
             "publishedAt": "2025-09-02T10:59:40Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.4.0",
-            "version": "5.4.0",
-            "body": "# Release Notes\r\n\r\nThis release focuses on resolving issues with the previous release.  \r\nIt introduces **Vite** for compiling scripts and styles in **Municipio Theme** and **Styleguide**.\r\n\r\n---\r\n\r\n## Municipio Theme (5.163.9)\r\n- Adds a **Trashed page** for media items, allowing users to revert trashed files.\r\n- Replaced **Webpack** with **Vite** as a build system.\r\n- Enqueue new Vite-compiled files as **modules**.\r\n- Adds **ExhibitionEvent Schema** view.\r\n- Add **alt text** to emblem placeholder when an image is missing.\r\n- Allow **font/ namespace** when populating the font selector for custom fonts in customizer.\r\n- Ensure that images are correctly rendered in **Gutenberg editor**.\r\n- Removes some obsolete code related to **TinyMCE editor (plugins)**.\r\n- **Splide Core** is now compiled as a separate asset.\r\n- Update language file for **Swedish translation**.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1312)\r\n- Updates to an **ESM compatible Leaflet MarkerCluster** that avoids monkeypatching of the global instance.\r\n- Update to new version of **Sass**, and uses **Vite** as build system.\r\n- **Slider steppers** are now unclickable, to meet clickable area size standards.\r\n- **Right alignment fix** for collection items.\r\n\r\n---\r\n\r\n## Component Library (4.60.0)\r\n- Links in **email addresses** now support **hyphens**.\r\n- Removes a direct call to a **WordPress function** in breadcrumb.\r\n- Do not include a link text if no link is found in **Card component**.\r\n- Adds a new modifier that places **link last** in collection items.\r\n\r\n---\r\n\r\n## ACF UX Collapse (2.0.7)\r\n- Declares a missing variable in **JavaScript**, preventing breakage in some cases.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.12)\r\n- Inactivates **block dragging**, to avoid issues with map.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.0",
-            "publishedAt": "2025-08-29T11:06:17Z",
             "isPrerelease": false,
             "isDraft": false
         }

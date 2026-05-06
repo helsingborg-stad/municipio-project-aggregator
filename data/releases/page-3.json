@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-05-06T10:28:37+00:00",
-    "count": 78,
+    "generatedAt": "2026-05-06T11:24:08+00:00",
+    "count": 79,
     "pageSize": 10,
     "pageNumber": 3,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.4.0",
+            "version": "5.4.0",
+            "body": "# Release Notes\r\n\r\nThis release focuses on resolving issues with the previous release.  \r\nIt introduces **Vite** for compiling scripts and styles in **Municipio Theme** and **Styleguide**.\r\n\r\n---\r\n\r\n## Municipio Theme (5.163.9)\r\n- Adds a **Trashed page** for media items, allowing users to revert trashed files.\r\n- Replaced **Webpack** with **Vite** as a build system.\r\n- Enqueue new Vite-compiled files as **modules**.\r\n- Adds **ExhibitionEvent Schema** view.\r\n- Add **alt text** to emblem placeholder when an image is missing.\r\n- Allow **font/ namespace** when populating the font selector for custom fonts in customizer.\r\n- Ensure that images are correctly rendered in **Gutenberg editor**.\r\n- Removes some obsolete code related to **TinyMCE editor (plugins)**.\r\n- **Splide Core** is now compiled as a separate asset.\r\n- Update language file for **Swedish translation**.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1312)\r\n- Updates to an **ESM compatible Leaflet MarkerCluster** that avoids monkeypatching of the global instance.\r\n- Update to new version of **Sass**, and uses **Vite** as build system.\r\n- **Slider steppers** are now unclickable, to meet clickable area size standards.\r\n- **Right alignment fix** for collection items.\r\n\r\n---\r\n\r\n## Component Library (4.60.0)\r\n- Links in **email addresses** now support **hyphens**.\r\n- Removes a direct call to a **WordPress function** in breadcrumb.\r\n- Do not include a link text if no link is found in **Card component**.\r\n- Adds a new modifier that places **link last** in collection items.\r\n\r\n---\r\n\r\n## ACF UX Collapse (2.0.7)\r\n- Declares a missing variable in **JavaScript**, preventing breakage in some cases.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.12)\r\n- Inactivates **block dragging**, to avoid issues with map.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.0",
+            "publishedAt": "2025-08-29T11:06:17Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.3.5",
             "version": "5.3.5",
@@ -92,15 +101,6 @@
             "body": "# Municipio 5.2.5\r\n\r\n**Release type:** Hotfix  \r\n**Summary:** Addresses various issues introduced in version 5.2.4.\r\n\r\n---\r\n\r\n## Alarm Integration (4.0.9)\r\n\r\n- Updates to the latest version of the Alarm Manager integration.\r\n  - Corrects colors and labels for warnings in the fire ban information module.\r\n\r\n---\r\n\r\n## Municipio Theme (5.142.7)\r\n\r\n- Adds a missing constructor parameter in the `E[NNN]` controller.  \r\n  \u27a4 This previously caused a fatal error on locked pages.\r\n- Defaults to `.woff` font format if the font type cannot be resolved.  \r\n  \u27a4 Most browsers support both `.woff` and `.woff2` when `.woff` is declared.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.10)\r\n\r\n- Fixes an issue where data could not be saved due to an unfired ACF hook.\r\n\r\n---\r\n\r\n## Component Library (4.52.10)\r\n\r\n- Ensures sliders with a single slide are displayed.  \r\n  \u27a4 Bypasses default Splide CSS when sliders haven't initialized.\r\n\r\n---\r\n\r\n## WPMU Focus Point (0.2.3)\r\n\r\n- Renames CSS and style file hooks to namespace assets in the global scope.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.5",
             "publishedAt": "2025-04-16T11:28:09Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.2.4",
-            "version": "5.2.4",
-            "body": "## Municipio Theme (5.142.4)\r\n\r\n- Adds ability to indent vertical menus (drawer, sidebar). Enabled via Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds option to choose icon type (caret or plus/minus) for vertical menus in the Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for showing a \"current language\" button in language menus (configured per menu).  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Customizer settings now apply on AJAX requests for re-rendering components.\r\n- Image focus points can now be set in the media library. These act as defaults when the image contract is used.\r\n- Fixes CSS references for locally uploaded fonts.\r\n\r\n---\r\n\r\n## Modularity (6.77.2)\r\n\r\n- Improves `aria-labelledby` references in the Posts module.\r\n- Image module now properly implements `ImageInterface`.  \r\n  \u27a4 As a result, the ability to select image size has been removed.\r\n- Accordion module:  \r\n  \u27a4 Now supports spaced sections and headings outside the card.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for download icons and additional file type icons.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n\r\n---\r\n\r\n## Modularity Forms (3.4.10)\r\n\r\n- Adds new file and image upload fields.\r\n\r\n---\r\n\r\n## Event Manager Integration (2.0.31)\r\n\r\n- Adds support for the new file upload field when uploading an event image.\r\n\r\n---\r\n\r\n## Component Library (4.52.9)\r\n\r\n- Adds animated icons (on `aria-pressed`) for plus/minus and hamburger/close symbols.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n- Introduces `IconSection` wrapper component.  \r\n  \u27a4 `iconSection` renamed to `IconSection__item` and must now be used within the wrapper.\r\n\r\n---\r\n\r\n## OpenStreetMap Field (0.79.8)\r\n\r\n- Adds option to have filters open by default.\r\n- Fixes rendering issues in Gutenberg.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1251)\r\n\r\n- Updates third-party slider library **Splide** to the next major version.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n\r\n---\r\n\r\n## Algolia Index (3.2.3)\r\n\r\n- Ensures excerpts are properly sanitized before storing in the Algolia index.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.4",
-            "publishedAt": "2025-04-15T14:27:06Z",
             "isPrerelease": false,
             "isDraft": false
         }

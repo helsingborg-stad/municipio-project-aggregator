@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-05-06T10:28:37+00:00",
-    "count": 78,
+    "generatedAt": "2026-05-06T11:24:08+00:00",
+    "count": 79,
     "pageSize": 10,
     "pageNumber": 6,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Municipio 4.2.6 Release Notes",
+            "version": "4.2.6",
+            "body": "We\u2019re excited to introduce **Municipio 4.2.6**! This update enhances the user interface, resolves several bugs, and adds a brand-new module for an even better experience.\r\n\r\n## Styleguide (0.11.1106)\r\n\r\n- Allows selecting multiple instances of the same filter type.\r\n- Resolves a bug that made the user unable to expand compressed tags.\r\n\r\n## Component Library (4.19.1)\r\n\r\n- Adds the ability to truncate items in the breadcrumb component.\r\n- Forces dot icons on tags to be filled, not respecting icon style settings (improved visibility).\r\n- Fixed a bug in acceptance that prevented some JavaScripts from running.\r\n\r\n## Modularity (6.22.4)\r\n\r\n- Fixes the warning in the absence of a `classlist` provided for the breadcrumb component.\r\n- Introduced a new module for rendering menus (`Menu`, `mod-menu`).\r\n- Fixed broken icons in the editor, now being displayed properly with an improved UI and a more coherent interface.\r\n\r\n## Municipio (5.15.1)\r\n\r\n- Implements customizer capability to set the breadcrumb max length for labels before being truncated.\r\n- Adjustments made for flexible header alternative.\r\n- Fixes an issue that caused active menu items not being marked as active in manually entered menus.\r\n\r\n## Open Street Map (2.5.0)\r\n\r\n- The public filter now allows users to refine a hierarchical set of options.\r\n\r\n## Contact Banner (3.2.0)\r\n\r\n- Allows the user to select from a dropdown populated with icon alternatives rather than inputting a string representing a material icon.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.6",
+            "publishedAt": "2024-09-02T10:25:19Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Municipio 4.2.4 Release Notes",
             "version": "4.2.4",
@@ -92,15 +101,6 @@
             "body": "## What's changed\r\n* Municipio (5.0.1): Avoid cache overwrite caused by multiple posts with same ID.\r\n* Api Event Manager Integration (2.0.17): Output event start date as post date in event archives.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.9",
             "publishedAt": "2024-07-01T10:23:50Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.8",
-            "version": "4.0.8",
-            "body": "## What's changed\r\n* WP Page for Term: Remove plugin because Municipio no longer has support for secondary query.\r\n* Modularity Open Street Map (2.1.3): FIx missing info list on map collection items.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.8",
-            "publishedAt": "2024-06-28T05:26:15Z",
             "isPrerelease": false,
             "isDraft": false
         }

@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-05-06T10:28:37+00:00",
-    "count": 78,
+    "generatedAt": "2026-05-06T11:24:08+00:00",
+    "count": 79,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "5.9.7",
+            "version": "5.9.7",
+            "body": "Minor release: This update improves Municipio with faster hero image loading, better mobile behavior in backdrop banners, and more reliable manual post selection across languages. It also fixes content display in easy-to-read views and alarm integration asset loading.\r\n\r\n## Municipio Theme [6.40.4...6.43.2](https://github.com/helsingborg-stad/municipio/compare/6.40.4...6.43.2)\r\n- Hero image preloading: Preloads hero images from modules and widget-based modules to improve initial page loading.\r\n- ACF manual post selection: Manual post selection now works more reliably across languages instead of depending on the current language context.\r\n- Backdrop banner mobile layout: Improves mobile behavior, removes unwanted hover effects, and makes the banner more responsive on smaller screens.\r\n- Template stability: Fixes multiple rendering warnings in hero, signature, archive, posts, text, event, and index views when expected data is missing.\r\n- File handling: Skips files that no longer exist to avoid processing errors.\r\n\r\n## Easy To Read Alternative [3.0.8...3.0.9](https://github.com/helsingborg-stad/easy-to-read-alternative/compare/3.0.8...3.0.9)\r\n- Easy-to-read content: The alternative reading version now appears correctly when content is rendered through Municipio PostObject, including relevant single and archive-based views.\r\n\r\n## API Alarm Integration [5.0.9...5.0.11](https://github.com/helsingborg-stad/api-alarm-integration/compare/5.0.9...5.0.11)\r\n- Asset loading: Fixes how scripts and built assets are loaded so the alarm integration works correctly with the current `assets/dist` build output.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.7",
+            "publishedAt": "2026-05-06T11:08:45Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "5.9.6",
             "version": "5.9.6",
@@ -92,15 +101,6 @@
             "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-2/",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.2",
             "publishedAt": "2025-12-10T08:03:35Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.7.0",
-            "version": "5.7.0",
-            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-0/",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.0",
-            "publishedAt": "2025-12-04T09:06:52Z",
             "isPrerelease": false,
             "isDraft": false
         }

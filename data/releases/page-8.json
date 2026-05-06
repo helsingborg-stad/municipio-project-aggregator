@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-05-06T10:28:37+00:00",
-    "count": 78,
+    "generatedAt": "2026-05-06T11:24:08+00:00",
+    "count": 79,
     "pageSize": 10,
     "pageNumber": 8,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "061123 - Stable Release [Maintenance release]",
+            "version": "3.5.1",
+            "body": "### Bug Fixes and Improvements\r\nHeader H1 Removal\r\n\r\nHeader H1 has been removed from the editor to enhance readability.\r\nEmpty Customer Feedback Emails\r\n\r\nCustomer feedback emails will no longer be sent empty if there is no feedback provided.\r\nSlider Start Page Issue\r\n\r\nThe slider now correctly starts from page 1 instead of page 2.\r\nDefault Customizer Colors\r\n\r\nDefault values in the customizer for colors have been reviewed and improved.\r\nPublished Changes\r\n\r\nFixes have been implemented to ensure that published changes are correctly displayed.\r\nSegment Manual Input Button Default Value\r\n\r\nDefault values for the Segment Manual Input button have been adjusted.\r\nHeading Level Issue\r\n\r\nCorrected a problem with heading levels in the content.\r\nManual Input Box Icons\r\n\r\nIcons within the manual input box now function as expected.\r\nManual Input Collection Items\r\n\r\nManual input collection items no longer display p-tags erroneously.\r\nManual Input Segment Button\r\n\r\nThe manual input segment button now appears only when a link is present.\r\nShortcodes in Post Module\r\n\r\nShortcodes are now visible in the post module as intended.\r\nSlider Area on Single Pages\r\n\r\nThe slider area will no longer disappear on single pages when the visit plugin is activated.\r\nConsistent \"Kort\" Manual Input Height\r\n\r\nEnsured a consistent height for \"kort\" manual input.\r\nAmpersand (&Amp) Issue\r\n\r\nAddressed and resolved the ampersand issue for improved rendering.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.5.1",
+            "publishedAt": "2023-11-06T12:49:09Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "231023 - Stable Release",
             "version": "3.5.0",
