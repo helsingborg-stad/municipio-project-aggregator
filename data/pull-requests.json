@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-07T05:35:48+00:00",
-    "count": 169,
+    "generatedAt": "2026-05-07T07:23:13+00:00",
+    "count": 168,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -360,6 +360,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "redirect",
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
@@ -392,20 +406,6 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -1817,36 +1817,6 @@
             "repository": "helsingborg-stad/algolia-index-js-searchpage-addon",
             "createdAt": "2026-04-15T19:01:20Z",
             "number": 76,
-            "author": {
-                "login": "dependabot",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "build(deps-dev): bump follow-redirects from 1.15.11 to 1.16.0",
-            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/137",
-            "repository": "helsingborg-stad/api-event-manager",
-            "createdAt": "2026-04-15T18:50:29Z",
-            "number": 137,
             "author": {
                 "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
