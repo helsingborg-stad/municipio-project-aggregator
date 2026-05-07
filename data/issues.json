@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-07T11:41:41+00:00",
-    "count": 95,
+    "generatedAt": "2026-05-07T12:52:52+00:00",
+    "count": 98,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -164,17 +164,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-allow-cors",
-            "fullName": "helsingborg-stad/wpmu-allow-cors",
-            "description": "Allows cors with *",
-            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-allow-cors",
+            "fullName": "helsingborg-stad/wpmu-allow-cors",
+            "description": "Allows cors with *",
+            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "helsingborg-stad",
@@ -774,6 +774,140 @@
         }
     ],
     "items": [
+        {
+            "title": "Add support for cancelling an event occurrence",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/issues/144",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-05-07T12:44:22Z",
+            "number": 144,
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": "Task",
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Create and connect new user to new organization",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/issues/143",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-05-07T12:43:09Z",
+            "number": 143,
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": "Task",
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Development of Event-API: Release 2",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/issues/142",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-05-07T12:41:05Z",
+            "number": 142,
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [
+                {
+                    "login": "thorbrink",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
+                    "url": "https://github.com/thorbrink",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": "Feature",
+            "subIssues": {
+                "total": 2,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [
+                "https://github.com/helsingborg-stad/api-event-manager/issues/143",
+                "https://github.com/helsingborg-stad/api-event-manager/issues/144"
+            ],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Create organization admin user on organization create",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/issues/141",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-05-07T12:12:04Z",
+            "number": 141,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "milestone": {
+                "title": "Release 2",
+                "url": "https://github.com/helsingborg-stad/api-event-manager/milestone/1",
+                "dueOn": null
+            },
+            "type": "Feature",
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "title": "Add support for matiomo js paq.push()",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/2012",
@@ -2953,56 +3087,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "title": "[TW] [WARNING] file_get_contents(/var/www/prod/wp-content/plugins/api-alarm-integration//dist/): Failed to open stream: No such file or directory",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration/issues/30",
-            "repository": "helsingborg-stad/api-alarm-integration",
-            "createdAt": "2026-04-28T08:04:17Z",
-            "number": 30,
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Guard disturbance inline asset loading and resolve Vite manifest path",
-                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/31",
-                    "repository": "helsingborg-stad/api-alarm-integration"
-                }
-            ]
         },
         {
             "title": "[TW] [WARNING] Undefined array key \"host\"",
