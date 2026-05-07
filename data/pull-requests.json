@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-07T09:15:40+00:00",
-    "count": 168,
+    "generatedAt": "2026-05-07T10:10:49+00:00",
+    "count": 169,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -768,6 +768,36 @@
         }
     ],
     "items": [
+        {
+            "title": "feat: implement language agnostic support for manual Posts module que\u2026",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2022",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-07T09:20:51Z",
+            "number": 2022,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=9d6e170a29e366d5b93db9245614fc8d554def29&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "title": "build(deps): bump postcss from 8.5.6 to 8.5.14",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/134",
