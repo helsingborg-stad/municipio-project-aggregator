@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-08T21:42:49+00:00",
-    "count": 169,
+    "generatedAt": "2026-05-08T22:40:59+00:00",
+    "count": 170,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -768,6 +768,36 @@
         }
     ],
     "items": [
+        {
+            "title": "build(deps-dev): bump fast-uri from 3.0.6 to 3.1.2",
+            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/285",
+            "repository": "helsingborg-stad/api-event-manager-integration",
+            "createdAt": "2026-05-08T22:29:00Z",
+            "number": 285,
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "title": "build(deps): bump vite from 7.3.1 to 7.3.3",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/137",
