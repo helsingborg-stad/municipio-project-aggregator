@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-08T15:55:30+00:00",
+    "generatedAt": "2026-05-08T16:51:18+00:00",
     "count": 169,
     "repositories": [
         {
@@ -283,6 +283,27 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "algolia-index-typesense-provider",
             "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
@@ -308,27 +329,6 @@
             "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/project-synchronizer"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -768,6 +768,43 @@
         }
     ],
     "items": [
+        {
+            "title": "build(deps): bump vite from 7.3.1 to 7.3.3",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/137",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-05-08T16:23:07Z",
+            "number": 137,
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "build(deps): bump vite from 7.3.1 to 7.3.2",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/127",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                }
+            ]
+        },
         {
             "title": "Show shared component parameters in component documentation",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1214",
@@ -2264,36 +2301,6 @@
             "repository": "helsingborg-stad/algolia-index-js-searchpage-addon",
             "createdAt": "2026-04-06T22:19:08Z",
             "number": 74,
-            "author": {
-                "login": "dependabot",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "build(deps): bump vite from 7.3.1 to 7.3.2",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/127",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-04-06T22:07:18Z",
-            "number": 127,
             "author": {
                 "login": "dependabot",
                 "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
