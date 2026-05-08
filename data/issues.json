@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-08T11:38:52+00:00",
+    "generatedAt": "2026-05-08T12:44:42+00:00",
     "count": 101,
     "repositories": [
         {
@@ -38,17 +38,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "component-library",
-            "fullName": "helsingborg-stad/component-library",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/component-library"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-event-manager",
             "fullName": "helsingborg-stad/api-event-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-event-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "component-library",
+            "fullName": "helsingborg-stad/component-library",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/component-library"
         },
         {
             "owner": "helsingborg-stad",
@@ -136,17 +136,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-form-builder",
-            "fullName": "helsingborg-stad/modularity-form-builder",
-            "description": "Simple form builder that uses acf for forms. ",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-alarm-integration",
             "fullName": "helsingborg-stad/api-alarm-integration",
             "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
             "url": "https://github.com/helsingborg-stad/api-alarm-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-form-builder",
+            "fullName": "helsingborg-stad/modularity-form-builder",
+            "description": "Simple form builder that uses acf for forms. ",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
         },
         {
             "owner": "helsingborg-stad",
@@ -332,27 +332,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "attachment-revisions",
             "fullName": "helsingborg-stad/attachment-revisions",
             "description": "",
@@ -392,6 +371,27 @@
             "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
             "description": "Exploration clone of ACF-UX-collapse for better deployment",
             "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "Considbrs-Webdev",
