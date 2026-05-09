@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-09T12:32:37+00:00",
+    "generatedAt": "2026-05-09T13:38:17+00:00",
     "count": 102,
     "repositories": [
         {
@@ -38,17 +38,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-event-manager",
-            "fullName": "helsingborg-stad/api-event-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-event-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "component-library",
             "fullName": "helsingborg-stad/component-library",
             "description": "",
             "url": "https://github.com/helsingborg-stad/component-library"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-event-manager",
+            "fullName": "helsingborg-stad/api-event-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-event-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -150,17 +150,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-alarm-integration",
-            "fullName": "helsingborg-stad/api-alarm-integration",
-            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-form-builder",
             "fullName": "helsingborg-stad/modularity-form-builder",
             "description": "Simple form builder that uses acf for forms. ",
             "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-alarm-integration",
+            "fullName": "helsingborg-stad/api-alarm-integration",
+            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -262,27 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-typesense-provider",
             "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
@@ -308,6 +287,27 @@
             "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
