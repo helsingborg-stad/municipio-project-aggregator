@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-11T07:31:23+00:00",
-    "count": 102,
+    "generatedAt": "2026-05-11T09:25:04+00:00",
+    "count": 103,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -38,17 +38,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-event-manager",
-            "fullName": "helsingborg-stad/api-event-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-event-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "component-library",
             "fullName": "helsingborg-stad/component-library",
             "description": "",
             "url": "https://github.com/helsingborg-stad/component-library"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-event-manager",
+            "fullName": "helsingborg-stad/api-event-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-event-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -136,17 +136,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-alarm-integration",
-            "fullName": "helsingborg-stad/api-alarm-integration",
-            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-form-builder",
             "fullName": "helsingborg-stad/modularity-form-builder",
             "description": "Simple form builder that uses acf for forms. ",
             "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-alarm-integration",
+            "fullName": "helsingborg-stad/api-alarm-integration",
+            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -234,27 +234,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-exhibition-manager",
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
@@ -301,6 +280,27 @@
             "fullName": "helsingborg-stad/wpmu-focus-point",
             "description": "",
             "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
         },
         {
             "owner": "helsingborg-stad",
@@ -360,20 +360,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "redirect",
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
@@ -392,6 +378,20 @@
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -775,6 +775,43 @@
     ],
     "items": [
         {
+            "title": "Send welcome email to newly created organization admin",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/issues/146",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-05-11T09:08:35Z",
+            "number": 146,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [
+                {
+                    "login": "thorbrink",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
+                    "url": "https://github.com/thorbrink",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": "Task",
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "title": "Chat changes in before release 1",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/2031",
             "repository": "helsingborg-stad/Municipio",
@@ -790,13 +827,14 @@
             "milestone": null,
             "type": null,
             "subIssues": {
-                "total": 2,
-                "completed": 2,
+                "total": 3,
+                "completed": 3,
                 "percentCompleted": 100
             },
             "subIssueUrls": [
                 "https://github.com/helsingborg-stad/Municipio/issues/2032",
-                "https://github.com/helsingborg-stad/Municipio/issues/2033"
+                "https://github.com/helsingborg-stad/Municipio/issues/2033",
+                "https://github.com/helsingborg-stad/Municipio/issues/2039"
             ],
             "relationshipSummary": {
                 "blockedBy": 0,
@@ -1042,9 +1080,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "feat: create new user when organization is created",
+                    "url": "https://github.com/helsingborg-stad/api-event-manager/pull/147",
+                    "repository": "helsingborg-stad/api-event-manager"
+                }
+            ]
         },
         {
             "title": "Development of Event-API: Release 2",
@@ -1069,13 +1114,14 @@
             "milestone": null,
             "type": "Feature",
             "subIssues": {
-                "total": 2,
+                "total": 3,
                 "completed": 0,
                 "percentCompleted": 0
             },
             "subIssueUrls": [
                 "https://github.com/helsingborg-stad/api-event-manager/issues/143",
-                "https://github.com/helsingborg-stad/api-event-manager/issues/144"
+                "https://github.com/helsingborg-stad/api-event-manager/issues/144",
+                "https://github.com/helsingborg-stad/api-event-manager/issues/146"
             ],
             "relationshipSummary": {
                 "blockedBy": 0,
