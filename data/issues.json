@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-11T09:25:04+00:00",
-    "count": 103,
+    "generatedAt": "2026-05-11T11:14:43+00:00",
+    "count": 107,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -143,13 +143,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-alarm-integration",
-            "fullName": "helsingborg-stad/api-alarm-integration",
-            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -161,6 +154,13 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-alarm-integration",
+            "fullName": "helsingborg-stad/api-alarm-integration",
+            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -262,27 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-litespeed-common-settings",
             "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
             "description": "Use blog 1 as the master for all settings in litespeed configuration",
@@ -301,6 +280,27 @@
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
             "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -775,6 +775,191 @@
     ],
     "items": [
         {
+            "title": "Add tooltips for chatbubble buttons",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2045",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-11T10:51:15Z",
+            "number": 2045,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 1,
+                "totalBlockedBy": 1,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Tooltip js solution",
+            "url": "https://github.com/helsingborg-stad/styleguide/issues/1215",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-05-11T10:49:00Z",
+            "number": 1215,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "NiclasNorin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                    "url": "https://github.com/NiclasNorin",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Add tooltips for chatbubble buttons",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2045",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
+            "title": "Create a chat/block",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2044",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-11T10:46:11Z",
+            "number": 2044,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "NiclasNorin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                    "url": "https://github.com/NiclasNorin",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Correct background colors for the chatbubble",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2043",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-11T10:44:23Z",
+            "number": 2043,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "NiclasNorin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                    "url": "https://github.com/NiclasNorin",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "title": "Like/dislike messages",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2042",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-11T10:42:32Z",
+            "number": 2042,
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "NiclasNorin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                    "url": "https://github.com/NiclasNorin",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "title": "Send welcome email to newly created organization admin",
             "url": "https://github.com/helsingborg-stad/api-event-manager/issues/146",
             "repository": "helsingborg-stad/api-event-manager",
@@ -792,6 +977,12 @@
                     "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
                 }
             ],
             "milestone": null,
@@ -807,9 +998,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Customize onboarding email for newly created organization administrators",
+                    "url": "https://github.com/helsingborg-stad/api-event-manager/pull/148",
+                    "repository": "helsingborg-stad/api-event-manager"
+                }
+            ]
         },
         {
             "title": "Chat changes in before release 1",
@@ -827,20 +1025,25 @@
             "milestone": null,
             "type": null,
             "subIssues": {
-                "total": 3,
-                "completed": 3,
-                "percentCompleted": 100
+                "total": 8,
+                "completed": 4,
+                "percentCompleted": 50
             },
             "subIssueUrls": [
                 "https://github.com/helsingborg-stad/Municipio/issues/2032",
                 "https://github.com/helsingborg-stad/Municipio/issues/2033",
-                "https://github.com/helsingborg-stad/Municipio/issues/2039"
+                "https://github.com/helsingborg-stad/Municipio/issues/2039",
+                "https://github.com/helsingborg-stad/Municipio/issues/2041",
+                "https://github.com/helsingborg-stad/Municipio/issues/2042",
+                "https://github.com/helsingborg-stad/Municipio/issues/2043",
+                "https://github.com/helsingborg-stad/Municipio/issues/2044",
+                "https://github.com/helsingborg-stad/Municipio/issues/2045"
             ],
             "relationshipSummary": {
                 "blockedBy": 0,
                 "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
+                "blocking": 1,
+                "totalBlocking": 1,
                 "linked": 0
             },
             "relationships": []
@@ -1048,50 +1251,6 @@
             "relationships": []
         },
         {
-            "title": "Create and connect new user to new organization",
-            "url": "https://github.com/helsingborg-stad/api-event-manager/issues/143",
-            "repository": "helsingborg-stad/api-event-manager",
-            "createdAt": "2026-05-07T12:43:09Z",
-            "number": 143,
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": "Task",
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "feat: create new user when organization is created",
-                    "url": "https://github.com/helsingborg-stad/api-event-manager/pull/147",
-                    "repository": "helsingborg-stad/api-event-manager"
-                }
-            ]
-        },
-        {
             "title": "Development of Event-API: Release 2",
             "url": "https://github.com/helsingborg-stad/api-event-manager/issues/142",
             "repository": "helsingborg-stad/api-event-manager",
@@ -1115,8 +1274,8 @@
             "type": "Feature",
             "subIssues": {
                 "total": 3,
-                "completed": 0,
-                "percentCompleted": 0
+                "completed": 1,
+                "percentCompleted": 33
             },
             "subIssueUrls": [
                 "https://github.com/helsingborg-stad/api-event-manager/issues/143",
