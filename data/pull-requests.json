@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-12T13:06:16+00:00",
+    "generatedAt": "2026-05-12T14:08:06+00:00",
     "count": 174,
     "repositories": [
         {
@@ -248,27 +248,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-litespeed-common-settings",
             "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
             "description": "Use blog 1 as the master for all settings in litespeed configuration",
@@ -287,6 +266,27 @@
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
             "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,43 @@
     ],
     "items": [
         {
+            "title": "Feat/send org admin welcome",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/150",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-05-12T13:39:09Z",
+            "number": 150,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Send welcome email to newly created organization admin",
+                    "url": "https://github.com/helsingborg-stad/api-event-manager/issues/146",
+                    "repository": "helsingborg-stad/api-event-manager"
+                }
+            ]
+        },
+        {
             "title": "feat: chat block",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2046",
             "repository": "helsingborg-stad/Municipio",
@@ -797,56 +834,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "title": "Customize onboarding email for newly created organization administrators",
-            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/148",
-            "repository": "helsingborg-stad/api-event-manager",
-            "createdAt": "2026-05-11T10:40:32Z",
-            "number": 148,
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Send welcome email to newly created organization admin",
-                    "url": "https://github.com/helsingborg-stad/api-event-manager/issues/146",
-                    "repository": "helsingborg-stad/api-event-manager"
-                }
-            ]
         },
         {
             "title": "build(deps-dev): bump @babel/plugin-transform-modules-systemjs from 7.29.0 to 7.29.4",
