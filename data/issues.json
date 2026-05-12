@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-12T13:46:14+00:00",
+    "generatedAt": "2026-05-12T15:07:26+00:00",
     "count": 108,
     "repositories": [
         {
@@ -1023,13 +1023,19 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 1
+                "linked": 2
             },
             "relationships": [
                 {
-                    "event": "connected",
+                    "event": "disconnected",
                     "title": "Customize onboarding email for newly created organization administrators",
                     "url": "https://github.com/helsingborg-stad/api-event-manager/pull/148",
+                    "repository": "helsingborg-stad/api-event-manager"
+                },
+                {
+                    "event": "connected",
+                    "title": "Feat/send org admin welcome",
+                    "url": "https://github.com/helsingborg-stad/api-event-manager/pull/150",
                     "repository": "helsingborg-stad/api-event-manager"
                 }
             ]
