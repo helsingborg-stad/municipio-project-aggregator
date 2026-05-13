@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-13T15:11:08+00:00",
+    "generatedAt": "2026-05-13T16:58:20+00:00",
     "count": 106,
     "repositories": [
         {
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-json-render",
-            "fullName": "helsingborg-stad/modularity-json-render",
-            "description": "Renders a single level api-response (json) as a list. ",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Wordpress-Plugin-Boilerplate",
             "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
             "description": "A simple class based WordPress plugin structure to start off any plugin with.",
             "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-json-render",
+            "fullName": "helsingborg-stad/modularity-json-render",
+            "description": "Renders a single level api-response (json) as a list. ",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render"
         },
         {
             "owner": "helsingborg-stad",
@@ -213,13 +213,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
@@ -241,6 +234,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-litespeed-common-settings",
             "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
             "description": "Use blog 1 as the master for all settings in litespeed configuration",
@@ -259,20 +259,6 @@
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
             "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -301,6 +287,20 @@
             "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
