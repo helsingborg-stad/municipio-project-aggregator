@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-13T12:59:31+00:00",
-    "count": 109,
+    "generatedAt": "2026-05-13T13:51:50+00:00",
+    "count": 106,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -782,80 +782,6 @@
     ],
     "items": [
         {
-            "title": "Remove tooltip component from component-library",
-            "url": "https://github.com/helsingborg-stad/component-library/issues/654",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-05-13T10:09:01Z",
-            "number": 654,
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "NiclasNorin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                    "url": "https://github.com/NiclasNorin",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "title": "Replace css tooltip with JS",
-            "url": "https://github.com/helsingborg-stad/styleguide/issues/1220",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-13T09:30:12Z",
-            "number": 1220,
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "feat: tooltip",
-                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1219",
-                    "repository": "helsingborg-stad/styleguide"
-                }
-            ]
-        },
-        {
             "title": "Hide sensitive and unnecessary parts of admin for organization admin",
             "url": "https://github.com/helsingborg-stad/api.helsingborg.se/issues/10",
             "repository": "helsingborg-stad/api.helsingborg.se",
@@ -978,54 +904,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "title": "Tooltip js solution",
-            "url": "https://github.com/helsingborg-stad/styleguide/issues/1215",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-11T10:49:00Z",
-            "number": 1215,
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "NiclasNorin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                    "url": "https://github.com/NiclasNorin",
-                    "company": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 3,
-                "completed": 1,
-                "percentCompleted": 33
-            },
-            "subIssueUrls": [
-                "https://github.com/helsingborg-stad/styleguide/issues/1218",
-                "https://github.com/helsingborg-stad/styleguide/issues/1220",
-                "https://github.com/helsingborg-stad/component-library/issues/654"
-            ],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add tooltips for chatbubble buttons",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2045",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
         },
         {
             "title": "Create a chat/block",
