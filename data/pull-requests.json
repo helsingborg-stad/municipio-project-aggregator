@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-13T03:36:04+00:00",
-    "count": 174,
+    "generatedAt": "2026-05-13T05:38:48+00:00",
+    "count": 173,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -768,43 +768,6 @@
         }
     ],
     "items": [
-        {
-            "title": "Feat/send org admin welcome",
-            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/150",
-            "repository": "helsingborg-stad/api-event-manager",
-            "createdAt": "2026-05-12T13:39:09Z",
-            "number": 150,
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Send welcome email to newly created organization admin",
-                    "url": "https://github.com/helsingborg-stad/api-event-manager/issues/146",
-                    "repository": "helsingborg-stad/api-event-manager"
-                }
-            ]
-        },
         {
             "title": "feat: chat block",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2046",
