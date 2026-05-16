@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-16T20:23:22+00:00",
+    "generatedAt": "2026-05-16T21:23:44+00:00",
     "count": 104,
     "repositories": [
         {
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -276,6 +276,27 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "algolia-index-typesense-provider",
             "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
@@ -301,27 +322,6 @@
             "fullName": "helsingborg-stad/project-synchronizer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/project-synchronizer"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
