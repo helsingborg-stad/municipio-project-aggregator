@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-17T23:42:38+00:00",
+    "generatedAt": "2026-05-18T01:21:14+00:00",
     "count": 173,
     "repositories": [
         {
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Wordpress-Plugin-Boilerplate",
-            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
-            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
-            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-json-render",
             "fullName": "helsingborg-stad/modularity-json-render",
             "description": "Renders a single level api-response (json) as a list. ",
             "url": "https://github.com/helsingborg-stad/modularity-json-render"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Wordpress-Plugin-Boilerplate",
+            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
+            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
+            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
         },
         {
             "owner": "helsingborg-stad",
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
             "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
