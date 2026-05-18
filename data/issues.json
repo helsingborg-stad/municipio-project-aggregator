@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-18T05:34:30+00:00",
-    "count": 104,
+    "generatedAt": "2026-05-18T07:43:16+00:00",
+    "count": 105,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -150,13 +150,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-alarm-integration",
-            "fullName": "helsingborg-stad/api-alarm-integration",
-            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -168,6 +161,13 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-alarm-integration",
+            "fullName": "helsingborg-stad/api-alarm-integration",
+            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -199,20 +199,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "municipio-e2e-tests",
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
@@ -238,6 +224,20 @@
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
         },
         {
             "owner": "helsingborg-stad",
@@ -782,6 +782,43 @@
     ],
     "items": [
         {
+            "title": "Organizarion administrator can be created with invalid user name",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/issues/154",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-05-18T06:54:59Z",
+            "number": 154,
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [
+                {
+                    "login": "thorbrink",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=2078ba310e3eee83fd693d1cdaf4ebd3a512e27c&v=4",
+                    "url": "https://github.com/thorbrink",
+                    "company": ""
+                }
+            ],
+            "milestone": null,
+            "type": "Bug",
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "title": "Hide sensitive and unnecessary parts of admin for organization admin",
             "url": "https://github.com/helsingborg-stad/api.helsingborg.se/issues/10",
             "repository": "helsingborg-stad/api.helsingborg.se",
@@ -1176,16 +1213,17 @@
             "milestone": null,
             "type": "Feature",
             "subIssues": {
-                "total": 5,
+                "total": 6,
                 "completed": 3,
-                "percentCompleted": 60
+                "percentCompleted": 50
             },
             "subIssueUrls": [
                 "https://github.com/helsingborg-stad/api-event-manager/issues/143",
                 "https://github.com/helsingborg-stad/api-event-manager/issues/144",
                 "https://github.com/helsingborg-stad/api-event-manager/issues/146",
                 "https://github.com/helsingborg-stad/api-event-manager/issues/149",
-                "https://github.com/helsingborg-stad/api.helsingborg.se/issues/10"
+                "https://github.com/helsingborg-stad/api.helsingborg.se/issues/10",
+                "https://github.com/helsingborg-stad/api-event-manager/issues/154"
             ],
             "relationshipSummary": {
                 "blockedBy": 0,
