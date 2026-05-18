@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-18T20:55:25+00:00",
+    "generatedAt": "2026-05-18T21:48:53+00:00",
     "count": 174,
     "repositories": [
         {
@@ -94,17 +94,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager",
-            "fullName": "helsingborg-stad/api-volunteer-manager",
-            "description": "Managing data for volunteers and their assignments",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
             "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager",
+            "fullName": "helsingborg-stad/api-volunteer-manager",
+            "description": "Managing data for volunteers and their assignments",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -206,20 +206,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "OpenStreetMap",
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
@@ -238,6 +224,20 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
         },
         {
             "owner": "helsingborg-stad",
