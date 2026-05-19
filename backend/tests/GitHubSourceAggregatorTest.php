@@ -55,9 +55,12 @@ final class GitHubSourceAggregatorTest extends TestCase
         self::assertSame('', $data['authors'][0]['company']);
         self::assertSame('Legacy Systems', $data['authors'][3]['company']);
         self::assertSame('helsingborg-stad/styleguide', $data['items'][0]['repository']);
+        self::assertSame('PR_kwDOA', $data['items'][0]['id']);
+        self::assertSame('OPEN', $data['items'][0]['state']);
         self::assertSame('octocat', $data['items'][0]['author']['login']);
         self::assertSame('GitHub', $data['items'][0]['author']['company']);
         self::assertSame('hubot', $data['items'][0]['assignees'][0]['login']);
+        self::assertSame('estimate:3', $data['items'][0]['labels'][0]['name']);
         self::assertSame('Q2', $data['items'][0]['milestone']['title']);
         self::assertSame('Feature', $data['items'][0]['type']);
         self::assertSame(3, $data['items'][0]['subIssues']['total']);
@@ -333,10 +336,12 @@ final class GitHubSourceAggregatorTest extends TestCase
                 ?string $linkedTitle = null,
             ): array {
                 return [
+                    'id' => 'PR_kwDOA',
                     'title' => $title,
                     'url' => $url,
                     'number' => $number,
                     'createdAt' => $createdAt,
+                    'state' => 'OPEN',
                     'repository' => [
                         'name' => 'styleguide',
                         'nameWithOwner' => str_contains($url, 'styleguide-blocks') ? 'helsingborg-stad/styleguide-blocks' : 'helsingborg-stad/styleguide',
@@ -355,6 +360,14 @@ final class GitHubSourceAggregatorTest extends TestCase
                             'login' => 'hubot',
                             'avatarUrl' => 'https://avatars.example.com/hubot.png',
                             'url' => 'https://github.com/hubot',
+                        ]] : [],
+                    ],
+                    'labels' => [
+                        'nodes' => $title === 'GetMunicipio only PR' ? [[
+                            'id' => 'LA_kwDOA',
+                            'name' => 'estimate:3',
+                            'color' => '2563eb',
+                            'description' => 'Three point estimate',
                         ]] : [],
                     ],
                     'milestone' => $milestoneTitle === null ? null : [
@@ -438,10 +451,12 @@ final class GitHubSourceAggregatorTest extends TestCase
                         'search' => [
                             'pageInfo' => ['hasNextPage' => false, 'endCursor' => null],
                             'nodes' => [[
+                                'id' => 'PR_kwDO_missing',
                                 'title' => 'PR from missing profile',
                                 'url' => 'https://github.com/helsingborg-stad/styleguide/pull/7',
                                 'number' => 7,
                                 'createdAt' => '2026-04-25T09:00:00Z',
+                                'state' => 'OPEN',
                                 'repository' => [
                                     'name' => 'styleguide',
                                     'nameWithOwner' => 'helsingborg-stad/styleguide',
@@ -455,6 +470,7 @@ final class GitHubSourceAggregatorTest extends TestCase
                                     'url' => 'https://github.com/ghost-user',
                                 ],
                                 'assignees' => ['nodes' => []],
+                                'labels' => ['nodes' => []],
                                 'milestone' => null,
                                 'issueType' => null,
                                 'subIssuesSummary' => ['total' => 0, 'completed' => 0, 'percentCompleted' => 0],

@@ -35,10 +35,14 @@ if ($token === false || $token === '') {
 
 $itemLookbackDays = resolveItemLookbackDays();
 $buildTargets = resolveBuildTargets();
+$trackedTopics = resolveTrackedTopics();
+$projectOwner = resolveProjectOwner();
+$projectNumber = resolveProjectNumber();
+$releaseRepository = resolveReleaseRepository();
 
 $config = new BuildConfig(
     sourceScope: 'GitHub',
-    topics: ['municipio-se', 'getmunicipio'],
+    topics: $trackedTopics,
     token: $token,
     outputDirectory: $projectRoot . '/public/data',
     generatedAt: new \DateTimeImmutable(),
@@ -73,11 +77,11 @@ foreach ($buildTargets as $buildTarget) {
     }
 
     if ($buildTarget === BuildTarget::Sprints) {
-        writeSprintPayload($sprintAggregator, $config, $writer);
+        writeSprintPayload($sprintAggregator, $config, $writer, $projectOwner, $projectNumber);
         continue;
     }
 
-    writeReleasePayloads($releaseAggregator, $config, $writer);
+    writeReleasePayloads($releaseAggregator, $config, $writer, $releaseRepository['owner'], $releaseRepository['name']);
 }
 
 /**
@@ -99,6 +103,92 @@ function resolveItemLookbackDays(): int
     }
 
     return $lookbackDays;
+}
+
+/**
+ * @return array<int, string>
+ */
+function resolveTrackedTopics(): array
+{
+    $configuredValue = getenv('GITHUB_TOPICS');
+
+    if ($configuredValue === false || trim($configuredValue) === '') {
+        return ['municipio-se', 'getmunicipio'];
+    }
+
+    $topics = array_values(array_filter(array_map(
+        static fn (string $topic): string => trim($topic),
+        explode(',', $configuredValue),
+    )));
+
+    if ($topics === []) {
+        fwrite(STDERR, "Error: GITHUB_TOPICS must contain at least one topic.\n");
+        exit(1);
+    }
+
+    return $topics;
+}
+
+/**
+ * @return string
+ */
+function resolveProjectOwner(): string
+{
+    $configuredValue = getenv('GITHUB_PROJECT_OWNER');
+
+    if ($configuredValue === false || trim($configuredValue) === '') {
+        return 'helsingborg-stad';
+    }
+
+    return trim($configuredValue);
+}
+
+/**
+ * @return int
+ */
+function resolveProjectNumber(): int
+{
+    $configuredValue = getenv('GITHUB_PROJECT_NUMBER');
+
+    if ($configuredValue === false || $configuredValue === '') {
+        return 7;
+    }
+
+    $projectNumber = filter_var($configuredValue, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+
+    if (!is_int($projectNumber)) {
+        fwrite(STDERR, "Error: GITHUB_PROJECT_NUMBER must be a positive integer.\n");
+        exit(1);
+    }
+
+    return $projectNumber;
+}
+
+/**
+ * @return array{owner: string, name: string}
+ */
+function resolveReleaseRepository(): array
+{
+    $configuredValue = getenv('GITHUB_RELEASE_REPOSITORY');
+
+    if ($configuredValue === false || trim($configuredValue) === '') {
+        return [
+            'owner' => 'municipio-se',
+            'name' => 'municipio-deployment',
+        ];
+    }
+
+    [$owner, $name] = array_pad(explode('/', trim($configuredValue), 2), 2, '');
+
+    if ($owner === '' || $name === '') {
+        fwrite(STDERR, "Error: GITHUB_RELEASE_REPOSITORY must use the owner/name format.\n");
+        exit(1);
+    }
+
+    return [
+        'owner' => $owner,
+        'name' => $name,
+    ];
 }
 
 /**
@@ -143,9 +233,11 @@ function writeReleasePayloads(
     GitHubReleaseAggregator $releaseAggregator,
     BuildConfig $config,
     JsonSourceWriter $writer,
+    string $owner,
+    string $repository,
 ): void {
     fwrite(STDOUT, "Fetching releases...\n");
-    $releasePayload = $releaseAggregator->aggregate($config, 'municipio-se', 'municipio-deployment');
+    $releasePayload = $releaseAggregator->aggregate($config, $owner, $repository);
     $releaseIndexFilePath = $writer->write($releasePayload->pageIndexPayload());
     fwrite(STDOUT, sprintf("  Wrote %s\n", $releaseIndexFilePath));
 
@@ -165,9 +257,11 @@ function writeSprintPayload(
     GitHubProjectSprintAggregator $sprintAggregator,
     BuildConfig $config,
     JsonSourceWriter $writer,
+    string $projectOwner,
+    int $projectNumber,
 ): void {
     fwrite(STDOUT, "Fetching sprints...\n");
-    $payload = $sprintAggregator->aggregate($config, 'helsingborg-stad', 7);
+    $payload = $sprintAggregator->aggregate($config, $projectOwner, $projectNumber);
     $filePath = $writer->write($payload);
     fwrite(STDOUT, sprintf("  Wrote %s\n", $filePath));
 }

@@ -13,7 +13,7 @@ use MunicipioProjectAggregator\Backend\Data\SprintPayload;
 use RuntimeException;
 
 /**
- * Aggregates current and upcoming sprint entries from a GitHub Project v2.
+ * Aggregates GitHub Project v2 planning data for backlog and sprint views.
  */
 final class GitHubProjectSprintAggregator
 {
@@ -70,22 +70,19 @@ final class GitHubProjectSprintAggregator
         } while ($hasNextPage && $afterCursor !== null);
 
         $view = $this->extractView($project);
-        $iterations = $this->extractIterations($project);
-        $iterationsById = [];
-
-        foreach ($iterations as $iteration) {
-            $iterationsById[$iteration['id']] = $iteration;
-        }
-
+        $fieldMetadata = $this->extractFieldMetadata($project, $config->generatedAt());
+        $iterations = $fieldMetadata['iteration']['iterations'] ?? [];
         $currentIterationIndex = $this->resolveCurrentIterationIndex($iterations, $config->generatedAt());
         $nextIterationIndex = $this->resolveNextIterationIndex($iterations, $config->generatedAt(), $currentIterationIndex);
-        $entriesByIterationId = $this->extractEntriesByIterationId($items);
+        $completedIterationIndex = $this->resolveCompletedIterationIndex($iterations, $config->generatedAt(), $currentIterationIndex);
+        $entries = $this->extractEntries($items);
 
         return new SprintPayload(
             'sprints',
             $config->sourceScope(),
             $config->generatedAt()->format(DATE_ATOM),
             [
+                'id' => is_string($project['id'] ?? null) ? $project['id'] : '',
                 'owner' => $organizationLogin,
                 'number' => $projectNumber,
                 'title' => is_string($project['title'] ?? null) ? $project['title'] : sprintf('Project %d', $projectNumber),
@@ -93,15 +90,22 @@ final class GitHubProjectSprintAggregator
             ],
             $view,
             is_string($view['filter'] ?? null) ? $view['filter'] : '',
-            $currentIterationIndex === null ? null : $this->createSprintBucket(
+            $fieldMetadata,
+            $this->createBacklogBucket($entries),
+            $completedIterationIndex === null ? null : $this->createIterationBucket(
+                'Completed Sprint',
+                $iterations[$completedIterationIndex],
+                $this->filterEntriesByIterationId($entries, $iterations[$completedIterationIndex]['id']),
+            ),
+            $currentIterationIndex === null ? null : $this->createIterationBucket(
                 'Current Sprint',
                 $iterations[$currentIterationIndex],
-                $entriesByIterationId[$iterations[$currentIterationIndex]['id']] ?? [],
+                $this->filterEntriesByIterationId($entries, $iterations[$currentIterationIndex]['id']),
             ),
-            $nextIterationIndex === null ? null : $this->createSprintBucket(
+            $nextIterationIndex === null ? null : $this->createIterationBucket(
                 'Next Sprint',
                 $iterations[$nextIterationIndex],
-                $entriesByIterationId[$iterations[$nextIterationIndex]['id']] ?? [],
+                $this->filterEntriesByIterationId($entries, $iterations[$nextIterationIndex]['id']),
             ),
         );
     }
@@ -120,6 +124,7 @@ final class GitHubProjectSprintAggregator
 query {
   organization(login: "{$organizationLogin}") {
     projectV2(number: {$projectNumber}) {
+      id
       title
       number
       url
@@ -137,6 +142,16 @@ query {
       fields(first: 50) {
         nodes {
           __typename
+          ... on ProjectV2SingleSelectField {
+            id
+            name
+            options {
+              id
+              name
+              color
+              description
+            }
+          }
           ... on ProjectV2IterationField {
             id
             name
@@ -158,27 +173,73 @@ query {
         }
         nodes {
           id
+          updatedAt
           content {
             __typename
-                        ... on DraftIssue {
-                            title
-                        }
+            ... on DraftIssue {
+              id
+              title
+            }
             ... on Issue {
+              id
               title
               url
               number
               state
+              updatedAt
               repository {
                 nameWithOwner
               }
+              assignees(first: 20) {
+                nodes {
+                  login
+                  avatarUrl
+                  url
+                }
+              }
+              labels(first: 20) {
+                nodes {
+                  id
+                  name
+                  color
+                  description
+                }
+              }
+              milestone {
+                title
+                url
+                dueOn
+              }
             }
             ... on PullRequest {
+              id
               title
               url
               number
               state
+              updatedAt
               repository {
                 nameWithOwner
+              }
+              assignees(first: 20) {
+                nodes {
+                  login
+                  avatarUrl
+                  url
+                }
+              }
+              labels(first: 20) {
+                nodes {
+                  id
+                  name
+                  color
+                  description
+                }
+              }
+              milestone {
+                title
+                url
+                dueOn
               }
             }
           }
@@ -187,8 +248,10 @@ query {
               __typename
               ... on ProjectV2ItemFieldSingleSelectValue {
                 name
+                optionId
                 field {
                   ... on ProjectV2SingleSelectField {
+                    id
                     name
                   }
                 }
@@ -200,6 +263,7 @@ query {
                 iterationId
                 field {
                   ... on ProjectV2IterationField {
+                    id
                     name
                   }
                 }
@@ -238,40 +302,126 @@ GRAPHQL;
 
     /**
      * @param array<string, mixed> $project
-     * @return array<int, array{id: string, title: string, startDate: string, endDate: string, duration: int}>
+     * @param DateTimeImmutable $generatedAt
+     * @return array<string, mixed>
      */
-    private function extractIterations(array $project): array
+    private function extractFieldMetadata(array $project, DateTimeImmutable $generatedAt): array
     {
         $fieldNodes = is_array($project['fields']['nodes'] ?? null) ? $project['fields']['nodes'] : [];
-        $iterations = [];
+        $statusField = [
+            'id' => '',
+            'name' => 'Status',
+            'options' => [],
+        ];
+        $iterationField = [
+            'id' => '',
+            'name' => 'Iteration',
+            'iterations' => [],
+            'currentIterationId' => null,
+            'nextIterationId' => null,
+            'completedIterationId' => null,
+        ];
 
         foreach ($fieldNodes as $fieldNode) {
-            if (!is_array($fieldNode) || ($fieldNode['__typename'] ?? null) !== 'ProjectV2IterationField') {
+            if (!is_array($fieldNode) || !is_string($fieldNode['__typename'] ?? null)) {
                 continue;
             }
 
-            $configuredIterations = is_array($fieldNode['configuration']['iterations'] ?? null)
-                ? $fieldNode['configuration']['iterations']
-                : [];
-
-            foreach ($configuredIterations as $iteration) {
-                if (!is_array($iteration) || !is_string($iteration['id'] ?? null) || !is_string($iteration['startDate'] ?? null)) {
+            if ($fieldNode['__typename'] === 'ProjectV2SingleSelectField') {
+                $fieldName = is_string($fieldNode['name'] ?? null) ? trim($fieldNode['name']) : '';
+                if (strcasecmp($fieldName, 'Status') !== 0) {
                     continue;
                 }
 
-                $iterations[] = [
-                    'id' => $iteration['id'],
-                    'title' => is_string($iteration['title'] ?? null) ? $iteration['title'] : 'Untitled sprint',
-                    'startDate' => $iteration['startDate'],
-                    'endDate' => $this->calculateEndDate(
-                        $iteration['startDate'],
-                        is_int($iteration['duration'] ?? null) ? $iteration['duration'] : 0,
-                    ),
-                    'duration' => is_int($iteration['duration'] ?? null) ? $iteration['duration'] : 0,
+                $statusField = [
+                    'id' => is_string($fieldNode['id'] ?? null) ? $fieldNode['id'] : '',
+                    'name' => $fieldName !== '' ? $fieldName : 'Status',
+                    'options' => $this->extractStatusOptions($fieldNode['options'] ?? []),
                 ];
+
+                continue;
             }
 
-            break;
+            if ($fieldNode['__typename'] !== 'ProjectV2IterationField') {
+                continue;
+            }
+
+            $iterations = $this->extractIterations($fieldNode['configuration']['iterations'] ?? []);
+            $currentIterationIndex = $this->resolveCurrentIterationIndex($iterations, $generatedAt);
+            $nextIterationIndex = $this->resolveNextIterationIndex($iterations, $generatedAt, $currentIterationIndex);
+            $completedIterationIndex = $this->resolveCompletedIterationIndex($iterations, $generatedAt, $currentIterationIndex);
+
+            $iterationField = [
+                'id' => is_string($fieldNode['id'] ?? null) ? $fieldNode['id'] : '',
+                'name' => is_string($fieldNode['name'] ?? null) && trim($fieldNode['name']) !== '' ? trim($fieldNode['name']) : 'Iteration',
+                'iterations' => $iterations,
+                'currentIterationId' => $currentIterationIndex === null ? null : $iterations[$currentIterationIndex]['id'],
+                'nextIterationId' => $nextIterationIndex === null ? null : $iterations[$nextIterationIndex]['id'],
+                'completedIterationId' => $completedIterationIndex === null ? null : $iterations[$completedIterationIndex]['id'],
+            ];
+        }
+
+        return [
+            'status' => $statusField,
+            'iteration' => $iterationField,
+        ];
+    }
+
+    /**
+     * @param mixed $options
+     * @return array<int, array<string, string>>
+     */
+    private function extractStatusOptions(mixed $options): array
+    {
+        if (!is_array($options)) {
+            return [];
+        }
+
+        $result = [];
+
+        foreach ($options as $option) {
+            if (!is_array($option) || !is_string($option['id'] ?? null) || !is_string($option['name'] ?? null)) {
+                continue;
+            }
+
+            $result[] = [
+                'id' => $option['id'],
+                'name' => $option['name'],
+                'color' => is_string($option['color'] ?? null) ? $option['color'] : '',
+                'description' => is_string($option['description'] ?? null) ? $option['description'] : '',
+            ];
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param mixed $configuredIterations
+     * @return array<int, array{id: string, title: string, startDate: string, endDate: string, duration: int}>
+     */
+    private function extractIterations(mixed $configuredIterations): array
+    {
+        if (!is_array($configuredIterations)) {
+            return [];
+        }
+
+        $iterations = [];
+
+        foreach ($configuredIterations as $iteration) {
+            if (!is_array($iteration) || !is_string($iteration['id'] ?? null) || !is_string($iteration['startDate'] ?? null)) {
+                continue;
+            }
+
+            $iterations[] = [
+                'id' => $iteration['id'],
+                'title' => is_string($iteration['title'] ?? null) ? $iteration['title'] : 'Untitled sprint',
+                'startDate' => $iteration['startDate'],
+                'endDate' => $this->calculateEndDate(
+                    $iteration['startDate'],
+                    is_int($iteration['duration'] ?? null) ? $iteration['duration'] : 0,
+                ),
+                'duration' => is_int($iteration['duration'] ?? null) ? $iteration['duration'] : 0,
+            ];
         }
 
         usort(
@@ -341,12 +491,37 @@ GRAPHQL;
     }
 
     /**
-     * @param array<int, array<string, mixed>> $itemNodes
-     * @return array<string, array<int, SprintEntry>>
+     * @param array<int, array{id: string, title: string, startDate: string, endDate: string, duration: int}> $iterations
+     * @param DateTimeImmutable $generatedAt
+     * @param int|null $currentIterationIndex
+     * @return int|null
      */
-    private function extractEntriesByIterationId(array $itemNodes): array
+    private function resolveCompletedIterationIndex(array $iterations, DateTimeImmutable $generatedAt, ?int $currentIterationIndex): ?int
     {
-        $entriesByIterationId = [];
+        if ($currentIterationIndex !== null) {
+            $completedIndex = $currentIterationIndex - 1;
+            return $completedIndex >= 0 ? $completedIndex : null;
+        }
+
+        $currentDate = $generatedAt->format('Y-m-d');
+        $lastPastIndex = null;
+
+        foreach ($iterations as $index => $iteration) {
+            if ($iteration['endDate'] < $currentDate) {
+                $lastPastIndex = $index;
+            }
+        }
+
+        return $lastPastIndex;
+    }
+
+    /**
+     * @param array<int, array<string, mixed>> $itemNodes
+     * @return array<int, SprintEntry>
+     */
+    private function extractEntries(array $itemNodes): array
+    {
+        $entries = [];
 
         foreach ($itemNodes as $itemNode) {
             $content = is_array($itemNode['content'] ?? null) ? $itemNode['content'] : null;
@@ -361,116 +536,59 @@ GRAPHQL;
             }
 
             $fieldValues = is_array($itemNode['fieldValues']['nodes'] ?? null) ? $itemNode['fieldValues']['nodes'] : [];
-            $iterationId = $this->extractIterationId($fieldValues);
+            $iteration = $this->extractIteration($fieldValues);
+            $status = $this->extractStatus($fieldValues);
 
-            if ($iterationId === null) {
-                continue;
-            }
-
-            $entriesByIterationId[$iterationId] ??= [];
-            $entriesByIterationId[$iterationId][] = $this->createSprintEntry($content, $fieldValues);
-        }
-
-        return $entriesByIterationId;
-    }
-
-    /**
-     * @param array<string, mixed> $content
-     * @param array<int, array<string, mixed>> $fieldValues
-     * @return SprintEntry
-     */
-    private function createSprintEntry(array $content, array $fieldValues): SprintEntry
-    {
-        $typeName = is_string($content['__typename'] ?? null) ? $content['__typename'] : 'DraftIssue';
-
-        if ($typeName === 'DraftIssue') {
-            return new SprintEntry(
-                is_string($content['title'] ?? null) ? $content['title'] : 'Untitled draft issue',
-                '',
-                0,
-                '',
-                'Draft Issue',
-                'Draft',
-                $this->extractStatus($fieldValues),
+            $entries[] = $this->createSprintEntry(
+                is_string($itemNode['id'] ?? null) ? $itemNode['id'] : '',
+                is_string($itemNode['updatedAt'] ?? null) ? $itemNode['updatedAt'] : '',
+                $content,
+                $iteration,
+                $status,
             );
         }
 
-        return new SprintEntry(
-            is_string($content['title'] ?? null) ? $content['title'] : 'Untitled item',
-            is_string($content['url'] ?? null) ? $content['url'] : '',
-            is_int($content['number'] ?? null) ? $content['number'] : 0,
-            is_array($content['repository'] ?? null) && is_string($content['repository']['nameWithOwner'] ?? null)
-                ? $content['repository']['nameWithOwner']
-                : 'unknown',
-            $typeName === 'PullRequest' ? 'Pull Request' : 'Issue',
-            $this->normalizeState(is_string($content['state'] ?? null) ? $content['state'] : ''),
-            $this->extractStatus($fieldValues),
+        return $entries;
+    }
+
+    /**
+     * @param array<int, SprintEntry> $entries
+     * @param string $iterationId
+     * @return array<int, SprintEntry>
+     */
+    private function filterEntriesByIterationId(array $entries, string $iterationId): array
+    {
+        return array_values(array_filter(
+            $entries,
+            static fn (SprintEntry $entry): bool => ($entry->toArray()['iterationId'] ?? null) === $iterationId,
+        ));
+    }
+
+    /**
+     * @param array<int, SprintEntry> $entries
+     * @return SprintBucket
+     */
+    private function createBacklogBucket(array $entries): SprintBucket
+    {
+        $backlogEntries = array_values(array_filter(
+            $entries,
+            static fn (SprintEntry $entry): bool => ($entry->toArray()['iterationId'] ?? null) === null,
+        ));
+
+        usort(
+            $backlogEntries,
+            static fn (SprintEntry $left, SprintEntry $right): int => [$left->status(), $left->repository(), $left->title()]
+                <=> [$right->status(), $right->repository(), $right->title()],
         );
-    }
 
-    /**
-     * @param array<int, array<string, mixed>> $fieldValues
-     * @return string|null
-     */
-    private function extractIterationId(array $fieldValues): ?string
-    {
-        foreach ($fieldValues as $fieldValue) {
-            if (!is_array($fieldValue) || ($fieldValue['__typename'] ?? null) !== 'ProjectV2ItemFieldIterationValue') {
-                continue;
-            }
-
-            return is_string($fieldValue['iterationId'] ?? null) ? $fieldValue['iterationId'] : null;
-        }
-
-        return null;
-    }
-
-    /**
-     * @param array<int, array<string, mixed>> $fieldValues
-     * @return string
-     */
-    private function extractStatus(array $fieldValues): string
-    {
-        $fallbackStatus = '';
-
-        foreach ($fieldValues as $fieldValue) {
-            if (!is_array($fieldValue) || ($fieldValue['__typename'] ?? null) !== 'ProjectV2ItemFieldSingleSelectValue') {
-                continue;
-            }
-
-            $name = is_string($fieldValue['name'] ?? null) ? trim($fieldValue['name']) : '';
-            $fieldName = is_array($fieldValue['field'] ?? null) && is_string($fieldValue['field']['name'] ?? null)
-                ? trim($fieldValue['field']['name'])
-                : '';
-
-            if ($name === '') {
-                continue;
-            }
-
-            if (strcasecmp($fieldName, 'Status') === 0) {
-                return $name;
-            }
-
-            if ($fallbackStatus === '') {
-                $fallbackStatus = $name;
-            }
-        }
-
-        return $fallbackStatus;
-    }
-
-    /**
-     * @param string $state
-     * @return string
-     */
-    private function normalizeState(string $state): string
-    {
-        return match (strtoupper($state)) {
-            'OPEN' => 'Open',
-            'CLOSED' => 'Closed',
-            'MERGED' => 'Merged',
-            default => $state,
-        };
+        return new SprintBucket(
+            'Backlog',
+            'Backlog',
+            null,
+            null,
+            null,
+            $backlogEntries,
+        );
     }
 
     /**
@@ -479,7 +597,7 @@ GRAPHQL;
      * @param array<int, SprintEntry> $entries
      * @return SprintBucket
      */
-    private function createSprintBucket(string $label, array $iteration, array $entries): SprintBucket
+    private function createIterationBucket(string $label, array $iteration, array $entries): SprintBucket
     {
         usort(
             $entries,
@@ -490,9 +608,208 @@ GRAPHQL;
         return new SprintBucket(
             $label,
             $iteration['title'],
+            $iteration['id'],
             $iteration['startDate'],
             $iteration['endDate'],
             $entries,
         );
+    }
+
+    /**
+     * @param array<int, array<string, mixed>> $fieldValues
+     * @return array{id: string|null, title: string|null}
+     */
+    private function extractIteration(array $fieldValues): array
+    {
+        foreach ($fieldValues as $fieldValue) {
+            if (!is_array($fieldValue) || ($fieldValue['__typename'] ?? null) !== 'ProjectV2ItemFieldIterationValue') {
+                continue;
+            }
+
+            return [
+                'id' => is_string($fieldValue['iterationId'] ?? null) ? $fieldValue['iterationId'] : null,
+                'title' => is_string($fieldValue['title'] ?? null) ? $fieldValue['title'] : null,
+            ];
+        }
+
+        return [
+            'id' => null,
+            'title' => null,
+        ];
+    }
+
+    /**
+     * @param array<int, array<string, mixed>> $fieldValues
+     * @return array{name: string, optionId: string}
+     */
+    private function extractStatus(array $fieldValues): array
+    {
+        $fallbackStatus = '';
+        $fallbackOptionId = '';
+
+        foreach ($fieldValues as $fieldValue) {
+            if (!is_array($fieldValue) || ($fieldValue['__typename'] ?? null) !== 'ProjectV2ItemFieldSingleSelectValue') {
+                continue;
+            }
+
+            $name = is_string($fieldValue['name'] ?? null) ? trim($fieldValue['name']) : '';
+            $optionId = is_string($fieldValue['optionId'] ?? null) ? $fieldValue['optionId'] : '';
+            $fieldName = is_array($fieldValue['field'] ?? null) && is_string($fieldValue['field']['name'] ?? null)
+                ? trim($fieldValue['field']['name'])
+                : '';
+
+            if ($name === '') {
+                continue;
+            }
+
+            if (strcasecmp($fieldName, 'Status') === 0) {
+                return [
+                    'name' => $name,
+                    'optionId' => $optionId,
+                ];
+            }
+
+            if ($fallbackStatus === '') {
+                $fallbackStatus = $name;
+                $fallbackOptionId = $optionId;
+            }
+        }
+
+        return [
+            'name' => $fallbackStatus,
+            'optionId' => $fallbackOptionId,
+        ];
+    }
+
+    /**
+     * @param string $projectItemId
+     * @param string $projectItemUpdatedAt
+     * @param array<string, mixed> $content
+     * @param array{id: string|null, title: string|null} $iteration
+     * @param array{name: string, optionId: string} $status
+     * @return SprintEntry
+     */
+    private function createSprintEntry(
+        string $projectItemId,
+        string $projectItemUpdatedAt,
+        array $content,
+        array $iteration,
+        array $status,
+    ): SprintEntry {
+        $typeName = is_string($content['__typename'] ?? null) ? $content['__typename'] : 'DraftIssue';
+
+        if ($typeName === 'DraftIssue') {
+            return new SprintEntry(
+                $projectItemId,
+                is_string($content['id'] ?? null) ? $content['id'] : '',
+                is_string($content['title'] ?? null) ? $content['title'] : 'Untitled draft issue',
+                '',
+                0,
+                '',
+                'Draft Issue',
+                'DRAFT',
+                $status['name'],
+                $status['optionId'],
+                $iteration['id'],
+                $iteration['title'],
+                $projectItemUpdatedAt,
+                [],
+                [],
+                null,
+            );
+        }
+
+        return new SprintEntry(
+            $projectItemId,
+            is_string($content['id'] ?? null) ? $content['id'] : '',
+            is_string($content['title'] ?? null) ? $content['title'] : 'Untitled item',
+            is_string($content['url'] ?? null) ? $content['url'] : '',
+            is_int($content['number'] ?? null) ? $content['number'] : 0,
+            is_array($content['repository'] ?? null) && is_string($content['repository']['nameWithOwner'] ?? null)
+                ? $content['repository']['nameWithOwner']
+                : 'unknown',
+            $typeName === 'PullRequest' ? 'Pull Request' : 'Issue',
+            is_string($content['state'] ?? null) ? strtoupper($content['state']) : '',
+            $status['name'],
+            $status['optionId'],
+            $iteration['id'],
+            $iteration['title'],
+            is_string($content['updatedAt'] ?? null) && $content['updatedAt'] !== '' ? $content['updatedAt'] : $projectItemUpdatedAt,
+            $this->extractLabels($content['labels']['nodes'] ?? []),
+            $this->extractUsers($content['assignees']['nodes'] ?? []),
+            $this->extractMilestone($content['milestone'] ?? null),
+        );
+    }
+
+    /**
+     * @param mixed $users
+     * @return array<int, array<string, string>>
+     */
+    private function extractUsers(mixed $users): array
+    {
+        if (!is_array($users)) {
+            return [];
+        }
+
+        $result = [];
+
+        foreach ($users as $user) {
+            if (!is_array($user) || !is_string($user['login'] ?? null)) {
+                continue;
+            }
+
+            $result[] = [
+                'login' => $user['login'],
+                'avatarUrl' => is_string($user['avatarUrl'] ?? null) ? $user['avatarUrl'] : '',
+                'url' => is_string($user['url'] ?? null) ? $user['url'] : '',
+            ];
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param mixed $labels
+     * @return array<int, array<string, string>>
+     */
+    private function extractLabels(mixed $labels): array
+    {
+        if (!is_array($labels)) {
+            return [];
+        }
+
+        $result = [];
+
+        foreach ($labels as $label) {
+            if (!is_array($label) || !is_string($label['name'] ?? null)) {
+                continue;
+            }
+
+            $result[] = [
+                'id' => is_string($label['id'] ?? null) ? $label['id'] : '',
+                'name' => $label['name'],
+                'color' => is_string($label['color'] ?? null) ? $label['color'] : '',
+                'description' => is_string($label['description'] ?? null) ? $label['description'] : '',
+            ];
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param mixed $milestone
+     * @return array<string, string|null>|null
+     */
+    private function extractMilestone(mixed $milestone): ?array
+    {
+        if (!is_array($milestone) || !is_string($milestone['title'] ?? null)) {
+            return null;
+        }
+
+        return [
+            'title' => $milestone['title'],
+            'url' => is_string($milestone['url'] ?? null) ? $milestone['url'] : null,
+            'dueOn' => is_string($milestone['dueOn'] ?? null) ? $milestone['dueOn'] : null,
+        ];
     }
 }

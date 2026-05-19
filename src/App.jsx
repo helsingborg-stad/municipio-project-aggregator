@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import PlanningWorkspace from '@/components/planning/PlanningWorkspace';
 import {
   filterAuthors,
   filterItems,
@@ -30,6 +31,7 @@ const sources = [
   { key: 'pull-requests', label: 'Pull Requests', icon: GitPullRequest, accent: 'bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-400/30' },
 ];
 
+const backlogTab = { key: 'backlog', label: 'Backlog', icon: FolderKanban };
 const sprintTab = { key: 'sprints', label: 'Sprints', icon: CalendarDays };
 const releaseTab = { key: 'releases', label: 'Release log', icon: ScrollText };
 
@@ -38,7 +40,7 @@ const auxiliaryTabs = [
   { key: 'authors', label: 'Authors', icon: Users },
 ];
 
-const mainTabs = [...sources, sprintTab, releaseTab, ...auxiliaryTabs];
+const mainTabs = [backlogTab, ...sources, sprintTab, releaseTab, ...auxiliaryTabs];
 
 const emptyFilters = {
   author: '',
@@ -1669,7 +1671,7 @@ async function fetchSource(key) {
 
 export default function App() {
   const [payloads, setPayloads] = useState({});
-  const [sprintPayload, setSprintPayload] = useState(null);
+  const [planningPayload, setPlanningPayload] = useState(null);
   const [releasePageIndex, setReleasePageIndex] = useState(null);
   const [releasePagePayload, setReleasePagePayload] = useState(null);
   const [activeReleasePageNumber, setActiveReleasePageNumber] = useState(1);
@@ -1709,7 +1711,7 @@ export default function App() {
         }
 
         setPayloads(Object.fromEntries(entries));
-        setSprintPayload(nextSprintPayload);
+        setPlanningPayload(nextSprintPayload);
         setReleasePageIndex(nextReleasePageIndex);
         setReleasePagePayload(nextReleasePagePayload);
         setActiveReleasePageNumber(nextReleasePagePayload?.pageNumber ?? 1);
@@ -1808,7 +1810,7 @@ export default function App() {
                 {buildStatusTabs.map((tab) => (
                   <div key={tab.key} className="flex min-w-[9rem] flex-1 items-center justify-between gap-3 rounded-2xl bg-white/5 px-4 py-3">
                     <span>{tab.label}</span>
-                    <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePageIndex?.count ?? 0 : tab.key === sprintTab.key ? sprintPayload?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
+                    <span className="font-semibold text-white">{tab.key === releaseTab.key ? releasePageIndex?.count ?? 0 : tab.key === sprintTab.key ? planningPayload?.count ?? 0 : payloads[tab.key]?.count ?? 0}</span>
                   </div>
                 ))}
               </CardContent>
@@ -1864,6 +1866,18 @@ export default function App() {
                 </div>
               </div>
 
+              <TabsContent value="backlog">
+                <PlanningWorkspace
+                  mode="backlog"
+                  planningPayload={planningPayload}
+                  issuesPayload={payloads.issues}
+                  pullRequestsPayload={payloads['pull-requests']}
+                  repositories={repositories}
+                  searchQuery={searchQuery}
+                  onPlanningPayloadChange={setPlanningPayload}
+                />
+              </TabsContent>
+
               {sources.map((source) => {
                 const Icon = source.icon;
                 return (
@@ -1879,7 +1893,15 @@ export default function App() {
               })}
 
               <TabsContent value="sprints">
-                <SprintPanel payload={sprintPayload} searchQuery={searchQuery} />
+                <PlanningWorkspace
+                  mode="sprints"
+                  planningPayload={planningPayload}
+                  issuesPayload={payloads.issues}
+                  pullRequestsPayload={payloads['pull-requests']}
+                  repositories={repositories}
+                  searchQuery={searchQuery}
+                  onPlanningPayloadChange={setPlanningPayload}
+                />
               </TabsContent>
 
               <TabsContent value="repositories">
