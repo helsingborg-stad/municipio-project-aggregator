@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-19T11:14:14+00:00",
+    "generatedAt": "2026-05-19T13:25:35+00:00",
     "count": 104,
     "repositories": [
         {
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-json-render",
-            "fullName": "helsingborg-stad/modularity-json-render",
-            "description": "Renders a single level api-response (json) as a list. ",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Wordpress-Plugin-Boilerplate",
             "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
             "description": "A simple class based WordPress plugin structure to start off any plugin with.",
             "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-json-render",
+            "fullName": "helsingborg-stad/modularity-json-render",
+            "description": "Renders a single level api-response (json) as a list. ",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-recommend",
             "fullName": "helsingborg-stad/modularity-recommend",
             "description": "Modularity recommend. Display static or AI generated recommendation links. ",
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -241,24 +241,31 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+            "name": "algolia-index",
+            "fullName": "helsingborg-stad/algolia-index",
+            "description": "Manages algolia index.",
+            "url": "https://github.com/helsingborg-stad/algolia-index"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -290,31 +297,24 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index",
-            "fullName": "helsingborg-stad/algolia-index",
-            "description": "Manages algolia index.",
-            "url": "https://github.com/helsingborg-stad/algolia-index"
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
         },
         {
             "owner": "helsingborg-stad",
@@ -336,27 +336,6 @@
             "fullName": "helsingborg-stad/wpmu-focus-point",
             "description": "",
             "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
@@ -385,6 +364,27 @@
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
             "url": "https://github.com/helsingborg-stad/s3-local-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
