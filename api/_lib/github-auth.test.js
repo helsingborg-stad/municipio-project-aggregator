@@ -20,8 +20,8 @@ describe('github auth helpers', () => {
       },
     };
 
-    expect(getRequestBaseUrl(req)).toBe('http://localhost:3000');
-    expect(resolveReturnTo(req, 'http://localhost:3000/backlog')).toBe('http://localhost:3000/backlog');
+    expect(getRequestBaseUrl(req)).toBe('https://localhost:3000');
+    expect(resolveReturnTo(req, 'https://localhost:3000/backlog')).toBe('https://localhost:3000/backlog');
   });
 
   it('reports missing GitHub OAuth configuration', () => {

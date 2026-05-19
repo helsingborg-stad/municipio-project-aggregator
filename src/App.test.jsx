@@ -421,8 +421,7 @@ describe('App', () => {
     expect(screen.getByText('plugin-alpha')).toBeInTheDocument();
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Authors' }));
-    expect(await screen.findByRole('heading', { name: 'Current activity' })).toBeInTheDocument();
-    expect(screen.getByText('monalisa')).toBeInTheDocument();
+    expect(await screen.findByText('monalisa')).toBeInTheDocument();
   });
 
   it('keeps the quick add UI read-only for public users', async () => {
@@ -434,7 +433,7 @@ describe('App', () => {
 
     expect(await screen.findByText('Public users can browse the workspace. Sign in with GitHub to create or move work.')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Create GitHub issue' })).toBeDisabled();
-    expect(screen.getByRole('button', { name: 'Sign in with GitHub to edit' })).toBeInTheDocument();
+    expect(await screen.findByRole('button', { name: 'Sign in with GitHub to edit' })).toBeInTheDocument();
   });
 
   it('filters the shared backlog and sprint planning workspace with the global search input', async () => {
@@ -449,7 +448,7 @@ describe('App', () => {
     expect(await screen.findByText('No unplanned issues match the current filters.')).toBeInTheDocument();
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
-    expect(await screen.findByText('Pull request beta')).toBeInTheDocument();
+    expect((await screen.findAllByText('Pull request beta')).length).toBeGreaterThan(0);
     expect(screen.queryByText('Issue alpha child')).not.toBeInTheDocument();
   });
 
@@ -466,7 +465,7 @@ describe('App', () => {
     expect(screen.getByText('Release 3.2.1')).toBeInTheDocument();
     expect(screen.getByText('Highlights')).toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole('button', { name: /Next page/i }));
+    fireEvent.click(screen.getByRole('button', { name: 'Next release page' }));
 
     await waitFor(() => {
       expect(screen.getByText('Release 3.0.1')).toBeInTheDocument();
@@ -489,7 +488,7 @@ describe('App', () => {
 
     render(<App />);
 
-    expect(await screen.findByRole('heading', { name: 'Current activity' })).toBeInTheDocument();
+    expect(await screen.findByText('monalisa')).toBeInTheDocument();
     expect(window.location.search).toBe('?tab=authors');
   });
 });

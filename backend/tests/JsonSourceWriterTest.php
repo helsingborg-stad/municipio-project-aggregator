@@ -82,12 +82,15 @@ final class JsonSourceWriterTest extends TestCase
                 'company' => 'Acme',
             ]],
             [new AggregatedItem(
+                'I_kwDOA',
                 'Title',
                 'https://example.com',
                 'municipio',
                 '2026-04-23T08:00:00+00:00',
                 14,
+                'OPEN',
                 ['login' => 'octocat', 'avatarUrl' => 'https://example.com/avatar.png', 'url' => 'https://github.com/octocat'],
+                [],
                 [],
                 null,
                 'Bug',
@@ -209,20 +212,61 @@ final class JsonSourceWriterTest extends TestCase
                 'filter' => 'status:Todo',
             ],
             'status:Todo',
+            [
+                'status' => [
+                    'id' => 'status-field',
+                    'name' => 'Status',
+                    'options' => [],
+                ],
+                'iteration' => [
+                    'id' => 'iteration-field',
+                    'name' => 'Iteration',
+                    'iterations' => [],
+                    'currentIterationId' => null,
+                    'nextIterationId' => null,
+                    'completedIterationId' => null,
+                ],
+            ],
             new SprintBucket(
-                'Current Sprint',
-                'Sprint 14',
-                '2026-04-28',
-                '2026-05-11',
+                'Backlog',
+                'Backlog',
+                null,
+                null,
+                null,
                 [new SprintEntry(
+                    'item-1',
+                    'issue-1',
                     'Implement sprint tab',
                     'https://github.com/helsingborg-stad/municipio-project-aggregator/issues/1',
                     1,
                     'helsingborg-stad/municipio-project-aggregator',
                     'Issue',
-                    'Open',
+                    'OPEN',
                     'In progress',
+                    'status-in-progress',
+                    null,
+                    null,
+                    '2026-04-28T08:00:00+00:00',
+                    [],
+                    [],
+                    null,
                 )],
+            ),
+            new SprintBucket(
+                'Completed Sprint',
+                'Sprint 13',
+                'iteration-previous',
+                '2026-04-14',
+                '2026-04-27',
+                [],
+            ),
+            new SprintBucket(
+                'Current Sprint',
+                'Sprint 14',
+                'iteration-current',
+                '2026-04-28',
+                '2026-05-11',
+                [],
             ),
             null,
         );
@@ -234,6 +278,7 @@ final class JsonSourceWriterTest extends TestCase
         self::assertIsString($contents);
         self::assertStringContainsString('"source": "sprints"', $contents);
         self::assertStringContainsString('"currentFilter": "status:Todo"', $contents);
+        self::assertStringContainsString('"Backlog"', $contents);
         self::assertStringContainsString('"Current Sprint"', $contents);
     }
 }
