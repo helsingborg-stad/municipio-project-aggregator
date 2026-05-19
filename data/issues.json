@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-19T21:39:06+00:00",
+    "generatedAt": "2026-05-19T22:36:25+00:00",
     "count": 104,
     "repositories": [
         {
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Wordpress-Plugin-Boilerplate",
-            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
-            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
-            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-json-render",
             "fullName": "helsingborg-stad/modularity-json-render",
             "description": "Renders a single level api-response (json) as a list. ",
             "url": "https://github.com/helsingborg-stad/modularity-json-render"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Wordpress-Plugin-Boilerplate",
+            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
+            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
+            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
         },
         {
             "owner": "helsingborg-stad",
