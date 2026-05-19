@@ -57,9 +57,10 @@ export function getEstimatePoints(labels = []) {
       continue;
     }
 
-    const explicitMatch = labelName.match(/(?:estimate|points|size)\s*[:=]\s*(\d+)/);
+    const explicitMatch = labelName.match(/(?:estimate|points|size)\s*[:=]\s*(\d{1,3})/);
     if (explicitMatch) {
-      return Number(explicitMatch[1]);
+      const estimatePoints = Number(explicitMatch[1]);
+      return estimatePoints >= 1 && estimatePoints <= 100 ? estimatePoints : 0;
     }
 
     const sizeMatch = labelName.match(/(?:size|estimate)\s*[:=]\s*(xs|s|m|l|xl)/);

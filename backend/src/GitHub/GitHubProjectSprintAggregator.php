@@ -17,6 +17,11 @@ use RuntimeException;
  */
 final class GitHubProjectSprintAggregator
 {
+    private const EMPTY_ITERATION = [
+        'id' => null,
+        'title' => null,
+    ];
+
     /**
      * @param GitHubGraphQlClient $client GitHub GraphQL client.
      */
@@ -632,10 +637,7 @@ GRAPHQL;
             ];
         }
 
-        return [
-            'id' => null,
-            'title' => null,
-        ];
+        return self::EMPTY_ITERATION;
     }
 
     /**
@@ -729,7 +731,7 @@ GRAPHQL;
                 ? $content['repository']['nameWithOwner']
                 : 'unknown',
             $typeName === 'PullRequest' ? 'Pull Request' : 'Issue',
-            is_string($content['state'] ?? null) ? strtoupper($content['state']) : '',
+            $this->normalizeState($content['state'] ?? null),
             $status['name'],
             $status['optionId'],
             $iteration['id'],
@@ -811,5 +813,16 @@ GRAPHQL;
             'url' => is_string($milestone['url'] ?? null) ? $milestone['url'] : null,
             'dueOn' => is_string($milestone['dueOn'] ?? null) ? $milestone['dueOn'] : null,
         ];
+    }
+
+    /**
+     * Normalizes string state values to uppercase and returns an empty string for unknown values.
+     *
+     * @param mixed $state
+     * @return string
+     */
+    private function normalizeState(mixed $state): string
+    {
+        return is_string($state) ? strtoupper($state) : '';
     }
 }

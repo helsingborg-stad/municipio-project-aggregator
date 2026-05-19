@@ -239,35 +239,35 @@ export default function PlanningWorkspace({
         assigneeIds: quickAdd.assigneeId ? [quickAdd.assigneeId] : [],
       });
 
-      let projectItemId = await addItemToProject({
+      const projectItemId = await addItemToProject({
         projectId: planningPayload.project.id,
         contentId: issue.id,
       });
+      const sprintTargetMetadata = getSprintTargetMetadata({
+        sprintTarget: quickAdd.sprintTarget,
+        currentIterationId,
+        nextIterationId,
+        currentSprintTitle: planningPayload.currentSprint?.title || null,
+        nextSprintTitle: planningPayload.nextSprint?.title || null,
+        backlogStatusOptionId,
+        inProgressStatusOptionId,
+      });
 
-      if (quickAdd.sprintTarget === 'currentSprint' && currentIterationId) {
+      if (sprintTargetMetadata.iterationId) {
         await updateProjectIterationField({
           projectId: planningPayload.project.id,
           itemId: projectItemId,
           fieldId: planningPayload.fields.iteration.id,
-          iterationId: currentIterationId,
+          iterationId: sprintTargetMetadata.iterationId,
         });
       }
 
-      if (quickAdd.sprintTarget === 'nextSprint' && nextIterationId) {
-        await updateProjectIterationField({
-          projectId: planningPayload.project.id,
-          itemId: projectItemId,
-          fieldId: planningPayload.fields.iteration.id,
-          iterationId: nextIterationId,
-        });
-      }
-
-      if (backlogStatusOptionId) {
+      if (sprintTargetMetadata.statusOptionId) {
         await updateProjectSingleSelectField({
           projectId: planningPayload.project.id,
           itemId: projectItemId,
           fieldId: planningPayload.fields.status.id,
-          optionId: quickAdd.sprintTarget === 'currentSprint' && inProgressStatusOptionId ? inProgressStatusOptionId : backlogStatusOptionId,
+          optionId: sprintTargetMetadata.statusOptionId,
         });
       }
 
@@ -288,10 +288,10 @@ export default function PlanningWorkspace({
         repository: issue.repository.nameWithOwner,
         type: 'Issue',
         state: issue.state,
-        status: quickAdd.sprintTarget === 'currentSprint' && inProgressStatusOptionId ? 'In progress' : 'Backlog',
-        statusOptionId: quickAdd.sprintTarget === 'currentSprint' && inProgressStatusOptionId ? inProgressStatusOptionId : backlogStatusOptionId || '',
-        iterationId: quickAdd.sprintTarget === 'currentSprint' ? currentIterationId : quickAdd.sprintTarget === 'nextSprint' ? nextIterationId : null,
-        iterationTitle: quickAdd.sprintTarget === 'currentSprint' ? planningPayload.currentSprint?.title || null : quickAdd.sprintTarget === 'nextSprint' ? planningPayload.nextSprint?.title || null : null,
+        status: sprintTargetMetadata.statusName,
+        statusOptionId: sprintTargetMetadata.statusOptionId,
+        iterationId: sprintTargetMetadata.iterationId,
+        iterationTitle: sprintTargetMetadata.iterationTitle,
         labels: issue.labels?.nodes || [],
         assignees: issue.assignees?.nodes || [],
         updatedAt: new Date().toISOString(),
@@ -396,7 +396,7 @@ export default function PlanningWorkspace({
       }
 
       const targetItems = optimisticPayload?.[targetBucketKey]?.items || [];
-      const previousItem = targetItems[targetIndex - 1] || null;
+      const previousItem = targetIndex > 0 ? targetItems[targetIndex - 1] || null : null;
       if (projectItemId) {
         await updateProjectItemPosition({
           projectId: planningPayload.project.id,
@@ -642,7 +642,7 @@ function QuickAddCard({ quickAdd, repositories, options, parentIssueOptions, aut
               })}
             </div>
           </fieldset>
-          <div className="lg:col-span-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 lg:col-span-4">
             <p className="text-xs text-slate-500">
               {authenticated
                 ? 'The issue is created in GitHub first, then linked into the project backlog or sprint plan.'
@@ -744,7 +744,7 @@ function SprintView({ payload, buckets, metrics, statusGroups, dragState, isSavi
           </CardHeader>
           <CardContent className="space-y-3">
             {(buckets.completedSprint?.items || []).length === 0 ? <EmptyState text="No completed sprint items are available." /> : (buckets.completedSprint?.items || []).map((item) => (
-              <PlanningItemCard key={getPlanningItemKey(item)} item={item} dragState={dragState} onDragStateChange={onDragStateChange} isSaving />
+              <PlanningItemCard key={getPlanningItemKey(item)} item={item} dragState={dragState} onDragStateChange={onDragStateChange} isSaving={isSaving} />
             ))}
           </CardContent>
         </Card>
@@ -777,7 +777,7 @@ function DropSection({ title, subtitle, items, badgeText, dragState, isSaving, o
 }
 
 function PlanningItemCard({ item, dragState, onDragStateChange, isSaving = false }) {
-  const childItems = item.subIssueUrls?.map((url) => item.subIssueUrls ? url : null).filter(Boolean) || [];
+  const childItems = item.subIssueUrls?.filter(Boolean) || [];
   const isDragging = dragState?.key === getPlanningItemKey(item);
 
   return (
@@ -893,6 +893,41 @@ function EmptyState({ text }) {
 function findStatusOption(payload, names) {
   const options = payload?.fields?.status?.options || [];
   return options.find((option) => names.includes(option.name.toLowerCase()))?.id || '';
+}
+
+function getSprintTargetMetadata({
+  sprintTarget,
+  currentIterationId,
+  nextIterationId,
+  currentSprintTitle,
+  nextSprintTitle,
+  backlogStatusOptionId,
+  inProgressStatusOptionId,
+}) {
+  if (sprintTarget === 'currentSprint') {
+    return {
+      iterationId: currentIterationId,
+      iterationTitle: currentSprintTitle,
+      statusName: inProgressStatusOptionId ? 'In progress' : 'Backlog',
+      statusOptionId: inProgressStatusOptionId || backlogStatusOptionId || '',
+    };
+  }
+
+  if (sprintTarget === 'nextSprint') {
+    return {
+      iterationId: nextIterationId,
+      iterationTitle: nextSprintTitle,
+      statusName: 'Backlog',
+      statusOptionId: backlogStatusOptionId || '',
+    };
+  }
+
+  return {
+    iterationId: null,
+    iterationTitle: null,
+    statusName: 'Backlog',
+    statusOptionId: backlogStatusOptionId || '',
+  };
 }
 
 function matchesWorkspaceSearch(item, searchQuery) {

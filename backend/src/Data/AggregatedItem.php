@@ -345,6 +345,8 @@ final class AggregatedItem
     }
 
     /**
+     * Normalizes raw GitHub state values to uppercase strings for consistent payload output.
+     *
      * @param mixed $state
      * @return string
      */

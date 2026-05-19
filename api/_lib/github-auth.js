@@ -2,6 +2,7 @@ import { createHash, createHmac, randomBytes } from 'node:crypto';
 
 const authStateCookieName = 'municipio_github_auth_state';
 const sessionCookieName = 'municipio_github_session';
+const defaultSessionMaxAgeSeconds = 60 * 60 * 24 * 7;
 
 /**
  * Returns the configured GitHub OAuth settings.
@@ -73,9 +74,14 @@ export function redirect(res, url, statusCode = 302) {
  */
 export function getRequestBaseUrl(req) {
   const forwardedProtocol = req.headers['x-forwarded-proto'];
-  const protocol = Array.isArray(forwardedProtocol)
-    ? forwardedProtocol[0]
-    : (forwardedProtocol || (process.env.NODE_ENV === 'development' ? 'http' : 'https'));
+  let protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
+
+  if (Array.isArray(forwardedProtocol) && forwardedProtocol[0]) {
+    protocol = forwardedProtocol[0];
+  } else if (typeof forwardedProtocol === 'string' && forwardedProtocol !== '') {
+    protocol = forwardedProtocol;
+  }
+
   const host = req.headers['x-forwarded-host'] || req.headers.host || 'localhost:3000';
 
   return `${protocol}://${host}`;
@@ -117,6 +123,10 @@ export function resolveReturnTo(req, returnTo) {
  * @returns {string}
  */
 export function createRandomToken(size = 32) {
+  if (size < 32) {
+    throw new Error('GitHub auth tokens must use at least 32 bytes of entropy.');
+  }
+
   return toBase64Url(randomBytes(size));
 }
 
@@ -180,7 +190,7 @@ export function writeSessionCookie(res, payload) {
   const expiresAt = payload.expiresAt ? new Date(payload.expiresAt) : null;
   const maxAge = expiresAt instanceof Date && !Number.isNaN(expiresAt.getTime())
     ? Math.max(60, Math.floor((expiresAt.getTime() - Date.now()) / 1000))
-    : 60 * 60 * 24 * 7;
+    : defaultSessionMaxAgeSeconds;
 
   appendCookie(
     res,
@@ -251,13 +261,9 @@ export async function exchangeCodeForToken(input) {
     accessToken: payload.access_token,
     tokenType: payload.token_type || 'bearer',
     scope: payload.scope || '',
-    expiresAt: typeof payload.expires_in === 'number' || typeof payload.expires_in === 'string'
-      ? new Date(Date.now() + Number(payload.expires_in) * 1000).toISOString()
-      : null,
+    expiresAt: resolveExpirationDate(payload.expires_in),
     refreshToken: payload.refresh_token || undefined,
-    refreshTokenExpiresAt: typeof payload.refresh_token_expires_in === 'number' || typeof payload.refresh_token_expires_in === 'string'
-      ? new Date(Date.now() + Number(payload.refresh_token_expires_in) * 1000).toISOString()
-      : null,
+    refreshTokenExpiresAt: resolveExpirationDate(payload.refresh_token_expires_in),
   };
 }
 
@@ -398,6 +404,20 @@ function appendCookie(res, value) {
  */
 function getSecureCookieSuffix() {
   return process.env.NODE_ENV === 'development' ? '' : '; Secure';
+}
+
+/**
+ * Resolves an ISO expiration date from a seconds-until-expiry value.
+ *
+ * @param {unknown} value
+ * @returns {string | null}
+ */
+function resolveExpirationDate(value) {
+  if (typeof value !== 'number' && typeof value !== 'string') {
+    return null;
+  }
+
+  return new Date(Date.now() + Number(value) * 1000).toISOString();
 }
 
 /**
