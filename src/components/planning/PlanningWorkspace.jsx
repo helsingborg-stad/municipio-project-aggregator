@@ -16,6 +16,7 @@ import {
   updateProjectIterationField,
   updateProjectSingleSelectField,
 } from '@/lib/github';
+import { getMockAuthSession } from '@/lib/mock-data';
 import {
   createPlanningDetailMap,
   formatPlanningState,
@@ -37,6 +38,7 @@ import {
  *   pullRequestsPayload: Record<string, any> | null,
  *   repositories: Array<Record<string, any>>,
  *   searchQuery: string,
+ *   isMockMode: boolean,
  *   onPlanningPayloadChange: (payload: Record<string, any>) => void,
  * }} props
  * @returns {JSX.Element}
@@ -48,6 +50,7 @@ export default function PlanningWorkspace({
   pullRequestsPayload,
   repositories,
   searchQuery,
+  isMockMode,
   onPlanningPayloadChange,
 }) {
   const [session, setSession] = useState({ loading: true, authenticated: false, available: false, viewer: null, error: '' });
@@ -67,6 +70,11 @@ export default function PlanningWorkspace({
 
   useEffect(() => {
     let isMounted = true;
+
+    if (isMockMode) {
+      setSession(getMockAuthSession());
+      return () => {};
+    }
 
     fetchGitHubSession()
       .then((nextSession) => {
@@ -99,7 +107,7 @@ export default function PlanningWorkspace({
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [isMockMode]);
 
   useEffect(() => {
     if (!repositories.some((repository) => repository.fullName === quickAdd.repository)) {
@@ -457,6 +465,7 @@ export default function PlanningWorkspace({
           <div className="space-y-3">
             <div className="flex flex-wrap items-center gap-2">
               <Badge className="bg-cyan-300/15 text-cyan-100 ring-1 ring-cyan-200/30">GitHub-first</Badge>
+              {isMockMode ? <Badge className="bg-violet-400/15 text-violet-100 ring-1 ring-violet-300/30">Mock demo</Badge> : null}
               <Badge variant="secondary">{planningPayload?.project?.title || 'Project planning'}</Badge>
             </div>
             <div>
@@ -532,7 +541,7 @@ function AuthStatus({ session, onLogin, onLogout }) {
     return (
       <div className="space-y-1 text-right">
         <Badge variant="secondary">Public browsing only</Badge>
-        {session.error ? <p className="text-xs text-slate-500">{session.error}</p> : null}
+        {session.notice || session.error ? <p className="text-xs text-slate-500">{session.notice || session.error}</p> : null}
       </div>
     );
   }

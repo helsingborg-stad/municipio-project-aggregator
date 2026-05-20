@@ -113,6 +113,28 @@ npm run build:data
 npm run dev
 ```
 
+### Mock demo mode
+
+For UI demos, design review, or screenshot capture without live GitHub credentials, start the app and add `?mock=1` to the URL:
+
+```bash
+npm install
+npm run dev
+```
+
+Open:
+
+```bash
+http://127.0.0.1:5173/?mock=1
+```
+
+Mock mode:
+
+- loads local planning, issue, pull request, and release payloads
+- keeps public browsing active
+- disables authenticated editing
+- preserves the real GitHub-first production architecture
+
 ### Public browsing plus authenticated editing
 
 Run the app through Vercel so `/api/*` routes are available:
@@ -168,3 +190,13 @@ Recommended deployment split:
 - authenticated edits always go back to GitHub directly through the Vercel proxy
 
 That keeps the system GitHub-native, simple, and operationally lightweight.
+
+## Demo screenshots
+
+### Mock backlog view
+
+![Mock backlog demo](./screenshots/backlog-mock-demo.png)
+
+### Mock sprint board view
+
+![Mock sprint board demo](./screenshots/sprint-mock-demo.png)

@@ -97,6 +97,14 @@ For authenticated editing through the Vercel serverless routes, run the app with
 npx vercel dev
 ```
 
+For local demos without live GitHub data, start the UI and open:
+
+```bash
+http://127.0.0.1:5173/?mock=1
+```
+
+Mock mode loads bundled planning payloads for screenshots and review while keeping the workspace in public-browsing mode.
+
 ```bash
 npm run build
 ```

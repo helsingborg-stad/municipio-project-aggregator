@@ -25,6 +25,11 @@ import {
   hasSubIssues,
   truncateText,
 } from '@/lib/dashboard';
+import {
+  getMockDashboardData,
+  getMockReleasePagePayload,
+  isMockModeEnabled,
+} from '@/lib/mock-data';
 
 const sources = [
   { key: 'issues', label: 'Issues', icon: Ticket, accent: 'bg-rose-500/15 text-rose-200 ring-1 ring-rose-400/30' },
@@ -1670,6 +1675,7 @@ async function fetchSource(key) {
 }
 
 export default function App() {
+  const isMockMode = typeof window !== 'undefined' && isMockModeEnabled(window.location.search);
   const [payloads, setPayloads] = useState({});
   const [planningPayload, setPlanningPayload] = useState(null);
   const [releasePageIndex, setReleasePageIndex] = useState(null);
@@ -1695,6 +1701,23 @@ export default function App() {
     async function loadDashboard() {
       try {
         setStatus('loading');
+
+        if (isMockMode) {
+          const mockData = getMockDashboardData();
+
+          if (!isActive) {
+            return;
+          }
+
+          setPayloads(mockData.payloads);
+          setPlanningPayload(mockData.planningPayload);
+          setReleasePageIndex(mockData.releasePageIndex);
+          setReleasePagePayload(mockData.releasePagePayload);
+          setActiveReleasePageNumber(mockData.releasePagePayload?.pageNumber ?? 1);
+          setStatus('ready');
+          return;
+        }
+
         const [entries, nextSprintPayload, nextReleasePageIndex] = await Promise.all([
           Promise.all(sources.map(async (source) => [source.key, await fetchSource(source.key)])),
           fetchOptionalDataFile('sprints.json'),
@@ -1731,7 +1754,7 @@ export default function App() {
     return () => {
       isActive = false;
     };
-  }, []);
+  }, [isMockMode]);
 
   const loadReleasePage = async (pageNumber) => {
     const pages = Array.isArray(releasePageIndex?.pages) ? releasePageIndex.pages : [];
@@ -1744,6 +1767,13 @@ export default function App() {
     setIsLoadingReleasePage(true);
 
     try {
+      if (isMockMode) {
+        const nextPagePayload = getMockReleasePagePayload(nextPage.pageNumber);
+        setReleasePagePayload(nextPagePayload);
+        setActiveReleasePageNumber(nextPage.pageNumber);
+        return;
+      }
+
       const nextPagePayload = await fetchDataFile(`releases/${nextPage.file}`);
       setReleasePagePayload(nextPagePayload);
       setActiveReleasePageNumber(nextPage.pageNumber);
@@ -1874,6 +1904,7 @@ export default function App() {
                   pullRequestsPayload={payloads['pull-requests']}
                   repositories={repositories}
                   searchQuery={searchQuery}
+                  isMockMode={isMockMode}
                   onPlanningPayloadChange={setPlanningPayload}
                 />
               </TabsContent>
@@ -1900,6 +1931,7 @@ export default function App() {
                   pullRequestsPayload={payloads['pull-requests']}
                   repositories={repositories}
                   searchQuery={searchQuery}
+                  isMockMode={isMockMode}
                   onPlanningPayloadChange={setPlanningPayload}
                 />
               </TabsContent>
