@@ -23,6 +23,8 @@ final class GraphQlSearchQueryBuilderTest extends TestCase
 
         self::assertStringContainsString('repo:helsingborg-stad/styleguide is:issue is:open sort:created-desc', $query);
         self::assertStringContainsString('... on Issue', $query);
+        self::assertStringContainsString('labels(first: 20)', $query);
+        self::assertStringContainsString('state', $query);
         self::assertStringContainsString('subIssuesSummary', $query);
         self::assertStringNotContainsString('after:', $query);
     }
@@ -39,6 +41,7 @@ final class GraphQlSearchQueryBuilderTest extends TestCase
         self::assertStringContainsString('repo:helsingborg-stad/styleguide is:pr is:open sort:created-desc', $query);
         self::assertStringContainsString('after: "cursor-123"', $query);
         self::assertStringContainsString('... on PullRequest', $query);
+        self::assertStringContainsString('labels(first: 20)', $query);
         self::assertStringNotContainsString('issueType', $query);
         self::assertStringNotContainsString('subIssuesSummary', $query);
         self::assertStringNotContainsString('subIssues(first: 100)', $query);

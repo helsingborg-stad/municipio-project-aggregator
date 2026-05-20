@@ -1,20 +1,24 @@
 # municipio-project-aggregator
 
-Aggregates open issues and pull requests from repositories tagged for Municipio work into separate JSON sources and renders them in a React dashboard with issue, pull request, repository, and contributor views.
+Aggregates GitHub-native Municipio planning data into static JSON and renders a fast operational UI for backlog management, sprint planning, issue decomposition, and release tracking.
 
 Issue and pull request aggregation uses GitHub repository-topic discovery plus paginated GraphQL item queries per matched repository, which reduces the number of follow-up API calls compared with expanding every item through multiple REST endpoints.
 
 ## Architecture
 
 - `backend/` contains the PHP aggregation layer. It follows a small SOLID-oriented structure with explicit contracts, immutable data objects, and source-specific services.
+- `api/` contains minimal Vercel serverless functions for GitHub OAuth with PKCE and an authenticated GraphQL proxy.
 - `public/data/` contains generated JSON files such as `issues.json` and `pull-requests.json`.
 - `src/` contains the React UI built with Vite, Tailwind CSS, and shadcn-style components.
 - `dist/` contains the production build published by GitHub Pages.
 - Repository selection is based on GitHub repository topics across all of GitHub, currently `municipio-se` and `getmunicipio`.
+- Sprint and backlog planning remain GitHub-first: GitHub Projects v2, issues, labels, iterations, milestones, pull requests, and sub-issues remain the canonical state.
+
+Detailed planning architecture, OAuth setup, and deployment guidance live in [`docs/github-first-planning.md`](./docs/github-first-planning.md).
 
 ## Run locally
 
-The aggregator can use a GitHub token for higher API limits, but it can also fall back to public GitHub REST endpoints for public repositories.
+The public planning workspace uses generated JSON data. Authenticated editing uses the Vercel `api/` functions to write directly back to GitHub.
 
 1. Create a personal access token if you need higher GitHub API limits.
 2. Provide the token in one of these ways:
@@ -32,6 +36,8 @@ npm run build:data
 
 The PHP backend reads `.env` and `.env.local` from the project root for local debugging.
 `ITEM_LOOKBACK_DAYS` is optional and defaults to `365`, which limits gathered issues and pull requests to the last year.
+
+Copy the runtime variables from `.env.example` when you want GitHub OAuth editing locally or on Vercel.
 
 ## Commands
 
@@ -58,6 +64,7 @@ npm run build:data
 ```
 
 Generates `public/data/issues.json`, `public/data/pull-requests.json`, and release pages from repositories across GitHub tagged with the tracked topics.
+It also generates `public/data/sprints.json`, which now includes backlog, completed sprint, current sprint, next sprint, status field metadata, and iteration metadata for the GitHub-first planning UI.
 
 Use `BUILD_TARGETS` to refresh only the datasets you need:
 
@@ -69,11 +76,35 @@ BUILD_TARGETS=sprints php backend/bin/build.php
 
 Sprint refreshes query GitHub Project v2 data and require a token with project read access, including the `read:project` scope.
 
+You can also override the tracked project and repository settings:
+
+```bash
+GITHUB_TOPICS=municipio-se,getmunicipio
+GITHUB_PROJECT_OWNER=helsingborg-stad
+GITHUB_PROJECT_NUMBER=7
+GITHUB_RELEASE_REPOSITORY=municipio-se/municipio-deployment
+```
+
 ```bash
 npm run dev
 ```
 
 Starts the React UI locally. The UI reads the generated JSON files from `public/data/`.
+
+For authenticated editing through the Vercel serverless routes, run the app with:
+
+```bash
+npx vercel dev
+```
+
+For local demos without live GitHub data, start the UI and open:
+
+```bash
+http://127.0.0.1:5173/?mock=1
+```
+
+Mock mode loads bundled planning payloads for screenshots and review while keeping the workspace in public-browsing mode.
+The demo data includes multiple future sprints, issue descriptions, and color-coded planning statuses so the list/card sprint views can be reviewed without live GitHub access.
 
 ```bash
 npm run build
@@ -102,3 +133,24 @@ Serves the built site from `dist/` through Caddy at `http://127.0.0.1:5400`. Run
 composer test
 npm test
 ```
+
+## GitHub OAuth and Vercel setup
+
+Create a GitHub OAuth App and configure:
+
+- Homepage URL: your frontend origin
+- Authorization callback URL: `https://your-domain.tld/api/auth/callback`
+
+Set these environment variables in Vercel:
+
+- `GITHUB_APP_URL`
+- `GITHUB_OAUTH_CLIENT_ID`
+- `GITHUB_OAUTH_CLIENT_SECRET`
+- `GITHUB_SESSION_SECRET`
+- `GITHUB_OAUTH_SCOPES`
+
+The serverless auth layer is intentionally minimal:
+
+- public users browse generated static data
+- authenticated users edit through GitHub GraphQL
+- GitHub remains the source of truth

@@ -10,13 +10,16 @@ namespace MunicipioProjectAggregator\Backend\Data;
 final class AggregatedItem
 {
     /**
+     * @param string $id GitHub node identifier.
      * @param string $title Item title.
      * @param string $url Item URL.
      * @param string $repository Repository name.
      * @param string $createdAt ISO 8601 creation timestamp.
      * @param int $number GitHub issue or pull request number.
+     * @param string $state GitHub item state.
      * @param array<string, string>|null $author Author information.
      * @param array<int, array<string, string>> $assignees Assignee information.
+     * @param array<int, array<string, string>> $labels Label information.
      * @param array<string, string|null>|null $milestone Milestone information.
      * @param string|null $type GitHub issue type.
      * @param array<string, int> $subIssues Sub-issue summary.
@@ -25,13 +28,16 @@ final class AggregatedItem
      * @param array<int, array<string, string>> $relationships Relationship links.
      */
     public function __construct(
+        private readonly string $id,
         private readonly string $title,
         private readonly string $url,
         private readonly string $repository,
         private readonly string $createdAt,
         private readonly int $number,
+        private readonly string $state,
         private readonly ?array $author,
         private readonly array $assignees,
+        private readonly array $labels,
         private readonly ?array $milestone,
         private readonly ?string $type,
         private readonly array $subIssues,
@@ -52,6 +58,7 @@ final class AggregatedItem
         $relationships = self::extractGraphQlRelationships($node['timelineItems']['nodes'] ?? []);
 
         return new self(
+            (string) ($node['id'] ?? ''),
             (string) ($node['title'] ?? ''),
             (string) ($node['url'] ?? ''),
             is_array($node['repository'] ?? null) && is_string($node['repository']['nameWithOwner'] ?? null)
@@ -59,8 +66,10 @@ final class AggregatedItem
                 : 'unknown',
             (string) ($node['createdAt'] ?? ''),
             (int) ($node['number'] ?? 0),
+            self::extractState($node['state'] ?? null),
             self::extractGraphQlUser($node['author'] ?? null),
             self::extractGraphQlUsers($node['assignees']['nodes'] ?? []),
+            self::extractGraphQlLabels($node['labels']['nodes'] ?? []),
             self::extractGraphQlMilestone($node['milestone'] ?? null),
             self::extractType($node['issueType'] ?? null),
             self::extractGraphQlSubIssues($node['subIssuesSummary'] ?? null),
@@ -93,13 +102,16 @@ final class AggregatedItem
         $relationships = self::extractRelationships($timelineEvents);
 
         return new self(
+            (string) ($item['node_id'] ?? ''),
             (string) ($item['title'] ?? ''),
             (string) ($item['html_url'] ?? ''),
             $repository,
             (string) ($item['created_at'] ?? ''),
             (int) ($item['number'] ?? 0),
+            self::extractState($item['state'] ?? null),
             self::extractUser($detail['user'] ?? null, $authorProfile),
             self::extractUsers($detail['assignees'] ?? []),
+            self::extractLabels($detail['labels'] ?? []),
             self::extractMilestone($detail['milestone'] ?? null),
             self::extractType($detail['type'] ?? null),
             self::extractSubIssues($detail['sub_issues_summary'] ?? null),
@@ -115,13 +127,16 @@ final class AggregatedItem
     public function toArray(): array
     {
         return [
+            'id' => $this->id,
             'title' => $this->title,
             'url' => $this->url,
             'repository' => $this->repository,
             'createdAt' => $this->createdAt,
             'number' => $this->number,
+            'state' => $this->state,
             'author' => $this->author,
             'assignees' => $this->assignees,
+            'labels' => $this->labels,
             'milestone' => $this->milestone,
             'type' => $this->type,
             'subIssues' => $this->subIssues,
@@ -182,6 +197,34 @@ final class AggregatedItem
     }
 
     /**
+     * @param mixed $labels
+     * @return array<int, array<string, string>>
+     */
+    private static function extractLabels(mixed $labels): array
+    {
+        if (!is_array($labels)) {
+            return [];
+        }
+
+        $result = [];
+
+        foreach ($labels as $label) {
+            if (!is_array($label) || !is_string($label['name'] ?? null) || $label['name'] === '') {
+                continue;
+            }
+
+            $result[] = [
+                'id' => (string) ($label['node_id'] ?? $label['id'] ?? ''),
+                'name' => $label['name'],
+                'color' => is_string($label['color'] ?? null) ? $label['color'] : '',
+                'description' => is_string($label['description'] ?? null) ? $label['description'] : '',
+            ];
+        }
+
+        return $result;
+    }
+
+    /**
      * @param mixed $user
      * @return array<string, string>|null
      */
@@ -217,6 +260,34 @@ final class AggregatedItem
             if ($normalizedUser !== null) {
                 $result[] = $normalizedUser;
             }
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param mixed $labels
+     * @return array<int, array<string, string>>
+     */
+    private static function extractGraphQlLabels(mixed $labels): array
+    {
+        if (!is_array($labels)) {
+            return [];
+        }
+
+        $result = [];
+
+        foreach ($labels as $label) {
+            if (!is_array($label) || !is_string($label['name'] ?? null) || $label['name'] === '') {
+                continue;
+            }
+
+            $result[] = [
+                'id' => is_string($label['id'] ?? null) ? $label['id'] : '',
+                'name' => $label['name'],
+                'color' => is_string($label['color'] ?? null) ? $label['color'] : '',
+                'description' => is_string($label['description'] ?? null) ? $label['description'] : '',
+            ];
         }
 
         return $result;
@@ -271,6 +342,17 @@ final class AggregatedItem
         }
 
         return null;
+    }
+
+    /**
+     * Normalizes raw GitHub state values to uppercase strings for consistent payload output.
+     *
+     * @param mixed $state
+     * @return string
+     */
+    private static function extractState(mixed $state): string
+    {
+        return is_string($state) ? strtoupper($state) : '';
     }
 
     /**
