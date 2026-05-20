@@ -78,6 +78,7 @@ describe('App', () => {
     expect(await screen.findByRole('heading', { name: 'Sprint board' })).toBeInTheDocument();
     expect(screen.getByText('Sprint 14')).toBeInTheDocument();
     expect(screen.getByText('Issue alpha child')).toBeInTheDocument();
+    expect(screen.queryByText('Deliver drag and drop for the active sprint so issues can be moved without leaving the planning surface.')).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'List view' })).toHaveClass('bg-cyan-300/15');
     expect(screen.getAllByText('Sprint 16').length).toBeGreaterThan(0);
 
