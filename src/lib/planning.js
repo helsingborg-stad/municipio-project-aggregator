@@ -83,13 +83,14 @@ export function mergePlanningItem(item, detailsByUrl) {
   const detail = item.url ? detailsByUrl.get(item.url) : null;
   const labels = item.labels?.length ? item.labels : detail?.labels || [];
   const assignees = item.assignees?.length ? item.assignees : detail?.assignees || [];
+  const subIssueUrls = getPlanningSubIssueUrls(item, detail);
   const mergedItem = {
     ...detail,
     ...item,
     labels,
     assignees,
-    subIssues: detail?.subIssues || { total: 0, completed: 0, percentCompleted: 0 },
-    subIssueUrls: detail?.subIssueUrls || [],
+    subIssues: item?.subIssues || detail?.subIssues || { total: 0, completed: 0, percentCompleted: 0 },
+    subIssueUrls,
     relationshipSummary: detail?.relationshipSummary || { blockedBy: 0, totalBlockedBy: 0, blocking: 0, totalBlocking: 0, linked: 0 },
     relationships: detail?.relationships || [],
     displayState: formatPlanningState(item.state),
@@ -212,6 +213,213 @@ export function movePlanningItem(payload, item, targetBucketKey, targetIndex = 0
   }
 
   return nextPayload;
+}
+
+/**
+ * Moves a sprint item within a specific iteration bucket and updates its status.
+ *
+ * @param {Record<string, any>} payload
+ * @param {Record<string, any>} item
+ * @param {{
+ *   iterationId: string,
+ *   statusName: string,
+ *   statusOptionId?: string,
+ *   targetIndex?: number,
+ *   statusOrder?: string[],
+ * }} input
+ * @returns {Record<string, any>}
+ */
+export function movePlanningSprintItem(payload, item, input) {
+  const nextPayload = structuredClone(payload);
+  const itemKey = getPlanningItemKey(item);
+  const normalizedTargetIndex = Number.isInteger(input?.targetIndex) ? input.targetIndex : 0;
+  const normalizedStatusName = input?.statusName || item.status || 'No status';
+  const normalizedStatusOrder = Array.isArray(input?.statusOrder)
+    ? input.statusOrder.filter((status) => typeof status === 'string' && status.trim())
+    : [];
+  let movedItem = null;
+
+  if (Array.isArray(nextPayload?.sprints)) {
+    nextPayload.sprints = nextPayload.sprints.map((bucket) => {
+      const bucketItems = Array.isArray(bucket?.items) ? bucket.items : [];
+      const nextItems = bucketItems.filter((entry) => {
+        const isMatch = getPlanningItemKey(entry) === itemKey;
+        if (isMatch) {
+          movedItem = {
+            ...entry,
+            ...item,
+            iterationId: input.iterationId,
+            iterationTitle: bucket.iterationId === input.iterationId ? bucket.title : entry.iterationTitle,
+            status: normalizedStatusName,
+            statusOptionId: input?.statusOptionId ?? entry.statusOptionId ?? '',
+          };
+        }
+        return !isMatch;
+      });
+
+      return {
+        ...bucket,
+        items: nextItems,
+        itemCount: nextItems.length,
+      };
+    });
+  }
+
+  const targetBucket = Array.isArray(nextPayload?.sprints)
+    ? nextPayload.sprints.find((bucket) => bucket.iterationId === input.iterationId)
+    : null;
+
+  if (!targetBucket) {
+    return nextPayload;
+  }
+
+  const statusGroups = (targetBucket.items || []).reduce((result, entry) => {
+    const status = entry.status || 'No status';
+    const collection = result.get(status) || [];
+    collection.push(entry);
+    result.set(status, collection);
+    return result;
+  }, new Map());
+
+  const targetStatusItems = [...(statusGroups.get(normalizedStatusName) || [])];
+  const insertAt = Math.max(0, Math.min(normalizedTargetIndex, targetStatusItems.length));
+  targetStatusItems.splice(insertAt, 0, {
+    ...(movedItem || item),
+    iterationId: input.iterationId,
+    iterationTitle: targetBucket.title,
+    status: normalizedStatusName,
+    statusOptionId: input?.statusOptionId ?? movedItem?.statusOptionId ?? item.statusOptionId ?? '',
+  });
+  statusGroups.set(normalizedStatusName, targetStatusItems);
+
+  const orderedStatuses = [
+    ...normalizedStatusOrder,
+    ...[...statusGroups.keys()].filter((status) => !normalizedStatusOrder.includes(status)),
+  ];
+
+  targetBucket.items = orderedStatuses.flatMap((status) => statusGroups.get(status) || []);
+  targetBucket.itemCount = targetBucket.items.length;
+
+  syncSprintAliases(nextPayload);
+
+  return nextPayload;
+}
+
+/**
+ * Reassigns a planning issue to a parent issue or breaks it out as a top-level item.
+ *
+ * @param {Record<string, any>} payload
+ * @param {Record<string, any>} childItem
+ * @param {Record<string, any> | null} parentItem
+ * @returns {Record<string, any>}
+ */
+export function reparentPlanningItem(payload, childItem, parentItem = null) {
+  const nextPayload = structuredClone(payload);
+  const childKey = getPlanningItemKey(childItem);
+  const childUrl = childItem?.url || '';
+
+  if (!childUrl) {
+    return nextPayload;
+  }
+
+  const updateBucketItems = (items = []) => {
+    const nextItems = items.map((entry) => ({ ...entry }));
+
+    nextItems.forEach((entry) => {
+      const subIssueUrls = Array.isArray(entry.subIssueUrls) ? entry.subIssueUrls.filter(Boolean) : [];
+      const filteredSubIssueUrls = subIssueUrls.filter((url) => url !== childUrl);
+
+      if (filteredSubIssueUrls.length !== subIssueUrls.length) {
+        const nextTotal = Math.max(0, Number(entry.subIssues?.total || 0) - 1);
+        const nextCompleted = Math.min(Number(entry.subIssues?.completed || 0), nextTotal);
+        entry.subIssueUrls = filteredSubIssueUrls;
+        entry.subIssues = {
+          total: nextTotal,
+          completed: nextCompleted,
+          percentCompleted: getCompletedPercent(nextTotal, nextCompleted),
+        };
+      }
+
+      if (getPlanningItemKey(entry) === childKey) {
+        entry.parentIssueUrl = parentItem?.url || '';
+        entry.parentIssueTitle = parentItem?.title || '';
+      }
+    });
+
+    if (parentItem?.url) {
+      const parentKey = getPlanningItemKey(parentItem);
+      const parentEntry = nextItems.find((entry) => getPlanningItemKey(entry) === parentKey);
+
+      if (parentEntry) {
+        const subIssueUrls = Array.isArray(parentEntry.subIssueUrls) ? parentEntry.subIssueUrls.filter(Boolean) : [];
+        if (!subIssueUrls.includes(childUrl)) {
+          parentEntry.subIssueUrls = [...subIssueUrls, childUrl];
+          parentEntry.subIssues = {
+            total: Number(parentEntry.subIssues?.total || 0) + 1,
+            completed: Number(parentEntry.subIssues?.completed || 0),
+            percentCompleted: getCompletedPercent(
+              Number(parentEntry.subIssues?.total || 0) + 1,
+              Number(parentEntry.subIssues?.completed || 0),
+            ),
+          };
+        }
+      }
+    }
+
+    return nextItems;
+  };
+
+  if (nextPayload?.backlog) {
+    nextPayload.backlog.items = updateBucketItems(nextPayload.backlog.items);
+    nextPayload.backlog.itemCount = nextPayload.backlog.items.length;
+  }
+
+  if (Array.isArray(nextPayload?.sprints)) {
+    nextPayload.sprints = nextPayload.sprints.map((bucket) => {
+      const nextItems = updateBucketItems(bucket.items);
+
+      return {
+        ...bucket,
+        items: nextItems,
+        itemCount: nextItems.length,
+      };
+    });
+  }
+
+  syncSprintAliases(nextPayload);
+
+  return nextPayload;
+}
+
+function syncSprintAliases(payload) {
+  const sprintBucketsByIterationId = new Map(
+    (Array.isArray(payload?.sprints) ? payload.sprints : [])
+      .filter((bucket) => bucket?.iterationId)
+      .map((bucket) => [bucket.iterationId, bucket]),
+  );
+
+  ['currentSprint', 'nextSprint', 'completedSprint'].forEach((bucketKey) => {
+    const iterationId = payload?.[bucketKey]?.iterationId;
+    if (iterationId && sprintBucketsByIterationId.has(iterationId)) {
+      payload[bucketKey] = sprintBucketsByIterationId.get(iterationId);
+    }
+  });
+}
+
+function getPlanningSubIssueUrls(item, detail) {
+  if (Array.isArray(item?.subIssueUrls)) {
+    return item.subIssueUrls;
+  }
+
+  if (Array.isArray(detail?.subIssueUrls)) {
+    return detail.subIssueUrls;
+  }
+
+  return [];
+}
+
+function getCompletedPercent(total, completed) {
+  return total > 0 ? Math.round((completed / total) * 100) : 0;
 }
 
 /**

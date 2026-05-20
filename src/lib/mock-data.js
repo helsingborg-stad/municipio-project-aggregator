@@ -502,7 +502,7 @@ const mockAuthSession = {
   available: false,
   viewer: null,
   error: '',
-  notice: 'Mock demo mode uses local GitHub data and disables authenticated editing.',
+  notice: 'Mock demo mode uses local GitHub data and simulates sprint drag/drop and subtask editing locally.',
 };
 
 export function isMockModeEnabled(search = '') {

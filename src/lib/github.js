@@ -303,3 +303,30 @@ export async function addGitHubSubIssue(input) {
     },
   );
 }
+
+/**
+ * Removes a GitHub-native sub-issue relationship.
+ *
+ * @param {{parentIssueId: string, childIssueId: string}} input
+ * @returns {Promise<void>}
+ */
+export async function removeGitHubSubIssue(input) {
+  await runGitHubGraphql(
+    `mutation RemoveSubIssue($input: RemoveSubIssueInput!) {
+      removeSubIssue(input: $input) {
+        issue {
+          id
+        }
+        subIssue {
+          id
+        }
+      }
+    }`,
+    {
+      input: {
+        issueId: input.parentIssueId,
+        subIssueId: input.childIssueId,
+      },
+    },
+  );
+}

@@ -11,6 +11,7 @@ import {
   fetchGitHubSession,
   fetchRepositoryPlanningOptions,
   logoutGitHub,
+  removeGitHubSubIssue,
   startGitHubLogin,
   updateProjectItemPosition,
   updateProjectIterationField,
@@ -25,7 +26,11 @@ import {
   getUnplannedBacklogItems,
   mergePlanningItem,
   movePlanningItem,
+  movePlanningSprintItem,
+  reparentPlanningItem,
 } from '@/lib/planning';
+
+const sprintListGridClassName = 'grid grid-cols-[minmax(0,2.4fr)_minmax(7rem,1fr)_minmax(10rem,1.1fr)_minmax(8rem,0.8fr)_minmax(6rem,0.6fr)_minmax(9rem,0.8fr)] gap-3';
 
 /**
  * Renders the GitHub-first backlog and sprint planning workspace.
@@ -237,8 +242,16 @@ export default function PlanningWorkspace({
     nextSprint: getBucketMetrics(projectBuckets.nextSprint),
     completedSprint: getBucketMetrics(projectBuckets.completedSprint),
   };
+  const canManagePlanning = session.authenticated || isMockMode;
 
   const sprintStatusGroups = useMemo(() => getSprintStatusGroups(projectBuckets.currentSprint?.items || []), [projectBuckets.currentSprint]);
+  const sprintParentByChildUrl = useMemo(
+    () => buildSubIssueParentMap([
+      ...(projectBuckets.backlog?.items || []),
+      ...sprintBuckets.flatMap((bucket) => bucket.items || []),
+    ]),
+    [projectBuckets.backlog, sprintBuckets],
+  );
   const quickAddOptions = repoOptionsByName[quickAdd.repository] || { repository: null, labels: [], assignees: [] };
   const quickAddSprintOptions = useMemo(
     () => getQuickAddSprintOptions(sprintBuckets, {
@@ -358,7 +371,11 @@ export default function PlanningWorkspace({
         updatedAt: new Date().toISOString(),
       };
 
-      onPlanningPayloadChange(insertPlanningItemIntoPayload(planningPayload, nextItem, quickAdd.sprintTarget, sprintTargetMetadata));
+      const parentIssue = quickAdd.parentIssueId
+        ? parentIssueOptions.find((item) => item.contentId === quickAdd.parentIssueId) || null
+        : null;
+      const insertedPayload = insertPlanningItemIntoPayload(planningPayload, nextItem, quickAdd.sprintTarget, sprintTargetMetadata);
+      onPlanningPayloadChange(parentIssue ? reparentPlanningItem(insertedPayload, nextItem, parentIssue) : insertedPayload);
       setQuickAdd({
         title: '',
         description: '',
@@ -377,7 +394,7 @@ export default function PlanningWorkspace({
   }
 
   async function handleItemDrop(item, targetBucketKey, targetIndex = 0) {
-    if (!session.authenticated) {
+    if (!canManagePlanning) {
       setActionError('Sign in with GitHub to update sprint planning.');
       return;
     }
@@ -389,6 +406,11 @@ export default function PlanningWorkspace({
     onPlanningPayloadChange(optimisticPayload);
 
     try {
+      if (!session.authenticated) {
+        setFlashMessage('Mock sprint planning updated locally.');
+        return;
+      }
+
       let projectItemId = item.projectItemId;
 
       if (!projectItemId) {
@@ -478,12 +500,12 @@ export default function PlanningWorkspace({
   }
 
   async function handleStatusDrop(item, option) {
-    if (!session.authenticated) {
+    if (!canManagePlanning) {
       setActionError('Sign in with GitHub to move sprint items.');
       return;
     }
 
-    if (!item.projectItemId) {
+    if (session.authenticated && !item.projectItemId) {
       setActionError('Only project items can be moved across sprint columns.');
       return;
     }
@@ -495,6 +517,11 @@ export default function PlanningWorkspace({
     onPlanningPayloadChange(optimisticPayload);
 
     try {
+      if (!session.authenticated) {
+        setFlashMessage(`Moved ${item.title} to ${option.name} in mock mode.`);
+        return;
+      }
+
       await updateProjectSingleSelectField({
         projectId: planningPayload.project.id,
         itemId: item.projectItemId,
@@ -509,6 +536,132 @@ export default function PlanningWorkspace({
     } finally {
       setIsSaving(false);
       setDragState(null);
+    }
+  }
+
+  async function handleSprintListDrop(item, sprintBucket, option, targetIndex = 0) {
+    if (!canManagePlanning) {
+      setActionError('Sign in with GitHub to rearrange sprint tasks.');
+      return;
+    }
+
+    if (!option) {
+      return;
+    }
+
+    if (session.authenticated && !item.projectItemId) {
+      setActionError('Only project items can be rearranged inside sprint statuses.');
+      return;
+    }
+
+    const statusOrder = (planningPayload?.fields?.status?.options || []).map((statusOption) => statusOption.name);
+    const optimisticPayload = movePlanningSprintItem(planningPayload, item, {
+      iterationId: sprintBucket.iterationId,
+      statusName: option.name,
+      statusOptionId: option.id,
+      targetIndex,
+      statusOrder,
+    });
+
+    setActionError('');
+    setFlashMessage('');
+    setIsSaving(true);
+    onPlanningPayloadChange(optimisticPayload);
+
+    try {
+      if (!session.authenticated) {
+        setFlashMessage(`Mock sprint list updated for ${item.title}.`);
+        return;
+      }
+
+      if (item.statusOptionId !== option.id) {
+        await updateProjectSingleSelectField({
+          projectId: planningPayload.project.id,
+          itemId: item.projectItemId,
+          fieldId: planningPayload.fields.status.id,
+          optionId: option.id,
+        });
+      }
+
+      const updatedSprintBucket = optimisticPayload.sprints?.find((bucket) => bucket.iterationId === sprintBucket.iterationId);
+      const targetItems = updatedSprintBucket?.items || [];
+      const itemIndex = targetItems.findIndex((entry) => getPlanningItemKey(entry) === getPlanningItemKey(item));
+      const previousItem = itemIndex > 0 ? targetItems[itemIndex - 1] : null;
+
+      await updateProjectItemPosition({
+        projectId: planningPayload.project.id,
+        itemId: item.projectItemId,
+        afterId: previousItem?.projectItemId || null,
+      });
+
+      setFlashMessage(`Updated ${item.title} in ${option.name}.`);
+    } catch (error) {
+      onPlanningPayloadChange(planningPayload);
+      setActionError(error instanceof Error ? error.message : 'Could not rearrange the sprint list.');
+    } finally {
+      setIsSaving(false);
+      setDragState(null);
+    }
+  }
+
+  async function handleSubtaskAssignment(childItem, parentContentId, sprintBucket) {
+    if (!canManagePlanning) {
+      setActionError('Sign in with GitHub to manage subtasks.');
+      return;
+    }
+
+    if (childItem.type !== 'Issue' || !childItem.contentId) {
+      setActionError('Only GitHub issues can be assigned as subtasks.');
+      return;
+    }
+
+    const currentParent = sprintParentByChildUrl.get(childItem.url || '') || null;
+    const nextParent = parentContentId
+      ? (sprintBucket.items || []).find((item) => item.contentId === parentContentId) || null
+      : null;
+
+    if (nextParent && (nextParent.type !== 'Issue' || !nextParent.contentId)) {
+      setActionError('Only existing GitHub issues can become parent tasks.');
+      return;
+    }
+
+    if ((currentParent?.contentId || '') === (nextParent?.contentId || '')) {
+      return;
+    }
+
+    setActionError('');
+    setFlashMessage('');
+    setIsSaving(true);
+
+    const optimisticPayload = reparentPlanningItem(planningPayload, childItem, nextParent);
+    onPlanningPayloadChange(optimisticPayload);
+
+    try {
+      if (!session.authenticated) {
+        setFlashMessage(nextParent ? `Mock subtask linked under ${nextParent.title}.` : `Mock subtask ${childItem.title} broke out as a top-level task.`);
+        return;
+      }
+
+      if (currentParent?.contentId) {
+        await removeGitHubSubIssue({
+          parentIssueId: currentParent.contentId,
+          childIssueId: childItem.contentId,
+        });
+      }
+
+      if (nextParent?.contentId) {
+        await addGitHubSubIssue({
+          parentIssueId: nextParent.contentId,
+          childIssueId: childItem.contentId,
+        });
+      }
+
+      setFlashMessage(nextParent ? `Linked ${childItem.title} under ${nextParent.title}.` : `Broke out ${childItem.title} as a top-level task.`);
+    } catch (error) {
+      onPlanningPayloadChange(planningPayload);
+      setActionError(error instanceof Error ? error.message : 'Could not update the subtask relationship.');
+    } finally {
+      setIsSaving(false);
     }
   }
 
@@ -578,11 +731,15 @@ export default function PlanningWorkspace({
           metrics={projectMetrics}
           statusGroups={sprintStatusGroups}
           sprintViewMode={sprintViewMode}
+          canManagePlanning={canManagePlanning}
+          parentByChildUrl={sprintParentByChildUrl}
           dragState={dragState}
           isSaving={isSaving}
           onSprintViewModeChange={setSprintViewMode}
           onDragStateChange={setDragState}
           onStatusDrop={handleStatusDrop}
+          onSprintListDrop={handleSprintListDrop}
+          onSubtaskAssignment={handleSubtaskAssignment}
           onBucketDrop={handleItemDrop}
         />
       )}
@@ -596,9 +753,10 @@ function AuthStatus({ session, onLogin, onLogout }) {
   }
 
   if (!session.available) {
+    const isMockSession = String(session.notice || '').toLowerCase().includes('mock demo mode');
     return (
       <div className="space-y-1 text-right">
-        <Badge variant="secondary">Public browsing only</Badge>
+        <Badge variant="secondary">{isMockSession ? 'Mock demo mode' : 'Public browsing only'}</Badge>
         {session.notice || session.error ? <p className="text-xs text-slate-500">{session.notice || session.error}</p> : null}
       </div>
     );
@@ -773,11 +931,15 @@ function SprintView({
   metrics,
   statusGroups,
   sprintViewMode,
+  canManagePlanning,
+  parentByChildUrl,
   dragState,
   isSaving,
   onSprintViewModeChange,
   onDragStateChange,
   onStatusDrop,
+  onSprintListDrop,
+  onSubtaskAssignment,
   onBucketDrop,
 }) {
   const completedPercent = metrics.currentSprint.itemCount > 0
@@ -825,6 +987,13 @@ function SprintView({
             <SprintNestedListView
               sprintBuckets={sprintBuckets}
               statusOptions={statusOptions}
+              canManagePlanning={canManagePlanning}
+              parentByChildUrl={parentByChildUrl}
+              dragState={dragState}
+              isSaving={isSaving}
+              onDragStateChange={onDragStateChange}
+              onSprintListDrop={onSprintListDrop}
+              onSubtaskAssignment={onSubtaskAssignment}
             />
           ) : (
             <SprintCardView
@@ -846,7 +1015,17 @@ function SprintView({
   );
 }
 
-function SprintNestedListView({ sprintBuckets, statusOptions }) {
+function SprintNestedListView({
+  sprintBuckets,
+  statusOptions,
+  canManagePlanning,
+  parentByChildUrl,
+  dragState,
+  isSaving,
+  onDragStateChange,
+  onSprintListDrop,
+  onSubtaskAssignment,
+}) {
   if (sprintBuckets.length === 0) {
     return <EmptyState text="No sprint iterations are available yet." />;
   }
@@ -854,7 +1033,10 @@ function SprintNestedListView({ sprintBuckets, statusOptions }) {
   return (
     <div className="space-y-4">
       {sprintBuckets.map((bucket) => {
-        const statusGroups = getSprintStatusGroups(bucket.items || []);
+        const statusGroups = getSprintStatusGroups(bucket.items || [], statusOptions, true);
+        const issueParentOptions = (bucket.items || []).filter((item) => item.type === 'Issue' && item.contentId);
+        const itemOrderByKey = new Map((bucket.items || []).map((item, index) => [getPlanningItemKey(item), index]));
+
         return (
           <Card key={bucket.iterationId || bucket.title} className="border-white/10 bg-slate-900/50 text-card-foreground">
             <CardHeader>
@@ -871,25 +1053,63 @@ function SprintNestedListView({ sprintBuckets, statusOptions }) {
                 <Badge variant="secondary">{bucket.itemCount || 0} items</Badge>
               </div>
             </CardHeader>
-             <CardContent className="space-y-4">
-               {statusGroups.length === 0 ? (
-                 <EmptyState text="No items are planned for this sprint." />
-               ) : statusGroups.map((group) => (
-                 <div key={`${bucket.iterationId || bucket.title}-${group.status}`} className="overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60">
-                   <div className="flex items-center justify-between gap-3 px-4 py-2.5">
-                     <span className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium ${getStatusChipClasses(resolveStatusOption(group.status, statusOptions), group.status)}`}>
-                       <CircleDashed className="h-3.5 w-3.5" />
-                       {group.status}
-                     </span>
-                     <span className="text-xs text-slate-400">{group.items.length} items</span>
-                   </div>
-                   <ul>
-                     {group.items.map((item) => (
-                       <SprintNestedListRow key={getPlanningItemKey(item)} item={item} />
-                     ))}
-                   </ul>
-                 </div>
-               ))}
+            <CardContent className="space-y-4">
+              {statusGroups.length === 0 ? (
+                <EmptyState text="No items are planned for this sprint." />
+              ) : statusGroups.map((group) => {
+                const option = resolveStatusOption(group.status, statusOptions);
+                const treeItems = getNestedSprintItems(group.items || []);
+
+                return (
+                  <div
+                    key={`${bucket.iterationId || bucket.title}-${group.status}`}
+                    className="overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60"
+                    onDragOver={(event) => event.preventDefault()}
+                    onDrop={() => dragState?.item && option ? onSprintListDrop(dragState.item, bucket, option, group.items.length) : null}
+                    aria-label={`Drop in status ${group.status} for ${bucket.title}`}
+                  >
+                    <div className="flex items-center justify-between gap-3 border-b border-white/[0.06] px-4 py-2.5">
+                      <span className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium ${getStatusChipClasses(option, group.status)}`}>
+                        <CircleDashed className="h-3.5 w-3.5" />
+                        {group.status}
+                      </span>
+                      <span className="text-xs text-slate-400">{group.items.length} items</span>
+                    </div>
+                    <div className={`${sprintListGridClassName} border-b border-white/[0.06] px-4 py-3 text-xs uppercase tracking-[0.14em] text-slate-500`}>
+                      <span>Name</span>
+                      <span>Assignee</span>
+                      <span>Repository</span>
+                      <span>Milestone</span>
+                      <span>Estimate</span>
+                      <span>Parent task</span>
+                    </div>
+                    {treeItems.length === 0 ? (
+                      <div className="px-4 py-4 text-sm text-slate-500">Drop items here to populate this status.</div>
+                    ) : (
+                      <ul>
+                        {treeItems.map((item) => (
+                          <SprintNestedListRow
+                            key={getPlanningItemKey(item)}
+                            item={item}
+                            depth={0}
+                            bucket={bucket}
+                            group={group}
+                            issueParentOptions={issueParentOptions}
+                            itemOrderByKey={itemOrderByKey}
+                            parentByChildUrl={parentByChildUrl}
+                            canManagePlanning={canManagePlanning}
+                            dragState={dragState}
+                            isSaving={isSaving}
+                            onDragStateChange={onDragStateChange}
+                            onSprintListDrop={onSprintListDrop}
+                            onSubtaskAssignment={onSubtaskAssignment}
+                          />
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
             </CardContent>
           </Card>
         );
@@ -898,59 +1118,162 @@ function SprintNestedListView({ sprintBuckets, statusOptions }) {
   );
 }
 
-function SprintNestedListRow({ item }) {
+function SprintNestedListRow({
+  item,
+  depth = 0,
+  bucket,
+  group,
+  issueParentOptions,
+  itemOrderByKey,
+  parentByChildUrl,
+  canManagePlanning,
+  dragState,
+  isSaving,
+  onDragStateChange,
+  onSprintListDrop,
+  onSubtaskAssignment,
+}) {
   const repositoryNameParts = getRepositoryNameParts(item.repository);
   const itemState = item.displayState || formatPlanningState(item.state);
+  const currentParent = parentByChildUrl.get(item.url || '') || null;
+  const descendantUrls = collectPlanningDescendantUrls(item);
+  const availableParentOptions = [
+    ...(currentParent && !issueParentOptions.some((candidate) => candidate.contentId === currentParent.contentId) ? [currentParent] : []),
+    ...issueParentOptions,
+  ].filter((candidate) => (
+    candidate.contentId !== item.contentId
+    && candidate.url !== item.url
+    && !descendantUrls.has(candidate.url)
+  ));
+  const childItems = (item.children || []).filter((childItem) => childItem.status === group.status);
+  const targetRowIndex = itemOrderByKey.get(getPlanningItemKey(item)) || 0;
+  const isDragging = dragState?.key === getPlanningItemKey(item);
+  const assigneeNames = item.assignees?.map((assignee) => assignee.login).filter(Boolean) || [];
+  const indentClassName = depth > 0 ? 'pl-6' : '';
 
   return (
-    <li className="group flex items-center border-t border-white/[0.06] transition-colors hover:bg-white/[0.03] first:border-t-0">
-      <div className="flex h-9 w-7 shrink-0 items-center justify-center">
-        <div className="h-3.5 w-3.5 rounded-full border-2 border-slate-500/70" />
-      </div>
+    <>
+      <li
+        className={`group border-t border-white/[0.06] transition-colors hover:bg-white/[0.03] first:border-t-0 ${isDragging ? 'opacity-50' : ''}`}
+        draggable={canManagePlanning && !isSaving}
+        onDragStart={() => onDragStateChange({ key: getPlanningItemKey(item), item })}
+        onDragEnd={() => onDragStateChange(null)}
+        onDragOver={(event) => event.preventDefault()}
+        onDrop={() => dragState?.item && group.option ? onSprintListDrop(dragState.item, bucket, group.option, targetRowIndex) : null}
+        aria-label={`Drag ${item.title}`}
+      >
+        <div className={`${sprintListGridClassName} px-4 py-3 ${indentClassName}`}>
+          <div className="min-w-0">
+            <div className="flex min-w-0 items-start gap-3">
+              <div className="flex items-center gap-2 pt-0.5 text-slate-500">
+                <span aria-label="Drag handle">
+                  <GripVertical className="h-3.5 w-3.5" />
+                </span>
+                <div className="h-3.5 w-3.5 rounded-full border-2 border-slate-500/70" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex min-w-0 flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-slate-500">
+                  <span>{item.type}</span>
+                  {item.number ? <span>#{item.number}</span> : null}
+                  <Badge variant="secondary" className="shrink-0 px-2 py-0 text-[10px]">{itemState}</Badge>
+                  {item.subIssues?.total ? <span>{item.subIssues.total} sub</span> : null}
+                </div>
+                <div className="mt-1 flex min-w-0 items-center gap-2">
+                  <span className="truncate text-sm font-medium text-slate-100 transition-colors group-hover:text-white">{item.title}</span>
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noreferrer" className="shrink-0 text-slate-500 transition-colors hover:text-cyan-300">
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  ) : null}
+                </div>
+                {currentParent && depth === 0 ? <span className="mt-1 block text-xs text-slate-500" aria-label={`Subtask of ${currentParent.title}`}>Subtask of {currentParent.title}</span> : null}
+              </div>
+            </div>
+          </div>
 
-      <div className="min-w-0 flex-1 py-2 pr-3">
-        <div className="flex min-w-0 flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-slate-500">
-          <span>{item.type}</span>
-          {item.number ? <span>#{item.number}</span> : null}
-          <Badge variant="secondary" className="shrink-0 px-2 py-0 text-[10px]">{itemState}</Badge>
+          <div className="min-w-0 py-1 text-xs text-slate-300">
+            {assigneeNames.length > 0 ? (
+              <div className="flex flex-wrap gap-2">
+                {assigneeNames.map((assigneeName) => (
+                  <span key={assigneeName} className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-cyan-300/15 px-2 text-[11px] font-medium text-cyan-100">
+                    {getInitials(assigneeName)}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <span className="text-slate-600">Unassigned</span>
+            )}
+          </div>
+
+          <div className="min-w-0 py-1 text-xs leading-4 text-slate-400">
+            {repositoryNameParts ? (
+              <>
+                <div className="flex items-start gap-1.5">
+                  <Building2 className="mt-0.5 h-3 w-3 shrink-0 text-slate-600" />
+                  <span className="truncate">{repositoryNameParts.owner}</span>
+                </div>
+                {repositoryNameParts.name ? (
+                  <div className="mt-1 flex items-start gap-1.5 text-slate-300">
+                    <FolderGit2 className="mt-0.5 h-3 w-3 shrink-0 text-slate-500" />
+                    <span className="truncate">{repositoryNameParts.name}</span>
+                  </div>
+                ) : null}
+              </>
+            ) : (
+              <span className="text-slate-700">—</span>
+            )}
+          </div>
+
+          <div className="py-1 text-xs text-slate-400">
+            {item.milestone?.title || <span className="text-slate-700">—</span>}
+          </div>
+
+          <div className="py-1 text-xs text-slate-400">
+            {item.estimatePoints ? `${item.estimatePoints} pts` : <span className="text-slate-700">—</span>}
+          </div>
+
+          <div className="py-1">
+            {item.type === 'Issue' && item.contentId ? (
+              <label className="block">
+                <span className="sr-only">Parent issue for {item.title}</span>
+                <select
+                  value={currentParent?.contentId || ''}
+                  disabled={!canManagePlanning || isSaving}
+                  onChange={(event) => onSubtaskAssignment(item, event.target.value, bucket)}
+                  className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-2.5 py-1.5 text-xs text-slate-200 outline-none transition-colors focus:border-cyan-300/40 disabled:cursor-not-allowed disabled:opacity-60"
+                  aria-label={`Parent issue for ${item.title}`}
+                >
+                  <option value="">Top level</option>
+                  {availableParentOptions.map((candidate) => (
+                    <option key={candidate.contentId} value={candidate.contentId}>{candidate.title}</option>
+                  ))}
+                </select>
+              </label>
+            ) : (
+              <span className="text-xs text-slate-700">—</span>
+            )}
+          </div>
         </div>
-        <div className="mt-0.5 flex min-w-0 items-center gap-2">
-          <span className="truncate text-sm text-slate-200 transition-colors group-hover:text-white">{item.title}</span>
-          {item.subIssues?.total ? <span className="shrink-0 font-mono text-[10px] text-slate-500">{item.subIssues.total}</span> : null}
-        </div>
-      </div>
-
-      <div className="hidden w-52 shrink-0 items-center gap-1.5 py-2 pr-3 lg:flex">
-        {repositoryNameParts ? (
-          <span className="min-w-0 space-y-1 text-xs leading-4 text-slate-500">
-            <span className="flex items-start gap-1.5">
-              <Building2 className="mt-0.5 h-3 w-3 shrink-0 text-slate-600" />
-              <span className="block break-all text-slate-400">{repositoryNameParts.owner}</span>
-            </span>
-            {repositoryNameParts.name ? (
-              <span className="flex items-start gap-1.5">
-                <FolderGit2 className="mt-0.5 h-3 w-3 shrink-0 text-slate-500" />
-                <span className="block break-all font-medium text-slate-300">{repositoryNameParts.name}</span>
-              </span>
-            ) : null}
-          </span>
-        ) : (
-          <span className="text-slate-700">—</span>
-        )}
-      </div>
-
-      <div className="w-16 shrink-0 py-2 text-xs text-slate-500">
-        {item.estimatePoints ? `${item.estimatePoints} pts` : '—'}
-      </div>
-
-      <div className="flex w-8 shrink-0 items-center justify-center py-2 opacity-0 transition-opacity group-hover:opacity-100">
-        {item.url ? (
-          <a href={item.url} target="_blank" rel="noreferrer" className="text-slate-500 transition-colors hover:text-cyan-300">
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
-        ) : null}
-      </div>
-    </li>
+      </li>
+      {childItems.map((childItem) => (
+        <SprintNestedListRow
+          key={getPlanningItemKey(childItem)}
+          item={childItem}
+          depth={depth + 1}
+          bucket={bucket}
+          group={group}
+          issueParentOptions={issueParentOptions}
+          itemOrderByKey={itemOrderByKey}
+          parentByChildUrl={parentByChildUrl}
+          canManagePlanning={canManagePlanning}
+          dragState={dragState}
+          isSaving={isSaving}
+          onDragStateChange={onDragStateChange}
+          onSprintListDrop={onSprintListDrop}
+          onSubtaskAssignment={onSubtaskAssignment}
+        />
+      ))}
+    </>
   );
 }
 
@@ -1328,7 +1651,83 @@ function matchesWorkspaceSearch(item, searchQuery) {
   ].some((value) => typeof value === 'string' && value.toLowerCase().includes(searchQuery.trim().toLowerCase()));
 }
 
-function getSprintStatusGroups(items) {
+function getNestedSprintItems(items) {
+  const itemsByUrl = new Map(
+    items
+      .filter((item) => item?.url)
+      .map((item) => [item.url, { ...item, children: [] }]),
+  );
+  const childUrls = new Set();
+
+  itemsByUrl.forEach((item) => {
+    const childItems = (Array.isArray(item.subIssueUrls) ? item.subIssueUrls : [])
+      .map((childUrl) => itemsByUrl.get(childUrl))
+      .filter(Boolean);
+
+    item.children = childItems;
+    childItems.forEach((childItem) => {
+      childUrls.add(childItem.url);
+    });
+  });
+
+  return items
+    .map((item) => (item?.url ? itemsByUrl.get(item.url) : { ...item, children: [] }))
+    .filter((item) => !item?.url || !childUrls.has(item.url));
+}
+
+function buildSubIssueParentMap(items) {
+  const itemsByUrl = new Map(items.filter((item) => item?.url).map((item) => [item.url, item]));
+
+  return items.reduce((result, item) => {
+    const childUrls = Array.isArray(item?.subIssueUrls) ? item.subIssueUrls.filter(Boolean) : [];
+    childUrls.forEach((childUrl) => {
+      if (itemsByUrl.has(childUrl)) {
+        result.set(childUrl, item);
+      }
+    });
+    return result;
+  }, new Map());
+}
+
+function collectPlanningDescendantUrls(item) {
+  const descendantUrls = new Set();
+  const visited = new Set();
+  const stack = [...(item.children || [])];
+
+  while (stack.length > 0) {
+    const childItem = stack.pop();
+
+    if (!childItem || (childItem.url && visited.has(childItem.url))) {
+      continue;
+    }
+
+    if (childItem.url) {
+      visited.add(childItem.url);
+      descendantUrls.add(childItem.url);
+    }
+
+    (childItem.children || []).forEach((nestedChild) => {
+      stack.push(nestedChild);
+    });
+  }
+
+  return descendantUrls;
+}
+
+function getInitials(value) {
+  if (typeof value !== 'string' || !value.trim()) {
+    return '–';
+  }
+
+  return value
+    .split(/[\s._-]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0].toUpperCase())
+    .join('');
+}
+
+function getSprintStatusGroups(items, statusOptions = [], includeEmpty = false) {
   const groups = items.reduce((result, item) => {
     const status = item.status || 'No status';
     const collection = result.get(status) || [];
@@ -1337,10 +1736,18 @@ function getSprintStatusGroups(items) {
     return result;
   }, new Map());
 
-  return [...groups.entries()].map(([status, statusItems]) => ({
-    status,
-    items: statusItems,
-  }));
+  const orderedStatuses = [
+    ...statusOptions.map((option) => option.name),
+    ...[...groups.keys()].filter((status) => !statusOptions.some((option) => option.name === status)),
+  ];
+
+  return orderedStatuses
+    .filter((status) => includeEmpty || (groups.get(status) || []).length > 0)
+    .map((status) => ({
+      status,
+      option: resolveStatusOption(status, statusOptions),
+      items: groups.get(status) || [],
+    }));
 }
 
 function getQuickAddSprintOptions(sprintBuckets, metadata) {

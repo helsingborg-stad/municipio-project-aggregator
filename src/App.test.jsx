@@ -77,7 +77,7 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
     expect(await screen.findByRole('heading', { name: 'Sprint board' })).toBeInTheDocument();
     expect(screen.getByText('Sprint 14')).toBeInTheDocument();
-    expect(screen.getByText('Issue alpha child')).toBeInTheDocument();
+    expect(screen.getAllByText('Issue alpha child').length).toBeGreaterThan(0);
     expect(screen.queryByText('Deliver drag and drop for the active sprint so issues can be moved without leaving the planning surface.')).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'List view' })).toHaveClass('bg-cyan-300/15');
     expect(screen.getAllByText('Sprint 16').length).toBeGreaterThan(0);
@@ -113,6 +113,38 @@ describe('App', () => {
     expect(await screen.findByRole('heading', { name: 'Backlog manager' })).toBeInTheDocument();
     expect(screen.getByText('Mock demo')).toBeInTheDocument();
     expect(screen.getByText('Issue alpha foundation')).toBeInTheDocument();
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('supports local mock sprint list updates for status moves and subtask assignment', async () => {
+    const fetchSpy = vi.fn();
+    vi.stubGlobal('fetch', fetchSpy);
+    window.history.replaceState({}, '', '/?mock=1&tab=sprints');
+
+    render(<App />);
+
+    expect(await screen.findByText('Mock demo mode')).toBeInTheDocument();
+
+    fireEvent.dragStart(screen.getByLabelText('Drag Review release data caching'));
+    fireEvent.drop(screen.getByLabelText('Drop in status In progress for Sprint 14'));
+
+    await waitFor(() => {
+      expect(screen.getByText('Mock sprint list updated for Review release data caching.')).toBeInTheDocument();
+    });
+
+    const parentSelect = screen.getByLabelText('Parent issue for Issue alpha child');
+
+    fireEvent.change(parentSelect, { target: { value: 'I_issue_3' } });
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('Parent issue for Issue alpha child')).toHaveValue('I_issue_3');
+    });
+
+    fireEvent.change(screen.getByLabelText('Parent issue for Issue alpha child'), { target: { value: '' } });
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('Parent issue for Issue alpha child')).toHaveValue('');
+    });
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 

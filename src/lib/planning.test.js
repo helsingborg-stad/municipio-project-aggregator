@@ -3,7 +3,9 @@ import { describe, expect, it } from 'vitest';
 import {
   getEstimatePoints,
   getUnplannedBacklogItems,
+  movePlanningSprintItem,
   movePlanningItem,
+  reparentPlanningItem,
 } from './planning';
 
 describe('planning helpers', () => {
@@ -50,5 +52,112 @@ describe('planning helpers', () => {
     expect(items[0].title).toBe('Unplanned issue');
     expect(items[0].estimatePoints).toBe(3);
     expect(items[0].status).toBe('Backlog');
+  });
+
+  it('moves a sprint item between status groups and inserts it at the requested position', () => {
+    const payload = {
+      backlog: { itemCount: 0, items: [] },
+      currentSprint: {
+        itemCount: 3,
+        iterationId: 'iteration-current',
+        items: [
+          { projectItemId: 'item-1', title: 'Backlog first', status: 'Backlog', statusOptionId: 'status-backlog' },
+          { projectItemId: 'item-2', title: 'In progress first', status: 'In progress', statusOptionId: 'status-progress' },
+          { projectItemId: 'item-3', title: 'Backlog second', status: 'Backlog', statusOptionId: 'status-backlog' },
+        ],
+      },
+      nextSprint: { itemCount: 0, iterationId: 'iteration-next', items: [] },
+      completedSprint: { itemCount: 0, items: [] },
+      sprints: [
+        {
+          iterationId: 'iteration-current',
+          title: 'Sprint 14',
+          itemCount: 3,
+          items: [
+            { projectItemId: 'item-1', title: 'Backlog first', status: 'Backlog', statusOptionId: 'status-backlog' },
+            { projectItemId: 'item-2', title: 'In progress first', status: 'In progress', statusOptionId: 'status-progress' },
+            { projectItemId: 'item-3', title: 'Backlog second', status: 'Backlog', statusOptionId: 'status-backlog' },
+          ],
+        },
+      ],
+    };
+
+    const nextPayload = movePlanningSprintItem(payload, payload.currentSprint.items[1], {
+      iterationId: 'iteration-current',
+      statusName: 'Backlog',
+      statusOptionId: 'status-backlog',
+      targetIndex: 1,
+      statusOrder: ['Backlog', 'In progress', 'Review', 'Done'],
+    });
+
+    expect(nextPayload.currentSprint.items.map((item) => `${item.title}:${item.status}`)).toEqual([
+      'Backlog first:Backlog',
+      'In progress first:Backlog',
+      'Backlog second:Backlog',
+    ]);
+  });
+
+  it('reparents a planning issue under a new parent and can break it back out', () => {
+    const payload = {
+      backlog: { itemCount: 0, items: [] },
+      currentSprint: {
+        itemCount: 2,
+        iterationId: 'iteration-current',
+        items: [
+          {
+            projectItemId: 'item-parent',
+            title: 'Parent issue',
+            url: 'https://github.com/org/repo/issues/1',
+            subIssues: { total: 0, completed: 0, percentCompleted: 0 },
+            subIssueUrls: [],
+          },
+          {
+            projectItemId: 'item-child',
+            title: 'Child issue',
+            url: 'https://github.com/org/repo/issues/2',
+            subIssues: { total: 0, completed: 0, percentCompleted: 0 },
+            subIssueUrls: [],
+          },
+        ],
+      },
+      nextSprint: { itemCount: 0, iterationId: 'iteration-next', items: [] },
+      completedSprint: { itemCount: 0, items: [] },
+      sprints: [
+        {
+          iterationId: 'iteration-current',
+          title: 'Sprint 14',
+          itemCount: 2,
+          items: [
+            {
+              projectItemId: 'item-parent',
+              title: 'Parent issue',
+              url: 'https://github.com/org/repo/issues/1',
+              subIssues: { total: 0, completed: 0, percentCompleted: 0 },
+              subIssueUrls: [],
+            },
+            {
+              projectItemId: 'item-child',
+              title: 'Child issue',
+              url: 'https://github.com/org/repo/issues/2',
+              subIssues: { total: 0, completed: 0, percentCompleted: 0 },
+              subIssueUrls: [],
+            },
+          ],
+        },
+      ],
+    };
+
+    const parentItem = payload.currentSprint.items[0];
+    const childItem = payload.currentSprint.items[1];
+
+    const nestedPayload = reparentPlanningItem(payload, childItem, parentItem);
+    expect(nestedPayload.currentSprint.items[0].subIssueUrls).toEqual(['https://github.com/org/repo/issues/2']);
+    expect(nestedPayload.currentSprint.items[0].subIssues.total).toBe(1);
+    expect(nestedPayload.currentSprint.items[1].parentIssueUrl).toBe('https://github.com/org/repo/issues/1');
+
+    const brokenOutPayload = reparentPlanningItem(nestedPayload, nestedPayload.currentSprint.items[1], null);
+    expect(brokenOutPayload.currentSprint.items[0].subIssueUrls).toEqual([]);
+    expect(brokenOutPayload.currentSprint.items[0].subIssues.total).toBe(0);
+    expect(brokenOutPayload.currentSprint.items[1].parentIssueUrl).toBe('');
   });
 });
