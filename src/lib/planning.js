@@ -170,6 +170,25 @@ export function movePlanningItem(payload, item, targetBucketKey, targetIndex = 0
     }
   });
 
+  if (Array.isArray(nextPayload?.sprints)) {
+    nextPayload.sprints = nextPayload.sprints.map((bucket) => {
+      const bucketItems = Array.isArray(bucket?.items) ? bucket.items : [];
+      const nextItems = bucketItems.filter((entry) => {
+        const isMatch = getPlanningItemKey(entry) === itemKey;
+        if (isMatch) {
+          movedItem = { ...entry, ...item };
+        }
+        return !isMatch;
+      });
+
+      return {
+        ...bucket,
+        items: nextItems,
+        itemCount: nextItems.length,
+      };
+    });
+  }
+
   const targetItems = Array.isArray(nextPayload?.[targetBucketKey]?.items) ? [...nextPayload[targetBucketKey].items] : [];
   const nextPosition = Math.max(0, Math.min(normalizedTargetIndex, targetItems.length));
   targetItems.splice(nextPosition, 0, movedItem || { ...item });
@@ -177,6 +196,19 @@ export function movePlanningItem(payload, item, targetBucketKey, targetIndex = 0
   if (nextPayload?.[targetBucketKey]) {
     nextPayload[targetBucketKey].items = targetItems;
     nextPayload[targetBucketKey].itemCount = targetItems.length;
+  }
+
+  const targetIterationId = nextPayload?.[targetBucketKey]?.iterationId || null;
+  if (targetIterationId && Array.isArray(nextPayload?.sprints)) {
+    nextPayload.sprints = nextPayload.sprints.map((bucket) => (
+      bucket.iterationId === targetIterationId
+        ? {
+          ...bucket,
+          items: [...targetItems],
+          itemCount: targetItems.length,
+        }
+        : bucket
+    ));
   }
 
   return nextPayload;

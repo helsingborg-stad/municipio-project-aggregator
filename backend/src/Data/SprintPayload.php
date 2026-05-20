@@ -20,6 +20,7 @@ final class SprintPayload implements JsonOutputPayloadInterface
      * @param string $currentFilter Current project filter text.
      * @param array<string, mixed> $fields Project field metadata.
      * @param SprintBucket $backlog Backlog bucket.
+     * @param array<int, SprintBucket> $sprints All configured sprint buckets.
      * @param SprintBucket|null $completedSprint Completed sprint bucket.
      * @param SprintBucket|null $currentSprint Current sprint bucket.
      * @param SprintBucket|null $nextSprint Next sprint bucket.
@@ -33,6 +34,7 @@ final class SprintPayload implements JsonOutputPayloadInterface
         private readonly string $currentFilter,
         private readonly array $fields,
         private readonly SprintBucket $backlog,
+        private readonly array $sprints,
         private readonly ?SprintBucket $completedSprint,
         private readonly ?SprintBucket $currentSprint,
         private readonly ?SprintBucket $nextSprint,
@@ -57,14 +59,19 @@ final class SprintPayload implements JsonOutputPayloadInterface
             'sourceScope' => $this->sourceScope,
             'generatedAt' => $this->generatedAt,
             'count' => $this->backlog->itemCount()
-                + ($this->completedSprint?->itemCount() ?? 0)
-                + ($this->currentSprint?->itemCount() ?? 0)
-                + ($this->nextSprint?->itemCount() ?? 0),
+                + array_sum(array_map(
+                    static fn (SprintBucket $bucket): int => $bucket->itemCount(),
+                    $this->sprints,
+                )),
             'project' => $this->project,
             'view' => $this->view,
             'currentFilter' => $this->currentFilter,
             'fields' => $this->fields,
             'backlog' => $this->backlog->toArray(),
+            'sprints' => array_map(
+                static fn (SprintBucket $bucket): array => $bucket->toArray(),
+                $this->sprints,
+            ),
             'completedSprint' => $this->completedSprint?->toArray(),
             'currentSprint' => $this->currentSprint?->toArray(),
             'nextSprint' => $this->nextSprint?->toArray(),

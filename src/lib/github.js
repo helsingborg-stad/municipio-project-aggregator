@@ -106,19 +106,20 @@ export async function fetchRepositoryPlanningOptions(repositoryNameWithOwner) {
 /**
  * Creates a GitHub issue.
  *
- * @param {{repositoryId: string, title: string, assigneeIds?: string[], labelIds?: string[]}} input
+ * @param {{repositoryId: string, title: string, body?: string, assigneeIds?: string[], labelIds?: string[]}} input
  * @returns {Promise<Record<string, any>>}
  */
 export async function createGitHubIssue(input) {
   const payload = await runGitHubGraphql(
     `mutation CreateIssue($input: CreateIssueInput!) {
-      createIssue(input: $input) {
-        issue {
-          id
-          title
-          url
-          number
-          state
+        createIssue(input: $input) {
+          issue {
+            id
+            title
+            body
+            url
+            number
+            state
           repository {
             nameWithOwner
           }
@@ -142,12 +143,13 @@ export async function createGitHubIssue(input) {
       }
     }`,
     {
-      input: {
-        repositoryId: input.repositoryId,
-        title: input.title,
-        assigneeIds: input.assigneeIds || [],
-        labelIds: input.labelIds || [],
-      },
+        input: {
+          repositoryId: input.repositoryId,
+          title: input.title,
+          body: input.body || '',
+          assigneeIds: input.assigneeIds || [],
+          labelIds: input.labelIds || [],
+        },
     },
   );
 

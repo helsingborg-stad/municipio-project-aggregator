@@ -23,6 +23,7 @@ final class SprintEntry
      * @param string|null $iterationId GitHub iteration identifier.
      * @param string|null $iterationTitle GitHub iteration title.
      * @param string $updatedAt ISO 8601 last update timestamp.
+     * @param string $description Issue or pull request body text.
      * @param array<int, array<string, string>> $labels Label information.
      * @param array<int, array<string, string>> $assignees Assignee information.
      * @param array<string, string|null>|null $milestone Milestone information.
@@ -41,6 +42,7 @@ final class SprintEntry
         private readonly ?string $iterationId,
         private readonly ?string $iterationTitle,
         private readonly string $updatedAt,
+        private readonly string $description,
         private readonly array $labels,
         private readonly array $assignees,
         private readonly ?array $milestone,
@@ -90,6 +92,7 @@ final class SprintEntry
             'iterationId' => $this->iterationId,
             'iterationTitle' => $this->iterationTitle,
             'updatedAt' => $this->updatedAt,
+            'description' => $this->description,
             'labels' => $this->labels,
             'assignees' => $this->assignees,
             'milestone' => $this->milestone,

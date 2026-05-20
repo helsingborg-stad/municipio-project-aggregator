@@ -50,6 +50,10 @@ final class GitHubProjectSprintAggregatorTest extends TestCase
         self::assertSame('iteration-current', $data['fields']['iteration']['currentIterationId']);
         self::assertSame('iteration-next', $data['fields']['iteration']['nextIterationId']);
         self::assertSame('iteration-previous', $data['fields']['iteration']['completedIterationId']);
+        self::assertCount(3, $data['sprints']);
+        self::assertSame('Completed Sprint', $data['sprints'][0]['label']);
+        self::assertSame('Sprint 14', $data['sprints'][1]['title']);
+        self::assertSame('Sprint 15', $data['sprints'][2]['title']);
         self::assertSame('Backlog', $data['backlog']['label']);
         self::assertSame('Unplanned work', $data['backlog']['items'][0]['title']);
         self::assertSame('estimate:5', $data['backlog']['items'][0]['labels'][0]['name']);

@@ -16,9 +16,13 @@ describe('planning helpers', () => {
   it('moves an item between planning buckets while keeping counts updated', () => {
     const payload = {
       backlog: { itemCount: 1, items: [{ projectItemId: 'backlog-1', title: 'Backlog item' }] },
-      currentSprint: { itemCount: 1, items: [{ projectItemId: 'current-1', title: 'Current item' }] },
-      nextSprint: { itemCount: 0, items: [] },
+      currentSprint: { itemCount: 1, iterationId: 'iteration-current', items: [{ projectItemId: 'current-1', title: 'Current item' }] },
+      nextSprint: { itemCount: 0, iterationId: 'iteration-next', items: [] },
       completedSprint: { itemCount: 0, items: [] },
+      sprints: [
+        { iterationId: 'iteration-current', itemCount: 1, items: [{ projectItemId: 'current-1', title: 'Current item' }] },
+        { iterationId: 'iteration-next', itemCount: 0, items: [] },
+      ],
     };
 
     const nextPayload = movePlanningItem(payload, payload.backlog.items[0], 'currentSprint', 1);
@@ -27,6 +31,7 @@ describe('planning helpers', () => {
     expect(nextPayload.backlog.itemCount).toBe(0);
     expect(nextPayload.currentSprint.items.map((item) => item.title)).toEqual(['Current item', 'Backlog item']);
     expect(nextPayload.currentSprint.itemCount).toBe(2);
+    expect(nextPayload.sprints[0].items.map((item) => item.title)).toEqual(['Current item', 'Backlog item']);
   });
 
   it('builds unplanned backlog items from issues outside the project board', () => {

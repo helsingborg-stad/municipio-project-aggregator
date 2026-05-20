@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { runGitHubGraphql } from './github';
+import { createGitHubIssue, runGitHubGraphql } from './github';
 
 describe('github helper', () => {
   afterEach(() => {
@@ -23,5 +23,24 @@ describe('github helper', () => {
     })));
 
     await expect(runGitHubGraphql('mutation Broken { broken }')).rejects.toThrow('Mutation failed.');
+  });
+
+  it('sends the issue body when creating a GitHub issue', async () => {
+    const fetchMock = vi.fn(async () => ({
+      ok: true,
+      json: async () => ({ data: { createIssue: { issue: { id: 'I_1', title: 'Demo issue', body: 'Issue body' } } } }),
+    }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await createGitHubIssue({
+      repositoryId: 'repo-1',
+      title: 'Demo issue',
+      body: 'Issue body',
+      labelIds: ['label-1'],
+      assigneeIds: ['user-1'],
+    });
+
+    const requestBody = JSON.parse(fetchMock.mock.calls[0][1].body);
+    expect(requestBody.variables.input.body).toBe('Issue body');
   });
 });

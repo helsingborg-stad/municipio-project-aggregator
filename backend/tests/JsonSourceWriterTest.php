@@ -247,11 +247,13 @@ final class JsonSourceWriterTest extends TestCase
                     null,
                     null,
                     '2026-04-28T08:00:00+00:00',
+                    'Create the initial sprint planning tab and seed it with GitHub-native issue metadata.',
                     [],
                     [],
                     null,
                 )],
             ),
+            [],
             new SprintBucket(
                 'Completed Sprint',
                 'Sprint 13',

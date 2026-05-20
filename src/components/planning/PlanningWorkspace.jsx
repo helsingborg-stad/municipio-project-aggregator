@@ -25,7 +25,6 @@ import {
   getUnplannedBacklogItems,
   mergePlanningItem,
   movePlanningItem,
-  prependPlanningItem,
 } from '@/lib/planning';
 
 /**
@@ -58,9 +57,11 @@ export default function PlanningWorkspace({
   const [actionError, setActionError] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const [dragState, setDragState] = useState(null);
+  const [sprintViewMode, setSprintViewMode] = useState('list');
   const [repoOptionsByName, setRepoOptionsByName] = useState({});
   const [quickAdd, setQuickAdd] = useState(() => ({
     title: '',
+    description: '',
     repository: repositories[0]?.fullName || '',
     sprintTarget: 'backlog',
     assigneeId: '',
@@ -161,33 +162,74 @@ export default function PlanningWorkspace({
     () => createPlanningDetailMap([issuesPayload, pullRequestsPayload]),
     [issuesPayload, pullRequestsPayload],
   );
+  const currentIterationId = planningPayload?.fields?.iteration?.currentIterationId || null;
+  const nextIterationId = planningPayload?.fields?.iteration?.nextIterationId || null;
+  const completedIterationId = planningPayload?.fields?.iteration?.completedIterationId || null;
+  const backlogStatusOptionId = findStatusOption(planningPayload, ['backlog', 'todo', 'ready']);
+  const inProgressStatusOptionId = findStatusOption(planningPayload, ['in progress', 'doing']);
 
-  const projectBuckets = useMemo(() => {
-    const mergeBucket = (bucketKey) => {
-      const items = Array.isArray(planningPayload?.[bucketKey]?.items) ? planningPayload[bucketKey].items : [];
-      return {
-        ...planningPayload?.[bucketKey],
-        items: items
-          .map((item) => mergePlanningItem(item, detailMap))
-          .filter((item) => matchesWorkspaceSearch(item, searchQuery)),
-      };
+  const backlogBucket = useMemo(() => {
+    const items = Array.isArray(planningPayload?.backlog?.items) ? planningPayload.backlog.items : [];
+    return {
+      ...planningPayload?.backlog,
+      items: items
+        .map((item) => mergePlanningItem(item, detailMap))
+        .filter((item) => matchesWorkspaceSearch(item, searchQuery)),
     };
+  }, [detailMap, planningPayload, searchQuery]);
 
-    const planningItemsByUrl = new Map(
-      ['backlog', 'currentSprint', 'nextSprint', 'completedSprint']
-        .flatMap((bucketKey) => Array.isArray(planningPayload?.[bucketKey]?.items) ? planningPayload[bucketKey].items : [])
+  const sprintBuckets = useMemo(() => {
+    const configuredBuckets = Array.isArray(planningPayload?.sprints) && planningPayload.sprints.length > 0
+      ? planningPayload.sprints
+      : ['completedSprint', 'currentSprint', 'nextSprint']
+        .map((bucketKey) => planningPayload?.[bucketKey])
+        .filter(Boolean);
+
+    return configuredBuckets.map((bucket) => ({
+      ...bucket,
+      items: (Array.isArray(bucket?.items) ? bucket.items : [])
+        .map((item) => mergePlanningItem(item, detailMap))
+        .filter((item) => matchesWorkspaceSearch(item, searchQuery)),
+    }));
+  }, [detailMap, planningPayload, searchQuery]);
+
+  const planningItemsByUrl = useMemo(() => {
+    const rawSprintBuckets = Array.isArray(planningPayload?.sprints) && planningPayload.sprints.length > 0
+      ? planningPayload.sprints
+      : ['completedSprint', 'currentSprint', 'nextSprint']
+        .map((bucketKey) => planningPayload?.[bucketKey])
+        .filter(Boolean);
+
+    return new Map(
+      [
+        ...(Array.isArray(planningPayload?.backlog?.items) ? planningPayload.backlog.items : []),
+        ...rawSprintBuckets.flatMap((bucket) => Array.isArray(bucket?.items) ? bucket.items : []),
+      ]
         .filter((item) => item?.url)
         .map((item) => [item.url, item]),
     );
+  }, [planningPayload]);
 
-    return {
-      backlog: mergeBucket('backlog'),
-      currentSprint: mergeBucket('currentSprint'),
-      nextSprint: mergeBucket('nextSprint'),
-      completedSprint: mergeBucket('completedSprint'),
-      unplanned: getUnplannedBacklogItems(issuesPayload, planningItemsByUrl).filter((item) => matchesWorkspaceSearch(item, searchQuery)),
-    };
-  }, [detailMap, issuesPayload, planningPayload, searchQuery]);
+  const currentSprintBucket = useMemo(
+    () => getSprintBucketByIterationId(sprintBuckets, currentIterationId),
+    [currentIterationId, sprintBuckets],
+  );
+  const nextSprintBucket = useMemo(
+    () => getSprintBucketByIterationId(sprintBuckets, nextIterationId),
+    [nextIterationId, sprintBuckets],
+  );
+  const completedSprintBucket = useMemo(
+    () => getSprintBucketByIterationId(sprintBuckets, completedIterationId),
+    [completedIterationId, sprintBuckets],
+  );
+
+  const projectBuckets = useMemo(() => ({
+    backlog: backlogBucket,
+    currentSprint: currentSprintBucket,
+    nextSprint: nextSprintBucket,
+    completedSprint: completedSprintBucket,
+    unplanned: getUnplannedBacklogItems(issuesPayload, planningItemsByUrl).filter((item) => matchesWorkspaceSearch(item, searchQuery)),
+  }), [backlogBucket, completedSprintBucket, currentSprintBucket, issuesPayload, nextSprintBucket, planningItemsByUrl, searchQuery]);
 
   const projectMetrics = {
     backlog: getBucketMetrics(projectBuckets.backlog),
@@ -198,19 +240,31 @@ export default function PlanningWorkspace({
 
   const sprintStatusGroups = useMemo(() => getSprintStatusGroups(projectBuckets.currentSprint?.items || []), [projectBuckets.currentSprint]);
   const quickAddOptions = repoOptionsByName[quickAdd.repository] || { repository: null, labels: [], assignees: [] };
+  const quickAddSprintOptions = useMemo(
+    () => getQuickAddSprintOptions(sprintBuckets, {
+      currentIterationId,
+      nextIterationId,
+      completedIterationId,
+    }),
+    [completedIterationId, currentIterationId, nextIterationId, sprintBuckets],
+  );
+  useEffect(() => {
+    const availableTargets = new Set(['backlog', ...quickAddSprintOptions.map((option) => option.value)]);
+
+    if (!availableTargets.has(quickAdd.sprintTarget)) {
+      setQuickAdd((currentQuickAdd) => ({
+        ...currentQuickAdd,
+        sprintTarget: 'backlog',
+      }));
+    }
+  }, [quickAdd.sprintTarget, quickAddSprintOptions]);
   const parentIssueOptions = useMemo(() => {
     return [
       ...(projectBuckets.backlog?.items || []),
       ...projectBuckets.unplanned,
-      ...(projectBuckets.currentSprint?.items || []),
-      ...(projectBuckets.nextSprint?.items || []),
+      ...sprintBuckets.flatMap((bucket) => bucket.items || []),
     ].filter((item) => item.contentId && item.type === 'Issue');
-  }, [projectBuckets]);
-
-  const currentIterationId = planningPayload?.fields?.iteration?.currentIterationId || null;
-  const nextIterationId = planningPayload?.fields?.iteration?.nextIterationId || null;
-  const backlogStatusOptionId = findStatusOption(planningPayload, ['backlog', 'todo', 'ready']);
-  const inProgressStatusOptionId = findStatusOption(planningPayload, ['in progress', 'doing']);
+  }, [projectBuckets, sprintBuckets]);
 
   async function handleQuickAddSubmit(event) {
     event.preventDefault();
@@ -243,6 +297,7 @@ export default function PlanningWorkspace({
       const issue = await createGitHubIssue({
         repositoryId: quickAddOptions.repository.id,
         title: quickAdd.title.trim(),
+        body: quickAdd.description.trim(),
         labelIds: quickAdd.labelIds,
         assigneeIds: quickAdd.assigneeId ? [quickAdd.assigneeId] : [],
       });
@@ -253,10 +308,7 @@ export default function PlanningWorkspace({
       });
       const sprintTargetMetadata = getSprintTargetMetadata({
         sprintTarget: quickAdd.sprintTarget,
-        currentIterationId,
-        nextIterationId,
-        currentSprintTitle: planningPayload.currentSprint?.title || null,
-        nextSprintTitle: planningPayload.nextSprint?.title || null,
+        sprintBuckets,
         backlogStatusOptionId,
         inProgressStatusOptionId,
       });
@@ -296,6 +348,7 @@ export default function PlanningWorkspace({
         repository: issue.repository.nameWithOwner,
         type: 'Issue',
         state: issue.state,
+        description: issue.body || '',
         status: sprintTargetMetadata.statusName,
         statusOptionId: sprintTargetMetadata.statusOptionId,
         iterationId: sprintTargetMetadata.iterationId,
@@ -305,9 +358,10 @@ export default function PlanningWorkspace({
         updatedAt: new Date().toISOString(),
       };
 
-      onPlanningPayloadChange(prependPlanningItem(planningPayload, nextItem, quickAdd.sprintTarget));
+      onPlanningPayloadChange(insertPlanningItemIntoPayload(planningPayload, nextItem, quickAdd.sprintTarget, sprintTargetMetadata));
       setQuickAdd({
         title: '',
+        description: '',
         repository: quickAdd.repository,
         sprintTarget: 'backlog',
         assigneeId: '',
@@ -497,6 +551,7 @@ export default function PlanningWorkspace({
             quickAdd={quickAdd}
             repositories={repositories}
             options={quickAddOptions}
+            sprintOptions={quickAddSprintOptions}
             parentIssueOptions={parentIssueOptions}
             authenticated={session.authenticated}
             isSaving={isSaving}
@@ -519,10 +574,13 @@ export default function PlanningWorkspace({
         <SprintView
           payload={planningPayload}
           buckets={projectBuckets}
+          sprintBuckets={sprintBuckets}
           metrics={projectMetrics}
           statusGroups={sprintStatusGroups}
+          sprintViewMode={sprintViewMode}
           dragState={dragState}
           isSaving={isSaving}
+          onSprintViewModeChange={setSprintViewMode}
           onDragStateChange={setDragState}
           onStatusDrop={handleStatusDrop}
           onBucketDrop={handleItemDrop}
@@ -574,7 +632,7 @@ function AuthStatus({ session, onLogin, onLogout }) {
   );
 }
 
-function QuickAddCard({ quickAdd, repositories, options, parentIssueOptions, authenticated, isSaving, onSubmit, onChange }) {
+function QuickAddCard({ quickAdd, repositories, options, sprintOptions, parentIssueOptions, authenticated, isSaving, onSubmit, onChange }) {
   const labelOptions = options.labels || [];
   const assigneeOptions = options.assignees || [];
 
@@ -602,6 +660,17 @@ function QuickAddCard({ quickAdd, repositories, options, parentIssueOptions, aut
               className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition-colors focus:border-cyan-300/40 disabled:cursor-not-allowed disabled:opacity-60"
             />
           </label>
+          <label className="space-y-2 text-sm text-slate-300 lg:col-span-4">
+            <span>Description</span>
+            <textarea
+              value={quickAdd.description}
+              onChange={(event) => onChange((currentValue) => ({ ...currentValue, description: event.target.value }))}
+              placeholder="Add the GitHub issue description"
+              rows={5}
+              disabled={!authenticated || isSaving}
+              className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition-colors focus:border-cyan-300/40 disabled:cursor-not-allowed disabled:opacity-60"
+            />
+          </label>
           <SelectField label="Repository" value={quickAdd.repository} disabled={!authenticated || isSaving} onChange={(value) => onChange((currentValue) => ({ ...currentValue, repository: value, labelIds: [], assigneeId: '' }))}>
             {repositories.map((repository) => (
               <option key={repository.fullName} value={repository.fullName}>{repository.fullName}</option>
@@ -609,8 +678,9 @@ function QuickAddCard({ quickAdd, repositories, options, parentIssueOptions, aut
           </SelectField>
           <SelectField label="Sprint" value={quickAdd.sprintTarget} disabled={!authenticated || isSaving} onChange={(value) => onChange((currentValue) => ({ ...currentValue, sprintTarget: value }))}>
             <option value="backlog">Backlog</option>
-            <option value="currentSprint">Current sprint</option>
-            <option value="nextSprint">Next sprint</option>
+            {sprintOptions.map((option) => (
+              <option key={option.value} value={option.value}>{option.label}</option>
+            ))}
           </SelectField>
           <SelectField label="Assignee" value={quickAdd.assigneeId} disabled={!authenticated || isSaving} onChange={(value) => onChange((currentValue) => ({ ...currentValue, assigneeId: value }))}>
             <option value="">Unassigned</option>
@@ -696,7 +766,20 @@ function BacklogView({ buckets, metrics, dragState, isSaving, onDragStateChange,
   );
 }
 
-function SprintView({ payload, buckets, metrics, statusGroups, dragState, isSaving, onDragStateChange, onStatusDrop, onBucketDrop }) {
+function SprintView({
+  payload,
+  buckets,
+  sprintBuckets,
+  metrics,
+  statusGroups,
+  sprintViewMode,
+  dragState,
+  isSaving,
+  onSprintViewModeChange,
+  onDragStateChange,
+  onStatusDrop,
+  onBucketDrop,
+}) {
   const completedPercent = metrics.currentSprint.itemCount > 0
     ? Math.round((metrics.currentSprint.doneCount / metrics.currentSprint.itemCount) * 100)
     : 0;
@@ -711,6 +794,131 @@ function SprintView({ payload, buckets, metrics, statusGroups, dragState, isSavi
         <MetricCard title="Completed sprint" icon={TimerReset} value={`${metrics.completedSprint.itemCount} items`} description={`${metrics.completedSprint.doneCount} done`} />
       </div>
       <Card className="border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
+        <CardHeader className="gap-4 lg:flex-row lg:items-start lg:justify-between">
+          <div>
+            <CardTitle className="text-xl text-white">Sprint workspace</CardTitle>
+            <CardDescription className="text-slate-400">
+              {sprintViewMode === 'list'
+                ? 'Browse every configured sprint as nested status lists, then switch to cards when you want a denser overview.'
+                : 'Use the card view for sprint boards and quick scanning across current, upcoming, and completed iterations.'}
+            </CardDescription>
+          </div>
+          <div className="inline-flex rounded-2xl border border-white/10 bg-white/5 p-1">
+            <button
+              type="button"
+              onClick={() => onSprintViewModeChange('list')}
+              className={`rounded-xl px-3 py-2 text-sm transition-colors ${sprintViewMode === 'list' ? 'bg-cyan-300/15 text-cyan-100' : 'text-slate-300 hover:text-white'}`}
+            >
+              List view
+            </button>
+            <button
+              type="button"
+              onClick={() => onSprintViewModeChange('card')}
+              className={`rounded-xl px-3 py-2 text-sm transition-colors ${sprintViewMode === 'card' ? 'bg-cyan-300/15 text-cyan-100' : 'text-slate-300 hover:text-white'}`}
+            >
+              Card view
+            </button>
+          </div>
+        </CardHeader>
+        <CardContent>
+          {sprintViewMode === 'list' ? (
+            <SprintNestedListView
+              sprintBuckets={sprintBuckets}
+              statusOptions={statusOptions}
+            />
+          ) : (
+            <SprintCardView
+              payload={payload}
+              buckets={buckets}
+              sprintBuckets={sprintBuckets}
+              statusGroups={statusGroups}
+              statusOptions={statusOptions}
+              dragState={dragState}
+              isSaving={isSaving}
+              onDragStateChange={onDragStateChange}
+              onStatusDrop={onStatusDrop}
+              onBucketDrop={onBucketDrop}
+            />
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
+function SprintNestedListView({ sprintBuckets, statusOptions }) {
+  if (sprintBuckets.length === 0) {
+    return <EmptyState text="No sprint iterations are available yet." />;
+  }
+
+  return (
+    <div className="space-y-4">
+      {sprintBuckets.map((bucket) => {
+        const statusGroups = getSprintStatusGroups(bucket.items || []);
+        return (
+          <Card key={bucket.iterationId || bucket.title} className="border-white/10 bg-slate-900/50 text-card-foreground">
+            <CardHeader>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <CardTitle className="flex flex-wrap items-center gap-2 text-lg text-white">
+                    <span>{bucket.title}</span>
+                    <SprintRoleBadge bucket={bucket} />
+                  </CardTitle>
+                  <CardDescription className="mt-1 text-slate-400">
+                    {formatSprintRange(bucket.startDate, bucket.endDate)}
+                  </CardDescription>
+                </div>
+                <Badge variant="secondary">{bucket.itemCount || 0} items</Badge>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {statusGroups.length === 0 ? (
+                <EmptyState text="No items are planned for this sprint." />
+              ) : statusGroups.map((group) => (
+                <div key={`${bucket.iterationId || bucket.title}-${group.status}`} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div className="mb-3 flex items-center justify-between gap-3">
+                    <span className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium ${getStatusChipClasses(resolveStatusOption(group.status, statusOptions), group.status)}`}>
+                      <CircleDashed className="h-3.5 w-3.5" />
+                      {group.status}
+                    </span>
+                    <span className="text-xs text-slate-400">{group.items.length} items</span>
+                  </div>
+                  <ul className="space-y-3">
+                    {group.items.map((item) => (
+                      <li key={getPlanningItemKey(item)} className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3">
+                        <div className="flex flex-wrap items-start justify-between gap-3">
+                          <div className="min-w-0 space-y-1">
+                            <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
+                              <span>{item.type}</span>
+                              {item.number ? <span>#{item.number}</span> : null}
+                              <span>{item.displayState || formatPlanningState(item.state)}</span>
+                            </div>
+                            <div className="text-sm font-semibold text-white">{item.title}</div>
+                            {item.description ? <p className="text-sm text-slate-400">{truncateDescription(item.description, 220)}</p> : null}
+                            <div className="text-xs text-slate-500">{item.repository}</div>
+                          </div>
+                          <div className="flex flex-wrap items-center gap-2">
+                            {item.estimatePoints ? <Badge variant="secondary">{item.estimatePoints} pts</Badge> : null}
+                            {item.url ? <a href={item.url} target="_blank" rel="noreferrer" className="text-slate-500 transition-colors hover:text-cyan-200"><ArrowUpRight className="h-4 w-4" /></a> : null}
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  );
+}
+
+function SprintCardView({ payload, buckets, sprintBuckets, statusGroups, statusOptions, dragState, isSaving, onDragStateChange, onStatusDrop, onBucketDrop }) {
+  return (
+    <div className="space-y-6">
+      <Card className="border-white/10 bg-slate-950/60 text-card-foreground">
         <CardHeader>
           <CardTitle className="text-xl text-white">{payload?.currentSprint?.title || 'Current sprint'}</CardTitle>
           <CardDescription className="text-slate-400">Drag cards across status columns to update the GitHub Project status field directly.</CardDescription>
@@ -718,7 +926,7 @@ function SprintView({ payload, buckets, metrics, statusGroups, dragState, isSavi
         <CardContent>
           <div className="grid gap-4 xl:grid-cols-5">
             {statusGroups.map((group) => {
-              const option = statusOptions.find((statusOption) => statusOption.name.toLowerCase() === group.status.toLowerCase());
+              const option = resolveStatusOption(group.status, statusOptions);
               return (
                 <div
                   key={group.status}
@@ -727,7 +935,7 @@ function SprintView({ payload, buckets, metrics, statusGroups, dragState, isSavi
                   onDrop={() => dragState?.item && option ? onStatusDrop(dragState.item, option) : null}
                 >
                   <div className="mb-4 flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-slate-300">
+                    <span className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs uppercase tracking-[0.2em] ${getStatusChipClasses(option, group.status)}`}>
                       <CircleDashed className="h-3.5 w-3.5" />
                       {group.status}
                     </span>
@@ -745,7 +953,7 @@ function SprintView({ payload, buckets, metrics, statusGroups, dragState, isSavi
         </CardContent>
       </Card>
       <div className="grid gap-6 xl:grid-cols-2">
-        <DropSection title={payload?.nextSprint?.title || 'Next sprint'} subtitle="Move unfinished work here to prepare the next iteration." items={buckets.nextSprint?.items || []} badgeText={`${metrics.nextSprint.itemCount} items`} onDropItem={(item, targetIndex) => onBucketDrop(item, 'nextSprint', targetIndex)} dragState={dragState} isSaving={isSaving} onDragStateChange={onDragStateChange} />
+        <DropSection title={payload?.nextSprint?.title || 'Next sprint'} subtitle="Move unfinished work here to prepare the next iteration." items={buckets.nextSprint?.items || []} badgeText={`${buckets.nextSprint?.itemCount || 0} items`} onDropItem={(item, targetIndex) => onBucketDrop(item, 'nextSprint', targetIndex)} dragState={dragState} isSaving={isSaving} onDragStateChange={onDragStateChange} />
         <Card className="border-white/10 bg-slate-950/50 text-card-foreground">
           <CardHeader>
             <CardTitle className="text-lg text-white">{payload?.completedSprint?.title || 'Completed sprint'}</CardTitle>
@@ -758,8 +966,49 @@ function SprintView({ payload, buckets, metrics, statusGroups, dragState, isSavi
           </CardContent>
         </Card>
       </div>
+      {sprintBuckets.length > 0 ? (
+        <Card className="border-white/10 bg-slate-950/50 text-card-foreground">
+          <CardHeader>
+            <CardTitle className="text-lg text-white">All sprint cards</CardTitle>
+            <CardDescription className="text-slate-400">A dense card overview of every configured sprint.</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-4 lg:grid-cols-2">
+            {sprintBuckets.map((bucket) => (
+              <div key={bucket.iterationId || bucket.title} className="rounded-3xl border border-white/10 bg-slate-900/60 p-4">
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h4 className="text-base font-semibold text-white">{bucket.title}</h4>
+                      <SprintRoleBadge bucket={bucket} />
+                    </div>
+                    <p className="text-xs text-slate-400">{formatSprintRange(bucket.startDate, bucket.endDate)}</p>
+                  </div>
+                  <Badge variant="secondary">{bucket.itemCount || 0}</Badge>
+                </div>
+                <div className="space-y-3">
+                  {(bucket.items || []).length === 0 ? <EmptyState text="No sprint items are planned." /> : (bucket.items || []).map((item) => (
+                    <PlanningItemCard key={getPlanningItemKey(item)} item={item} dragState={dragState} onDragStateChange={onDragStateChange} isSaving={isSaving} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      ) : null}
     </div>
   );
+}
+
+function SprintRoleBadge({ bucket }) {
+  const className = bucket?.label === 'Current Sprint'
+    ? 'border-cyan-300/30 bg-cyan-300/10 text-cyan-100'
+    : bucket?.label === 'Next Sprint'
+      ? 'border-violet-300/30 bg-violet-300/10 text-violet-100'
+      : bucket?.label === 'Completed Sprint'
+        ? 'border-emerald-300/30 bg-emerald-300/10 text-emerald-100'
+        : 'border-white/10 bg-white/5 text-slate-300';
+
+  return <span className={`rounded-full border px-2.5 py-1 text-[11px] uppercase tracking-[0.2em] ${className}`}>{bucket?.label || 'Sprint'}</span>;
 }
 
 function DropSection({ title, subtitle, items, badgeText, dragState, isSaving, onDragStateChange, onDropItem }) {
@@ -802,12 +1051,15 @@ function PlanningItemCard({ item, dragState, onDragStateChange, isSaving = false
           <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-slate-500">
             <span>{item.type}</span>
             {item.number ? <span>#{item.number}</span> : null}
-            <Badge variant="secondary">{item.status || 'No status'}</Badge>
+            <span className={`inline-flex items-center rounded-full border px-2.5 py-1 normal-case tracking-normal ${getStatusChipClasses(null, item.status)}`}>
+              {item.status || 'No status'}
+            </span>
             <Badge variant="secondary">{item.displayState || formatPlanningState(item.state)}</Badge>
           </div>
           <div className="space-y-1">
             <h4 className="text-base font-semibold text-white">{item.title}</h4>
             {item.repository ? <p className="text-sm text-slate-400">{item.repository}</p> : null}
+            {item.description ? <p className="text-sm text-slate-400">{truncateDescription(item.description, 180)}</p> : null}
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
             {item.estimatePoints ? <span>{item.estimatePoints} pts</span> : null}
@@ -906,28 +1158,29 @@ function findStatusOption(payload, names) {
 
 function getSprintTargetMetadata({
   sprintTarget,
-  currentIterationId,
-  nextIterationId,
-  currentSprintTitle,
-  nextSprintTitle,
+  sprintBuckets,
   backlogStatusOptionId,
   inProgressStatusOptionId,
 }) {
-  if (sprintTarget === 'currentSprint') {
+  if (sprintTarget === 'backlog') {
     return {
-      iterationId: currentIterationId,
-      iterationTitle: currentSprintTitle,
-      statusName: inProgressStatusOptionId ? 'In progress' : 'Backlog',
-      statusOptionId: inProgressStatusOptionId || backlogStatusOptionId || '',
+      iterationId: null,
+      iterationTitle: null,
+      statusName: 'Backlog',
+      statusOptionId: backlogStatusOptionId || '',
     };
   }
 
-  if (sprintTarget === 'nextSprint') {
+  const iterationId = sprintTarget.replace(/^iteration:/, '');
+  const sprintBucket = sprintBuckets.find((bucket) => bucket.iterationId === iterationId);
+  const isCurrentSprint = sprintBucket?.label === 'Current Sprint';
+
+  if (sprintBucket) {
     return {
-      iterationId: nextIterationId,
-      iterationTitle: nextSprintTitle,
-      statusName: 'Backlog',
-      statusOptionId: backlogStatusOptionId || '',
+      iterationId: sprintBucket.iterationId,
+      iterationTitle: sprintBucket.title,
+      statusName: isCurrentSprint && inProgressStatusOptionId ? 'In progress' : 'Backlog',
+      statusOptionId: isCurrentSprint && inProgressStatusOptionId ? inProgressStatusOptionId : backlogStatusOptionId || '',
     };
   }
 
@@ -937,6 +1190,59 @@ function getSprintTargetMetadata({
     statusName: 'Backlog',
     statusOptionId: backlogStatusOptionId || '',
   };
+}
+
+function insertPlanningItemIntoPayload(payload, item, sprintTarget, sprintTargetMetadata) {
+  const nextPayload = structuredClone(payload);
+  const itemKey = getPlanningItemKey(item);
+  const removeFromBucket = (bucket) => {
+    if (!bucket || !Array.isArray(bucket.items)) {
+      return bucket;
+    }
+
+    bucket.items = bucket.items.filter((entry) => getPlanningItemKey(entry) !== itemKey);
+    bucket.itemCount = bucket.items.length;
+    return bucket;
+  };
+
+  removeFromBucket(nextPayload.backlog);
+  removeFromBucket(nextPayload.currentSprint);
+  removeFromBucket(nextPayload.nextSprint);
+  removeFromBucket(nextPayload.completedSprint);
+
+  if (Array.isArray(nextPayload.sprints)) {
+    nextPayload.sprints = nextPayload.sprints.map((bucket) => removeFromBucket(bucket));
+  }
+
+  if (sprintTarget === 'backlog') {
+    nextPayload.backlog.items = [item, ...(nextPayload.backlog?.items || [])];
+    nextPayload.backlog.itemCount = nextPayload.backlog.items.length;
+    return nextPayload;
+  }
+
+  const targetIterationId = sprintTargetMetadata.iterationId;
+  if (!targetIterationId) {
+    return nextPayload;
+  }
+
+  const targetBucket = Array.isArray(nextPayload.sprints)
+    ? nextPayload.sprints.find((bucket) => bucket.iterationId === targetIterationId)
+    : null;
+
+  if (targetBucket) {
+    targetBucket.items = [item, ...(targetBucket.items || [])];
+    targetBucket.itemCount = targetBucket.items.length;
+  }
+
+  if (nextPayload.currentSprint?.iterationId === targetIterationId) {
+    nextPayload.currentSprint = targetBucket || nextPayload.currentSprint;
+  } else if (nextPayload.nextSprint?.iterationId === targetIterationId) {
+    nextPayload.nextSprint = targetBucket || nextPayload.nextSprint;
+  } else if (nextPayload.completedSprint?.iterationId === targetIterationId) {
+    nextPayload.completedSprint = targetBucket || nextPayload.completedSprint;
+  }
+
+  return nextPayload;
 }
 
 function matchesWorkspaceSearch(item, searchQuery) {
@@ -969,6 +1275,93 @@ function getSprintStatusGroups(items) {
   }));
 }
 
+function getQuickAddSprintOptions(sprintBuckets, metadata) {
+  return sprintBuckets.map((bucket) => {
+    let suffix = '';
+
+    if (bucket.iterationId === metadata.currentIterationId) {
+      suffix = ' (current)';
+    } else if (bucket.iterationId === metadata.nextIterationId) {
+      suffix = ' (next)';
+    } else if (bucket.iterationId === metadata.completedIterationId) {
+      suffix = ' (completed)';
+    }
+
+    return {
+      value: `iteration:${bucket.iterationId}`,
+      label: `${bucket.title}${suffix}`,
+    };
+  });
+}
+
+function getSprintBucketByIterationId(sprintBuckets, iterationId) {
+  return sprintBuckets.find((bucket) => bucket.iterationId === iterationId) || {
+    label: '',
+    title: '',
+    iterationId,
+    startDate: null,
+    endDate: null,
+    itemCount: 0,
+    items: [],
+  };
+}
+
+function resolveStatusOption(status, statusOptions) {
+  return statusOptions.find((option) => option.name.toLowerCase() === String(status || '').toLowerCase()) || null;
+}
+
+function getStatusChipClasses(option, status) {
+  const color = String(option?.color || '').toUpperCase();
+  const normalizedStatus = String(status || '').toLowerCase();
+
+  if (color === 'GREEN' || normalizedStatus === 'done') {
+    return 'border-emerald-300/30 bg-emerald-300/10 text-emerald-100';
+  }
+
+  if (color === 'BLUE' || normalizedStatus.includes('progress')) {
+    return 'border-sky-300/30 bg-sky-300/10 text-sky-100';
+  }
+
+  if (color === 'RED' || normalizedStatus.includes('blocked')) {
+    return 'border-rose-300/30 bg-rose-300/10 text-rose-100';
+  }
+
+  if (color === 'PURPLE' || normalizedStatus.includes('review')) {
+    return 'border-violet-300/30 bg-violet-300/10 text-violet-100';
+  }
+
+  if (color === 'YELLOW' || color === 'ORANGE' || normalizedStatus === 'backlog' || normalizedStatus === 'todo') {
+    return 'border-amber-300/30 bg-amber-300/10 text-amber-100';
+  }
+
+  return 'border-white/10 bg-white/5 text-slate-200';
+}
+
+function truncateDescription(text, maxLength = 180) {
+  if (typeof text !== 'string') {
+    return '';
+  }
+
+  const normalizedText = text.replace(/\s+/g, ' ').trim();
+  if (normalizedText.length <= maxLength) {
+    return normalizedText;
+  }
+
+  return `${normalizedText.slice(0, Math.max(0, maxLength - 1)).trimEnd()}…`;
+}
+
+function formatSprintRange(startDate, endDate) {
+  if (!startDate && !endDate) {
+    return 'No sprint dates available.';
+  }
+
+  if (startDate && endDate) {
+    return `${startDate} → ${endDate}`;
+  }
+
+  return startDate || endDate;
+}
+
 function updatePlanningItemStatus(payload, item, option) {
   const nextPayload = structuredClone(payload);
 
@@ -983,6 +1376,23 @@ function updatePlanningItemStatus(payload, item, option) {
       statusOptionId: option.id,
     };
   });
+
+  if (Array.isArray(nextPayload.sprints)) {
+    nextPayload.sprints = nextPayload.sprints.map((bucket) => ({
+      ...bucket,
+      items: (bucket.items || []).map((entry) => {
+        if (getPlanningItemKey(entry) !== getPlanningItemKey(item)) {
+          return entry;
+        }
+
+        return {
+          ...entry,
+          status: option.name,
+          statusOptionId: option.id,
+        };
+      }),
+    }));
+  }
 
   return nextPayload;
 }

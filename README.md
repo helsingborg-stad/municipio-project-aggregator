@@ -104,6 +104,7 @@ http://127.0.0.1:5173/?mock=1
 ```
 
 Mock mode loads bundled planning payloads for screenshots and review while keeping the workspace in public-browsing mode.
+The demo data includes multiple future sprints, issue descriptions, and color-coded planning statuses so the list/card sprint views can be reviewed without live GitHub access.
 
 ```bash
 npm run build

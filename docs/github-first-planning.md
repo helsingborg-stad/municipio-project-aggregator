@@ -65,11 +65,13 @@ There is no persistent application database.
 - active filter text
 - status field options
 - iteration field metadata
+- all configured sprint buckets
 - backlog bucket
 - completed sprint bucket
 - current sprint bucket
 - next sprint bucket
 - project item IDs and GitHub content IDs for mutations
+- issue and pull request descriptions for richer planning cards and lists
 
 This makes drag/drop planning possible without creating shadow records.
 
@@ -82,9 +84,12 @@ Quick add creates a real GitHub issue first.
 If the user selects backlog or a sprint target, the app then:
 
 1. adds the issue to the GitHub Project v2 board
+2. sends the issue description/body to GitHub
 2. sets the GitHub Project status field
 3. optionally sets the iteration field
 4. optionally creates a native GitHub sub-issue relationship
+
+The sprint workspace now defaults to a nested list view across all configured iterations and can be switched to a denser card view when needed.
 
 ### Drag and drop
 
@@ -131,6 +136,7 @@ http://127.0.0.1:5173/?mock=1
 Mock mode:
 
 - loads local planning, issue, pull request, and release payloads
+- includes a larger multi-sprint planning dataset for demos and screenshots
 - keeps public browsing active
 - disables authenticated editing
 - preserves the real GitHub-first production architecture

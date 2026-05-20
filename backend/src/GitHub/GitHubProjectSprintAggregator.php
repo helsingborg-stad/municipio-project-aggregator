@@ -81,6 +81,13 @@ final class GitHubProjectSprintAggregator
         $nextIterationIndex = $this->resolveNextIterationIndex($iterations, $config->generatedAt(), $currentIterationIndex);
         $completedIterationIndex = $this->resolveCompletedIterationIndex($iterations, $config->generatedAt(), $currentIterationIndex);
         $entries = $this->extractEntries($items);
+        $sprintBuckets = $this->createSprintBuckets(
+            $iterations,
+            $entries,
+            $currentIterationIndex,
+            $nextIterationIndex,
+            $completedIterationIndex,
+        );
 
         return new SprintPayload(
             'sprints',
@@ -97,21 +104,10 @@ final class GitHubProjectSprintAggregator
             is_string($view['filter'] ?? null) ? $view['filter'] : '',
             $fieldMetadata,
             $this->createBacklogBucket($entries),
-            $completedIterationIndex === null ? null : $this->createIterationBucket(
-                'Completed Sprint',
-                $iterations[$completedIterationIndex],
-                $this->filterEntriesByIterationId($entries, $iterations[$completedIterationIndex]['id']),
-            ),
-            $currentIterationIndex === null ? null : $this->createIterationBucket(
-                'Current Sprint',
-                $iterations[$currentIterationIndex],
-                $this->filterEntriesByIterationId($entries, $iterations[$currentIterationIndex]['id']),
-            ),
-            $nextIterationIndex === null ? null : $this->createIterationBucket(
-                'Next Sprint',
-                $iterations[$nextIterationIndex],
-                $this->filterEntriesByIterationId($entries, $iterations[$nextIterationIndex]['id']),
-            ),
+            $sprintBuckets,
+            $completedIterationIndex === null ? null : $sprintBuckets[$completedIterationIndex],
+            $currentIterationIndex === null ? null : $sprintBuckets[$currentIterationIndex],
+            $nextIterationIndex === null ? null : $sprintBuckets[$nextIterationIndex],
         );
     }
 
@@ -188,6 +184,7 @@ query {
             ... on Issue {
               id
               title
+              body
               url
               number
               state
@@ -219,6 +216,7 @@ query {
             ... on PullRequest {
               id
               title
+              body
               url
               number
               state
@@ -621,6 +619,44 @@ GRAPHQL;
     }
 
     /**
+     * @param array<int, array{id: string, title: string, startDate: string, endDate: string, duration: int}> $iterations
+     * @param array<int, SprintEntry> $entries
+     * @param int|null $currentIterationIndex
+     * @param int|null $nextIterationIndex
+     * @param int|null $completedIterationIndex
+     * @return array<int, SprintBucket>
+     */
+    private function createSprintBuckets(
+        array $iterations,
+        array $entries,
+        ?int $currentIterationIndex,
+        ?int $nextIterationIndex,
+        ?int $completedIterationIndex,
+    ): array {
+        $buckets = [];
+
+        foreach ($iterations as $index => $iteration) {
+            $label = 'Sprint';
+
+            if ($completedIterationIndex !== null && $index === $completedIterationIndex) {
+                $label = 'Completed Sprint';
+            } elseif ($currentIterationIndex !== null && $index === $currentIterationIndex) {
+                $label = 'Current Sprint';
+            } elseif ($nextIterationIndex !== null && $index === $nextIterationIndex) {
+                $label = 'Next Sprint';
+            }
+
+            $buckets[] = $this->createIterationBucket(
+                $label,
+                $iteration,
+                $this->filterEntriesByIterationId($entries, $iteration['id']),
+            );
+        }
+
+        return $buckets;
+    }
+
+    /**
      * @param array<int, array<string, mixed>> $fieldValues
      * @return array{id: string|null, title: string|null}
      */
@@ -715,6 +751,7 @@ GRAPHQL;
                 $iteration['id'],
                 $iteration['title'],
                 $projectItemUpdatedAt,
+                '',
                 [],
                 [],
                 null,
@@ -737,6 +774,7 @@ GRAPHQL;
             $iteration['id'],
             $iteration['title'],
             is_string($content['updatedAt'] ?? null) && $content['updatedAt'] !== '' ? $content['updatedAt'] : $projectItemUpdatedAt,
+            is_string($content['body'] ?? null) ? trim($content['body']) : '',
             $this->extractLabels($content['labels']['nodes'] ?? []),
             $this->extractUsers($content['assignees']['nodes'] ?? []),
             $this->extractMilestone($content['milestone'] ?? null),

@@ -72,12 +72,14 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Backlog' }));
     expect(await screen.findByRole('heading', { name: 'Backlog manager' })).toBeInTheDocument();
     expect(screen.getByText('Unplanned GitHub issues')).toBeInTheDocument();
-    expect(screen.getByText('Issue alpha')).toBeInTheDocument();
+    expect(screen.getByText('Issue alpha foundation')).toBeInTheDocument();
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
     expect(await screen.findByRole('heading', { name: 'Sprint board' })).toBeInTheDocument();
     expect(screen.getByText('Sprint 14')).toBeInTheDocument();
     expect(screen.getByText('Issue alpha child')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'List view' })).toHaveClass('bg-cyan-300/15');
+    expect(screen.getAllByText('Sprint 16').length).toBeGreaterThan(0);
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Repositories' }));
     expect(await screen.findByRole('heading', { name: 'Compatible plugins' })).toBeInTheDocument();
@@ -95,6 +97,7 @@ describe('App', () => {
     fireEvent.mouseDown(await screen.findByRole('tab', { name: 'Backlog' }));
 
     expect(await screen.findByText('Public users can browse the workspace. Sign in with GitHub to create or move work.')).toBeInTheDocument();
+    expect(screen.getByLabelText('Description')).toBeDisabled();
     expect(screen.getByRole('button', { name: 'Create GitHub issue' })).toBeDisabled();
     expect(await screen.findByRole('button', { name: 'Sign in with GitHub to edit' })).toBeInTheDocument();
   });
@@ -108,7 +111,7 @@ describe('App', () => {
 
     expect(await screen.findByRole('heading', { name: 'Backlog manager' })).toBeInTheDocument();
     expect(screen.getByText('Mock demo')).toBeInTheDocument();
-    expect(screen.getByText('Issue alpha')).toBeInTheDocument();
+    expect(screen.getByText('Issue alpha foundation')).toBeInTheDocument();
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
@@ -124,7 +127,7 @@ describe('App', () => {
     expect(await screen.findByText('No unplanned issues match the current filters.')).toBeInTheDocument();
 
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
-    expect((await screen.findAllByText('Pull request beta')).length).toBeGreaterThan(0);
+    expect((await screen.findAllByText('Release beta sync')).length).toBeGreaterThan(0);
     expect(screen.queryByText('Issue alpha child')).not.toBeInTheDocument();
   });
 
