@@ -132,18 +132,20 @@ describe('App', () => {
       expect(screen.getByText('Mock sprint list updated for Review release data caching.')).toBeInTheDocument();
     });
 
-    const parentSelect = screen.getByLabelText('Parent issue for Issue alpha child');
-
-    fireEvent.change(parentSelect, { target: { value: 'I_issue_3' } });
+    fireEvent.dragStart(screen.getByLabelText('Drag Issue alpha child'));
+    fireEvent.drop(screen.getByLabelText('Drop Issue alpha child under Review release data caching as subtask'));
 
     await waitFor(() => {
-      expect(screen.getByLabelText('Parent issue for Issue alpha child')).toHaveValue('I_issue_3');
+      expect(screen.getByText('Mock subtask linked under Review release data caching.')).toBeInTheDocument();
+      expect(screen.getByText('Subtask of Review release data caching')).toBeInTheDocument();
     });
 
-    fireEvent.change(screen.getByLabelText('Parent issue for Issue alpha child'), { target: { value: '' } });
+    fireEvent.dragStart(screen.getByLabelText('Drag Issue alpha child'));
+    fireEvent.drop(screen.getByLabelText('Drop in status In progress for Sprint 14'));
 
     await waitFor(() => {
-      expect(screen.getByLabelText('Parent issue for Issue alpha child')).toHaveValue('');
+      expect(screen.getByText('Mock subtask Issue alpha child was broken out as a top-level task.')).toBeInTheDocument();
+      expect(screen.queryByText('Subtask of Review release data caching')).not.toBeInTheDocument();
     });
     expect(fetchSpy).not.toHaveBeenCalled();
   });

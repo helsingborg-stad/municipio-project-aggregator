@@ -30,7 +30,7 @@ import {
   reparentPlanningItem,
 } from '@/lib/planning';
 
-const sprintListGridClassName = 'grid grid-cols-[minmax(0,2.4fr)_minmax(7rem,1fr)_minmax(10rem,1.1fr)_minmax(8rem,0.8fr)_minmax(6rem,0.6fr)_minmax(9rem,0.8fr)] gap-3';
+const sprintListGridClassName = 'grid grid-cols-[minmax(0,2.8fr)_minmax(7rem,1fr)_minmax(10rem,1.1fr)_minmax(8rem,0.8fr)] gap-3';
 
 /**
  * Renders the GitHub-first backlog and sprint planning workspace.
@@ -554,8 +554,11 @@ export default function PlanningWorkspace({
       return;
     }
 
+    const currentParent = sprintParentByChildUrl.get(item.url || '') || null;
+    const shouldBreakOutSubtask = Boolean(dragState?.isVisibleSubtask && currentParent);
     const statusOrder = (planningPayload?.fields?.status?.options || []).map((statusOption) => statusOption.name);
-    const optimisticPayload = movePlanningSprintItem(planningPayload, item, {
+    const basePayload = shouldBreakOutSubtask ? reparentPlanningItem(planningPayload, item, null) : planningPayload;
+    const optimisticPayload = movePlanningSprintItem(basePayload, item, {
       iterationId: sprintBucket.iterationId,
       statusName: option.name,
       statusOptionId: option.id,
@@ -570,8 +573,15 @@ export default function PlanningWorkspace({
 
     try {
       if (!session.authenticated) {
-        setFlashMessage(`Mock sprint list updated for ${item.title}.`);
+        setFlashMessage(shouldBreakOutSubtask ? `Mock subtask ${item.title} was broken out as a top-level task.` : `Mock sprint list updated for ${item.title}.`);
         return;
+      }
+
+      if (shouldBreakOutSubtask && currentParent?.contentId && item.contentId) {
+        await removeGitHubSubIssue({
+          parentIssueId: currentParent.contentId,
+          childIssueId: item.contentId,
+        });
       }
 
       if (item.statusOptionId !== option.id) {
@@ -594,7 +604,7 @@ export default function PlanningWorkspace({
         afterId: previousItem?.projectItemId || null,
       });
 
-      setFlashMessage(`Updated ${item.title} in ${option.name}.`);
+      setFlashMessage(shouldBreakOutSubtask ? `Updated ${item.title} in ${option.name} and moved it out as a top-level task.` : `Updated ${item.title} in ${option.name}.`);
     } catch (error) {
       onPlanningPayloadChange(planningPayload);
       setActionError(error instanceof Error ? error.message : 'Could not rearrange the sprint list.');
@@ -604,7 +614,7 @@ export default function PlanningWorkspace({
     }
   }
 
-  async function handleSubtaskAssignment(childItem, parentContentId, sprintBucket) {
+  async function handleSubtaskAssignment(childItem, parentItem, sprintBucket) {
     if (!canManagePlanning) {
       setActionError('Sign in with GitHub to manage subtasks.');
       return;
@@ -616,11 +626,14 @@ export default function PlanningWorkspace({
     }
 
     const currentParent = sprintParentByChildUrl.get(childItem.url || '') || null;
-    const nextParent = parentContentId
-      ? (sprintBucket.items || []).find((item) => item.contentId === parentContentId) || null
-      : null;
+    const nextParent = parentItem || null;
 
-    if (nextParent && (nextParent.type !== 'Issue' || !nextParent.contentId)) {
+    if (!nextParent) {
+      setActionError('Drop the task on a valid parent row to create a subtask.');
+      return;
+    }
+
+    if (nextParent.type !== 'Issue' || !nextParent.contentId) {
       setActionError('Only existing GitHub issues can become parent tasks.');
       return;
     }
@@ -633,12 +646,22 @@ export default function PlanningWorkspace({
     setFlashMessage('');
     setIsSaving(true);
 
-    const optimisticPayload = reparentPlanningItem(planningPayload, childItem, nextParent);
+    const reparentedPayload = reparentPlanningItem(planningPayload, childItem, nextParent);
+    const statusOrder = (planningPayload?.fields?.status?.options || []).map((statusOption) => statusOption.name);
+    const targetGroupItems = (sprintBucket.items || []).filter((item) => item.status === nextParent.status);
+    const parentIndexInStatus = targetGroupItems.findIndex((item) => getPlanningItemKey(item) === getPlanningItemKey(nextParent));
+    const optimisticPayload = movePlanningSprintItem(reparentedPayload, childItem, {
+      iterationId: sprintBucket.iterationId,
+      statusName: nextParent.status || childItem.status || 'No status',
+      statusOptionId: nextParent.statusOptionId || childItem.statusOptionId || '',
+      targetIndex: parentIndexInStatus >= 0 ? parentIndexInStatus + 1 : targetGroupItems.length,
+      statusOrder,
+    });
     onPlanningPayloadChange(optimisticPayload);
 
     try {
       if (!session.authenticated) {
-        setFlashMessage(nextParent ? `Mock subtask linked under ${nextParent.title}.` : `Mock subtask ${childItem.title} broke out as a top-level task.`);
+        setFlashMessage(nextParent ? `Mock subtask linked under ${nextParent.title}.` : `Mock subtask ${childItem.title} was broken out as a top-level task.`);
         return;
       }
 
@@ -656,7 +679,7 @@ export default function PlanningWorkspace({
         });
       }
 
-      setFlashMessage(nextParent ? `Linked ${childItem.title} under ${nextParent.title}.` : `Broke out ${childItem.title} as a top-level task.`);
+      setFlashMessage(nextParent ? `Linked ${childItem.title} under ${nextParent.title}.` : `Moved ${childItem.title} out as a top-level task.`);
     } catch (error) {
       onPlanningPayloadChange(planningPayload);
       setActionError(error instanceof Error ? error.message : 'Could not update the subtask relationship.');
@@ -950,9 +973,9 @@ function SprintView({
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-4">
-        <MetricCard title="Backlog" icon={FolderKanban} value={`${metrics.backlog.itemCount} items`} description={`${metrics.backlog.estimatePoints} estimated points`} />
+        <MetricCard title="Backlog" icon={FolderKanban} value={`${metrics.backlog.itemCount} items`} description="Ready for prioritization" />
         <MetricCard title="Current sprint" icon={CalendarDays} value={`${metrics.currentSprint.itemCount} items`} description={`${completedPercent}% done`} />
-        <MetricCard title="Next sprint" icon={Target} value={`${metrics.nextSprint.itemCount} items`} description={`${metrics.nextSprint.estimatePoints} estimated points`} />
+        <MetricCard title="Next sprint" icon={Target} value={`${metrics.nextSprint.itemCount} items`} description="Prepared for upcoming work" />
         <MetricCard title="Completed sprint" icon={TimerReset} value={`${metrics.completedSprint.itemCount} items`} description={`${metrics.completedSprint.doneCount} done`} />
       </div>
       <Card className="border-white/10 bg-slate-950/50 text-card-foreground shadow-glow backdrop-blur">
@@ -1034,7 +1057,6 @@ function SprintNestedListView({
     <div className="space-y-4">
       {sprintBuckets.map((bucket) => {
         const statusGroups = getSprintStatusGroups(bucket.items || [], statusOptions, true);
-        const issueParentOptions = (bucket.items || []).filter((item) => item.type === 'Issue' && item.contentId);
         const itemOrderByKey = new Map((bucket.items || []).map((item, index) => [getPlanningItemKey(item), index]));
 
         return (
@@ -1080,9 +1102,12 @@ function SprintNestedListView({
                       <span>Assignee</span>
                       <span>Repository</span>
                       <span>Milestone</span>
-                      <span>Estimate</span>
-                      <span>Parent task</span>
                     </div>
+                    {dragState?.isVisibleSubtask ? (
+                      <div className="border-b border-white/[0.06] px-4 py-2 text-xs text-cyan-100/90">
+                        Drop in the list to break this subtask out as a top-level task.
+                      </div>
+                    ) : null}
                     {treeItems.length === 0 ? (
                       <div className="px-4 py-4 text-sm text-slate-500">Drop items here to populate this status.</div>
                     ) : (
@@ -1094,7 +1119,6 @@ function SprintNestedListView({
                             depth={0}
                             bucket={bucket}
                             group={group}
-                            issueParentOptions={issueParentOptions}
                             itemOrderByKey={itemOrderByKey}
                             parentByChildUrl={parentByChildUrl}
                             canManagePlanning={canManagePlanning}
@@ -1123,7 +1147,6 @@ function SprintNestedListRow({
   depth = 0,
   bucket,
   group,
-  issueParentOptions,
   itemOrderByKey,
   parentByChildUrl,
   canManagePlanning,
@@ -1137,45 +1160,45 @@ function SprintNestedListRow({
   const itemState = item.displayState || formatPlanningState(item.state);
   const currentParent = parentByChildUrl.get(item.url || '') || null;
   const descendantUrls = collectPlanningDescendantUrls(item);
-  const availableParentOptions = [
-    ...(currentParent && !issueParentOptions.some((candidate) => candidate.contentId === currentParent.contentId) ? [currentParent] : []),
-    ...issueParentOptions,
-  ].filter((candidate) => (
-    candidate.contentId !== item.contentId
-    && candidate.url !== item.url
-    && !descendantUrls.has(candidate.url)
-  ));
   const childItems = (item.children || []).filter((childItem) => childItem.status === group.status);
   const targetRowIndex = itemOrderByKey.get(getPlanningItemKey(item)) || 0;
   const isDragging = dragState?.key === getPlanningItemKey(item);
   const assigneeNames = item.assignees?.map((assignee) => assignee.login).filter(Boolean) || [];
-  const indentClassName = depth > 0 ? 'pl-6' : '';
+  const draggedItem = dragState?.item || null;
+  const canAcceptSubtaskDrop = draggedItem
+    ? canDropPlanningItemAsSubtask(draggedItem, item, currentParent, descendantUrls)
+    : false;
+  const rowClassName = depth > 0
+    ? 'border-l-2 border-violet-300/40 bg-violet-300/[0.06]'
+    : '';
+  const currentParentTitle = currentParent?.title || 'parent task';
 
   return (
     <>
       <li
-        className={`group border-t border-white/[0.06] transition-colors hover:bg-white/[0.03] first:border-t-0 ${isDragging ? 'opacity-50' : ''}`}
+        className={`group border-t border-white/[0.06] transition-colors hover:bg-white/[0.03] first:border-t-0 ${isDragging ? 'opacity-50' : ''} ${rowClassName}`}
         draggable={canManagePlanning && !isSaving}
-        onDragStart={() => onDragStateChange({ key: getPlanningItemKey(item), item })}
+        onDragStart={() => onDragStateChange({ key: getPlanningItemKey(item), item, isVisibleSubtask: depth > 0 })}
         onDragEnd={() => onDragStateChange(null)}
         onDragOver={(event) => event.preventDefault()}
         onDrop={() => dragState?.item && group.option ? onSprintListDrop(dragState.item, bucket, group.option, targetRowIndex) : null}
         aria-label={`Drag ${item.title}`}
       >
-        <div className={`${sprintListGridClassName} px-4 py-3 ${indentClassName}`}>
+        <div className={`${sprintListGridClassName} px-4 py-3`}>
           <div className="min-w-0">
             <div className="flex min-w-0 items-start gap-3">
-              <div className="flex items-center gap-2 pt-0.5 text-slate-500">
+              <div className={`flex items-center gap-2 pt-0.5 ${depth > 0 ? 'text-violet-200' : 'text-slate-500'}`}>
                 <span aria-label="Drag handle">
                   <GripVertical className="h-3.5 w-3.5" />
                 </span>
-                <div className="h-3.5 w-3.5 rounded-full border-2 border-slate-500/70" />
+                <div className={`h-3.5 w-3.5 rounded-full border-2 ${depth > 0 ? 'border-violet-300/80 bg-violet-300/20' : 'border-slate-500/70'}`} />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex min-w-0 flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-slate-500">
                   <span>{item.type}</span>
                   {item.number ? <span>#{item.number}</span> : null}
                   <Badge variant="secondary" className="shrink-0 px-2 py-0 text-[10px]">{itemState}</Badge>
+                  {depth > 0 ? <span className="rounded-full border border-violet-300/30 bg-violet-300/10 px-2 py-0.5 text-[10px] text-violet-100" role="status" aria-label="This is a subtask">Subtask</span> : null}
                   {item.subIssues?.total ? <span>{item.subIssues.total} sub</span> : null}
                 </div>
                 <div className="mt-1 flex min-w-0 items-center gap-2">
@@ -1186,7 +1209,24 @@ function SprintNestedListRow({
                     </a>
                   ) : null}
                 </div>
-                {currentParent && depth === 0 ? <span className="mt-1 block text-xs text-slate-500" aria-label={`Subtask of ${currentParent.title}`}>Subtask of {currentParent.title}</span> : null}
+                {depth > 0 ? <span className="mt-1 block text-xs text-violet-200/90" aria-label={`Subtask of ${currentParentTitle}`}>Subtask of {currentParentTitle}</span> : null}
+                {canAcceptSubtaskDrop ? (
+                  <div
+                    className="mt-2 inline-flex items-center rounded-full border border-dashed border-cyan-300/40 bg-cyan-300/10 px-2.5 py-1 text-[11px] text-cyan-100"
+                    onDragOver={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }}
+                    onDrop={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      onSubtaskAssignment(dragState.item, item, bucket);
+                    }}
+                    aria-label={`Drop ${draggedItem?.title || 'task'} under ${item.title} as subtask`}
+                  >
+                    Drop here to make subtask
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
@@ -1227,32 +1267,6 @@ function SprintNestedListRow({
           <div className="py-1 text-xs text-slate-400">
             {item.milestone?.title || <span className="text-slate-700">—</span>}
           </div>
-
-          <div className="py-1 text-xs text-slate-400">
-            {item.estimatePoints ? `${item.estimatePoints} pts` : <span className="text-slate-700">—</span>}
-          </div>
-
-          <div className="py-1">
-            {item.type === 'Issue' && item.contentId ? (
-              <label className="block">
-                <span className="sr-only">Parent issue for {item.title}</span>
-                <select
-                  value={currentParent?.contentId || ''}
-                  disabled={!canManagePlanning || isSaving}
-                  onChange={(event) => onSubtaskAssignment(item, event.target.value, bucket)}
-                  className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-2.5 py-1.5 text-xs text-slate-200 outline-none transition-colors focus:border-cyan-300/40 disabled:cursor-not-allowed disabled:opacity-60"
-                  aria-label={`Parent issue for ${item.title}`}
-                >
-                  <option value="">Top level</option>
-                  {availableParentOptions.map((candidate) => (
-                    <option key={candidate.contentId} value={candidate.contentId}>{candidate.title}</option>
-                  ))}
-                </select>
-              </label>
-            ) : (
-              <span className="text-xs text-slate-700">—</span>
-            )}
-          </div>
         </div>
       </li>
       {childItems.map((childItem) => (
@@ -1262,7 +1276,6 @@ function SprintNestedListRow({
           depth={depth + 1}
           bucket={bucket}
           group={group}
-          issueParentOptions={issueParentOptions}
           itemOrderByKey={itemOrderByKey}
           parentByChildUrl={parentByChildUrl}
           canManagePlanning={canManagePlanning}
@@ -1424,7 +1437,6 @@ function PlanningItemCard({ item, dragState, onDragStateChange, isSaving = false
             {item.description ? <p className="text-sm text-slate-400">{truncateDescription(item.description, 180)}</p> : null}
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
-            {item.estimatePoints ? <span>{item.estimatePoints} pts</span> : null}
             {item.assignees?.length ? <span>{item.assignees.map((assignee) => assignee.login).join(', ')}</span> : <span>Unassigned</span>}
             {item.milestone?.title ? <span>Milestone: {item.milestone.title}</span> : null}
             {item.subIssues?.total ? <span>{item.subIssues.total} sub-issues</span> : null}
@@ -1487,9 +1499,9 @@ function getRepositoryNameParts(repository) {
 function MetricsGrid({ metrics }) {
   return (
     <div className="grid gap-4 md:grid-cols-4">
-      <MetricCard title="Backlog" icon={FolderKanban} value={`${metrics.backlog.itemCount} items`} description={`${metrics.backlog.estimatePoints} points`} />
+      <MetricCard title="Backlog" icon={FolderKanban} value={`${metrics.backlog.itemCount} items`} description="Ready for prioritization" />
       <MetricCard title="Current sprint" icon={CalendarDays} value={`${metrics.currentSprint.itemCount} items`} description={`${metrics.currentSprint.doneCount} done`} />
-      <MetricCard title="Next sprint" icon={Target} value={`${metrics.nextSprint.itemCount} items`} description={`${metrics.nextSprint.estimatePoints} points`} />
+      <MetricCard title="Next sprint" icon={Target} value={`${metrics.nextSprint.itemCount} items`} description="Prepared for upcoming work" />
       <MetricCard title="Completed" icon={CheckCircle2} value={`${metrics.completedSprint.itemCount} items`} description={`${metrics.completedSprint.doneCount} done`} />
     </div>
   );
@@ -1712,6 +1724,34 @@ function collectPlanningDescendantUrls(item) {
   }
 
   return descendantUrls;
+}
+
+function canDropPlanningItemAsSubtask(draggedItem, candidateParent, currentParent, descendantUrls) {
+  if (!draggedItem || !candidateParent) {
+    return false;
+  }
+
+  if (draggedItem.type !== 'Issue' || !draggedItem.contentId) {
+    return false;
+  }
+
+  if (candidateParent.type !== 'Issue' || !candidateParent.contentId) {
+    return false;
+  }
+
+  if (getPlanningItemKey(draggedItem) === getPlanningItemKey(candidateParent)) {
+    return false;
+  }
+
+  if (descendantUrls.has(draggedItem.url)) {
+    return false;
+  }
+
+  if ((currentParent?.contentId || '') === candidateParent.contentId) {
+    return false;
+  }
+
+  return true;
 }
 
 function getInitials(value) {
