@@ -203,6 +203,6 @@ That keeps the system GitHub-native, simple, and operationally lightweight.
 
 ![Mock backlog demo](./screenshots/backlog-mock-demo.png)
 
-### Mock sprint board view
+### Mock sprint list view
 
-![Mock sprint board demo](./screenshots/sprint-mock-demo.png)
+![Mock sprint list demo](./screenshots/sprint-mock-demo.png)
