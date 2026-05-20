@@ -31,6 +31,20 @@ import {
 } from '@/lib/planning';
 
 const sprintListGridClassName = 'grid grid-cols-[minmax(0,2.8fr)_minmax(7rem,1fr)_minmax(10rem,1.1fr)_minmax(8rem,0.8fr)] gap-3';
+const maxSprintListIndentDepth = 3;
+const sprintListIndentPerLevelRem = 1.5;
+const sprintListConnectorVerticalInsetRem = 0.5;
+const sprintListConnectorBranchTopRem = 1.25;
+const sprintListConnectorHorizontalOffsetRem = sprintListIndentPerLevelRem / 2;
+const sprintListConnectorArmLengthRem = sprintListIndentPerLevelRem - sprintListConnectorHorizontalOffsetRem;
+const sprintListConnectorColorClassName = 'bg-violet-300/35';
+const sprintListConnectorStyles = {
+  left: `${sprintListConnectorHorizontalOffsetRem}rem`,
+  top: '0rem',
+  branchTop: `${sprintListConnectorBranchTopRem}rem`,
+  width: `${sprintListConnectorArmLengthRem}rem`,
+  bottom: `${sprintListConnectorVerticalInsetRem}rem`,
+};
 
 /**
  * Renders the GitHub-first backlog and sprint planning workspace.
@@ -1172,6 +1186,7 @@ function SprintNestedListRow({
     ? 'border-l-2 border-violet-300/40 bg-violet-300/[0.06]'
     : '';
   const currentParentTitle = currentParent?.title || 'parent task';
+  const nestedOffset = depth > 0 ? `${Math.min(depth, maxSprintListIndentDepth) * sprintListIndentPerLevelRem}rem` : '0rem';
 
   return (
     <>
@@ -1187,46 +1202,70 @@ function SprintNestedListRow({
         <div className={`${sprintListGridClassName} px-4 py-3`}>
           <div className="min-w-0">
             <div className="flex min-w-0 items-start gap-3">
-              <div className={`flex items-center gap-2 pt-0.5 ${depth > 0 ? 'text-violet-200' : 'text-slate-500'}`}>
-                <span aria-label="Drag handle">
-                  <GripVertical className="h-3.5 w-3.5" />
-                </span>
-                <div className={`h-3.5 w-3.5 rounded-full border-2 ${depth > 0 ? 'border-violet-300/80 bg-violet-300/20' : 'border-slate-500/70'}`} />
-              </div>
               <div className="min-w-0 flex-1">
-                <div className="flex min-w-0 flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-slate-500">
-                  <span>{item.type}</span>
-                  {item.number ? <span>#{item.number}</span> : null}
-                  <Badge variant="secondary" className="shrink-0 px-2 py-0 text-[10px]">{itemState}</Badge>
-                  {depth > 0 ? <span className="rounded-full border border-violet-300/30 bg-violet-300/10 px-2 py-0.5 text-[10px] text-violet-100" role="status" aria-label="This is a subtask">Subtask</span> : null}
-                  {item.subIssues?.total ? <span>{item.subIssues.total} sub</span> : null}
-                </div>
-                <div className="mt-1 flex min-w-0 items-center gap-2">
-                  <span className="truncate text-sm font-medium text-slate-100 transition-colors group-hover:text-white">{item.title}</span>
-                  {item.url ? (
-                    <a href={item.url} target="_blank" rel="noreferrer" className="shrink-0 text-slate-500 transition-colors hover:text-cyan-300">
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
+                <div className="relative min-w-0" style={{ paddingLeft: nestedOffset }}>
+                  {depth > 0 ? (
+                    <>
+                      <span
+                        aria-hidden="true"
+                        className={`absolute w-px ${sprintListConnectorColorClassName}`}
+                        style={{ left: sprintListConnectorStyles.left, top: sprintListConnectorStyles.top, bottom: sprintListConnectorStyles.bottom }}
+                      />
+                      <span
+                        aria-hidden="true"
+                        className={`absolute h-px ${sprintListConnectorColorClassName}`}
+                        style={{
+                          left: sprintListConnectorStyles.left,
+                          top: sprintListConnectorStyles.branchTop,
+                          width: sprintListConnectorStyles.width,
+                        }}
+                      />
+                    </>
                   ) : null}
-                </div>
-                {depth > 0 ? <span className="mt-1 block text-xs text-violet-200/90" aria-label={`Subtask of ${currentParentTitle}`}>Subtask of {currentParentTitle}</span> : null}
-                {canAcceptSubtaskDrop ? (
-                  <div
-                    className="mt-2 inline-flex items-center rounded-full border border-dashed border-cyan-300/40 bg-cyan-300/10 px-2.5 py-1 text-[11px] text-cyan-100"
-                    onDragOver={(event) => {
-                      event.preventDefault();
-                      event.stopPropagation();
-                    }}
-                    onDrop={(event) => {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      onSubtaskAssignment(dragState.item, item, bucket);
-                    }}
-                    aria-label={`Drop ${draggedItem?.title || 'task'} under ${item.title} as subtask`}
-                  >
-                    Drop here to make subtask
+                  <div className="flex min-w-0 items-start gap-3">
+                    <div className={`flex items-center gap-2 pt-0.5 ${depth > 0 ? 'text-violet-200' : 'text-slate-500'}`}>
+                      <span aria-label="Drag handle">
+                        <GripVertical className="h-3.5 w-3.5" />
+                      </span>
+                      <div className={`h-3.5 w-3.5 rounded-full border-2 ${depth > 0 ? 'border-violet-300/80 bg-violet-300/20' : 'border-slate-500/70'}`} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex min-w-0 flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-slate-500">
+                        <span>{item.type}</span>
+                        {item.number ? <span>#{item.number}</span> : null}
+                        <Badge variant="secondary" className="shrink-0 px-2 py-0 text-[10px]">{itemState}</Badge>
+                        {depth > 0 ? <span className="rounded-full border border-violet-300/30 bg-violet-300/10 px-2 py-0.5 text-[10px] text-violet-100" role="status" aria-label="This is a subtask">Subtask</span> : null}
+                        {item.subIssues?.total ? <span>{item.subIssues.total} sub</span> : null}
+                      </div>
+                      <div className="mt-1 flex min-w-0 items-center gap-2">
+                        <span className="truncate text-sm font-medium text-slate-100 transition-colors group-hover:text-white">{item.title}</span>
+                        {item.url ? (
+                          <a href={item.url} target="_blank" rel="noreferrer" className="shrink-0 text-slate-500 transition-colors hover:text-cyan-300">
+                            <ArrowUpRight className="h-3.5 w-3.5" />
+                          </a>
+                        ) : null}
+                      </div>
+                      {depth > 0 ? <span className="mt-1 block text-xs text-violet-200/90" aria-label={`Subtask of ${currentParentTitle}`}>Subtask of {currentParentTitle}</span> : null}
+                      {canAcceptSubtaskDrop ? (
+                        <div
+                          className="mt-2 inline-flex items-center rounded-full border border-dashed border-cyan-300/40 bg-cyan-300/10 px-2.5 py-1 text-[11px] text-cyan-100"
+                          onDragOver={(event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                          }}
+                          onDrop={(event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            onSubtaskAssignment(dragState.item, item, bucket);
+                          }}
+                          aria-label={`Drop ${draggedItem?.title || 'task'} under ${item.title} as subtask`}
+                        >
+                          Drop here to make subtask
+                        </div>
+                      ) : null}
+                    </div>
                   </div>
-                ) : null}
+                </div>
               </div>
             </div>
           </div>
