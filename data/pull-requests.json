@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-21T03:36:36+00:00",
+    "generatedAt": "2026-05-21T05:50:06+00:00",
     "count": 174,
     "repositories": [
         {
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Wordpress-Plugin-Boilerplate",
-            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
-            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
-            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-json-render",
             "fullName": "helsingborg-stad/modularity-json-render",
             "description": "Renders a single level api-response (json) as a list. ",
             "url": "https://github.com/helsingborg-stad/modularity-json-render"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Wordpress-Plugin-Boilerplate",
+            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
+            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
+            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
         },
         {
             "owner": "helsingborg-stad",
@@ -171,10 +171,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-allow-cors",
-            "fullName": "helsingborg-stad/wpmu-allow-cors",
-            "description": "Allows cors with *",
-            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -182,13 +182,6 @@
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
             "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -203,6 +196,13 @@
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-allow-cors",
+            "fullName": "helsingborg-stad/wpmu-allow-cors",
+            "description": "Allows cors with *",
+            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "helsingborg-stad",
@@ -339,6 +339,27 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "custom-short-links",
             "fullName": "helsingborg-stad/custom-short-links",
             "description": "Create shorter versions of url:s ",
@@ -364,27 +385,6 @@
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
             "url": "https://github.com/helsingborg-stad/s3-local-index"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
