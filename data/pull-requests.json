@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-22T14:09:18+00:00",
+    "generatedAt": "2026-05-22T15:26:19+00:00",
     "count": 177,
     "repositories": [
         {
@@ -94,17 +94,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager",
-            "fullName": "helsingborg-stad/api-volunteer-manager",
-            "description": "Managing data for volunteers and their assignments",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
             "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager",
+            "fullName": "helsingborg-stad/api-volunteer-manager",
+            "description": "Managing data for volunteers and their assignments",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
             "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -206,6 +206,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "search-statistics",
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
@@ -217,13 +224,6 @@
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
             "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
@@ -775,6 +775,59 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOOWhNPs7eZnOn",
+            "title": "build(deps): bump serialize-javascript and terser-webpack-plugin",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/142",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-05-22T15:21:20Z",
+            "number": 142,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDOOWhNPs8AAAACF2tZyw",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDOOWhNPs8AAAACF2tZzg",
+                    "name": "javascript",
+                    "color": "168700",
+                    "description": "Pull requests that update javascript code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "build(deps): bump serialize-javascript and terser-webpack-plugin",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/125",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                }
+            ]
+        },
         {
             "id": "PR_kwDOCquRHc7eULOg",
             "title": "Align nested component overrides with the approved composition architecture",
@@ -3636,59 +3689,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOOWhNPs7OYUP9",
-            "title": "build(deps): bump serialize-javascript and terser-webpack-plugin",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/125",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-03-29T13:22:17Z",
-            "number": 125,
-            "state": "OPEN",
-            "author": {
-                "login": "dependabot",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "LA_kwDOOWhNPs8AAAACF2tZyw",
-                    "name": "dependencies",
-                    "color": "0366d6",
-                    "description": "Pull requests that update a dependency file"
-                },
-                {
-                    "id": "LA_kwDOOWhNPs8AAAACF2tZzg",
-                    "name": "javascript",
-                    "color": "168700",
-                    "description": "Pull requests that update javascript code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "build(deps): bump serialize-javascript and terser-webpack-plugin",
-                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/122",
-                    "repository": "helsingborg-stad/modularity-frontend-form"
-                }
-            ]
         },
         {
             "id": "PR_kwDOAuIygs7OJdGT",
