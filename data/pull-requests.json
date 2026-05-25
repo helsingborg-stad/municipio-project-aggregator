@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-25T13:35:17+00:00",
-    "count": 178,
+    "generatedAt": "2026-05-25T15:28:43+00:00",
+    "count": 175,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-json-render",
-            "fullName": "helsingborg-stad/modularity-json-render",
-            "description": "Renders a single level api-response (json) as a list. ",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Wordpress-Plugin-Boilerplate",
             "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
             "description": "A simple class based WordPress plugin structure to start off any plugin with.",
             "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-json-render",
+            "fullName": "helsingborg-stad/modularity-json-render",
+            "description": "Renders a single level api-response (json) as a list. ",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -388,20 +388,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-js-searchpage-addon",
             "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
             "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
@@ -420,6 +406,20 @@
             "fullName": "helsingborg-stad/wputilservice",
             "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
             "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -727,7 +727,7 @@
         },
         {
             "login": "sebastianthulin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
             "url": "https://github.com/sebastianthulin",
             "company": "Helsingborgs stad"
         },
@@ -747,7 +747,7 @@
             "login": "thorbrink",
             "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
             "url": "https://github.com/thorbrink",
-            "company": "@helsingborg-stad"
+            "company": ""
         },
         {
             "login": "tommymo",
@@ -776,34 +776,21 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs7ed1xa",
-            "title": "build(deps): bump qs and body-parser",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2052",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-22T19:08:42Z",
-            "number": 2052,
+            "id": "PR_kwDOGyB3t87fEoMa",
+            "title": "6.0.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/187",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-05-25T14:24:22Z",
+            "number": 187,
             "state": "OPEN",
             "author": {
-                "login": "dependabot",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwxOTEwODkxODE1",
-                    "name": "dependencies",
-                    "color": "0366d6",
-                    "description": "Pull requests that update a dependency file"
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAAB9ffZUQ",
-                    "name": "javascript",
-                    "color": "168700",
-                    "description": "Pull requests that update javascript code"
-                }
-            ],
+            "labels": [],
             "milestone": null,
             "type": null,
             "subIssues": {
@@ -1229,52 +1216,6 @@
                     "repository": "helsingborg-stad/modularity-json-render"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOAuIygs7Z4hki",
-            "title": "build(deps-dev): bump @babel/plugin-transform-modules-systemjs from 7.29.0 to 7.29.4",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2034",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-09T17:41:06Z",
-            "number": 2034,
-            "state": "OPEN",
-            "author": {
-                "login": "dependabot",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwxOTEwODkxODE1",
-                    "name": "dependencies",
-                    "color": "0366d6",
-                    "description": "Pull requests that update a dependency file"
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAAB9ffZUQ",
-                    "name": "javascript",
-                    "color": "168700",
-                    "description": "Pull requests that update javascript code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOOWhNPs7ZwPUX",
@@ -3469,72 +3410,6 @@
                     "description": "Pull requests that update javascript code"
                 }
             ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOGyB3t87OlELg",
-            "title": "6.0",
-            "url": "https://github.com/municipio-se/municipio-deployment/pull/172",
-            "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-03-30T11:01:21Z",
-            "number": 172,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs7OixhO",
-            "title": "7.0",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/1866",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-03-30T08:58:06Z",
-            "number": 1866,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
             "milestone": null,
             "type": null,
             "subIssues": {
