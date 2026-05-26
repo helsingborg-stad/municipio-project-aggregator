@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-26T15:36:55+00:00",
+    "generatedAt": "2026-05-26T17:33:19+00:00",
     "count": 175,
     "repositories": [
         {
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
             "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -297,27 +297,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -336,6 +315,27 @@
             "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
             "description": "Use blog 1 as the master for all settings in litespeed configuration",
             "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
