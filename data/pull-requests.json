@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-26T05:47:49+00:00",
-    "count": 175,
+    "generatedAt": "2026-05-26T07:38:05+00:00",
+    "count": 177,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-json-render",
-            "fullName": "helsingborg-stad/modularity-json-render",
-            "description": "Renders a single level api-response (json) as a list. ",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Wordpress-Plugin-Boilerplate",
             "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
             "description": "A simple class based WordPress plugin structure to start off any plugin with.",
             "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-json-render",
+            "fullName": "helsingborg-stad/modularity-json-render",
+            "description": "Renders a single level api-response (json) as a list. ",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -220,13 +220,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-modularity-addon",
             "fullName": "helsingborg-stad/algolia-index-modularity-addon",
             "description": "Adds support for modularity indexing to algolia-index plugin. ",
@@ -238,6 +231,13 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
@@ -775,6 +775,72 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOCquRHc7fUFRv",
+            "title": "fix: local container names for segment appearances",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1231",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-05-26T07:38:00Z",
+            "number": 1231,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs7fT_q7",
+            "title": "fix: column flex basis",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2054",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-26T07:33:14Z",
+            "number": 2054,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOGyB3t87fEoMa",
             "title": "6.0.0",
