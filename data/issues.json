@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-27T11:23:09+00:00",
+    "generatedAt": "2026-05-27T13:30:36+00:00",
     "count": 105,
     "repositories": [
         {
@@ -178,13 +178,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -196,6 +189,13 @@
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -238,34 +238,6 @@
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "broken-link-detector",
-            "fullName": "helsingborg-stad/broken-link-detector",
-            "description": "Detects and fixes broken links (internally)",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "visit-custom-posttypes-taxonomies",
-            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-typesense-provider",
-            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "project-synchronizer",
-            "fullName": "helsingborg-stad/project-synchronizer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/project-synchronizer"
         },
         {
             "owner": "helsingborg-stad",
@@ -336,6 +308,34 @@
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "visit-custom-posttypes-taxonomies",
+            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-typesense-provider",
+            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "project-synchronizer",
+            "fullName": "helsingborg-stad/project-synchronizer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "broken-link-detector",
+            "fullName": "helsingborg-stad/broken-link-detector",
+            "description": "Detects and fixes broken links (internally)",
+            "url": "https://github.com/helsingborg-stad/broken-link-detector"
         },
         {
             "owner": "helsingborg-stad",
