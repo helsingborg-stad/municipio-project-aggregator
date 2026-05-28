@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-27T23:46:38+00:00",
-    "count": 181,
+    "generatedAt": "2026-05-28T01:16:04+00:00",
+    "count": 182,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -781,6 +781,52 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOOWhNPs7gC-pZ",
+            "title": "build(deps-dev): bump symfony/yaml from 5.4.45 to 5.4.53",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/143",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-05-28T00:45:11Z",
+            "number": 143,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDOOWhNPs8AAAACF2tZyw",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDOOWhNPs8AAAACWMTtjg",
+                    "name": "php",
+                    "color": "45229e",
+                    "description": "Pull requests that update php code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs7f3Mnn",
             "title": "fix: merge conflicts in chat",
