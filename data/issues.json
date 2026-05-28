@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-28T11:23:25+00:00",
-    "count": 105,
+    "generatedAt": "2026-05-28T13:33:33+00:00",
+    "count": 106,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -781,6 +781,59 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOAuIygs8AAAABDqZqrQ",
+            "title": "str_contains(): Argument #1 ($haystack) must be of type string, array given",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2062",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-28T13:26:37Z",
+            "number": 2062,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "[WIP] Fix str_contains argument type error in BlockManager",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2063",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
         {
             "id": "I_kwDOCquRHc8AAAABDFfcmg",
             "title": "Components affecting sub components should use the same arcitecture",
