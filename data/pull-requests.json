@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-28T11:37:09+00:00",
-    "count": 182,
+    "generatedAt": "2026-05-28T13:39:54+00:00",
+    "count": 172,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -782,12 +782,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs7gL-XD",
-            "title": "fix: chat admin page not available if chat is disabled",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2061",
+            "id": "PR_kwDOAuIygs7gQKXZ",
+            "title": "Feat/kulturkortet n",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2064",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-28T10:10:44Z",
-            "number": 2061,
+            "createdAt": "2026-05-28T13:38:32Z",
+            "number": 2064,
             "state": "OPEN",
             "author": {
                 "login": "NiclasNorin",
@@ -813,6 +813,59 @@
                 "linked": 0
             },
             "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs7gP57W",
+            "title": "[WIP] Fix str_contains argument type error in BlockManager",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2063",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-28T13:26:52Z",
+            "number": 2063,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "str_contains(): Argument #1 ($haystack) must be of type string, array given",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2062",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "id": "PR_kwDOCquRHc7gI98R",
@@ -894,39 +947,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOCquRHc7fw53O",
-            "title": "fix: correcting border and border color for extended primary nav",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1239",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-27T09:34:06Z",
-            "number": 1239,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOAuIygs7fwgY4",
             "title": "feat: add upgrade script to clear customizer cache",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2058",
@@ -939,72 +959,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc7fv7uC",
-            "title": "fix: sticky header z index",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1238",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-27T08:51:09Z",
-            "number": 1238,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs7fv6Xv",
-            "title": "fix: flexible header z-index",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2057",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-27T08:49:56Z",
-            "number": 2057,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
@@ -1851,39 +1805,6 @@
             ]
         },
         {
-            "id": "PR_kwDOAuIygs7XCr23",
-            "title": "Feat/chat presidio pii anonymization",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2004",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-30T09:31:41Z",
-            "number": 2004,
-            "state": "OPEN",
-            "author": {
-                "login": "MasterKenth",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/2890987?v=4",
-                "url": "https://github.com/MasterKenth",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOA02SVs7WAnhx",
             "title": "Prevent duplicate shortlink slugs from being saved",
             "url": "https://github.com/helsingborg-stad/custom-short-links/pull/7",
@@ -2095,39 +2016,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOCquRHc7T9ygP",
-            "title": "refactor: changing tab button styling",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1193",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-20T13:29:41Z",
-            "number": 1193,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOE96d8c7T9wor",
             "title": "refactor: using components for tabs buttons",
             "url": "https://github.com/helsingborg-stad/component-library/pull/638",
@@ -2213,39 +2101,6 @@
             "repository": "helsingborg-stad/component-library",
             "createdAt": "2026-04-20T08:43:42Z",
             "number": 637,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc7T4MS9",
-            "title": "refactor: rewriting accordion button styling",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1192",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-20T08:41:15Z",
-            "number": 1192,
             "state": "OPEN",
             "author": {
                 "login": "NiclasNorin",
@@ -3094,39 +2949,6 @@
                     "description": "Pull requests that update javascript code"
                 }
             ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc7SVu3B",
-            "title": "refactor: init moving image gallery modal",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1169",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-04-14T14:31:39Z",
-            "number": 1169,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
             "milestone": null,
             "type": null,
             "subIssues": {
@@ -6900,105 +6722,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOCquRHc7CsO85",
-            "title": "feat: preloader no border utility",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1140",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-10T09:44:42Z",
-            "number": 1140,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc7Cc6-8",
-            "title": "fix: tags not working in preloader",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1139",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-09T11:01:44Z",
-            "number": 1139,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc7Ccw-b",
-            "title": "fix: progressbar no preloader styling",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1138",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-09T10:51:22Z",
-            "number": 1138,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOPlGRB87CM0Ig",
             "title": "build(deps-dev): bump webpack from 5.103.0 to 5.105.0",
             "url": "https://github.com/helsingborg-stad/acf-icon-field/pull/15",
@@ -7267,39 +6990,6 @@
                     "repository": "helsingborg-stad/styleguide"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOCquRHc7Bvn3D",
-            "title": "feat: utility to exclude elements from preloading by hiding them",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1134",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-02-05T14:33:10Z",
-            "number": 1134,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOCquRHc7BuMGL",
