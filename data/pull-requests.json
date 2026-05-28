@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-28T13:39:54+00:00",
-    "count": 172,
+    "generatedAt": "2026-05-28T15:37:58+00:00",
+    "count": 173,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -311,27 +311,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -357,6 +336,27 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
@@ -782,12 +782,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs7gQKXZ",
-            "title": "Feat/kulturkortet n",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2064",
+            "id": "PR_kwDOAuIygs7gSMCh",
+            "title": "Feat/kulturkortet",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2067",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-28T13:38:32Z",
-            "number": 2064,
+            "createdAt": "2026-05-28T15:01:53Z",
+            "number": 2067,
             "state": "OPEN",
             "author": {
                 "login": "NiclasNorin",
@@ -815,8 +815,61 @@
             "relationships": []
         },
         {
+            "id": "PR_kwDOAuIygs7gRDgb",
+            "title": "Prevent container block crashes on array-valued ACF data",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2066",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-28T14:14:53Z",
+            "number": 2066,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "When adding a shortcode inside a container block (with gradient background) in widget manager site crashes",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2065",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
             "id": "PR_kwDOAuIygs7gP57W",
-            "title": "[WIP] Fix str_contains argument type error in BlockManager",
+            "title": "Guard Gutenberg block data handling against array-valued ACF fields",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2063",
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-05-28T13:26:52Z",
