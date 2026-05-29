@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-29T17:21:02+00:00",
+    "generatedAt": "2026-05-29T19:04:36+00:00",
     "count": 108,
     "repositories": [
         {
@@ -178,13 +178,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -206,24 +199,17 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "OpenStreetMap",
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-modularity-addon",
-            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
-            "description": "Adds support for modularity indexing to algolia-index plugin. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -238,6 +224,20 @@
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
             "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-modularity-addon",
+            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
+            "description": "Adds support for modularity indexing to algolia-index plugin. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
