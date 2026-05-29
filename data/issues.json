@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-29T19:56:09+00:00",
+    "generatedAt": "2026-05-29T20:57:51+00:00",
     "count": 108,
     "repositories": [
         {
@@ -66,17 +66,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Wordpress-Plugin-Boilerplate",
-            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
-            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
-            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-json-render",
             "fullName": "helsingborg-stad/modularity-json-render",
             "description": "Renders a single level api-response (json) as a list. ",
             "url": "https://github.com/helsingborg-stad/modularity-json-render"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Wordpress-Plugin-Boilerplate",
+            "fullName": "helsingborg-stad/Wordpress-Plugin-Boilerplate",
+            "description": "A simple class based WordPress plugin structure to start off any plugin with.",
+            "url": "https://github.com/helsingborg-stad/Wordpress-Plugin-Boilerplate"
         },
         {
             "owner": "helsingborg-stad",
@@ -108,13 +108,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -126,6 +119,13 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
         },
         {
             "owner": "helsingborg-stad",
