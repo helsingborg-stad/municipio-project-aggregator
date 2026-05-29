@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-05-29T11:35:09+00:00",
+    "generatedAt": "2026-05-29T13:31:23+00:00",
     "count": 174,
     "repositories": [
         {
@@ -94,17 +94,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-volunteer-manager",
             "fullName": "helsingborg-stad/api-volunteer-manager",
             "description": "Managing data for volunteers and their assignments",
             "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
@@ -782,6 +782,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOAuIygs7gqJt8",
+            "title": "Fix page-for-post-type navigation for flat post types",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2073",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-05-29T13:18:24Z",
+            "number": 2073,
+            "state": "OPEN",
+            "author": {
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=6219d80b7af81641809ec3f9927172b58bcc9608&v=4",
+                "url": "https://github.com/michaelclaesson",
+                "company": "Consid Bor\u00e5s"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs7gh9E-",
             "title": "feat: kulturkortet mun 6 merge",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2070",
@@ -952,39 +985,6 @@
                     "repository": "helsingborg-stad/Municipio"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOCquRHc7gI98R",
-            "title": "feat: let customizations take precedence over inherits",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1240",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-28T07:40:38Z",
-            "number": 1240,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOOWhNPs7gC-pZ",
