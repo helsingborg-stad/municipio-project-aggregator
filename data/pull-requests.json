@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-01T17:09:14+00:00",
-    "count": 173,
+    "generatedAt": "2026-06-01T19:13:19+00:00",
+    "count": 175,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -552,6 +552,12 @@
             "company": ""
         },
         {
+            "login": "anthropic-code-agent",
+            "avatarUrl": "https://avatars.githubusercontent.com/in/2246796?v=4",
+            "url": "https://github.com/apps/anthropic-code-agent",
+            "company": ""
+        },
+        {
             "login": "camitzdennis",
             "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
             "url": "https://github.com/camitzdennis",
@@ -781,6 +787,112 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs7he9EX",
+            "title": "Replace Kirki font management with native Font Library migration",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2079",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-06-01T18:42:03Z",
+            "number": 2079,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Kikrki font handling sould be completly replaced by the native font tool in WordPress",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2072",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOAuIygs7he14C",
+            "title": "[WIP] Replace Kirki font handling with native font tool in WordPress",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2078",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-06-01T18:36:35Z",
+            "number": 2078,
+            "state": "OPEN",
+            "author": {
+                "login": "anthropic-code-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/2246796?v=4",
+                "url": "https://github.com/apps/anthropic-code-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Claude",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/2246796?v=4",
+                    "url": "https://github.com/Claude",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Kikrki font handling sould be completly replaced by the native font tool in WordPress",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2072",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
         {
             "id": "PR_kwDOAuIygs7gh9E-",
             "title": "feat: kulturkortet mun 6 merge",
