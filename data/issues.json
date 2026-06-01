@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-01T18:13:13+00:00",
+    "generatedAt": "2026-06-01T20:34:09+00:00",
     "count": 108,
     "repositories": [
         {
@@ -795,7 +795,20 @@
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -810,9 +823,22 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 2
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "[WIP] Replace Kirki font handling with native font tool in WordPress",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2078",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "connected",
+                    "title": "Replace Kirki font management with native Font Library migration",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2079",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "id": "I_kwDOAuIygs8AAAABDqpsiQ",
