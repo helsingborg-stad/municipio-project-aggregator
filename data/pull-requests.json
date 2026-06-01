@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-01T10:09:00+00:00",
+    "generatedAt": "2026-06-01T12:19:04+00:00",
     "count": 174,
     "repositories": [
         {
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -213,20 +213,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-modularity-addon",
             "fullName": "helsingborg-stad/algolia-index-modularity-addon",
             "description": "Adds support for modularity indexing to algolia-index plugin. ",
@@ -238,6 +224,20 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
         },
         {
             "owner": "helsingborg-stad",
@@ -269,27 +269,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "mod-my-pages",
             "fullName": "helsingborg-stad/mod-my-pages",
             "description": "",
@@ -308,6 +287,27 @@
             "fullName": "helsingborg-stad/wpmu-focus-point",
             "description": "",
             "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
         },
         {
             "owner": "helsingborg-stad",
@@ -782,18 +782,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs7hTeEX",
-            "title": "fix: disable applicator cache",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2075",
+            "id": "PR_kwDOAuIygs7hWybB",
+            "title": "fix: correcting archive template",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2076",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-06-01T09:36:43Z",
-            "number": 2075,
-            "state": "OPEN",
+            "createdAt": "2026-06-01T12:16:07Z",
+            "number": 2076,
+            "state": "MERGED",
             "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
             },
             "assignees": [],
             "labels": [],
