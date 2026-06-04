@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-04T11:13:18+00:00",
+    "generatedAt": "2026-06-04T13:25:14+00:00",
     "count": 108,
     "repositories": [
         {
@@ -360,27 +360,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-js-searchpage-addon",
-            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
-            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-invalidate-login-pagecache",
-            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
-            "description": "Invalidates pagecache on submit of the login form.",
-            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "custom-short-links",
             "fullName": "helsingborg-stad/custom-short-links",
             "description": "Create shorter versions of url:s ",
@@ -409,17 +388,24 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+            "name": "algolia-index-js-searchpage-addon",
+            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
+            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-arcgis-map",
-            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
+            "owner": "helsingborg-stad",
+            "name": "wpmu-invalidate-login-pagecache",
+            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
+            "description": "Invalidates pagecache on submit of the login form.",
+            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
         },
         {
             "owner": "helsingborg-stad",
@@ -434,6 +420,20 @@
             "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
             "description": "Exploration clone of ACF-UX-collapse for better deployment",
             "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-arcgis-map",
+            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
         }
     ],
     "authors": [
