@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-09T07:37:43+00:00",
-    "count": 173,
+    "generatedAt": "2026-06-09T09:37:15+00:00",
+    "count": 172,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -409,20 +409,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-sponsor-manager",
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
@@ -434,6 +420,20 @@
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         }
     ],
     "authors": [
@@ -782,18 +782,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs7kQ0Sl",
-            "title": "fix: remove v2 customization options",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2103",
+            "id": "PR_kwDOAuIygs7kSzM2",
+            "title": "feat/new accordion",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2105",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-06-09T07:24:27Z",
-            "number": 2103,
+            "createdAt": "2026-06-09T08:48:24Z",
+            "number": 2105,
             "state": "OPEN",
             "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
             },
             "assignees": [],
             "labels": [],
@@ -899,39 +899,6 @@
                     "repository": "helsingborg-stad/Municipio"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOCquRHc7j3EmU",
-            "title": "refactor: button styles and examples",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1251",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-06-08T10:31:22Z",
-            "number": 1251,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOAuIygs7iqv7v",
