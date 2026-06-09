@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-09T05:49:18+00:00",
-    "count": 172,
+    "generatedAt": "2026-06-09T07:37:43+00:00",
+    "count": 173,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -206,20 +206,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-modularity-addon",
-            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
-            "description": "Adds support for modularity indexing to algolia-index plugin. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "search-statistics",
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
@@ -231,6 +217,20 @@
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
             "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-modularity-addon",
+            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
+            "description": "Adds support for modularity indexing to algolia-index plugin. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -781,6 +781,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs7kQ0Sl",
+            "title": "fix: remove v2 customization options",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2103",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-06-09T07:24:27Z",
+            "number": 2103,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs7j92B-",
             "title": "\u2728 Feat(chat): enable setting chat bubble assistant per page",
