@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-10T07:51:44+00:00",
-    "count": 171,
+    "generatedAt": "2026-06-10T09:38:21+00:00",
+    "count": 170,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -178,6 +178,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
@@ -189,13 +196,6 @@
             "fullName": "helsingborg-stad/modularity-recommend",
             "description": "Modularity recommend. Display static or AI generated recommendation links. ",
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -813,59 +813,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs7j67lv",
-            "title": "Remove WordPress shortlink output",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2101",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-06-08T13:22:11Z",
-            "number": 2101,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "# Remove WordPress shortlink output",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2100",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
         },
         {
             "id": "PR_kwDOAuIygs7iqv7v",
