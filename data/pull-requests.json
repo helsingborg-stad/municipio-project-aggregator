@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-12T03:36:58+00:00",
+    "generatedAt": "2026-06-12T06:00:03+00:00",
     "count": 172,
     "repositories": [
         {
@@ -136,13 +136,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -154,6 +147,13 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -367,27 +367,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-js-searchpage-addon",
             "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
             "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
@@ -406,6 +385,27 @@
             "fullName": "helsingborg-stad/wputilservice",
             "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
             "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
         },
         {
             "owner": "helsingborg-stad",
