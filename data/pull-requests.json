@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-13T09:31:59+00:00",
+    "generatedAt": "2026-06-13T11:08:14+00:00",
     "count": 172,
     "repositories": [
         {
@@ -108,13 +108,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -126,6 +119,13 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,13 +178,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
@@ -196,6 +189,13 @@
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
