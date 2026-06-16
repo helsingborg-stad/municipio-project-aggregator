@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-16T12:07:26+00:00",
-    "count": 168,
+    "generatedAt": "2026-06-16T14:11:00+00:00",
+    "count": 165,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -94,17 +94,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager",
-            "fullName": "helsingborg-stad/api-volunteer-manager",
-            "description": "Managing data for volunteers and their assignments",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
             "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager",
+            "fullName": "helsingborg-stad/api-volunteer-manager",
+            "description": "Managing data for volunteers and their assignments",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -822,39 +822,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOAuIygs7kSzM2",
-            "title": "feat/new accordion",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2105",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-06-09T08:48:24Z",
-            "number": 2105,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOCquRHc7iqPkT",
             "title": "fix: inset inherit on collection",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1249",
@@ -1159,39 +1126,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOE96d8c7fdOX_",
-            "title": "feat: new accordion",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/657",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-05-26T14:55:47Z",
-            "number": 657,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOOWhNPs7eZnOn",
             "title": "build(deps): bump serialize-javascript and terser-webpack-plugin",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/142",
@@ -1326,39 +1260,6 @@
                     "description": "Pull requests that update javascript code"
                 }
             ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc7eQzDT",
-            "title": "feat: new accordion",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1227",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-22T08:10:58Z",
-            "number": 1227,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
             "milestone": null,
             "type": null,
             "subIssues": {
