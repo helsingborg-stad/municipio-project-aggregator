@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-24T09:19:59+00:00",
+    "generatedAt": "2026-06-24T11:10:00+00:00",
     "count": 109,
     "repositories": [
         {
@@ -150,17 +150,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-alarm-integration",
             "fullName": "helsingborg-stad/api-alarm-integration",
             "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
             "url": "https://github.com/helsingborg-stad/api-alarm-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
