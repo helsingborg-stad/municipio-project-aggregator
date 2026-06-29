@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-06-29T03:36:43+00:00",
+    "generatedAt": "2026-06-29T06:02:17+00:00",
     "count": 172,
     "repositories": [
         {
@@ -94,17 +94,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-volunteer-manager",
             "fullName": "helsingborg-stad/api-volunteer-manager",
             "description": "Managing data for volunteers and their assignments",
             "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
@@ -241,27 +241,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-sections",
             "fullName": "helsingborg-stad/modularity-sections",
             "description": "Provides graphical sections intended for full-width usage",
@@ -287,6 +266,27 @@
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -409,20 +409,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-sponsor-manager",
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
@@ -434,6 +420,20 @@
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         }
     ],
     "authors": [
