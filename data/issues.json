@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-11T13:38:10+00:00",
+    "generatedAt": "2026-07-11T14:32:18+00:00",
     "count": 108,
     "repositories": [
         {
@@ -192,13 +192,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -206,17 +199,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -231,6 +217,20 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
         },
         {
             "owner": "helsingborg-stad",
