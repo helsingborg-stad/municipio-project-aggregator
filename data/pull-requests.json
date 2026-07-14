@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-14T19:50:45+00:00",
-    "count": 172,
+    "generatedAt": "2026-07-14T20:43:24+00:00",
+    "count": 173,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -171,17 +171,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-recommend",
             "fullName": "helsingborg-stad/modularity-recommend",
             "description": "Modularity recommend. Display static or AI generated recommendation links. ",
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,52 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs7xu7Nu",
+            "title": "build(deps-dev): bump ws from 8.18.1 to 8.21.1 in /Modularity",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2123",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-07-14T20:29:04Z",
+            "number": 2123,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "MDU6TGFiZWwxOTEwODkxODE1",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDOAuIygs8AAAAB9ffZUQ",
+                    "name": "javascript",
+                    "color": "168700",
+                    "description": "Pull requests that update javascript code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCPnM4c7vsQg7",
             "title": "chore: explore endpoint based solution",
