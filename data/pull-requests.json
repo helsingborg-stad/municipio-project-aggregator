@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-20T07:28:27+00:00",
-    "count": 173,
+    "generatedAt": "2026-07-20T09:31:28+00:00",
+    "count": 176,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -262,27 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-sections",
             "fullName": "helsingborg-stad/modularity-sections",
             "description": "Provides graphical sections intended for full-width usage",
@@ -308,6 +287,27 @@
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
         },
         {
             "owner": "helsingborg-stad",
@@ -388,6 +388,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-frontend-form",
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
@@ -406,20 +420,6 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -481,7 +481,7 @@
         },
         {
             "login": "NiclasNorin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
             "url": "https://github.com/NiclasNorin",
             "company": ""
         },
@@ -769,6 +769,105 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs7zwwxq",
+            "title": "fix: correcting event occasions accordion padding",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2125",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-07-20T08:53:09Z",
+            "number": 2125,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs7zvyJl",
+            "title": "fix: correcting manual input heading margin",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2124",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-07-20T08:12:48Z",
+            "number": 2124,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOCquRHc7zu6l6",
+            "title": "fix: correcting block heading falls below datebadge",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1266",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-07-20T07:32:40Z",
+            "number": 1266,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCPnM4c7zuVd0",
             "title": "fix: correcting react markup to follow new accordion implementation",
