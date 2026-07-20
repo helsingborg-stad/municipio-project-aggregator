@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-20T05:36:37+00:00",
+    "generatedAt": "2026-07-20T07:28:27+00:00",
     "count": 173,
     "repositories": [
         {
@@ -388,20 +388,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-frontend-form",
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
@@ -420,6 +406,20 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -481,7 +481,7 @@
         },
         {
             "login": "NiclasNorin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
             "url": "https://github.com/NiclasNorin",
             "company": ""
         },
@@ -770,6 +770,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOCPnM4c7zuVd0",
+            "title": "fix: correcting react markup to follow new accordion implementation",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/41",
+            "repository": "helsingborg-stad/modularity-json-render",
+            "createdAt": "2026-07-20T07:04:57Z",
+            "number": 41,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs7xu7Nu",
             "title": "build(deps-dev): bump ws from 8.18.1 to 8.21.1 in /Modularity",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2123",
@@ -798,39 +831,6 @@
                     "description": "Pull requests that update javascript code"
                 }
             ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCPnM4c7vsQg7",
-            "title": "chore: explore endpoint based solution",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/40",
-            "repository": "helsingborg-stad/modularity-json-render",
-            "createdAt": "2026-07-09T10:50:48Z",
-            "number": 40,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
             "milestone": null,
             "type": null,
             "subIssues": {
