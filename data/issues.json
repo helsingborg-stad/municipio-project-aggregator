@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-21T07:55:48+00:00",
+    "generatedAt": "2026-07-21T09:58:28+00:00",
     "count": 107,
     "repositories": [
         {
@@ -192,17 +192,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -374,17 +374,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
             "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
         },
         {
             "owner": "helsingborg-stad",
