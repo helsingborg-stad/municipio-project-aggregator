@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-22T02:07:01+00:00",
-    "count": 177,
+    "generatedAt": "2026-07-22T03:33:45+00:00",
+    "count": 178,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,52 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs70puDr",
+            "title": "build(deps): bump immutable from 5.1.4 to 5.1.9 in /Modularity",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2126",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-07-22T02:18:47Z",
+            "number": 2126,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "MDU6TGFiZWwxOTEwODkxODE1",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDOAuIygs8AAAAB9ffZUQ",
+                    "name": "javascript",
+                    "color": "168700",
+                    "description": "Pull requests that update javascript code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCquRHc7z1KKP",
             "title": "feat: downsizing headings in card content areas",
