@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-23T05:32:24+00:00",
+    "generatedAt": "2026-07-23T07:15:28+00:00",
     "count": 177,
     "repositories": [
         {
@@ -769,6 +769,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOOWhNPs71PNxw",
+            "title": "Feat/form builder in frontend form",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/149",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-07-23T07:03:49Z",
+            "number": 149,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs70puDr",
             "title": "build(deps): bump immutable from 5.1.4 to 5.1.9 in /Modularity",
@@ -3488,39 +3521,6 @@
                     "repository": "helsingborg-stad/algolia-index-js-searchpage-addon"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOOWhNPs7RFD_c",
-            "title": "Feat/copilot refactoring of claude refactoring",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/130",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-04-09T09:27:28Z",
-            "number": 130,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOOWhNPs7RDRgz",
