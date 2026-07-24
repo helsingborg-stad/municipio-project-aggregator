@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-24T03:33:50+00:00",
-    "count": 177,
+    "generatedAt": "2026-07-24T05:29:10+00:00",
+    "count": 178,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,52 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDODewx3s71sRCS",
+            "title": "build(deps): bump immutable from 5.1.5 to 5.1.9",
+            "url": "https://github.com/helsingborg-stad/modularity-contact-banner/pull/46",
+            "repository": "helsingborg-stad/modularity-contact-banner",
+            "createdAt": "2026-07-24T04:57:47Z",
+            "number": 46,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDODewx3s8AAAABOCSJzg",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDODewx3s8AAAACoJMDpg",
+                    "name": "javascript",
+                    "color": "168700",
+                    "description": "Pull requests that update javascript code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOOWhNPs71PNxw",
             "title": "Feat/form builder in frontend form",
