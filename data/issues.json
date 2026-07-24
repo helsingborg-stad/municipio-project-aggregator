@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-24T13:39:30+00:00",
+    "generatedAt": "2026-07-24T14:41:03+00:00",
     "count": 107,
     "repositories": [
         {
@@ -192,17 +192,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-recommend",
             "fullName": "helsingborg-stad/modularity-recommend",
             "description": "Modularity recommend. Display static or AI generated recommendation links. ",
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
