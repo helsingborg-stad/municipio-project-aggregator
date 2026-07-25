@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-25T20:38:08+00:00",
-    "count": 179,
+    "generatedAt": "2026-07-25T21:39:30+00:00",
+    "count": 180,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,52 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs72Zhzl",
+            "title": "build(deps-dev): bump postcss from 8.5.16 to 8.5.18",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2127",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-07-25T20:53:41Z",
+            "number": 2127,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "MDU6TGFiZWwxOTEwODkxODE1",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDOAuIygs8AAAAB9ffZUQ",
+                    "name": "javascript",
+                    "color": "168700",
+                    "description": "Pull requests that update javascript code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCPnM4c72Y3a5",
             "title": "build(deps-dev): bump fast-uri from 3.1.3 to 3.1.4",
