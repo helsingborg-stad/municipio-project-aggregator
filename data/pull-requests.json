@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-25T19:47:58+00:00",
-    "count": 178,
+    "generatedAt": "2026-07-25T20:38:08+00:00",
+    "count": 179,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,52 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOCPnM4c72Y3a5",
+            "title": "build(deps-dev): bump fast-uri from 3.1.3 to 3.1.4",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/42",
+            "repository": "helsingborg-stad/modularity-json-render",
+            "createdAt": "2026-07-25T19:55:25Z",
+            "number": 42,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDOCPnM4c8AAAABOFet8g",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDOCPnM4c8AAAACoJy8GA",
+                    "name": "javascript",
+                    "color": "168700",
+                    "description": "Pull requests that update javascript code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOBGRbgs71z4Hw",
             "title": "build(deps-dev): bump fast-uri from 3.0.6 to 3.1.4",
