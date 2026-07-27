@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-27T17:39:29+00:00",
+    "generatedAt": "2026-07-27T18:39:54+00:00",
     "count": 107,
     "repositories": [
         {
@@ -185,17 +185,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-recommend",
             "fullName": "helsingborg-stad/modularity-recommend",
             "description": "Modularity recommend. Display static or AI generated recommendation links. ",
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
