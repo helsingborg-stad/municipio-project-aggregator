@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-07-31T18:51:57+00:00",
-    "count": 182,
+    "generatedAt": "2026-07-31T19:56:38+00:00",
+    "count": 183,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs75LHPg",
+            "title": "Fix repeater migration result verification",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2129",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-07-31T19:38:55Z",
+            "number": 2129,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs75IT0s",
             "title": "Fix ACF migration return type handling",
