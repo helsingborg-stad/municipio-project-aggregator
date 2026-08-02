@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-02T15:43:36+00:00",
+    "generatedAt": "2026-08-02T16:40:06+00:00",
     "count": 185,
     "repositories": [
         {
@@ -8696,7 +8696,7 @@
             "state": "OPEN",
             "author": {
                 "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=d97fc8d1910bbea1df21cb141715055a7b02b389&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
                 "url": "https://github.com/michaelclaesson",
                 "company": "Consid Bor\u00e5s"
             },
