@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-03T11:34:41+00:00",
+    "generatedAt": "2026-08-03T13:22:49+00:00",
     "count": 186,
     "repositories": [
         {
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
             "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -770,33 +770,20 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOE96d8c75-P1m",
-            "title": "[WIP] Fix expandable state for synchronous vs asynchronous children in Nav",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/663",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-08-03T11:28:16Z",
-            "number": 663,
+            "id": "PR_kwDOCPnM4c76BWSn",
+            "title": "refactor: remove react",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/44",
+            "repository": "helsingborg-stad/modularity-json-render",
+            "createdAt": "2026-08-03T13:18:24Z",
+            "number": 44,
             "state": "OPEN",
             "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
+            "assignees": [],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -811,16 +798,9 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 1
+                "linked": 0
             },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Harden Nav expandable-state semantics for synchronous vs asynchronous children.",
-                    "url": "https://github.com/helsingborg-stad/component-library/issues/662",
-                    "repository": "helsingborg-stad/component-library"
-                }
-            ]
+            "relationships": []
         },
         {
             "id": "PR_kwDOCPnM4c75koqV",
