@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-04T12:04:55+00:00",
-    "count": 185,
+    "generatedAt": "2026-08-04T13:04:55+00:00",
+    "count": 186,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOA4iurc76jim0",
+            "title": "Remove jQuery dependency from the project",
+            "url": "https://github.com/helsingborg-stad/modularity-guides/pull/24",
+            "repository": "helsingborg-stad/modularity-guides",
+            "createdAt": "2026-08-04T13:03:55Z",
+            "number": 24,
+            "state": "OPEN",
+            "author": {
+                "login": "petter-a",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?u=96d0ccb4082736d6973f04cd096a41d34f499a4a&v=4",
+                "url": "https://github.com/petter-a",
+                "company": "Helsingborg stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOA4iurc76dZOZ",
             "title": "Fix accordion expansion behavior on button clicks",
