@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-04T14:06:32+00:00",
+    "generatedAt": "2026-08-04T15:10:51+00:00",
     "count": 186,
     "repositories": [
         {
@@ -73,17 +73,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-json-render",
-            "fullName": "helsingborg-stad/modularity-json-render",
-            "description": "Renders a single level api-response (json) as a list. ",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "schema.org-transformer",
             "fullName": "helsingborg-stad/schema.org-transformer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/schema.org-transformer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-json-render",
+            "fullName": "helsingborg-stad/modularity-json-render",
+            "description": "Renders a single level api-response (json) as a list. ",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render"
         },
         {
             "owner": "helsingborg-stad",
@@ -262,13 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -287,6 +280,13 @@
             "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
             "description": "Use blog 1 as the master for all settings in litespeed configuration",
             "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
@@ -770,6 +770,59 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOBGRbgs76nNcL",
+            "title": "build(deps-dev): bump fast-uri from 3.0.6 to 3.1.5",
+            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/288",
+            "repository": "helsingborg-stad/api-event-manager-integration",
+            "createdAt": "2026-08-04T14:59:41Z",
+            "number": 288,
+            "state": "OPEN",
+            "author": {
+                "login": "dependabot",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                "url": "https://github.com/apps/dependabot",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "MDU6TGFiZWwxNjUzMDc0ODQ5",
+                    "name": "dependencies",
+                    "color": "0366d6",
+                    "description": "Pull requests that update a dependency file"
+                },
+                {
+                    "id": "LA_kwDOBGRbgs8AAAACicv_ow",
+                    "name": "javascript",
+                    "color": "168700",
+                    "description": "Pull requests that update javascript code"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "build(deps-dev): bump fast-uri from 3.0.6 to 3.1.4",
+                    "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/287",
+                    "repository": "helsingborg-stad/api-event-manager-integration"
+                }
+            ]
+        },
+        {
             "id": "PR_kwDOA4iurc76jim0",
             "title": "Remove jQuery dependency from the project",
             "url": "https://github.com/helsingborg-stad/modularity-guides/pull/24",
@@ -1091,59 +1144,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOBGRbgs71z4Hw",
-            "title": "build(deps-dev): bump fast-uri from 3.0.6 to 3.1.4",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/287",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-07-24T10:41:45Z",
-            "number": 287,
-            "state": "OPEN",
-            "author": {
-                "login": "dependabot",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
-                "url": "https://github.com/apps/dependabot",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwxNjUzMDc0ODQ5",
-                    "name": "dependencies",
-                    "color": "0366d6",
-                    "description": "Pull requests that update a dependency file"
-                },
-                {
-                    "id": "LA_kwDOBGRbgs8AAAACicv_ow",
-                    "name": "javascript",
-                    "color": "168700",
-                    "description": "Pull requests that update javascript code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "build(deps-dev): bump fast-uri from 3.0.6 to 3.1.2",
-                    "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/285",
-                    "repository": "helsingborg-stad/api-event-manager-integration"
-                }
-            ]
         },
         {
             "id": "PR_kwDODewx3s71sRCS",
