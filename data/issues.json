@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-05T16:39:39+00:00",
+    "generatedAt": "2026-08-05T17:38:43+00:00",
     "count": 107,
     "repositories": [
         {
@@ -143,13 +143,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-alarm-integration",
-            "fullName": "helsingborg-stad/api-alarm-integration",
-            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -161,6 +154,13 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-alarm-integration",
+            "fullName": "helsingborg-stad/api-alarm-integration",
+            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
         },
         {
             "owner": "helsingborg-stad",
