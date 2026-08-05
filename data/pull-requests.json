@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-05T10:14:59+00:00",
-    "count": 184,
+    "generatedAt": "2026-08-05T11:08:51+00:00",
+    "count": 185,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs77A83Z",
+            "title": "Fix Modularity single post type admin links",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2132",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-08-05T10:26:20Z",
+            "number": 2132,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOBGRbgs76nNcL",
             "title": "build(deps-dev): bump fast-uri from 3.0.6 to 3.1.5",
