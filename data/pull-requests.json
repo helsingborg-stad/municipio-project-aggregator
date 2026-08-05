@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-05T12:04:36+00:00",
-    "count": 185,
+    "generatedAt": "2026-08-05T13:00:29+00:00",
+    "count": 184,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -108,13 +108,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "webhooks-manager",
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
@@ -126,6 +119,13 @@
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
             "url": "https://github.com/helsingborg-stad/modularity-testimonials"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -8812,39 +8812,6 @@
             "repository": "helsingborg-stad/wpmu-security",
             "createdAt": "2025-08-15T09:41:27Z",
             "number": 12,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs6iMFiG",
-            "title": "feat: upgrade using wp cli",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/1466",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-08-05T12:28:21Z",
-            "number": 1466,
             "state": "OPEN",
             "author": {
                 "login": "NiclasNorin",
