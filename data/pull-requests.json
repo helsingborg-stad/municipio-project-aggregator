@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-06T05:27:24+00:00",
+    "generatedAt": "2026-08-06T07:19:11+00:00",
     "count": 186,
     "repositories": [
         {
@@ -73,17 +73,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "schema.org-transformer",
-            "fullName": "helsingborg-stad/schema.org-transformer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-json-render",
             "fullName": "helsingborg-stad/modularity-json-render",
             "description": "Renders a single level api-response (json) as a list. ",
             "url": "https://github.com/helsingborg-stad/modularity-json-render"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "schema.org-transformer",
+            "fullName": "helsingborg-stad/schema.org-transformer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
         },
         {
             "owner": "helsingborg-stad",
@@ -143,6 +143,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -154,13 +161,6 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -262,6 +262,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -280,13 +287,6 @@
             "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
             "description": "Use blog 1 as the master for all settings in litespeed configuration",
             "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
@@ -381,27 +381,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-js-searchpage-addon",
-            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
-            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-invalidate-login-pagecache",
-            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
-            "description": "Invalidates pagecache on submit of the login form.",
-            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-frontend-form",
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
@@ -420,6 +399,27 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-js-searchpage-addon",
+            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
+            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-invalidate-login-pagecache",
+            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
+            "description": "Invalidates pagecache on submit of the login form.",
+            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
         },
         {
             "owner": "helsingborg-stad",
@@ -481,7 +481,7 @@
         },
         {
             "login": "NiclasNorin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
             "url": "https://github.com/NiclasNorin",
             "company": ""
         },
@@ -727,7 +727,7 @@
         },
         {
             "login": "sebastianthulin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
             "url": "https://github.com/sebastianthulin",
             "company": "Helsingborgs stad"
         },
