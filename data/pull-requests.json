@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-10T06:51:01+00:00",
-    "count": 183,
+    "generatedAt": "2026-08-10T08:00:38+00:00",
+    "count": 184,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDODyjQoc784Ybi",
+            "title": "Defer ACF-dependent configuration reads",
+            "url": "https://github.com/helsingborg-stad/algolia-index/pull/34",
+            "repository": "helsingborg-stad/algolia-index",
+            "createdAt": "2026-08-10T07:27:35Z",
+            "number": 34,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs77IpVT",
             "title": "Fix custom post type archive slugs",
