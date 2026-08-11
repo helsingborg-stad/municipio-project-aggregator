@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-11T14:31:31+00:00",
+    "generatedAt": "2026-08-11T15:26:09+00:00",
     "count": 107,
     "repositories": [
         {
@@ -129,6 +129,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "api-alarm-integration",
+            "fullName": "helsingborg-stad/api-alarm-integration",
+            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-security",
             "fullName": "helsingborg-stad/wpmu-security",
             "description": "Adds basic security features to WordPress",
@@ -140,13 +147,6 @@
             "fullName": "helsingborg-stad/modularity-guides",
             "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
             "url": "https://github.com/helsingborg-stad/modularity-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-alarm-integration",
-            "fullName": "helsingborg-stad/api-alarm-integration",
-            "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -206,20 +206,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-modularity-addon",
-            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
-            "description": "Adds support for modularity indexing to algolia-index plugin. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "search-statistics",
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
@@ -231,6 +217,20 @@
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
             "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-modularity-addon",
+            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
+            "description": "Adds support for modularity indexing to algolia-index plugin. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -367,6 +367,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "algolia-index-llm-addon",
+            "fullName": "helsingborg-stad/algolia-index-llm-addon",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-frontend-form",
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
@@ -385,20 +399,6 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-llm-addon",
-            "fullName": "helsingborg-stad/algolia-index-llm-addon",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-llm-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
