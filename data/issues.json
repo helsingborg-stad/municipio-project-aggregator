@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-13T06:38:59+00:00",
-    "count": 107,
+    "generatedAt": "2026-08-13T07:38:15+00:00",
+    "count": 108,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,39 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOCquRHc8AAAABMkz9og",
+            "title": "Accordion item hover/focus ring is clipped by `contain: paint`",
+            "url": "https://github.com/helsingborg-stad/styleguide/issues/1269",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-08-13T07:21:11Z",
+            "number": 1269,
+            "state": "OPEN",
+            "author": {
+                "login": "WilliamLundqvist",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
+                "url": "https://github.com/WilliamLundqvist",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "I_kwDOAuIygs8AAAABGbI3tQ",
             "title": "Content not rendering if using classic editor on one-page template",
