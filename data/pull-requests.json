@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-13T03:13:24+00:00",
+    "generatedAt": "2026-08-13T04:06:48+00:00",
     "count": 185,
     "repositories": [
         {
@@ -269,31 +269,24 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index",
-            "fullName": "helsingborg-stad/algolia-index",
-            "description": "Manages algolia index.",
-            "url": "https://github.com/helsingborg-stad/algolia-index"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
             "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
         },
         {
             "owner": "helsingborg-stad",
@@ -325,24 +318,31 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+            "name": "algolia-index",
+            "fullName": "helsingborg-stad/algolia-index",
+            "description": "Manages algolia index.",
+            "url": "https://github.com/helsingborg-stad/algolia-index"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
         },
         {
             "owner": "helsingborg-stad",
