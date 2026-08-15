@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-15T19:11:20+00:00",
+    "generatedAt": "2026-08-15T20:10:35+00:00",
     "count": 108,
     "repositories": [
         {
@@ -206,20 +206,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-modularity-addon",
             "fullName": "helsingborg-stad/algolia-index-modularity-addon",
             "description": "Adds support for modularity indexing to algolia-index plugin. ",
@@ -234,38 +220,24 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "OpenStreetMap",
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "broken-link-detector",
-            "fullName": "helsingborg-stad/broken-link-detector",
-            "description": "Detects and fixes broken links (internally)",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "visit-custom-posttypes-taxonomies",
-            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index-typesense-provider",
-            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "project-synchronizer",
-            "fullName": "helsingborg-stad/project-synchronizer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/project-synchronizer"
         },
         {
             "owner": "helsingborg-stad",
@@ -297,24 +269,31 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+            "name": "broken-link-detector",
+            "fullName": "helsingborg-stad/broken-link-detector",
+            "description": "Detects and fixes broken links (internally)",
+            "url": "https://github.com/helsingborg-stad/broken-link-detector"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+            "name": "visit-custom-posttypes-taxonomies",
+            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+            "name": "algolia-index-typesense-provider",
+            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "project-synchronizer",
+            "fullName": "helsingborg-stad/project-synchronizer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/project-synchronizer"
         },
         {
             "owner": "helsingborg-stad",
@@ -364,6 +343,27 @@
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
         },
         {
             "owner": "helsingborg-stad",
