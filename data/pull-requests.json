@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-16T22:32:16+00:00",
+    "generatedAt": "2026-08-16T23:30:46+00:00",
     "count": 184,
     "repositories": [
         {
@@ -206,20 +206,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-modularity-addon",
-            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
-            "description": "Adds support for modularity indexing to algolia-index plugin. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "search-statistics",
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
@@ -234,31 +220,24 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "algolia-index-modularity-addon",
+            "fullName": "helsingborg-stad/algolia-index-modularity-addon",
+            "description": "Adds support for modularity indexing to algolia-index plugin. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-modularity-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "OpenStreetMap",
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -287,6 +266,27 @@
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
             "url": "https://github.com/helsingborg-stad/s3-local-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
