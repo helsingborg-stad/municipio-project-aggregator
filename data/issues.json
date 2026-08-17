@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-17T08:20:13+00:00",
+    "generatedAt": "2026-08-17T09:21:02+00:00",
     "count": 108,
     "repositories": [
         {
@@ -94,17 +94,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager",
-            "fullName": "helsingborg-stad/api-volunteer-manager",
-            "description": "Managing data for volunteers and their assignments",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
             "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager",
+            "fullName": "helsingborg-stad/api-volunteer-manager",
+            "description": "Managing data for volunteers and their assignments",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
         },
         {
             "owner": "helsingborg-stad",
