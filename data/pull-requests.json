@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-18T07:36:03+00:00",
+    "generatedAt": "2026-08-18T08:35:46+00:00",
     "count": 184,
     "repositories": [
         {
@@ -770,6 +770,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOCPnM4c8AAAABAHSIDA",
+            "title": "Feat/removing react using an api solution",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/45",
+            "repository": "helsingborg-stad/modularity-json-render",
+            "createdAt": "2026-08-18T07:50:38Z",
+            "number": 45,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs798FCi",
             "title": "fix: closing popups when removing interactive map filters",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2135",
@@ -986,39 +1019,6 @@
                     "repository": "helsingborg-stad/api-event-manager-integration"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOCPnM4c76BWSn",
-            "title": "refactor: remove react",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/44",
-            "repository": "helsingborg-stad/modularity-json-render",
-            "createdAt": "2026-08-03T13:18:24Z",
-            "number": 44,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDODewx3s75g7vg",
