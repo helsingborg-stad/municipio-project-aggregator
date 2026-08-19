@@ -408,6 +408,156 @@ final class GitHubSourceAggregatorTest extends TestCase
     }
 
     /**
+     * @return void
+     */
+    public function testAggregateExcludesDependabotItemsAndContributors(): void
+    {
+        $aggregator = new GitHubSourceAggregator(
+            new GitHubRestClient($this->createHttpClientWithDependabotContent()),
+            new GitHubGraphQlClient($this->createHttpClientWithDependabotContent()),
+            new GraphQlSearchQueryBuilder(),
+        );
+
+        $payload = $aggregator->aggregate(
+            SourceType::PullRequests,
+            new BuildConfig(
+                'GitHub',
+                ['getmunicipio'],
+                'token',
+                '/tmp',
+                new DateTimeImmutable('2026-04-25T10:00:00+00:00'),
+                365,
+            ),
+        );
+
+        $data = $payload->toArray();
+
+        self::assertSame(1, $data['count']);
+        self::assertSame('Human PR', $data['items'][0]['title']);
+        self::assertNotContains('dependabot[bot]', array_column($data['authors'], 'login'));
+        self::assertNotContains('dependabot', array_column($data['authors'], 'login'));
+    }
+
+    /**
+     * @return HttpClientInterface
+     */
+    private function createHttpClientWithDependabotContent(): HttpClientInterface
+    {
+        return new class () implements HttpClientInterface {
+            /**
+             * @param string $url
+             * @param array<string, string> $headers
+             * @return array<mixed>
+             */
+            public function getJson(string $url, array $headers): array
+            {
+                if (str_contains($url, '/search/repositories') && str_contains($url, 'topic:getmunicipio')) {
+                    return [
+                        'items' => [[
+                            'name' => 'styleguide',
+                            'owner' => ['login' => 'helsingborg-stad'],
+                            'description' => 'Shared Municipio components',
+                            'html_url' => 'https://github.com/helsingborg-stad/styleguide',
+                        ]],
+                    ];
+                }
+
+                if (str_contains($url, '/contributors')) {
+                    return [
+                        [
+                            'login' => 'realuser',
+                            'avatar_url' => 'https://avatars.example.com/realuser.png',
+                            'html_url' => 'https://github.com/realuser',
+                        ],
+                        [
+                            'login' => 'dependabot[bot]',
+                            'avatar_url' => 'https://avatars.example.com/dependabot.png',
+                            'html_url' => 'https://github.com/apps/dependabot',
+                        ],
+                    ];
+                }
+
+                return [];
+            }
+
+            /**
+             * @param string $url
+             * @param array<string, string> $headers
+             * @param array<string, mixed> $body
+             * @return array<string, mixed>
+             */
+            public function postJson(string $url, array $headers, array $body): array
+            {
+                return [
+                    'data' => [
+                        'search' => [
+                            'pageInfo' => ['hasNextPage' => false, 'endCursor' => null],
+                            'nodes' => [
+                                [
+                                    'id' => 'PR_kwDO_human',
+                                    'title' => 'Human PR',
+                                    'url' => 'https://github.com/helsingborg-stad/styleguide/pull/10',
+                                    'number' => 10,
+                                    'createdAt' => '2026-04-25T08:00:00Z',
+                                    'state' => 'OPEN',
+                                    'repository' => [
+                                        'name' => 'styleguide',
+                                        'nameWithOwner' => 'helsingborg-stad/styleguide',
+                                        'owner' => ['login' => 'helsingborg-stad'],
+                                        'description' => 'Shared Municipio components',
+                                        'url' => 'https://github.com/helsingborg-stad/styleguide',
+                                    ],
+                                    'author' => [
+                                        'login' => 'realuser',
+                                        'avatarUrl' => 'https://avatars.example.com/realuser.png',
+                                        'url' => 'https://github.com/realuser',
+                                    ],
+                                    'assignees' => ['nodes' => []],
+                                    'labels' => ['nodes' => []],
+                                    'milestone' => null,
+                                    'issueType' => null,
+                                    'subIssuesSummary' => ['total' => 0, 'completed' => 0, 'percentCompleted' => 0],
+                                    'subIssues' => ['nodes' => []],
+                                    'issueDependenciesSummary' => ['blockedBy' => 0, 'totalBlockedBy' => 0, 'blocking' => 0, 'totalBlocking' => 0],
+                                    'timelineItems' => ['nodes' => []],
+                                ],
+                                [
+                                    'id' => 'PR_kwDO_dependabot',
+                                    'title' => 'Bump dependency from 1.0 to 2.0',
+                                    'url' => 'https://github.com/helsingborg-stad/styleguide/pull/11',
+                                    'number' => 11,
+                                    'createdAt' => '2026-04-25T07:00:00Z',
+                                    'state' => 'OPEN',
+                                    'repository' => [
+                                        'name' => 'styleguide',
+                                        'nameWithOwner' => 'helsingborg-stad/styleguide',
+                                        'owner' => ['login' => 'helsingborg-stad'],
+                                        'description' => 'Shared Municipio components',
+                                        'url' => 'https://github.com/helsingborg-stad/styleguide',
+                                    ],
+                                    'author' => [
+                                        'login' => 'dependabot[bot]',
+                                        'avatarUrl' => 'https://avatars.example.com/dependabot.png',
+                                        'url' => 'https://github.com/apps/dependabot',
+                                    ],
+                                    'assignees' => ['nodes' => []],
+                                    'labels' => ['nodes' => []],
+                                    'milestone' => null,
+                                    'issueType' => null,
+                                    'subIssuesSummary' => ['total' => 0, 'completed' => 0, 'percentCompleted' => 0],
+                                    'subIssues' => ['nodes' => []],
+                                    'issueDependenciesSummary' => ['blockedBy' => 0, 'totalBlockedBy' => 0, 'blocking' => 0, 'totalBlocking' => 0],
+                                    'timelineItems' => ['nodes' => []],
+                                ],
+                            ],
+                        ],
+                    ],
+                ];
+            }
+        };
+    }
+
+    /**
      * @return HttpClientInterface
      */
     private function createHttpClientWithMissingAuthorProfile(): HttpClientInterface
