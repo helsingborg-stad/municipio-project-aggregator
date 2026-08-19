@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-19T13:37:24+00:00",
-    "count": 56,
+    "generatedAt": "2026-08-19T14:35:32+00:00",
+    "count": 57,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -23,18 +23,18 @@
             "url": "https://github.com/helsingborg-stad/styleguide"
         },
         {
-            "owner": "municipio-se",
-            "name": "municipio-deployment",
-            "fullName": "municipio-se/municipio-deployment",
-            "description": "Deploy of Municpio by fork",
-            "url": "https://github.com/municipio-se/municipio-deployment"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "wp-page-for-posttype",
             "fullName": "helsingborg-stad/wp-page-for-posttype",
             "description": "Adds the ability to place a page on an archive page and/or place a posttype archive on a page. ",
             "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
+        },
+        {
+            "owner": "municipio-se",
+            "name": "municipio-deployment",
+            "fullName": "municipio-se/municipio-deployment",
+            "description": "Deploy of Municpio by fork",
+            "url": "https://github.com/municipio-se/municipio-deployment"
         },
         {
             "owner": "helsingborg-stad",
@@ -178,13 +178,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
@@ -196,6 +189,13 @@
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -751,6 +751,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOCquRHc8AAAABAScMgQ",
+            "title": "refactor: pagination solidified also fixes bug with next prev",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1270",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-08-19T13:41:59Z",
+            "number": 1270,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOE96d8c8AAAABAR8w4g",
             "title": "feat: adding async to pagination",
