@@ -40,6 +40,10 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
 
         foreach ($repositories as $repository) {
             foreach ($this->restClient->listContributors($repository, $config->token()) as $contributor) {
+                if ($this->isDependabotLogin($contributor['login'] ?? '')) {
+                    continue;
+                }
+
                 $this->rememberAuthor($authorsByLogin, $contributor);
             }
 
@@ -89,6 +93,17 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
             $authors,
             $items,
         );
+    }
+
+    /**
+     * Returns whether the given login belongs to the Dependabot automation account.
+     *
+     * @param string $login GitHub user login.
+     * @return bool
+     */
+    private function isDependabotLogin(string $login): bool
+    {
+        return in_array(strtolower($login), ['dependabot', 'dependabot[bot]'], true);
     }
 
     /**
@@ -145,9 +160,15 @@ final class GitHubSourceAggregator implements SourceAggregatorInterface
                     continue;
                 }
 
-                $this->rememberAuthor($authorsByLogin, $this->extractGraphQlAuthor($node['author'] ?? null));
+                $author = $this->extractGraphQlAuthor($node['author'] ?? null);
 
-                if (!is_array($node) || empty($node['title']) || empty($node['url']) || empty($node['number'])) {
+                if ($this->isDependabotLogin($author['login'] ?? '')) {
+                    continue;
+                }
+
+                $this->rememberAuthor($authorsByLogin, $author);
+
+                if (empty($node['title']) || empty($node['url']) || empty($node['number'])) {
                     continue;
                 }
 
