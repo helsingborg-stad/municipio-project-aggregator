@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-19T05:34:43+00:00",
-    "count": 184,
+    "generatedAt": "2026-08-19T06:36:22+00:00",
+    "count": 185,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -769,6 +769,52 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOE96d8c8AAAABAPeR4w",
+            "title": "feat(brand,logotype): add optional aspectRatio support",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/664",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-08-19T06:25:30Z",
+            "number": 664,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCPnM4c8AAAABAHSIDA",
             "title": "Feat/removing react using an api solution",
