@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-20T04:35:42+00:00",
+    "generatedAt": "2026-08-20T05:34:54+00:00",
     "count": 57,
     "repositories": [
         {
@@ -241,27 +241,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "custom-short-links",
             "fullName": "helsingborg-stad/custom-short-links",
             "description": "Create shorter versions of url:s ",
@@ -287,6 +266,27 @@
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
             "url": "https://github.com/helsingborg-stad/s3-local-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
