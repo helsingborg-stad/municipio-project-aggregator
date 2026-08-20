@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-20T09:35:37+00:00",
-    "count": 58,
+    "generatedAt": "2026-08-20T10:35:00+00:00",
+    "count": 57,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -199,20 +199,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-modularity-addon",
             "fullName": "helsingborg-stad/algolia-index-modularity-addon",
             "description": "Adds support for modularity indexing to algolia-index plugin. ",
@@ -224,6 +210,20 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
         },
         {
             "owner": "helsingborg-stad",
@@ -2924,39 +2924,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDON7Wi-c6kdJ3T",
-            "title": "fix: further optimize gutenberg",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field/pull/15",
-            "repository": "helsingborg-stad/acf-openstreetmap-field",
-            "createdAt": "2025-08-20T09:37:53Z",
-            "number": 15,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
