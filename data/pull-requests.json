@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-20T19:34:48+00:00",
-    "count": 57,
+    "generatedAt": "2026-08-20T20:34:46+00:00",
+    "count": 56,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -2893,39 +2893,6 @@
                     "company": ""
                 }
             ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOOwvk6M6kkTPk",
-            "title": "fix: use a filter that has module support",
-            "url": "https://github.com/helsingborg-stad/wpmu-security/pull/13",
-            "repository": "helsingborg-stad/wpmu-security",
-            "createdAt": "2025-08-20T20:20:31Z",
-            "number": 13,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
             "labels": [],
             "milestone": null,
             "type": null,
