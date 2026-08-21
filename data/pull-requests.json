@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-21T07:36:50+00:00",
-    "count": 56,
+    "generatedAt": "2026-08-21T08:36:19+00:00",
+    "count": 57,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -504,6 +504,12 @@
             "company": "@DiscordDungeons"
         },
         {
+            "login": "Tsubarah",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/67978743?u=7b15285a37b18db6dae5418dd13b0c31e51219d5&v=4",
+            "url": "https://github.com/Tsubarah",
+            "company": ""
+        },
+        {
             "login": "WilliamLundqvist",
             "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?v=4",
             "url": "https://github.com/WilliamLundqvist",
@@ -751,6 +757,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABAhgHFA",
+            "title": "fix: make asset version removal configurable",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2137",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-08-21T08:24:12Z",
+            "number": 2137,
+            "state": "OPEN",
+            "author": {
+                "login": "Tsubarah",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/67978743?u=7b15285a37b18db6dae5418dd13b0c31e51219d5&v=4",
+                "url": "https://github.com/Tsubarah",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCquRHc8AAAABAYsY-Q",
             "title": "Test/ai refactor of pagination",
