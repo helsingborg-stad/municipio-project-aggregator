@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-24T09:37:20+00:00",
+    "generatedAt": "2026-08-24T10:35:47+00:00",
     "count": 57,
     "repositories": [
         {
@@ -80,17 +80,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "active-directory-api-wp-integration",
-            "fullName": "helsingborg-stad/active-directory-api-wp-integration",
-            "description": "Simple plugin for verification of existing WordPress users with api. ",
-            "url": "https://github.com/helsingborg-stad/active-directory-api-wp-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "schema.org-transformer",
             "fullName": "helsingborg-stad/schema.org-transformer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/schema.org-transformer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "active-directory-api-wp-integration",
+            "fullName": "helsingborg-stad/active-directory-api-wp-integration",
+            "description": "Simple plugin for verification of existing WordPress users with api. ",
+            "url": "https://github.com/helsingborg-stad/active-directory-api-wp-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -367,27 +367,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-js-searchpage-addon",
-            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
-            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-invalidate-login-pagecache",
-            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
-            "description": "Invalidates pagecache on submit of the login form.",
-            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -406,6 +385,27 @@
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
             "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-js-searchpage-addon",
+            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
+            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-invalidate-login-pagecache",
+            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
+            "description": "Invalidates pagecache on submit of the login form.",
+            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
         },
         {
             "owner": "helsingborg-stad",
@@ -924,7 +924,7 @@
         },
         {
             "id": "PR_kwDOCPnM4c8AAAABAHSIDA",
-            "title": "Feat/removing react using an api solution",
+            "title": "feat: removing react using an api solution",
             "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/45",
             "repository": "helsingborg-stad/modularity-json-render",
             "createdAt": "2026-08-18T07:50:38Z",
