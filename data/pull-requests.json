@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-27T15:04:29+00:00",
-    "count": 60,
+    "generatedAt": "2026-08-27T19:02:18+00:00",
+    "count": 61,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -757,6 +757,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABBPfvOw",
+            "title": "Filter standard header presentation values",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2148",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-08-27T17:54:25Z",
+            "number": 2148,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOLwUbvs8AAAABBLlCWw",
             "title": "Feat/school alerts",
