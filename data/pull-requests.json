@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-27T04:07:28+00:00",
+    "generatedAt": "2026-08-27T06:36:37+00:00",
     "count": 59,
     "repositories": [
         {
@@ -758,12 +758,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs8AAAABBFdS3A",
-            "title": "Feature/uppdatera vy for att hantera notis cu 869eq59be",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2143",
+            "id": "PR_kwDOAuIygs8AAAABBKvhqA",
+            "title": "fix: upper header not visible",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2145",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-08-26T14:02:22Z",
-            "number": 2143,
+            "createdAt": "2026-08-27T06:34:08Z",
+            "number": 2145,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
