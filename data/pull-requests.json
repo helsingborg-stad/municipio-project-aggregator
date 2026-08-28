@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-28T16:32:34+00:00",
+    "generatedAt": "2026-08-28T21:05:38+00:00",
     "count": 63,
     "repositories": [
         {
@@ -234,34 +234,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "custom-short-links",
-            "fullName": "helsingborg-stad/custom-short-links",
-            "description": "Create shorter versions of url:s ",
-            "url": "https://github.com/helsingborg-stad/custom-short-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "attachment-revisions",
-            "fullName": "helsingborg-stad/attachment-revisions",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/attachment-revisions"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-contact-banner",
-            "fullName": "helsingborg-stad/modularity-contact-banner",
-            "description": "Stores and presents general contact information to the organization",
-            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-local-index",
-            "fullName": "helsingborg-stad/s3-local-index",
-            "description": "Stores a local index to make common file operations faster",
-            "url": "https://github.com/helsingborg-stad/s3-local-index"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "mod-my-pages",
             "fullName": "helsingborg-stad/mod-my-pages",
             "description": "",
@@ -290,31 +262,31 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "broken-link-detector",
-            "fullName": "helsingborg-stad/broken-link-detector",
-            "description": "Detects and fixes broken links (internally)",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector"
+            "name": "custom-short-links",
+            "fullName": "helsingborg-stad/custom-short-links",
+            "description": "Create shorter versions of url:s ",
+            "url": "https://github.com/helsingborg-stad/custom-short-links"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "visit-custom-posttypes-taxonomies",
-            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
+            "name": "attachment-revisions",
+            "fullName": "helsingborg-stad/attachment-revisions",
             "description": "",
-            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
+            "url": "https://github.com/helsingborg-stad/attachment-revisions"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "project-synchronizer",
-            "fullName": "helsingborg-stad/project-synchronizer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/project-synchronizer"
+            "name": "modularity-contact-banner",
+            "fullName": "helsingborg-stad/modularity-contact-banner",
+            "description": "Stores and presents general contact information to the organization",
+            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-typesense-provider",
-            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
+            "name": "s3-local-index",
+            "fullName": "helsingborg-stad/s3-local-index",
+            "description": "Stores a local index to make common file operations faster",
+            "url": "https://github.com/helsingborg-stad/s3-local-index"
         },
         {
             "owner": "helsingborg-stad",
@@ -343,6 +315,34 @@
             "fullName": "helsingborg-stad/algolia-index",
             "description": "Manages algolia index.",
             "url": "https://github.com/helsingborg-stad/algolia-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "broken-link-detector",
+            "fullName": "helsingborg-stad/broken-link-detector",
+            "description": "Detects and fixes broken links (internally)",
+            "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "visit-custom-posttypes-taxonomies",
+            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "project-synchronizer",
+            "fullName": "helsingborg-stad/project-synchronizer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-typesense-provider",
+            "fullName": "helsingborg-stad/algolia-index-typesense-provider",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
         },
         {
             "owner": "helsingborg-stad",
