@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-29T18:29:56+00:00",
-    "count": 63,
+    "generatedAt": "2026-08-29T19:25:23+00:00",
+    "count": 64,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -757,6 +757,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOCquRHc8AAAABBdUeTA",
+            "title": "Fix focus visibility on filled toggle buttons",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1274",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-08-29T18:31:42Z",
+            "number": 1274,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABBWdpug",
             "title": "\u2728 Feat(chat): handle and display error message in chat frontend",
