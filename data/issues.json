@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-29T12:25:41+00:00",
-    "count": 108,
+    "generatedAt": "2026-08-29T13:15:46+00:00",
+    "count": 107,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -4720,59 +4720,6 @@
                     "title": "Fix performance issues when fetching guides/places through caching and query optimization",
                     "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies/pull/18",
                     "repository": "helsingborg-stad/visit-custom-posttypes-taxonomies"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOA02SVs7IrWmr",
-            "title": "Plugin allows duplicate short link name causing redirect conflicts",
-            "url": "https://github.com/helsingborg-stad/custom-short-links/issues/4",
-            "repository": "helsingborg-stad/custom-short-links",
-            "createdAt": "2025-08-29T13:00:33Z",
-            "number": 4,
-            "state": "OPEN",
-            "author": {
-                "login": "considadam",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/122970703?u=5189e8c198f4048c780bcdc2516ad40920925a6d&v=4",
-                "url": "https://github.com/considadam",
-                "company": "Consid Bor\u00e5s AB"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Prevent duplicate shortlink slugs from being saved",
-                    "url": "https://github.com/helsingborg-stad/custom-short-links/pull/7",
-                    "repository": "helsingborg-stad/custom-short-links"
                 }
             ]
         }
