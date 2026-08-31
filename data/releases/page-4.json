@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-08-31T07:49:36+00:00",
-    "count": 79,
+    "generatedAt": "2026-08-31T08:51:22+00:00",
+    "count": 80,
     "pageSize": 10,
     "pageNumber": 4,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.2.5",
+            "version": "5.2.5",
+            "body": "# Municipio 5.2.5\r\n\r\n**Release type:** Hotfix  \r\n**Summary:** Addresses various issues introduced in version 5.2.4.\r\n\r\n---\r\n\r\n## Alarm Integration (4.0.9)\r\n\r\n- Updates to the latest version of the Alarm Manager integration.\r\n  - Corrects colors and labels for warnings in the fire ban information module.\r\n\r\n---\r\n\r\n## Municipio Theme (5.142.7)\r\n\r\n- Adds a missing constructor parameter in the `E[NNN]` controller.  \r\n  \u27a4 This previously caused a fatal error on locked pages.\r\n- Defaults to `.woff` font format if the font type cannot be resolved.  \r\n  \u27a4 Most browsers support both `.woff` and `.woff2` when `.woff` is declared.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.10)\r\n\r\n- Fixes an issue where data could not be saved due to an unfired ACF hook.\r\n\r\n---\r\n\r\n## Component Library (4.52.10)\r\n\r\n- Ensures sliders with a single slide are displayed.  \r\n  \u27a4 Bypasses default Splide CSS when sliders haven't initialized.\r\n\r\n---\r\n\r\n## WPMU Focus Point (0.2.3)\r\n\r\n- Renames CSS and style file hooks to namespace assets in the global scope.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.5",
+            "publishedAt": "2025-04-16T11:28:09Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.2.4",
             "version": "5.2.4",
@@ -92,15 +101,6 @@
             "body": "## Version 4.8.0 of Municipio\r\n\r\nVersion 4.8.0 of Municipio introduces significant updates to the menu system, which has been completely refactored under the hood.\r\n\r\n### Municipio Theme (v5.48.3)\r\n\r\n- Completely refactors the menu system to support multiple menus in a single location, creating a more flexible menu system. This renders in a smarter, more efficient way. This release adds support for:\r\n  - Multiple menus per menu location (enabled in drawer menu).\r\n  - Mixed menu mode: Define menu items and let the fallback page tree render the rest of the menu.\r\n  \r\n- A patch has been applied to the Customizer\u2019s Design Share feature to prevent rendering an empty panel without an explanation. The `DISABLE_DESIGNSHARE` constant has been replaced and now exclusively responds to the \u201cpublished\u201d blog option.\r\n\r\n- Images lacking a cover parameter will automatically resolve their aspect ratio to avoid overlapping with any content. This will be resolved either by the requested size (if width and height are given) or from the URL (via the size string, e.g., `100x100` will equal to `aspect-ratio: 100/100`).\r\n\r\n- The `IntlDateFormatter` will now handle UTC offset strings and make them IANA compatible to parse dates correctly.\r\n\r\n- A small fix for stripping timestamps from dates in the job schema type has been added.\r\n\r\n### Modularity (v6.38.0)\r\n\r\n- The contact module now uses the new `data-tooltip` to display numbers and email addresses in a readable format.\r\n\r\n- A feature has been added to enable cross-network queries in the Posts module.\r\n\r\n- A fix for event dates has been added to the Posts module, now correctly displaying the start date as the published date.\r\n\r\n- The edit modules link now appears correctly in the Gutenberg editor.\r\n\r\n- Users can now select a custom icon for each item in the manual input module.\r\n\r\n- The menu module now supports the new version of menu outputs.\r\n\r\n### Styleguide (v0.11.1152)\r\n\r\n- A `data-tooltip` may now be added to any element to display a tooltip with the value of the data parameter.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.0",
             "publishedAt": "2024-10-21T13:49:10Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 4.7.1",
-            "version": "4.7.1",
-            "body": "This release focuses on bugfixes and patches. It also brings a few new features to the image system, to better handle large assets. An experimental feature for displaying known accessibility issues to editors is also introduced. A new search field option for expandable search has been added to the flexible header.\r\n\r\n### Component Library (v4.27.0):\r\n\r\n- A fix for the hero two-column layout has been implemented, forcing the image dimensions to 16/9 format.\r\n- The `aria-controls` attribute has been modified to correct an issue with accessibility in menu toggling.\r\n- Implemented `[data-a11y-error]` feature on images that are missing alt-text.\r\n- The card component now intelligently decides if an image should be displayed or not.\r\n\r\n### Modularity (v6.33.3):\r\n\r\n- The Contacts module has been reworked to simplify the module and prepare for the implementation of a component. This change reworks the user interface to be more clear. It also reduces the number of options for the editor by removing social media links (not a very popular feature) and the option to display the items as a list.\r\n- A max image size check has been added to the image conversion process to prevent images from being resized if they are too large. Images that are too large will be served from source and logged to the error log.\r\n\r\n### Municipio Theme (v5.40.5):\r\n\r\n- A new expandable search form for the flexible header has been contributed by [Adam Alexandersson](https://github.com/considadam) @ Consid, financed by [Alings\u00e5s Municipality](https://github.com/Alingsas-Kommun).  \r\n  ![Search Image](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/search-900x142.webp)\r\n- Implementation of a limit to prevent abnormally large images from being uploaded to the media library. This will make the frontend image process more efficient and prevent image conversion stalls.\r\n- Implement support for the `[data-a11y-error]` attribute. This will display a red warning label on elements that are considered to void common accessibility errors.  \r\n  ![Alt Text Warning](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/alt-text-warning-900x963.webp)",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.7.1",
-            "publishedAt": "2024-10-18T10:10:53Z",
             "isPrerelease": false,
             "isDraft": false
         }

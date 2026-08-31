@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-08-31T07:49:36+00:00",
-    "count": 79,
+    "generatedAt": "2026-08-31T08:51:22+00:00",
+    "count": 80,
     "pageSize": 10,
     "pageNumber": 2,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.7.2",
+            "version": "5.7.2",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-2/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.2",
+            "publishedAt": "2025-12-10T08:03:35Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.7.0",
             "version": "5.7.0",
@@ -92,15 +101,6 @@
             "body": "## Municipio Theme (5.165.1)\r\n- Updates the **ImageConvert** feature to support adding additional conversion strategies in the future.  \r\n- Introduces a new **object caching system** in ImageConvert to prevent repeated attempts to convert images that have already been processed or failed previously.  \r\n- Implements a **conversion tracking system** that provides real-time knowledge of ongoing conversions, preventing multiple concurrent conversions of the same asset on the same request or across concurrent requests.  \r\n- Adds a **detailed logging system** to ImageConvert, enabling identification of performance issues related to images that fail to convert or are frequently reprocessed.  \r\n\r\n## Modularity (6.90.15)\r\n- Removes **ACF Extended** as a required plugin dependency.  \r\n\r\n## Deployment\r\n- Adds an updated version of **ACF Extended** to the main deployment procedure, ensuring compatibility with the latest release of the **ACF Pro** plugin.  ",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.4",
             "publishedAt": "2025-09-10T11:56:30Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.4.1",
-            "version": "5.4.1",
-            "body": "# Release Notes\r\n\r\nThis release focuses on upgrading the performance of the icon selector by replacing it with a custom field.  \r\nThis change decreases delivered DOM size in the admin interface, making the Gutenberg editor more performant.\r\n\r\n---\r\n\r\n## Municipio Theme (5.164.1)\r\n- Removes `PrefillIcon` class  \r\n- Implements replacement field for icon selector in all occurrences  \r\n- **Exhibition Event**\r\n  - Update exhibition event gallery position  \r\n  - Allow subtypes of Event schema to have `startDate` and `endDate` meta  \r\n  - Update position of date and place on exhibition event  \r\n  - Add missing expired event notice text  \r\n\r\n## Modularity (6.90.9)\r\n- Implements replacement field for icon selector in all occurrences  \r\n- Fixes an issue where post module could be saved without a selected view, causing a fatal error  \r\n\r\n## Acf Icon Field (0.2.42)\r\n- Introduces a new icon field providing a visual selector of Material icons  ",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.1",
-            "publishedAt": "2025-09-02T10:59:40Z",
             "isPrerelease": false,
             "isDraft": false
         }

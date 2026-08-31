@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-08-31T07:49:36+00:00",
-    "count": 79,
+    "generatedAt": "2026-08-31T08:51:22+00:00",
+    "count": 80,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.1.0",
+            "version": "6.1.0",
+            "body": "Minor release: this update focuses on Municipio and its UI layer, adding Kulturkortet purchase and renewal flows, more flexible header and footer behavior, custom taxonomy mapping for schema data, and clearer chat error handling. It also improves search, forms, guides, and JSON-rendered content with a set of targeted stability and frontend fixes.\r\n\r\nMunicipio Theme [\\[7.7.68...7.14.5\\]](https://github.com/helsingborg-stad/municipio/compare/7.7.68...7.14.5)\r\n------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Kulturkortet:** Adds purchase and renewal links in the profile flow and strengthens ticket validation, including support for developer impersonation during testing.\r\n*   **Schema Mapping:** Adds support for mapping schema properties to custom taxonomies.\r\n*   **Header and Footer:** Modernizes header and footer implementations, reduces reliance on older Kirki-based settings, and improves migration of older footer and drawer settings.\r\n*   **Header Layout:** Improves dropdown behavior, mobile fallback, overlap handling, upper and lower header visibility, and compatibility with older header surface tokens.\r\n*   **Chat:** Lets chat bubbles be shown on specific pages and adds clearer frontend error messages when chat requests fail.\r\n*   **Content and Navigation:** Fixes post list block heights, filter button placement, active menu states, hero width, long page-title wrapping, and bottom sidebar placement.\r\n*   **Admin and Data:** Fixes interactive map markers, custom post type archive slugs, single post type admin links, school description handling, school alerts, and location descriptions for pre- and elementary schools.\r\n- **Kirki Removal:** Completes the removal of the Kirki framework from Municipio and migrates remaining Customizer, header, color, and styling settings to native or design-tool based implementations.\r\n- **Customizer:** Restores live preview for custom CSS and ensures error pages are correctly displayed while being customized.\r\n- **Header and Logotypes:** Adds fluid brand and logotype scaling with sensible minimum and maximum sizes, including native support for sticky headers, and restores login/logout styling across header and drawer components.\r\n- **Header Configuration:** Moves width and color controls into the design tool, removes the deprecated accent-line option, and avoids showing login/logout controls when their intended state cannot be determined.\r\n- **Colors:** Uses color swatches from the design tool in the Customizer and deprecates unrestricted color selection.\r\n- **Accessibility and Navigation:** Enables quick-jump links for content and the main menu in the flexible header.\r\n- **Legacy Migration:** Removes the Casual and Business header variants and automatically migrates them to the Flexible header.\r\n- **CSS Editing:** Removes the separate admin CSS editor and migrates custom CSS editing to the native Customizer CSS editor.\r\n\r\nStyleguide [\\[2.281.17...3.17.12\\]](https://github.com/helsingborg-stad/styleguide/compare/2.281.17...3.17.12)\r\n--------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Runtime Support:** Moves the package forward from PHP 8.2-era tooling and standardizes the build setup around PHP 8.3.\r\n*   **Header and Footer Controls:** Adds footer settings and new header controls for padding, gap, color scheme, and logo scale, while retiring older business and casual header variants.\r\n*   **Brand and Logotype Scaling:** Adds autoscaling, aspect-ratio support, width clamping, selectable scaling curves, and safer defaults for brands and logotypes.\r\n*   **Design Controls:** Improves design-builder controls with multi-output support, line-height settings, min and max range controls, smoother sliders, and broader font-weight selection.\r\n*   **New UI and Fixes:** Adds a collapsible search component and fixes accordion heading styling, sticky FAB overflow, field heights, icon-link underlines, Blade cache cleanup, and missing modal gallery images.\r\n\r\nAlgolia Index [\\[3.5.10...3.5.12\\]](https://github.com/helsingborg-stad/algolia-index/compare/3.5.10...3.5.12)\r\n--------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Search Configuration:** Delays reading ACF settings so search configuration loads more reliably during startup.\r\n\r\nAlgolia Index Typesense Provider [\\[1.0.15...1.0.17\\]](https://github.com/helsingborg-stad/algolia-index-typesense-provider/compare/1.0.15...1.0.17)\r\n----------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Frontend Search Access:** Uses the public Typesense search key in the browser configuration so frontend search can authenticate correctly.\r\n\r\nModularity Frontend Form [\\[0.83.4...0.83.14\\]](https://github.com/helsingborg-stad/modularity-frontend-form/compare/0.83.4...0.83.14)\r\n--------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Map Fields:** Fixes cases where map fields did not load correctly.\r\n*   **Field Presentation:** Improves styling for non-standard field labels and updates spacing values to rem-based sizing for more consistent rendering.\r\n*   **Loading States:** Fixes positioning and layering issues in working and loading overlays so form feedback stays visible.\r\n\r\nModularity Guides [\\[5.0.8...5.0.12\\]](https://github.com/helsingborg-stad/modularity-guides/compare/5.0.8...5.0.12)\r\n--------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Accordion Behavior:** Fixes accordion expansion so button clicks open and close sections correctly.\r\n*   **Frontend Dependencies:** Removes the jQuery dependency, simplifying the frontend runtime.\r\n\r\nModularity JSON Render [\\[4.0.8...4.0.14\\]](https://github.com/helsingborg-stad/modularity-json-render/compare/4.0.8...4.0.14)\r\n------------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Markup Cleanup:** Removes unwanted spaces between generated CSS classes.\r\n*   **Accordion Rendering:** Fixes React-rendered accordion markup, styling, and behavior so rendered accordions match the current implementation.\r\n\r\nModularity Recommend [\\[4.2.0...4.2.2\\]](https://github.com/helsingborg-stad/modularity-recommend/compare/4.2.0...4.2.2)\r\n------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Recommendation Script:** Fixes missing semicolons in the inline RekAI script to prevent frontend JavaScript errors.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.0",
+            "publishedAt": "2026-08-31T08:37:48Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "5.9.7",
             "version": "5.9.7",
@@ -92,15 +101,6 @@
             "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-0/",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.0",
             "publishedAt": "2025-12-17T15:23:51Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.7.2",
-            "version": "5.7.2",
-            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-7-2/",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.7.2",
-            "publishedAt": "2025-12-10T08:03:35Z",
             "isPrerelease": false,
             "isDraft": false
         }

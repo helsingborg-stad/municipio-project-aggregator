@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-08-31T07:49:36+00:00",
-    "count": 79,
+    "generatedAt": "2026-08-31T08:51:22+00:00",
+    "count": 80,
     "pageSize": 10,
     "pageNumber": 8,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "091123 - Stable Release [Maintenance release]",
+            "version": "3.6.0",
+            "body": "**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.5.1...3.6.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.6.0",
+            "publishedAt": "2023-11-09T10:00:33Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "061123 - Stable Release [Maintenance release]",
             "version": "3.5.1",

@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-08-31T07:49:36+00:00",
-    "count": 79,
+    "generatedAt": "2026-08-31T08:51:22+00:00",
+    "count": 80,
     "pageSize": 10,
     "pageNumber": 5,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 4.7.1",
+            "version": "4.7.1",
+            "body": "This release focuses on bugfixes and patches. It also brings a few new features to the image system, to better handle large assets. An experimental feature for displaying known accessibility issues to editors is also introduced. A new search field option for expandable search has been added to the flexible header.\r\n\r\n### Component Library (v4.27.0):\r\n\r\n- A fix for the hero two-column layout has been implemented, forcing the image dimensions to 16/9 format.\r\n- The `aria-controls` attribute has been modified to correct an issue with accessibility in menu toggling.\r\n- Implemented `[data-a11y-error]` feature on images that are missing alt-text.\r\n- The card component now intelligently decides if an image should be displayed or not.\r\n\r\n### Modularity (v6.33.3):\r\n\r\n- The Contacts module has been reworked to simplify the module and prepare for the implementation of a component. This change reworks the user interface to be more clear. It also reduces the number of options for the editor by removing social media links (not a very popular feature) and the option to display the items as a list.\r\n- A max image size check has been added to the image conversion process to prevent images from being resized if they are too large. Images that are too large will be served from source and logged to the error log.\r\n\r\n### Municipio Theme (v5.40.5):\r\n\r\n- A new expandable search form for the flexible header has been contributed by [Adam Alexandersson](https://github.com/considadam) @ Consid, financed by [Alings\u00e5s Municipality](https://github.com/Alingsas-Kommun).  \r\n  ![Search Image](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/search-900x142.webp)\r\n- Implementation of a limit to prevent abnormally large images from being uploaded to the media library. This will make the frontend image process more efficient and prevent image conversion stalls.\r\n- Implement support for the `[data-a11y-error]` attribute. This will display a red warning label on elements that are considered to void common accessibility errors.  \r\n  ![Alt Text Warning](https://media.helsingborg.se/uploads/networks/4/sites/198/2024/10/alt-text-warning-900x963.webp)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.7.1",
+            "publishedAt": "2024-10-18T10:10:53Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "V4.7.0",
             "version": "4.7.0",
@@ -92,15 +101,6 @@
             "body": "We are excited to announce the release of Version 4.4.0, which is mainly focused at the new External Content in the Municipio Theme. The External Content feature was made possible by the introduction of the previous release of Schema Data feature and brings the ability to create content from external sources that contains or responds with objects that adhere to the Schema.org standard.\r\n\r\n## Municipio Theme (5.21.0):\r\n\r\n* External Content: Allows creating content from either a Typesense API or local json file to create posts, taxonomies and terms from Schema.org formatted objects. This aims at making the Municipio theme responsible for syncing remote content to the local WordPress installation instead of implementing a number of similar content sync plugins to solve individual cases.\r\n* Error handling when image does not exist for recent released WebP image optimization.\r\n* Fixing first level only navigations not working as intended.\r\n* Changing Flexible header search button appearance.\r\n\r\n## Modularity (6.26.0): \r\n\r\n* Added more settings for the Search module.\r\n* Animations and effects for the Menu module.\r\n\r\n## Modularity Open Street Map (2.5.1):\r\n\r\n* Comply with Municipio Theme 5.21.0 changes to the fields storing information about what Schema Type is to be used by which post type.\r\n\r\n## AlgoliaIndex Js Searchpage Addon (3.2.2): \r\n\r\n* A smaller patch to correctly build the plugin assets has been implemented.\r\n* Lightweight library corrected and implemented.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.2.7...4.4.0",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.0",
             "publishedAt": "2024-09-18T08:30:17Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Maintenance version 4.2.7",
-            "version": "4.2.7",
-            "body": "### Modularity (6.23.17)\r\n\r\n- Further improvements to Modularity UI regarding module lists.\r\n- **New Module: Audio**. Adds the ability to display a simple audio player.\r\n\r\n### Municipio Theme (5.15.10)\r\n\r\n- Prevents crash of page if a template that doesn't exist is defined in the database template field. Now gracefully falls back to \"page\" as a last resort.\r\n- Multiple minor patches to the flexible header.\r\n\r\n### Component Library (4.20.3)\r\n\r\n- Signature component no longer requires a published timestamp in order to display the last updated timestamp.\r\n- Comments component now correctly shows when the comment was made.\r\n\r\n### Modularity Form Builder (3.2.3)\r\n\r\n- Mitigations of errors when files are submitted with a form response.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.7",
-            "publishedAt": "2024-09-09T12:59:48Z",
             "isPrerelease": false,
             "isDraft": false
         }

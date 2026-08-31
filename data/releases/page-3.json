@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-08-31T07:49:36+00:00",
-    "count": 79,
+    "generatedAt": "2026-08-31T08:51:22+00:00",
+    "count": 80,
     "pageSize": 10,
     "pageNumber": 3,
     "pageCount": 8,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.4.1",
+            "version": "5.4.1",
+            "body": "# Release Notes\r\n\r\nThis release focuses on upgrading the performance of the icon selector by replacing it with a custom field.  \r\nThis change decreases delivered DOM size in the admin interface, making the Gutenberg editor more performant.\r\n\r\n---\r\n\r\n## Municipio Theme (5.164.1)\r\n- Removes `PrefillIcon` class  \r\n- Implements replacement field for icon selector in all occurrences  \r\n- **Exhibition Event**\r\n  - Update exhibition event gallery position  \r\n  - Allow subtypes of Event schema to have `startDate` and `endDate` meta  \r\n  - Update position of date and place on exhibition event  \r\n  - Add missing expired event notice text  \r\n\r\n## Modularity (6.90.9)\r\n- Implements replacement field for icon selector in all occurrences  \r\n- Fixes an issue where post module could be saved without a selected view, causing a fatal error  \r\n\r\n## Acf Icon Field (0.2.42)\r\n- Introduces a new icon field providing a visual selector of Material icons  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.1",
+            "publishedAt": "2025-09-02T10:59:40Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.4.0",
             "version": "5.4.0",
@@ -92,15 +101,6 @@
             "body": "### WordPress Core (6.8)\r\n- Update WordPress core to version 6.8.\r\n\r\n### Modularity (6.81.0)\r\n- Adds the option to display a link to the archive before the post list in the post module.\r\n- Authors can now set a custom label for the archive button.\r\n\r\n### Municipio Theme (5.144.9)\r\n- Taxonomy terms are now shown on archive and single post pages.\r\n- Reintroduces the progress bar data on the project schema type.\r\n- Fixes an issue with Quicklinks placement that caused the entire page to render incorrectly.\r\n- Container block now supports setting border radius and shadows.\r\n- Fixes an issue where lat/lng values were cached at runtime, causing all geo coordinates to appear in the same location.\r\n\r\n### Modularity Form Builder (3.4.11)\r\n- A default label will not be applied when the upload button label is set to empty.\r\n\r\n### Component Library (4.52.12)\r\n- **Fixed:** Headings get different styling even though they have the same heading level.\r\n- Fileinput now handles `max file limit = -1` as the maximum allowed number of files (50).\r\n\r\n### Styleguide (0.11.1251)\r\n- Correct button colors in the primary menu to align with colors on link items.\r\n\r\n### Visit Custom Posttypes Taxonomies (2.0.6)\r\n- Reflects name changed filter in Municipio handling quicklinks positioning.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.6",
             "publishedAt": "2025-04-28T12:07:24Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.2.5",
-            "version": "5.2.5",
-            "body": "# Municipio 5.2.5\r\n\r\n**Release type:** Hotfix  \r\n**Summary:** Addresses various issues introduced in version 5.2.4.\r\n\r\n---\r\n\r\n## Alarm Integration (4.0.9)\r\n\r\n- Updates to the latest version of the Alarm Manager integration.\r\n  - Corrects colors and labels for warnings in the fire ban information module.\r\n\r\n---\r\n\r\n## Municipio Theme (5.142.7)\r\n\r\n- Adds a missing constructor parameter in the `E[NNN]` controller.  \r\n  \u27a4 This previously caused a fatal error on locked pages.\r\n- Defaults to `.woff` font format if the font type cannot be resolved.  \r\n  \u27a4 Most browsers support both `.woff` and `.woff2` when `.woff` is declared.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.10)\r\n\r\n- Fixes an issue where data could not be saved due to an unfired ACF hook.\r\n\r\n---\r\n\r\n## Component Library (4.52.10)\r\n\r\n- Ensures sliders with a single slide are displayed.  \r\n  \u27a4 Bypasses default Splide CSS when sliders haven't initialized.\r\n\r\n---\r\n\r\n## WPMU Focus Point (0.2.3)\r\n\r\n- Renames CSS and style file hooks to namespace assets in the global scope.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.5",
-            "publishedAt": "2025-04-16T11:28:09Z",
             "isPrerelease": false,
             "isDraft": false
         }
