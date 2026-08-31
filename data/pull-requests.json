@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-31T06:53:53+00:00",
-    "count": 65,
+    "generatedAt": "2026-08-31T07:38:39+00:00",
+    "count": 64,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -802,39 +802,6 @@
                 "login": "jeanfredrik",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
                 "url": "https://github.com/jeanfredrik",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABBWdpug",
-            "title": "\u2728 Feat(chat): handle and display error message in chat frontend",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2151",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-08-28T14:42:57Z",
-            "number": 2151,
-            "state": "OPEN",
-            "author": {
-                "login": "MasterKenth",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/2890987?v=4",
-                "url": "https://github.com/MasterKenth",
                 "company": ""
             },
             "assignees": [],
