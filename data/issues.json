@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-31T08:31:42+00:00",
+    "generatedAt": "2026-08-31T09:28:16+00:00",
     "count": 107,
     "repositories": [
         {
@@ -23,18 +23,18 @@
             "url": "https://github.com/helsingborg-stad/styleguide"
         },
         {
-            "owner": "municipio-se",
-            "name": "municipio-deployment",
-            "fullName": "municipio-se/municipio-deployment",
-            "description": "Deploy of Municpio by fork",
-            "url": "https://github.com/municipio-se/municipio-deployment"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "wp-page-for-posttype",
             "fullName": "helsingborg-stad/wp-page-for-posttype",
             "description": "Adds the ability to place a page on an archive page and/or place a posttype archive on a page. ",
             "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
+        },
+        {
+            "owner": "municipio-se",
+            "name": "municipio-deployment",
+            "fullName": "municipio-se/municipio-deployment",
+            "description": "Deploy of Municpio by fork",
+            "url": "https://github.com/municipio-se/municipio-deployment"
         },
         {
             "owner": "helsingborg-stad",
@@ -80,17 +80,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "schema.org-transformer",
-            "fullName": "helsingborg-stad/schema.org-transformer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "active-directory-api-wp-integration",
             "fullName": "helsingborg-stad/active-directory-api-wp-integration",
             "description": "Simple plugin for verification of existing WordPress users with api. ",
             "url": "https://github.com/helsingborg-stad/active-directory-api-wp-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "schema.org-transformer",
+            "fullName": "helsingborg-stad/schema.org-transformer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
         },
         {
             "owner": "helsingborg-stad",
@@ -262,13 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "mod-my-pages",
             "fullName": "helsingborg-stad/mod-my-pages",
             "description": "",
@@ -346,6 +339,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "redirection-extended",
             "fullName": "helsingborg-stad/redirection-extended",
             "description": "",
@@ -364,27 +364,6 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -420,6 +399,27 @@
             "fullName": "helsingborg-stad/wputilservice",
             "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
             "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
         },
         {
             "owner": "helsingborg-stad",
