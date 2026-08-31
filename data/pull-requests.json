@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-31T11:28:05+00:00",
-    "count": 61,
+    "generatedAt": "2026-08-31T12:40:36+00:00",
+    "count": 63,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -178,17 +178,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-allow-cors",
-            "fullName": "helsingborg-stad/wpmu-allow-cors",
-            "description": "Allows cors with *",
-            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
             "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-allow-cors",
+            "fullName": "helsingborg-stad/wpmu-allow-cors",
+            "description": "Allows cors with *",
+            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "helsingborg-stad",
@@ -757,6 +757,92 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABBmCMpw",
+            "title": "Algolia index schemadata",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2157",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-08-31T11:46:07Z",
+            "number": 2157,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOA4iurc8AAAABBmABqA",
+            "title": "Fix recursive checkbox relations and restore desc toggle binding",
+            "url": "https://github.com/helsingborg-stad/modularity-guides/pull/27",
+            "repository": "helsingborg-stad/modularity-guides",
+            "createdAt": "2026-08-31T11:40:44Z",
+            "number": 27,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Checkboxes do not affect steps with desc when clicking checkbox",
+                    "url": "https://github.com/helsingborg-stad/modularity-guides/issues/26",
+                    "repository": "helsingborg-stad/modularity-guides"
+                }
+            ]
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABBlgGqQ",
             "title": "Fix stale customizer test expectations",
