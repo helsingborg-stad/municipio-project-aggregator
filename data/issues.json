@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-08-31T13:22:29+00:00",
+    "generatedAt": "2026-08-31T14:22:34+00:00",
     "count": 108,
     "repositories": [
         {
@@ -199,13 +199,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-modularity-addon",
             "fullName": "helsingborg-stad/algolia-index-modularity-addon",
             "description": "Adds support for modularity indexing to algolia-index plugin. ",
@@ -231,6 +224,13 @@
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
             "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -311,6 +311,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "broken-link-detector",
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
@@ -336,13 +343,6 @@
             "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
             "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
