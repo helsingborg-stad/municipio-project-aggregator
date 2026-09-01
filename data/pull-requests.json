@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-01T04:33:44+00:00",
-    "count": 65,
+    "generatedAt": "2026-09-01T05:30:26+00:00",
+    "count": 63,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -908,72 +908,6 @@
                     "repository": "helsingborg-stad/modularity-guides"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABBlgGqQ",
-            "title": "Fix stale customizer test expectations",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2156",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-08-31T10:24:33Z",
-            "number": 2156,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABBlMNzA",
-            "title": "Document contribution guidelines",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2154",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-08-31T09:38:01Z",
-            "number": 2154,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOCquRHc8AAAABBdUeTA",
