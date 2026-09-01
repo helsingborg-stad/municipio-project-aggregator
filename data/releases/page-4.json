@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T12:52:06+00:00",
-    "count": 81,
+    "generatedAt": "2026-09-01T13:46:42+00:00",
+    "count": 82,
     "pageSize": 10,
     "pageNumber": 4,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.2.7",
+            "version": "5.2.7",
+            "body": "### Municipio 5.2.7\r\n- Fixes schema data issues.\r\n- Resolves a performance issue related to large lead texts.\r\n\r\n### Municipio (5.146.3)\r\n- Removes the `force_balance_tags` function, which was previously used to filter large amounts of text and avoid empty `<p>` tags.\r\n  - This practice is **not recommended** by WordPress documentation.\r\n\r\n### Styleguide (0.11.1251)\r\n- Reverts accordion animations that were mistakenly merged.\r\n\r\n### Component Library (4.52.13)\r\n- Removes XML headers from plus/minus reactive icons.\r\n\r\n### OpenStreetMap (2.7.5)\r\n- Adds a **hotfix** for issues with `lat/lng` data on the \"place\" schema type.\r\n  - A **permanent fix** will be included in the next release.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.7",
+            "publishedAt": "2025-04-29T13:31:43Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.2.6",
             "version": "5.2.6",
@@ -92,15 +101,6 @@
             "body": "Version 4.8.2 of Municipio includes some minor patches to various functionalities and introduces a third-party plugin for IdP authentication.\r\n\r\n#### Municipio Theme (v5.51.6)\r\n- Fixes an error that displayed a 404 page when an archive was missing posts for site visitors.\r\n- Adds fields to the user profile that match available options in the contact module.\r\n- Minor adjustment to category display in projects.\r\n- Fixes a GUID error when fetching cross-site posts.\r\n- The flexible header now correctly displays the desktop options for mobile devices if a mobile alternative is missing.\r\n- Fixes some context issues in the hero area.\r\n\r\n#### Component Library (v4.29.0)\r\n- Adjustment to the logotype alignment in the brand component for small devices.\r\n- Fix for the LinkedIn icon to appear in hosting environments that are case-sensitive.\r\n- Introduction of a new component representing a generic DOM element.\r\n- Added a new state to the button component, \u201cis-working,\u201d that displays a spinner.\r\n\r\n#### Modularity (v6.40.2)\r\n- Contact module updated to align with new fields in the user panel provided by Municipio Theme.\r\n- Corrected an issue with the context parameter in the slider module.\r\n- Implemented a fix for data filtering in the posts module.\r\n\r\n#### Mini Orange \u2013 SAML Single Signon (v5.1.9)\r\n- Added a new third-party plugin. The plugin has passed a security review and can be used to connect WordPress user login and management to various IdP providers (e.g., Active Directory).",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.2",
             "publishedAt": "2024-10-30T14:04:49Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 4.8.1",
-            "version": "4.8.1",
-            "body": "## Version 4.8.1 of Municipio\r\n\r\nVersion 4.8.1 of Municipio includes some patches for the latest release, addressing minor issues.\r\n\r\n### Municipio Theme (v5.49.1)\r\n- A fatal error related to cross-network permalink functionality has been resolved.\r\n- The menu system has been patched to render child pages for post-type mapped pages.\r\n- A fix for the `archiveCamelCase` functionality has been added ([Credit: Michael Claesson @ Consid](https://github.com/helsingborg-stad/Municipio/pull/1082)).\r\n- A new feature to disable discussion (including existing comments) has been added.\r\n\r\n### Component Library (v4.27.6)\r\n- The image component now includes a parameter to disable automatic aspect ratio calculation, allowing the wrapping component to apply its own aspect ratio if needed.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.1",
-            "publishedAt": "2024-10-22T09:10:29Z",
             "isPrerelease": false,
             "isDraft": false
         }

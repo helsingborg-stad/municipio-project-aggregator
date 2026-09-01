@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T12:52:06+00:00",
-    "count": 81,
+    "generatedAt": "2026-09-01T13:46:42+00:00",
+    "count": 82,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.1.2",
+            "version": "6.1.2",
+            "body": "Minor release focused on safer logging, more reliable theme upgrades, and cleaner header behavior. Municipio adds migration handling for empty default tokens and aligns header layouts with the latest Styleguide update, while Stream hardens multisite access and redacts sensitive integration data from logs.\r\n\r\n## Municipio Theme [7.16.1...7.17.2](https://github.com/helsingborg-stad/Municipio/compare/7.16.1...7.17.2)\r\n- Handles empty default design tokens during migration to reduce upgrade issues in existing setups.\r\n- Updates header layouts to follow the latest Styleguide settings more consistently.\r\n- Fixes button rendering so the correct style setting is used.\r\n\r\n## Styleguide [3.17.22...3.18.0](https://github.com/helsingborg-stad/styleguide/compare/3.17.22...3.18.0)\r\n- Lets standard headers use width settings even when header padding is turned off.\r\n\r\n## Stream Activity Log [4.3.0...4.4.0](https://github.com/xwp/stream/blob/master/changelog.md#440---august-31-2026)\r\n- Tightens multisite access so activity records stay scoped to the current site, and network-wide settings now require network-level permission.\r\n- Redacts integration secrets and alert destination credentials from logs and alert data output.\r\n- Fixes false \u201cSITE IS DISCONNECTED\u201d CLI errors on empty sites, an early capability-check fatal error, and an unknown-user password reset warning.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.2",
+            "publishedAt": "2026-09-01T13:07:24Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.1.1",
             "version": "6.1.1",
@@ -92,15 +101,6 @@
             "body": "Release notes @ https://getmunicipio.com/nyheter/municipio-5-8-3/",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.3",
             "publishedAt": "2026-01-13T09:59:30Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.8.1",
-            "version": "5.8.1",
-            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-1/",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.1",
-            "publishedAt": "2025-12-18T08:31:18Z",
             "isPrerelease": false,
             "isDraft": false
         }

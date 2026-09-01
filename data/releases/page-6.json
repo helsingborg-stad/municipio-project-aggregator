@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T12:52:06+00:00",
-    "count": 81,
+    "generatedAt": "2026-09-01T13:46:42+00:00",
+    "count": 82,
     "pageSize": 10,
     "pageNumber": 6,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.4.1",
+            "version": "4.4.1",
+            "body": "## What's Changed\r\n\r\n### Municipio Theme (5.21.1)\r\n* Fix issue with posts using Place as Schema type not getting Schema data populated as part of the post object.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.0...4.4.1",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.1",
+            "publishedAt": "2024-09-18T09:36:27Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.4.0",
             "version": "4.4.0",
@@ -92,15 +101,6 @@
             "body": "A new maintenance release addresses issues caused by optimization actions in the previous release. This update includes the following corrections and improvements.\r\n\r\n**Municipio Theme (5.7.1):**\r\n\r\n- Customizer: Fixed an issue where dynamic theme settings were not properly loading in the customizer. This ensures that imported settings from the design library are correctly applied in the customizer context.\r\n- Favicons: Removes the custom favicon implementation, and migrates it to be done natively in WordPress using the \"site identity\" section in the customizer.\r\n- Icons: A optimization on the icon rendering has been made. This reduces the size of the material icons bundle up to 85%. This change also brings settings for choosing font style and weight.\r\n- General: Minor adjustments to correct an issue where the width settings were not being applied.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.2",
             "publishedAt": "2024-08-12T09:51:01Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.1.0",
-            "version": "4.1.0",
-            "body": "Introducing Version 4.1.0! This update is designed to optimize performance for frontend tasks, offering significant improvements. It includes several fixes aimed at boosting site performance in both cached and uncached environments. Expect up to a 60% reduction in Time to First Byte (TTFB) on large sites, even when object caching is not enabled.\r\n\r\n- Municipio (5.5.2): Upgraded to statically render Applicators (generated css, component data and modifiers) reducing rendering time and unnecessary workloads. This change also enhances security by eliminating the use of eval for calculating conditionals.\r\n- Modularity (6.19.0): Multiple queries used to detect a page\u2019s available modules have been optimized to run more efficiently by reducing the amount of data searched in.\r\n- Open Street Map (2.2.2)*: The plugin has been completely rewritten to offload the initial request size using asynchronous data fetching.\r\n- Like posts (2.5.0)*: The functionality for determining where the liked posts list appears has been updated to execute only during the save_post action. This change reduces runtime calculations on the frontend, improving overall performance.\r\n- Items marked with (*) are breaking changes. These components may have to be configured, in order to work properly.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.0",
-            "publishedAt": "2024-08-05T11:09:51Z",
             "isPrerelease": false,
             "isDraft": false
         }

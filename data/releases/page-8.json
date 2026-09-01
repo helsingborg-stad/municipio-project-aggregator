@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T12:52:06+00:00",
-    "count": 81,
+    "generatedAt": "2026-09-01T13:46:42+00:00",
+    "count": 82,
     "pageSize": 10,
     "pageNumber": 8,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.0.0",
+            "version": "4.0.0",
+            "body": "## What's Changed\r\n* chore: add redis and phpsab to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/13\r\n* chore: add ssl support to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/15\r\n* refactor: Use FS_METHOD direct in devcontainer by @annalinneajohansson in https://github.com/municipio-se/municipio-deployment/pull/16\r\n* Municipio 4.0.0 - Stable release (290224) by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/18\r\n\r\n## New Contributors\r\n* @annalinneajohansson made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/16\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.7.0...4.0.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.0",
+            "publishedAt": "2024-02-29T08:07:49Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "281123 - Stable Release",
             "version": "3.7.0",
@@ -92,15 +101,6 @@
             "body": "## Release Notes - 3.2.0\r\n\r\n- Algolia search now supports searching for custom taxonomies/terms.\r\n- Herovideo now supports the \"poster\" attribute.\r\n- Added padding/margin to headers in the post module.\r\n- Improved visibility of the current page in the side navigation.\r\n- Tags are now compressed for optimized performance.\r\n- The heart icon now properly appears above the filtering list.\r\n- OpenStreetMap has undergone accessibility testing.\r\n\r\nBug Fixes:\r\n\r\n- The module now displays an appropriate icon in the module list.\r\n- Modified the message displayed when submitting an email address.\r\n- Empty required fields now validate correctly in general forms.\r\n- Added ListID for proper functionality.\r\n- Improved translation accuracy for the add-on.\r\n- Resolved the issue of oversized sliders on culture websites.\r\n- Enhanced the display of posts in the \"Right Sidebar\" on term pages.\r\n- Added hover effect for improved appearance of quick links row.\r\n- Removed manual input of link in linked card content.\r\n- Randomized the order of sidebar visits on archive pages.\r\n- Updated URL to reflect changes when new states are pushed on the map.\r\n- Removed title translation in place, improving translation.\r\n",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.0",
             "publishedAt": "2023-06-14T08:57:04Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "3.1.0",
-            "version": "3.1.0",
-            "body": "Adds a parameter in the deployment process allowing a custom port number to deploy towards. A new secret must be defined for all deployment flows according to the following: \r\n\r\nDEPLOY_REMOTE_PORT_STAGE (use port 22 if in doubt)\r\nDEPLOY_REMOTE_PORT_PROD (use port 22 if in doubt)",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.1.0",
-            "publishedAt": "2023-05-29T11:15:07Z",
             "isPrerelease": false,
             "isDraft": false
         }

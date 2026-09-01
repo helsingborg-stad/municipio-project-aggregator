@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T12:52:06+00:00",
-    "count": 81,
+    "generatedAt": "2026-09-01T13:46:42+00:00",
+    "count": 82,
     "pageSize": 10,
     "pageNumber": 7,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.1.0",
+            "version": "4.1.0",
+            "body": "Introducing Version 4.1.0! This update is designed to optimize performance for frontend tasks, offering significant improvements. It includes several fixes aimed at boosting site performance in both cached and uncached environments. Expect up to a 60% reduction in Time to First Byte (TTFB) on large sites, even when object caching is not enabled.\r\n\r\n- Municipio (5.5.2): Upgraded to statically render Applicators (generated css, component data and modifiers) reducing rendering time and unnecessary workloads. This change also enhances security by eliminating the use of eval for calculating conditionals.\r\n- Modularity (6.19.0): Multiple queries used to detect a page\u2019s available modules have been optimized to run more efficiently by reducing the amount of data searched in.\r\n- Open Street Map (2.2.2)*: The plugin has been completely rewritten to offload the initial request size using asynchronous data fetching.\r\n- Like posts (2.5.0)*: The functionality for determining where the liked posts list appears has been updated to execute only during the save_post action. This change reduces runtime calculations on the frontend, improving overall performance.\r\n- Items marked with (*) are breaking changes. These components may have to be configured, in order to work properly.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.0",
+            "publishedAt": "2024-08-05T11:09:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.0.10",
             "version": "4.0.10",
@@ -92,15 +101,6 @@
             "body": "Municipio 4.0.1 Maintanaince release. \r\nThis release focus is to improve some usability conserns raised by DIGG (Swedish Agency for Digital Government). \r\n\r\n## What's Changed\r\n- Icons that are purely decorative wont be read to the user. \r\n- Search result page now has a required h1 tag. \r\n- Field validation is now triggered on key-up event, to enable tabbing to submit buttons. \r\n- A fix for invisible :focus on some elements. \r\n- Language selector now identifies users current language, and changes the label.\r\n- Items in language selector now automatically includes the language of the item, and adds a nofollow reference. \r\n- Search icons now have a visible label\r\n- Fields for describing images are now sourced from the image metadata itself. \r\n- Social media icons added ontop of material icons. \r\n\r\n## What's Changed in deployment repo\r\n* fix: prevent script concatenation by default by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/20\r\n* feat: adding modularity-dynamic-guides plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/21\r\n* docs: update README to align with the 4.0.0 release by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/22\r\n* feat: adding remove user mu plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/23\r\n* fix: add a custom constant to identify devcontainers. by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/24\r\n",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.1",
             "publishedAt": "2024-05-13T13:03:41Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.0",
-            "version": "4.0.0",
-            "body": "## What's Changed\r\n* chore: add redis and phpsab to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/13\r\n* chore: add ssl support to devcontainer by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/15\r\n* refactor: Use FS_METHOD direct in devcontainer by @annalinneajohansson in https://github.com/municipio-se/municipio-deployment/pull/16\r\n* Municipio 4.0.0 - Stable release (290224) by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/18\r\n\r\n## New Contributors\r\n* @annalinneajohansson made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/16\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.7.0...4.0.0",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.0",
-            "publishedAt": "2024-02-29T08:07:49Z",
             "isPrerelease": false,
             "isDraft": false
         }
