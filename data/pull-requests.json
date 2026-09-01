@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-01T19:26:59+00:00",
-    "count": 62,
+    "generatedAt": "2026-09-01T20:28:59+00:00",
+    "count": 63,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -757,6 +757,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOOg7GJs8AAAABBzGDag",
+            "title": "Fix Typesense CSP origin handling",
+            "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/pull/14",
+            "repository": "helsingborg-stad/algolia-index-typesense-provider",
+            "createdAt": "2026-09-01T19:39:38Z",
+            "number": 14,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOGyB3t88AAAABBwrklQ",
             "title": "6.1.3",
