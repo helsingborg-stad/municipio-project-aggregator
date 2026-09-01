@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T07:47:07+00:00",
-    "count": 80,
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
     "pageSize": 10,
     "pageNumber": 6,
-    "pageCount": 8,
+    "pageCount": 9,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.4.0",
+            "version": "4.4.0",
+            "body": "We are excited to announce the release of Version 4.4.0, which is mainly focused at the new External Content in the Municipio Theme. The External Content feature was made possible by the introduction of the previous release of Schema Data feature and brings the ability to create content from external sources that contains or responds with objects that adhere to the Schema.org standard.\r\n\r\n## Municipio Theme (5.21.0):\r\n\r\n* External Content: Allows creating content from either a Typesense API or local json file to create posts, taxonomies and terms from Schema.org formatted objects. This aims at making the Municipio theme responsible for syncing remote content to the local WordPress installation instead of implementing a number of similar content sync plugins to solve individual cases.\r\n* Error handling when image does not exist for recent released WebP image optimization.\r\n* Fixing first level only navigations not working as intended.\r\n* Changing Flexible header search button appearance.\r\n\r\n## Modularity (6.26.0): \r\n\r\n* Added more settings for the Search module.\r\n* Animations and effects for the Menu module.\r\n\r\n## Modularity Open Street Map (2.5.1):\r\n\r\n* Comply with Municipio Theme 5.21.0 changes to the fields storing information about what Schema Type is to be used by which post type.\r\n\r\n## AlgoliaIndex Js Searchpage Addon (3.2.2): \r\n\r\n* A smaller patch to correctly build the plugin assets has been implemented.\r\n* Lightweight library corrected and implemented.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.2.7...4.4.0",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.0",
+            "publishedAt": "2024-09-18T08:30:17Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Maintenance version 4.2.7",
             "version": "4.2.7",
@@ -92,15 +101,6 @@
             "body": "Introducing Version 4.1.0! This update is designed to optimize performance for frontend tasks, offering significant improvements. It includes several fixes aimed at boosting site performance in both cached and uncached environments. Expect up to a 60% reduction in Time to First Byte (TTFB) on large sites, even when object caching is not enabled.\r\n\r\n- Municipio (5.5.2): Upgraded to statically render Applicators (generated css, component data and modifiers) reducing rendering time and unnecessary workloads. This change also enhances security by eliminating the use of eval for calculating conditionals.\r\n- Modularity (6.19.0): Multiple queries used to detect a page\u2019s available modules have been optimized to run more efficiently by reducing the amount of data searched in.\r\n- Open Street Map (2.2.2)*: The plugin has been completely rewritten to offload the initial request size using asynchronous data fetching.\r\n- Like posts (2.5.0)*: The functionality for determining where the liked posts list appears has been updated to execute only during the save_post action. This change reduces runtime calculations on the frontend, improving overall performance.\r\n- Items marked with (*) are breaking changes. These components may have to be configured, in order to work properly.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.0",
             "publishedAt": "2024-08-05T11:09:51Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.10",
-            "version": "4.0.10",
-            "body": "## What's changed\r\n* Api Event Manager Integration (2.0.18): Event start dates in archive must return gmt.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.10",
-            "publishedAt": "2024-07-04T10:48:51Z",
             "isPrerelease": false,
             "isDraft": false
         }

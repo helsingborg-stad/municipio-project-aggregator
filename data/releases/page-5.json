@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T07:47:07+00:00",
-    "count": 80,
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
     "pageSize": 10,
     "pageNumber": 5,
-    "pageCount": 8,
+    "pageCount": 9,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 4.8.0",
+            "version": "4.8.0",
+            "body": "## Version 4.8.0 of Municipio\r\n\r\nVersion 4.8.0 of Municipio introduces significant updates to the menu system, which has been completely refactored under the hood.\r\n\r\n### Municipio Theme (v5.48.3)\r\n\r\n- Completely refactors the menu system to support multiple menus in a single location, creating a more flexible menu system. This renders in a smarter, more efficient way. This release adds support for:\r\n  - Multiple menus per menu location (enabled in drawer menu).\r\n  - Mixed menu mode: Define menu items and let the fallback page tree render the rest of the menu.\r\n  \r\n- A patch has been applied to the Customizer\u2019s Design Share feature to prevent rendering an empty panel without an explanation. The `DISABLE_DESIGNSHARE` constant has been replaced and now exclusively responds to the \u201cpublished\u201d blog option.\r\n\r\n- Images lacking a cover parameter will automatically resolve their aspect ratio to avoid overlapping with any content. This will be resolved either by the requested size (if width and height are given) or from the URL (via the size string, e.g., `100x100` will equal to `aspect-ratio: 100/100`).\r\n\r\n- The `IntlDateFormatter` will now handle UTC offset strings and make them IANA compatible to parse dates correctly.\r\n\r\n- A small fix for stripping timestamps from dates in the job schema type has been added.\r\n\r\n### Modularity (v6.38.0)\r\n\r\n- The contact module now uses the new `data-tooltip` to display numbers and email addresses in a readable format.\r\n\r\n- A feature has been added to enable cross-network queries in the Posts module.\r\n\r\n- A fix for event dates has been added to the Posts module, now correctly displaying the start date as the published date.\r\n\r\n- The edit modules link now appears correctly in the Gutenberg editor.\r\n\r\n- Users can now select a custom icon for each item in the manual input module.\r\n\r\n- The menu module now supports the new version of menu outputs.\r\n\r\n### Styleguide (v0.11.1152)\r\n\r\n- A `data-tooltip` may now be added to any element to display a tooltip with the value of the data parameter.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.0",
+            "publishedAt": "2024-10-21T13:49:10Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 4.7.1",
             "version": "4.7.1",
@@ -92,15 +101,6 @@
             "body": "## What's Changed\r\n\r\n### Municipio Theme (5.21.1)\r\n* Fix issue with posts using Place as Schema type not getting Schema data populated as part of the post object.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.0...4.4.1",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.1",
             "publishedAt": "2024-09-18T09:36:27Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.4.0",
-            "version": "4.4.0",
-            "body": "We are excited to announce the release of Version 4.4.0, which is mainly focused at the new External Content in the Municipio Theme. The External Content feature was made possible by the introduction of the previous release of Schema Data feature and brings the ability to create content from external sources that contains or responds with objects that adhere to the Schema.org standard.\r\n\r\n## Municipio Theme (5.21.0):\r\n\r\n* External Content: Allows creating content from either a Typesense API or local json file to create posts, taxonomies and terms from Schema.org formatted objects. This aims at making the Municipio theme responsible for syncing remote content to the local WordPress installation instead of implementing a number of similar content sync plugins to solve individual cases.\r\n* Error handling when image does not exist for recent released WebP image optimization.\r\n* Fixing first level only navigations not working as intended.\r\n* Changing Flexible header search button appearance.\r\n\r\n## Modularity (6.26.0): \r\n\r\n* Added more settings for the Search module.\r\n* Animations and effects for the Menu module.\r\n\r\n## Modularity Open Street Map (2.5.1):\r\n\r\n* Comply with Municipio Theme 5.21.0 changes to the fields storing information about what Schema Type is to be used by which post type.\r\n\r\n## AlgoliaIndex Js Searchpage Addon (3.2.2): \r\n\r\n* A smaller patch to correctly build the plugin assets has been implemented.\r\n* Lightweight library corrected and implemented.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.2.7...4.4.0",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.0",
-            "publishedAt": "2024-09-18T08:30:17Z",
             "isPrerelease": false,
             "isDraft": false
         }

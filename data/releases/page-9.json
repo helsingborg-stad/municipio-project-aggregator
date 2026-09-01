@@ -1,0 +1,27 @@
+{
+    "source": "releases",
+    "sourceScope": "GitHub",
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
+    "pageSize": 10,
+    "pageNumber": 9,
+    "pageCount": 9,
+    "repository": {
+        "owner": "municipio-se",
+        "name": "municipio-deployment",
+        "fullName": "municipio-se/municipio-deployment",
+        "description": "",
+        "url": "https://github.com/municipio-se/municipio-deployment"
+    },
+    "items": [
+        {
+            "title": "Maintenance version 3.0.1",
+            "version": "3.0.1",
+            "body": "2023-01-05\r\n\r\nGeneral patches of bugs and improvements of usability. Some of the new key features are: \r\n\r\n- Support for dropdown menus in primary menu (Municipio).\r\n- Support for captions in uploaded videos (Modularity).\r\n- Aside tags for all modules in sidebars.\r\n- Better (automatic fetching) cover-art support for vimeo and youtube videos. \r\n- In content-images are now being rendered as a component. \r\n- HTML markup in event pages improved. \r\n- Gallery component improvement. ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.0.1",
+            "publishedAt": "2023-01-05T09:33:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T07:47:07+00:00",
-    "count": 80,
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
     "pageSize": 10,
-    "pageCount": 8,
+    "pageCount": 9,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -52,6 +52,11 @@
             "pageNumber": 8,
             "file": "page-8.json",
             "itemCount": 10
+        },
+        {
+            "pageNumber": 9,
+            "file": "page-9.json",
+            "itemCount": 1
         }
     ]
 }

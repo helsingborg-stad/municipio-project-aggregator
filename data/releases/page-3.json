@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T07:47:07+00:00",
-    "count": 80,
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
     "pageSize": 10,
     "pageNumber": 3,
-    "pageCount": 8,
+    "pageCount": 9,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.4.4",
+            "version": "5.4.4",
+            "body": "## Municipio Theme (5.165.1)\r\n- Updates the **ImageConvert** feature to support adding additional conversion strategies in the future.  \r\n- Introduces a new **object caching system** in ImageConvert to prevent repeated attempts to convert images that have already been processed or failed previously.  \r\n- Implements a **conversion tracking system** that provides real-time knowledge of ongoing conversions, preventing multiple concurrent conversions of the same asset on the same request or across concurrent requests.  \r\n- Adds a **detailed logging system** to ImageConvert, enabling identification of performance issues related to images that fail to convert or are frequently reprocessed.  \r\n\r\n## Modularity (6.90.15)\r\n- Removes **ACF Extended** as a required plugin dependency.  \r\n\r\n## Deployment\r\n- Adds an updated version of **ACF Extended** to the main deployment procedure, ensuring compatibility with the latest release of the **ACF Pro** plugin.  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.4",
+            "publishedAt": "2025-09-10T11:56:30Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.4.1",
             "version": "5.4.1",
@@ -92,15 +101,6 @@
             "body": "### Municipio 5.2.7\r\n- Fixes schema data issues.\r\n- Resolves a performance issue related to large lead texts.\r\n\r\n### Municipio (5.146.3)\r\n- Removes the `force_balance_tags` function, which was previously used to filter large amounts of text and avoid empty `<p>` tags.\r\n  - This practice is **not recommended** by WordPress documentation.\r\n\r\n### Styleguide (0.11.1251)\r\n- Reverts accordion animations that were mistakenly merged.\r\n\r\n### Component Library (4.52.13)\r\n- Removes XML headers from plus/minus reactive icons.\r\n\r\n### OpenStreetMap (2.7.5)\r\n- Adds a **hotfix** for issues with `lat/lng` data on the \"place\" schema type.\r\n  - A **permanent fix** will be included in the next release.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.7",
             "publishedAt": "2025-04-29T13:31:43Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.2.6",
-            "version": "5.2.6",
-            "body": "### WordPress Core (6.8)\r\n- Update WordPress core to version 6.8.\r\n\r\n### Modularity (6.81.0)\r\n- Adds the option to display a link to the archive before the post list in the post module.\r\n- Authors can now set a custom label for the archive button.\r\n\r\n### Municipio Theme (5.144.9)\r\n- Taxonomy terms are now shown on archive and single post pages.\r\n- Reintroduces the progress bar data on the project schema type.\r\n- Fixes an issue with Quicklinks placement that caused the entire page to render incorrectly.\r\n- Container block now supports setting border radius and shadows.\r\n- Fixes an issue where lat/lng values were cached at runtime, causing all geo coordinates to appear in the same location.\r\n\r\n### Modularity Form Builder (3.4.11)\r\n- A default label will not be applied when the upload button label is set to empty.\r\n\r\n### Component Library (4.52.12)\r\n- **Fixed:** Headings get different styling even though they have the same heading level.\r\n- Fileinput now handles `max file limit = -1` as the maximum allowed number of files (50).\r\n\r\n### Styleguide (0.11.1251)\r\n- Correct button colors in the primary menu to align with colors on link items.\r\n\r\n### Visit Custom Posttypes Taxonomies (2.0.6)\r\n- Reflects name changed filter in Municipio handling quicklinks positioning.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.6",
-            "publishedAt": "2025-04-28T12:07:24Z",
             "isPrerelease": false,
             "isDraft": false
         }

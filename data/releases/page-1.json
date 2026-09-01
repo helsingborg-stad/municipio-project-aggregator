@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T07:47:07+00:00",
-    "count": 80,
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
     "pageSize": 10,
     "pageNumber": 1,
-    "pageCount": 8,
+    "pageCount": 9,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.1.1",
+            "version": "6.1.1",
+            "body": "Minor release focused on editor flexibility and front-end stability. Municipio lets editors manage custom CSS, hardens generated image handling, restores schema-based taxonomy creation, and fixes missing header items. The updated Styleguide improves menu and drawer positioning, respects disabled header padding, and fixes inherited button contrast.\r\n\r\n## Municipio Theme [7.14.5...7.16.1](https://github.com/helsingborg-stad/Municipio/compare/7.14.5...7.16.1)\r\n- Image Conversion: Prevents broken or half-written generated images from being published, and falls back to the original image if conversion fails.\r\n- Schema Taxonomies: Restores taxonomy creation for schema types and makes sure schema-specific taxonomy filters run correctly.\r\n- Header Layout: Keeps mobile-only and responsive header items aligned and visible instead of dropping them from the layout.\r\n- Custom CSS Permissions: Editors can now edit Customizer CSS on multisite setups without requiring higher-level access.\r\n\r\n## Styleguide [3.17.12...3.17.22](https://github.com/helsingborg-stad/styleguide/compare/3.17.12...3.17.22)\r\n- Mega Menu Positioning: Aligns full-width dropdowns correctly so they open in the expected place.\r\n- Header Padding: Respects disabled horizontal header padding to avoid unwanted spacing.\r\n- Button Contrast: Basic buttons now inherit the correct contrast color for clearer text on inherited color themes.\r\n- Drawer Layering: Raises the drawer and overlay above surrounding content so the menu stays clickable and visible.\r\n- Map Library: Updates the bundled OpenStreetMap library to the latest version.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.1",
+            "publishedAt": "2026-09-01T07:59:08Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.1.0",
             "version": "6.1.0",
@@ -92,15 +101,6 @@
             "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-1/",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.1",
             "publishedAt": "2025-12-18T08:31:18Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.8.0",
-            "version": "5.8.0",
-            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-0/",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.0",
-            "publishedAt": "2025-12-17T15:23:51Z",
             "isPrerelease": false,
             "isDraft": false
         }

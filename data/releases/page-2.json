@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T07:47:07+00:00",
-    "count": 80,
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
     "pageSize": 10,
     "pageNumber": 2,
-    "pageCount": 8,
+    "pageCount": 9,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.8.0",
+            "version": "5.8.0",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-8-0/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.0",
+            "publishedAt": "2025-12-17T15:23:51Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.7.2",
             "version": "5.7.2",
@@ -92,15 +101,6 @@
             "body": "## Algolia-index (3.2.3\u20263.2.4)\r\n- Refactoring to allow multiple providers to be used.  \r\n- In this case Typesense as a drop-in replacement of Algolia.\r\n\r\n## Api Alarm Integration (4.1.3\u20264.1.4)\r\n- Removes a trailing slash sanitization from api-url.  \r\n- Allows query params to be sent in resource url.\r\n\r\n## Api Event Manager Integration (2.0.38\u20262.0.39)\r\n- Allows rendering when no tags are present.\r\n\r\n## Component Library (4.60.1\u20264.62.2)\r\n- **fix(Date):** allow format override  \r\n- **feat(Nav): extended dropdown view**  \r\n  - Added support for extended dropdown in nav component.  \r\n  - New Blade templates: `content.blade.php`, `extended.blade.php`  \r\n  - New option: `isExtendedDropdown` in `nav.json`  \r\n  - Async children support and extended dropdown styling  \r\n- **fix(Person):** add missing class and other attributes to person component  \r\n- **fix(Hero):** allow video without content  \r\n- **fix(Image):** reduce calls to resolver when building container query data  \r\n- **fix(Image):** avoid calling resolver more than needed  \r\n- **refactor(Nav):** restructured nav view, moved logic into `content.blade.php`\r\n\r\n## Modularity (6.90.13\u20266.90.21)\r\n- Fixed issue where shortcodes could render a module view twice  \r\n- Made module base more testable  \r\n- Added recommendation for extension usage  \r\n- Fixed warnings about missing view key  \r\n- Improved handling of public taxonomies (only show public ones)  \r\n- Rewritten headings in accordion post module for better structure  \r\n- Fixed issue when removing choices in fields  \r\n- Fixed error with post argument type in certain cases  \r\n\r\n## Modularity Timeline (4.1.1\u20264.1.2)\r\n- Adds the ability to render as a sequential timeline without dates.\r\n\r\n## Municipio Theme (5.164.3\u20265.172.13)\r\n- Fixed occasion text handling for exhibitions  \r\n- Hide gallery title if no gallery in exhibitions  \r\n- Added custom archive date format for exhibitions  \r\n- Added Customizer option for extended dropdown menu  \r\n- Implemented on-demand image resizing  \r\n- Fixed flexible header search button styling  \r\n- Added bordered setting for drawer menu  \r\n- Fixed password-protected page markup error  \r\n- Added background color support for dropdown menus  \r\n- Fixed circular structure issue in menus  \r\n- Added controllers and views for Elementary School and Preschool  \r\n- Integrated events into Preschool and Elementary School  \r\n- Allowed selecting post field columns for archive list view  \r\n- Sorted taxonomy filter options as numbers if all are numeric  \r\n- Fixed event price error display  \r\n- Sideload all images in schema objects  \r\n- Fixed schools page crash caused by missing image ID  \r\n- Added missing translations  \r\n\r\n## Modularity Dynamic Guides (1.4.8\u20261.4.10)\r\n- Removes the requirement of having Acf Extended installed.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.5",
             "publishedAt": "2025-09-22T12:38:14Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.4.4",
-            "version": "5.4.4",
-            "body": "## Municipio Theme (5.165.1)\r\n- Updates the **ImageConvert** feature to support adding additional conversion strategies in the future.  \r\n- Introduces a new **object caching system** in ImageConvert to prevent repeated attempts to convert images that have already been processed or failed previously.  \r\n- Implements a **conversion tracking system** that provides real-time knowledge of ongoing conversions, preventing multiple concurrent conversions of the same asset on the same request or across concurrent requests.  \r\n- Adds a **detailed logging system** to ImageConvert, enabling identification of performance issues related to images that fail to convert or are frequently reprocessed.  \r\n\r\n## Modularity (6.90.15)\r\n- Removes **ACF Extended** as a required plugin dependency.  \r\n\r\n## Deployment\r\n- Adds an updated version of **ACF Extended** to the main deployment procedure, ensuring compatibility with the latest release of the **ACF Pro** plugin.  ",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.4",
-            "publishedAt": "2025-09-10T11:56:30Z",
             "isPrerelease": false,
             "isDraft": false
         }

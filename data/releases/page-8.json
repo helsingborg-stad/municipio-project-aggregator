@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-01T07:47:07+00:00",
-    "count": 80,
+    "generatedAt": "2026-09-01T08:50:16+00:00",
+    "count": 81,
     "pageSize": 10,
     "pageNumber": 8,
-    "pageCount": 8,
+    "pageCount": 9,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "281123 - Stable Release",
+            "version": "3.7.0",
+            "body": "This update marks the deprecation of the Module Index, transferring legacy data to the newly introduced \"Manual Input\" module. This change is a pivotal step in a series of developments aimed at streamlining the posts module, ultimately phasing out manual input to enhance efficiency and user experience.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.7.0",
+            "publishedAt": "2023-11-28T10:51:00Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "091123 - Stable Release [Maintenance release]",
             "version": "3.6.0",
@@ -92,15 +101,6 @@
             "body": "Adds a parameter in the deployment process allowing a custom port number to deploy towards. A new secret must be defined for all deployment flows according to the following: \r\n\r\nDEPLOY_REMOTE_PORT_STAGE (use port 22 if in doubt)\r\nDEPLOY_REMOTE_PORT_PROD (use port 22 if in doubt)",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.1.0",
             "publishedAt": "2023-05-29T11:15:07Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Maintenance version 3.0.1",
-            "version": "3.0.1",
-            "body": "2023-01-05\r\n\r\nGeneral patches of bugs and improvements of usability. Some of the new key features are: \r\n\r\n- Support for dropdown menus in primary menu (Municipio).\r\n- Support for captions in uploaded videos (Modularity).\r\n- Aside tags for all modules in sidebars.\r\n- Better (automatic fetching) cover-art support for vimeo and youtube videos. \r\n- In content-images are now being rendered as a component. \r\n- HTML markup in event pages improved. \r\n- Gallery component improvement. ",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.0.1",
-            "publishedAt": "2023-01-05T09:33:13Z",
             "isPrerelease": false,
             "isDraft": false
         }
