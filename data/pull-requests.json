@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-01T11:28:16+00:00",
-    "count": 61,
+    "generatedAt": "2026-09-01T12:40:07+00:00",
+    "count": 62,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -757,6 +757,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABBvlTyA",
+            "title": "Feat/chat reduce data",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2160",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-09-01T12:12:04Z",
+            "number": 2160,
+            "state": "OPEN",
+            "author": {
+                "login": "MasterKenth",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/2890987?v=4",
+                "url": "https://github.com/MasterKenth",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABBnCmOQ",
             "title": "\ud83d\udc1b Bug(chat): buffer SSE events",
