@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-02T14:30:37+00:00",
-    "count": 66,
+    "generatedAt": "2026-09-02T16:32:28+00:00",
+    "count": 67,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -108,6 +108,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -119,13 +126,6 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -185,17 +185,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -283,34 +283,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "algolia-index",
-            "fullName": "helsingborg-stad/algolia-index",
-            "description": "Manages algolia index.",
-            "url": "https://github.com/helsingborg-stad/algolia-index"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "broken-link-detector",
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
@@ -336,6 +308,34 @@
             "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
             "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index",
+            "fullName": "helsingborg-stad/algolia-index",
+            "description": "Manages algolia index.",
+            "url": "https://github.com/helsingborg-stad/algolia-index"
         },
         {
             "owner": "helsingborg-stad",
@@ -757,6 +757,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOBSd4q88AAAABB6gghw",
+            "title": "fix: run timed honeypot from frontend bundle",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder/pull/121",
+            "repository": "helsingborg-stad/modularity-form-builder",
+            "createdAt": "2026-09-02T14:41:32Z",
+            "number": 121,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABB54WCw",
             "title": "fix: avoid duplicate query for event",
