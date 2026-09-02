@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-02T07:24:01+00:00",
-    "count": 109,
+    "generatedAt": "2026-09-02T08:28:50+00:00",
+    "count": 108,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -143,13 +143,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -161,6 +154,13 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -367,27 +367,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-js-searchpage-addon",
             "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
             "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
@@ -406,6 +385,27 @@
             "fullName": "helsingborg-stad/wputilservice",
             "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
             "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -4766,53 +4766,6 @@
                     "title": "fix: reject invalid intermediate images",
                     "url": "https://github.com/helsingborg-stad/Municipio/pull/2150",
                     "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOI486Rs7JJvyZ",
-            "title": "Plugin causes performance issues when fetching guides/places",
-            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies/issues/17",
-            "repository": "helsingborg-stad/visit-custom-posttypes-taxonomies",
-            "createdAt": "2025-09-02T07:28:58Z",
-            "number": 17,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix performance issues when fetching guides/places through caching and query optimization",
-                    "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies/pull/18",
-                    "repository": "helsingborg-stad/visit-custom-posttypes-taxonomies"
                 }
             ]
         }
