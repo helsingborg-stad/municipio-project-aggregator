@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-02T10:30:57+00:00",
-    "count": 63,
+    "generatedAt": "2026-09-02T11:28:41+00:00",
+    "count": 62,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -757,39 +757,6 @@
         }
     ],
     "items": [
-        {
-            "id": "PR_kwDOAuIygs8AAAABB4Q5nw",
-            "title": "feat: osm integration csp",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2170",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-02T10:11:51Z",
-            "number": 2170,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
         {
             "id": "PR_kwDOAuIygs8AAAABB322-g",
             "title": "feat: trigger SearchIndex indexing from admin UI",
