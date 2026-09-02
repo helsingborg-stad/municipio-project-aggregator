@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-02T07:32:54+00:00",
-    "count": 63,
+    "generatedAt": "2026-09-02T08:37:28+00:00",
+    "count": 61,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -757,72 +757,6 @@
         }
     ],
     "items": [
-        {
-            "id": "PR_kwDOAuIygs8AAAABB22Gog",
-            "title": "feat: performance tuning ",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2163",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-02T06:56:52Z",
-            "number": 2163,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOE96d8c8AAAABB20HMw",
-            "title": "feat: performance improvements",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/669",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-09-02T06:52:10Z",
-            "number": 669,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
         {
             "id": "PR_kwDOOg7GJs8AAAABBzGDag",
             "title": "Fix Typesense CSP origin handling",
