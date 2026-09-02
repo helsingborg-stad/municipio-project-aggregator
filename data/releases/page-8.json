@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-02T11:46:23+00:00",
-    "count": 82,
+    "generatedAt": "2026-09-02T12:53:15+00:00",
+    "count": 83,
     "pageSize": 10,
     "pageNumber": 8,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.0.1",
+            "version": "4.0.1",
+            "body": "Municipio 4.0.1 Maintanaince release. \r\nThis release focus is to improve some usability conserns raised by DIGG (Swedish Agency for Digital Government). \r\n\r\n## What's Changed\r\n- Icons that are purely decorative wont be read to the user. \r\n- Search result page now has a required h1 tag. \r\n- Field validation is now triggered on key-up event, to enable tabbing to submit buttons. \r\n- A fix for invisible :focus on some elements. \r\n- Language selector now identifies users current language, and changes the label.\r\n- Items in language selector now automatically includes the language of the item, and adds a nofollow reference. \r\n- Search icons now have a visible label\r\n- Fields for describing images are now sourced from the image metadata itself. \r\n- Social media icons added ontop of material icons. \r\n\r\n## What's Changed in deployment repo\r\n* fix: prevent script concatenation by default by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/20\r\n* feat: adding modularity-dynamic-guides plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/21\r\n* docs: update README to align with the 4.0.0 release by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/22\r\n* feat: adding remove user mu plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/23\r\n* fix: add a custom constant to identify devcontainers. by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/24\r\n",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.1",
+            "publishedAt": "2024-05-13T13:03:41Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.0.0",
             "version": "4.0.0",
@@ -92,15 +101,6 @@
             "body": "This release is a patch, including project manager integration to allow users to build innovation plugins.\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.2.0...3.2.1",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.1",
             "publishedAt": "2023-06-15T07:24:16Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 3.2.0",
-            "version": "3.2.0",
-            "body": "## Release Notes - 3.2.0\r\n\r\n- Algolia search now supports searching for custom taxonomies/terms.\r\n- Herovideo now supports the \"poster\" attribute.\r\n- Added padding/margin to headers in the post module.\r\n- Improved visibility of the current page in the side navigation.\r\n- Tags are now compressed for optimized performance.\r\n- The heart icon now properly appears above the filtering list.\r\n- OpenStreetMap has undergone accessibility testing.\r\n\r\nBug Fixes:\r\n\r\n- The module now displays an appropriate icon in the module list.\r\n- Modified the message displayed when submitting an email address.\r\n- Empty required fields now validate correctly in general forms.\r\n- Added ListID for proper functionality.\r\n- Improved translation accuracy for the add-on.\r\n- Resolved the issue of oversized sliders on culture websites.\r\n- Enhanced the display of posts in the \"Right Sidebar\" on term pages.\r\n- Added hover effect for improved appearance of quick links row.\r\n- Removed manual input of link in linked card content.\r\n- Randomized the order of sidebar visits on archive pages.\r\n- Updated URL to reflect changes when new states are pushed on the map.\r\n- Removed title translation in place, improving translation.\r\n",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.0",
-            "publishedAt": "2023-06-14T08:57:04Z",
             "isPrerelease": false,
             "isDraft": false
         }

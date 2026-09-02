@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-02T11:46:23+00:00",
-    "count": 82,
+    "generatedAt": "2026-09-02T12:53:15+00:00",
+    "count": 83,
     "pageSize": 10,
     "pageNumber": 5,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 4.8.2",
+            "version": "4.8.2",
+            "body": "Version 4.8.2 of Municipio includes some minor patches to various functionalities and introduces a third-party plugin for IdP authentication.\r\n\r\n#### Municipio Theme (v5.51.6)\r\n- Fixes an error that displayed a 404 page when an archive was missing posts for site visitors.\r\n- Adds fields to the user profile that match available options in the contact module.\r\n- Minor adjustment to category display in projects.\r\n- Fixes a GUID error when fetching cross-site posts.\r\n- The flexible header now correctly displays the desktop options for mobile devices if a mobile alternative is missing.\r\n- Fixes some context issues in the hero area.\r\n\r\n#### Component Library (v4.29.0)\r\n- Adjustment to the logotype alignment in the brand component for small devices.\r\n- Fix for the LinkedIn icon to appear in hosting environments that are case-sensitive.\r\n- Introduction of a new component representing a generic DOM element.\r\n- Added a new state to the button component, \u201cis-working,\u201d that displays a spinner.\r\n\r\n#### Modularity (v6.40.2)\r\n- Contact module updated to align with new fields in the user panel provided by Municipio Theme.\r\n- Corrected an issue with the context parameter in the slider module.\r\n- Implemented a fix for data filtering in the posts module.\r\n\r\n#### Mini Orange \u2013 SAML Single Signon (v5.1.9)\r\n- Added a new third-party plugin. The plugin has passed a security review and can be used to connect WordPress user login and management to various IdP providers (e.g., Active Directory).",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.8.2",
+            "publishedAt": "2024-10-30T14:04:49Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 4.8.1",
             "version": "4.8.1",
@@ -92,15 +101,6 @@
             "body": "Municipio 4.5.0 continues to optimize page size, with this release focusing on supporting source set like functionality. We\u2019re starting with a minimal implementation, gradually adding more modules over time. This incremental approach ensures minimal impact on website backend performance with each update.\r\n\r\n## Whats Changed\r\n\r\nStyleguide (0.11.1118): \r\n-Adjustments to ensure that the image component can behave like background images, with support for cover and object-fit properties.\r\n\r\nMunicipio (5.25.4): \r\n- Minor modifications to the image conversion process, allowing compatibility with conversions and resizing from other add-ons.\r\n- Patches on external content features regarding handling of terms and diff checking with checksums locally.\r\n\r\nModularity (6.28.1):\r\n- Implementation of image resolution functions required by the component library to handle source set requests effectively.\r\n\r\nComponent library (4.21.2):\r\n- Introduction of an image contract object, automatically detected and processed by the image component.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.0",
             "publishedAt": "2024-09-24T08:18:54Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.4.2",
-            "version": "4.4.2",
-            "body": "## What's Changed\r\n### Municipio Theme (5.23.1)\r\n* Fixing a bug where the primary menu was visible for mobile devices.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.1...4.4.2",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.2",
-            "publishedAt": "2024-09-19T08:49:57Z",
             "isPrerelease": false,
             "isDraft": false
         }

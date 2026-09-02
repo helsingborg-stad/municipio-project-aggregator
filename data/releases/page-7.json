@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-02T11:46:23+00:00",
-    "count": 82,
+    "generatedAt": "2026-09-02T12:53:15+00:00",
+    "count": 83,
     "pageSize": 10,
     "pageNumber": 7,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 4.1.2",
+            "version": "4.1.2",
+            "body": "A new maintenance release addresses issues caused by optimization actions in the previous release. This update includes the following corrections and improvements.\r\n\r\n**Municipio Theme (5.7.1):**\r\n\r\n- Customizer: Fixed an issue where dynamic theme settings were not properly loading in the customizer. This ensures that imported settings from the design library are correctly applied in the customizer context.\r\n- Favicons: Removes the custom favicon implementation, and migrates it to be done natively in WordPress using the \"site identity\" section in the customizer.\r\n- Icons: A optimization on the icon rendering has been made. This reduces the size of the material icons bundle up to 85%. This change also brings settings for choosing font style and weight.\r\n- General: Minor adjustments to correct an issue where the width settings were not being applied.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.2",
+            "publishedAt": "2024-08-12T09:51:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.1.0",
             "version": "4.1.0",
@@ -92,15 +101,6 @@
             "body": "Primarily focuses on bug fixes to improve the stability and performance of our platform. Here are the key issues addressed in this release. \r\n\r\n## What's Changed\r\n\r\n**Breadcrumb Links to Non-existent Pages:** \r\nPreviously, breadcrumb links were generating URLs that led to 404 error pages when the target page did not exist. This issue has been resolved, and such breadcrumb links will no longer be created.\r\n\r\n**\u201dShow Archive\u201d Button Disappearing in the \u201dPosts\u201d Module:** \r\nAn issue was identified where the \u201dShow Archive\u201d button would disappear in the \u201dPosts\u201d module. This problem has now been fixed, ensuring the button remains visible and functional.\r\n\r\n**Conditional Form Fields with Identical Descriptive Text:** \r\nThere was a problem where fields in conditional forms had the same descriptive text, leading to confusion and potential errors. This issue has been corrected, and each field now has unique and accurate descriptive text.\r\n\r\n**Module Sidebar Incompatibility:** \r\nAn issue with the module sidebar compatibility function resulted in modules being unable to be linked to a page. Instead, users were displayed another page ID. This issue has now been resolved, ensuring that modules can be correctly linked to the intended page.\r\n\r\n**Instantpage.js Update:** \r\nThe Instantpage.js library has been updated to support the speculative API, enhancing the performance and speed of page loads.\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.0.1...4.0.2",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.2",
             "publishedAt": "2024-05-20T11:56:46Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.1",
-            "version": "4.0.1",
-            "body": "Municipio 4.0.1 Maintanaince release. \r\nThis release focus is to improve some usability conserns raised by DIGG (Swedish Agency for Digital Government). \r\n\r\n## What's Changed\r\n- Icons that are purely decorative wont be read to the user. \r\n- Search result page now has a required h1 tag. \r\n- Field validation is now triggered on key-up event, to enable tabbing to submit buttons. \r\n- A fix for invisible :focus on some elements. \r\n- Language selector now identifies users current language, and changes the label.\r\n- Items in language selector now automatically includes the language of the item, and adds a nofollow reference. \r\n- Search icons now have a visible label\r\n- Fields for describing images are now sourced from the image metadata itself. \r\n- Social media icons added ontop of material icons. \r\n\r\n## What's Changed in deployment repo\r\n* fix: prevent script concatenation by default by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/20\r\n* feat: adding modularity-dynamic-guides plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/21\r\n* docs: update README to align with the 4.0.0 release by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/22\r\n* feat: adding remove user mu plugin by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/23\r\n* fix: add a custom constant to identify devcontainers. by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/24\r\n",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.1",
-            "publishedAt": "2024-05-13T13:03:41Z",
             "isPrerelease": false,
             "isDraft": false
         }

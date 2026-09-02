@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-02T11:46:23+00:00",
-    "count": 82,
+    "generatedAt": "2026-09-02T12:53:15+00:00",
+    "count": 83,
     "pageSize": 10,
     "pageNumber": 3,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.4.6",
+            "version": "5.4.6",
+            "body": "# Release Notes\r\n\r\n## Active Directory API WP Integration (3.1.0 \u2192 3.1.5)\r\n- Fixed an issue that prevented users from logging in manually if their password wasn\u2019t stored before.  \r\n- Fixed an issue where accounts could not be synced in bulk.  \r\n- Updated the interval of bulk synchronization to one hour.  \r\n\r\n## API Alarm Integration (4.1.4 \u2192 4.1.6)\r\n- Changed alert level to automatically communicate to level 3 instead of level 2.  \r\n- Alarm list icons now use the icon select field.  \r\n\r\n## API Event Manager Integration (2.0.39 \u2192 2.0.40)\r\n- Updated the category dropdown to appear as checkboxes, allowing multi-select.  \r\n\r\n## Component Library (4.62.2 \u2192 4.62.4)\r\n- Allowed `isShortcode` as a known internal parameter that components silently accept.  \r\n- Fixed title markup in accordion titles to validate correctly.  \r\n\r\n## Modularity (6.90.21 \u2192 6.90.25)\r\n- Fixed pagination for post modules (URL escaping fix).  \r\n- Added support for extra CSS classes entered on block level in Gutenberg blocks.  \r\n- `getID` function now returns a valid ID when called on blocks (note: string return type now allowed).  \r\n- Normalized post headings in certain views to better fit the surrounding context.  \r\n\r\n## Municipio Theme (5.172.13 \u2192 5.172.27)\r\n- Updated the inline image component for better compatibility with PHP 8.4.  \r\n- Improved login time tracking.  \r\n- Ensured default roles are set correctly in multisite environments.  \r\n- Fixed issue with comment replies not working.  \r\n- General reliability and stability improvements.  \r\n\r\n## WordPress\r\n- Updated to WordPress 6.8.2.  \r\n\r\n## ACF Extended\r\n- Removed **ACF Extended**, which was deprecated in the previous release.  ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.6",
+            "publishedAt": "2025-09-30T07:16:25Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.4.5",
             "version": "5.4.5",
@@ -92,15 +101,6 @@
             "body": "## Municipio Theme (5.153.5)\r\n\r\n- New Flexible Header component that displays a button to the user's group homepage, if it exists.\r\n- Fixed SEO redirect permalink fetching when using mirrored post objects.\r\n- Fixed attachment pages not redirecting to real files by default.\r\n- Fixed `fileExists` cache not caching files that were not found.\r\n\r\n## Component Library (4.54.1)\r\n\r\n- Fixed comment markup for the author by removing disallowed nesting in `<span>` elements.\r\n\r\n## Modularity (6.84.1)\r\n\r\n- Added an option to the Posts module allowing editors to force external links to open in a new window.\r\n- Posts module now supports pagination in multisite queries.\r\n- Fixed a type comparison error in network permalink resolving in the Posts module.\r\n- Module fragment cache now respects query parameters that may affect the cached state.\r\n\r\n## Modularity Like (2.14.1)\r\n\r\n- Patched the ability to unlike a post across networks.\r\n\r\n## Styleguide (0.11.1277)\r\n\r\n- Compressed lists now have a smaller font size and icon by default.\r\n\r\n## WP Security (1.3.4)\r\n\r\n- Disabled automatic CSP due to issues it caused on search pages.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.1",
             "publishedAt": "2025-06-11T09:29:41Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.3.0",
-            "version": "5.3.0",
-            "body": "## Wp Security (1.1.0)\r\n\r\nA brand new security plugin has been developed in order to improve WordPress security. This plugin lacks settings but applies some automated headers and other security features:\r\n\r\n- Generic login error messages (prevents user enumeration)\r\n- Generic password reset responses (prevents user enumeration)\r\n- HTTP Strict Transport Security (HSTS) headers if SSL is detected\r\n- Automatic CORS configuration (defaults to current site; additional headers can be set with `.htaccess` if needed)\r\n- Subresource Integrity (SRI) for scripts and styles stored locally on disk\r\n- XML-RPC is automatically disabled\r\n- Improved comment sanitization\r\n- Automatic Content Security Policy (CSP) based on current output (no manual configuration needed)\r\n\r\n> **Note:** This is designed as a **MU-plugin**, and cannot be turned off.\r\n\r\n---\r\n\r\n## Municipio Theme (5.152.0)\r\n\r\n- Adds a place search REST endpoint to populate OpenStreetMap with query results\r\n- Improved feature to mirror posts from other sites in the network, including canonical tags and schema data\r\n- Schema data forms improved for schema posts; now utilizing a form factory\r\n- Sanitization of query parameters in the REST render endpoint for menu generation\r\n- Post visibility now respected on post type archive pages when a page is assigned as the archive\r\n- Automatic page tree menus now display private pages if the user is logged in\r\n- Improved custom font rendering by respecting native font-weight\r\n- Attachment pages now redirect to the actual file by default\r\n- Adds customizer settings for breadcrumb display\r\n\r\n---\r\n\r\n## Modularity (6.81.11)\r\n\r\n- Fixes HTML syntax error when modules were rendered inline in the Gutenberg editor\r\n- Removes inline templates in the admin panel (detected automatically)\r\n- Removes insecure JavaScript in the table module that was fetched from a remote service (DataTables)\r\n- Improves output sanitation in the text module\r\n- Mitigates two warnings in the post module regarding archive link placement\r\n- Fixes population of schema select dropdown in the posts module\r\n- Adjusts Text module heading size to align with other modules\r\n- Post module now correctly renders taxonomies\r\n- Adds settings to display module usage in list view, edit view, and frontend edit view\r\n\r\n---\r\n\r\n## Modularity Like (2.14.0)\r\n\r\n- Adds ability to like posts across pages in a network installation\r\n\r\n---\r\n\r\n## Open Street Map (2.7.5)\r\n\r\n- Now uses `PostObjectInterface` schema properly according to specification\r\n\r\n---\r\n\r\n## Simplify Admin Menus (1.3.0)\r\n\r\n- New plugin added to simplify the WordPress admin panel\r\n\r\n---\r\n\r\n## Event Manager Integration (2.0.32)\r\n\r\n- Fixes timezone error when rendering dates in some contexts (specifically archive lists)\r\n\r\n---\r\n\r\n## Algolia JS Searchpage Addon (3.3.2)\r\n\r\n- Declutters rendering by removing number of results and query from the response message (now only rendered in the input field)\r\n\r\n---\r\n\r\n## Active Directory Integration (3.1.0)\r\n\r\n- Sanitizes all `$_GET` and `$_POST` variables handled in the authentication process to prevent malicious requests\r\n\r\n---\r\n\r\n## Component Library (4.54.0)\r\n\r\n- **Breadcrumb:** Adds settings to show prefix label and hide home icon\r\n- **Timeline:** Adds support for sequential mode (without date/time) and current/active step\r\n\r\n---\r\n\r\n## Other\r\n\r\n- Added `publiccode.yml` declaration\r\n- Updated error page to improve rendering of error messages\r\n- Added `install.html` to remove list when deployment runs\r\n\r\n---\r\n\r\n## Unreleased\r\n\r\nThis is not yet released; we are currently working on documentation and release notes. This is public since we always try to be as transparent as possible.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.0",
-            "publishedAt": "2025-06-10T08:05:21Z",
             "isPrerelease": false,
             "isDraft": false
         }

@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-02T11:46:23+00:00",
-    "count": 82,
+    "generatedAt": "2026-09-02T12:53:15+00:00",
+    "count": 83,
     "pageSize": 10,
     "pageNumber": 6,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.4.2",
+            "version": "4.4.2",
+            "body": "## What's Changed\r\n### Municipio Theme (5.23.1)\r\n* Fixing a bug where the primary menu was visible for mobile devices.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.4.1...4.4.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.4.2",
+            "publishedAt": "2024-09-19T08:49:57Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.4.1",
             "version": "4.4.1",
@@ -92,15 +101,6 @@
             "body": "This update is primarily focused on simplifying the implementation of schema data configuration an presentation.\r\n\r\n* **Municipio Theme (5.8.0):** Add feature for assigning schema type for post types as well as populating posts with values matching the selected schema type. Remove Content Type feature in favor of the new functionality available in schema types.\r\n* **Modularity Open Street Map (2.3.6):** Adapt to use Schema Type from Municipio instead of Content Type.\r\n*  **Component Library (4.14.5):** Fix issue with \"0\" as a string not being allowed to pass as value to attributeList property on components.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.0",
             "publishedAt": "2024-08-13T06:26:05Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 4.1.2",
-            "version": "4.1.2",
-            "body": "A new maintenance release addresses issues caused by optimization actions in the previous release. This update includes the following corrections and improvements.\r\n\r\n**Municipio Theme (5.7.1):**\r\n\r\n- Customizer: Fixed an issue where dynamic theme settings were not properly loading in the customizer. This ensures that imported settings from the design library are correctly applied in the customizer context.\r\n- Favicons: Removes the custom favicon implementation, and migrates it to be done natively in WordPress using the \"site identity\" section in the customizer.\r\n- Icons: A optimization on the icon rendering has been made. This reduces the size of the material icons bundle up to 85%. This change also brings settings for choosing font style and weight.\r\n- General: Minor adjustments to correct an issue where the width settings were not being applied.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.1.2",
-            "publishedAt": "2024-08-12T09:51:01Z",
             "isPrerelease": false,
             "isDraft": false
         }
