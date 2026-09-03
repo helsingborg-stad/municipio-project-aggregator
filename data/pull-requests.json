@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-03T13:30:24+00:00",
-    "count": 67,
+    "generatedAt": "2026-09-03T14:31:20+00:00",
+    "count": 64,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -143,6 +143,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -154,13 +161,6 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -199,20 +199,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-recommend",
             "fullName": "helsingborg-stad/modularity-recommend",
             "description": "Modularity recommend. Display static or AI generated recommendation links. ",
@@ -231,6 +217,20 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
         },
         {
             "owner": "helsingborg-stad",
@@ -367,27 +367,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "algolia-index-js-searchpage-addon",
-            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
-            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
-            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-invalidate-login-pagecache",
-            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
-            "description": "Invalidates pagecache on submit of the login form.",
-            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "redirection-extended",
             "fullName": "helsingborg-stad/redirection-extended",
             "description": "",
@@ -406,6 +385,27 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "algolia-index-js-searchpage-addon",
+            "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
+            "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
+            "url": "https://github.com/helsingborg-stad/algolia-index-js-searchpage-addon"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-invalidate-login-pagecache",
+            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
+            "description": "Invalidates pagecache on submit of the login form.",
+            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -758,18 +758,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDON7Wi-c8AAAABCD6oXA",
-            "title": "fix: updating to vite and enqueue using",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field/pull/23",
-            "repository": "helsingborg-stad/acf-openstreetmap-field",
-            "createdAt": "2026-09-03T13:15:54Z",
-            "number": 23,
+            "id": "PR_kwDOGyB3t88AAAABCETMCg",
+            "title": "6.1.4",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/200",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-09-03T14:02:39Z",
+            "number": 200,
             "state": "OPEN",
             "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "labels": [],
@@ -844,39 +844,6 @@
             ]
         },
         {
-            "id": "PR_kwDOAuIygs8AAAABCA1YOg",
-            "title": "feat: ban image conversion on fail",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2174",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-03T06:52:25Z",
-            "number": 2174,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOBSd4q88AAAABB6gghw",
             "title": "fix: run timed honeypot from frontend bundle",
             "url": "https://github.com/helsingborg-stad/modularity-form-builder/pull/121",
@@ -908,86 +875,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABB5FWjA",
-            "title": "fix: omit automatic post language sentinel",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2172",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-02T12:00:28Z",
-            "number": 2172,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "fix(component): drop literal lang=\"auto\" from the article wrapper",
-                    "url": "https://github.com/municipio-se/wp-plugin-municipio-theme-extensions/pull/4",
-                    "repository": "municipio-se/wp-plugin-municipio-theme-extensions"
-                }
-            ]
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABB5FVSQ",
-            "title": "fix(modularity): distinguish cached module placements",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2171",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-02T12:00:26Z",
-            "number": 2171,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "fix(modularity): give colliding module wrapper ids a unique suffix",
-                    "url": "https://github.com/municipio-se/wp-plugin-municipio-theme-extensions/pull/3",
-                    "repository": "municipio-se/wp-plugin-municipio-theme-extensions"
-                }
-            ]
         },
         {
             "id": "PR_kwDOOwvk6M8AAAABB419JQ",
