@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-03T07:31:59+00:00",
-    "count": 67,
+    "generatedAt": "2026-09-03T08:37:56+00:00",
+    "count": 68,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -80,17 +80,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "schema.org-transformer",
-            "fullName": "helsingborg-stad/schema.org-transformer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "active-directory-api-wp-integration",
             "fullName": "helsingborg-stad/active-directory-api-wp-integration",
             "description": "Simple plugin for verification of existing WordPress users with api. ",
             "url": "https://github.com/helsingborg-stad/active-directory-api-wp-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "schema.org-transformer",
+            "fullName": "helsingborg-stad/schema.org-transformer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
         },
         {
             "owner": "helsingborg-stad",
@@ -185,17 +185,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
         },
         {
             "owner": "helsingborg-stad",
@@ -346,27 +346,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "algolia-index-js-searchpage-addon",
             "fullName": "helsingborg-stad/algolia-index-js-searchpage-addon",
             "description": "Replaces the searchpage with a javascript rendered searchpage. Compatible with multiple target sites. ",
@@ -406,6 +385,27 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -757,6 +757,59 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOGyB3t88AAAABCBKo-Q",
+            "title": "Fix \"Unable to find file InstalledVersions.php\" warnings from webhooks-manager/wpmu-security",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/199",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-09-03T07:37:43Z",
+            "number": 199,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Unable to find file InstalledVersions.php",
+                    "url": "https://github.com/municipio-se/municipio-deployment/issues/198",
+                    "repository": "municipio-se/municipio-deployment"
+                }
+            ]
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABCA1YOg",
             "title": "feat: ban image conversion on fail",
@@ -1143,7 +1196,7 @@
         },
         {
             "id": "PR_kwDOCquRHc8AAAABBdUeTA",
-            "title": "Fix focus visibility on filled toggle buttons",
+            "title": "fix: focus visibility on filled toggle buttons",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1274",
             "repository": "helsingborg-stad/styleguide",
             "createdAt": "2026-08-29T18:31:42Z",
