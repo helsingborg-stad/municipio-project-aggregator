@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-03T15:22:49+00:00",
-    "count": 112,
+    "generatedAt": "2026-09-03T16:21:57+00:00",
+    "count": 111,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -262,27 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "broken-link-detector",
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
@@ -308,6 +287,27 @@
             "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
             "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -885,59 +885,6 @@
                     "title": "Fix \"Unable to find file InstalledVersions.php\" warnings from webhooks-manager/wpmu-security",
                     "url": "https://github.com/municipio-se/municipio-deployment/pull/199",
                     "repository": "municipio-se/municipio-deployment"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOOwvk6M8AAAABPUsvZg",
-            "title": "Bypass rate limiting for trusted authenticated users",
-            "url": "https://github.com/helsingborg-stad/wpmu-security/issues/22",
-            "repository": "helsingborg-stad/wpmu-security",
-            "createdAt": "2026-09-02T11:30:58Z",
-            "number": 22,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Bypass rate limiting for trusted authenticated users",
-                    "url": "https://github.com/helsingborg-stad/wpmu-security/pull/23",
-                    "repository": "helsingborg-stad/wpmu-security"
                 }
             ]
         },
