@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-03T08:37:56+00:00",
-    "count": 68,
+    "generatedAt": "2026-09-03T09:32:22+00:00",
+    "count": 67,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -856,39 +856,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
                 "url": "https://github.com/jeanfredrik",
                 "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABB54WCw",
-            "title": "fix: avoid duplicate query for event",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2173",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-02T13:35:26Z",
-            "number": 2173,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "labels": [],
