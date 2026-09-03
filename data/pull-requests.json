@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-03T06:44:51+00:00",
+    "generatedAt": "2026-09-03T07:31:59+00:00",
     "count": 67,
     "repositories": [
         {
@@ -73,17 +73,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "schema.org-transformer",
-            "fullName": "helsingborg-stad/schema.org-transformer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-json-render",
             "fullName": "helsingborg-stad/modularity-json-render",
             "description": "Renders a single level api-response (json) as a list. ",
             "url": "https://github.com/helsingborg-stad/modularity-json-render"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "schema.org-transformer",
+            "fullName": "helsingborg-stad/schema.org-transformer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer"
         },
         {
             "owner": "helsingborg-stad",
@@ -339,6 +339,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -357,13 +364,6 @@
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
             "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
@@ -758,6 +758,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOAuIygs8AAAABCA1YOg",
+            "title": "feat: ban image conversion on fail",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2174",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-09-03T06:52:25Z",
+            "number": 2174,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOBSd4q88AAAABB6gghw",
             "title": "fix: run timed honeypot from frontend bundle",
             "url": "https://github.com/helsingborg-stad/modularity-form-builder/pull/121",
@@ -902,39 +935,6 @@
                     "repository": "municipio-se/wp-plugin-municipio-theme-extensions"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOLwUbvs8AAAABB5EIGA",
-            "title": "Feat/pios project images",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/32",
-            "repository": "helsingborg-stad/schema.org-transformer",
-            "createdAt": "2026-09-02T11:58:13Z",
-            "number": 32,
-            "state": "OPEN",
-            "author": {
-                "login": "jlarsson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
-                "url": "https://github.com/jlarsson",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOOwvk6M8AAAABB419JQ",
