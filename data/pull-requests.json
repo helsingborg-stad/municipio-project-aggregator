@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-03T09:32:22+00:00",
-    "count": 67,
+    "generatedAt": "2026-09-03T10:30:45+00:00",
+    "count": 66,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -1008,39 +1008,6 @@
                     "repository": "helsingborg-stad/wpmu-security"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABB322-g",
-            "title": "feat: trigger SearchIndex indexing from admin UI",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2169",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-02T09:18:55Z",
-            "number": 2169,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOOg7GJs8AAAABBzGDag",
