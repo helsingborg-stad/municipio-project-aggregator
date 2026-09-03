@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-03T15:31:10+00:00",
-    "count": 64,
+    "generatedAt": "2026-09-03T16:31:05+00:00",
+    "count": 60,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -262,27 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "broken-link-detector",
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
@@ -308,6 +287,27 @@
             "fullName": "helsingborg-stad/algolia-index-typesense-provider",
             "description": "",
             "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -844,92 +844,6 @@
             ]
         },
         {
-            "id": "PR_kwDOBSd4q88AAAABB6gghw",
-            "title": "fix: run timed honeypot from frontend bundle",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder/pull/121",
-            "repository": "helsingborg-stad/modularity-form-builder",
-            "createdAt": "2026-09-02T14:41:32Z",
-            "number": 121,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOOwvk6M8AAAABB419JQ",
-            "title": "Bypass rate limiting for trusted authenticated users",
-            "url": "https://github.com/helsingborg-stad/wpmu-security/pull/23",
-            "repository": "helsingborg-stad/wpmu-security",
-            "createdAt": "2026-09-02T11:31:12Z",
-            "number": 23,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Bypass rate limiting for trusted authenticated users",
-                    "url": "https://github.com/helsingborg-stad/wpmu-security/issues/22",
-                    "repository": "helsingborg-stad/wpmu-security"
-                }
-            ]
-        },
-        {
             "id": "PR_kwDOOg7GJs8AAAABBzGDag",
             "title": "Fix Typesense CSP origin handling",
             "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/pull/14",
@@ -958,9 +872,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "feat: incorporate algolia index as a feature",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2141",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "id": "PR_kwDOAuIygs8AAAABBmCMpw",
@@ -975,92 +896,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOA4iurc8AAAABBmABqA",
-            "title": "Fix recursive checkbox relations and restore desc toggle binding",
-            "url": "https://github.com/helsingborg-stad/modularity-guides/pull/27",
-            "repository": "helsingborg-stad/modularity-guides",
-            "createdAt": "2026-08-31T11:40:44Z",
-            "number": 27,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Checkboxes do not affect steps with desc when clicking checkbox",
-                    "url": "https://github.com/helsingborg-stad/modularity-guides/issues/26",
-                    "repository": "helsingborg-stad/modularity-guides"
-                }
-            ]
-        },
-        {
-            "id": "PR_kwDOCquRHc8AAAABBdUeTA",
-            "title": "fix: focus visibility on filled toggle buttons",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1274",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-08-29T18:31:42Z",
-            "number": 1274,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
@@ -1176,9 +1011,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Fix Typesense CSP origin handling",
+                    "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/pull/14",
+                    "repository": "helsingborg-stad/algolia-index-typesense-provider"
+                }
+            ]
         },
         {
             "id": "PR_kwDOAuIygs8AAAABAiAveg",
