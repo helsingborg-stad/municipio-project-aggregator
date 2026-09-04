@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-04T08:36:53+00:00",
+    "generatedAt": "2026-09-04T09:31:38+00:00",
     "count": 56,
     "repositories": [
         {
@@ -723,6 +723,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOE96d8c8AAAABCLDnmg",
+            "title": "Render responsive hero images once",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/670",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-04T08:45:16Z",
+            "number": 670,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOLwUbvs8AAAABCK7OOg",
             "title": "add event status keyword",
             "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/34",
@@ -840,39 +873,6 @@
                     "repository": "municipio-se/municipio-deployment"
                 }
             ]
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABBmCMpw",
-            "title": "Algolia index schemadata",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2157",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-08-31T11:46:07Z",
-            "number": 2157,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "PR_kwDOCPnM4c8AAAABBLJm7g",
