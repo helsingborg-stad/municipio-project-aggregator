@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-04T07:31:14+00:00",
-    "count": 55,
+    "generatedAt": "2026-09-04T08:36:53+00:00",
+    "count": 56,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -171,13 +171,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -196,6 +189,13 @@
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
             "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -664,7 +664,7 @@
             "login": "petter-a",
             "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?v=4",
             "url": "https://github.com/petter-a",
-            "company": ""
+            "company": "Helsingborg stad"
         },
         {
             "login": "rsj10736",
@@ -722,6 +722,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOLwUbvs8AAAABCK7OOg",
+            "title": "add event status keyword",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/34",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-09-04T08:23:54Z",
+            "number": 34,
+            "state": "OPEN",
+            "author": {
+                "login": "petter-a",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?u=96d0ccb4082736d6973f04cd096a41d34f499a4a&v=4",
+                "url": "https://github.com/petter-a",
+                "company": "Helsingborg stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOGyB3t88AAAABCETMCg",
             "title": "6.1.4",
