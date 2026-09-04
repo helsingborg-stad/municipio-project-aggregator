@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-04T09:31:38+00:00",
-    "count": 56,
+    "generatedAt": "2026-09-04T10:29:54+00:00",
+    "count": 57,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -722,6 +722,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOCquRHc8AAAABCLjuaw",
+            "title": "Align fieldset legend tokens with field component",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1279",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-04T09:59:22Z",
+            "number": 1279,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOE96d8c8AAAABCLDnmg",
             "title": "Render responsive hero images once",
