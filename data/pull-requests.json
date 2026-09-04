@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-04T11:28:04+00:00",
+    "generatedAt": "2026-09-04T12:40:20+00:00",
     "count": 58,
     "repositories": [
         {
@@ -723,12 +723,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOCquRHc8AAAABCMJ-DQ",
-            "title": "Remove legacy fieldset styles",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1280",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-09-04T11:22:24Z",
-            "number": 1280,
+            "id": "PR_kwDOAuIygs8AAAABCMcuPg",
+            "title": "Fix async posts list pagination links",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2179",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-09-04T12:03:00Z",
+            "number": 2179,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
