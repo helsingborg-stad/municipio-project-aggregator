@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-04T16:30:13+00:00",
-    "count": 58,
+    "generatedAt": "2026-09-04T17:26:46+00:00",
+    "count": 60,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -722,6 +722,72 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABCPFkMg",
+            "title": "Fix invalid Modularity CSS",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2180",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-09-04T17:26:01Z",
+            "number": 2180,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOCquRHc8AAAABCPEfVA",
+            "title": "Fix invalid component CSS values",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1281",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-04T17:23:21Z",
+            "number": 1281,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOE96d8c8AAAABCOpXvw",
             "title": "Use visible card content as accessible name",
