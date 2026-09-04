@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-04T05:29:34+00:00",
-    "count": 60,
+    "generatedAt": "2026-09-04T06:44:24+00:00",
+    "count": 59,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -981,46 +981,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABA57Yvg",
-            "title": "feat: incorporate algolia index as a feature",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2141",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-08-25T08:03:41Z",
-            "number": 2141,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix Typesense CSP origin handling",
-                    "url": "https://github.com/helsingborg-stad/algolia-index-typesense-provider/pull/14",
-                    "repository": "helsingborg-stad/algolia-index-typesense-provider"
-                }
-            ]
         },
         {
             "id": "PR_kwDOAuIygs8AAAABAiAveg",
