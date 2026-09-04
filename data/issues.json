@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-04T13:20:03+00:00",
+    "generatedAt": "2026-09-04T14:19:30+00:00",
     "count": 108,
     "repositories": [
         {
@@ -748,7 +748,20 @@
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -763,9 +776,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Fix translation()/data() silently dropped when chained after on()",
+                    "url": "https://github.com/helsingborg-stad/wputilservice/pull/15",
+                    "repository": "helsingborg-stad/wputilservice"
+                }
+            ]
         },
         {
             "id": "I_kwDOCquRHc8AAAABPet8kA",
