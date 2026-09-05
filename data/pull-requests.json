@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-05T08:31:52+00:00",
-    "count": 60,
+    "generatedAt": "2026-09-05T09:27:50+00:00",
+    "count": 61,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -722,6 +722,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABCTqkYw",
+            "title": "Keep the fixed Modularity panel visible",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2181",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-09-05T09:10:39Z",
+            "number": 2181,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABCPFkMg",
             "title": "Fix invalid Modularity CSS",
