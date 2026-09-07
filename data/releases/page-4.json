@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T07:04:15+00:00",
-    "count": 83,
+    "generatedAt": "2026-09-07T07:51:05+00:00",
+    "count": 84,
     "pageSize": 10,
     "pageNumber": 4,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.3.1",
+            "version": "5.3.1",
+            "body": "## Municipio Theme (5.153.5)\r\n\r\n- New Flexible Header component that displays a button to the user's group homepage, if it exists.\r\n- Fixed SEO redirect permalink fetching when using mirrored post objects.\r\n- Fixed attachment pages not redirecting to real files by default.\r\n- Fixed `fileExists` cache not caching files that were not found.\r\n\r\n## Component Library (4.54.1)\r\n\r\n- Fixed comment markup for the author by removing disallowed nesting in `<span>` elements.\r\n\r\n## Modularity (6.84.1)\r\n\r\n- Added an option to the Posts module allowing editors to force external links to open in a new window.\r\n- Posts module now supports pagination in multisite queries.\r\n- Fixed a type comparison error in network permalink resolving in the Posts module.\r\n- Module fragment cache now respects query parameters that may affect the cached state.\r\n\r\n## Modularity Like (2.14.1)\r\n\r\n- Patched the ability to unlike a post across networks.\r\n\r\n## Styleguide (0.11.1277)\r\n\r\n- Compressed lists now have a smaller font size and icon by default.\r\n\r\n## WP Security (1.3.4)\r\n\r\n- Disabled automatic CSP due to issues it caused on search pages.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.1",
+            "publishedAt": "2025-06-11T09:29:41Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.3.0",
             "version": "5.3.0",
@@ -92,15 +101,6 @@
             "body": "## Municipio (v5.78.4)\r\n\r\n- Improved cache handling by clearing the applicator cache, ensuring smoother performance.\r\n- Updated the login page with enhanced styling for better user experience.\r\n- Added a new margin setting for flexible menu items, allowing for greater customization.\r\n- Introduced a site banner sidebar area to improve flexibility to place warnings, etc., above the header of the page.\r\n- Enhanced the `PdfArchiveEndpoint` with date filtering arguments for better data management.\r\n- Replaced deprecated ACF extended hidden fields with standard fields for more reliable functionality.\r\n- Resolved issues with deprecated tags to align with updated standards.\r\n\r\n## Component Library (v4.34.9)\r\n\r\n- Fixed an issue with the news item image to ensure proper display and alignment.\r\n- Added a container to news items for improved layout structure and consistency.\r\n\r\n## Styleguide (v0.11.1188)\r\n\r\n- Fixed an issue with the news item container for better layout and consistency.\r\n- Added specific rules for compact mode, ensuring proper display of icons and content.\r\n- Adjusted grid layout in the modal documentation for improved clarity.\r\n- Removed outdated and broken documentation to keep resources accurate and up-to-date.\r\n- Introduced the ability to trigger reindex modals via event listeners for better user interaction.\r\n\r\n## Broken Links (v4.2.2)\r\n\r\n- Fixed several issues related to the link updater, including caching of affected posts and retrieving real links.\r\n- Improved configuration functions and translations, alongside adjustments for better consistency.\r\n- Added a JavaScript event dispatch feature for client classification.\r\n- Introduced the ability to get the relative path of the plugin from the plugins directory.\r\n- Enhanced support by suggesting the Component Library if it\u2019s not present.\r\n- Added modal functionality to notify the user in a more expressive way, giving administrators the ability to guide the user to resolve a protected domain.\r\n\r\n## Modularity (v6.47.7)\r\n\r\n- Fixed issues with the post status check and disabled cache where applicable.\r\n- Resolved an incorrect permalink issue for posts on remote sites (`mod-posts`).\r\n- Improved post count handling in `mod-posts` to ensure accurate data.\r\n- Added a new search feature above cards for improved usability.\r\n- Introduced a new markdown module for enhanced content formatting.\r\n- Removed unused sort options in `mod-posts` to streamline the module.\r\n\r\n## Modularity Like (v2.9.0)\r\n\r\n- Removed a commented-out file to clean up the codebase.\r\n- Introduced new features related to appearances for better customization and styling options.\r\n- Added a list feature to enhance content display and organization.\r\n\r\n## Other\r\n\r\n- The error page when a critical error occurs has been updated to render a more visually appealing interface.\r\n- The deployment process has been adjusted to correctly include catalogues named \"conf\".",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.9.4",
             "publishedAt": "2024-12-09T13:11:04Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 4.9.3",
-            "version": "4.9.3",
-            "body": "### Version 4.9.3 of Municipio\r\n\r\nVersion 4.9.3 of Municipio includes some fixes for issues in previous releases. This also reverts the functionality for post rendering with a common interface, due to some issues.\r\n\r\n---\r\n\r\n### Municipio (v5.75.1)\r\n\r\n- Some patches have been made to the customizer applicator to further improve its efficiency and cache handling.\r\n- The ability to set a color for the background of the login/logout alternative has been added.\r\n- Resolves a typing error in the `has_blocks` functionality to check for blocks on a page.\r\n- Postpones the `postRendering` functionality to the future due to a reprioritization.\r\n- A click outside the language menu will now close it.\r\n- Improved support for the \"Page for Post Type\" plugin when using templates on pages.\r\n\r\n---\r\n\r\n### Component Library (v4.34.7)\r\n\r\n- The brand component now automatically renders in the most optimal width (500px fixed value recalculates).\r\n- Minor adjustments in the handling of array values as modifiers on components have been implemented.\r\n- Adjustment to the image handling in cards to prevent possible fatal errors when passing an empty array as an image.\r\n- Updated the mega-menu to use common functionality to trigger menu expansion.\r\n\r\n---\r\n\r\n### Styleguide (v0.11.1188)\r\n\r\n- Introduced a new JavaScript functionality to retrieve the size of a `div` and append it to the styles tag to fill context knowledge gaps in CSS.\r\n- Fixes misaligned date badges on cards.\r\n- Simplifications for drawer colors and general color fixes.\r\n- Added styling for menu separators.\r\n\r\n---\r\n\r\n### Broken Links (v4.1.0)\r\n\r\n- The feature that automatically fixes links to a post when a permalink is updated has been disabled due to a bug.\r\n\r\n---\r\n\r\n### Modularity (v6.46.12)\r\n\r\n- Postpones the `postRendering` functionality to the future due to a reprioritization.\r\n- Minor patches to various functionalities of the plugin regarding cache and graphical details.\r\n- When rendering a block on the page, the `hasModule` function will now detect it as a rendered module (enables script enqueue).\r\n- An adjustment has been made to the check for pagination in the post module.\r\n\r\n---\r\n\r\n### Customer Feedback (v4.0.10)\r\n\r\n- Customer feedback no longer checks if the post contains any readable content. This is due to the increased use of modules and blocks to render content.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.9.3",
-            "publishedAt": "2024-12-02T13:19:31Z",
             "isPrerelease": false,
             "isDraft": false
         }

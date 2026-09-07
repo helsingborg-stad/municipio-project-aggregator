@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T07:04:15+00:00",
-    "count": 83,
+    "generatedAt": "2026-09-07T07:51:05+00:00",
+    "count": 84,
     "pageSize": 10,
     "pageNumber": 6,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.5.0",
+            "version": "4.5.0",
+            "body": "Municipio 4.5.0 continues to optimize page size, with this release focusing on supporting source set like functionality. We\u2019re starting with a minimal implementation, gradually adding more modules over time. This incremental approach ensures minimal impact on website backend performance with each update.\r\n\r\n## Whats Changed\r\n\r\nStyleguide (0.11.1118): \r\n-Adjustments to ensure that the image component can behave like background images, with support for cover and object-fit properties.\r\n\r\nMunicipio (5.25.4): \r\n- Minor modifications to the image conversion process, allowing compatibility with conversions and resizing from other add-ons.\r\n- Patches on external content features regarding handling of terms and diff checking with checksums locally.\r\n\r\nModularity (6.28.1):\r\n- Implementation of image resolution functions required by the component library to handle source set requests effectively.\r\n\r\nComponent library (4.21.2):\r\n- Introduction of an image contract object, automatically detected and processed by the image component.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.0",
+            "publishedAt": "2024-09-24T08:18:54Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.4.2",
             "version": "4.4.2",
@@ -92,15 +101,6 @@
             "body": "* **Component Library (4.14.6):** [resolve issues where some data attributes where NaN or incorrectly handled.](https://github.com/helsingborg-stad/component-library/commit/82980f831fe490677d41a568733d80b7012bb893)",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.1",
             "publishedAt": "2024-08-13T10:09:31Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.2.0",
-            "version": "4.2.0",
-            "body": "This update is primarily focused on simplifying the implementation of schema data configuration an presentation.\r\n\r\n* **Municipio Theme (5.8.0):** Add feature for assigning schema type for post types as well as populating posts with values matching the selected schema type. Remove Content Type feature in favor of the new functionality available in schema types.\r\n* **Modularity Open Street Map (2.3.6):** Adapt to use Schema Type from Municipio instead of Content Type.\r\n*  **Component Library (4.14.5):** Fix issue with \"0\" as a string not being allowed to pass as value to attributeList property on components.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.0",
-            "publishedAt": "2024-08-13T06:26:05Z",
             "isPrerelease": false,
             "isDraft": false
         }

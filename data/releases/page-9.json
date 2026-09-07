@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T07:04:15+00:00",
-    "count": 83,
+    "generatedAt": "2026-09-07T07:51:05+00:00",
+    "count": 84,
     "pageSize": 10,
     "pageNumber": 9,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "3.2.1",
+            "version": "3.2.1",
+            "body": "This release is a patch, including project manager integration to allow users to build innovation plugins.\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.2.0...3.2.1",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.1",
+            "publishedAt": "2023-06-15T07:24:16Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 3.2.0",
             "version": "3.2.0",

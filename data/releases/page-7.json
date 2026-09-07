@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T07:04:15+00:00",
-    "count": 83,
+    "generatedAt": "2026-09-07T07:51:05+00:00",
+    "count": 84,
     "pageSize": 10,
     "pageNumber": 7,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.2.0",
+            "version": "4.2.0",
+            "body": "This update is primarily focused on simplifying the implementation of schema data configuration an presentation.\r\n\r\n* **Municipio Theme (5.8.0):** Add feature for assigning schema type for post types as well as populating posts with values matching the selected schema type. Remove Content Type feature in favor of the new functionality available in schema types.\r\n* **Modularity Open Street Map (2.3.6):** Adapt to use Schema Type from Municipio instead of Content Type.\r\n*  **Component Library (4.14.5):** Fix issue with \"0\" as a string not being allowed to pass as value to attributeList property on components.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.0",
+            "publishedAt": "2024-08-13T06:26:05Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 4.1.2",
             "version": "4.1.2",
@@ -92,15 +101,6 @@
             "body": "We are pleased to announce the release of Municipio 4.0.4, which brings a set of changes intended to resolve a set of reported bugs.\r\n\r\n## What's Changed\r\n- Municipio Theme (v4.31.0): The ability to set a complementary colorscheme on any public post type. This feature was requested in order to implement a site-in-site apperance.\r\n- Modularity (v6.16.12): A new CLI command for upgrading database version [wp modularity upgrade]. This action do not run automatically anymore, due to some issues deploying on large high-traffic networks. In short; Multiple sites upgrading at the same time, could temporarily affect load time negatively.\r\n- Modularity (6.16.14): An issue with wp-rest refreshment of modules has been fixed when using page cache engines (nonce validation).\r\n- Modularity (v6.17.0): A correction of the previous migration has been made, to enshure proper migration of inner blocks.\r\n- Modularity (v6.17.2): A issue with saving post type modules has been corrected.\r\n- Modularity (v6.18.0): Information message in admin, when a upgraded database version was found.\r\n- Modularity (v6.19.1): Resolves an issue with modules not being saved to posts due to faulty usage of module-area inheritance (mis-match in module areas on different post types).",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.4",
             "publishedAt": "2024-06-03T09:47:46Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.2",
-            "version": "4.0.2",
-            "body": "Primarily focuses on bug fixes to improve the stability and performance of our platform. Here are the key issues addressed in this release. \r\n\r\n## What's Changed\r\n\r\n**Breadcrumb Links to Non-existent Pages:** \r\nPreviously, breadcrumb links were generating URLs that led to 404 error pages when the target page did not exist. This issue has been resolved, and such breadcrumb links will no longer be created.\r\n\r\n**\u201dShow Archive\u201d Button Disappearing in the \u201dPosts\u201d Module:** \r\nAn issue was identified where the \u201dShow Archive\u201d button would disappear in the \u201dPosts\u201d module. This problem has now been fixed, ensuring the button remains visible and functional.\r\n\r\n**Conditional Form Fields with Identical Descriptive Text:** \r\nThere was a problem where fields in conditional forms had the same descriptive text, leading to confusion and potential errors. This issue has been corrected, and each field now has unique and accurate descriptive text.\r\n\r\n**Module Sidebar Incompatibility:** \r\nAn issue with the module sidebar compatibility function resulted in modules being unable to be linked to a page. Instead, users were displayed another page ID. This issue has now been resolved, ensuring that modules can be correctly linked to the intended page.\r\n\r\n**Instantpage.js Update:** \r\nThe Instantpage.js library has been updated to support the speculative API, enhancing the performance and speed of page loads.\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.0.1...4.0.2",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.2",
-            "publishedAt": "2024-05-20T11:56:46Z",
             "isPrerelease": false,
             "isDraft": false
         }

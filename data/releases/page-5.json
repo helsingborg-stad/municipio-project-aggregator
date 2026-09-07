@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T07:04:15+00:00",
-    "count": 83,
+    "generatedAt": "2026-09-07T07:51:05+00:00",
+    "count": 84,
     "pageSize": 10,
     "pageNumber": 5,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 4.9.3",
+            "version": "4.9.3",
+            "body": "### Version 4.9.3 of Municipio\r\n\r\nVersion 4.9.3 of Municipio includes some fixes for issues in previous releases. This also reverts the functionality for post rendering with a common interface, due to some issues.\r\n\r\n---\r\n\r\n### Municipio (v5.75.1)\r\n\r\n- Some patches have been made to the customizer applicator to further improve its efficiency and cache handling.\r\n- The ability to set a color for the background of the login/logout alternative has been added.\r\n- Resolves a typing error in the `has_blocks` functionality to check for blocks on a page.\r\n- Postpones the `postRendering` functionality to the future due to a reprioritization.\r\n- A click outside the language menu will now close it.\r\n- Improved support for the \"Page for Post Type\" plugin when using templates on pages.\r\n\r\n---\r\n\r\n### Component Library (v4.34.7)\r\n\r\n- The brand component now automatically renders in the most optimal width (500px fixed value recalculates).\r\n- Minor adjustments in the handling of array values as modifiers on components have been implemented.\r\n- Adjustment to the image handling in cards to prevent possible fatal errors when passing an empty array as an image.\r\n- Updated the mega-menu to use common functionality to trigger menu expansion.\r\n\r\n---\r\n\r\n### Styleguide (v0.11.1188)\r\n\r\n- Introduced a new JavaScript functionality to retrieve the size of a `div` and append it to the styles tag to fill context knowledge gaps in CSS.\r\n- Fixes misaligned date badges on cards.\r\n- Simplifications for drawer colors and general color fixes.\r\n- Added styling for menu separators.\r\n\r\n---\r\n\r\n### Broken Links (v4.1.0)\r\n\r\n- The feature that automatically fixes links to a post when a permalink is updated has been disabled due to a bug.\r\n\r\n---\r\n\r\n### Modularity (v6.46.12)\r\n\r\n- Postpones the `postRendering` functionality to the future due to a reprioritization.\r\n- Minor patches to various functionalities of the plugin regarding cache and graphical details.\r\n- When rendering a block on the page, the `hasModule` function will now detect it as a rendered module (enables script enqueue).\r\n- An adjustment has been made to the check for pagination in the post module.\r\n\r\n---\r\n\r\n### Customer Feedback (v4.0.10)\r\n\r\n- Customer feedback no longer checks if the post contains any readable content. This is due to the increased use of modules and blocks to render content.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.9.3",
+            "publishedAt": "2024-12-02T13:19:31Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 4.8.2",
             "version": "4.8.2",
@@ -92,15 +101,6 @@
             "body": "With this release, we focus on enhancing image handling across the board. From preventing errors in small images to streamlining the image component interface. We\u2019re also introducing better support for container-aware images in both modularity and content, ensuring a more optimized and responsive experience.\r\n\r\n### Component Library (4.23.9)\r\n\r\n- A fatal error in the `ImageInterface` where images too small for size variants would cause a crash. These images will now be handled gracefully.\r\n- All section variants now use the image component to display images consistently, with automatic sizes.\r\n- The image component\u2019s interface has been simplified, removing all modal support. Parameters have been streamlined for better coherence.\r\n\r\n### Modularity (6.29.0)\r\n\r\n- Video functionality in the header module now requires a poster image to ensure proper display.\r\n- The \"Manual Input\" module now leverages the `ImageInterface` to fetch images for the Segment view.\r\n\r\n### Modularity Sections (3.1.2)\r\n\r\n- All section/segment variants now implement the `ImageInterface` to make use of container-aware source sets when rendering images.\r\n\r\n### Municipio Theme (5.28.0)\r\n\r\n- Fixes applied to handle remote content correctly.\r\n- Images within content are now detected and converted to an image contract if they exist in the database. This ensures support for container query images in content.\r\n\r\n### Styleguide (0.11.1125)\r\n\r\n- Improvements in the image component, supporting the changed set of parameters in the component.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.1",
             "publishedAt": "2024-09-27T09:26:12Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.5.0",
-            "version": "4.5.0",
-            "body": "Municipio 4.5.0 continues to optimize page size, with this release focusing on supporting source set like functionality. We\u2019re starting with a minimal implementation, gradually adding more modules over time. This incremental approach ensures minimal impact on website backend performance with each update.\r\n\r\n## Whats Changed\r\n\r\nStyleguide (0.11.1118): \r\n-Adjustments to ensure that the image component can behave like background images, with support for cover and object-fit properties.\r\n\r\nMunicipio (5.25.4): \r\n- Minor modifications to the image conversion process, allowing compatibility with conversions and resizing from other add-ons.\r\n- Patches on external content features regarding handling of terms and diff checking with checksums locally.\r\n\r\nModularity (6.28.1):\r\n- Implementation of image resolution functions required by the component library to handle source set requests effectively.\r\n\r\nComponent library (4.21.2):\r\n- Introduction of an image contract object, automatically detected and processed by the image component.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.0",
-            "publishedAt": "2024-09-24T08:18:54Z",
             "isPrerelease": false,
             "isDraft": false
         }
