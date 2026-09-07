@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T08:52:00+00:00",
-    "count": 84,
+    "generatedAt": "2026-09-07T09:49:25+00:00",
+    "count": 85,
     "pageSize": 10,
     "pageNumber": 6,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.5.1",
+            "version": "4.5.1",
+            "body": "With this release, we focus on enhancing image handling across the board. From preventing errors in small images to streamlining the image component interface. We\u2019re also introducing better support for container-aware images in both modularity and content, ensuring a more optimized and responsive experience.\r\n\r\n### Component Library (4.23.9)\r\n\r\n- A fatal error in the `ImageInterface` where images too small for size variants would cause a crash. These images will now be handled gracefully.\r\n- All section variants now use the image component to display images consistently, with automatic sizes.\r\n- The image component\u2019s interface has been simplified, removing all modal support. Parameters have been streamlined for better coherence.\r\n\r\n### Modularity (6.29.0)\r\n\r\n- Video functionality in the header module now requires a poster image to ensure proper display.\r\n- The \"Manual Input\" module now leverages the `ImageInterface` to fetch images for the Segment view.\r\n\r\n### Modularity Sections (3.1.2)\r\n\r\n- All section/segment variants now implement the `ImageInterface` to make use of container-aware source sets when rendering images.\r\n\r\n### Municipio Theme (5.28.0)\r\n\r\n- Fixes applied to handle remote content correctly.\r\n- Images within content are now detected and converted to an image contract if they exist in the database. This ensures support for container query images in content.\r\n\r\n### Styleguide (0.11.1125)\r\n\r\n- Improvements in the image component, supporting the changed set of parameters in the component.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.1",
+            "publishedAt": "2024-09-27T09:26:12Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.5.0",
             "version": "4.5.0",
@@ -92,15 +101,6 @@
             "body": "We\u2019re excited to announce the release of Municipio 4.2.1, which focuses on addressing key bugs and improving performance. Below are the highlights of this update:\r\n\r\nMunicipio Theme (5.8.6):\r\n- Icon Translation Optimization: Improved the efficiency of icon translation handling.\r\n- Navigation Class Enhancement: Optimized the navigation class to retrieve pre-processed objects directly from the runtime cache, enhancing performance.\r\n- Upgrade: Introduced a script that clears all oEmbed caches due to updates in the HTML output for icons.\r\n- Customizer Fix: Resolved an issue where changes made in the Customizer were not reflected on the frontend.\r\n- Body Class Correction: Fixed a bug where the body class was not correctly applied across all templates.\r\n- Schema Object Handler: Addressed a warning issue in the schema object handler.\r\n\r\nOpen Street Map (2.3.7):\r\n- Corrected an issue where pins were not displaying correctly in the map component.\r\n\r\nStyleguide (0.11.1088):\r\n- Hero Component: The Hero component now respects the \"Reduce Motion\" accessibility preference.\r\n- Grid Objects Fix: Resolved an issue where grid objects were not respecting gutter sizes on smaller devices.\r\n\r\nModularity Like posts (2.6.0):\r\n- The \"heart\" symbol is now compatible with the default \"filled\" icons in municipio.\r\n\r\nDeployment:\u00a0\r\n- The deployment script now includes functionality to send a ping to New Relic and Sentry after each deployment.\r\n\r\nOther:\u00a0\r\n- The sentry plugin has now been removed from the deploy due to bad performance.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.2",
             "publishedAt": "2024-08-15T13:23:13Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.2.1",
-            "version": "4.2.1",
-            "body": "* **Component Library (4.14.6):** [resolve issues where some data attributes where NaN or incorrectly handled.](https://github.com/helsingborg-stad/component-library/commit/82980f831fe490677d41a568733d80b7012bb893)",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.1",
-            "publishedAt": "2024-08-13T10:09:31Z",
             "isPrerelease": false,
             "isDraft": false
         }

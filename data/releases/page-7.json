@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T08:52:00+00:00",
-    "count": 84,
+    "generatedAt": "2026-09-07T09:49:25+00:00",
+    "count": 85,
     "pageSize": 10,
     "pageNumber": 7,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.2.1",
+            "version": "4.2.1",
+            "body": "* **Component Library (4.14.6):** [resolve issues where some data attributes where NaN or incorrectly handled.](https://github.com/helsingborg-stad/component-library/commit/82980f831fe490677d41a568733d80b7012bb893)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.1",
+            "publishedAt": "2024-08-13T10:09:31Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.2.0",
             "version": "4.2.0",
@@ -92,15 +101,6 @@
             "body": "A new week brings an exciting new release! Introducing version 405 \u2013 Method Not Allowed. Here are the key updates in this release:\r\n\r\n## What's Changed\r\n- Municipio (v4.33.2): Improvements regarding the functionality to load themes into posttypes.\r\n- Modularity (v6.18.7): An automatic mode has been added to the language option. This feature automatically detects the language of a module and tags it with the appropriate language attributes based on the detection.\r\n- Event Manager Integration (v2.0.16): A fix has been implemented to list all available tags for events, removing the previous cap of 100 items. Now, all available tags are displayed in the dropdown menu.\r\n- Like posts (v2.4.17): Fixes an issue where the cron job might crash if the settings page has not been saved.\r\n\r\nThis will be the last scheduled release for this term. During the summer, releases may be done, but not according to out weekly schedule.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.5",
             "publishedAt": "2024-06-10T12:49:49Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.4",
-            "version": "4.0.4",
-            "body": "We are pleased to announce the release of Municipio 4.0.4, which brings a set of changes intended to resolve a set of reported bugs.\r\n\r\n## What's Changed\r\n- Municipio Theme (v4.31.0): The ability to set a complementary colorscheme on any public post type. This feature was requested in order to implement a site-in-site apperance.\r\n- Modularity (v6.16.12): A new CLI command for upgrading database version [wp modularity upgrade]. This action do not run automatically anymore, due to some issues deploying on large high-traffic networks. In short; Multiple sites upgrading at the same time, could temporarily affect load time negatively.\r\n- Modularity (6.16.14): An issue with wp-rest refreshment of modules has been fixed when using page cache engines (nonce validation).\r\n- Modularity (v6.17.0): A correction of the previous migration has been made, to enshure proper migration of inner blocks.\r\n- Modularity (v6.17.2): A issue with saving post type modules has been corrected.\r\n- Modularity (v6.18.0): Information message in admin, when a upgraded database version was found.\r\n- Modularity (v6.19.1): Resolves an issue with modules not being saved to posts due to faulty usage of module-area inheritance (mis-match in module areas on different post types).",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.4",
-            "publishedAt": "2024-06-03T09:47:46Z",
             "isPrerelease": false,
             "isDraft": false
         }

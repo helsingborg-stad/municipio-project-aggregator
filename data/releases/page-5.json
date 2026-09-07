@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T08:52:00+00:00",
-    "count": 84,
+    "generatedAt": "2026-09-07T09:49:25+00:00",
+    "count": 85,
     "pageSize": 10,
     "pageNumber": 5,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 4.9.4",
+            "version": "4.9.4",
+            "body": "## Municipio (v5.78.4)\r\n\r\n- Improved cache handling by clearing the applicator cache, ensuring smoother performance.\r\n- Updated the login page with enhanced styling for better user experience.\r\n- Added a new margin setting for flexible menu items, allowing for greater customization.\r\n- Introduced a site banner sidebar area to improve flexibility to place warnings, etc., above the header of the page.\r\n- Enhanced the `PdfArchiveEndpoint` with date filtering arguments for better data management.\r\n- Replaced deprecated ACF extended hidden fields with standard fields for more reliable functionality.\r\n- Resolved issues with deprecated tags to align with updated standards.\r\n\r\n## Component Library (v4.34.9)\r\n\r\n- Fixed an issue with the news item image to ensure proper display and alignment.\r\n- Added a container to news items for improved layout structure and consistency.\r\n\r\n## Styleguide (v0.11.1188)\r\n\r\n- Fixed an issue with the news item container for better layout and consistency.\r\n- Added specific rules for compact mode, ensuring proper display of icons and content.\r\n- Adjusted grid layout in the modal documentation for improved clarity.\r\n- Removed outdated and broken documentation to keep resources accurate and up-to-date.\r\n- Introduced the ability to trigger reindex modals via event listeners for better user interaction.\r\n\r\n## Broken Links (v4.2.2)\r\n\r\n- Fixed several issues related to the link updater, including caching of affected posts and retrieving real links.\r\n- Improved configuration functions and translations, alongside adjustments for better consistency.\r\n- Added a JavaScript event dispatch feature for client classification.\r\n- Introduced the ability to get the relative path of the plugin from the plugins directory.\r\n- Enhanced support by suggesting the Component Library if it\u2019s not present.\r\n- Added modal functionality to notify the user in a more expressive way, giving administrators the ability to guide the user to resolve a protected domain.\r\n\r\n## Modularity (v6.47.7)\r\n\r\n- Fixed issues with the post status check and disabled cache where applicable.\r\n- Resolved an incorrect permalink issue for posts on remote sites (`mod-posts`).\r\n- Improved post count handling in `mod-posts` to ensure accurate data.\r\n- Added a new search feature above cards for improved usability.\r\n- Introduced a new markdown module for enhanced content formatting.\r\n- Removed unused sort options in `mod-posts` to streamline the module.\r\n\r\n## Modularity Like (v2.9.0)\r\n\r\n- Removed a commented-out file to clean up the codebase.\r\n- Introduced new features related to appearances for better customization and styling options.\r\n- Added a list feature to enhance content display and organization.\r\n\r\n## Other\r\n\r\n- The error page when a critical error occurs has been updated to render a more visually appealing interface.\r\n- The deployment process has been adjusted to correctly include catalogues named \"conf\".",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.9.4",
+            "publishedAt": "2024-12-09T13:11:04Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 4.9.3",
             "version": "4.9.3",
@@ -92,15 +101,6 @@
             "body": "With this release, we focus on further implementing the ImageInterface on more components. We are also releasing a InnovationProject view, in order to display innovation project schemadata as archive items and single views.\r\n\r\n### Component Library (4.24.2)\r\n\r\n* Update the slider Item api in order to simplify it, and remove some old logic that isen\u2019t used anymore.\r\nModularity (6.30.0):\r\n* Implements the Image Interface in the slider module.\r\n\r\n### Municipio Theme (5.32.0)\r\n\r\n* Update the Schools view to fully support the new slider item api.\r\n* Add support for schema type \u201dProject\u201d.\r\n* Multiple minor additions to the behavior of ExternalContent that enables cleanup of unused content and images.\r\n* Add option \u201dSchema\u201d as a way to display a post types archive in the Customizer. This will use the specific Schema types archive presentation if one is available.\r\n\r\n### Styleguide (0.11.1130)\r\n\r\n* Minor adjustments to implement the slider item images.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.5.1...4.5.2",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.2",
             "publishedAt": "2024-10-01T08:33:27Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.5.1",
-            "version": "4.5.1",
-            "body": "With this release, we focus on enhancing image handling across the board. From preventing errors in small images to streamlining the image component interface. We\u2019re also introducing better support for container-aware images in both modularity and content, ensuring a more optimized and responsive experience.\r\n\r\n### Component Library (4.23.9)\r\n\r\n- A fatal error in the `ImageInterface` where images too small for size variants would cause a crash. These images will now be handled gracefully.\r\n- All section variants now use the image component to display images consistently, with automatic sizes.\r\n- The image component\u2019s interface has been simplified, removing all modal support. Parameters have been streamlined for better coherence.\r\n\r\n### Modularity (6.29.0)\r\n\r\n- Video functionality in the header module now requires a poster image to ensure proper display.\r\n- The \"Manual Input\" module now leverages the `ImageInterface` to fetch images for the Segment view.\r\n\r\n### Modularity Sections (3.1.2)\r\n\r\n- All section/segment variants now implement the `ImageInterface` to make use of container-aware source sets when rendering images.\r\n\r\n### Municipio Theme (5.28.0)\r\n\r\n- Fixes applied to handle remote content correctly.\r\n- Images within content are now detected and converted to an image contract if they exist in the database. This ensures support for container query images in content.\r\n\r\n### Styleguide (0.11.1125)\r\n\r\n- Improvements in the image component, supporting the changed set of parameters in the component.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.1",
-            "publishedAt": "2024-09-27T09:26:12Z",
             "isPrerelease": false,
             "isDraft": false
         }

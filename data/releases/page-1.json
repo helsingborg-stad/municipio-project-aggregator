@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T08:52:00+00:00",
-    "count": 84,
+    "generatedAt": "2026-09-07T09:49:25+00:00",
+    "count": 85,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.1.5",
+            "version": "6.1.5",
+            "body": "Patch release focused on stability, security, and admin consistency. It improves form validation under strict CSP, refines search-index settings behavior, fixes an interactive map filter issue, updates shared field styling, and lets trusted signed-in users bypass rate limits where appropriate.\r\n\r\n## Modularity Form Builder [4.0.12...4.0.14](https://github.com/helsingborg-stad/modularity-form-builder/compare/4.0.12...4.0.14)\r\n- Honeypot Validation: Moves the timed honeypot check into the frontend bundle so form submissions continue to work under strict Content Security Policy settings.\r\n\r\n## Municipio Theme [7.28.0...7.28.12](https://github.com/helsingborg-stad/Municipio/compare/7.28.0...7.28.12)\r\n- Search Index Settings: Ensures admin settings continue to respect values locked by configuration constants.\r\n- Search Index: Enshure that all permalinks are indexed correctly. \r\n- Interactive Map: Closes open popups correctly when map filters are removed.\r\n\r\n## Styleguide [3.18.2...3.18.4](https://github.com/helsingborg-stad/styleguide/compare/3.18.2...3.18.4)\r\n- Field Styling: Moves fieldset and legend styling to shared design tokens while preserving the existing appearance.\r\n\r\n## WPMU Security [1.9.1...1.9.2](https://github.com/helsingborg-stad/wpmu-security/compare/1.9.1...1.9.2)\r\n- Rate Limiting: Lets trusted authenticated users bypass rate limiting to reduce unnecessary friction for known users.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.5",
+            "publishedAt": "2026-09-07T09:17:20Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.1.4",
             "version": "6.1.4",
@@ -92,15 +101,6 @@
             "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-9-1/",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.1",
             "publishedAt": "2026-04-01T13:06:15Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.8.8",
-            "version": "5.8.8",
-            "body": "",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.8.8",
-            "publishedAt": "2026-02-25T12:14:01Z",
             "isPrerelease": false,
             "isDraft": false
         }

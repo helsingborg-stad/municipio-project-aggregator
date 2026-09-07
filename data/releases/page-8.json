@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-07T08:52:00+00:00",
-    "count": 84,
+    "generatedAt": "2026-09-07T09:49:25+00:00",
+    "count": 85,
     "pageSize": 10,
     "pageNumber": 8,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.0.4",
+            "version": "4.0.4",
+            "body": "We are pleased to announce the release of Municipio 4.0.4, which brings a set of changes intended to resolve a set of reported bugs.\r\n\r\n## What's Changed\r\n- Municipio Theme (v4.31.0): The ability to set a complementary colorscheme on any public post type. This feature was requested in order to implement a site-in-site apperance.\r\n- Modularity (v6.16.12): A new CLI command for upgrading database version [wp modularity upgrade]. This action do not run automatically anymore, due to some issues deploying on large high-traffic networks. In short; Multiple sites upgrading at the same time, could temporarily affect load time negatively.\r\n- Modularity (6.16.14): An issue with wp-rest refreshment of modules has been fixed when using page cache engines (nonce validation).\r\n- Modularity (v6.17.0): A correction of the previous migration has been made, to enshure proper migration of inner blocks.\r\n- Modularity (v6.17.2): A issue with saving post type modules has been corrected.\r\n- Modularity (v6.18.0): Information message in admin, when a upgraded database version was found.\r\n- Modularity (v6.19.1): Resolves an issue with modules not being saved to posts due to faulty usage of module-area inheritance (mis-match in module areas on different post types).",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.4",
+            "publishedAt": "2024-06-03T09:47:46Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.0.2",
             "version": "4.0.2",
@@ -92,15 +101,6 @@
             "body": "Installer is updated to require stable releases of each plugin. For development purposes, a devcontainer also is embedded into this install. \r\n\r\n## What's Changed\r\n* Created a dependency checker by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/6\r\n* Efficient build  by @sebastianthulin in https://github.com/municipio-se/municipio-deployment/pull/7\r\n* Update versions to latests for helsingborg-stad packages by @Sven65 in https://github.com/municipio-se/municipio-deployment/pull/9\r\n* feat: add devcontainer files by @thorbrink in https://github.com/municipio-se/municipio-deployment/pull/8\r\n\r\n## New Contributors\r\n* @sebastianthulin made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/6\r\n* @Sven65 made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/9\r\n* @thorbrink made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/8\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.2.4...3.3.0",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.3.0",
             "publishedAt": "2023-09-28T14:09:32Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Maintenance version 3.2.4",
-            "version": "3.2.4",
-            "body": "This release includes an update for litespeed common settings and a real nonce field for the active directory integration, to accomodate the requirement of ESI cache bypassing. \r\n\r\nLitespeed needs to include _ad_nonce as a nonce esi include. ",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.4",
-            "publishedAt": "2023-06-29T08:50:04Z",
             "isPrerelease": false,
             "isDraft": false
         }
