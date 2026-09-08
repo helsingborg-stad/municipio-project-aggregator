@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-08T06:44:17+00:00",
+    "generatedAt": "2026-09-08T07:31:42+00:00",
     "count": 61,
     "repositories": [
         {
@@ -227,27 +227,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "custom-short-links",
             "fullName": "helsingborg-stad/custom-short-links",
             "description": "Create shorter versions of url:s ",
@@ -280,6 +259,27 @@
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
         },
         {
             "owner": "helsingborg-stad",
@@ -664,7 +664,7 @@
             "login": "petter-a",
             "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?v=4",
             "url": "https://github.com/petter-a",
-            "company": ""
+            "company": "Helsingborg stad"
         },
         {
             "login": "rsj10736",
@@ -722,6 +722,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOLwUbvs8AAAABCoa_bQ",
+            "title": "sponsor demand and offer boilerplates",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/35",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-09-08T07:26:13Z",
+            "number": 35,
+            "state": "OPEN",
+            "author": {
+                "login": "petter-a",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?u=96d0ccb4082736d6973f04cd096a41d34f499a4a&v=4",
+                "url": "https://github.com/petter-a",
+                "company": "Helsingborg stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDON7Wi-c8AAAABCn34ZA",
             "title": "feat: data store to work with new wordpress 7.1",
@@ -861,39 +894,6 @@
             "repository": "helsingborg-stad/styleguide",
             "createdAt": "2026-09-04T17:23:21Z",
             "number": 1281,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOE96d8c8AAAABCOpXvw",
-            "title": "Use visible card content as accessible name",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/671",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-09-04T16:26:12Z",
-            "number": 671,
             "state": "OPEN",
             "author": {
                 "login": "jeanfredrik",
