@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-09T10:30:25+00:00",
+    "generatedAt": "2026-09-09T11:28:34+00:00",
     "count": 31,
     "repositories": [
         {
@@ -723,20 +723,33 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOGyB3t88AAAABCztSdw",
-            "title": "chore: add docker image release workflow (#202)",
-            "url": "https://github.com/municipio-se/municipio-deployment/pull/203",
-            "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-09-09T09:35:26Z",
-            "number": 203,
+            "id": "PR_kwDOCquRHc8AAAABC0QMfA",
+            "title": "Fix accordion item state ring clipping inside paint-contained layouts",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1296",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-09T10:42:25Z",
+            "number": 1296,
             "state": "OPEN",
             "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -751,23 +764,83 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Accordion item hover/focus ring is clipped by `contain: paint`",
+                    "url": "https://github.com/helsingborg-stad/styleguide/issues/1269",
+                    "repository": "helsingborg-stad/styleguide"
+                }
+            ]
         },
         {
-            "id": "PR_kwDOAuIygs8AAAABCrwEug",
-            "title": "\ud83d\udc1b Bug(chat): preserve chat session id between page loads",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2196",
+            "id": "PR_kwDOAuIygs8AAAABC0PsHw",
+            "title": "Render one-page content for classic editor posts",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2205",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-08T14:03:07Z",
-            "number": 2196,
+            "createdAt": "2026-09-09T10:41:25Z",
+            "number": 2205,
             "state": "OPEN",
             "author": {
-                "login": "MasterKenth",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/2890987?v=4",
-                "url": "https://github.com/MasterKenth",
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
                 "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Content not rendering if using classic editor on one-page template",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2113",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOGyB3t88AAAABCztSdw",
+            "title": "chore: add docker image release workflow (#202)",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/203",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-09-09T09:35:26Z",
+            "number": 203,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
             },
             "assignees": [],
             "labels": [],
@@ -972,59 +1045,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOGyB3t88AAAABCBKo-Q",
-            "title": "Fix \"Unable to find file InstalledVersions.php\" warnings from webhooks-manager/wpmu-security",
-            "url": "https://github.com/municipio-se/municipio-deployment/pull/199",
-            "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-09-03T07:37:43Z",
-            "number": 199,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Unable to find file InstalledVersions.php",
-                    "url": "https://github.com/municipio-se/municipio-deployment/issues/198",
-                    "repository": "municipio-se/municipio-deployment"
-                }
-            ]
         },
         {
             "id": "PR_kwDOAuIygs8AAAABAiAveg",
