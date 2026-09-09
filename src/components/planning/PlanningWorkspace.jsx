@@ -1245,11 +1245,6 @@ function SprintNestedListRow({
                           </a>
                         ) : null}
                       </div>
-                      {item.type === 'Pull Request' && item.author?.login ? (
-                        <div className="mt-1 text-xs text-slate-500">
-                          Author: <span className="text-slate-300">{item.author.login}</span>
-                        </div>
-                      ) : null}
                       {depth > 0 ? <span className="mt-1 block text-xs text-violet-200/90" aria-label={`Subtask of ${currentParentTitle}`}>Subtask of {currentParentTitle}</span> : null}
                       {canAcceptSubtaskDrop ? (
                         <div
@@ -1453,24 +1448,6 @@ function DropSection({ title, subtitle, items, badgeText, dragState, isSaving, o
   );
 }
 
-/**
- * Renders a visible pull request author line when author data is available.
- *
- * @param {{item: Record<string, any>}} props
- * @returns {JSX.Element | null}
- */
-function PlanningPullRequestAuthor({ item }) {
-  if (item?.type !== 'Pull Request' || !item.author?.login) {
-    return null;
-  }
-
-  return (
-    <p className="text-sm text-slate-400">
-      Author: <span className="text-slate-200">{item.author.login}</span>
-    </p>
-  );
-}
-
 function PlanningItemCard({ item, dragState, onDragStateChange, isSaving = false }) {
   const childItems = item.subIssueUrls?.filter(Boolean) || [];
   const isDragging = dragState?.key === getPlanningItemKey(item);
@@ -1496,7 +1473,6 @@ function PlanningItemCard({ item, dragState, onDragStateChange, isSaving = false
           <div className="space-y-1">
             <h4 className="text-base font-semibold text-white">{item.title}</h4>
             {item.repository ? <p className="text-sm text-slate-400">{item.repository}</p> : null}
-            <PlanningPullRequestAuthor item={item} />
             {item.description ? <p className="text-sm text-slate-400">{truncateDescription(item.description, 180)}</p> : null}
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">

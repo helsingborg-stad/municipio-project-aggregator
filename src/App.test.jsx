@@ -15,10 +15,6 @@ const releasePageIndexPayload = mockDashboardData.releasePageIndex;
 const releasePageOnePayload = mockDashboardData.releasePagePayload;
 const releasePageTwoPayload = getMockReleasePagePayload(2);
 
-function hasExactTextContent(expectedText) {
-  return (_, element) => element?.textContent?.replace(/\s+/g, ' ').trim() === expectedText;
-}
-
 describe('App', () => {
   afterEach(() => {
     vi.restoreAllMocks();
@@ -73,10 +69,6 @@ describe('App', () => {
 
     await screen.findByRole('tab', { name: 'Backlog' });
 
-    fireEvent.mouseDown(screen.getByRole('tab', { name: 'Pull Requests' }));
-    expect(await screen.findByText('Planning list polish')).toBeInTheDocument();
-    expect(screen.getByText(hasExactTextContent('Author: codergirl'))).toBeInTheDocument();
-
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Backlog' }));
     expect(await screen.findByRole('heading', { name: 'Backlog manager' })).toBeInTheDocument();
     expect(screen.getByText('Unplanned GitHub issues')).toBeInTheDocument();
@@ -85,7 +77,6 @@ describe('App', () => {
     fireEvent.mouseDown(screen.getByRole('tab', { name: 'Sprints' }));
     expect(await screen.findByRole('heading', { name: 'Sprint board' })).toBeInTheDocument();
     expect(screen.getByText('Sprint 14')).toBeInTheDocument();
-    expect(screen.getByText(hasExactTextContent('Author: monalisa'))).toBeInTheDocument();
     expect(screen.getAllByText('Issue alpha child').length).toBeGreaterThan(0);
     expect(screen.queryByText('Deliver drag and drop for the active sprint so issues can be moved without leaving the planning surface.')).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'List view' })).toHaveClass('bg-cyan-300/15');

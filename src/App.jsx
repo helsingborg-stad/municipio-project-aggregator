@@ -687,24 +687,6 @@ function ItemBadgeRow({ item }) {
   );
 }
 
-/**
- * Renders a visible pull request author label when author data is available.
- *
- * @param {{item: Record<string, any>, className?: string}} props
- * @returns {JSX.Element | null}
- */
-function PullRequestAuthorMeta({ item, className = 'text-xs text-slate-500' }) {
-  if (item?.type !== 'Pull Request' || !item.author?.login) {
-    return null;
-  }
-
-  return (
-    <div className={className}>
-      Author: <span className="font-medium text-slate-300">{item.author.login}</span>
-    </div>
-  );
-}
-
 function ItemDetailPanel({ item }) {
   const showSubIssues = hasSubIssues(item);
   const hasDependencySummary = item.relationshipSummary.totalBlockedBy > 0 || item.relationshipSummary.totalBlocking > 0;
@@ -801,7 +783,6 @@ function TrackedItemCard({ item, showRepository = false }) {
               <span className="text-slate-600">/</span>
               <span>{formatTimestamp(item.createdAt)}</span>
             </div>
-            <PullRequestAuthorMeta item={item} className="mt-2 text-xs text-slate-500" />
           </div>
           <div className="flex shrink-0 flex-col items-end gap-3">
             <CardPeopleCluster author={item.author} assignees={item.assignees} />
@@ -855,31 +836,28 @@ function TrackedItemListRow({ item, depth = 0, expandedTreeItems, onToggleExpand
           <div className="h-3.5 w-3.5 rounded-full border-2 border-slate-500/70" />
         </div>
 
-        <div className="flex min-w-0 flex-1 flex-col justify-center py-2 pr-3">
-          <div className="flex min-w-0 items-center gap-2">
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-              className="truncate text-sm text-slate-200 transition-colors hover:text-white"
-            >
-              {item.title}
-            </a>
-            {item.type ? (
-              <Badge variant="secondary" className="shrink-0 text-[10px]">{item.type}</Badge>
-            ) : null}
-            {hasSubIssues(item) ? (
-              <span className="shrink-0 font-mono text-[10px] text-slate-500">
-                {item.subIssues.completed}/{item.subIssues.total}
-              </span>
-            ) : null}
-            {hasChildren ? (
-              <Badge variant="secondary" className="shrink-0 text-[10px]">
-                {childItems.length}
-              </Badge>
-            ) : null}
-          </div>
-          <PullRequestAuthorMeta item={item} className="mt-1 truncate text-xs text-slate-500" />
+        <div className="flex min-w-0 flex-1 items-center gap-2 py-2 pr-3">
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            className="truncate text-sm text-slate-200 transition-colors hover:text-white"
+          >
+            {item.title}
+          </a>
+          {item.type ? (
+            <Badge variant="secondary" className="shrink-0 text-[10px]">{item.type}</Badge>
+          ) : null}
+          {hasSubIssues(item) ? (
+            <span className="shrink-0 font-mono text-[10px] text-slate-500">
+              {item.subIssues.completed}/{item.subIssues.total}
+            </span>
+          ) : null}
+          {hasChildren ? (
+            <Badge variant="secondary" className="shrink-0 text-[10px]">
+              {childItems.length}
+            </Badge>
+          ) : null}
         </div>
 
         <div className="flex w-52 shrink-0 items-center gap-1.5 py-2 pr-3">
