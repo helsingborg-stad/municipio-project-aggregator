@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-09T13:30:32+00:00",
-    "count": 29,
+    "generatedAt": "2026-09-09T14:30:56+00:00",
+    "count": 23,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -380,6 +380,13 @@
             "url": "https://github.com/helsingborg-stad/wputilservice"
         },
         {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-arcgis-map",
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
@@ -392,13 +399,6 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         }
     ],
     "authors": [
@@ -961,59 +961,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOPl0lE88AAAABCNOZVQ",
-            "title": "Fix translation()/data() silently dropped when chained after on()",
-            "url": "https://github.com/helsingborg-stad/wputilservice/pull/15",
-            "repository": "helsingborg-stad/wputilservice",
-            "createdAt": "2026-09-04T13:41:21Z",
-            "number": 15,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "on() not working with translation() and data()",
-                    "url": "https://github.com/helsingborg-stad/wputilservice/issues/13",
-                    "repository": "helsingborg-stad/wputilservice"
-                }
-            ]
-        },
-        {
             "id": "PR_kwDOE96d8c8AAAABCLDnmg",
             "title": "Render responsive hero images once",
             "url": "https://github.com/helsingborg-stad/component-library/pull/670",
@@ -1080,6 +1027,39 @@
             "relationships": []
         },
         {
+            "id": "PR_kwDOCPnM4c8AAAABAHSIDA",
+            "title": "feat: removing react using an api solution",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/45",
+            "repository": "helsingborg-stad/modularity-json-render",
+            "createdAt": "2026-08-18T07:50:38Z",
+            "number": 45,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOGyB3t877F3wp",
             "title": "feat: dedupe packages when selecting what to work on",
             "url": "https://github.com/municipio-se/municipio-deployment/pull/193",
@@ -1092,72 +1072,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOOWhNPs71PNxw",
-            "title": "Feat/form builder in frontend form",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/149",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-07-23T07:03:49Z",
-            "number": 149,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOOWhNPs7uwGHG",
-            "title": "fix: allowing frontend-form to have higher layer priority than component",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/148",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-07-07T09:30:24Z",
-            "number": 148,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
@@ -1210,6 +1124,59 @@
                 "linked": 0
             },
             "relationships": []
+        },
+        {
+            "id": "PR_kwDOCPnM4c7a_Tfr",
+            "title": "Load Json Render assets only when the module is used",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/35",
+            "repository": "helsingborg-stad/modularity-json-render",
+            "createdAt": "2026-05-13T06:26:43Z",
+            "number": 35,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Assets is enqueued on all pages",
+                    "url": "https://github.com/helsingborg-stad/modularity-json-render/issues/34",
+                    "repository": "helsingborg-stad/modularity-json-render"
+                }
+            ]
         },
         {
             "id": "PR_kwDOAs7djs7YAE1C",
@@ -1363,72 +1330,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOOWhNPs7RDRgz",
-            "title": "feat: formbuilder copilot refactor",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/129",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-04-09T07:39:33Z",
-            "number": 129,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOOWhNPs7RDOql",
-            "title": "Feat/claude refactoring",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/128",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-04-09T07:37:27Z",
-            "number": 128,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
@@ -1689,118 +1590,6 @@
                 "company": "Helsingborgs stad"
             },
             "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOOWhNPs69nhAk",
-            "title": "feat: add a example of flexite handler",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/92",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-01-16T13:22:51Z",
-            "number": 92,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOPl0lE863ouCs",
-            "title": "fix: detect context by first context matching",
-            "url": "https://github.com/helsingborg-stad/wputilservice/pull/11",
-            "repository": "helsingborg-stad/wputilservice",
-            "createdAt": "2025-12-08T09:53:27Z",
-            "number": 11,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOPl0lE861mp52",
-            "title": "Add when() for conditional asset enqueuing",
-            "url": "https://github.com/helsingborg-stad/wputilservice/pull/9",
-            "repository": "helsingborg-stad/wputilservice",
-            "createdAt": "2025-11-26T09:15:49Z",
-            "number": 9,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
             "labels": [],
             "milestone": null,
             "type": null,
