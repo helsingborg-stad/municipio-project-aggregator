@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-09T10:20:53+00:00",
+    "generatedAt": "2026-09-09T11:18:24+00:00",
     "count": 107,
     "repositories": [
         {
@@ -980,7 +980,20 @@
                 "url": "https://github.com/WilliamLundqvist",
                 "company": ""
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -995,9 +1008,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Fix accordion item state ring clipping inside paint-contained layouts",
+                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1296",
+                    "repository": "helsingborg-stad/styleguide"
+                }
+            ]
         },
         {
             "id": "I_kwDOAuIygs8AAAABGbI3tQ",
@@ -1013,7 +1033,20 @@
                 "url": "https://github.com/WilliamLundqvist",
                 "company": ""
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -1028,9 +1061,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Render one-page content for classic editor posts",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2205",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "id": "I_kwDOAuIygs8AAAABENjkaQ",
