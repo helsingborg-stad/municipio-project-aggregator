@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-09T09:32:39+00:00",
+    "generatedAt": "2026-09-09T10:30:25+00:00",
     "count": 31,
     "repositories": [
         {
@@ -544,7 +544,7 @@
             "login": "dannil76",
             "avatarUrl": "https://avatars.githubusercontent.com/u/768077?v=4",
             "url": "https://github.com/dannil76",
-            "company": "Helsingborg Stad"
+            "company": ""
         },
         {
             "login": "davidohlin",
@@ -723,18 +723,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOGyB3t88AAAABCzpcVg",
-            "title": "Add docker image release workflow",
-            "url": "https://github.com/municipio-se/municipio-deployment/pull/202",
+            "id": "PR_kwDOGyB3t88AAAABCztSdw",
+            "title": "chore: add docker image release workflow (#202)",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/203",
             "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-09-09T09:28:05Z",
-            "number": 202,
+            "createdAt": "2026-09-09T09:35:26Z",
+            "number": 203,
             "state": "OPEN",
             "author": {
-                "login": "dannil76",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/768077?u=7d0330014a28538ef9c2706456432cbf28c567df&v=4",
-                "url": "https://github.com/dannil76",
-                "company": "Helsingborg Stad"
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
             },
             "assignees": [],
             "labels": [],
