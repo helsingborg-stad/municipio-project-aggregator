@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-10T11:46:50+00:00",
-    "count": 85,
+    "generatedAt": "2026-09-10T12:52:40+00:00",
+    "count": 86,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.1.6",
+            "version": "6.1.6",
+            "body": "Minor release focused on UI refinements and compatibility updates. Styleguide adds async pagination, improved table behavior, and typography fixes, while WPMU Security removes exposed version metadata and the generator tag. The remaining package updates align internal dependencies with WpUtilService 0.3, preparing the platform for the broader dependency upgrade.\r\n\r\n## Styleguide [3.18.2...3.19.10](https://github.com/helsingborg-stad/styleguide/compare/3.18.2...3.19.10)\r\n- Tables and Pagination: Adds async pagination, sorting, filtering, summary rows, and scroll indicators for richer table interactions.\r\n- Typography and Layout: Reduces heading sizes in card content areas and prevents headings from dropping below date badges.\r\n- Field Styling: Moves fieldset and legend styling to shared design tokens while preserving the existing visual appearance.\r\n\r\n## Webhooks Manager [1.3.1...1.3.2](https://github.com/helsingborg-stad/webhooks-manager/compare/1.3.1...1.3.2)\r\n- Dependency Compatibility: Updates the internal WpUtilService dependency to `^0.3`, aligning the package with the platform's ongoing dependency upgrade.\r\n\r\n## WP Page for Post Type [2.0.14...2.0.16](https://github.com/helsingborg-stad/wp-page-for-posttype/compare/2.0.14...2.0.16)\r\n- Dependency Compatibility: Updates the internal WpUtilService dependency to `^0.3`, preparing the plugin for the shared dependency upgrade.\r\n\r\n## WP Search Statistics [1.0.6...1.0.8](https://github.com/helsingborg-stad/search-statistics/compare/1.0.6...1.0.8)\r\n- Dependency Compatibility: Updates the internal WpUtilService dependency to `^0.3`, aligning the plugin with the new shared dependency baseline.\r\n- Search Assets: Rebuilds the packaged search enhancer assets to match the updated dependency set.\r\n\r\n## WPMU Security [1.9.2...1.10.0](https://github.com/helsingborg-stad/wpmu-security/compare/1.9.2...1.10.0)\r\n- Script Metadata: Hides version metadata from enqueued scripts to reduce exposed implementation details.\r\n- Generator Tag: Removes the generator tag from output metadata for a cleaner and less revealing frontend footprint.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.6",
+            "publishedAt": "2026-09-10T12:20:17Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.1.5",
             "version": "6.1.5",
@@ -92,15 +101,6 @@
             "body": "",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.2",
             "publishedAt": "2026-04-16T11:18:11Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.9.1",
-            "version": "5.9.1",
-            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-9-1/",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.1",
-            "publishedAt": "2026-04-01T13:06:15Z",
             "isPrerelease": false,
             "isDraft": false
         }

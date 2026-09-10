@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-10T11:46:50+00:00",
-    "count": 85,
+    "generatedAt": "2026-09-10T12:52:40+00:00",
+    "count": 86,
     "pageSize": 10,
     "pageNumber": 6,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.5.2",
+            "version": "4.5.2",
+            "body": "With this release, we focus on further implementing the ImageInterface on more components. We are also releasing a InnovationProject view, in order to display innovation project schemadata as archive items and single views.\r\n\r\n### Component Library (4.24.2)\r\n\r\n* Update the slider Item api in order to simplify it, and remove some old logic that isen\u2019t used anymore.\r\nModularity (6.30.0):\r\n* Implements the Image Interface in the slider module.\r\n\r\n### Municipio Theme (5.32.0)\r\n\r\n* Update the Schools view to fully support the new slider item api.\r\n* Add support for schema type \u201dProject\u201d.\r\n* Multiple minor additions to the behavior of ExternalContent that enables cleanup of unused content and images.\r\n* Add option \u201dSchema\u201d as a way to display a post types archive in the Customizer. This will use the specific Schema types archive presentation if one is available.\r\n\r\n### Styleguide (0.11.1130)\r\n\r\n* Minor adjustments to implement the slider item images.\r\n\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/4.5.1...4.5.2",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.2",
+            "publishedAt": "2024-10-01T08:33:27Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.5.1",
             "version": "4.5.1",
@@ -92,15 +101,6 @@
             "body": "**Municipio Theme (5.8.11):**\r\n\r\n- Changes the filter to apply a default value of the icon type, to be able to explicitly set a overriding value locally where components are used.\r\n- Enqueues instantpage.js later on, so that the document has been fully loaded before init. This will enshure that instant page can work properly.\r\n- A fix has been made, to enable users to disable \"posts\" in the Theme Options.\r\n- Get related posts only runs on place templates. This may be changed in the future, when more types support this feature.\r\n\r\n**Component library(4.15.1):**\r\n\r\n- Adds support of default fill mode in the icon component.\r\n\r\n**Modaularity (6.19.0):**\r\n\r\n- Resolves an issue with like functionality for visit sites (main menu counter)",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.3",
             "publishedAt": "2024-08-19T09:55:13Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.2.2",
-            "version": "4.2.2",
-            "body": "We\u2019re excited to announce the release of Municipio 4.2.1, which focuses on addressing key bugs and improving performance. Below are the highlights of this update:\r\n\r\nMunicipio Theme (5.8.6):\r\n- Icon Translation Optimization: Improved the efficiency of icon translation handling.\r\n- Navigation Class Enhancement: Optimized the navigation class to retrieve pre-processed objects directly from the runtime cache, enhancing performance.\r\n- Upgrade: Introduced a script that clears all oEmbed caches due to updates in the HTML output for icons.\r\n- Customizer Fix: Resolved an issue where changes made in the Customizer were not reflected on the frontend.\r\n- Body Class Correction: Fixed a bug where the body class was not correctly applied across all templates.\r\n- Schema Object Handler: Addressed a warning issue in the schema object handler.\r\n\r\nOpen Street Map (2.3.7):\r\n- Corrected an issue where pins were not displaying correctly in the map component.\r\n\r\nStyleguide (0.11.1088):\r\n- Hero Component: The Hero component now respects the \"Reduce Motion\" accessibility preference.\r\n- Grid Objects Fix: Resolved an issue where grid objects were not respecting gutter sizes on smaller devices.\r\n\r\nModularity Like posts (2.6.0):\r\n- The \"heart\" symbol is now compatible with the default \"filled\" icons in municipio.\r\n\r\nDeployment:\u00a0\r\n- The deployment script now includes functionality to send a ping to New Relic and Sentry after each deployment.\r\n\r\nOther:\u00a0\r\n- The sentry plugin has now been removed from the deploy due to bad performance.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.2",
-            "publishedAt": "2024-08-15T13:23:13Z",
             "isPrerelease": false,
             "isDraft": false
         }

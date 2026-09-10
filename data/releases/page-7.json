@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-10T11:46:50+00:00",
-    "count": 85,
+    "generatedAt": "2026-09-10T12:52:40+00:00",
+    "count": 86,
     "pageSize": 10,
     "pageNumber": 7,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.2.2",
+            "version": "4.2.2",
+            "body": "We\u2019re excited to announce the release of Municipio 4.2.1, which focuses on addressing key bugs and improving performance. Below are the highlights of this update:\r\n\r\nMunicipio Theme (5.8.6):\r\n- Icon Translation Optimization: Improved the efficiency of icon translation handling.\r\n- Navigation Class Enhancement: Optimized the navigation class to retrieve pre-processed objects directly from the runtime cache, enhancing performance.\r\n- Upgrade: Introduced a script that clears all oEmbed caches due to updates in the HTML output for icons.\r\n- Customizer Fix: Resolved an issue where changes made in the Customizer were not reflected on the frontend.\r\n- Body Class Correction: Fixed a bug where the body class was not correctly applied across all templates.\r\n- Schema Object Handler: Addressed a warning issue in the schema object handler.\r\n\r\nOpen Street Map (2.3.7):\r\n- Corrected an issue where pins were not displaying correctly in the map component.\r\n\r\nStyleguide (0.11.1088):\r\n- Hero Component: The Hero component now respects the \"Reduce Motion\" accessibility preference.\r\n- Grid Objects Fix: Resolved an issue where grid objects were not respecting gutter sizes on smaller devices.\r\n\r\nModularity Like posts (2.6.0):\r\n- The \"heart\" symbol is now compatible with the default \"filled\" icons in municipio.\r\n\r\nDeployment:\u00a0\r\n- The deployment script now includes functionality to send a ping to New Relic and Sentry after each deployment.\r\n\r\nOther:\u00a0\r\n- The sentry plugin has now been removed from the deploy due to bad performance.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.2",
+            "publishedAt": "2024-08-15T13:23:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.2.1",
             "version": "4.2.1",
@@ -92,15 +101,6 @@
             "body": "## What's changed\r\n* Modularity Form Builder (v3.2.2): Fix issue with conditional notifications not being sent.\r\n* Modularity Open Street Map: Pin to exact version (2.0.10) due to incompability with current version of Municipio.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.6",
             "publishedAt": "2024-06-27T07:29:02Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.5",
-            "version": "4.0.5",
-            "body": "A new week brings an exciting new release! Introducing version 405 \u2013 Method Not Allowed. Here are the key updates in this release:\r\n\r\n## What's Changed\r\n- Municipio (v4.33.2): Improvements regarding the functionality to load themes into posttypes.\r\n- Modularity (v6.18.7): An automatic mode has been added to the language option. This feature automatically detects the language of a module and tags it with the appropriate language attributes based on the detection.\r\n- Event Manager Integration (v2.0.16): A fix has been implemented to list all available tags for events, removing the previous cap of 100 items. Now, all available tags are displayed in the dropdown menu.\r\n- Like posts (v2.4.17): Fixes an issue where the cron job might crash if the settings page has not been saved.\r\n\r\nThis will be the last scheduled release for this term. During the summer, releases may be done, but not according to out weekly schedule.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.5",
-            "publishedAt": "2024-06-10T12:49:49Z",
             "isPrerelease": false,
             "isDraft": false
         }

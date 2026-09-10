@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-10T11:46:50+00:00",
-    "count": 85,
+    "generatedAt": "2026-09-10T12:52:40+00:00",
+    "count": 86,
     "pageSize": 10,
     "pageCount": 9,
     "repository": {
@@ -56,7 +56,7 @@
         {
             "pageNumber": 9,
             "file": "page-9.json",
-            "itemCount": 5
+            "itemCount": 6
         }
     ]
 }

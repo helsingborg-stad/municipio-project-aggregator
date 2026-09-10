@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-10T11:46:50+00:00",
-    "count": 85,
+    "generatedAt": "2026-09-10T12:52:40+00:00",
+    "count": 86,
     "pageSize": 10,
     "pageNumber": 2,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.9.1",
+            "version": "5.9.1",
+            "body": "Release Docs @ https://getmunicipio.com/nyheter/municipio-5-9-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.9.1",
+            "publishedAt": "2026-04-01T13:06:15Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.8.8",
             "version": "5.8.8",
@@ -92,15 +101,6 @@
             "body": "Releasedocs @ https://getmunicipio.com/nyheter/municipio-5-6-0/",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.0",
             "publishedAt": "2025-11-04T08:58:01Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Municipio 5.4.9",
-            "version": "5.4.9",
-            "body": "## Municipio 5.4.9\r\n\r\nVersion **5.4.9** of Municipio is a maintenance release that fixes some minor bugs and includes improvements to image handling.\r\n\r\n---\r\n\r\n### \ud83c\udfa8 Municipio Theme (5.175.3 \u2192 5.175.6)\r\n\r\n- Updated image rendering on Schools, making images display within a slider for better presentation.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.9",
-            "publishedAt": "2025-10-16T11:14:17Z",
             "isPrerelease": false,
             "isDraft": false
         }
