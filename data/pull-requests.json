@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-12T11:26:19+00:00",
+    "generatedAt": "2026-09-12T12:35:25+00:00",
     "count": 36,
     "repositories": [
         {
@@ -115,6 +115,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -126,13 +133,6 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
         },
         {
             "owner": "helsingborg-stad",
