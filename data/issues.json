@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-14T11:19:18+00:00",
+    "generatedAt": "2026-09-14T12:31:36+00:00",
     "count": 110,
     "repositories": [
         {
@@ -276,13 +276,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
@@ -294,6 +287,13 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -846,6 +846,65 @@
     ],
     "items": [
         {
+            "id": "I_kwDOAuIygs8AAAABRMkY9Q",
+            "title": "Handle transparent images safely when generating LQIP placeholders",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2217",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-09-14T11:58:07Z",
+            "number": 2217,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 2
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Skip generated LQIP placeholders for transparent raster images",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2218",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "Render responsive images once without background placeholders",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/670",
+                    "repository": "helsingborg-stad/component-library"
+                }
+            ]
+        },
+        {
             "id": "I_kwDOE96d8c8AAAABRJ-pJQ",
             "title": "Replace component configuration with typed PHP objects",
             "url": "https://github.com/helsingborg-stad/component-library/issues/674",
@@ -954,59 +1013,6 @@
                     "title": "Fix translation()/data() silently dropped when chained after on()",
                     "url": "https://github.com/helsingborg-stad/wputilservice/pull/15",
                     "repository": "helsingborg-stad/wputilservice"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOCquRHc8AAAABPet8kA",
-            "title": "Design Builder drops numeric override tokens on first save (migrated button radius resets to 1)",
-            "url": "https://github.com/helsingborg-stad/styleguide/issues/1277",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-09-03T07:45:30Z",
-            "number": 1277,
-            "state": "OPEN",
-            "author": {
-                "login": "WilliamLundqvist",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
-                "url": "https://github.com/WilliamLundqvist",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Preserve numeric Design Builder overrides on save",
-                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1298",
-                    "repository": "helsingborg-stad/styleguide"
                 }
             ]
         },
