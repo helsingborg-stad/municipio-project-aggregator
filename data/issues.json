@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-14T05:22:02+00:00",
+    "generatedAt": "2026-09-14T06:45:00+00:00",
     "count": 108,
     "repositories": [
         {
@@ -828,7 +828,20 @@
                 "url": "https://github.com/WilliamLundqvist",
                 "company": ""
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -843,9 +856,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Preserve numeric Design Builder overrides on save",
+                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1298",
+                    "repository": "helsingborg-stad/styleguide"
+                }
+            ]
         },
         {
             "id": "I_kwDOGyB3t88AAAABPepVQw",
