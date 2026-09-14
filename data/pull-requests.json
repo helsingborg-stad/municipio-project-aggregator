@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-14T09:40:14+00:00",
-    "count": 24,
+    "generatedAt": "2026-09-14T10:30:51+00:00",
+    "count": 25,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -833,6 +833,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOOWhNPs8AAAABDbjEgQ",
+            "title": "feat: add map field support in webhooks",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/151",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-09-14T10:03:35Z",
+            "number": 151,
+            "state": "OPEN",
+            "author": {
+                "login": "nRamstedt",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/16800993?u=5f32ebc2004233b9102ef6566138977e3411c7f3&v=4",
+                "url": "https://github.com/nRamstedt",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOE96d8c8AAAABDa1EEQ",
             "title": "Add typed PHP component contracts with incremental config migration support",
