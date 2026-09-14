@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-14T14:32:59+00:00",
+    "generatedAt": "2026-09-14T15:31:10+00:00",
     "count": 16,
     "repositories": [
         {
@@ -834,6 +834,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOCquRHc8AAAABDd2R5g",
+            "title": "refactor: removing styling and script for nav conflicting with popover",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1301",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-14T14:43:51Z",
+            "number": 1301,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOE96d8c8AAAABDddo1w",
             "title": "feat: popover for the dropdown menu",
             "url": "https://github.com/helsingborg-stad/component-library/pull/676",
@@ -1362,39 +1395,6 @@
             "repository": "helsingborg-stad/component-library",
             "createdAt": "2026-03-06T14:32:52Z",
             "number": 624,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOE96d8c7GfqJW",
-            "title": "refactor: interface for each component",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/621",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-02-26T10:18:02Z",
-            "number": 621,
             "state": "OPEN",
             "author": {
                 "login": "NiclasNorin",
