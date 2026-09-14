@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-14T15:21:20+00:00",
+    "generatedAt": "2026-09-14T16:20:54+00:00",
     "count": 109,
     "repositories": [
         {
@@ -122,13 +122,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-acf-google-maps-key",
-            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
-            "description": "Adds a field to enter a google maps api key for ACF",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-schools-manager",
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
@@ -143,10 +136,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
+            "name": "wpmu-acf-google-maps-key",
+            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
+            "description": "Adds a field to enter a google maps api key for ACF",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
         },
         {
             "owner": "helsingborg-stad",
@@ -161,6 +154,13 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
