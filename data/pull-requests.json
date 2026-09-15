@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-15T07:34:01+00:00",
-    "count": 14,
+    "generatedAt": "2026-09-15T08:38:08+00:00",
+    "count": 13,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -931,59 +931,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOE96d8c8AAAABDa1EEQ",
-            "title": "Add typed PHP component contracts with incremental config migration support",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/675",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-09-14T08:30:47Z",
-            "number": 675,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Replace component configuration with typed PHP objects",
-                    "url": "https://github.com/helsingborg-stad/component-library/issues/674",
-                    "repository": "helsingborg-stad/component-library"
-                }
-            ]
         },
         {
             "id": "PR_kwDOAuIygs8AAAABC0PsHw",
