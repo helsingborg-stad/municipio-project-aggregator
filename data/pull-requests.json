@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-15T06:46:04+00:00",
-    "count": 15,
+    "generatedAt": "2026-09-15T07:34:01+00:00",
+    "count": 14,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -178,6 +178,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-security",
+            "fullName": "helsingborg-stad/wpmu-security",
+            "description": "Adds basic security features to WordPress",
+            "url": "https://github.com/helsingborg-stad/wpmu-security"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api-alarm-integration",
             "fullName": "helsingborg-stad/api-alarm-integration",
             "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
@@ -189,13 +196,6 @@
             "fullName": "helsingborg-stad/media-usage",
             "description": "Track the use of attachments across posts, meta and options",
             "url": "https://github.com/helsingborg-stad/media-usage"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-security",
-            "fullName": "helsingborg-stad/wpmu-security",
-            "description": "Adds basic security features to WordPress",
-            "url": "https://github.com/helsingborg-stad/wpmu-security"
         },
         {
             "owner": "helsingborg-stad",
@@ -803,7 +803,7 @@
         },
         {
             "login": "thorbrink",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
             "url": "https://github.com/thorbrink",
             "company": "@helsingborg-stad"
         },
@@ -833,6 +833,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDORT_G-M8AAAABDkY42A",
+            "title": "chore: update helsingborg-stad/wputilservice",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager/pull/7",
+            "repository": "helsingborg-stad/api-sponsor-manager",
+            "createdAt": "2026-09-15T07:28:57Z",
+            "number": 7,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCquRHc8AAAABDd2R5g",
             "title": "refactor: removing styling and script for nav conflicting with popover",
@@ -898,59 +931,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABDca0eg",
-            "title": "Skip generated LQIP placeholders for transparent raster images",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2218",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-14T12:00:00Z",
-            "number": 2218,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Handle transparent images safely when generating LQIP placeholders",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2217",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
         },
         {
             "id": "PR_kwDOE96d8c8AAAABDa1EEQ",
@@ -1323,41 +1303,8 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOA3qtD87q2Wr7",
-            "title": "feat: create organization admin from org term page",
-            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/159",
-            "repository": "helsingborg-stad/api-event-manager",
-            "createdAt": "2026-06-26T05:32:08Z",
-            "number": 159,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOE96d8c7IhNuy",
-            "title": "feat: remove auto promote feature from typography",
+            "title": "feat: remove auto promote feature from typography [Req: PHP 8.4]",
             "url": "https://github.com/helsingborg-stad/component-library/pull/624",
             "repository": "helsingborg-stad/component-library",
             "createdAt": "2026-03-06T14:32:52Z",
