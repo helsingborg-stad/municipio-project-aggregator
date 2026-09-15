@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-15T15:29:16+00:00",
+    "generatedAt": "2026-09-15T16:31:55+00:00",
     "count": 11,
     "repositories": [
         {
@@ -143,6 +143,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -154,13 +161,6 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
@@ -199,6 +199,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-form-builder",
+            "fullName": "helsingborg-stad/modularity-form-builder",
+            "description": "Simple form builder that uses acf for forms. ",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-guides",
             "fullName": "helsingborg-stad/modularity-guides",
             "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
@@ -217,13 +224,6 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-form-builder",
-            "fullName": "helsingborg-stad/modularity-form-builder",
-            "description": "Simple form builder that uses acf for forms. ",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
         },
         {
             "owner": "helsingborg-stad",
@@ -450,6 +450,20 @@
             "url": "https://github.com/helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings"
         },
         {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-arcgis-map",
+            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
             "owner": "helsingborg-stad",
             "name": "redirection-extended",
             "fullName": "helsingborg-stad/redirection-extended",
@@ -472,6 +486,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -483,27 +504,6 @@
             "fullName": "helsingborg-stad/wputilservice",
             "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
             "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-arcgis-map",
-            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         }
     ],
     "authors": [
@@ -791,7 +791,7 @@
         },
         {
             "login": "sebastianthulin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
             "url": "https://github.com/sebastianthulin",
             "company": "Helsingborgs stad"
         },
