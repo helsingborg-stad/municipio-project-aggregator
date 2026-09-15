@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-15T11:29:02+00:00",
-    "count": 12,
+    "generatedAt": "2026-09-15T12:40:24+00:00",
+    "count": 14,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -551,7 +551,7 @@
         },
         {
             "login": "NiclasNorin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
             "url": "https://github.com/NiclasNorin",
             "company": ""
         },
@@ -833,6 +833,92 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOGsc40s8AAAABDmwfYQ",
+            "title": "Preserve full `/source` tree in release-branch packaging workflow",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape/pull/15",
+            "repository": "helsingborg-stad/modularity-entryscape",
+            "createdAt": "2026-09-15T12:27:07Z",
+            "number": 15,
+            "state": "OPEN",
+            "author": {
+                "login": "copilot-swe-agent",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                "url": "https://github.com/apps/copilot-swe-agent",
+                "company": ""
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "/release branch is missing source folder",
+                    "url": "https://github.com/helsingborg-stad/modularity-entryscape/issues/14",
+                    "repository": "helsingborg-stad/modularity-entryscape"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOPl0lE88AAAABDmriPQ",
+            "title": "test: crashing with mu plugin",
+            "url": "https://github.com/helsingborg-stad/wputilservice/pull/17",
+            "repository": "helsingborg-stad/wputilservice",
+            "createdAt": "2026-09-15T12:17:36Z",
+            "number": 17,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCquRHc8AAAABDd2R5g",
             "title": "refactor: removing styling and script for nav conflicting with popover",
