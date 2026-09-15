@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-15T08:38:08+00:00",
+    "generatedAt": "2026-09-15T09:36:06+00:00",
     "count": 13,
     "repositories": [
         {
@@ -803,7 +803,7 @@
         },
         {
             "login": "thorbrink",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?v=4",
             "url": "https://github.com/thorbrink",
             "company": "@helsingborg-stad"
         },
@@ -834,18 +834,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDORT_G-M8AAAABDkY42A",
-            "title": "chore: update helsingborg-stad/wputilservice",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager/pull/7",
-            "repository": "helsingborg-stad/api-sponsor-manager",
-            "createdAt": "2026-09-15T07:28:57Z",
-            "number": 7,
+            "id": "PR_kwDOCquRHc8AAAABDlPleg",
+            "title": "feat: making relative element possible for popover",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1304",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-15T09:15:39Z",
+            "number": 1304,
             "state": "OPEN",
             "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
             },
             "assignees": [],
             "labels": [],
