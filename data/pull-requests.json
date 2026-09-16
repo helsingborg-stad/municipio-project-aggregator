@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-16T07:33:52+00:00",
-    "count": 10,
+    "generatedAt": "2026-09-16T08:38:21+00:00",
+    "count": 36,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -108,17 +108,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
             "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "s3-uploads-custom-endpoint",
+            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -471,6 +471,13 @@
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-arcgis-map",
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
@@ -483,13 +490,6 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "helsingborg-stad",
@@ -833,6 +833,864 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvDXYg",
+            "title": "refactor: add typed chat message configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/703",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:38:06Z",
+            "number": 703,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvDGOg",
+            "title": "refactor: add typed anchor menu configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/702",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:37:31Z",
+            "number": 702,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvCvYg",
+            "title": "refactor: add typed toast item configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/701",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:36:45Z",
+            "number": 701,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvCIWQ",
+            "title": "refactor: add typed icon section item configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/700",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:35:27Z",
+            "number": 700,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvB0cg",
+            "title": "refactor: add typed icon section configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/699",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:34:48Z",
+            "number": 699,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvBQKQ",
+            "title": "refactor: add typed group configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/698",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:33:36Z",
+            "number": 698,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvA2XA",
+            "title": "refactor: add typed element configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/697",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:32:44Z",
+            "number": 697,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvAlDw",
+            "title": "refactor: add typed table head configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/696",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:32:08Z",
+            "number": 696,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDvAGyw",
+            "title": "refactor: add typed table body configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/695",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:31:05Z",
+            "number": 695,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu_w1w",
+            "title": "refactor: add typed table row configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/694",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:30:19Z",
+            "number": 694,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu_epw",
+            "title": "refactor: add typed table cell configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/693",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:29:42Z",
+            "number": 693,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu918Q",
+            "title": "refactor: add typed datebadge configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/692",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:26:22Z",
+            "number": 692,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu9gEQ",
+            "title": "refactor: add typed signature configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/691",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:25:41Z",
+            "number": 691,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu9N-g",
+            "title": "refactor: add typed scope configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/690",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:25:04Z",
+            "number": 690,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu8urw",
+            "title": "refactor: add typed inline CSS wrapper configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/689",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:24:03Z",
+            "number": 689,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu8Rcg",
+            "title": "refactor: add typed progress bar configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/688",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:23:11Z",
+            "number": 688,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu788A",
+            "title": "refactor: add typed loader configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/687",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:22:36Z",
+            "number": 687,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu7pNg",
+            "title": "refactor: add typed card image configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/686",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:21:57Z",
+            "number": 686,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu681w",
+            "title": "refactor: add typed card floating configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/685",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:20:30Z",
+            "number": 685,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu6qMQ",
+            "title": "refactor: add typed card footer configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/684",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:19:53Z",
+            "number": 684,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu6Zhw",
+            "title": "refactor: add typed card header configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/683",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:19:17Z",
+            "number": 683,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu6FIA",
+            "title": "refactor: add typed card body configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/682",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:18:40Z",
+            "number": 682,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu5tbw",
+            "title": "fix: discover components with typed configurations",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/681",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:17:50Z",
+            "number": 681,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu4IlQ",
+            "title": "refactor: add typed box configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/680",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:14:25Z",
+            "number": 680,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu4ECw",
+            "title": "refactor: add typed brand configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/679",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:14:16Z",
+            "number": 679,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABDu3-nw",
+            "title": "refactor: add typed avatar configuration",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/678",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-16T08:14:04Z",
+            "number": 678,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABC0PsHw",
             "title": "Render one-page content for classic editor posts",
