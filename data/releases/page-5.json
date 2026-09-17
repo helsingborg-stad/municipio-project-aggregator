@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-17T10:47:36+00:00",
-    "count": 86,
+    "generatedAt": "2026-09-17T11:46:52+00:00",
+    "count": 87,
     "pageSize": 10,
     "pageNumber": 5,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.0.2",
+            "version": "5.0.2",
+            "body": "Version 5.0.2 is a patch release for version 5.0.1, fixing some minor issues that have been identified since the last release.\r\n\r\n### Municipio Theme (5.129.4)\r\n\r\n- **Bugfix:** Refined how timestamps are fetched in archives.\r\n- **Bugfix:** Refined how timestamps are fetched in singular pages.\r\n- **Bugfix:** Fixed ordering issues for posts with identical date-time values by adding an additional `ORDER BY ID` to date queries.\r\n- **Chore:** Adds a template & instructions for generating feature documentation with a LLM.\r\n- **Bugfix:** Resolves some issues with mobile adaption of collapsible search view.\r\n\r\n<sub>*Due to the overhaul of dates; events may have to be adjusted to your preference since the date badge has been hardcoded for this post type in some locations.*</sub>\r\n\r\n### Modularity (6.67.4)\r\n\r\n- **Feature:** Removed the option to specify the source of the post date. It will now automatically match the archive view setting from Municipio.\r\n- **Posts Module Enhancements:**\r\n  - Improved handling of sticky posts and pagination in `GetPosts.php`, addressing potential issues with post counts and page limits. Sticky posts are now correctly merged and sorted.\r\n  - Refactored post preparation and data handling in `Posts.php` and `AbstractController.php`, including adding sticky post data and default values for post objects. Highlighting logic was moved to a dedicated method.\r\n  - Updated template controllers (`ExpandableListTemplate.php`, `ListTemplate.php`) and views (`features-grid.blade.php`, `grid.blade.php`, `index.blade.php`, `news.blade.php`, `segment.blade.php`) to use the new post data structure and handle sticky posts correctly. Added `data-js-item-id` and `attributeList` to post elements for better tracking and extensibility.\r\n  - Modified partials (`box.blade.php`, `collection-item.blade.php`, `news-item.blade.php`) to utilize the updated post data and attributes.\r\n  - Module is now resolving event timestamps correctly. If multiple occasions are resolved, the closest date in the future will be used. If the event is passed, the last will be used.\r\n- **Search Module Update:** Adjusted button styling in `search.blade.php`.\r\n\r\n### Styleguide (0.11.1220)\r\n\r\n- **Bugfix:** Fix alignment in news items vertically.\r\n\r\n### Component Library (4.47.11)\r\n\r\n- **Block Component Enhancements:**\r\n  - Added support for date arrays and date badges in `Block.php`, `block.blade.php`, and `block.json`. Ratio class added. Content check added.\r\n\r\n- **Card Component Enhancements:**\r\n  - Added support for date arrays and date badges in `Card.php` and `card.json`. Added `has-datebadge` class.\r\n  - Updated date and date badge components in `components/date.blade.php` and `components/datebadge.blade.php` to handle date arrays.\r\n\r\n- **Date Component Overhaul:**\r\n  - Completely refactored the `Date` component (`Date.php`, `date.blade.php`) for improved date handling, formatting, and time since/until calculations. Introduced `DateFormatter`, `TimeSinceFormatter`, and `DateConfig` classes for better organization and maintainability. Added error handling for invalid dates. Supports `nowLabel`, `timeNowCap`, and date format setting.\r\n  - Added `DateConfig.php` to handle date formatting configuration.\r\n  - Added `DateFormatter.php` to handle localized date formatting.\r\n  - Added `TimeSinceFormatter.php` to handle time since calculations.\r\n\r\n- **News Item Component Enhancements:**\r\n  - Added support for date arrays in `NewsItem.php` and `newsItem.json`. Added standing class.\r\n  - Updated date partial in `partials/date.blade.php` to handle date arrays.\r\n\r\n- **Type Hinting Error Handling:** Improved error handling for type hinting issues in `Register.php`, excluding `lang` from the check.\r\n\r\n### Algolia Index (3.2.1)\r\n\r\n- A patch has been implemented to correctly remove content in `<style>` and `<script>` tags from indexed content.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.0.2",
+            "publishedAt": "2025-02-10T12:25:35Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.0.0",
             "version": "5.0.0",
@@ -92,15 +101,6 @@
             "body": "Municipio 4.6.0\r\n===============\r\n\r\nWith this release, we focus on further implementing the ImageInterface on more components giving the Posts and manual input the new image feature.\r\n\r\n**Component Library (4.25.2):**\r\n\r\n*   Update the card api to cleanup and simplify the capabilities of the component. Allow ImageInterface to be provided as an image source.\r\n*   Remove some obsolete parameters from the block component.\r\n*   If an empty srcset is provided to the image component, it is removed from the output.\r\n\r\n**Modularity (6.32.0):**\r\n\r\n*   Implements the Image Interface in the posts & manual input modules.\r\n\r\n**Municipio Theme (5.34.0):**\r\n\r\n*   The prepare post functionality now adds a ImageContract item in the return object. This is implemented in the archive lists, making archives more flexible.\r\n*   Images that are added to the media library during a sync from an external source are now hidden to prevent manipulation of images that should only be used by the synced posts.\r\n\r\n**Styleguide (0.11.1133):**\u00a0\r\n\r\n*   Updates of styles for the card component.\r\n\r\n**Event manager integration (2.0.18):**\u00a0\r\n\r\n*   *   The react component displaying event items, has been updated to reflect the changes made in the card component.\r\n\r\nDeprecations\r\n------------\r\n\r\nThis release deprecates the following plugins ( removed from composer.json ). If you still want them to be avabile, please add them in composer.local.json.\r\n\r\n*   \u201dhelsingborg-stad/api-project-manager-integration\u201d: \u201d~2.0.3\u201d,",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.6.0",
             "publishedAt": "2024-10-03T07:03:36Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.5.3",
-            "version": "4.5.3",
-            "body": "### Municipio Theme (5.32.5)\r\n* Minor changes to fix inconsistencies in project templates.\r\n\r\n",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.5.3",
-            "publishedAt": "2024-10-01T11:01:30Z",
             "isPrerelease": false,
             "isDraft": false
         }

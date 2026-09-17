@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-17T10:47:36+00:00",
-    "count": 86,
+    "generatedAt": "2026-09-17T11:46:52+00:00",
+    "count": 87,
     "pageSize": 10,
     "pageNumber": 7,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.2.3",
+            "version": "4.2.3",
+            "body": "**Municipio Theme (5.8.11):**\r\n\r\n- Changes the filter to apply a default value of the icon type, to be able to explicitly set a overriding value locally where components are used.\r\n- Enqueues instantpage.js later on, so that the document has been fully loaded before init. This will enshure that instant page can work properly.\r\n- A fix has been made, to enable users to disable \"posts\" in the Theme Options.\r\n- Get related posts only runs on place templates. This may be changed in the future, when more types support this feature.\r\n\r\n**Component library(4.15.1):**\r\n\r\n- Adds support of default fill mode in the icon component.\r\n\r\n**Modaularity (6.19.0):**\r\n\r\n- Resolves an issue with like functionality for visit sites (main menu counter)",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.2.3",
+            "publishedAt": "2024-08-19T09:55:13Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.2.2",
             "version": "4.2.2",
@@ -92,15 +101,6 @@
             "body": "## What's changed\r\n* Municipio (5.0.0): Remove support for secondary query causing performance issues.\r\n* Modularity Open Street Map (2.1.1): Downgrade to play nice with Municipio 5.0.0",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.7",
             "publishedAt": "2024-06-27T11:46:58Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "4.0.6",
-            "version": "4.0.6",
-            "body": "## What's changed\r\n* Modularity Form Builder (v3.2.2): Fix issue with conditional notifications not being sent.\r\n* Modularity Open Street Map: Pin to exact version (2.0.10) due to incompability with current version of Municipio.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.6",
-            "publishedAt": "2024-06-27T07:29:02Z",
             "isPrerelease": false,
             "isDraft": false
         }

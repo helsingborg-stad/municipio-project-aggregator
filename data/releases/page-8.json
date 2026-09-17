@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-17T10:47:36+00:00",
-    "count": 86,
+    "generatedAt": "2026-09-17T11:46:52+00:00",
+    "count": 87,
     "pageSize": 10,
     "pageNumber": 8,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "4.0.6",
+            "version": "4.0.6",
+            "body": "## What's changed\r\n* Modularity Form Builder (v3.2.2): Fix issue with conditional notifications not being sent.\r\n* Modularity Open Street Map: Pin to exact version (2.0.10) due to incompability with current version of Municipio.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/4.0.6",
+            "publishedAt": "2024-06-27T07:29:02Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "4.0.5",
             "version": "4.0.5",
@@ -92,15 +101,6 @@
             "body": "## What's Changed\r\n* Fix: Modularity form builder correct version by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/10\r\n* Fix: Latest api-event-manager by @NiclasNorin in https://github.com/municipio-se/municipio-deployment/pull/11\r\n\r\n## New Contributors\r\n* @NiclasNorin made their first contribution in https://github.com/municipio-se/municipio-deployment/pull/10\r\n\r\n**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.4.2...3.5.0",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.5.0",
             "publishedAt": "2023-10-24T08:17:42Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "231003 - Stable Release",
-            "version": "3.4.0",
-            "body": "**Full Changelog**: https://github.com/municipio-se/municipio-deployment/compare/3.3.0...3.4.0",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.4.0",
-            "publishedAt": "2023-10-03T11:51:47Z",
             "isPrerelease": false,
             "isDraft": false
         }
