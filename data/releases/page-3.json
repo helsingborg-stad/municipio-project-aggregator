@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-17T11:46:52+00:00",
-    "count": 87,
+    "generatedAt": "2026-09-17T12:53:50+00:00",
+    "count": 88,
     "pageSize": 10,
     "pageNumber": 3,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.6.1",
+            "version": "5.6.1",
+            "body": "Release docs @ https://getmunicipio.com/nyheter/municipio-5-6-1/",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.6.1",
+            "publishedAt": "2025-11-18T11:49:10Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.6.0",
             "version": "5.6.0",
@@ -92,15 +101,6 @@
             "body": "# Release Notes\r\n\r\nThis release focuses on resolving issues with the previous release.  \r\nIt introduces **Vite** for compiling scripts and styles in **Municipio Theme** and **Styleguide**.\r\n\r\n---\r\n\r\n## Municipio Theme (5.163.9)\r\n- Adds a **Trashed page** for media items, allowing users to revert trashed files.\r\n- Replaced **Webpack** with **Vite** as a build system.\r\n- Enqueue new Vite-compiled files as **modules**.\r\n- Adds **ExhibitionEvent Schema** view.\r\n- Add **alt text** to emblem placeholder when an image is missing.\r\n- Allow **font/ namespace** when populating the font selector for custom fonts in customizer.\r\n- Ensure that images are correctly rendered in **Gutenberg editor**.\r\n- Removes some obsolete code related to **TinyMCE editor (plugins)**.\r\n- **Splide Core** is now compiled as a separate asset.\r\n- Update language file for **Swedish translation**.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1312)\r\n- Updates to an **ESM compatible Leaflet MarkerCluster** that avoids monkeypatching of the global instance.\r\n- Update to new version of **Sass**, and uses **Vite** as build system.\r\n- **Slider steppers** are now unclickable, to meet clickable area size standards.\r\n- **Right alignment fix** for collection items.\r\n\r\n---\r\n\r\n## Component Library (4.60.0)\r\n- Links in **email addresses** now support **hyphens**.\r\n- Removes a direct call to a **WordPress function** in breadcrumb.\r\n- Do not include a link text if no link is found in **Card component**.\r\n- Adds a new modifier that places **link last** in collection items.\r\n\r\n---\r\n\r\n## ACF UX Collapse (2.0.7)\r\n- Declares a missing variable in **JavaScript**, preventing breakage in some cases.\r\n\r\n---\r\n\r\n## ACF OpenStreetMap Field (0.79.12)\r\n- Inactivates **block dragging**, to avoid issues with map.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.4.0",
             "publishedAt": "2025-08-29T11:06:17Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.3.5",
-            "version": "5.3.5",
-            "body": "## Modularity Guides ([4.0.5](https://github.com/helsingborg-stad/modularity-guides/))\r\n* Converted javascript to typescript\r\n* Generating email content in the backend instead of frontend\r\n* New API to generate mail introduced\r\n* Transformer to group action items by subject\r\n* Updated all outdated external dependencies\r\n* Consolidated translations to separate class",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.5",
-            "publishedAt": "2025-08-28T09:35:01Z",
             "isPrerelease": false,
             "isDraft": false
         }

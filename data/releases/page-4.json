@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-17T11:46:52+00:00",
-    "count": 87,
+    "generatedAt": "2026-09-17T12:53:50+00:00",
+    "count": 88,
     "pageSize": 10,
     "pageNumber": 4,
     "pageCount": 9,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Release 5.3.5",
+            "version": "5.3.5",
+            "body": "## Modularity Guides ([4.0.5](https://github.com/helsingborg-stad/modularity-guides/))\r\n* Converted javascript to typescript\r\n* Generating email content in the backend instead of frontend\r\n* New API to generate mail introduced\r\n* Transformer to group action items by subject\r\n* Updated all outdated external dependencies\r\n* Consolidated translations to separate class",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.3.5",
+            "publishedAt": "2025-08-28T09:35:01Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "Release 5.3.4",
             "version": "5.3.4",
@@ -92,15 +101,6 @@
             "body": "## Municipio Theme (5.142.4)\r\n\r\n- Adds ability to indent vertical menus (drawer, sidebar). Enabled via Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds option to choose icon type (caret or plus/minus) for vertical menus in the Customizer.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for showing a \"current language\" button in language menus (configured per menu).  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Customizer settings now apply on AJAX requests for re-rendering components.\r\n- Image focus points can now be set in the media library. These act as defaults when the image contract is used.\r\n- Fixes CSS references for locally uploaded fonts.\r\n\r\n---\r\n\r\n## Modularity (6.77.2)\r\n\r\n- Improves `aria-labelledby` references in the Posts module.\r\n- Image module now properly implements `ImageInterface`.  \r\n  \u27a4 As a result, the ability to select image size has been removed.\r\n- Accordion module:  \r\n  \u27a4 Now supports spaced sections and headings outside the card.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n- Adds support for download icons and additional file type icons.  \r\n  _(Contributed by Michael Claesson @ Consid)_\r\n\r\n---\r\n\r\n## Modularity Forms (3.4.10)\r\n\r\n- Adds new file and image upload fields.\r\n\r\n---\r\n\r\n## Event Manager Integration (2.0.31)\r\n\r\n- Adds support for the new file upload field when uploading an event image.\r\n\r\n---\r\n\r\n## Component Library (4.52.9)\r\n\r\n- Adds animated icons (on `aria-pressed`) for plus/minus and hamburger/close symbols.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n- Introduces `IconSection` wrapper component.  \r\n  \u27a4 `iconSection` renamed to `IconSection__item` and must now be used within the wrapper.\r\n\r\n---\r\n\r\n## OpenStreetMap Field (0.79.8)\r\n\r\n- Adds option to have filters open by default.\r\n- Fixes rendering issues in Gutenberg.\r\n\r\n---\r\n\r\n## Styleguide (0.11.1251)\r\n\r\n- Updates third-party slider library **Splide** to the next major version.\r\n- Refactors `fileinput` and `imageinput` field components.\r\n\r\n---\r\n\r\n## Algolia Index (3.2.3)\r\n\r\n- Ensures excerpts are properly sanitized before storing in the Algolia index.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.2.4",
             "publishedAt": "2025-04-15T14:27:06Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "Release 5.1.0",
-            "version": "5.1.0",
-            "body": "## Version 5.1.0  \r\n\r\nVersion 5.1.0 is a patch release for version 5.0.2, fixing some minor issues. This release is designed as a transition release for a plugin switch regarding cookie notices.  \r\n\r\n<!--more-->  \r\n\r\nWe have decided to phase out the [Cookies and Content Security Policy](https://wordpress.org/plugins/cookies-and-content-security-policy/) plugin in favor of [Pressidium Cookie Consent](https://wordpress.org/plugins/pressidium-cookie-consent/).  \r\n\r\n### Municipio Theme (5.129.12)  \r\n\r\n- Sites that are using a network subfolder structure now link the logotype to the main site ID instead of the current site.  \r\n- Fixes an issue with date handling.  \r\n- Fixes a fatal error when emptying the global notices configuration panel.  \r\n- Fixes a date issue (unformatted dates) in the archive type \"list\" for some columns.  \r\n- Fixed ordering issues for posts with identical date-time values by forcing the query to fall back on ascending order.  \r\n\r\n### Modularity (6.67.7)  \r\n\r\nThe notice module now supports (thanks to Consid and Alings\u00e5s Kommun):  \r\n\r\n- Action buttons  \r\n- Placement of action buttons  \r\n- Dismissable notices  \r\n\r\n### Component Library (4.48.3)  \r\n\r\n- The action button in the notice component can now be placed \"aside\" or \"below\" (thanks to Consid and Alings\u00e5s Kommun).  \r\n- Linked cards will now have a truncated version of the content in the card to shorten the reading time of links.  \r\n\r\n### Styleguide (0.11.1224)  \r\n\r\n- The signature component has been modified to resolve excessive spacing on edges.  \r\n\r\n### Cookies and Content Security Policy (2.24)  \r\n\r\n- This plugin is scheduled to be removed from the install in the upcoming minor release.  \r\n\r\n### Pressidium Cookie Consent (1.7.1)  \r\n\r\n- This plugin has been added to the install. It will need to be configured before use.  ",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/5.1.0",
-            "publishedAt": "2025-02-13T07:42:42Z",
             "isPrerelease": false,
             "isDraft": false
         }
