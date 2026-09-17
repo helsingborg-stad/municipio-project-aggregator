@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-17T03:35:09+00:00",
+    "generatedAt": "2026-09-17T04:34:38+00:00",
     "count": 11,
     "repositories": [
         {
@@ -199,17 +199,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-form-builder",
             "fullName": "helsingborg-stad/modularity-form-builder",
             "description": "Simple form builder that uses acf for forms. ",
             "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -360,34 +360,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-products",
-            "fullName": "helsingborg-stad/modularity-products",
-            "description": "Display products & offers matrix",
-            "url": "https://github.com/helsingborg-stad/modularity-products"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "municipio-vite",
             "fullName": "helsingborg-stad/municipio-vite",
             "description": "Vite packages for municipio projects",
@@ -413,6 +385,34 @@
             "fullName": "helsingborg-stad/modularity-openstreetmap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-products",
+            "fullName": "helsingborg-stad/modularity-products",
+            "description": "Display products & offers matrix",
+            "url": "https://github.com/helsingborg-stad/modularity-products"
         },
         {
             "owner": "helsingborg-stad",
@@ -450,6 +450,20 @@
             "url": "https://github.com/helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings"
         },
         {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-arcgis-map",
+            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
             "owner": "helsingborg-stad",
             "name": "redirection-extended",
             "fullName": "helsingborg-stad/redirection-extended",
@@ -469,20 +483,6 @@
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-arcgis-map",
-            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         },
         {
             "owner": "helsingborg-stad",
