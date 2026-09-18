@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-18T13:29:07+00:00",
-    "count": 12,
+    "generatedAt": "2026-09-18T14:30:36+00:00",
+    "count": 11,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -255,27 +255,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-correct-file-paths",
-            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
-            "description": "esolves incorrect file paths, when migrating databases between different environments.",
-            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-acf-fatal-error-when-used-too-early",
-            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
-            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
@@ -301,6 +280,27 @@
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
             "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-correct-file-paths",
+            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
+            "description": "esolves incorrect file paths, when migrating databases between different environments.",
+            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-fatal-error-when-used-too-early",
+            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
+            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -381,34 +381,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-products",
-            "fullName": "helsingborg-stad/modularity-products",
-            "description": "Display products & offers matrix",
-            "url": "https://github.com/helsingborg-stad/modularity-products"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "s3-local-index",
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
@@ -458,6 +430,41 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-products",
+            "fullName": "helsingborg-stad/modularity-products",
+            "description": "Display products & offers matrix",
+            "url": "https://github.com/helsingborg-stad/modularity-products"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-translation-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-translation-too-early",
+            "description": "Throws a descriptive exception when an translation is loaded before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-translation-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "redirection-extended",
             "fullName": "helsingborg-stad/redirection-extended",
             "description": "",
@@ -476,13 +483,6 @@
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -511,6 +511,20 @@
             "fullName": "helsingborg-stad/wputilservice",
             "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
             "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         }
     ],
     "authors": [
@@ -853,39 +867,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOGyB3t88AAAABD72UVQ",
-            "title": "Feat: move acf to mu plugin",
-            "url": "https://github.com/municipio-se/municipio-deployment/pull/209",
-            "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-09-17T13:37:41Z",
-            "number": 209,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "labels": [],
