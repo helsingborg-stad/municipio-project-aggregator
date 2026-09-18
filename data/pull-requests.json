@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-18T15:29:43+00:00",
+    "generatedAt": "2026-09-18T16:30:12+00:00",
     "count": 14,
     "repositories": [
         {
@@ -381,6 +381,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "s3-local-index",
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
@@ -413,20 +427,6 @@
             "fullName": "helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings",
             "description": "Adds a wp-cli command to send a miniorange saml sso default setting to all blogs in a network. ",
             "url": "https://github.com/helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
         },
         {
             "owner": "helsingborg-stad",
