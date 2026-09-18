@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-18T14:30:36+00:00",
-    "count": 11,
+    "generatedAt": "2026-09-18T15:29:43+00:00",
+    "count": 14,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -854,6 +854,105 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOLwUbvs8AAAABEGXwDw",
+            "title": "Fall back to occasions on legacy events",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/36",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-09-18T15:08:46Z",
+            "number": 36,
+            "state": "OPEN",
+            "author": {
+                "login": "WilliamLundqvist",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
+                "url": "https://github.com/WilliamLundqvist",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOCquRHc8AAAABEGTNeA",
+            "title": "feat: siteselector",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1309",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-18T15:00:38Z",
+            "number": 1309,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABEGSvNw",
+            "title": "feat: updates siteselector ",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/757",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-09-18T14:59:51Z",
+            "number": 757,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOGyB3t88AAAABED2qQg",
             "title": "Devcontainer/openlitespeed",
