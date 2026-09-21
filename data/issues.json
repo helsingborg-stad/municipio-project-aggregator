@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-21T21:18:11+00:00",
+    "generatedAt": "2026-09-21T22:19:08+00:00",
     "count": 109,
     "repositories": [
         {
@@ -150,20 +150,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-testimonials",
-            "fullName": "helsingborg-stad/modularity-testimonials",
-            "description": "Modularity plugin to display testemonials",
-            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "webhooks-manager",
-            "fullName": "helsingborg-stad/webhooks-manager",
-            "description": "Create and manage webhooks from WordPress action hooks",
-            "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-timeline",
             "fullName": "helsingborg-stad/modularity-timeline",
             "description": "A module to display a timeline",
@@ -175,6 +161,20 @@
             "fullName": "helsingborg-stad/modularity-entryscape",
             "description": "Enables modules to display entryscape ",
             "url": "https://github.com/helsingborg-stad/modularity-entryscape"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-testimonials",
+            "fullName": "helsingborg-stad/modularity-testimonials",
+            "description": "Modularity plugin to display testemonials",
+            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "webhooks-manager",
+            "fullName": "helsingborg-stad/webhooks-manager",
+            "description": "Create and manage webhooks from WordPress action hooks",
+            "url": "https://github.com/helsingborg-stad/webhooks-manager"
         },
         {
             "owner": "helsingborg-stad",
