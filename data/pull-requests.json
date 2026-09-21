@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-21T12:39:22+00:00",
+    "generatedAt": "2026-09-21T13:31:35+00:00",
     "count": 13,
     "repositories": [
         {
@@ -485,20 +485,6 @@
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-arcgis-map",
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
@@ -511,6 +497,20 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -855,12 +855,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOCquRHc8AAAABEaHNAg",
-            "title": "feat: remove color ability on basic navs",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1311",
+            "id": "PR_kwDOCquRHc8AAAABEbN8LQ",
+            "title": "feat: prune oprhaned settings",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1312",
             "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-09-21T11:06:45Z",
-            "number": 1311,
+            "createdAt": "2026-09-21T13:19:18Z",
+            "number": 1312,
             "state": "OPEN",
             "author": {
                 "login": "sebastianthulin",
