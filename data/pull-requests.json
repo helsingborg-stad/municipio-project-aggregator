@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-21T23:28:36+00:00",
+    "generatedAt": "2026-09-22T01:03:30+00:00",
     "count": 13,
     "repositories": [
         {
@@ -115,13 +115,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-acf-google-maps-key",
-            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
-            "description": "Adds a field to enter a google maps api key for ACF",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-schools-manager",
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
@@ -140,6 +133,13 @@
             "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
             "description": "",
             "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-google-maps-key",
+            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
+            "description": "Adds a field to enter a google maps api key for ACF",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
         },
         {
             "owner": "helsingborg-stad",
