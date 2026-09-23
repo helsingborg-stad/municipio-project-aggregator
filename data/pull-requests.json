@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-23T02:38:39+00:00",
+    "generatedAt": "2026-09-23T03:36:06+00:00",
     "count": 14,
     "repositories": [
         {
@@ -150,13 +150,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -168,6 +161,13 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
