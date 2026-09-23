@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-23T19:17:47+00:00",
-    "count": 110,
+    "generatedAt": "2026-09-23T20:21:17+00:00",
+    "count": 108,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -430,6 +430,27 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -462,27 +483,6 @@
             "fullName": "helsingborg-stad/wpmu-fatal-error-when-translation-too-early",
             "description": "Throws a descriptive exception when an translation is loaded before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-translation-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
@@ -1092,59 +1092,6 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOA4iurc8AAAABO-MT-g",
-            "title": "Checkboxes do not affect steps with desc when clicking checkbox",
-            "url": "https://github.com/helsingborg-stad/modularity-guides/issues/26",
-            "repository": "helsingborg-stad/modularity-guides",
-            "createdAt": "2026-08-31T11:40:25Z",
-            "number": 26,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Fix recursive checkbox relations and restore desc toggle binding",
-                    "url": "https://github.com/helsingborg-stad/modularity-guides/pull/27",
-                    "repository": "helsingborg-stad/modularity-guides"
-                }
-            ]
-        },
-        {
             "id": "I_kwDOAuIygs8AAAABGbI3tQ",
             "title": "Content not rendering if using classic editor on one-page template",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/2113",
@@ -1193,59 +1140,6 @@
                     "event": "connected",
                     "title": "Render one-page content for classic editor posts",
                     "url": "https://github.com/helsingborg-stad/Municipio/pull/2205",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABENjkaQ",
-            "title": "Customizer should use native fields as far as possible",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2087",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-06-03T06:54:56Z",
-            "number": 2087,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Register simple Customizer fields natively",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2088",
                     "repository": "helsingborg-stad/Municipio"
                 }
             ]
