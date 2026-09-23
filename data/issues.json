@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-23T13:20:42+00:00",
+    "generatedAt": "2026-09-23T14:22:08+00:00",
     "count": 110,
     "repositories": [
         {
@@ -367,6 +367,34 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-openstreetmap",
+            "fullName": "helsingborg-stad/modularity-openstreetmap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "s3-local-index",
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
@@ -399,34 +427,6 @@
             "fullName": "helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings",
             "description": "Adds a wp-cli command to send a miniorange saml sso default setting to all blogs in a network. ",
             "url": "https://github.com/helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-openstreetmap",
-            "fullName": "helsingborg-stad/modularity-openstreetmap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
         },
         {
             "owner": "helsingborg-stad",
