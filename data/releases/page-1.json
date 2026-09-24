@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-24T09:48:22+00:00",
-    "count": 90,
+    "generatedAt": "2026-09-24T10:47:32+00:00",
+    "count": 91,
     "pageSize": 10,
     "pageNumber": 1,
-    "pageCount": 9,
+    "pageCount": 10,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.2.5",
+            "version": "6.2.5",
+            "body": "Minor release: This update focuses on navigation and interface improvements. Municipio adds a redesigned menu module with more flexible layouts, improved mobile chat behavior, and new button styling controls in the header and tab menus. Styleguide delivers a major popover refresh, a new site selector component, and more consistent color inheritance for navigation and buttons.\r\n\r\n## Municipio Theme [7.38.6...7.43.1](https://github.com/helsingborg-stad/municipio/compare/7.38.6...7.43.1)\r\n- Chat: Moves the chat script integration and adds a full-screen chat bubble layout for mobile devices.\r\n- Language Menu: Fixes placement issues so the language switcher opens in the correct position.\r\n- Menu Module: Introduces a clearer visual design with working expand and collapse behavior.\r\n- Menu Module: Makes menu columns more fluid and adds a spaced layout option for better content balance.\r\n- Header Buttons: Adds settings for controlling button styles in the header.\r\n- Tab Menu: Adds support for button appearance settings in the tab menu alternative.\r\n- Mega Menu: Keeps the mega menu label visible on mobile devices to avoid navigation issues.\r\n\r\n\r\n## Styleguide [3.24.18...3.31.4](https://github.com/helsingborg-stad/styleguide/compare/3.24.18...3.31.4)\r\n- Popover: Reworks the popover component with a cleaner implementation, a new cover mode, and a smaller API.\r\n- Popover: Improves positioning behavior by resetting calculations before placement and handling dropdown overflow more reliably.\r\n- Site Selector: Adds a redesigned site selector component with updated sizing, spacing, and examples.\r\n- Navigation Colors: Removes manual color overrides on basic navigation so it follows the surrounding design more consistently.\r\n- Buttons: Lets buttons inherit the active color scheme, keeps button sizes aligned more consistently, and preserves corner shapes in SVG buttons.\r\n\r\n## Deployment Configuration [7.38.6...7.43.1](https://github.com/municipio-se/municipio-deployment/compare/7.38.6...7.43.1)\r\n\r\n- ACF Pro: Installs Advanced Custom Fields Pro as a must-use plugin so it loads before regular plugins.\r\n- ACF Safety: Adds a must-use safeguard that throws a clear error if ACF fields are accessed too early.\r\n- Municipio Clone: Adds the Municipio Clone plugin to the deployment.\r\n- WordPress Core: Updates the Roots-managed no-content WordPress package from 7.1.1 to 7.1.2.\r\n- WordPress Plugins: Updates Redirection to 5.10.1 and Redis Cache to 3.0.0.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.5",
+            "publishedAt": "2026-09-24T10:28:18Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.2.4",
             "version": "6.2.4",
@@ -92,15 +101,6 @@
             "body": "Minor release focused on safer logging, more reliable theme upgrades, and cleaner header behavior. Municipio adds migration handling for empty default tokens and aligns header layouts with the latest Styleguide update, while Stream hardens multisite access and redacts sensitive integration data from logs.\r\n\r\n## Municipio Theme [7.16.1...7.17.2](https://github.com/helsingborg-stad/Municipio/compare/7.16.1...7.17.2)\r\n- Handles empty default design tokens during migration to reduce upgrade issues in existing setups.\r\n- Updates header layouts to follow the latest Styleguide settings more consistently.\r\n- Fixes button rendering so the correct style setting is used.\r\n\r\n## Styleguide [3.17.22...3.18.0](https://github.com/helsingborg-stad/styleguide/compare/3.17.22...3.18.0)\r\n- Lets standard headers use width settings even when header padding is turned off.\r\n\r\n## Stream Activity Log [4.3.0...4.4.0](https://github.com/xwp/stream/blob/master/changelog.md#440---august-31-2026)\r\n- Tightens multisite access so activity records stay scoped to the current site, and network-wide settings now require network-level permission.\r\n- Redacts integration secrets and alert destination credentials from logs and alert data output.\r\n- Fixes false \u201cSITE IS DISCONNECTED\u201d CLI errors on empty sites, an early capability-check fatal error, and an unknown-user password reset warning.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.2",
             "publishedAt": "2026-09-01T13:07:24Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "6.1.1",
-            "version": "6.1.1",
-            "body": "Minor release focused on editor flexibility and front-end stability. Municipio lets editors manage custom CSS, hardens generated image handling, restores schema-based taxonomy creation, and fixes missing header items. The updated Styleguide improves menu and drawer positioning, respects disabled header padding, and fixes inherited button contrast.\r\n\r\n## Municipio Theme [7.14.5...7.16.1](https://github.com/helsingborg-stad/Municipio/compare/7.14.5...7.16.1)\r\n- Image Conversion: Prevents broken or half-written generated images from being published, and falls back to the original image if conversion fails.\r\n- Schema Taxonomies: Restores taxonomy creation for schema types and makes sure schema-specific taxonomy filters run correctly.\r\n- Header Layout: Keeps mobile-only and responsive header items aligned and visible instead of dropping them from the layout.\r\n- Custom CSS Permissions: Editors can now edit Customizer CSS on multisite setups without requiring higher-level access.\r\n\r\n## Styleguide [3.17.12...3.17.22](https://github.com/helsingborg-stad/styleguide/compare/3.17.12...3.17.22)\r\n- Mega Menu Positioning: Aligns full-width dropdowns correctly so they open in the expected place.\r\n- Header Padding: Respects disabled horizontal header padding to avoid unwanted spacing.\r\n- Button Contrast: Basic buttons now inherit the correct contrast color for clearer text on inherited color themes.\r\n- Drawer Layering: Raises the drawer and overlay above surrounding content so the menu stays clickable and visible.\r\n- Map Library: Updates the bundled OpenStreetMap library to the latest version.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.1",
-            "publishedAt": "2026-09-01T07:59:08Z",
             "isPrerelease": false,
             "isDraft": false
         }
