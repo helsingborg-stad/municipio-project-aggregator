@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-24T11:30:37+00:00",
-    "count": 15,
+    "generatedAt": "2026-09-24T12:42:46+00:00",
+    "count": 14,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -115,20 +115,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "lix-calculator",
-            "fullName": "helsingborg-stad/lix-calculator",
-            "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
-            "url": "https://github.com/helsingborg-stad/lix-calculator"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "s3-uploads-custom-endpoint",
             "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
             "description": "",
@@ -140,6 +126,20 @@
             "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
             "description": "Adds a field to enter a google maps api key for ACF",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "lix-calculator",
+            "fullName": "helsingborg-stad/lix-calculator",
+            "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
+            "url": "https://github.com/helsingborg-stad/lix-calculator"
         },
         {
             "owner": "helsingborg-stad",
@@ -367,34 +367,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-openstreetmap",
-            "fullName": "helsingborg-stad/modularity-openstreetmap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "s3-local-index",
             "fullName": "helsingborg-stad/s3-local-index",
             "description": "Stores a local index to make common file operations faster",
@@ -427,6 +399,34 @@
             "fullName": "helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings",
             "description": "Adds a wp-cli command to send a miniorange saml sso default setting to all blogs in a network. ",
             "url": "https://github.com/helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-openstreetmap",
+            "fullName": "helsingborg-stad/modularity-openstreetmap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
         },
         {
             "owner": "helsingborg-stad",
@@ -855,51 +855,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs8AAAABE6_ojA",
-            "title": "fix: correcting chat cover state",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2240",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-24T11:30:17Z",
-            "number": 2240,
+            "id": "PR_kwDOLwUbvs8AAAABE7F48A",
+            "title": "fix: map featured_media image for legacy events",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/38",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-09-24T11:40:52Z",
+            "number": 38,
             "state": "OPEN",
             "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABEz4SUQ",
-            "title": "feat: add negative space module",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2236",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-23T19:33:45Z",
-            "number": 2236,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
+                "url": "https://github.com/michaelclaesson",
+                "company": "Consid Bor\u00e5s"
             },
             "assignees": [],
             "labels": [],
