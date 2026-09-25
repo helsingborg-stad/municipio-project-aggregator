@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-25T15:30:58+00:00",
-    "count": 17,
+    "generatedAt": "2026-09-25T16:34:09+00:00",
+    "count": 18,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -854,6 +854,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOPwHOW88AAAABFJFbeA",
+            "title": "fix(concurrency): resolve racecondition resulting in missing data",
+            "url": "https://github.com/helsingborg-stad/s3-local-index/pull/43",
+            "repository": "helsingborg-stad/s3-local-index",
+            "createdAt": "2026-09-25T16:03:37Z",
+            "number": 43,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABFHfvcw",
             "title": "fix: accessibility for menu module",
