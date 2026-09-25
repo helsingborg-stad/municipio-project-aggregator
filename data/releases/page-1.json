@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-25T08:51:50+00:00",
-    "count": 91,
+    "generatedAt": "2026-09-25T09:48:30+00:00",
+    "count": 92,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 10,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.2.6",
+            "version": "6.2.6",
+            "body": "Minor release focused on layout and navigation improvements in Municipio, safer webhook startup behavior, and more reliable cloned media imports. It introduces the new Negative Space module, improves hash-link behavior across the interface, and fixes several chat, menu, editor, and packaging issues.\r\n\r\n## Municipio Deployment\r\n- Fixed issue that the `object-cache.php` dropin was not up to date with the installed redis-cache plugin. We now copy the dropin from the installed plugin on `post-install-cmd`. \r\n\r\n## Municipio Theme [7.43.13...7.44.24](https://github.com/helsingborg-stad/municipio/compare/7.43.13...7.44.24)\r\n- Negative Space Module: Adds a new Modularity module for creating negative-spacing layouts without custom code.\r\n- Chat Block: Fixes the chat block cover state, CSS classes, interaction flow, and popover spacing so the block displays and behaves correctly.\r\n- Menu Handling: Fixes clipping and background issues in menu modules, prevents submenu arrows from wrapping onto a new line, and makes `#` links toggle child menus more reliably.\r\n- Gutenberg Compatibility: Ensures module assets and spacing styles load correctly in the block editor and updates block-style enqueueing for WordPress 7.2.\r\n- Table of Contents: Removes unintended background styling from TOC elements for a cleaner appearance.\r\n- Theme Packaging: Includes `theme.json` in distributed builds so packaged releases keep the expected theme configuration.\r\n\r\n## Styleguide [3.32.5...3.33.5](https://github.com/helsingborg-stad/styleguide/compare/3.32.5...3.33.5)\r\n- Hash-link Navigation: Menu items that use `#` can now open and close their child menus directly from the main link, making navigation behave more predictably on click and touch.\r\n- Pagination Controls: Previous and next buttons now use proper disabled states, preventing pagination controls from appearing clickable when no more pages are available.\r\n\r\n## Municipio Clone [1.4.1...v1.4.2](https://github.com/helsingborg-stad/municipio-clone/compare/v1.4.1...v1.4.2)\r\n- Media Import: Rewrites remote media URLs to the source site's actual media domain so cloned images and files keep working links.\r\n\r\n## Webhooks Manager [1.3.2...1.3.3](https://github.com/helsingborg-stad/webhooks-manager/compare/1.3.2...1.3.3)\r\n- ACF Initialization: Defers loading ACF-backed webhook settings until ACF is ready, preventing fatal errors during early WordPress startup.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.6",
+            "publishedAt": "2026-09-25T09:10:52Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.2.5",
             "version": "6.2.5",
@@ -92,15 +101,6 @@
             "body": "Minor release focused on performance, chat stability, and a small guide visibility fix. Municipio reduces repeated rendering and trims chat traffic, Styleguide brings component-level performance improvements, and Modularity Guides fixes display issues in guide content.\r\n\r\n## Modularity Guides [5.0.12...5.0.14](https://github.com/helsingborg-stad/modularity-guides/compare/5.0.12...5.0.14)\r\n- Guide Visibility: Fixes visibility issues in guide content so items display more reliably.\r\n\r\n## Municipio Theme [7.17.2...7.20.2](https://github.com/helsingborg-stad/Municipio/compare/7.17.2...7.20.2)\r\n- Chat Streaming: Buffers streamed chat events before sending them onward, preventing broken partial responses.\r\n- Chat Payloads: Removes unnecessary data from chat responses sent to the browser.\r\n- Rendering Performance: Reduces repeated work across the theme, including faster S3 usage checks, cached image focus handling, and runtime caching to avoid rendering blocks multiple times.\r\n- Table of Contents: Skips TOC parsing when the feature is turned off, avoiding unnecessary processing.\r\n- Footer Layout: Uses footer column settings correctly and falls back to three columns when no value is set.\r\n- Register openstreetmap as allowed CSP sources. \r\n\r\n## Styleguide [3.18.0...3.18.2](https://github.com/helsingborg-stad/styleguide/compare/3.18.0...3.18.2)\r\n- Component Performance: Brings updated Component Library internals that improve classname resolution, warmup behavior, controller reuse, and image focus handling.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.3",
             "publishedAt": "2026-09-02T12:03:58Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "6.1.2",
-            "version": "6.1.2",
-            "body": "Minor release focused on safer logging, more reliable theme upgrades, and cleaner header behavior. Municipio adds migration handling for empty default tokens and aligns header layouts with the latest Styleguide update, while Stream hardens multisite access and redacts sensitive integration data from logs.\r\n\r\n## Municipio Theme [7.16.1...7.17.2](https://github.com/helsingborg-stad/Municipio/compare/7.16.1...7.17.2)\r\n- Handles empty default design tokens during migration to reduce upgrade issues in existing setups.\r\n- Updates header layouts to follow the latest Styleguide settings more consistently.\r\n- Fixes button rendering so the correct style setting is used.\r\n\r\n## Styleguide [3.17.22...3.18.0](https://github.com/helsingborg-stad/styleguide/compare/3.17.22...3.18.0)\r\n- Lets standard headers use width settings even when header padding is turned off.\r\n\r\n## Stream Activity Log [4.3.0...4.4.0](https://github.com/xwp/stream/blob/master/changelog.md#440---august-31-2026)\r\n- Tightens multisite access so activity records stay scoped to the current site, and network-wide settings now require network-level permission.\r\n- Redacts integration secrets and alert destination credentials from logs and alert data output.\r\n- Fixes false \u201cSITE IS DISCONNECTED\u201d CLI errors on empty sites, an early capability-check fatal error, and an unknown-user password reset warning.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.2",
-            "publishedAt": "2026-09-01T13:07:24Z",
             "isPrerelease": false,
             "isDraft": false
         }
