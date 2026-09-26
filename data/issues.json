@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-25T23:17:41+00:00",
+    "generatedAt": "2026-09-26T00:53:22+00:00",
     "count": 108,
     "repositories": [
         {
@@ -37,18 +37,18 @@
             "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "api-event-manager",
-            "fullName": "helsingborg-stad/api-event-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-event-manager"
-        },
-        {
             "owner": "municipio-se",
             "name": "municipio-deployment",
             "fullName": "municipio-se/municipio-deployment",
             "description": "Deploy of Municpio by fork",
             "url": "https://github.com/municipio-se/municipio-deployment"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-event-manager",
+            "fullName": "helsingborg-stad/api-event-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-event-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -353,6 +353,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "municipio-vite",
             "fullName": "helsingborg-stad/municipio-vite",
             "description": "Vite packages for municipio projects",
@@ -378,20 +392,6 @@
             "fullName": "helsingborg-stad/modularity-openstreetmap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
         },
         {
             "owner": "helsingborg-stad",
