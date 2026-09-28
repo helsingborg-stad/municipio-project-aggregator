@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-28T18:27:21+00:00",
-    "count": 111,
+    "generatedAt": "2026-09-28T19:17:38+00:00",
+    "count": 114,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -101,17 +101,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager",
-            "fullName": "helsingborg-stad/api-volunteer-manager",
-            "description": "Managing data for volunteers and their assignments",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
             "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager",
+            "fullName": "helsingborg-stad/api-volunteer-manager",
+            "description": "Managing data for volunteers and their assignments",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -500,20 +500,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-invalidate-login-pagecache",
-            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
-            "description": "Invalidates pagecache on submit of the login form.",
-            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "ACF-UX-collapse-explore",
             "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
             "description": "Exploration clone of ACF-UX-collapse for better deployment",
@@ -525,6 +511,20 @@
             "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
             "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-invalidate-login-pagecache",
+            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
+            "description": "Invalidates pagecache on submit of the login form.",
+            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
         }
     ],
     "authors": [
@@ -824,7 +824,7 @@
         },
         {
             "login": "sebastianthulin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
             "url": "https://github.com/sebastianthulin",
             "company": "Helsingborgs stad"
         },
@@ -900,12 +900,111 @@
             "relationships": []
         },
         {
+            "id": "I_kwDOCPnM4c8AAAABTvAk0g",
+            "title": "Remove jQuery dependency from the public JSON render module",
+            "url": "https://github.com/helsingborg-stad/modularity-json-render/issues/48",
+            "repository": "helsingborg-stad/modularity-json-render",
+            "createdAt": "2026-09-28T18:27:39Z",
+            "number": 48,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "I_kwDOBGRbgs8AAAABTvAheg",
+            "title": "Remove jQuery from frontend event integration and event module",
+            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/289",
+            "repository": "helsingborg-stad/api-event-manager-integration",
+            "createdAt": "2026-09-28T18:27:34Z",
+            "number": 289,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "I_kwDOAs7djs8AAAABTvAeDg",
             "title": "Remove jQuery from frontend alarm and disturbance scripts",
             "url": "https://github.com/helsingborg-stad/api-alarm-integration/issues/36",
             "repository": "helsingborg-stad/api-alarm-integration",
             "createdAt": "2026-09-28T18:27:30Z",
             "number": 36,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "I_kwDOAuIygs8AAAABTvAVig",
+            "title": "Remove jQuery dependency from public frontend assets",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2257",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-09-28T18:27:18Z",
+            "number": 2257,
             "state": "OPEN",
             "author": {
                 "login": "sebastianthulin",
