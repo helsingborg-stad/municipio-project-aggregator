@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-09-29T10:50:12+00:00",
-    "count": 92,
+    "generatedAt": "2026-09-29T11:49:04+00:00",
+    "count": 93,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 10,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.2.7",
+            "version": "6.2.7",
+            "body": "Minor release: introduces multipart image webhooks in Frontend Form and improves Municipio search indexing with schema-aware Typesense data. It also fixes chat button layout, popover height, menu heading text, and collapsible search button styling for a more polished user experience.\r\n\r\n## Modularity Frontend Form [0.84.0...0.84.4](https://github.com/helsingborg-stad/modularity-frontend-form/compare/0.84.0...0.84.4)\r\n- Multipart Webhooks: Adds optional multipart webhook delivery for forms with images, making image uploads easier for connected services to receive and process.\r\n- Image Handling: Sends native multipart image fields, skips missing optional images, and improves error reporting when webhook delivery fails.\r\n\r\n## Municipio Theme [7.44.24...7.45.3](https://github.com/helsingborg-stad/municipio/compare/7.44.24...7.45.3)\r\n- Search Index: Adds schema-type-aware schema data to the Typesense provider so more structured content can be included in search results.\r\n- Chat Interface: Fixes chat bubble button rows so actions are displayed more consistently.\r\n- Menu Module: Corrects missing wording in the menu module heading shown in the interface.\r\n- Popover Cover Mode: Fixes message height issues so popover content is displayed more cleanly.\r\n\r\n## Styleguide [3.33.5...3.33.7](https://github.com/helsingborg-stad/styleguide/compare/3.33.5...3.33.7)\r\n- Collapsible Search: Removes unintended corner styling on buttons in collapsible search so they match the expected appearance.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.7",
+            "publishedAt": "2026-09-29T10:57:35Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.2.6",
             "version": "6.2.6",
@@ -92,15 +101,6 @@
             "body": "Minor release focused on search, customizer polish, and runtime stability. Municipio now folds search indexing into the theme, improves indexed search results and layout, strengthens chat streaming and media handling, and reduces unnecessary rendering and query work across the site.\r\n\r\n## Municipio Theme [7.21.0...7.28.0](https://github.com/helsingborg-stad/Municipio/compare/7.21.0...7.28.0)\r\n- Search Index: Builds search indexing into the theme, replacing the separate Algolia package setup. It integrates support for typesense and algolia providers while giving room to swiftly add additional providers. All search engines also support indexing files and module content. \r\n- Search Results: Adds schema.org data to indexed content, renders highlighted matches safely, and aligns the search page layout and filters more closely with the standard search experience.\r\n- Search CLI: Removes the outdated `--provider` flag from the search index command and clarifies constant-based settings in the admin UI.\r\n- Chat Streaming: Buffers server-sent events before forwarding them and removes unnecessary payload data sent to the browser.\r\n- Customizer: Improves fallback handling, clearer labels and options, and a better header layout control layout while removing the drawer screen-size option.\r\n- Media Handling: Stops retrying failed image conversions and validates image files earlier to avoid repeated processing errors.\r\n- Performance: Cuts repeated work with block render caching, fewer duplicate queries, better cached module placement handling, and less unnecessary processing when TOC is disabled.\r\n- Layout Fixes: Uses footer column settings correctly and avoids exposing the automatic post-language sentinel as an HTML language value.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.4",
             "publishedAt": "2026-09-07T07:21:05Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "6.1.3",
-            "version": "6.1.3",
-            "body": "Minor release focused on performance, chat stability, and a small guide visibility fix. Municipio reduces repeated rendering and trims chat traffic, Styleguide brings component-level performance improvements, and Modularity Guides fixes display issues in guide content.\r\n\r\n## Modularity Guides [5.0.12...5.0.14](https://github.com/helsingborg-stad/modularity-guides/compare/5.0.12...5.0.14)\r\n- Guide Visibility: Fixes visibility issues in guide content so items display more reliably.\r\n\r\n## Municipio Theme [7.17.2...7.20.2](https://github.com/helsingborg-stad/Municipio/compare/7.17.2...7.20.2)\r\n- Chat Streaming: Buffers streamed chat events before sending them onward, preventing broken partial responses.\r\n- Chat Payloads: Removes unnecessary data from chat responses sent to the browser.\r\n- Rendering Performance: Reduces repeated work across the theme, including faster S3 usage checks, cached image focus handling, and runtime caching to avoid rendering blocks multiple times.\r\n- Table of Contents: Skips TOC parsing when the feature is turned off, avoiding unnecessary processing.\r\n- Footer Layout: Uses footer column settings correctly and falls back to three columns when no value is set.\r\n- Register openstreetmap as allowed CSP sources. \r\n\r\n## Styleguide [3.18.0...3.18.2](https://github.com/helsingborg-stad/styleguide/compare/3.18.0...3.18.2)\r\n- Component Performance: Brings updated Component Library internals that improve classname resolution, warmup behavior, controller reuse, and image focus handling.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.1.3",
-            "publishedAt": "2026-09-02T12:03:58Z",
             "isPrerelease": false,
             "isDraft": false
         }
