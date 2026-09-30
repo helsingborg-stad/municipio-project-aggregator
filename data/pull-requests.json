@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-30T16:36:01+00:00",
-    "count": 20,
+    "generatedAt": "2026-09-30T17:31:01+00:00",
+    "count": 19,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -115,13 +115,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-acf-google-maps-key",
-            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
-            "description": "Adds a field to enter a google maps api key for ACF",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
@@ -140,6 +133,13 @@
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
             "url": "https://github.com/helsingborg-stad/lix-calculator"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-google-maps-key",
+            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
+            "description": "Adds a field to enter a google maps api key for ACF",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
         },
         {
             "owner": "helsingborg-stad",
@@ -247,20 +247,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "miniorange-saml-20-single-sign-on",
-            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
-            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
-            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-link-cards",
             "fullName": "Considbrs-Webdev/modularity-link-cards",
@@ -297,6 +283,27 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "miniorange-saml-20-single-sign-on",
+            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
+            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
+            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
@@ -308,13 +315,6 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -922,39 +922,6 @@
         }
     ],
     "items": [
-        {
-            "id": "PR_kwDOAuIygs8AAAABF6QoiQ",
-            "title": "[Snyk] Security upgrade markdown-it from 14.3.0 to 14.3.1",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2268",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-30T14:10:09Z",
-            "number": 2268,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
         {
             "id": "PR_kwDOCquRHc8AAAABF59e3w",
             "title": "chore(main-1.x): release 3.35.0",
