@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-30T08:31:21+00:00",
-    "count": 113,
+    "generatedAt": "2026-09-30T09:24:27+00:00",
+    "count": 114,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -616,7 +616,7 @@
         },
         {
             "login": "MrjonasN",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/55234353?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/55234353?u=ed30951e424ee70f4cd7919f2225fe3ef1ac7137&v=4",
             "url": "https://github.com/MrjonasN",
             "company": ""
         },
@@ -928,6 +928,39 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOOWhNPs8AAAABUGos1Q",
+            "title": "Map style is hardcoded to default and ignores Municipio Customizer settings",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/158",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-09-30T09:15:27Z",
+            "number": 158,
+            "state": "OPEN",
+            "author": {
+                "login": "MrjonasN",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/55234353?u=ed30951e424ee70f4cd7919f2225fe3ef1ac7137&v=4",
+                "url": "https://github.com/MrjonasN",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "I_kwDOJP-wC88AAAABTvAoAg",
             "title": "Remove jQuery dependency from the public OpenStreetMap script",
