@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-30T16:26:03+00:00",
+    "generatedAt": "2026-09-30T17:20:43+00:00",
     "count": 114,
     "repositories": [
         {
@@ -115,13 +115,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-acf-google-maps-key",
-            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
-            "description": "Adds a field to enter a google maps api key for ACF",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
@@ -140,6 +133,13 @@
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
             "url": "https://github.com/helsingborg-stad/lix-calculator"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-google-maps-key",
+            "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
+            "description": "Adds a field to enter a google maps api key for ACF",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
         },
         {
             "owner": "helsingborg-stad",
@@ -247,20 +247,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "miniorange-saml-20-single-sign-on",
-            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
-            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
-            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-link-cards",
             "fullName": "Considbrs-Webdev/modularity-link-cards",
@@ -297,6 +283,27 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "miniorange-saml-20-single-sign-on",
+            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
+            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
+            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
@@ -308,13 +315,6 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -535,20 +535,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -567,6 +553,20 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
