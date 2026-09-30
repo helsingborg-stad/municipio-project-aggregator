@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-30T06:50:24+00:00",
+    "generatedAt": "2026-09-30T07:41:54+00:00",
     "count": 17,
     "repositories": [
         {
@@ -297,13 +297,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
@@ -315,6 +308,13 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
