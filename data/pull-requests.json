@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-30T03:39:02+00:00",
+    "generatedAt": "2026-09-30T04:38:03+00:00",
     "count": 18,
     "repositories": [
         {
@@ -248,27 +248,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-correct-file-paths",
-            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
-            "description": "esolves incorrect file paths, when migrating databases between different environments.",
-            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-acf-fatal-error-when-used-too-early",
-            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
-            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
             "description": "Removes the user endpoint when not logged in",
@@ -287,6 +266,27 @@
             "fullName": "Considbrs-Webdev/modularity-link-cards",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-correct-file-paths",
+            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
+            "description": "esolves incorrect file paths, when migrating databases between different environments.",
+            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-fatal-error-when-used-too-early",
+            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
+            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
