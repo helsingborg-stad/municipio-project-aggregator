@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-30T04:38:03+00:00",
+    "generatedAt": "2026-09-30T05:33:44+00:00",
     "count": 18,
     "repositories": [
         {
@@ -325,20 +325,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-opening-hours",
-            "fullName": "Considbrs-Webdev/modularity-opening-hours",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -357,6 +343,20 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-opening-hours",
+            "fullName": "Considbrs-Webdev/modularity-opening-hours",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
         },
         {
             "owner": "helsingborg-stad",
@@ -765,6 +765,12 @@
             "company": ""
         },
         {
+            "login": "github-actions",
+            "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+            "url": "https://github.com/apps/github-actions",
+            "company": ""
+        },
+        {
             "login": "hissamkhanbabar",
             "avatarUrl": "https://avatars.githubusercontent.com/u/28749319?v=4",
             "url": "https://github.com/hissamkhanbabar",
@@ -910,6 +916,46 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOCquRHc8AAAABF1FCuQ",
+            "title": "chore(main-1.x): release 4.0.0",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1320",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-30T05:17:22Z",
+            "number": 1320,
+            "state": "OPEN",
+            "author": {
+                "login": "github-actions",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+                "url": "https://github.com/apps/github-actions",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDOCquRHc8AAAAC5uPB4g",
+                    "name": "autorelease: pending",
+                    "color": "ededed",
+                    "description": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOOWhNPs8AAAABFvPakg",
             "title": "fix: respect Customizer map style in frontend forms",
@@ -1095,39 +1141,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc8AAAABFgoUeg",
-            "title": "build: replace gitversion with release-please",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1318",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-09-28T14:01:00Z",
-            "number": 1318,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
             },
             "assignees": [],
             "labels": [],
