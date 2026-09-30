@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-09-30T05:33:44+00:00",
-    "count": 18,
+    "generatedAt": "2026-09-30T06:50:24+00:00",
+    "count": 17,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -765,7 +765,7 @@
             "company": ""
         },
         {
-            "login": "github-actions",
+            "login": "github-actions[bot]",
             "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
             "url": "https://github.com/apps/github-actions",
             "company": ""
@@ -916,46 +916,6 @@
         }
     ],
     "items": [
-        {
-            "id": "PR_kwDOCquRHc8AAAABF1FCuQ",
-            "title": "chore(main-1.x): release 4.0.0",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1320",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-09-30T05:17:22Z",
-            "number": 1320,
-            "state": "OPEN",
-            "author": {
-                "login": "github-actions",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-                "url": "https://github.com/apps/github-actions",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "LA_kwDOCquRHc8AAAAC5uPB4g",
-                    "name": "autorelease: pending",
-                    "color": "ededed",
-                    "description": ""
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
         {
             "id": "PR_kwDOOWhNPs8AAAABFvPakg",
             "title": "fix: respect Customizer map style in frontend forms",
