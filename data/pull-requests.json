@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-01T13:35:53+00:00",
-    "count": 15,
+    "generatedAt": "2026-10-01T14:35:42+00:00",
+    "count": 14,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -339,6 +339,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-opening-hours",
+            "fullName": "Considbrs-Webdev/modularity-opening-hours",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -357,20 +371,6 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-opening-hours",
-            "fullName": "Considbrs-Webdev/modularity-opening-hours",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
         },
         {
             "owner": "helsingborg-stad",
@@ -930,12 +930,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs8AAAABGGPFuw",
-            "title": "Remove jQuery dependencies from public Municipio scripts",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2273",
+            "id": "PR_kwDOAuIygs8AAAABGGgE3g",
+            "title": "Skip assets for modules found only in inactive widgets",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2274",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-01T13:16:27Z",
-            "number": 2273,
+            "createdAt": "2026-10-01T13:40:08Z",
+            "number": 2274,
             "state": "OPEN",
             "author": {
                 "login": "copilot-swe-agent",
@@ -976,62 +976,9 @@
             "relationships": [
                 {
                     "event": "connected",
-                    "title": "Remove jQuery dependency from public frontend assets",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2257",
+                    "title": "A module that is hidden, is still enabled thus enqueueing js & css assets in the frontend.",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2221",
                     "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "PR_kwDOAs7djs8AAAABGGO1Zw",
-            "title": "Remove jQuery from alarm and disturbance scripts",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/37",
-            "repository": "helsingborg-stad/api-alarm-integration",
-            "createdAt": "2026-10-01T13:16:04Z",
-            "number": 37,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Remove jQuery from frontend alarm and disturbance scripts",
-                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/issues/36",
-                    "repository": "helsingborg-stad/api-alarm-integration"
                 }
             ]
         },
