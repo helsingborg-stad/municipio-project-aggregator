@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-01T11:31:24+00:00",
-    "count": 13,
+    "generatedAt": "2026-10-01T12:45:54+00:00",
+    "count": 12,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -234,17 +234,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-service-info",
-            "fullName": "Considbrs-Webdev/modularity-service-info",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-noticeboard",
             "fullName": "Considbrs-Webdev/modularity-noticeboard",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-service-info",
+            "fullName": "Considbrs-Webdev/modularity-service-info",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
         },
         {
             "owner": "helsingborg-stad",
@@ -395,20 +395,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-a-o",
-            "fullName": "Considbrs-Webdev/modularity-a-o",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-a-o"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "municipio-vite",
             "fullName": "helsingborg-stad/municipio-vite",
             "description": "Vite packages for municipio projects",
@@ -434,6 +420,20 @@
             "fullName": "helsingborg-stad/modularity-openstreetmap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-a-o",
+            "fullName": "Considbrs-Webdev/modularity-a-o",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-a-o"
         },
         {
             "owner": "helsingborg-stad",
@@ -542,6 +542,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -560,20 +574,6 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -1272,39 +1272,6 @@
                 "login": "Tsubarah",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/67978743?u=7b15285a37b18db6dae5418dd13b0c31e51219d5&v=4",
                 "url": "https://github.com/Tsubarah",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCPnM4c8AAAABAHSIDA",
-            "title": "feat: removing react using an api solution",
-            "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/45",
-            "repository": "helsingborg-stad/modularity-json-render",
-            "createdAt": "2026-08-18T07:50:38Z",
-            "number": 45,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
             "assignees": [],
