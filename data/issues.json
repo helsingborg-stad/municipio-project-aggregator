@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-01T13:25:29+00:00",
-    "count": 114,
+    "generatedAt": "2026-10-01T14:24:29+00:00",
+    "count": 112,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -623,7 +623,7 @@
         },
         {
             "login": "MrjonasN",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/55234353?u=ed30951e424ee70f4cd7919f2225fe3ef1ac7137&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/55234353?v=4",
             "url": "https://github.com/MrjonasN",
             "company": ""
         },
@@ -1001,39 +1001,6 @@
             ]
         },
         {
-            "id": "I_kwDOOWhNPs8AAAABUGos1Q",
-            "title": "Map style is hardcoded to default and ignores Municipio Customizer settings",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/158",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-09-30T09:15:27Z",
-            "number": 158,
-            "state": "OPEN",
-            "author": {
-                "login": "MrjonasN",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/55234353?u=ed30951e424ee70f4cd7919f2225fe3ef1ac7137&v=4",
-                "url": "https://github.com/MrjonasN",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOJP-wC88AAAABTvAoAg",
             "title": "Remove jQuery dependency from the public OpenStreetMap script",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap/issues/80",
@@ -1131,59 +1098,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "I_kwDOAs7djs8AAAABTvAeDg",
-            "title": "Remove jQuery from frontend alarm and disturbance scripts",
-            "url": "https://github.com/helsingborg-stad/api-alarm-integration/issues/36",
-            "repository": "helsingborg-stad/api-alarm-integration",
-            "createdAt": "2026-09-28T18:27:30Z",
-            "number": 36,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Remove jQuery from alarm and disturbance scripts",
-                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/37",
-                    "repository": "helsingborg-stad/api-alarm-integration"
-                }
-            ]
         },
         {
             "id": "I_kwDOAuIygs8AAAABTvAVig",
@@ -1384,7 +1298,20 @@
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -1399,9 +1326,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Skip assets for modules found only in inactive widgets",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2274",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
         },
         {
             "id": "I_kwDOPl0lE88AAAABPhqlCQ",
