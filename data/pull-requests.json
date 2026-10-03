@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-03T02:48:01+00:00",
+    "generatedAt": "2026-10-03T03:49:39+00:00",
     "count": 15,
     "repositories": [
         {
@@ -115,13 +115,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-schools-manager",
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
@@ -133,6 +126,13 @@
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
             "url": "https://github.com/helsingborg-stad/lix-calculator"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
@@ -248,17 +248,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-folder-browser",
             "fullName": "Considbrs-Webdev/modularity-folder-browser",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
@@ -339,20 +339,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-opening-hours",
-            "fullName": "Considbrs-Webdev/modularity-opening-hours",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -371,6 +357,20 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-opening-hours",
+            "fullName": "Considbrs-Webdev/modularity-opening-hours",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
         },
         {
             "owner": "helsingborg-stad",
