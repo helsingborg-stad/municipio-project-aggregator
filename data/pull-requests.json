@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-02T23:29:23+00:00",
+    "generatedAt": "2026-10-03T01:05:36+00:00",
     "count": 15,
     "repositories": [
         {
@@ -234,13 +234,6 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-noticeboard",
-            "fullName": "Considbrs-Webdev/modularity-noticeboard",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-service-info",
             "fullName": "Considbrs-Webdev/modularity-service-info",
             "description": "",
@@ -248,10 +241,10 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "name": "modularity-noticeboard",
+            "fullName": "Considbrs-Webdev/modularity-noticeboard",
             "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
+            "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -259,6 +252,13 @@
             "fullName": "Considbrs-Webdev/modularity-link-cards",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
