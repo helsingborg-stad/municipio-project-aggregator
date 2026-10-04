@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-03T23:17:40+00:00",
+    "generatedAt": "2026-10-04T00:08:23+00:00",
     "count": 15,
     "repositories": [
         {
@@ -115,13 +115,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-schools-manager",
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
@@ -133,6 +126,13 @@
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
             "url": "https://github.com/helsingborg-stad/lix-calculator"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
