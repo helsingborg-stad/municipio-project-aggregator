@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-04T22:20:25+00:00",
+    "generatedAt": "2026-10-04T23:18:26+00:00",
     "count": 112,
     "repositories": [
         {
@@ -395,6 +395,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-a-o",
+            "fullName": "Considbrs-Webdev/modularity-a-o",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-a-o"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "municipio-vite",
             "fullName": "helsingborg-stad/municipio-vite",
             "description": "Vite packages for municipio projects",
@@ -420,20 +434,6 @@
             "fullName": "helsingborg-stad/modularity-openstreetmap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-a-o",
-            "fullName": "Considbrs-Webdev/modularity-a-o",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-a-o"
         },
         {
             "owner": "helsingborg-stad",
