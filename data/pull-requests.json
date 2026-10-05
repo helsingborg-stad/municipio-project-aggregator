@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-05T07:08:18+00:00",
+    "generatedAt": "2026-10-05T07:55:06+00:00",
     "count": 16,
     "repositories": [
         {
@@ -514,6 +514,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "redirection-extended",
             "fullName": "helsingborg-stad/redirection-extended",
             "description": "",
@@ -528,13 +542,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "municipio-clone",
             "fullName": "helsingborg-stad/municipio-clone",
             "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
@@ -542,17 +549,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
@@ -930,18 +930,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOLwUbvs8AAAABGpfjEQ",
-            "title": "Fix/reachmee jobposting",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/39",
-            "repository": "helsingborg-stad/schema.org-transformer",
-            "createdAt": "2026-10-05T06:40:19Z",
-            "number": 39,
+            "id": "PR_kwDOAuIygs8AAAABGqGnYA",
+            "title": "feat: translate icons to swedish",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2278",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-10-05T07:46:21Z",
+            "number": 2278,
             "state": "OPEN",
             "author": {
-                "login": "jlarsson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
-                "url": "https://github.com/jlarsson",
-                "company": ""
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "labels": [],
@@ -963,18 +963,18 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOOWhNPs8AAAABGSujfw",
-            "title": "fix: respect Customizer map defaults in frontend forms",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/159",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-10-02T13:52:03Z",
-            "number": 159,
+            "id": "PR_kwDOLwUbvs8AAAABGpfjEQ",
+            "title": "Fix/reachmee jobposting",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/39",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-10-05T06:40:19Z",
+            "number": 39,
             "state": "OPEN",
             "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
+                "login": "jlarsson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
+                "url": "https://github.com/jlarsson",
+                "company": ""
             },
             "assignees": [],
             "labels": [],
