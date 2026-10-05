@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-05T05:46:03+00:00",
-    "count": 15,
+    "generatedAt": "2026-10-05T07:08:18+00:00",
+    "count": 16,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -929,6 +929,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOLwUbvs8AAAABGpfjEQ",
+            "title": "Fix/reachmee jobposting",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/39",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-10-05T06:40:19Z",
+            "number": 39,
+            "state": "OPEN",
+            "author": {
+                "login": "jlarsson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
+                "url": "https://github.com/jlarsson",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOOWhNPs8AAAABGSujfw",
             "title": "fix: respect Customizer map defaults in frontend forms",
