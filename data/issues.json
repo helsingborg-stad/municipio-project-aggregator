@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-06T11:20:06+00:00",
+    "generatedAt": "2026-10-06T12:32:41+00:00",
     "count": 116,
     "repositories": [
         {
@@ -339,6 +339,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-opening-hours",
+            "fullName": "Considbrs-Webdev/modularity-opening-hours",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -357,20 +371,6 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-opening-hours",
-            "fullName": "Considbrs-Webdev/modularity-opening-hours",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
         },
         {
             "owner": "helsingborg-stad",
@@ -472,6 +472,34 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-clone",
+            "fullName": "helsingborg-stad/municipio-clone",
+            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
+            "url": "https://github.com/helsingborg-stad/municipio-clone"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -511,34 +539,6 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-clone",
-            "fullName": "helsingborg-stad/municipio-clone",
-            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
-            "url": "https://github.com/helsingborg-stad/municipio-clone"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
