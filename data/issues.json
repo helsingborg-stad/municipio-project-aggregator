@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-06T08:29:40+00:00",
-    "count": 117,
+    "generatedAt": "2026-10-06T09:25:19+00:00",
+    "count": 116,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -4980,59 +4980,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs7uJchz",
-            "title": "Bugfix index to typesense",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1814",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-02-26T13:08:22Z",
-            "number": 1814,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "camitzdennis",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                    "url": "https://github.com/camitzdennis",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Patch fix for TypeError in algolia-index-typesense-provider",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1815",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
         },
         {
             "id": "I_kwDOOWhNPs7khYCX",
