@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-07T13:36:31+00:00",
+    "generatedAt": "2026-10-07T14:34:35+00:00",
     "count": 17,
     "repositories": [
         {
@@ -930,12 +930,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs8AAAABHITgZw",
-            "title": "feat: split scripts that has both backend and frontend functionality \u2026",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2296",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-07T13:35:30Z",
-            "number": 2296,
+            "id": "PR_kwDOAs7djs8AAAABHIgsNQ",
+            "title": "Guard public alarm assets against jQuery",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/38",
+            "repository": "helsingborg-stad/api-alarm-integration",
+            "createdAt": "2026-10-07T13:52:28Z",
+            "number": 38,
             "state": "OPEN",
             "author": {
                 "login": "sebastianthulin",
