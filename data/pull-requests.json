@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-08T14:36:47+00:00",
+    "generatedAt": "2026-10-08T15:34:48+00:00",
     "count": 18,
     "repositories": [
         {
@@ -563,20 +563,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-arcgis-map",
-            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "ACF-UX-collapse-explore",
             "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
             "description": "Exploration clone of ACF-UX-collapse for better deployment",
@@ -588,6 +574,20 @@
             "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
             "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-arcgis-map",
+            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
         }
     ],
     "authors": [
@@ -667,7 +667,7 @@
             "login": "WilliamLundqvist",
             "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?v=4",
             "url": "https://github.com/WilliamLundqvist",
-            "company": ""
+            "company": "Consid Bor\u00e5s AB"
         },
         {
             "login": "actions-user",
@@ -1364,7 +1364,7 @@
                 "login": "WilliamLundqvist",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
                 "url": "https://github.com/WilliamLundqvist",
-                "company": ""
+                "company": "Consid Bor\u00e5s AB"
             },
             "assignees": [],
             "labels": [],
