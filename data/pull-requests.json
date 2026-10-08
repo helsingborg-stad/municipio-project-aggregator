@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-08T05:35:12+00:00",
+    "generatedAt": "2026-10-08T06:52:38+00:00",
     "count": 18,
     "repositories": [
         {
@@ -1030,7 +1030,7 @@
         },
         {
             "id": "PR_kwDOLwUbvs8AAAABG4mJ9w",
-            "title": "refactoring",
+            "title": "Refactoring of sponsorship transforms",
             "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/40",
             "repository": "helsingborg-stad/schema.org-transformer",
             "createdAt": "2026-10-06T09:44:36Z",
