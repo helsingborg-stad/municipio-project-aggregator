@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-12T13:42:08+00:00",
+    "generatedAt": "2026-10-12T14:30:09+00:00",
     "count": 116,
     "repositories": [
         {
@@ -150,6 +150,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -161,13 +168,6 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
         },
         {
             "owner": "helsingborg-stad",
@@ -255,6 +255,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "miniorange-saml-20-single-sign-on",
+            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
+            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
+            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
@@ -273,20 +287,6 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "miniorange-saml-20-single-sign-on",
-            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
-            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
-            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
         },
         {
             "owner": "Considbrs-Webdev",
