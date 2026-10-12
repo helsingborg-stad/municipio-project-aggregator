@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-10-12T11:51:49+00:00",
-    "count": 94,
+    "generatedAt": "2026-10-12T13:15:40+00:00",
+    "count": 95,
     "pageSize": 10,
     "pageNumber": 10,
     "pageCount": 10,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "Maintenance version 3.2.4",
+            "version": "3.2.4",
+            "body": "This release includes an update for litespeed common settings and a real nonce field for the active directory integration, to accomodate the requirement of ESI cache bypassing. \r\n\r\nLitespeed needs to include _ad_nonce as a nonce esi include. ",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/3.2.4",
+            "publishedAt": "2023-06-29T08:50:04Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "3.2.1",
             "version": "3.2.1",
