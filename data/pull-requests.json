@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-12T05:42:25+00:00",
-    "count": 18,
+    "generatedAt": "2026-10-12T07:10:44+00:00",
+    "count": 19,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -929,6 +929,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABH6aCDw",
+            "title": "fix(Schools): replace events section with events block",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2305",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-10-12T06:56:27Z",
+            "number": 2305,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABHjkoqA",
             "title": "feat: mark none descriptive links for editors",
