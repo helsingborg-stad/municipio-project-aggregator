@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-12T04:48:54+00:00",
-    "count": 19,
+    "generatedAt": "2026-10-12T05:42:25+00:00",
+    "count": 18,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -871,7 +871,7 @@
             "login": "petter-a",
             "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?v=4",
             "url": "https://github.com/petter-a",
-            "company": "Helsingborg stad"
+            "company": ""
         },
         {
             "login": "rsj10736",
@@ -1041,39 +1041,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
                 "url": "https://github.com/jlarsson",
                 "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOLwUbvs8AAAABG4mJ9w",
-            "title": "Refactoring of sponsorship transforms",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/40",
-            "repository": "helsingborg-stad/schema.org-transformer",
-            "createdAt": "2026-10-06T09:44:36Z",
-            "number": 40,
-            "state": "OPEN",
-            "author": {
-                "login": "petter-a",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?u=96d0ccb4082736d6973f04cd096a41d34f499a4a&v=4",
-                "url": "https://github.com/petter-a",
-                "company": "Helsingborg stad"
             },
             "assignees": [],
             "labels": [],
