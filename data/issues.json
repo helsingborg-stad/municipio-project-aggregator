@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-12T11:23:06+00:00",
+    "generatedAt": "2026-10-12T13:42:08+00:00",
     "count": 116,
     "repositories": [
         {
@@ -150,13 +150,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -168,6 +161,13 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
         },
         {
             "owner": "helsingborg-stad",
@@ -254,13 +254,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
@@ -294,6 +287,13 @@
             "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
             "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
@@ -500,20 +500,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -553,6 +539,20 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
