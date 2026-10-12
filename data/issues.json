@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-12T09:38:51+00:00",
+    "generatedAt": "2026-10-12T10:27:33+00:00",
     "count": 116,
     "repositories": [
         {
@@ -262,20 +262,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-remove-user-endpoint",
-            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
-            "description": "Removes the user endpoint when not logged in",
-            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "miniorange-saml-20-single-sign-on",
-            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
-            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
-            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
             "description": "Add notices on keywords in WordPress search. ",
@@ -294,6 +280,20 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-remove-user-endpoint",
+            "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
+            "description": "Removes the user endpoint when not logged in",
+            "url": "https://github.com/helsingborg-stad/wpmu-remove-user-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "miniorange-saml-20-single-sign-on",
+            "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
+            "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
+            "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
         },
         {
             "owner": "helsingborg-stad",
@@ -500,20 +500,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -553,6 +539,20 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
