@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-13T10:24:35+00:00",
+    "generatedAt": "2026-10-13T11:21:59+00:00",
     "count": 117,
     "repositories": [
         {
@@ -129,13 +129,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "lix-calculator",
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
@@ -147,6 +140,13 @@
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-schools-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
@@ -261,13 +261,6 @@
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
@@ -287,6 +280,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -500,20 +500,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -553,6 +539,20 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -1308,7 +1308,7 @@
                 },
                 {
                     "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
                 },
@@ -1738,14 +1738,14 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
             "assignees": [
                 {
                     "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
                 }
@@ -1990,7 +1990,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2023,14 +2023,14 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
             "assignees": [
                 {
                     "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
                 }
@@ -2176,14 +2176,14 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
             "assignees": [
                 {
                     "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
                 }
@@ -2216,7 +2216,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2256,14 +2256,14 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
             "assignees": [
                 {
                     "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
                 }
@@ -2305,7 +2305,7 @@
             "assignees": [
                 {
                     "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
                 }
@@ -2349,7 +2349,7 @@
             "assignees": [
                 {
                     "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                     "url": "https://github.com/thorbrink",
                     "company": ""
                 }
@@ -2510,7 +2510,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2543,7 +2543,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2576,7 +2576,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2609,7 +2609,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2642,7 +2642,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2675,7 +2675,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2708,7 +2708,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2741,7 +2741,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2774,7 +2774,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2807,7 +2807,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2840,7 +2840,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2873,7 +2873,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2906,7 +2906,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2939,7 +2939,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -2972,7 +2972,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3005,7 +3005,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3038,7 +3038,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3071,7 +3071,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3104,7 +3104,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3137,7 +3137,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3170,7 +3170,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3203,7 +3203,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3236,7 +3236,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3269,7 +3269,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3302,7 +3302,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3335,7 +3335,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3368,7 +3368,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3401,7 +3401,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3434,7 +3434,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3467,7 +3467,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3500,7 +3500,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3533,7 +3533,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3566,7 +3566,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3599,7 +3599,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3632,7 +3632,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3665,7 +3665,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3698,7 +3698,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3731,7 +3731,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3764,7 +3764,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3797,7 +3797,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3830,7 +3830,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3863,7 +3863,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3896,7 +3896,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3929,7 +3929,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3962,7 +3962,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -3995,7 +3995,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4028,7 +4028,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4061,7 +4061,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4094,7 +4094,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4127,7 +4127,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4160,7 +4160,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4193,7 +4193,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4226,7 +4226,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4259,7 +4259,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4292,7 +4292,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4325,7 +4325,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4358,7 +4358,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4391,7 +4391,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4424,7 +4424,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4457,7 +4457,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4490,7 +4490,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4523,7 +4523,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4556,7 +4556,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4589,7 +4589,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4622,7 +4622,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4655,7 +4655,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4688,7 +4688,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4721,7 +4721,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4754,7 +4754,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4787,7 +4787,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4820,7 +4820,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4853,7 +4853,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4886,7 +4886,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4919,7 +4919,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -4952,7 +4952,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -5018,7 +5018,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -5263,7 +5263,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
