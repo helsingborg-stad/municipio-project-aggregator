@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-13T07:34:08+00:00",
+    "generatedAt": "2026-10-13T08:34:28+00:00",
     "count": 116,
     "repositories": [
         {
@@ -129,10 +129,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-schools-manager",
-            "fullName": "helsingborg-stad/api-schools-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager"
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
@@ -143,10 +143,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
+            "name": "api-schools-manager",
+            "fullName": "helsingborg-stad/api-schools-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-schools-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -234,17 +234,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-noticeboard",
-            "fullName": "Considbrs-Webdev/modularity-noticeboard",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-service-info",
             "fullName": "Considbrs-Webdev/modularity-service-info",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-noticeboard",
+            "fullName": "Considbrs-Webdev/modularity-noticeboard",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
         },
         {
             "owner": "helsingborg-stad",
