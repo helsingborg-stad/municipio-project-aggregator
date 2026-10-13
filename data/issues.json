@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-13T16:25:24+00:00",
+    "generatedAt": "2026-10-13T17:20:38+00:00",
     "count": 117,
     "repositories": [
         {
@@ -325,20 +325,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-opening-hours",
-            "fullName": "Considbrs-Webdev/modularity-opening-hours",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-volunteer-manager-integration",
             "fullName": "helsingborg-stad/api-volunteer-manager-integration",
             "description": "",
@@ -350,6 +336,20 @@
             "fullName": "helsingborg-stad/multi-network-urls",
             "description": "",
             "url": "https://github.com/helsingborg-stad/multi-network-urls"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-opening-hours",
+            "fullName": "Considbrs-Webdev/modularity-opening-hours",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
         },
         {
             "owner": "helsingborg-stad",
@@ -500,6 +500,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -560,20 +574,6 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
