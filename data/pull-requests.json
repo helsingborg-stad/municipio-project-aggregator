@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-13T10:36:34+00:00",
-    "count": 20,
+    "generatedAt": "2026-10-13T11:33:49+00:00",
+    "count": 23,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -129,13 +129,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "lix-calculator",
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
@@ -150,10 +143,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
@@ -168,6 +161,13 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
         },
         {
             "owner": "helsingborg-stad",
@@ -261,13 +261,6 @@
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
@@ -287,6 +280,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -500,20 +500,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -553,6 +539,20 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -653,7 +653,7 @@
         },
         {
             "login": "Sven65",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?u=424e10872ebc9b2b9ec28bc636301262f47ba623&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?v=4",
             "url": "https://github.com/Sven65",
             "company": "@DiscordDungeons"
         },
@@ -930,6 +930,105 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOBSd4q88AAAABIKKA1w",
+            "title": "refactor: remove jQuery from form builder scripts",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder/pull/125",
+            "repository": "helsingborg-stad/modularity-form-builder",
+            "createdAt": "2026-10-13T11:26:18Z",
+            "number": 125,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABIKDkKg",
+            "title": "fix(interactive-map): allow svg icons to be rendered from backend",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2310",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-10-13T11:16:38Z",
+            "number": 2310,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOBSd4q88AAAABIJpTvA",
+            "title": "fix: add missing script deps jquery",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder/pull/124",
+            "repository": "helsingborg-stad/modularity-form-builder",
+            "createdAt": "2026-10-13T10:37:19Z",
+            "number": 124,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOBGRbgs8AAAABIJnbzw",
             "title": "fix: broken jquery dependency in front-end script registration",
             "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/291",
@@ -939,7 +1038,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -1038,7 +1137,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
@@ -1514,7 +1613,7 @@
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=01cc7d7217292e7b0dea0e94cf252ae10850ff5e&v=4",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
