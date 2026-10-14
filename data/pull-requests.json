@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-14T07:39:15+00:00",
+    "generatedAt": "2026-10-14T08:39:04+00:00",
     "count": 22,
     "repositories": [
         {
@@ -325,20 +325,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -371,6 +357,20 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
         },
         {
             "owner": "helsingborg-stad",
@@ -930,6 +930,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOGyB3t88AAAABIWR8GA",
+            "title": "6.3.3",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/227",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-10-14T08:37:20Z",
+            "number": 227,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs8AAAABINWUqw",
             "title": "perf: scope custom navigation titles to menu items",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2313",
@@ -1074,39 +1107,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
                 "url": "https://github.com/jeanfredrik",
                 "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOGyB3t88AAAABH-njIg",
-            "title": "6.3.2",
-            "url": "https://github.com/municipio-se/municipio-deployment/pull/226",
-            "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-10-12T13:52:11Z",
-            "number": 226,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
             },
             "assignees": [],
             "labels": [],
