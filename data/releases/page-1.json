@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-10-15T07:50:30+00:00",
-    "count": 96,
+    "generatedAt": "2026-10-15T08:53:17+00:00",
+    "count": 97,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 10,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.3.3",
+            "version": "6.3.3",
+            "body": "**Minor release:** Adds configurable pagination for JSON-rendered content and multi-network support for shared fields. It also improves navigation title handling, author avatar accuracy, frontend performance, image accessibility warnings, and resilience when JSON field mappings are incomplete.\r\n\r\nModularity JSON Render [\\[4.1.2...4.2.0\\]](https://github.com/helsingborg-stad/modularity-json-render/compare/4.1.2...4.2.0)\r\n----------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Pagination:** Respects the module's pagination display setting.\r\n*   **Field Mapping:** Falls back safely when configured JSON field mappings are unavailable.\r\n\r\nMunicipio Theme [\\[7.66.0...7.67.7\\]](https://github.com/helsingborg-stad/municipio/compare/7.66.0...7.67.7)\r\n------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Common Fields:** Adds multi-network support for shared fields.\r\n*   **Author Avatars:** Uses the correct post author when loading byline avatars.\r\n*   **Performance:** Avoids unnecessary archive metadata queries during normal frontend requests.\r\n*   **Navigation:** Preserves custom menu titles in asynchronous child navigation.\r\n*   **Performance:** Reuses cached post ancestor chains to reduce repeated database queries.\r\n*   **Image Accessibility:** Improves the presentation of missing-alt-text warnings.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.3.3",
+            "publishedAt": "2026-10-15T07:53:03Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.3.2",
             "version": "6.3.2",
@@ -92,15 +101,6 @@
             "body": "Moves back acf pro to plugins folder",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.1",
             "publishedAt": "2026-09-17T12:07:36Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "6.2.0",
-            "version": "6.2.0",
-            "body": "Improves navigation and popover-based interfaces across Municipio and Styleguide, strengthens image handling for transparent assets, and fixes a CSP filter regression in WPMU Security. Users can expect cleaner table-of-contents pages, more consistent menu and chat behavior, and better component documentation support.\r\n\r\n## Municipio Theme [7.33.2...7.38.2](https://github.com/helsingborg-stad/municipio/compare/7.33.2...7.38.2)\r\n- Table of Contents: Fixes scroll offsets for floating or non-sticky headers and refreshes TOC page layouts for better readability.\r\n- Table of Contents: Shows only one heading level by default, making long pages easier to scan.\r\n- Language Menu: Rebuilds the language switcher as a popover and removes unnecessary markup attributes.\r\n- Chat: Moves the chat interface to the shared popover pattern and correctly hides the bubble when the assistant is disabled.\r\n- Images: Skips generated low-quality placeholders for transparent raster images and improves transparency detection for WebP files.\r\n- Image Contracts: Fixes memory-size comparisons so image processing decisions are applied more reliably.\r\n- Editor and Rendering: Corrects TinyMCE button behavior and restores closure handling in the renderer for custom integrations.\r\n\r\n## Styleguide [3.19.10...3.24.0](https://github.com/helsingborg-stad/styleguide/compare/3.19.10...3.24.0)\r\n- Popover Component: Adds a reusable popover component with placement logic, optional backdrop support, and positioning relative to either the viewport or another element.\r\n- Chat Layout: Resizes chat panels more sensibly on both large and small screens.\r\n- Images: Adds mocked-image rendering options and new transparency examples for image components.\r\n- Design Builder: Preserves numeric override values when saving settings.\r\n- Accordion: Keeps focus and state rings visible inside paint-contained layouts.\r\n- Documentation: Adds backward-compatible support for class-based component parameter declarations and improves PHP and JSON parameter parsing for component docs.\r\n- Logotype: Fixes Safari logo positioning and corrects logotype masking placement.\r\n- Component Targeting: Improves data-component targeting for JavaScript-initialized components.\r\n- Component: Rebuild data contracts to php class based instructions. \r\n\r\n## WPMU Security [1.10.0...1.10.1](https://github.com/helsingborg-stad/wpmu-security/compare/1.10.0...1.10.1)\r\n- Content Security Policy: Returns the original markup after CSP inspection, fixing compatibility with markup filters that expect processed HTML to be passed through.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.0",
-            "publishedAt": "2026-09-17T11:19:11Z",
             "isPrerelease": false,
             "isDraft": false
         }
