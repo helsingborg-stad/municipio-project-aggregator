@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-15T14:32:41+00:00",
+    "generatedAt": "2026-10-15T15:33:28+00:00",
     "count": 20,
     "repositories": [
         {
@@ -115,10 +115,24 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "multisite-role-propagation",
             "fullName": "helsingborg-stad/multisite-role-propagation",
             "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
             "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "s3-uploads-custom-endpoint",
+            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -133,20 +147,6 @@
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
@@ -289,6 +289,13 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
+        },
+        {
             "owner": "helsingborg-stad",
             "name": "modularity-recommend",
             "fullName": "helsingborg-stad/modularity-recommend",
@@ -308,13 +315,6 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
