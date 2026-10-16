@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-16T10:20:39+00:00",
+    "generatedAt": "2026-10-16T11:18:43+00:00",
     "count": 118,
     "repositories": [
         {
@@ -129,13 +129,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "lix-calculator",
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
@@ -147,6 +140,13 @@
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-schools-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "s3-uploads-custom-endpoint",
+            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
         },
         {
             "owner": "helsingborg-stad",
