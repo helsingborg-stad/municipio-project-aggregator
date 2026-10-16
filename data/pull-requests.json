@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-16T18:35:48+00:00",
+    "generatedAt": "2026-10-16T19:29:52+00:00",
     "count": 22,
     "repositories": [
         {
@@ -87,17 +87,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "active-directory-api-wp-integration",
-            "fullName": "helsingborg-stad/active-directory-api-wp-integration",
-            "description": "Simple plugin for verification of existing WordPress users with api. ",
-            "url": "https://github.com/helsingborg-stad/active-directory-api-wp-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "schema.org-transformer",
             "fullName": "helsingborg-stad/schema.org-transformer",
             "description": "",
             "url": "https://github.com/helsingborg-stad/schema.org-transformer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "active-directory-api-wp-integration",
+            "fullName": "helsingborg-stad/active-directory-api-wp-integration",
+            "description": "Simple plugin for verification of existing WordPress users with api. ",
+            "url": "https://github.com/helsingborg-stad/active-directory-api-wp-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -129,6 +129,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "s3-uploads-custom-endpoint",
+            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "lix-calculator",
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
@@ -140,13 +147,6 @@
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -514,27 +514,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-invalidate-login-pagecache",
-            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
-            "description": "Invalidates pagecache on submit of the login form.",
-            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-quick-links",
-            "fullName": "Considbrs-Webdev/modularity-quick-links",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -574,6 +553,27 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-invalidate-login-pagecache",
+            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
+            "description": "Invalidates pagecache on submit of the login form.",
+            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-quick-links",
+            "fullName": "Considbrs-Webdev/modularity-quick-links",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
         },
         {
             "owner": "Considbrs-Webdev",
