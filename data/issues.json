@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-17T13:16:18+00:00",
-    "count": 119,
+    "generatedAt": "2026-10-17T14:16:38+00:00",
+    "count": 118,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -129,6 +129,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "s3-uploads-custom-endpoint",
+            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "lix-calculator",
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
@@ -140,13 +147,6 @@
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-schools-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -5402,53 +5402,6 @@
                     "event": "cross-referenced",
                     "title": "Fix argument order in Template::renderView() method signature",
                     "url": "https://github.com/helsingborg-stad/Municipio/pull/1613",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs7SL1z0",
-            "title": "Applicators must be restructured into smaller SRI classes and follow basic SOLID principles better",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1567",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-10-17T14:07:05Z",
-            "number": 1567,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Refactor Applicators to Follow SOLID Principles with Dependency Injection",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1568",
                     "repository": "helsingborg-stad/Municipio"
                 }
             ]
