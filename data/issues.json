@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-18T11:15:30+00:00",
+    "generatedAt": "2026-10-18T12:25:58+00:00",
     "count": 118,
     "repositories": [
         {
@@ -122,10 +122,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
@@ -143,10 +143,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
+            "name": "s3-uploads-custom-endpoint",
+            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -161,13 +168,6 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -233,18 +233,18 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-allow-cors",
-            "fullName": "helsingborg-stad/wpmu-allow-cors",
-            "description": "Allows cors with *",
-            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-noticeboard",
             "fullName": "Considbrs-Webdev/modularity-noticeboard",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-allow-cors",
+            "fullName": "helsingborg-stad/wpmu-allow-cors",
+            "description": "Allows cors with *",
+            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "helsingborg-stad",
