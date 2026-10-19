@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-19T12:45:03+00:00",
-    "count": 16,
+    "generatedAt": "2026-10-19T14:33:07+00:00",
+    "count": 18,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -667,7 +667,7 @@
             "login": "WilliamLundqvist",
             "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?v=4",
             "url": "https://github.com/WilliamLundqvist",
-            "company": ""
+            "company": "Consid Bor\u00e5s AB"
         },
         {
             "login": "actions-user",
@@ -929,6 +929,72 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDORPaOGs8AAAABJWMz7w",
+            "title": "feat: Let editors choose what the week heading shows",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours/pull/4",
+            "repository": "Considbrs-Webdev/modularity-opening-hours",
+            "createdAt": "2026-10-19T14:06:36Z",
+            "number": 4,
+            "state": "OPEN",
+            "author": {
+                "login": "WilliamLundqvist",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
+                "url": "https://github.com/WilliamLundqvist",
+                "company": "Consid Bor\u00e5s AB"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDORPaOGs8AAAABJWMOpw",
+            "title": "feat: Render opening hours with styles and paging in the block editor",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours/pull/3",
+            "repository": "Considbrs-Webdev/modularity-opening-hours",
+            "createdAt": "2026-10-19T14:05:57Z",
+            "number": 3,
+            "state": "OPEN",
+            "author": {
+                "login": "WilliamLundqvist",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
+                "url": "https://github.com/WilliamLundqvist",
+                "company": "Consid Bor\u00e5s AB"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOCquRHc8AAAABI2vfyQ",
             "title": "feat: ttl chat session",
