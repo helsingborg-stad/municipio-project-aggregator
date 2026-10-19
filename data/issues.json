@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-19T08:33:11+00:00",
+    "generatedAt": "2026-10-19T09:30:42+00:00",
     "count": 112,
     "repositories": [
         {
@@ -143,17 +143,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "s3-uploads-custom-endpoint",
             "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
             "description": "",
             "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -283,17 +283,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-folder-browser",
             "fullName": "Considbrs-Webdev/modularity-folder-browser",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
