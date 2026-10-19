@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-19T04:25:11+00:00",
-    "count": 118,
+    "generatedAt": "2026-10-19T05:21:39+00:00",
+    "count": 117,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -283,17 +283,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-folder-browser",
             "fullName": "Considbrs-Webdev/modularity-folder-browser",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
@@ -941,59 +941,6 @@
         }
     ],
     "items": [
-        {
-            "id": "I_kwDOUjeRW88AAAABXswgMA",
-            "title": "fix(import): preserve and verify distinct home and siteurl on multisite clones",
-            "url": "https://github.com/helsingborg-stad/municipio-clone/issues/32",
-            "repository": "helsingborg-stad/municipio-clone",
-            "createdAt": "2026-10-16T13:56:14Z",
-            "number": 32,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Preserve distinct home and siteurl values during clones",
-                    "url": "https://github.com/helsingborg-stad/municipio-clone/pull/33",
-                    "repository": "helsingborg-stad/municipio-clone"
-                }
-            ]
-        },
         {
             "id": "I_kwDOAuIygs8AAAABXEtTEw",
             "title": "Job posting view, should look for array.",
