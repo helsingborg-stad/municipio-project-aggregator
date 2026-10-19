@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-19T07:01:00+00:00",
-    "count": 18,
+    "generatedAt": "2026-10-19T07:49:42+00:00",
+    "count": 17,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -150,6 +150,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -161,13 +168,6 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -199,13 +199,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -217,6 +210,13 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -283,17 +283,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-folder-browser",
             "fullName": "Considbrs-Webdev/modularity-folder-browser",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
@@ -528,34 +528,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-clone",
-            "fullName": "helsingborg-stad/municipio-clone",
-            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
-            "url": "https://github.com/helsingborg-stad/municipio-clone"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -574,6 +546,34 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-clone",
+            "fullName": "helsingborg-stad/municipio-clone",
+            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
+            "url": "https://github.com/helsingborg-stad/municipio-clone"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -635,7 +635,7 @@
         },
         {
             "login": "NiclasNorin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
             "url": "https://github.com/NiclasNorin",
             "company": ""
         },
@@ -931,7 +931,7 @@
     "items": [
         {
             "id": "PR_kwDOAuIygs8AAAABI4AV8Q",
-            "title": "\u2728 Feat(chat): enable assistantants to be gated by login",
+            "title": "\u2728 Feat(chat): enable assistants to be gated by login",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2321",
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-10-16T15:28:10Z",
@@ -974,39 +974,6 @@
                 "login": "NiclasNorin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOBGRbgs8AAAABIndUtQ",
-            "title": "fix: consume event error response bodies",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/292",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-10-15T12:26:20Z",
-            "number": 292,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
                 "company": ""
             },
             "assignees": [],
