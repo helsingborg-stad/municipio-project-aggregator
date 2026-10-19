@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-19T05:21:39+00:00",
-    "count": 117,
+    "generatedAt": "2026-10-19T06:45:57+00:00",
+    "count": 115,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -150,13 +150,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -168,6 +161,13 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -283,17 +283,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-link-cards",
             "fullName": "Considbrs-Webdev/modularity-link-cards",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
@@ -472,48 +472,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-clone",
-            "fullName": "helsingborg-stad/municipio-clone",
-            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
-            "url": "https://github.com/helsingborg-stad/municipio-clone"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -553,6 +511,48 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-clone",
+            "fullName": "helsingborg-stad/municipio-clone",
+            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
+            "url": "https://github.com/helsingborg-stad/municipio-clone"
         },
         {
             "owner": "helsingborg-stad",
@@ -826,12 +826,6 @@
             "company": ""
         },
         {
-            "login": "lshpe",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/157037790?v=4",
-            "url": "https://github.com/lshpe",
-            "company": "Liding\u00f6 stad"
-        },
-        {
             "login": "malinkytta",
             "avatarUrl": "https://avatars.githubusercontent.com/u/113056103?v=4",
             "url": "https://github.com/malinkytta",
@@ -941,59 +935,6 @@
         }
     ],
     "items": [
-        {
-            "id": "I_kwDOAuIygs8AAAABXEtTEw",
-            "title": "Job posting view, should look for array.",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2314",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-14T06:58:30Z",
-            "number": 2314,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Handle hiring organization arrays in job posting view",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2316",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
         {
             "id": "I_kwDOOWhNPs8AAAABW1uvLA",
             "title": "WYSIWYG toolbar icons not rendered with Styleguide v3",
@@ -1335,65 +1276,6 @@
                     "title": "Coordinate adoption of selected v25.x functionality",
                     "url": "https://github.com/helsingborg-stad/Municipio/issues/2290",
                     "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOUjeRW88AAAABUWtXUw",
-            "title": "Artifact download returns empty body on LiteSpeed/OpenLiteSpeed due to `Content-Encoding: identity`",
-            "url": "https://github.com/helsingborg-stad/municipio-clone/issues/26",
-            "repository": "helsingborg-stad/municipio-clone",
-            "createdAt": "2026-10-01T10:50:44Z",
-            "number": 26,
-            "state": "OPEN",
-            "author": {
-                "login": "lshpe",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/157037790?v=4",
-                "url": "https://github.com/lshpe",
-                "company": "Liding\u00f6 stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Avoid empty artifact downloads on LiteSpeed",
-                    "url": "https://github.com/helsingborg-stad/municipio-clone/pull/27",
-                    "repository": "helsingborg-stad/municipio-clone"
                 }
             ]
         },
