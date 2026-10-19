@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-19T04:37:59+00:00",
-    "count": 22,
+    "generatedAt": "2026-10-19T05:33:40+00:00",
+    "count": 20,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -283,17 +283,17 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-link-cards",
             "fullName": "Considbrs-Webdev/modularity-link-cards",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
@@ -472,34 +472,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-clone",
-            "fullName": "helsingborg-stad/municipio-clone",
-            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
-            "url": "https://github.com/helsingborg-stad/municipio-clone"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "ACF-UX-collapse-explore",
             "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
             "description": "Exploration clone of ACF-UX-collapse for better deployment",
@@ -553,6 +525,34 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-clone",
+            "fullName": "helsingborg-stad/municipio-clone",
+            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
+            "url": "https://github.com/helsingborg-stad/municipio-clone"
         },
         {
             "owner": "helsingborg-stad",
@@ -653,7 +653,7 @@
         },
         {
             "login": "Sven65",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?u=424e10872ebc9b2b9ec28bc636301262f47ba623&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?v=4",
             "url": "https://github.com/Sven65",
             "company": "@DiscordDungeons"
         },
@@ -930,6 +930,46 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOUjeRW88AAAABJQneoA",
+            "title": "chore(main): release 1.5.3",
+            "url": "https://github.com/helsingborg-stad/municipio-clone/pull/36",
+            "repository": "helsingborg-stad/municipio-clone",
+            "createdAt": "2026-10-19T05:34:51Z",
+            "number": 36,
+            "state": "MERGED",
+            "author": {
+                "login": "github-actions",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+                "url": "https://github.com/apps/github-actions",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDOUjeRW88AAAAC3Fr00Q",
+                    "name": "autorelease: pending",
+                    "color": "ededed",
+                    "description": ""
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs8AAAABI4AV8Q",
             "title": "\u2728 Feat(chat): enable assistantants to be gated by login",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2321",
@@ -963,59 +1003,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOUjeRW88AAAABI26j3A",
-            "title": "Preserve distinct home and siteurl values during clones",
-            "url": "https://github.com/helsingborg-stad/municipio-clone/pull/33",
-            "repository": "helsingborg-stad/municipio-clone",
-            "createdAt": "2026-10-16T13:57:03Z",
-            "number": 33,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "fix(import): preserve and verify distinct home and siteurl on multisite clones",
-                    "url": "https://github.com/helsingborg-stad/municipio-clone/issues/32",
-                    "repository": "helsingborg-stad/municipio-clone"
-                }
-            ]
-        },
-        {
             "id": "PR_kwDOCquRHc8AAAABI2vfyQ",
             "title": "feat: ttl chat session",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1335",
@@ -1031,46 +1018,6 @@
             },
             "assignees": [],
             "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOUjeRW88AAAABI2szGA",
-            "title": "chore(main): release 1.5.1",
-            "url": "https://github.com/helsingborg-stad/municipio-clone/pull/31",
-            "repository": "helsingborg-stad/municipio-clone",
-            "createdAt": "2026-10-16T13:38:34Z",
-            "number": 31,
-            "state": "OPEN",
-            "author": {
-                "login": "github-actions",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-                "url": "https://github.com/apps/github-actions",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "LA_kwDOUjeRW88AAAAC3Fr00Q",
-                    "name": "autorelease: pending",
-                    "color": "ededed",
-                    "description": ""
-                }
-            ],
             "milestone": null,
             "type": null,
             "subIssues": {
@@ -1384,59 +1331,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOUjeRW88AAAABGF6nmQ",
-            "title": "Avoid empty artifact downloads on LiteSpeed",
-            "url": "https://github.com/helsingborg-stad/municipio-clone/pull/27",
-            "repository": "helsingborg-stad/municipio-clone",
-            "createdAt": "2026-10-01T12:47:10Z",
-            "number": 27,
-            "state": "OPEN",
-            "author": {
-                "login": "copilot-swe-agent",
-                "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                "url": "https://github.com/apps/copilot-swe-agent",
-                "company": ""
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Artifact download returns empty body on LiteSpeed/OpenLiteSpeed due to `Content-Encoding: identity`",
-                    "url": "https://github.com/helsingborg-stad/municipio-clone/issues/26",
-                    "repository": "helsingborg-stad/municipio-clone"
-                }
-            ]
         },
         {
             "id": "PR_kwDOCquRHc8AAAABF59e3w",
