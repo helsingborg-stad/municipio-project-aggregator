@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-20T03:36:50+00:00",
+    "generatedAt": "2026-10-20T04:35:12+00:00",
     "count": 18,
     "repositories": [
         {
@@ -227,13 +227,6 @@
         },
         {
             "owner": "Considbrs-Webdev",
-            "name": "modularity-service-info",
-            "fullName": "Considbrs-Webdev/modularity-service-info",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
-        },
-        {
-            "owner": "Considbrs-Webdev",
             "name": "modularity-noticeboard",
             "fullName": "Considbrs-Webdev/modularity-noticeboard",
             "description": "",
@@ -245,6 +238,13 @@
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-service-info",
+            "fullName": "Considbrs-Webdev/modularity-service-info",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
         },
         {
             "owner": "helsingborg-stad",
