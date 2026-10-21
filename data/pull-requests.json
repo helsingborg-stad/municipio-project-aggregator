@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-21T05:32:53+00:00",
+    "generatedAt": "2026-10-21T06:48:35+00:00",
     "count": 19,
     "repositories": [
         {
@@ -226,18 +226,18 @@
             "url": "https://github.com/helsingborg-stad/modularity-form-builder"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-noticeboard",
-            "fullName": "Considbrs-Webdev/modularity-noticeboard",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
             "description": "Allows cors with *",
             "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-noticeboard",
+            "fullName": "Considbrs-Webdev/modularity-noticeboard",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -339,20 +339,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "mod-my-pages",
             "fullName": "helsingborg-stad/mod-my-pages",
             "description": "",
@@ -371,6 +357,20 @@
             "fullName": "helsingborg-stad/wpmu-focus-point",
             "description": "",
             "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
         },
         {
             "owner": "helsingborg-stad",
@@ -500,6 +500,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -539,20 +553,6 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -653,7 +653,7 @@
         },
         {
             "login": "Sven65",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?u=424e10872ebc9b2b9ec28bc636301262f47ba623&v=4",
             "url": "https://github.com/Sven65",
             "company": "@DiscordDungeons"
         },
