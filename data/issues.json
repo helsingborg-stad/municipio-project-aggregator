@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-22T22:17:37+00:00",
+    "generatedAt": "2026-10-22T23:18:30+00:00",
     "count": 122,
     "repositories": [
         {
@@ -360,6 +360,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -378,20 +392,6 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
         },
         {
             "owner": "helsingborg-stad",
