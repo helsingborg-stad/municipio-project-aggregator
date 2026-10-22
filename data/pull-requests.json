@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-22T16:35:19+00:00",
-    "count": 17,
+    "generatedAt": "2026-10-22T17:31:06+00:00",
+    "count": 21,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -661,7 +661,7 @@
             "login": "WilliamLundqvist",
             "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?v=4",
             "url": "https://github.com/WilliamLundqvist",
-            "company": ""
+            "company": "Consid Bor\u00e5s AB"
         },
         {
             "login": "actions-user",
@@ -763,6 +763,12 @@
             "login": "gfidlab-ci-user",
             "avatarUrl": "https://avatars.githubusercontent.com/u/22104080?v=4",
             "url": "https://github.com/gfidlab-ci-user",
+            "company": ""
+        },
+        {
+            "login": "github-actions",
+            "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+            "url": "https://github.com/apps/github-actions",
             "company": ""
         },
         {
@@ -918,6 +924,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDORWsnoc8AAAABKC758Q",
+            "title": "Integration tests: index vs DocumentBuilder (issue #11)",
+            "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/12",
+            "repository": "Considbrs-Webdev/typesense-search",
+            "createdAt": "2026-10-22T14:34:40Z",
+            "number": 12,
+            "state": "OPEN",
+            "author": {
+                "login": "WilliamLundqvist",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
+                "url": "https://github.com/WilliamLundqvist",
+                "company": "Consid Bor\u00e5s AB"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs8AAAABJ_0uxA",
             "title": "Refactor/splitting an generalizing chat frontend",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2335",
@@ -930,6 +969,39 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
                 "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDORWsnoc8AAAABJ5hegQ",
+            "title": "Re-index descendant pages when a parent changes or is deleted",
+            "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/10",
+            "repository": "Considbrs-Webdev/typesense-search",
+            "createdAt": "2026-10-21T22:34:04Z",
+            "number": 10,
+            "state": "OPEN",
+            "author": {
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
+                "url": "https://github.com/michaelclaesson",
+                "company": "Consid Bor\u00e5s"
             },
             "assignees": [],
             "labels": [],
@@ -1169,6 +1241,39 @@
             "relationships": []
         },
         {
+            "id": "PR_kwDOCquRHc8AAAABI2vfyQ",
+            "title": "feat: ttl chat session",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1335",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-10-16T13:42:16Z",
+            "number": 1335,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs8AAAABHWKC4g",
             "title": "feat: chat interation 3",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2301",
@@ -1283,6 +1388,46 @@
             },
             "assignees": [],
             "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOCquRHc8AAAABF59e3w",
+            "title": "chore(main-1.x): release 3.35.0",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1325",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-09-30T13:42:51Z",
+            "number": 1325,
+            "state": "OPEN",
+            "author": {
+                "login": "github-actions",
+                "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+                "url": "https://github.com/apps/github-actions",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDOCquRHc8AAAAC5uPB4g",
+                    "name": "autorelease: pending",
+                    "color": "ededed",
+                    "description": ""
+                }
+            ],
             "milestone": null,
             "type": null,
             "subIssues": {
