@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-22T13:22:55+00:00",
-    "count": 121,
+    "generatedAt": "2026-10-22T14:21:20+00:00",
+    "count": 122,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -108,17 +108,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-acf-google-maps-key",
             "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
             "description": "Adds a field to enter a google maps api key for ACF",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
@@ -150,17 +150,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-timeline",
             "fullName": "helsingborg-stad/modularity-timeline",
             "description": "A module to display a timeline",
             "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -268,13 +268,6 @@
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
@@ -287,6 +280,13 @@
             "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
             "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
@@ -318,6 +318,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -329,13 +336,6 @@
             "fullName": "Considbrs-Webdev/modularity-opening-hours",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -360,20 +360,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -392,6 +378,20 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
         },
         {
             "owner": "helsingborg-stad",
@@ -935,6 +935,65 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOAuIygs8AAAABZHNHYQ",
+            "title": "Asynkron filtrering i arkiv kombinerar taxonomifilter med OR och ignorerar Customizer-inst\u00e4llningen \"Facetting type\"",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2337",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-10-22T13:25:58Z",
+            "number": 2337,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [
+                {
+                    "login": "sebastianthulin",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                    "url": "https://github.com/sebastianthulin",
+                    "company": ""
+                },
+                {
+                    "login": "camitzdennis",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                    "url": "https://github.com/camitzdennis",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Fix async archive taxonomy facetting to honor Customizer AND/OR relation",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2338",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
         {
             "id": "I_kwDORWsnoc8AAAABY9GE-g",
             "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
