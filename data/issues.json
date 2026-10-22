@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-22T14:21:20+00:00",
-    "count": 122,
+    "generatedAt": "2026-10-22T15:21:31+00:00",
+    "count": 99,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -115,13 +115,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "multisite-role-propagation",
             "fullName": "helsingborg-stad/multisite-role-propagation",
             "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
@@ -140,6 +133,13 @@
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-schools-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
@@ -206,6 +206,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-form-builder",
+            "fullName": "helsingborg-stad/modularity-form-builder",
+            "description": "Simple form builder that uses acf for forms. ",
+            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -220,10 +227,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-form-builder",
-            "fullName": "helsingborg-stad/modularity-form-builder",
-            "description": "Simple form builder that uses acf for forms. ",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+            "name": "wpmu-allow-cors",
+            "fullName": "helsingborg-stad/wpmu-allow-cors",
+            "description": "Allows cors with *",
+            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -231,13 +238,6 @@
             "fullName": "Considbrs-Webdev/modularity-service-info",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-allow-cors",
-            "fullName": "helsingborg-stad/wpmu-allow-cors",
-            "description": "Allows cors with *",
-            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -282,18 +282,18 @@
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "modularity-recommend",
             "fullName": "helsingborg-stad/modularity-recommend",
             "description": "Modularity recommend. Display static or AI generated recommendation links. ",
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "A grid of clickable link cards with icons.",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
@@ -360,6 +360,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -378,20 +392,6 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
         },
         {
             "owner": "helsingborg-stad",
@@ -542,27 +542,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-invalidate-login-pagecache",
-            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
-            "description": "Invalidates pagecache on submit of the login form.",
-            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wputilservice",
-            "fullName": "helsingborg-stad/wputilservice",
-            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
-            "url": "https://github.com/helsingborg-stad/wputilservice"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-quick-links",
-            "fullName": "Considbrs-Webdev/modularity-quick-links",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "ACF-UX-collapse-explore",
             "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
             "description": "Exploration clone of ACF-UX-collapse for better deployment",
@@ -588,6 +567,27 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-invalidate-login-pagecache",
+            "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
+            "description": "Invalidates pagecache on submit of the login form.",
+            "url": "https://github.com/helsingborg-stad/wpmu-invalidate-login-pagecache"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wputilservice",
+            "fullName": "helsingborg-stad/wputilservice",
+            "description": "Simplifies WordPress development by providing a centralized WpUtilService that exposes a WordPress api wrapped in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+            "url": "https://github.com/helsingborg-stad/wputilservice"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-quick-links",
+            "fullName": "Considbrs-Webdev/modularity-quick-links",
+            "description": "A Modularity module that creates a responsive grid of link cards.",
+            "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
         }
     ],
     "authors": [
@@ -893,7 +893,7 @@
         },
         {
             "login": "sebastianthulin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
             "url": "https://github.com/sebastianthulin",
             "company": "Helsingborgs stad"
         },
@@ -991,362 +991,6 @@
                     "title": "Fix async archive taxonomy facetting to honor Customizer AND/OR relation",
                     "url": "https://github.com/helsingborg-stad/Municipio/pull/2338",
                     "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9GE-g",
-            "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:36:18Z",
-            "number": 11,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9C_KQ",
-            "title": "Permalink structure, home URL or front page changes leave all indexed URLs/paths stale",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/9",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:31:46Z",
-            "number": 9,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9C-IQ",
-            "title": "PDF attachments on descendant pages can keep a stale top_most_parent",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/8",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:31:45Z",
-            "number": 8,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Re-index descendant pages when a parent changes or is deleted",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/10",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9C9Xg",
-            "title": "Edited Modularity modules do not trigger re-index of the pages that use them",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/7",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:31:44Z",
-            "number": 7,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9C8lQ",
-            "title": "Section exclusion meta changed outside the metabox does not re-index descendants",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/6",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:31:43Z",
-            "number": 6,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9C75A",
-            "title": "Descendants are not re-indexed when a branch is moved with Nested Pages (raw SQL sort)",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/5",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:31:41Z",
-            "number": 5,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9C7Dg",
-            "title": "Descendant pages stay indexed with stale path/section when a parent is unpublished, trashed or deleted",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/4",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:31:40Z",
-            "number": 4,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 2
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Re-index descendant pages when a parent changes or is deleted",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/10",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9A71g",
-            "title": "Changing a parent page's slug does not re-index its child pages (stale URLs)",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/3",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:28:39Z",
-            "number": 3,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [
-                {
-                    "login": "michaelclaesson",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                    "url": "https://github.com/michaelclaesson",
-                    "company": ""
-                },
-                {
-                    "login": "WilliamLundqvist",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
-                    "url": "https://github.com/WilliamLundqvist",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 5
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Descendant pages stay indexed with stale path/section when a parent is unpublished, trashed or deleted",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/4",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Descendants are not re-indexed when a branch is moved with Nested Pages (raw SQL sort)",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/5",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "PDF attachments on descendant pages can keep a stale top_most_parent",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/8",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Re-index descendant pages when a parent changes or is deleted",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/10",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-                    "repository": "Considbrs-Webdev/typesense-search"
                 }
             ]
         },
@@ -1894,39 +1538,6 @@
             ]
         },
         {
-            "id": "I_kwDOCquRHc8AAAABTpGBJA",
-            "title": "Component library should be merged in styleguide repository",
-            "url": "https://github.com/helsingborg-stad/styleguide/issues/1316",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-09-28T10:32:01Z",
-            "number": 1316,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOAuIygs8AAAABSgj9Pw",
             "title": "Expand chevron is shown in \"sibling\" pages when all childs is hidden from menu",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/2228",
@@ -2298,59 +1909,6 @@
             ]
         },
         {
-            "id": "I_kwDOCquRHc8AAAABDFfcmg",
-            "title": "Components affecting sub components should use the same arcitecture",
-            "url": "https://github.com/helsingborg-stad/styleguide/issues/1228",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-22T10:56:14Z",
-            "number": 1228,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Align nested component overrides with the approved composition architecture",
-                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1229",
-                    "repository": "helsingborg-stad/styleguide"
-                }
-            ]
-        },
-        {
             "id": "I_kwDOA3qtD88AAAABC2sDJQ",
             "title": "Creating a new organization admin from the user panel should send the customizable welcome e-mail",
             "url": "https://github.com/helsingborg-stad/api-event-manager/issues/156",
@@ -2480,59 +2038,6 @@
                     "title": "Load Json Render assets only when the module is used",
                     "url": "https://github.com/helsingborg-stad/modularity-json-render/pull/35",
                     "repository": "helsingborg-stad/modularity-json-render"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOCquRHc8AAAABBozIaw",
-            "title": "Common parameters is missing from documentation page",
-            "url": "https://github.com/helsingborg-stad/styleguide/issues/1213",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-05-08T08:06:51Z",
-            "number": 1213,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Show shared component parameters in component documentation",
-                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1214",
-                    "repository": "helsingborg-stad/styleguide"
                 }
             ]
         },
@@ -3009,105 +2514,6 @@
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-04-28T08:41:57Z",
             "number": 1982,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBSd4q88AAAABAsnXNw",
-            "title": "[TW] [WARNING] Undefined variable $submission_public_act",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder/issues/120",
-            "repository": "helsingborg-stad/modularity-form-builder",
-            "createdAt": "2026-04-28T08:41:32Z",
-            "number": 120,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBgY1js8AAAABAsnLvg",
-            "title": "[TW] [WARNING] Undefined variable $text_alignment",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/38",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:41:03Z",
-            "number": 38,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBgY1js8AAAABAsm9ng",
-            "title": "[TW] [WARNING] Undefined variable $stretch",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/37",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:40:27Z",
-            "number": 37,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
@@ -4125,111 +3531,12 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOBgY1js8AAAABAsh3uw",
-            "title": "[TW] [WARNING] Undefined variable $stretch",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/36",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:27:03Z",
-            "number": 36,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOAuIygs8AAAABAshwSw",
             "title": "[TW] [WARNING] Attempt to read property \"post_title\" on false",
             "url": "https://github.com/helsingborg-stad/Municipio/issues/1961",
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-04-28T08:26:44Z",
             "number": 1961,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBgY1js8AAAABAshnvg",
-            "title": "[TW] [WARNING] Undefined variable $text_alignment",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/35",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:26:20Z",
-            "number": 35,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBSd4q88AAAABAshbKQ",
-            "title": "[TW] [WARNING] Undefined variable $gdpr_complience_notice",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder/issues/119",
-            "repository": "helsingborg-stad/modularity-form-builder",
-            "createdAt": "2026-04-28T08:25:46Z",
-            "number": 119,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
@@ -4752,105 +4059,6 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOBgY1js8AAAABAseLeQ",
-            "title": "[TW] [WARNING] Undefined variable $text",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/34",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:16:09Z",
-            "number": 34,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBgY1js8AAAABAseEkg",
-            "title": "[TW] [WARNING] Undefined array key \"image\"",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/33",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:15:48Z",
-            "number": 33,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBgY1js8AAAABAsd7lQ",
-            "title": "[TW] [WARNING] Undefined variable $background_color",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/32",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:15:24Z",
-            "number": 32,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOBGRbgs8AAAABAsdq9A",
             "title": "[TW] [WARNING] Undefined array key \"senior_age\"",
             "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/279",
@@ -5049,111 +4257,12 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOBgY1js8AAAABAscGWg",
-            "title": "[TW] [WARNING] Undefined variable $stretch",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/31",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:10:03Z",
-            "number": 31,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBgY1js8AAAABAsbz5A",
-            "title": "[TW] [WARNING] Undefined variable $text_alignment",
-            "url": "https://github.com/helsingborg-stad/modularity-sections/issues/30",
-            "repository": "helsingborg-stad/modularity-sections",
-            "createdAt": "2026-04-28T08:09:07Z",
-            "number": 30,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOBGRbgs8AAAABAsboow",
             "title": "[TW] [WARNING] Undefined array key \"children_age\"",
             "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/276",
             "repository": "helsingborg-stad/api-event-manager-integration",
             "createdAt": "2026-04-28T08:08:31Z",
             "number": 276,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBSd4q88AAAABAsamxA",
-            "title": "[TW] [WARNING] Undefined array key \"phone\"",
-            "url": "https://github.com/helsingborg-stad/modularity-form-builder/issues/118",
-            "repository": "helsingborg-stad/modularity-form-builder",
-            "createdAt": "2026-04-28T08:05:14Z",
-            "number": 118,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
