@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-23T23:17:18+00:00",
+    "generatedAt": "2026-10-24T00:48:45+00:00",
     "count": 122,
     "repositories": [
         {
@@ -289,6 +289,13 @@
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "A grid of clickable link cards with icons.",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
+        },
+        {
             "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
@@ -301,13 +308,6 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "A grid of clickable link cards with icons.",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "Considbrs-Webdev",
