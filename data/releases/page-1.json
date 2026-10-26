@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-10-26T08:59:06+00:00",
-    "count": 98,
+    "generatedAt": "2026-10-26T09:58:28+00:00",
+    "count": 99,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 10,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.3.5",
+            "version": "6.3.5",
+            "body": "**Minor release.** This release adds sponsor views and accessibility improvements in Municipio, enhances chat, tables, and motion in Styleguide, and improves clone imports. It also fixes authentication errors in API Alarm Integration and adds a named landmark to the Contact Banner.\r\n\r\n[API Alarm Integration \\[5.0.25...5.0.27\\]](https://github.com/helsingborg-stad/api-alarm-integration/compare/5.0.25...5.0.27)\r\n------------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   Remote API requests now use browser `fetch` instead of WordPress\u2019s API client, preventing WordPress nonces from being sent to the remote server and causing authentication errors.\r\n\r\n[Contact Banner \\[4.0.28...4.0.30\\]](https://github.com/helsingborg-stad/modularity-contact-banner/compare/4.0.28...4.0.30)\r\n---------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Accessibility:** Adds a named, localized landmark to the contact banner so assistive technology users can identify it.\r\n\r\n[Municipio \\[7.67.21...7.70.3\\]](https://github.com/helsingborg-stad/municipio/compare/7.67.21...7.70.3)\r\n--------------------------------------------------------------------------------------------------------\r\n\r\n*   **Navigation:** Loads custom titles only for menu items and keeps title results separate for each menu, reducing unnecessary work.\r\n*   **Accessibility:** Adds ARIA labels to toggle triggers and positions accessibility messages more carefully to avoid disrupting existing content.\r\n*   **Sponsor views:** Adds views for sponsor offers and requests, with Swedish translations.\r\n*   **Performance:** Removes an unused LiteSpeed stylesheet.\r\n\r\n[Styleguide \\[3.36.14...3.41.17\\]](https://github.com/helsingborg-stad/styleguide/compare/3.36.14...3.41.17)\r\n------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Tables:** Improves table layouts on smaller screens and adds multi-level collapsible sections.\r\n*   **Chat:** Adds a typing indicator and informational items, with support for a persistent default info setting.\r\n*   **Collapsible search:** Corrects IDs to keep search controls associated with the right elements.\r\n*   **Buttons and motion:** Adds transitions when buttons toggle and updates animation patterns and motion tokens.\r\n\r\n[Municipio Clone \\[v1.6.3...v1.6.6\\]](https://github.com/helsingborg-stad/municipio-clone/compare/v1.6.3...v1.6.6)\r\n------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Imports:** Preserves the destination site\u2019s upload settings and rewrites URLs only for imported attachments.\r\n*   **Batch cloning:** Runs each target in isolation.\r\n*   **Performance:** Speeds up SQL imports by batching remote inserts and skipping a redundant GUID pass.\r\n*   **Reliability:** Fixes errors when updating URL paths.\r\n\r\n[Modularity-openstreetmap \\[3.1.24...3.1.26\\]](https://github.com/helsingborg-stad/modularity-openstreetmap/compare/3.1.24...3.1.26)\r\n------------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   Updating the map tile layer URLs from carto to openstreetmap.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.3.5",
+            "publishedAt": "2026-10-26T09:23:34Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.3.4",
             "version": "6.3.4",
@@ -92,15 +101,6 @@
             "body": "This release updates the WordPress and WordPress plugin providers to Roots.io.\r\n\r\nIt also includes a minor fix to ensure that the correct configuration keys are used when enabling features in Like Posts, Event Manager Integration, and the Municipio theme's chat feature.\r\n",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.4",
             "publishedAt": "2026-09-18T12:54:57Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "6.2.3",
-            "version": "6.2.3",
-            "body": "## [WordPress security updates](https://wordpress.org/documentation/wordpress-version/version-7-1-1/#security-updates)\r\nThis security and maintenance release features [17 bug fixes on Core](https://core.trac.wordpress.org/query?milestone=7.1.1&status=closed&group=status&order=priority), [21 bug fixes for the Block Editor](https://core.trac.wordpress.org/changeset/63587), and 11 security fixes. Because this is a security release, it is recommended that you update your sites immediately.\r\n\r\nThe security team would like to thank the following people for [responsibly reporting vulnerabilities](https://hackerone.com/wordpress?type=team), and allowing them to be fixed in this release:\r\n\r\n- An issue allowing a crafted URL to install and preview a theme from WordPress.org reported by Paulos Yibelo and pwn.ai\r\n- A stored cross-site scripting (XSS) issue in custom header images on some themes reported by Jeremy Felt of the WordPress Security Team\r\n- An information disclosure issue exposing the title of a private parent post reported by HDWSec\r\n- An HTML API issue allowing modified text to break out of an HTML comment reported by Jeremy Felt of the WordPress Security Team\r\n- A multisite issue allowing a site administrator to network-activate a network-only plugin reported by Jesse McNeil\r\n- A Contributor+ arbitrary post overwrite issue reported by Anthropic\r\n- An authenticated path traversal issue in the REST API templates controller reported by Anthropic\r\n- An authorization issue allowing any authenticated user to reparent comments, including notes, reported by viridis\r\n- An XML-RPC issue allowing changeset posts to bypass the custom CSS capability check reported by Ben Bidner of the WordPress Security Team\r\n- A Contributor+ disclosure of draft and pending post slugs reported by hermanhms\r\n- An unauthenticated stored cross-site scripting (XSS) issue via paragraph formatting, subject to comment approval, reported by Rafie Muhammad (Awesome Motive, Inc.)",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.3",
-            "publishedAt": "2026-09-18T06:34:35Z",
             "isPrerelease": false,
             "isDraft": false
         }
