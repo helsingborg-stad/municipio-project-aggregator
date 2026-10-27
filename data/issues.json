@@ -5,16 +5,9 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-27T12:31:37+00:00",
-    "count": 124,
+    "generatedAt": "2026-10-27T13:25:24+00:00",
+    "count": 45,
     "repositories": [
-        {
-            "owner": "helsingborg-stad",
-            "name": "Municipio",
-            "fullName": "helsingborg-stad/Municipio",
-            "description": "A theme specifically made for municipalities. ",
-            "url": "https://github.com/helsingborg-stad/Municipio"
-        },
         {
             "owner": "helsingborg-stad",
             "name": "Blade",
@@ -28,13 +21,6 @@
             "fullName": "helsingborg-stad/styleguide",
             "description": "Version 2.0 of the Helsingborg Stad styleguide",
             "url": "https://github.com/helsingborg-stad/styleguide"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-page-for-posttype",
-            "fullName": "helsingborg-stad/wp-page-for-posttype",
-            "description": "Adds the ability to place a page on an archive page and/or place a posttype archive on a page. ",
-            "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
         },
         {
             "owner": "municipio-se",
@@ -56,13 +42,6 @@
             "fullName": "helsingborg-stad/component-library",
             "description": "",
             "url": "https://github.com/helsingborg-stad/component-library"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-event-manager-integration",
-            "fullName": "helsingborg-stad/api-event-manager-integration",
-            "description": "DEPRECATED: Intragration with event-api for WordPress",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -108,10 +87,24 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-acf-google-maps-key",
             "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
             "description": "Adds a field to enter a google maps api key for ACF",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
@@ -136,27 +129,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -171,17 +143,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-security",
-            "fullName": "helsingborg-stad/wpmu-security",
-            "description": "Adds basic security features to WordPress",
-            "url": "https://github.com/helsingborg-stad/wpmu-security"
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -196,13 +161,6 @@
             "fullName": "helsingborg-stad/api-alarm-integration",
             "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
             "url": "https://github.com/helsingborg-stad/api-alarm-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -226,13 +184,6 @@
             "url": "https://github.com/helsingborg-stad/modularity-form-builder"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-service-info",
-            "fullName": "Considbrs-Webdev/modularity-service-info",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "wpmu-allow-cors",
             "fullName": "helsingborg-stad/wpmu-allow-cors",
@@ -245,6 +196,20 @@
             "fullName": "Considbrs-Webdev/modularity-noticeboard",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-service-info",
+            "fullName": "Considbrs-Webdev/modularity-service-info",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-service-info"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -262,24 +227,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-correct-file-paths",
-            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
-            "description": "esolves incorrect file paths, when migrating databases between different environments.",
-            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-acf-fatal-error-when-used-too-early",
-            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
-            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -303,27 +254,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-opening-hours",
             "fullName": "Considbrs-Webdev/modularity-opening-hours",
@@ -332,10 +262,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -374,27 +304,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "OpenStreetMap",
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
@@ -406,34 +315,6 @@
             "fullName": "Considbrs-Webdev/modularity-a-o",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-a-o"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-openstreetmap",
-            "fullName": "helsingborg-stad/modularity-openstreetmap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
         },
         {
             "owner": "helsingborg-stad",
@@ -472,31 +353,31 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "name": "modularity-openstreetmap",
+            "fullName": "helsingborg-stad/modularity-openstreetmap",
             "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-clone",
-            "fullName": "helsingborg-stad/municipio-clone",
-            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
-            "url": "https://github.com/helsingborg-stad/municipio-clone"
+            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
         },
         {
             "owner": "helsingborg-stad",
@@ -507,13 +388,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wp-mu-plugins-url-everywhere",
             "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
             "description": "Allow Plugins URL function to create urls towards any directory",
@@ -521,10 +395,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-products",
-            "fullName": "helsingborg-stad/modularity-products",
-            "description": "Display products & offers matrix",
-            "url": "https://github.com/helsingborg-stad/modularity-products"
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
         },
         {
             "owner": "helsingborg-stad",
@@ -532,6 +406,13 @@
             "fullName": "helsingborg-stad/wpmu-fatal-error-when-translation-too-early",
             "description": "Throws a descriptive exception when an translation is loaded before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-translation-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-products",
+            "fullName": "helsingborg-stad/modularity-products",
+            "description": "Display products & offers matrix",
+            "url": "https://github.com/helsingborg-stad/modularity-products"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -560,20 +441,6 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "A Modularity module that creates a responsive grid of link cards.",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -616,12 +483,6 @@
             "company": ""
         },
         {
-            "login": "MasterKenth",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/2890987?v=4",
-            "url": "https://github.com/MasterKenth",
-            "company": ""
-        },
-        {
             "login": "MrjonasN",
             "avatarUrl": "https://avatars.githubusercontent.com/u/55234353?v=4",
             "url": "https://github.com/MrjonasN",
@@ -646,12 +507,6 @@
             "company": ""
         },
         {
-            "login": "RuslanaLogosha",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/63247495?v=4",
-            "url": "https://github.com/RuslanaLogosha",
-            "company": ""
-        },
-        {
             "login": "Svanmark",
             "avatarUrl": "https://avatars.githubusercontent.com/u/457482?v=4",
             "url": "https://github.com/Svanmark",
@@ -670,12 +525,6 @@
             "company": "Consid Bor\u00e5s AB"
         },
         {
-            "login": "Zerowalker",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/1802933?v=4",
-            "url": "https://github.com/Zerowalker",
-            "company": ""
-        },
-        {
             "login": "actions-user",
             "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
             "url": "https://github.com/actions-user",
@@ -685,12 +534,6 @@
             "login": "alexanderbomanskoug2",
             "avatarUrl": "https://avatars.githubusercontent.com/u/39676080?v=4",
             "url": "https://github.com/alexanderbomanskoug2",
-            "company": ""
-        },
-        {
-            "login": "andersrehn",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/13356945?u=110c0ff20b7e86acbff99a7c665ac02948533468&v=4",
-            "url": "https://github.com/andersrehn",
             "company": ""
         },
         {
@@ -724,34 +567,10 @@
             "company": ""
         },
         {
-            "login": "considadam",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/122970703?v=4",
-            "url": "https://github.com/considadam",
-            "company": ""
-        },
-        {
             "login": "dannil76",
             "avatarUrl": "https://avatars.githubusercontent.com/u/768077?v=4",
             "url": "https://github.com/dannil76",
             "company": ""
-        },
-        {
-            "login": "davidohlin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/864179?v=4",
-            "url": "https://github.com/davidohlin",
-            "company": ""
-        },
-        {
-            "login": "denniscamitz",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/152498846?v=4",
-            "url": "https://github.com/denniscamitz",
-            "company": ""
-        },
-        {
-            "login": "dnkmdg",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/6313551?u=2b061680adc78ada3141cba3f3bfde6be8434fcb&v=4",
-            "url": "https://github.com/dnkmdg",
-            "company": "String Furniture AB"
         },
         {
             "login": "ergr1001",
@@ -796,12 +615,6 @@
             "company": ""
         },
         {
-            "login": "hultsfredskommun",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/1646885?v=4",
-            "url": "https://github.com/hultsfredskommun",
-            "company": ""
-        },
-        {
             "login": "jeanfredrik",
             "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
             "url": "https://github.com/jeanfredrik",
@@ -830,12 +643,6 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/113056103?v=4",
             "url": "https://github.com/malinkytta",
             "company": ""
-        },
-        {
-            "login": "mange84a",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/6149816?u=ed3f86a3c663b8fc160dfde1f7203261632c00d7&v=4",
-            "url": "https://github.com/mange84a",
-            "company": "Magnus Andersson EF"
         },
         {
             "login": "michaelclaesson",
@@ -877,12 +684,6 @@
             "login": "petter-a",
             "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?v=4",
             "url": "https://github.com/petter-a",
-            "company": ""
-        },
-        {
-            "login": "rsj10736",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/30775156?v=4",
-            "url": "https://github.com/rsj10736",
             "company": ""
         },
         {
@@ -967,52 +768,6 @@
                 "linked": 1
             },
             "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "fix: block past dates in the public event form",
-                    "url": "https://github.com/Considbrs-Webdev/eslov-customisation/pull/16",
-                    "repository": "Considbrs-Webdev/eslov-customisation"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOOWhNPs8AAAABaApVRA",
-            "title": "Date picker ignores min_date/max_date (no min attribute, no server-side check)",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/163",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-10-26T13:19:25Z",
-            "number": 163,
-            "state": "OPEN",
-            "author": {
-                "login": "WilliamLundqvist",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
-                "url": "https://github.com/WilliamLundqvist",
-                "company": "Consid Bor\u00e5s AB"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 2
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Disallow past dates in event occasion fields (set min_date)",
-                    "url": "https://github.com/helsingborg-stad/api-event-manager/issues/161",
-                    "repository": "helsingborg-stad/api-event-manager"
-                },
                 {
                     "event": "cross-referenced",
                     "title": "fix: block past dates in the public event form",
@@ -1533,317 +1288,6 @@
             ]
         },
         {
-            "id": "I_kwDOAuIygs8AAAABVM50Rw",
-            "title": "Coordinate adoption of selected v25.x functionality",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2290",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-05T19:24:32Z",
-            "number": 2290,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwzMDIyOTg1MDU=",
-                    "name": "enhancement",
-                    "color": "84b6eb",
-                    "description": ""
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAACWMFB6g",
-                    "name": "php",
-                    "color": "45229e",
-                    "description": "Pull requests that update php code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABVM5fnA",
-            "title": "Port v25.x archive, search, and editorial accessibility fixes",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2289",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-05T19:24:05Z",
-            "number": 2289,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwzMDIyOTg1MDU=",
-                    "name": "enhancement",
-                    "color": "84b6eb",
-                    "description": ""
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAACWMFB6g",
-                    "name": "php",
-                    "color": "45229e",
-                    "description": "Pull requests that update php code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Coordinate adoption of selected v25.x functionality",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2290",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABVM5eZA",
-            "title": "Verify and port v25.x data, performance, and admin fixes",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2288",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-05T19:24:03Z",
-            "number": 2288,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwzMDIyOTg1MDU=",
-                    "name": "enhancement",
-                    "color": "84b6eb",
-                    "description": ""
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAACWMFB6g",
-                    "name": "php",
-                    "color": "45229e",
-                    "description": "Pull requests that update php code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Coordinate adoption of selected v25.x functionality",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2290",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABVM5dJg",
-            "title": "Port v25.x content, navigation, and widget-area behaviours",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2287",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-05T19:24:01Z",
-            "number": 2287,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwzMDIyOTg1MDU=",
-                    "name": "enhancement",
-                    "color": "84b6eb",
-                    "description": ""
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAACWMFB6g",
-                    "name": "php",
-                    "color": "45229e",
-                    "description": "Pull requests that update php code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Coordinate adoption of selected v25.x functionality",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2290",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABVM5cIw",
-            "title": "Restore prioritised v25.x extension hooks in 7.x",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2286",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-05T19:24:00Z",
-            "number": 2286,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwzMDIyOTg1MDU=",
-                    "name": "enhancement",
-                    "color": "84b6eb",
-                    "description": ""
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAACWMFB6g",
-                    "name": "php",
-                    "color": "45229e",
-                    "description": "Pull requests that update php code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Coordinate adoption of selected v25.x functionality",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2290",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABVM5bBg",
-            "title": "Port v25.x security defaults and CSP support",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2285",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-05T19:23:58Z",
-            "number": 2285,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [
-                {
-                    "id": "MDU6TGFiZWwzMDIyOTg1MDU=",
-                    "name": "enhancement",
-                    "color": "84b6eb",
-                    "description": ""
-                },
-                {
-                    "id": "LA_kwDOAuIygs8AAAACWMFB6g",
-                    "name": "php",
-                    "color": "45229e",
-                    "description": "Pull requests that update php code"
-                }
-            ],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Coordinate adoption of selected v25.x functionality",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2290",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
             "id": "I_kwDOJP-wC88AAAABTvAoAg",
             "title": "Remove jQuery dependency from the public OpenStreetMap script",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap/issues/80",
@@ -1924,105 +1368,6 @@
             ]
         },
         {
-            "id": "I_kwDOBGRbgs8AAAABTvAheg",
-            "title": "Remove jQuery from frontend event integration and event module",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/289",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-09-28T18:27:34Z",
-            "number": 289,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Remove jQuery from frontend event integration",
-                    "url": "https://github.com/helsingborg-stad/api-event-manager-integration/pull/290",
-                    "repository": "helsingborg-stad/api-event-manager-integration"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABTvAVig",
-            "title": "Remove jQuery dependency from public frontend assets",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2257",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-28T18:27:18Z",
-            "number": 2257,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 2
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Remove jQuery dependencies from public Municipio scripts",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2273",
-                    "repository": "helsingborg-stad/Municipio"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Remove jQuery from Municipio public assets",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2294",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
             "id": "I_kwDOCquRHc8AAAABTpGBJA",
             "title": "Component library should be merged in styleguide repository",
             "url": "https://github.com/helsingborg-stad/styleguide/issues/1316",
@@ -2054,125 +1399,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABSgj9Pw",
-            "title": "Expand chevron is shown in \"sibling\" pages when all childs is hidden from menu",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2228",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-22T08:22:56Z",
-            "number": 2228,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABSWd1yg",
-            "title": "/tmp/ folder is growing in size due to a large number if image files",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2225",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-21T11:42:57Z",
-            "number": 2225,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABRk0y6g",
-            "title": "A module that is hidden, is still enabled thus enqueueing js & css assets in the frontend.",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2221",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-16T12:20:55Z",
-            "number": 2221,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Skip assets for modules found only in inactive widgets",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2274",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
         },
         {
             "id": "I_kwDOPl0lE88AAAABPhqlCQ",
@@ -2224,205 +1450,6 @@
                     "title": "Fix translation()/data() silently dropped when chained after on()",
                     "url": "https://github.com/helsingborg-stad/wputilservice/pull/15",
                     "repository": "helsingborg-stad/wputilservice"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABPRqqBw",
-            "title": "Scope search-index clearing to the current blog",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2162",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-09-02T05:27:09Z",
-            "number": 2162,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABGbI3tQ",
-            "title": "Content not rendering if using classic editor on one-page template",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2113",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-06-23T12:59:49Z",
-            "number": 2113,
-            "state": "OPEN",
-            "author": {
-                "login": "WilliamLundqvist",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
-                "url": "https://github.com/WilliamLundqvist",
-                "company": "Consid Bor\u00e5s AB"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Render one-page content for classic editor posts",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2205",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABDqpsiQ",
-            "title": "When adding a shortcode inside a container block (with gradient background) in widget manager site crashes",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2065",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-28T14:03:33Z",
-            "number": 2065,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Prevent container block crashes on array-valued ACF data",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2066",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABDqZqrQ",
-            "title": "str_contains(): Argument #1 ($haystack) must be of type string, array given",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2062",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-28T13:26:37Z",
-            "number": 2062,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Guard Gutenberg block data handling against array-valued ACF fields",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2063",
-                    "repository": "helsingborg-stad/Municipio"
                 }
             ]
         },
@@ -2511,53 +1538,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "I_kwDOOWhNPs8AAAABCk3teQ",
-            "title": "Allow hiding individual fields from frontend/backend form",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/139",
-            "repository": "helsingborg-stad/modularity-frontend-form",
-            "createdAt": "2026-05-18T09:18:30Z",
-            "number": 139,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": "Bug",
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "feat: Allow fields to be hidden from frontend/backend forms",
-                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/140",
-                    "repository": "helsingborg-stad/modularity-frontend-form"
-                }
-            ]
         },
         {
             "id": "I_kwDOCPnM4c8AAAABCF-Hgw",
@@ -2664,46 +1644,6 @@
                     "repository": "helsingborg-stad/styleguide"
                 }
             ]
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABBjKOUA",
-            "title": "Inform user about cancellation status of an Event",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2028",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-07T13:01:06Z",
-            "number": 2028,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "thorbrink",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                    "url": "https://github.com/thorbrink",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
         },
         {
             "id": "I_kwDOLwUbvs8AAAABBjJwLg",
@@ -2881,59 +1821,6 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOAuIygs8AAAABBVK7fw",
-            "title": "Add support for matiomo js paq.push()",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/2012",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-05-05T13:06:56Z",
-            "number": 2012,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "sebastianthulin",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                    "url": "https://github.com/sebastianthulin",
-                    "company": ""
-                },
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Add global Matomo `_paq` click tracking with backend-driven component targeting",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2013",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
             "id": "I_kwDOA3qtD88AAAABBT3YcA",
             "title": "Tags should be suggested when typing",
             "url": "https://github.com/helsingborg-stad/api-event-manager/issues/139",
@@ -2946,204 +1833,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
                 "url": "https://github.com/sebastianthulin",
                 "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAuKVCg",
-            "title": "Rest API endpoint for menu do not apply menu labels correctly",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1993",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T13:06:06Z",
-            "number": 1993,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsoByw",
-            "title": "[TW] [WARNING] Trying to access array offset on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1986",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:43:29Z",
-            "number": 1986,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsn-hQ",
-            "title": "[TW] [WARNING] Undefined array key \"display_as\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1985",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:43:20Z",
-            "number": 1985,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsn4AQ",
-            "title": "[TW] [WARNING] Undefined variable $disableLayoutShift",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1984",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:43:00Z",
-            "number": 1984,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsnx_w",
-            "title": "[TW] [WARNING] Array to string conversion",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1983",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:42:42Z",
-            "number": 1983,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsngsQ",
-            "title": "[TW] [WARNING] Undefined variable $subtitles",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1982",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:41:57Z",
-            "number": 1982,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
             },
             "assignees": [],
             "labels": [],
@@ -3264,408 +1953,12 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOAuIygs8AAAABAsm0ug",
-            "title": "[TW] [WARNING] Attempt to read property \"name\" on null",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1981",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:40:06Z",
-            "number": 1981,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsms5A",
-            "title": "[TW] [WARNING] Undefined array key \"slider_format\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1980",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:39:48Z",
-            "number": 1980,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsmqpg",
-            "title": "[TW] [WARNING] Undefined array key \"slides_autoslide\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1979",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:39:43Z",
-            "number": 1979,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBVFsvc8AAAABAsmoTg",
-            "title": "[TW] [WARNING] Array to string conversion",
-            "url": "https://github.com/helsingborg-stad/wp-page-for-posttype/issues/12",
-            "repository": "helsingborg-stad/wp-page-for-posttype",
-            "createdAt": "2026-04-28T08:39:37Z",
-            "number": 12,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsmaow",
-            "title": "[TW] [WARNING] Undefined array key \"headings\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1978",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:39:06Z",
-            "number": 1978,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsmMBw",
-            "title": "[TW] [WARNING] Undefined array key \"list\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1977",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:38:32Z",
-            "number": 1977,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsmD4w",
-            "title": "[TW] [WARNING] Undefined array key \"mod_table\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1976",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:38:15Z",
-            "number": 1976,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsmAVA",
-            "title": "[TW] [WARNING] mime_content_type(s3://helsingborg-se/uploads/networks/5/sites/194/2020/07/kltr_3_slottshagen_kulturkortet.jpg): Failed to open stream: &quot;S3_Local_Index\\Stream\\StreamWrapperProxy::stream_open&quot; call failed",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1975",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:38:08Z",
-            "number": 1975,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsljHA",
-            "title": "[TW] [WARNING] Undefined variable $ID",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1974",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:37:02Z",
-            "number": 1974,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOHevlSc8AAAABAslXBQ",
             "title": "[TW] [WARNING] Trying to access array offset on false",
             "url": "https://github.com/helsingborg-stad/modularity-products/issues/15",
             "repository": "helsingborg-stad/modularity-products",
             "createdAt": "2026-04-28T08:36:35Z",
             "number": 15,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOIBc4MM8AAAABAslPXg",
-            "title": "[TW] [WARNING] Trying to access array offset on null",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages/issues/8",
-            "repository": "helsingborg-stad/mod-my-pages",
-            "createdAt": "2026-04-28T08:36:18Z",
-            "number": 8,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAslLIw",
-            "title": "[TW] [WARNING] Undefined array key 0",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1973",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:36:08Z",
-            "number": 1973,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAslDOQ",
-            "title": "[TW] [WARNING] Trying to access array offset on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1972",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:35:48Z",
-            "number": 1972,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
@@ -3759,402 +2052,6 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOAuIygs8AAAABAskayg",
-            "title": "[TW] [WARNING] Undefined variable $ID",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1971",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:34:02Z",
-            "number": 1971,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAskPRA",
-            "title": "[TW] [WARNING] Undefined variable $amount",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1970",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:33:31Z",
-            "number": 1970,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAskKRQ",
-            "title": "[TW] [WARNING] Attempt to read property \"ID\" on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1969",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:33:17Z",
-            "number": 1969,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAskB0Q",
-            "title": "[TW] [WARNING] Undefined array key \"host\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/284",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:32:54Z",
-            "number": 284,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsj7pQ",
-            "title": "[TW] [WARNING] Undefined array key \"posts_hide_title_column\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1968",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:32:38Z",
-            "number": 1968,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsj4UA",
-            "title": "[TW] [WARNING] foreach() argument must be of type array|object, string given",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1967",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:32:29Z",
-            "number": 1967,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsjvvw",
-            "title": "[TW] [WARNING] Attempt to read property \"data\" on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1966",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:32:05Z",
-            "number": 1966,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsjjiw",
-            "title": "[TW] [WARNING] Undefined array key \"title\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/283",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:31:33Z",
-            "number": 283,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsjXtQ",
-            "title": "[TW] [WARNING] Undefined array key \"street_address\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/282",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:31:02Z",
-            "number": 282,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsjLQg",
-            "title": "[TW] [WARNING] Undefined variable $hasQueryParameters",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1965",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:30:29Z",
-            "number": 1965,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsi9rw",
-            "title": "[TW] [WARNING] Undefined variable $baseClass",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1964",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:29:54Z",
-            "number": 1964,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsiwsA",
-            "title": "[TW] [WARNING] Undefined array key \"dataSource\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/281",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:29:22Z",
-            "number": 281,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOE96d8c8AAAABAsic8w",
             "title": "[TW] [WARNING] Undefined property: stdClass::$buttonRemoveLabel",
             "url": "https://github.com/helsingborg-stad/component-library/issues/645",
@@ -4188,111 +2085,12 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOAuIygs8AAAABAsiGuA",
-            "title": "[TW] [WARNING] Undefined variable $ID",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1963",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:27:43Z",
-            "number": 1963,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsh_rw",
-            "title": "[TW] [WARNING] Attempt to read property \"post_type\" on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1962",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:27:25Z",
-            "number": 1962,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOBgY1js8AAAABAsh3uw",
             "title": "[TW] [WARNING] Undefined variable $stretch",
             "url": "https://github.com/helsingborg-stad/modularity-sections/issues/36",
             "repository": "helsingborg-stad/modularity-sections",
             "createdAt": "2026-04-28T08:27:03Z",
             "number": 36,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAshwSw",
-            "title": "[TW] [WARNING] Attempt to read property \"post_title\" on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1961",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:26:44Z",
-            "number": 1961,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
@@ -4386,474 +2184,12 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOAuIygs8AAAABAshRQg",
-            "title": "[TW] [WARNING] Trying to access array offset on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1960",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:25:19Z",
-            "number": 1960,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAshPXw",
-            "title": "[TW] [WARNING] Undefined variable $renderedView",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1959",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:25:14Z",
-            "number": 1959,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAshBJA",
-            "title": "[TW] [WARNING] Undefined variable $updated",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1958",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:24:33Z",
-            "number": 1958,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsgoIw",
-            "title": "[TW] [WARNING] Undefined variable $name",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1956",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:23:23Z",
-            "number": 1956,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsgcBw",
-            "title": "[TW] [WARNING] Undefined array key \"website\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/280",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:22:49Z",
-            "number": 280,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsgWbw",
-            "title": "[TW] [WARNING] Undefined array key \"host\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1955",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:22:33Z",
-            "number": 1955,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOGsc40s8AAAABAsgGAw",
             "title": "[TW] [WARNING] Undefined variable $title",
             "url": "https://github.com/helsingborg-stad/modularity-entryscape/issues/13",
             "repository": "helsingborg-stad/modularity-entryscape",
             "createdAt": "2026-04-28T08:21:49Z",
             "number": 13,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsf-og",
-            "title": "[TW] [WARNING] Undefined array key \"mod_table\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1954",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:21:31Z",
-            "number": 1954,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsf2YQ",
-            "title": "[TW] [WARNING] foreach() argument must be of type array|object, null given",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1953",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:21:09Z",
-            "number": 1953,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsfVAQ",
-            "title": "[TW] [WARNING] Undefined variable $color",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1952",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:19:39Z",
-            "number": 1952,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsfJ-g",
-            "title": "[TW] [WARNING] Undefined variable $style",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1951",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:19:10Z",
-            "number": 1951,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAse_UQ",
-            "title": "[TW] [WARNING] Undefined variable $ID",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1950",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:18:39Z",
-            "number": 1950,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsezQQ",
-            "title": "[TW] [WARNING] Undefined variable $text",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1949",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:18:06Z",
-            "number": 1949,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAseoUA",
-            "title": "[TW] [WARNING] Trying to access array offset on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1948",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:17:36Z",
-            "number": 1948,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAseXVg",
-            "title": "[TW] [WARNING] Undefined variable $post_title",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1947",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:16:44Z",
-            "number": 1947,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
@@ -4980,144 +2316,12 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOBGRbgs8AAAABAsdq9A",
-            "title": "[TW] [WARNING] Undefined array key \"senior_age\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/279",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:14:40Z",
-            "number": 279,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDODewx3s8AAAABAsddSA",
             "title": "[TW] [WARNING] Undefined variable $ID",
             "url": "https://github.com/helsingborg-stad/modularity-contact-banner/issues/41",
             "repository": "helsingborg-stad/modularity-contact-banner",
             "createdAt": "2026-04-28T08:14:03Z",
             "number": 41,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsdEyg",
-            "title": "[TW] [WARNING] Undefined array key \"mod_hero_display_as\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1945",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T08:12:56Z",
-            "number": 1945,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsdB6A",
-            "title": "[TW] [WARNING] Undefined array key \"location\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/278",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:12:49Z",
-            "number": 278,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsc1Vw",
-            "title": "[TW] [WARNING] Undefined array key \"contact_email\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/277",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:12:15Z",
-            "number": 277,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
@@ -5244,276 +2448,12 @@
             "relationships": []
         },
         {
-            "id": "I_kwDOBGRbgs8AAAABAsboow",
-            "title": "[TW] [WARNING] Undefined array key \"children_age\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/276",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:08:31Z",
-            "number": 276,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "I_kwDOBSd4q88AAAABAsamxA",
             "title": "[TW] [WARNING] Undefined array key \"phone\"",
             "url": "https://github.com/helsingborg-stad/modularity-form-builder/issues/118",
             "repository": "helsingborg-stad/modularity-form-builder",
             "createdAt": "2026-04-28T08:05:14Z",
             "number": 118,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsZUfg",
-            "title": "[TW] [WARNING] Undefined array key \"host\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/275",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T08:01:13Z",
-            "number": 275,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsU2Hw",
-            "title": "[TW] [WARNING] Undefined array key \"contact_phone\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/274",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T07:47:41Z",
-            "number": 274,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsTgCQ",
-            "title": "[TW] [WARNING] Undefined array key \"formatted\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/273",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T07:43:10Z",
-            "number": 273,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsTRXQ",
-            "title": "[TW] [WARNING] Undefined array key \"date_query\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/272",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T07:42:24Z",
-            "number": 272,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOBGRbgs8AAAABAsQ5lA",
-            "title": "[TW] [WARNING] Undefined array key \"duration_formatted\"",
-            "url": "https://github.com/helsingborg-stad/api-event-manager-integration/issues/271",
-            "repository": "helsingborg-stad/api-event-manager-integration",
-            "createdAt": "2026-04-28T07:34:44Z",
-            "number": 271,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABAsLtjw",
-            "title": "[TW] [WARNING] Attempt to read property \"ID\" on false",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1934",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T07:17:42Z",
-            "number": 1934,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "I_kwDOAuIygs8AAAABArqe8g",
-            "title": "[WARNING] Undefined array key \"mod_hero_display_as\"",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1916",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-04-28T05:12:48Z",
-            "number": 1916,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
@@ -5643,53 +2583,6 @@
                     "title": "Cannot enqueue assets correctly when plugin is used as a mu-plugin [v2]",
                     "url": "https://github.com/helsingborg-stad/wputilservice/issues/18",
                     "repository": "helsingborg-stad/wputilservice"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOAuIygs7ZDHFH",
-            "title": "Arguments with default values must be at the end of the argument list",
-            "url": "https://github.com/helsingborg-stad/Municipio/issues/1612",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2025-11-19T07:40:31Z",
-            "number": 1612,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Fix argument order in Template::renderView() method signature",
-                    "url": "https://github.com/helsingborg-stad/Municipio/pull/1613",
-                    "repository": "helsingborg-stad/Municipio"
                 }
             ]
         }
