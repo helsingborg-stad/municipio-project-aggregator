@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-27T20:26:37+00:00",
-    "count": 26,
+    "generatedAt": "2026-10-27T21:25:26+00:00",
+    "count": 27,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -695,7 +695,7 @@
         },
         {
             "login": "camitzdennis",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
             "url": "https://github.com/camitzdennis",
             "company": "@helsingborg-stad"
         },
@@ -923,6 +923,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOOWhNPs8AAAABLHgryA",
+            "title": "fix: make frontend form fit narrow containers",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/165",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-10-27T21:00:42Z",
+            "number": 165,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDORWsnoc8AAAABLHCT2w",
             "title": "Warn in admin when permalink/home URL/front page changes leave indexed URLs stale",
