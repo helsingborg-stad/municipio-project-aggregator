@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-27T19:13:04+00:00",
-    "count": 125,
+    "generatedAt": "2026-10-27T20:16:01+00:00",
+    "count": 124,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -707,7 +707,7 @@
         },
         {
             "login": "camitzdennis",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
             "url": "https://github.com/camitzdennis",
             "company": "@helsingborg-stad"
         },
@@ -935,6 +935,39 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOOWhNPs8AAAABaZjn6w",
+            "title": "Form overflows its container on narrow screens (mobile / nested blocks)",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/164",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-10-27T19:53:17Z",
+            "number": 164,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "I_kwDODewx3s8AAAABaWHw5w",
             "title": "Sk\u00e4rml\u00e4sare l\u00e4ser inte upp kontaktbannern vid ankarl\u00e4nk till #contact",
@@ -1207,46 +1240,6 @@
             ]
         },
         {
-            "id": "I_kwDORWsnoc8AAAABY9C-IQ",
-            "title": "PDF attachments on descendant pages can keep a stale top_most_parent",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/8",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:31:45Z",
-            "number": 8,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Re-index descendant pages when a parent changes or is deleted",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/10",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
             "id": "I_kwDORWsnoc8AAAABY9C9Xg",
             "title": "Edited Modularity modules do not trigger re-index of the pages that use them",
             "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/7",
@@ -1416,89 +1409,6 @@
                 "linked": 3
             },
             "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Re-index descendant pages when a parent changes or is deleted",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/10",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Add integration tests that compare the index against what DocumentBuilder builds from the database",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/11",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Integration tests: index vs DocumentBuilder (issue #11)",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/12",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDORWsnoc8AAAABY9A71g",
-            "title": "Changing a parent page's slug does not re-index its child pages (stale URLs)",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/3",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-10-21T22:28:39Z",
-            "number": 3,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
-            },
-            "assignees": [
-                {
-                    "login": "michaelclaesson",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                    "url": "https://github.com/michaelclaesson",
-                    "company": ""
-                },
-                {
-                    "login": "WilliamLundqvist",
-                    "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
-                    "url": "https://github.com/WilliamLundqvist",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 6
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Descendant pages stay indexed with stale path/section when a parent is unpublished, trashed or deleted",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/4",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Descendants are not re-indexed when a branch is moved with Nested Pages (raw SQL sort)",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/5",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "PDF attachments on descendant pages can keep a stale top_most_parent",
-                    "url": "https://github.com/Considbrs-Webdev/typesense-search/issues/8",
-                    "repository": "Considbrs-Webdev/typesense-search"
-                },
                 {
                     "event": "cross-referenced",
                     "title": "Re-index descendant pages when a parent changes or is deleted",
