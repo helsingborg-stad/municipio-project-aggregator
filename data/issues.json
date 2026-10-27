@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-10-27T20:16:01+00:00",
+    "generatedAt": "2026-10-27T21:12:13+00:00",
     "count": 124,
     "repositories": [
         {
@@ -937,7 +937,7 @@
     "items": [
         {
             "id": "I_kwDOOWhNPs8AAAABaZjn6w",
-            "title": "Form overflows its container on narrow screens (mobile / nested blocks)",
+            "title": "Form layout breaks in narrow containers (small phones, columns, nested blocks)",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form/issues/164",
             "repository": "helsingborg-stad/modularity-frontend-form",
             "createdAt": "2026-10-27T19:53:17Z",
@@ -964,9 +964,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: make frontend form fit narrow containers",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/165",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                }
+            ]
         },
         {
             "id": "I_kwDODewx3s8AAAABaWHw5w",
@@ -1222,7 +1229,7 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 2
+                "linked": 3
             },
             "relationships": [
                 {
@@ -1235,6 +1242,12 @@
                     "event": "cross-referenced",
                     "title": "Integration tests: index vs DocumentBuilder (issue #11)",
                     "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/12",
+                    "repository": "Considbrs-Webdev/typesense-search"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "Warn in admin when permalink/home URL/front page changes leave indexed URLs stale",
+                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/15",
                     "repository": "Considbrs-Webdev/typesense-search"
                 }
             ]
@@ -1268,7 +1281,7 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 2
+                "linked": 3
             },
             "relationships": [
                 {
@@ -1281,6 +1294,12 @@
                     "event": "cross-referenced",
                     "title": "Integration tests: index vs DocumentBuilder (issue #11)",
                     "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/12",
+                    "repository": "Considbrs-Webdev/typesense-search"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "Re-index pages that display a Modularity module when it changes",
+                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/14",
                     "repository": "Considbrs-Webdev/typesense-search"
                 }
             ]
@@ -1314,7 +1333,7 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 2
+                "linked": 3
             },
             "relationships": [
                 {
@@ -1327,6 +1346,12 @@
                     "event": "cross-referenced",
                     "title": "Integration tests: index vs DocumentBuilder (issue #11)",
                     "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/12",
+                    "repository": "Considbrs-Webdev/typesense-search"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "Cascade re-indexing to descendants and react to section-exclusion meta changes",
+                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/13",
                     "repository": "Considbrs-Webdev/typesense-search"
                 }
             ]
@@ -1360,7 +1385,7 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 2
+                "linked": 3
             },
             "relationships": [
                 {
@@ -1373,6 +1398,12 @@
                     "event": "cross-referenced",
                     "title": "Integration tests: index vs DocumentBuilder (issue #11)",
                     "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/12",
+                    "repository": "Considbrs-Webdev/typesense-search"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "Cascade re-indexing to descendants and react to section-exclusion meta changes",
+                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/13",
                     "repository": "Considbrs-Webdev/typesense-search"
                 }
             ]
@@ -1406,7 +1437,7 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 3
+                "linked": 4
             },
             "relationships": [
                 {
@@ -1425,6 +1456,12 @@
                     "event": "cross-referenced",
                     "title": "Integration tests: index vs DocumentBuilder (issue #11)",
                     "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/12",
+                    "repository": "Considbrs-Webdev/typesense-search"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "Cascade re-indexing to descendants and react to section-exclusion meta changes",
+                    "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/13",
                     "repository": "Considbrs-Webdev/typesense-search"
                 }
             ]
