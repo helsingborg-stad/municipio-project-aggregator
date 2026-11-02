@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-02T12:19:29+00:00",
+    "generatedAt": "2026-11-02T13:14:59+00:00",
     "count": 118,
     "repositories": [
         {
@@ -296,6 +296,13 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
+        },
+        {
             "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
@@ -308,13 +315,6 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
@@ -556,20 +556,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -588,6 +574,20 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "A Modularity module that creates a responsive grid of link cards.",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         }
     ],
     "authors": [
@@ -893,7 +893,7 @@
         },
         {
             "login": "sebastianthulin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/797129?v=4",
             "url": "https://github.com/sebastianthulin",
             "company": "Helsingborgs stad"
         },
