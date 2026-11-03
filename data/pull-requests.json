@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-03T20:26:01+00:00",
+    "generatedAt": "2026-11-03T21:25:51+00:00",
     "count": 22,
     "repositories": [
         {
@@ -164,17 +164,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-timeline",
             "fullName": "helsingborg-stad/modularity-timeline",
             "description": "A module to display a timeline",
             "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -268,13 +268,6 @@
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "A grid of clickable link cards with icons.",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "Search-notices",
             "fullName": "helsingborg-stad/Search-notices",
@@ -294,6 +287,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "A grid of clickable link cards with icons.",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -318,6 +318,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -329,13 +336,6 @@
             "fullName": "Considbrs-Webdev/modularity-opening-hours",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
