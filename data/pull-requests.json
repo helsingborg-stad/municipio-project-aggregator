@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-03T06:32:31+00:00",
-    "count": 24,
+    "generatedAt": "2026-11-03T07:25:52+00:00",
+    "count": 25,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -923,6 +923,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOA2n8dM8AAAABMfn4pg",
+            "title": "Fix: skicka r\u00e4tt typer till field- och option-komponenterna",
+            "url": "https://github.com/helsingborg-stad/Customer-feedback/pull/40",
+            "repository": "helsingborg-stad/Customer-feedback",
+            "createdAt": "2026-11-03T07:21:39Z",
+            "number": 40,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOE96d8c8AAAABMW99CQ",
             "title": "feat: deprecate splide",
