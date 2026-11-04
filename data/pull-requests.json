@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-04T15:25:19+00:00",
+    "generatedAt": "2026-11-04T16:25:31+00:00",
     "count": 23,
     "repositories": [
         {
@@ -226,18 +226,18 @@
             "url": "https://github.com/helsingborg-stad/modularity-form-builder"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-allow-cors",
-            "fullName": "helsingborg-stad/wpmu-allow-cors",
-            "description": "Allows cors with *",
-            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-noticeboard",
             "fullName": "Considbrs-Webdev/modularity-noticeboard",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-allow-cors",
+            "fullName": "helsingborg-stad/wpmu-allow-cors",
+            "description": "Allows cors with *",
+            "url": "https://github.com/helsingborg-stad/wpmu-allow-cors"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -924,18 +924,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs8AAAABM1bICQ",
-            "title": "fix: keep breadcrumbs on post type archives without posts",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2359",
+            "id": "PR_kwDOAuIygs8AAAABM2OQeg",
+            "title": "fix: only allow one-page template when gutenberg is enabled for all pages",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2361",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-04T14:49:41Z",
-            "number": 2359,
+            "createdAt": "2026-11-04T15:42:10Z",
+            "number": 2361,
             "state": "OPEN",
             "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
             },
             "assignees": [],
             "labels": [],
