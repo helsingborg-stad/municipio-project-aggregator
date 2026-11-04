@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-04T06:33:01+00:00",
-    "count": 22,
+    "generatedAt": "2026-11-04T07:25:26+00:00",
+    "count": 24,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -923,6 +923,79 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOA3qtD88AAAABMv6teA",
+            "title": "fix: expose audience taxonomy in REST",
+            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/162",
+            "repository": "helsingborg-stad/api-event-manager",
+            "createdAt": "2026-11-04T07:20:40Z",
+            "number": 162,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABMv6Ywg",
+            "title": "feat: add audience, category and price taxonomies for events",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2354",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-04T07:20:12Z",
+            "number": 2354,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: expose audience taxonomy in REST",
+                    "url": "https://github.com/helsingborg-stad/api-event-manager/pull/162",
+                    "repository": "helsingborg-stad/api-event-manager"
+                }
+            ]
+        },
         {
             "id": "PR_kwDOLwUbvs8AAAABMkxvwA",
             "title": "feat: chunked typesense imports",
