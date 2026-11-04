@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-04T07:25:26+00:00",
+    "generatedAt": "2026-11-04T08:26:50+00:00",
     "count": 24,
     "repositories": [
         {
@@ -924,18 +924,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOA3qtD88AAAABMv6teA",
-            "title": "fix: expose audience taxonomy in REST",
-            "url": "https://github.com/helsingborg-stad/api-event-manager/pull/162",
-            "repository": "helsingborg-stad/api-event-manager",
-            "createdAt": "2026-11-04T07:20:40Z",
-            "number": 162,
+            "id": "PR_kwDOPl0lE88AAAABMwd8Sw",
+            "title": "fix: require manifest entries for cache-busted assets",
+            "url": "https://github.com/helsingborg-stad/wputilservice/pull/22",
+            "repository": "helsingborg-stad/wputilservice",
+            "createdAt": "2026-11-04T08:09:28Z",
+            "number": 22,
             "state": "OPEN",
             "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
             },
             "assignees": [],
             "labels": [],
