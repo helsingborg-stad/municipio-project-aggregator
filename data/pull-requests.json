@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-04T14:25:21+00:00",
+    "generatedAt": "2026-11-04T15:25:19+00:00",
     "count": 23,
     "repositories": [
         {
@@ -542,20 +542,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -588,6 +574,20 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         }
     ],
     "authors": [
@@ -924,12 +924,12 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOAuIygs8AAAABM0-L-A",
-            "title": "fix: show page tree ancestors in breadcrumbs for post type archives mapped to a page",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2357",
+            "id": "PR_kwDOAuIygs8AAAABM1bICQ",
+            "title": "fix: keep breadcrumbs on post type archives without posts",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2359",
             "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-04T14:18:45Z",
-            "number": 2357,
+            "createdAt": "2026-11-04T14:49:41Z",
+            "number": 2359,
             "state": "OPEN",
             "author": {
                 "login": "michaelclaesson",
