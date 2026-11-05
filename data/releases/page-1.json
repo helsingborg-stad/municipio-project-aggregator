@@ -1,8 +1,8 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-11-05T08:46:26+00:00",
-    "count": 99,
+    "generatedAt": "2026-11-05T09:46:25+00:00",
+    "count": 100,
     "pageSize": 10,
     "pageNumber": 1,
     "pageCount": 10,
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.3.6",
+            "version": "6.3.6",
+            "body": "**Minor release:** This release adds online event details and richer event filtering, alongside accessibility, responsive layout, and navigation fixes across Municipio and its related packages.\r\n\r\n[Volunteer Manager Integration \\[5.1.9...5.2.0\\]](https://github.com/helsingborg-stad/api-volunteer-manager-integration/compare/5.1.9...5.2.0)\r\n----------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Phone number handling:** Now uses the lighter libphonenumber library.\r\n*   **Import schedule checks:** Run after Advanced Custom Fields initializes.\r\n\r\n[Contact Banner \\[4.0.30...4.0.32\\]](https://github.com/helsingborg-stad/modularity-contact-banner/compare/4.0.30...4.0.32)\r\n---------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Accessibility:** The contact anchor now targets a focusable heading.\r\n\r\n[Frontend Form \\[0.84.18...0.84.22\\]](https://github.com/helsingborg-stad/modularity-frontend-form/compare/0.84.18...0.84.22)\r\n-----------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Layout:** Forms now fit narrow containers more reliably.\r\n*   **Animation:** The form\u2019s pulse animation is defined correctly.\r\n\r\n[Municipio \\[7.72.4...7.77.2\\]](https://github.com/helsingborg-stad/Municipio/compare/7.72.4...7.77.2)\r\n------------------------------------------------------------------------------------------------------\r\n\r\n*   **Events:** Online events can show attendance details and a join button; event listings can also be filtered by audience, category, price, and checkbox-based taxonomy filters.\r\n*   **School events:** The events section is hidden when there are no upcoming events.\r\n*   **Navigation:** Menu links match the current page using their query parameters, and breadcrumbs work for mapped archives, including archives without posts.\r\n*   **Accessibility and SEO:** Accessibility pages now support SEO, and user-group menu links appear only on the main network.\r\n*   **Media and performance:** Smaller, blurred image placeholders can be preloaded, and script loading has been improved.\r\n*   **Sliders:** Posts sliders support page-based movement and peek slides, with improved settings and translations.\r\n*   **Job postings:** Ethics policy data is now formatted correctly and omitted when empty.\r\n\r\n[Styleguide \\[3.42.3...3.44.0\\]](https://github.com/helsingborg-stad/styleguide/compare/3.42.3...3.44.0)\r\n--------------------------------------------------------------------------------------------------------\r\n\r\n*   **Responsive layouts:** Long words wrap within collection content and boxes on small screens.\r\n*   **Sliders:** Responsive columns and animations are improved; Splide is deprecated in favor of the updated slider experience.\r\n*   **Images:** Low-quality image placeholders now use a blur effect.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.3.6",
+            "publishedAt": "2026-11-05T08:56:29Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.3.5",
             "version": "6.3.5",
@@ -92,15 +101,6 @@
             "body": "Minor release: This update focuses on navigation and interface improvements. Municipio adds a redesigned menu module with more flexible layouts, improved mobile chat behavior, and new button styling controls in the header and tab menus. Styleguide delivers a major popover refresh, a new site selector component, and more consistent color inheritance for navigation and buttons.\r\n\r\n## Municipio Theme [7.38.6...7.43.1](https://github.com/helsingborg-stad/municipio/compare/7.38.6...7.43.1)\r\n- Chat: Moves the chat script integration and adds a full-screen chat bubble layout for mobile devices.\r\n- Language Menu: Fixes placement issues so the language switcher opens in the correct position.\r\n- Menu Module: Introduces a clearer visual design with working expand and collapse behavior.\r\n- Menu Module: Makes menu columns more fluid and adds a spaced layout option for better content balance.\r\n- Header Buttons: Adds settings for controlling button styles in the header.\r\n- Tab Menu: Adds support for button appearance settings in the tab menu alternative.\r\n- Mega Menu: Keeps the mega menu label visible on mobile devices to avoid navigation issues.\r\n\r\n\r\n## Styleguide [3.24.18...3.31.4](https://github.com/helsingborg-stad/styleguide/compare/3.24.18...3.31.4)\r\n- Popover: Reworks the popover component with a cleaner implementation, a new cover mode, and a smaller API.\r\n- Popover: Improves positioning behavior by resetting calculations before placement and handling dropdown overflow more reliably.\r\n- Site Selector: Adds a redesigned site selector component with updated sizing, spacing, and examples.\r\n- Navigation Colors: Removes manual color overrides on basic navigation so it follows the surrounding design more consistently.\r\n- Buttons: Lets buttons inherit the active color scheme, keeps button sizes aligned more consistently, and preserves corner shapes in SVG buttons.\r\n\r\n## Deployment Configuration [7.38.6...7.43.1](https://github.com/municipio-se/municipio-deployment/compare/7.38.6...7.43.1)\r\n\r\n- ACF Pro: Installs Advanced Custom Fields Pro as a must-use plugin so it loads before regular plugins.\r\n- ACF Safety: Adds a must-use safeguard that throws a clear error if ACF fields are accessed too early.\r\n- Municipio Clone: Adds the Municipio Clone plugin to the deployment.\r\n- WordPress Core: Updates the Roots-managed no-content WordPress package from 7.1.1 to 7.1.2.\r\n- WordPress Plugins: Updates Redirection to 5.10.1 and Redis Cache to 3.0.0.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.5",
             "publishedAt": "2026-09-24T10:28:18Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "6.2.4",
-            "version": "6.2.4",
-            "body": "This release updates the WordPress and WordPress plugin providers to Roots.io.\r\n\r\nIt also includes a minor fix to ensure that the correct configuration keys are used when enabling features in Like Posts, Event Manager Integration, and the Municipio theme's chat feature.\r\n",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.4",
-            "publishedAt": "2026-09-18T12:54:57Z",
             "isPrerelease": false,
             "isDraft": false
         }
