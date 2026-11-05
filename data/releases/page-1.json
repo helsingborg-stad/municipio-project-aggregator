@@ -1,11 +1,11 @@
 {
     "source": "releases",
     "sourceScope": "GitHub",
-    "generatedAt": "2026-11-05T09:46:25+00:00",
-    "count": 100,
+    "generatedAt": "2026-11-05T10:46:16+00:00",
+    "count": 101,
     "pageSize": 10,
     "pageNumber": 1,
-    "pageCount": 10,
+    "pageCount": 11,
     "repository": {
         "owner": "municipio-se",
         "name": "municipio-deployment",
@@ -14,6 +14,15 @@
         "url": "https://github.com/municipio-se/municipio-deployment"
     },
     "items": [
+        {
+            "title": "6.3.7",
+            "version": "6.3.7",
+            "body": "This **Minor** release adds configurable pre-footer imagery, improves page-template behavior when Gutenberg is enabled site-wide, and fixes rendering and image-stacking issues across the updated packages.\r\n\r\n[Modularity JSON Render 4.2.0...4.2.2](https://github.com/helsingborg-stad/modularity-json-render/compare/4.2.0...4.2.2)\r\n------------------------------------------------------------------------------------------------------------------------\r\n\r\n*   **Heading and content formatting:** Corrects how configured prefixes and suffixes appear around headings and content in rendered JSON.\r\n\r\n[Municipio Theme 7.77.2...7.78.1](https://github.com/helsingborg-stad/municipio/compare/7.77.2...7.78.1)\r\n--------------------------------------------------------------------------------------------------------\r\n\r\n*   **Page templates:** When Gutenberg is enabled for all pages, the one-page template is offered and selected by default. Existing template choices are preserved if the setting is later disabled.\r\n*   **Pre-footer image:** Adds an image upload in the Footer customizer, with an optional taller image size for mobile.\r\n*   **Quicklinks:** Fixes quicklinks display inside containers.\r\n\r\n[Styleguide 3.44.0...3.44.4](https://github.com/helsingborg-stad/styleguide/compare/3.44.0...3.44.4)\r\n----------------------------------------------------------------------------------------------------\r\n\r\n*   **Image stacking:** Uses grid-based placement and isolates the image stack to improve how images layer.",
+            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.3.7",
+            "publishedAt": "2026-11-05T10:11:24Z",
+            "isPrerelease": false,
+            "isDraft": false
+        },
         {
             "title": "6.3.6",
             "version": "6.3.6",
@@ -92,15 +101,6 @@
             "body": "Minor release focused on layout and navigation improvements in Municipio, safer webhook startup behavior, and more reliable cloned media imports. It introduces the new Negative Space module, improves hash-link behavior across the interface, and fixes several chat, menu, editor, and packaging issues.\r\n\r\n## Municipio Deployment\r\n- Fixed issue that the `object-cache.php` dropin was not up to date with the installed redis-cache plugin. We now copy the dropin from the installed plugin on `post-install-cmd`. \r\n\r\n## Municipio Theme [7.43.13...7.44.24](https://github.com/helsingborg-stad/municipio/compare/7.43.13...7.44.24)\r\n- Negative Space Module: Adds a new Modularity module for creating negative-spacing layouts without custom code.\r\n- Chat Block: Fixes the chat block cover state, CSS classes, interaction flow, and popover spacing so the block displays and behaves correctly.\r\n- Menu Handling: Fixes clipping and background issues in menu modules, prevents submenu arrows from wrapping onto a new line, and makes `#` links toggle child menus more reliably.\r\n- Gutenberg Compatibility: Ensures module assets and spacing styles load correctly in the block editor and updates block-style enqueueing for WordPress 7.2.\r\n- Table of Contents: Removes unintended background styling from TOC elements for a cleaner appearance.\r\n- Theme Packaging: Includes `theme.json` in distributed builds so packaged releases keep the expected theme configuration.\r\n\r\n## Styleguide [3.32.5...3.33.5](https://github.com/helsingborg-stad/styleguide/compare/3.32.5...3.33.5)\r\n- Hash-link Navigation: Menu items that use `#` can now open and close their child menus directly from the main link, making navigation behave more predictably on click and touch.\r\n- Pagination Controls: Previous and next buttons now use proper disabled states, preventing pagination controls from appearing clickable when no more pages are available.\r\n\r\n## Municipio Clone [1.4.1...v1.4.2](https://github.com/helsingborg-stad/municipio-clone/compare/v1.4.1...v1.4.2)\r\n- Media Import: Rewrites remote media URLs to the source site's actual media domain so cloned images and files keep working links.\r\n\r\n## Webhooks Manager [1.3.2...1.3.3](https://github.com/helsingborg-stad/webhooks-manager/compare/1.3.2...1.3.3)\r\n- ACF Initialization: Defers loading ACF-backed webhook settings until ACF is ready, preventing fatal errors during early WordPress startup.",
             "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.6",
             "publishedAt": "2026-09-25T09:10:52Z",
-            "isPrerelease": false,
-            "isDraft": false
-        },
-        {
-            "title": "6.2.5",
-            "version": "6.2.5",
-            "body": "Minor release: This update focuses on navigation and interface improvements. Municipio adds a redesigned menu module with more flexible layouts, improved mobile chat behavior, and new button styling controls in the header and tab menus. Styleguide delivers a major popover refresh, a new site selector component, and more consistent color inheritance for navigation and buttons.\r\n\r\n## Municipio Theme [7.38.6...7.43.1](https://github.com/helsingborg-stad/municipio/compare/7.38.6...7.43.1)\r\n- Chat: Moves the chat script integration and adds a full-screen chat bubble layout for mobile devices.\r\n- Language Menu: Fixes placement issues so the language switcher opens in the correct position.\r\n- Menu Module: Introduces a clearer visual design with working expand and collapse behavior.\r\n- Menu Module: Makes menu columns more fluid and adds a spaced layout option for better content balance.\r\n- Header Buttons: Adds settings for controlling button styles in the header.\r\n- Tab Menu: Adds support for button appearance settings in the tab menu alternative.\r\n- Mega Menu: Keeps the mega menu label visible on mobile devices to avoid navigation issues.\r\n\r\n\r\n## Styleguide [3.24.18...3.31.4](https://github.com/helsingborg-stad/styleguide/compare/3.24.18...3.31.4)\r\n- Popover: Reworks the popover component with a cleaner implementation, a new cover mode, and a smaller API.\r\n- Popover: Improves positioning behavior by resetting calculations before placement and handling dropdown overflow more reliably.\r\n- Site Selector: Adds a redesigned site selector component with updated sizing, spacing, and examples.\r\n- Navigation Colors: Removes manual color overrides on basic navigation so it follows the surrounding design more consistently.\r\n- Buttons: Lets buttons inherit the active color scheme, keeps button sizes aligned more consistently, and preserves corner shapes in SVG buttons.\r\n\r\n## Deployment Configuration [7.38.6...7.43.1](https://github.com/municipio-se/municipio-deployment/compare/7.38.6...7.43.1)\r\n\r\n- ACF Pro: Installs Advanced Custom Fields Pro as a must-use plugin so it loads before regular plugins.\r\n- ACF Safety: Adds a must-use safeguard that throws a clear error if ACF fields are accessed too early.\r\n- Municipio Clone: Adds the Municipio Clone plugin to the deployment.\r\n- WordPress Core: Updates the Roots-managed no-content WordPress package from 7.1.1 to 7.1.2.\r\n- WordPress Plugins: Updates Redirection to 5.10.1 and Redis Cache to 3.0.0.",
-            "url": "https://github.com/municipio-se/municipio-deployment/releases/tag/6.2.5",
-            "publishedAt": "2026-09-24T10:28:18Z",
             "isPrerelease": false,
             "isDraft": false
         }
