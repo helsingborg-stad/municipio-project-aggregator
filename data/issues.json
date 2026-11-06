@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-06T14:14:07+00:00",
+    "generatedAt": "2026-11-06T15:12:53+00:00",
     "count": 118,
     "repositories": [
         {
@@ -332,27 +332,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "visit-custom-posttypes-taxonomies",
-            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "project-synchronizer",
-            "fullName": "helsingborg-stad/project-synchronizer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/project-synchronizer"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "broken-link-detector",
-            "fullName": "helsingborg-stad/broken-link-detector",
-            "description": "Detects and fixes broken links (internally)",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "acf-icon-field",
             "fullName": "helsingborg-stad/acf-icon-field",
             "description": "",
@@ -371,6 +350,27 @@
             "fullName": "helsingborg-stad/mod-my-pages",
             "description": "",
             "url": "https://github.com/helsingborg-stad/mod-my-pages"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "visit-custom-posttypes-taxonomies",
+            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "project-synchronizer",
+            "fullName": "helsingborg-stad/project-synchronizer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "broken-link-detector",
+            "fullName": "helsingborg-stad/broken-link-detector",
+            "description": "Detects and fixes broken links (internally)",
+            "url": "https://github.com/helsingborg-stad/broken-link-detector"
         },
         {
             "owner": "helsingborg-stad",
