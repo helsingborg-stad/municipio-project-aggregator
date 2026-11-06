@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-06T07:13:45+00:00",
+    "generatedAt": "2026-11-06T08:17:09+00:00",
     "count": 119,
     "repositories": [
         {
@@ -254,27 +254,6 @@
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "Search-notices",
-            "fullName": "helsingborg-stad/Search-notices",
-            "description": "Add notices on keywords in WordPress search. ",
-            "url": "https://github.com/helsingborg-stad/Search-notices"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-correct-file-paths",
-            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
-            "description": "esolves incorrect file paths, when migrating databases between different environments.",
-            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-acf-fatal-error-when-used-too-early",
-            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
-            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-link-cards",
             "fullName": "Considbrs-Webdev/modularity-link-cards",
@@ -294,6 +273,27 @@
             "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
             "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "Search-notices",
+            "fullName": "helsingborg-stad/Search-notices",
+            "description": "Add notices on keywords in WordPress search. ",
+            "url": "https://github.com/helsingborg-stad/Search-notices"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-correct-file-paths",
+            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
+            "description": "esolves incorrect file paths, when migrating databases between different environments.",
+            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-fatal-error-when-used-too-early",
+            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
+            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -514,20 +514,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "ACF-UX-collapse-explore",
-            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
-            "description": "Exploration clone of ACF-UX-collapse for better deployment",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -574,6 +560,20 @@
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "ACF-UX-collapse-explore",
+            "fullName": "helsingborg-stad/ACF-UX-collapse-explore",
+            "description": "Exploration clone of ACF-UX-collapse for better deployment",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse-explore"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -955,7 +955,20 @@
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
             },
-            "assignees": [],
+            "assignees": [
+                {
+                    "login": "thorbrink",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                    "url": "https://github.com/thorbrink",
+                    "company": ""
+                },
+                {
+                    "login": "Copilot",
+                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                    "url": "https://github.com/Copilot",
+                    "company": ""
+                }
+            ],
             "labels": [],
             "milestone": null,
             "type": null,
@@ -970,9 +983,16 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 0
+                "linked": 1
             },
-            "relationships": []
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Publish source-tagged Composer releases with prebuilt assets",
+                    "url": "https://github.com/helsingborg-stad/styleguide/pull/1358",
+                    "repository": "helsingborg-stad/styleguide"
+                }
+            ]
         },
         {
             "id": "I_kwDOCquRHc8AAAABb5DTUA",
