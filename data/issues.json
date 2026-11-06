@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-06T06:22:23+00:00",
-    "count": 118,
+    "generatedAt": "2026-11-06T07:13:45+00:00",
+    "count": 119,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -941,6 +941,39 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOCquRHc8AAAABc9YcVg",
+            "title": "Publish prebuilt Composer dist releases from main without a release branch",
+            "url": "https://github.com/helsingborg-stad/styleguide/issues/1356",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-11-06T07:06:10Z",
+            "number": 1356,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "I_kwDOCquRHc8AAAABb5DTUA",
             "title": "Table: Headings in the table component is truncated.",
