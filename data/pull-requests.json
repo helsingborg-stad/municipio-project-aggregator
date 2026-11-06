@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-06T15:25:31+00:00",
-    "count": 30,
+    "generatedAt": "2026-11-06T16:25:31+00:00",
+    "count": 37,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -437,34 +437,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-clone",
-            "fullName": "helsingborg-stad/municipio-clone",
-            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
-            "url": "https://github.com/helsingborg-stad/municipio-clone"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "municipio-vite",
             "fullName": "helsingborg-stad/municipio-vite",
             "description": "Vite packages for municipio projects",
@@ -490,6 +462,34 @@
             "fullName": "helsingborg-stad/modularity-openstreetmap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-clone",
+            "fullName": "helsingborg-stad/municipio-clone",
+            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
+            "url": "https://github.com/helsingborg-stad/municipio-clone"
         },
         {
             "owner": "helsingborg-stad",
@@ -681,7 +681,7 @@
         },
         {
             "login": "camitzdennis",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
             "url": "https://github.com/camitzdennis",
             "company": "@helsingborg-stad"
         },
@@ -915,6 +915,423 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOGti0H88AAAABNWKsLA",
+            "title": "fix: pass null instead of false for empty button href and icon",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/27",
+            "repository": "helsingborg-stad/modularity-recommend",
+            "createdAt": "2026-11-06T15:55:24Z",
+            "number": 27,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 5
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in theme views",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2382",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in Modularity modules",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2383",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: align component types with nested usage",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/777",
+                    "repository": "helsingborg-stad/component-library"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass only typed field params to field and option components",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/172",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass string link and meta to components",
+                    "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration/pull/20",
+                    "repository": "helsingborg-stad/api-volunteer-manager-integration"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOJWrKL88AAAABNWKngw",
+            "title": "fix: pass string link and meta to components",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration/pull/20",
+            "repository": "helsingborg-stad/api-volunteer-manager-integration",
+            "createdAt": "2026-11-06T15:55:19Z",
+            "number": 20,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 5
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in theme views",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2382",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in Modularity modules",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2383",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: align component types with nested usage",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/777",
+                    "repository": "helsingborg-stad/component-library"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass only typed field params to field and option components",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/172",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass null instead of false for empty button href and icon",
+                    "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/27",
+                    "repository": "helsingborg-stad/modularity-recommend"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOOWhNPs8AAAABNWKiVQ",
+            "title": "fix: pass only typed field params to field and option components",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/172",
+            "repository": "helsingborg-stad/modularity-frontend-form",
+            "createdAt": "2026-11-06T15:55:14Z",
+            "number": 172,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 5
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in theme views",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2382",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in Modularity modules",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2383",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: align component types with nested usage",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/777",
+                    "repository": "helsingborg-stad/component-library"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass string link and meta to components",
+                    "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration/pull/20",
+                    "repository": "helsingborg-stad/api-volunteer-manager-integration"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass null instead of false for empty button href and icon",
+                    "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/27",
+                    "repository": "helsingborg-stad/modularity-recommend"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABNWKduw",
+            "title": "fix: align component types with nested usage",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/777",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-11-06T15:55:10Z",
+            "number": 777,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 5
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in theme views",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2382",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in Modularity modules",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2383",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass only typed field params to field and option components",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/172",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass string link and meta to components",
+                    "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration/pull/20",
+                    "repository": "helsingborg-stad/api-volunteer-manager-integration"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass null instead of false for empty button href and icon",
+                    "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/27",
+                    "repository": "helsingborg-stad/modularity-recommend"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABNWKYCg",
+            "title": "fix: pass typed arguments to components in Modularity modules",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2383",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-06T15:55:04Z",
+            "number": 2383,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 5
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in theme views",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2382",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: align component types with nested usage",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/777",
+                    "repository": "helsingborg-stad/component-library"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass only typed field params to field and option components",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/172",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass string link and meta to components",
+                    "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration/pull/20",
+                    "repository": "helsingborg-stad/api-volunteer-manager-integration"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass null instead of false for empty button href and icon",
+                    "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/27",
+                    "repository": "helsingborg-stad/modularity-recommend"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABNWKTJQ",
+            "title": "fix: pass typed arguments to components in theme views",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2382",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-06T15:54:59Z",
+            "number": 2382,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 5
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass typed arguments to components in Modularity modules",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2383",
+                    "repository": "helsingborg-stad/Municipio"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: align component types with nested usage",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/777",
+                    "repository": "helsingborg-stad/component-library"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass only typed field params to field and option components",
+                    "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/172",
+                    "repository": "helsingborg-stad/modularity-frontend-form"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass string link and meta to components",
+                    "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration/pull/20",
+                    "repository": "helsingborg-stad/api-volunteer-manager-integration"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: pass null instead of false for empty button href and icon",
+                    "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/27",
+                    "repository": "helsingborg-stad/modularity-recommend"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABNV2K7A",
+            "title": "feat: change colorpickers to colorswatches",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2381",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-06T15:32:49Z",
+            "number": 2381,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABNVj0kg",
             "title": "fix: pass typed link values to slider item component",
