@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-06T13:25:39+00:00",
-    "count": 30,
+    "generatedAt": "2026-11-06T14:26:22+00:00",
+    "count": 29,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -332,27 +332,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -371,6 +350,27 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
         },
         {
             "owner": "helsingborg-stad",
@@ -916,18 +916,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOIBc4MM8AAAABNUBI1w",
-            "title": "fix: register post type on init to avoid early translation loading",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages/pull/9",
-            "repository": "helsingborg-stad/mod-my-pages",
-            "createdAt": "2026-11-06T13:14:16Z",
-            "number": 9,
+            "id": "PR_kwDORWsnoc8AAAABNUTfkA",
+            "title": "Skip Typesense deindex for non-PDF attachments on delete",
+            "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/17",
+            "repository": "Considbrs-Webdev/typesense-search",
+            "createdAt": "2026-11-06T13:38:29Z",
+            "number": 17,
             "state": "OPEN",
             "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
+                "url": "https://github.com/michaelclaesson",
+                "company": "Consid Bor\u00e5s"
             },
             "assignees": [],
             "labels": [],
@@ -1027,39 +1027,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
                 "url": "https://github.com/thorbrink",
                 "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOLwUbvs8AAAABNRDKfw",
-            "title": "feat(VarbiJobPosting): image([top image])",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/51",
-            "repository": "helsingborg-stad/schema.org-transformer",
-            "createdAt": "2026-11-06T08:45:00Z",
-            "number": 51,
-            "state": "OPEN",
-            "author": {
-                "login": "jlarsson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
-                "url": "https://github.com/jlarsson",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
