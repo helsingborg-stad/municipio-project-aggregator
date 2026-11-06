@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-06T14:26:22+00:00",
-    "count": 29,
+    "generatedAt": "2026-11-06T15:25:31+00:00",
+    "count": 30,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -199,6 +199,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api.helsingborg.se",
             "fullName": "helsingborg-stad/api.helsingborg.se",
             "description": "Website for delivering events to the people",
@@ -210,13 +217,6 @@
             "fullName": "helsingborg-stad/modularity-like",
             "description": "Adds the ability to like posts and manage likes with a module. ",
             "url": "https://github.com/helsingborg-stad/modularity-like"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for buisness WordPress (helsingborg.se/foretagare)",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "helsingborg-stad",
@@ -332,27 +332,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "visit-custom-posttypes-taxonomies",
-            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "project-synchronizer",
-            "fullName": "helsingborg-stad/project-synchronizer",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/project-synchronizer"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "broken-link-detector",
-            "fullName": "helsingborg-stad/broken-link-detector",
-            "description": "Detects and fixes broken links (internally)",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "acf-icon-field",
             "fullName": "helsingborg-stad/acf-icon-field",
             "description": "",
@@ -374,6 +353,27 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "visit-custom-posttypes-taxonomies",
+            "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/visit-custom-posttypes-taxonomies"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "project-synchronizer",
+            "fullName": "helsingborg-stad/project-synchronizer",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/project-synchronizer"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "broken-link-detector",
+            "fullName": "helsingborg-stad/broken-link-detector",
+            "description": "Detects and fixes broken links (internally)",
+            "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "multi-network-urls",
             "fullName": "helsingborg-stad/multi-network-urls",
             "description": "",
@@ -385,34 +385,6 @@
             "fullName": "helsingborg-stad/api-volunteer-manager-integration",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-vite",
-            "fullName": "helsingborg-stad/municipio-vite",
-            "description": "Vite packages for municipio projects",
-            "url": "https://github.com/helsingborg-stad/municipio-vite"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-exhibition-manager",
-            "fullName": "helsingborg-stad/api-exhibition-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-openstreetmap",
-            "fullName": "helsingborg-stad/modularity-openstreetmap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-sections",
-            "fullName": "helsingborg-stad/modularity-sections",
-            "description": "Provides graphical sections intended for full-width usage",
-            "url": "https://github.com/helsingborg-stad/modularity-sections"
         },
         {
             "owner": "helsingborg-stad",
@@ -462,6 +434,62 @@
             "fullName": "helsingborg-stad/OpenStreetMap",
             "description": "",
             "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirection-extended",
+            "fullName": "helsingborg-stad/redirection-extended",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/redirection-extended"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "redirect",
+            "fullName": "helsingborg-stad/redirect",
+            "description": "Functionality for redirecting between domain names. ",
+            "url": "https://github.com/helsingborg-stad/redirect"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-frontend-form",
+            "fullName": "helsingborg-stad/modularity-frontend-form",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-clone",
+            "fullName": "helsingborg-stad/municipio-clone",
+            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
+            "url": "https://github.com/helsingborg-stad/municipio-clone"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-vite",
+            "fullName": "helsingborg-stad/municipio-vite",
+            "description": "Vite packages for municipio projects",
+            "url": "https://github.com/helsingborg-stad/municipio-vite"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-exhibition-manager",
+            "fullName": "helsingborg-stad/api-exhibition-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-exhibition-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-sections",
+            "fullName": "helsingborg-stad/modularity-sections",
+            "description": "Provides graphical sections intended for full-width usage",
+            "url": "https://github.com/helsingborg-stad/modularity-sections"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-openstreetmap",
+            "fullName": "helsingborg-stad/modularity-openstreetmap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/modularity-openstreetmap"
         },
         {
             "owner": "helsingborg-stad",
@@ -525,34 +553,6 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "A Modularity module that creates a responsive grid of link cards.",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirection-extended",
-            "fullName": "helsingborg-stad/redirection-extended",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/redirection-extended"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "municipio-clone",
-            "fullName": "helsingborg-stad/municipio-clone",
-            "description": "WordPress plugin that enables WP-CLI command for cloning remote WordPress sites.",
-            "url": "https://github.com/helsingborg-stad/municipio-clone"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "redirect",
-            "fullName": "helsingborg-stad/redirect",
-            "description": "Functionality for redirecting between domain names. ",
-            "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-frontend-form",
-            "fullName": "helsingborg-stad/modularity-frontend-form",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
         },
         {
             "owner": "helsingborg-stad",
@@ -621,7 +621,7 @@
         },
         {
             "login": "NiclasNorin",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?v=4",
             "url": "https://github.com/NiclasNorin",
             "company": ""
         },
@@ -639,7 +639,7 @@
         },
         {
             "login": "Sven65",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?u=424e10872ebc9b2b9ec28bc636301262f47ba623&v=4",
             "url": "https://github.com/Sven65",
             "company": "@DiscordDungeons"
         },
@@ -915,6 +915,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABNVj0kg",
+            "title": "fix: pass typed link values to slider item component",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2380",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-06T15:12:27Z",
+            "number": 2380,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDORWsnoc8AAAABNUTfkA",
             "title": "Skip Typesense deindex for non-PDF attachments on delete",
