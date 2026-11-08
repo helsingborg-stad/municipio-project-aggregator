@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-08T17:25:34+00:00",
+    "generatedAt": "2026-11-08T18:25:29+00:00",
     "count": 37,
     "repositories": [
         {
@@ -916,6 +916,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOLwUbvs8AAAABNsPgSQ",
+            "title": "feat(JobPosting): add Visma Recruit import",
+            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/52",
+            "repository": "helsingborg-stad/schema.org-transformer",
+            "createdAt": "2026-11-08T18:07:10Z",
+            "number": 52,
+            "state": "OPEN",
+            "author": {
+                "login": "michaelclaesson",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
+                "url": "https://github.com/michaelclaesson",
+                "company": "Consid Bor\u00e5s"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOGti0H88AAAABNWKsLA",
             "title": "fix: pass null instead of false for empty button href and icon",
             "url": "https://github.com/helsingborg-stad/modularity-recommend/pull/27",
@@ -1345,39 +1378,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
                 "url": "https://github.com/camitzdennis",
                 "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDORWsnoc8AAAABNUTfkA",
-            "title": "Skip Typesense deindex for non-PDF attachments on delete",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/17",
-            "repository": "Considbrs-Webdev/typesense-search",
-            "createdAt": "2026-11-06T13:38:29Z",
-            "number": 17,
-            "state": "OPEN",
-            "author": {
-                "login": "michaelclaesson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?u=46ffcb53ab81000b932b02c80f56eacc25fd1e61&v=4",
-                "url": "https://github.com/michaelclaesson",
-                "company": "Consid Bor\u00e5s"
             },
             "assignees": [],
             "labels": [],
