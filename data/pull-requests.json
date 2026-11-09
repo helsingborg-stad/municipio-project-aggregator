@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-09T12:30:19+00:00",
-    "count": 65,
+    "generatedAt": "2026-11-09T13:25:54+00:00",
+    "count": 64,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -493,13 +493,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -539,6 +532,13 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -2356,39 +2356,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOAuIygs8AAAABNTtDbQ",
-            "title": "fix: translate event organizer as Arrang\u00f6r",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2377",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-06T12:47:10Z",
-            "number": 2377,
-            "state": "OPEN",
-            "author": {
-                "login": "WilliamLundqvist",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
-                "url": "https://github.com/WilliamLundqvist",
-                "company": "Consid Bor\u00e5s AB"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOCquRHc8AAAABNS_SzA",
             "title": "Run test suites in parallel and gate releases",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1364",
@@ -2839,7 +2806,7 @@
         },
         {
             "id": "PR_kwDOAuIygs8AAAABJ_0uxA",
-            "title": "Refactor/splitting an generalizing chat frontend",
+            "title": "feat: puzzel integration & refactor of chat integrations",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2335",
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-10-22T10:26:47Z",
