@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-09T12:19:42+00:00",
-    "count": 118,
+    "generatedAt": "2026-11-09T13:14:38+00:00",
+    "count": 120,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -493,13 +493,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -539,6 +532,13 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -927,6 +927,79 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOOwvk6M8AAAABdq3ayA",
+            "title": "Dynamically extend Permissions-Policy headers",
+            "url": "https://github.com/helsingborg-stad/wpmu-security/issues/30",
+            "repository": "helsingborg-stad/wpmu-security",
+            "createdAt": "2026-11-09T12:29:29Z",
+            "number": 30,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "I_kwDOAuIygs8AAAABdq2y3A",
+            "title": "Configurable iframe Permissions Policy",
+            "url": "https://github.com/helsingborg-stad/Municipio/issues/2384",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-09T12:28:48Z",
+            "number": 2384,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "Dynamically extend Permissions-Policy headers",
+                    "url": "https://github.com/helsingborg-stad/wpmu-security/issues/30",
+                    "repository": "helsingborg-stad/wpmu-security"
+                }
+            ]
+        },
         {
             "id": "I_kwDOCquRHc8AAAABb5DTUA",
             "title": "Table: Headings in the table component is truncated.",
