@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-09T13:25:54+00:00",
+    "generatedAt": "2026-11-09T14:26:31+00:00",
     "count": 64,
     "repositories": [
         {
@@ -535,13 +535,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -560,6 +553,13 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "A Modularity module that creates a responsive grid of link cards.",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -857,7 +857,7 @@
             "login": "petter-a",
             "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?v=4",
             "url": "https://github.com/petter-a",
-            "company": "Helsingborg stad"
+            "company": ""
         },
         {
             "login": "rsj10736",
@@ -915,6 +915,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABN2xeGA",
+            "title": "fix: show single school image without slider",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2385",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-09T13:41:11Z",
+            "number": 2385,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOOSmPGM8AAAABN0FfCQ",
             "title": "chore(ci): update workflows to PHP 8.3 and Node 22",
@@ -2579,39 +2612,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
                 "url": "https://github.com/camitzdennis",
                 "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOGyB3t88AAAABNDVbxQ",
-            "title": "codespace-fixes",
-            "url": "https://github.com/municipio-se/municipio-deployment/pull/234",
-            "repository": "municipio-se/municipio-deployment",
-            "createdAt": "2026-11-05T11:36:49Z",
-            "number": 234,
-            "state": "OPEN",
-            "author": {
-                "login": "petter-a",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/40427478?u=96d0ccb4082736d6973f04cd096a41d34f499a4a&v=4",
-                "url": "https://github.com/petter-a",
-                "company": "Helsingborg stad"
             },
             "assignees": [],
             "labels": [],
