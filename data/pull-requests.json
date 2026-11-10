@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-10T13:25:21+00:00",
+    "generatedAt": "2026-11-10T14:25:37+00:00",
     "count": 65,
     "repositories": [
         {
@@ -555,6 +555,13 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
         },
         {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-arcgis-map",
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
@@ -567,13 +574,6 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         }
     ],
     "authors": [
@@ -916,18 +916,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOCquRHc8AAAABOHAHjw",
-            "title": "Publish production Docker image for semver releases",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1367",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-10T13:09:23Z",
-            "number": 1367,
+            "id": "PR_kwDOAuIygs8AAAABOHaN1Q",
+            "title": "fix: break with error if puzzel fails mid conversation",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2393",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-10T13:39:03Z",
+            "number": 2393,
             "state": "OPEN",
             "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
             },
             "assignees": [],
             "labels": [],
