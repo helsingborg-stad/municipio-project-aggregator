@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-10T15:25:24+00:00",
-    "count": 64,
+    "generatedAt": "2026-11-10T16:25:41+00:00",
+    "count": 65,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -915,6 +915,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOCquRHc8AAAABOJm9hQ",
+            "title": "Fix documentation rendering in Docker",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1370",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-11-10T16:05:56Z",
+            "number": 1370,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABOHaN1Q",
             "title": "fix: break with error if puzzel fails mid conversation",
