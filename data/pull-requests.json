@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-10T10:25:33+00:00",
-    "count": 65,
+    "generatedAt": "2026-11-10T11:25:31+00:00",
+    "count": 64,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -916,8 +916,41 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOAuIygs8AAAABOFIt4g",
+            "title": "feat: add display name for custom post types",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2392",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-10T10:39:52Z",
+            "number": 2392,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOAuIygs8AAAABN3d5Uw",
-            "title": "feat: chat with fixes from claude based on tests",
+            "title": "feat: chat puzzel and integration based",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2388",
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-11-09T14:31:38Z",
@@ -1852,39 +1885,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/10225982?u=424e10872ebc9b2b9ec28bc636301262f47ba623&v=4",
                 "url": "https://github.com/Sven65",
                 "company": "@DiscordDungeons"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOLwUbvs8AAAABNyzrgw",
-            "title": "feat(VarbiJobPosting): separating public and internal feeds",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/53",
-            "repository": "helsingborg-stad/schema.org-transformer",
-            "createdAt": "2026-11-09T08:02:02Z",
-            "number": 53,
-            "state": "OPEN",
-            "author": {
-                "login": "jlarsson",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/878598?v=4",
-                "url": "https://github.com/jlarsson",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
@@ -3029,39 +3029,6 @@
             "repository": "helsingborg-stad/styleguide",
             "createdAt": "2026-10-16T13:42:16Z",
             "number": 1335,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABHWKC4g",
-            "title": "feat: chat interation 3",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2301",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-10-08T14:01:42Z",
-            "number": 2301,
             "state": "OPEN",
             "author": {
                 "login": "NiclasNorin",
