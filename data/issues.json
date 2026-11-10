@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-10T12:17:55+00:00",
-    "count": 122,
+    "generatedAt": "2026-11-10T13:13:06+00:00",
+    "count": 124,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -555,13 +555,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-arcgis-map",
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
@@ -574,6 +567,13 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         }
     ],
     "authors": [
@@ -693,7 +693,7 @@
         },
         {
             "login": "camitzdennis",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
             "url": "https://github.com/camitzdennis",
             "company": "@helsingborg-stad"
         },
@@ -927,6 +927,72 @@
         }
     ],
     "items": [
+        {
+            "id": "I_kwDOPl0lE88AAAABd-y_4Q",
+            "title": "Asset type inferred from handle suffix breaks translation()/data() for some sources",
+            "url": "https://github.com/helsingborg-stad/wputilservice/issues/24",
+            "repository": "helsingborg-stad/wputilservice",
+            "createdAt": "2026-11-10T12:38:56Z",
+            "number": 24,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "I_kwDOPl0lE88AAAABd-y-3Q",
+            "title": "translation() with null object name throws TypeError",
+            "url": "https://github.com/helsingborg-stad/wputilservice/issues/23",
+            "repository": "helsingborg-stad/wputilservice",
+            "createdAt": "2026-11-10T12:38:55Z",
+            "number": 23,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "I_kwDOAuIygs8AAAABd8o37g",
             "title": "Lqip blur function filter declares 3 params, but only 2 sent",
@@ -2002,13 +2068,25 @@
                 "totalBlockedBy": 0,
                 "blocking": 0,
                 "totalBlocking": 0,
-                "linked": 1
+                "linked": 3
             },
             "relationships": [
                 {
                     "event": "connected",
                     "title": "Fix translation()/data() silently dropped when chained after on()",
                     "url": "https://github.com/helsingborg-stad/wputilservice/pull/15",
+                    "repository": "helsingborg-stad/wputilservice"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "translation() with null object name throws TypeError",
+                    "url": "https://github.com/helsingborg-stad/wputilservice/issues/23",
+                    "repository": "helsingborg-stad/wputilservice"
+                },
+                {
+                    "event": "cross-referenced",
+                    "title": "Asset type inferred from handle suffix breaks translation()/data() for some sources",
+                    "url": "https://github.com/helsingborg-stad/wputilservice/issues/24",
                     "repository": "helsingborg-stad/wputilservice"
                 }
             ]
