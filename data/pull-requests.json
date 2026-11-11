@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-11T16:25:36+00:00",
-    "count": 67,
+    "generatedAt": "2026-11-11T17:25:18+00:00",
+    "count": 69,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -493,13 +493,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -560,6 +553,13 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -915,6 +915,86 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABOb53HQ",
+            "title": "fix: preserve module link targets",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2396",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-11T17:17:55Z",
+            "number": 2396,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: preserve targets in component links",
+                    "url": "https://github.com/helsingborg-stad/component-library/pull/780",
+                    "repository": "helsingborg-stad/component-library"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABOb5myw",
+            "title": "fix: preserve targets in component links",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/780",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-11-11T17:17:39Z",
+            "number": 780,
+            "state": "OPEN",
+            "author": {
+                "login": "jeanfredrik",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
+                "url": "https://github.com/jeanfredrik",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "fix: preserve module link targets",
+                    "url": "https://github.com/helsingborg-stad/Municipio/pull/2396",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
         {
             "id": "PR_kwDOE96d8c8AAAABOZJ6lA",
             "title": "fix!: deprecate php 8.0 and 8.1",
