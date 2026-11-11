@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-11T13:25:32+00:00",
-    "count": 67,
+    "generatedAt": "2026-11-11T14:25:17+00:00",
+    "count": 68,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -915,6 +915,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOE96d8c8AAAABOZJ6lA",
+            "title": "fix!: deprecate php 8.0 and 8.1",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/779",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-11-11T14:04:33Z",
+            "number": 779,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOE96d8c8AAAABOXxXUA",
             "title": "feat(option): add appearance, description and stateIndicator params",
