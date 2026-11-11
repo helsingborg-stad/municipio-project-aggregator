@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-11T08:27:34+00:00",
-    "count": 65,
+    "generatedAt": "2026-11-11T09:25:57+00:00",
+    "count": 66,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -915,6 +915,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOA4iurc8AAAABOU4YSw",
+            "title": "feat: step by step (wizard) display mode and translatable ACF fields",
+            "url": "https://github.com/helsingborg-stad/modularity-guides/pull/31",
+            "repository": "helsingborg-stad/modularity-guides",
+            "createdAt": "2026-11-11T08:40:24Z",
+            "number": 31,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABOUMs7A",
             "title": "feat: color to colorswatches (rev 2)",
