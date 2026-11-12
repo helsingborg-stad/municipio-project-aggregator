@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-12T08:27:45+00:00",
-    "count": 99,
+    "generatedAt": "2026-11-12T09:26:19+00:00",
+    "count": 101,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -136,20 +136,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-testimonials",
-            "fullName": "helsingborg-stad/modularity-testimonials",
-            "description": "Modularity plugin to display testemonials",
-            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "webhooks-manager",
-            "fullName": "helsingborg-stad/webhooks-manager",
-            "description": "Create and manage webhooks from WordPress action hooks",
-            "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "lix-calculator",
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
@@ -168,6 +154,20 @@
             "fullName": "helsingborg-stad/modularity-timeline",
             "description": "A module to display a timeline",
             "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-testimonials",
+            "fullName": "helsingborg-stad/modularity-testimonials",
+            "description": "Modularity plugin to display testemonials",
+            "url": "https://github.com/helsingborg-stad/modularity-testimonials"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "webhooks-manager",
+            "fullName": "helsingborg-stad/webhooks-manager",
+            "description": "Create and manage webhooks from WordPress action hooks",
+            "url": "https://github.com/helsingborg-stad/webhooks-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -845,7 +845,7 @@
             "login": "pbrotherton",
             "avatarUrl": "https://avatars.githubusercontent.com/u/19387424?v=4",
             "url": "https://github.com/pbrotherton",
-            "company": ""
+            "company": "Whitespace AB"
         },
         {
             "login": "perifer",
@@ -915,6 +915,72 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABOmVwnw",
+            "title": "Test/menu",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2399",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-12T09:13:49Z",
+            "number": 2399,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABOl5GKQ",
+            "title": "Fix Swedish Manual Input dialog title",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2398",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-12T08:37:06Z",
+            "number": 2398,
+            "state": "OPEN",
+            "author": {
+                "login": "pbrotherton",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/19387424?u=fe3964529ca980d20815264aec3154e1fb8c32be&v=4",
+                "url": "https://github.com/pbrotherton",
+                "company": "Whitespace AB"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOLJEey88AAAABOkh20w",
             "title": "Upgrade WPService to 3.0",
