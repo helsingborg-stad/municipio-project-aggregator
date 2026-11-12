@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-12T11:12:14+00:00",
+    "generatedAt": "2026-11-12T12:18:53+00:00",
     "count": 125,
     "repositories": [
         {
@@ -289,20 +289,6 @@
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-folder-browser",
             "fullName": "Considbrs-Webdev/modularity-folder-browser",
@@ -315,6 +301,20 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
         },
         {
             "owner": "helsingborg-stad",
@@ -513,13 +513,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-arcgis-map",
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
@@ -532,6 +525,13 @@
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
