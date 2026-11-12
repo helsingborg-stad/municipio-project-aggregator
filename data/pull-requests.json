@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-12T17:25:44+00:00",
+    "generatedAt": "2026-11-12T18:26:58+00:00",
     "count": 85,
     "repositories": [
         {
@@ -101,13 +101,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "better-post-UI",
-            "fullName": "helsingborg-stad/better-post-UI",
-            "description": "Enhances WordPress admin UI on posts and pages. ",
-            "url": "https://github.com/helsingborg-stad/better-post-UI"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-acf-google-maps-key",
             "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
             "description": "Adds a field to enter a google maps api key for ACF",
@@ -119,6 +112,13 @@
             "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
             "description": "",
             "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "better-post-UI",
+            "fullName": "helsingborg-stad/better-post-UI",
+            "description": "Enhances WordPress admin UI on posts and pages. ",
+            "url": "https://github.com/helsingborg-stad/better-post-UI"
         },
         {
             "owner": "helsingborg-stad",
@@ -247,13 +247,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-link-cards",
-            "fullName": "Considbrs-Webdev/modularity-link-cards",
-            "description": "A grid of clickable link cards with icons.",
-            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
@@ -266,6 +259,13 @@
             "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
             "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-link-cards",
+            "fullName": "Considbrs-Webdev/modularity-link-cards",
+            "description": "A grid of clickable link cards with icons.",
+            "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
             "owner": "helsingborg-stad",
@@ -535,6 +535,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -553,13 +560,6 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "A Modularity module that creates a responsive grid of link cards.",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
