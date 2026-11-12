@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-12T06:33:26+00:00",
-    "count": 94,
+    "generatedAt": "2026-11-12T07:25:35+00:00",
+    "count": 99,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -916,12 +916,177 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOLJEey88AAAABOkh20w",
+            "title": "Upgrade WPService to 3.0",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides/pull/37",
+            "repository": "helsingborg-stad/modularity-dynamic-guides",
+            "createdAt": "2026-11-12T06:36:19Z",
+            "number": 37,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABOkgzbw",
+            "title": "Migrate wpservice requirement to 3",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2397",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-12T06:34:46Z",
+            "number": 2397,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAs7djs8AAAABOkgp-Q",
+            "title": "Upgrade wpservice to 3.0",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/44",
+            "repository": "helsingborg-stad/api-alarm-integration",
+            "createdAt": "2026-11-12T06:34:32Z",
+            "number": 44,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOBCH52c8AAAABOkgowA",
+            "title": "Upgrade wpservice to 3",
+            "url": "https://github.com/helsingborg-stad/better-post-UI/pull/13",
+            "repository": "helsingborg-stad/better-post-UI",
+            "createdAt": "2026-11-12T06:34:31Z",
+            "number": 13,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOJP-wC88AAAABOkgfvw",
             "title": "Upgrade wpservice to 3",
             "url": "https://github.com/helsingborg-stad/modularity-openstreetmap/pull/85",
             "repository": "helsingborg-stad/modularity-openstreetmap",
             "createdAt": "2026-11-12T06:34:18Z",
             "number": 85,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOA2n8dM8AAAABOkgY4A",
+            "title": "Upgrade wpservice to 3",
+            "url": "https://github.com/helsingborg-stad/Customer-feedback/pull/42",
+            "repository": "helsingborg-stad/Customer-feedback",
+            "createdAt": "2026-11-12T06:34:08Z",
+            "number": 42,
             "state": "OPEN",
             "author": {
                 "login": "thorbrink",
