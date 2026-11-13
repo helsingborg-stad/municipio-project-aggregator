@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-13T05:25:30+00:00",
+    "generatedAt": "2026-11-13T06:33:33+00:00",
     "count": 85,
     "repositories": [
         {
@@ -290,6 +290,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "acf-openstreetmap-field",
             "fullName": "helsingborg-stad/acf-openstreetmap-field",
             "description": "",
@@ -301,13 +308,6 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -387,6 +387,20 @@
             "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
         },
         {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-a-o",
+            "fullName": "Considbrs-Webdev/modularity-a-o",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-a-o"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "OpenStreetMap",
+            "fullName": "helsingborg-stad/OpenStreetMap",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
+        },
+        {
             "owner": "helsingborg-stad",
             "name": "attachment-revisions",
             "fullName": "helsingborg-stad/attachment-revisions",
@@ -420,20 +434,6 @@
             "fullName": "helsingborg-stad/modularity-contact-banner",
             "description": "Stores and presents general contact information to the organization",
             "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-a-o",
-            "fullName": "Considbrs-Webdev/modularity-a-o",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-a-o"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "OpenStreetMap",
-            "fullName": "helsingborg-stad/OpenStreetMap",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/OpenStreetMap"
         },
         {
             "owner": "helsingborg-stad",
