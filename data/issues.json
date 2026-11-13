@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-13T12:18:03+00:00",
+    "generatedAt": "2026-11-13T13:12:47+00:00",
     "count": 125,
     "repositories": [
         {
@@ -268,13 +268,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "wpmu-correct-file-paths",
             "fullName": "helsingborg-stad/wpmu-correct-file-paths",
@@ -287,6 +280,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
