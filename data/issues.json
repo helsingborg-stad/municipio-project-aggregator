@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-15T09:12:38+00:00",
+    "generatedAt": "2026-11-15T10:11:19+00:00",
     "count": 125,
     "repositories": [
         {
@@ -150,13 +150,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "lix-calculator",
             "fullName": "helsingborg-stad/lix-calculator",
             "description": "R\u00e4knar ut lix-v\u00e4rde p\u00e5 texter i huvudytan f\u00f6r ett inl\u00e4gg. ",
@@ -168,6 +161,13 @@
             "fullName": "helsingborg-stad/api-schools-manager",
             "description": "",
             "url": "https://github.com/helsingborg-stad/api-schools-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
         },
         {
             "owner": "helsingborg-stad",
@@ -268,20 +268,6 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-correct-file-paths",
-            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
-            "description": "esolves incorrect file paths, when migrating databases between different environments.",
-            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-acf-fatal-error-when-used-too-early",
-            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
-            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-folder-browser",
             "fullName": "Considbrs-Webdev/modularity-folder-browser",
@@ -329,6 +315,20 @@
             "fullName": "helsingborg-stad/search-statistics",
             "description": "Adds awesome but simple search statistics to WordPress Admin. ",
             "url": "https://github.com/helsingborg-stad/search-statistics"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-correct-file-paths",
+            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
+            "description": "esolves incorrect file paths, when migrating databases between different environments.",
+            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-fatal-error-when-used-too-early",
+            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
+            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -402,6 +402,41 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "attachment-revisions",
+            "fullName": "helsingborg-stad/attachment-revisions",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/attachment-revisions"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "custom-short-links",
+            "fullName": "helsingborg-stad/custom-short-links",
+            "description": "Create shorter versions of url:s ",
+            "url": "https://github.com/helsingborg-stad/custom-short-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-propagate-miniorange-saml-sso-settings",
+            "fullName": "helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings",
+            "description": "Adds a wp-cli command to send a miniorange saml sso default setting to all blogs in a network. ",
+            "url": "https://github.com/helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "s3-local-index",
+            "fullName": "helsingborg-stad/s3-local-index",
+            "description": "Stores a local index to make common file operations faster",
+            "url": "https://github.com/helsingborg-stad/s3-local-index"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-contact-banner",
+            "fullName": "helsingborg-stad/modularity-contact-banner",
+            "description": "Stores and presents general contact information to the organization",
+            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -441,41 +476,6 @@
             "fullName": "Considbrs-Webdev/typesense-search",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/typesense-search"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "attachment-revisions",
-            "fullName": "helsingborg-stad/attachment-revisions",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/attachment-revisions"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "custom-short-links",
-            "fullName": "helsingborg-stad/custom-short-links",
-            "description": "Create shorter versions of url:s ",
-            "url": "https://github.com/helsingborg-stad/custom-short-links"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-propagate-miniorange-saml-sso-settings",
-            "fullName": "helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings",
-            "description": "Adds a wp-cli command to send a miniorange saml sso default setting to all blogs in a network. ",
-            "url": "https://github.com/helsingborg-stad/wpmu-propagate-miniorange-saml-sso-settings"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "s3-local-index",
-            "fullName": "helsingborg-stad/s3-local-index",
-            "description": "Stores a local index to make common file operations faster",
-            "url": "https://github.com/helsingborg-stad/s3-local-index"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-contact-banner",
-            "fullName": "helsingborg-stad/modularity-contact-banner",
-            "description": "Stores and presents general contact information to the organization",
-            "url": "https://github.com/helsingborg-stad/modularity-contact-banner"
         },
         {
             "owner": "helsingborg-stad",
