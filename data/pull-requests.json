@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-16T08:40:49+00:00",
+    "generatedAt": "2026-11-16T09:37:55+00:00",
     "count": 82,
     "repositories": [
         {
@@ -507,13 +507,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "redirect",
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
@@ -560,6 +553,13 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "A Modularity module that creates a responsive grid of link cards.",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -3190,7 +3190,7 @@
         },
         {
             "id": "PR_kwDOGyB3t88AAAABNEA2KA",
-            "title": "6.3.8",
+            "title": "6.4.0",
             "url": "https://github.com/municipio-se/municipio-deployment/pull/235",
             "repository": "municipio-se/municipio-deployment",
             "createdAt": "2026-11-05T12:31:47Z",
