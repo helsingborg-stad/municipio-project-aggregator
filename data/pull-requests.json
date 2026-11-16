@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-16T05:28:26+00:00",
+    "generatedAt": "2026-11-16T06:50:08+00:00",
     "count": 85,
     "repositories": [
         {
@@ -297,17 +297,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-correct-file-paths",
-            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
-            "description": "esolves incorrect file paths, when migrating databases between different environments.",
-            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-acf-fatal-error-when-used-too-early",
-            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
-            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -325,10 +318,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+            "name": "wpmu-correct-file-paths",
+            "fullName": "helsingborg-stad/wpmu-correct-file-paths",
+            "description": "esolves incorrect file paths, when migrating databases between different environments.",
+            "url": "https://github.com/helsingborg-stad/wpmu-correct-file-paths"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-acf-fatal-error-when-used-too-early",
+            "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
+            "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
         },
         {
             "owner": "helsingborg-stad",
