@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-17T12:30:23+00:00",
-    "count": 84,
+    "generatedAt": "2026-11-17T13:25:29+00:00",
+    "count": 88,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -275,13 +275,6 @@
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
@@ -301,6 +294,13 @@
             "fullName": "helsingborg-stad/municipio-e2e-tests",
             "description": "",
             "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
@@ -915,6 +915,159 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAs7djs8AAAABP07dfA",
+            "title": "feat: fire danger levels block and alt color for strict fire ban",
+            "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
+            "repository": "helsingborg-stad/api-alarm-integration",
+            "createdAt": "2026-11-17T12:47:20Z",
+            "number": 45,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABP07bTQ",
+            "title": "fix: print component styles for block previews in the editor",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2413",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-17T12:47:18Z",
+            "number": 2413,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "feat: fire danger levels block and alt color for strict fire ban",
+                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
+                    "repository": "helsingborg-stad/api-alarm-integration"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABP07Y6g",
+            "title": "feat: add altColor property to notice",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/782",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-11-17T12:47:15Z",
+            "number": 782,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "feat: fire danger levels block and alt color for strict fire ban",
+                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
+                    "repository": "helsingborg-stad/api-alarm-integration"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOCquRHc8AAAABP07WIA",
+            "title": "feat: add alt modifier to notice",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1375",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-11-17T12:47:13Z",
+            "number": 1375,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "cross-referenced",
+                    "title": "feat: fire danger levels block and alt color for strict fire ban",
+                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
+                    "repository": "helsingborg-stad/api-alarm-integration"
+                }
+            ]
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABPzJ28g",
             "title": "fix: make left/right aligned images float in classic editor content",
