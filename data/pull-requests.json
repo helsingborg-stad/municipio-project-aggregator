@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-17T07:26:44+00:00",
-    "count": 83,
+    "generatedAt": "2026-11-17T08:27:57+00:00",
+    "count": 84,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -275,13 +275,6 @@
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "municipio-e2e-tests",
             "fullName": "helsingborg-stad/municipio-e2e-tests",
@@ -301,6 +294,13 @@
             "fullName": "Considbrs-Webdev/modularity-opening-hours",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
@@ -915,6 +915,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOAuIygs8AAAABPxKobg",
+            "title": "fix: align event sidebar card headings and wrap long organizer links",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2410",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-17T08:08:29Z",
+            "number": 2410,
+            "state": "OPEN",
+            "author": {
+                "login": "camitzdennis",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
+                "url": "https://github.com/camitzdennis",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOAuIygs8AAAABPlDUAw",
             "title": "feat: add image gallery to single event page",
