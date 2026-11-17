@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-17T07:14:32+00:00",
+    "generatedAt": "2026-11-17T08:17:35+00:00",
     "count": 125,
     "repositories": [
         {
@@ -275,13 +275,6 @@
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
-        },
-        {
             "owner": "helsingborg-stad",
             "name": "municipio-e2e-tests",
             "fullName": "helsingborg-stad/municipio-e2e-tests",
@@ -301,6 +294,13 @@
             "fullName": "Considbrs-Webdev/modularity-opening-hours",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
