@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-17T15:13:51+00:00",
+    "generatedAt": "2026-11-17T16:14:59+00:00",
     "count": 125,
     "repositories": [
         {
@@ -283,20 +283,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "acf-openstreetmap-field",
-            "fullName": "helsingborg-stad/acf-openstreetmap-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "search-statistics",
-            "fullName": "helsingborg-stad/search-statistics",
-            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
-            "url": "https://github.com/helsingborg-stad/search-statistics"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-dynamic-guides",
             "fullName": "helsingborg-stad/modularity-dynamic-guides",
             "description": "Module for displaying interactive guides",
@@ -308,6 +294,20 @@
             "fullName": "Considbrs-Webdev/modularity-opening-hours",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-openstreetmap-field",
+            "fullName": "helsingborg-stad/acf-openstreetmap-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-openstreetmap-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "search-statistics",
+            "fullName": "helsingborg-stad/search-statistics",
+            "description": "Adds awesome but simple search statistics to WordPress Admin. ",
+            "url": "https://github.com/helsingborg-stad/search-statistics"
         },
         {
             "owner": "Considbrs-Webdev",
