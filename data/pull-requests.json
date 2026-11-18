@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-18T15:25:34+00:00",
+    "generatedAt": "2026-11-18T16:25:29+00:00",
     "count": 99,
     "repositories": [
         {
@@ -916,6 +916,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOCquRHc8AAAABQKBmaQ",
+            "title": "feat: allow button toggle changes based on popover",
+            "url": "https://github.com/helsingborg-stad/styleguide/pull/1378",
+            "repository": "helsingborg-stad/styleguide",
+            "createdAt": "2026-11-18T15:48:19Z",
+            "number": 1378,
+            "state": "OPEN",
+            "author": {
+                "login": "NiclasNorin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
+                "url": "https://github.com/NiclasNorin",
+                "company": ""
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOOWhNPs8AAAABQHiPUw",
             "title": "fix: give sideloaded uploads a temp file with an extension",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form/pull/174",
@@ -1158,39 +1191,6 @@
                 "login": "NiclasNorin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
                 "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABP6mAew",
-            "title": "fix: include integer IDs in module usage lookup",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2414",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-17T18:54:20Z",
-            "number": 2414,
-            "state": "OPEN",
-            "author": {
-                "login": "jeanfredrik",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/8242740?v=4",
-                "url": "https://github.com/jeanfredrik",
                 "company": ""
             },
             "assignees": [],
