@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-19T12:30:01+00:00",
+    "generatedAt": "2026-11-19T13:25:40+00:00",
     "count": 97,
     "repositories": [
         {
@@ -528,6 +528,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "redirect",
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
@@ -553,13 +560,6 @@
             "fullName": "helsingborg-stad/modularity-frontend-form",
             "description": "",
             "url": "https://github.com/helsingborg-stad/modularity-frontend-form"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -916,6 +916,39 @@
     ],
     "items": [
         {
+            "id": "PR_kwDOAuIygs8AAAABQZXWLQ",
+            "title": "fix(navigation): batch page tree child checks",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2420",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-19T12:55:52Z",
+            "number": 2420,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
             "id": "PR_kwDOCquRHc8AAAABQYw_0Q",
             "title": "feat: allowing for dynamic popover anchoring points",
             "url": "https://github.com/helsingborg-stad/styleguide/pull/1380",
@@ -988,39 +1021,6 @@
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-11-18T12:33:10Z",
             "number": 2418,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOKJ-ozc8AAAABQGm29g",
-            "title": "fix: rename Exit.php to ExitCaller.php to match PSR-4",
-            "url": "https://github.com/helsingborg-stad/api-schools-manager/pull/67",
-            "repository": "helsingborg-stad/api-schools-manager",
-            "createdAt": "2026-11-18T12:07:47Z",
-            "number": 67,
             "state": "OPEN",
             "author": {
                 "login": "camitzdennis",
