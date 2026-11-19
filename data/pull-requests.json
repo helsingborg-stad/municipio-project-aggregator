@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-19T09:27:11+00:00",
-    "count": 101,
+    "generatedAt": "2026-11-19T10:25:31+00:00",
+    "count": 100,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -955,39 +955,6 @@
             "repository": "helsingborg-stad/styleguide",
             "createdAt": "2026-11-19T08:19:05Z",
             "number": 1379,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc8AAAABQKBmaQ",
-            "title": "feat: allow button toggle changes based on popover",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1378",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-18T15:48:19Z",
-            "number": 1378,
             "state": "OPEN",
             "author": {
                 "login": "NiclasNorin",
