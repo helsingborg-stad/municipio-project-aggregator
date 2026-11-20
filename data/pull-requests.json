@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-20T10:25:20+00:00",
-    "count": 96,
+    "generatedAt": "2026-11-20T11:25:28+00:00",
+    "count": 97,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -915,6 +915,46 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOGyB3t88AAAABQpCjvw",
+            "title": "build: use ols-docker-hbg 0.3.0 runtime configuration",
+            "url": "https://github.com/municipio-se/municipio-deployment/pull/242",
+            "repository": "municipio-se/municipio-deployment",
+            "createdAt": "2026-11-20T10:25:42Z",
+            "number": 242,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [
+                {
+                    "id": "LA_kwDOGyB3t87iJkf1",
+                    "name": "feature",
+                    "color": "0E8A16",
+                    "description": "New feature or request"
+                }
+            ],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDOLwUbvs8AAAABQbHNSQ",
             "title": "Feat/backa sponsorship listings",
