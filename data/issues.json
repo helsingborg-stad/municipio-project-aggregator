@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-20T11:11:53+00:00",
+    "generatedAt": "2026-11-20T12:18:28+00:00",
     "count": 124,
     "repositories": [
         {
@@ -129,13 +129,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-entryscape",
-            "fullName": "helsingborg-stad/modularity-entryscape",
-            "description": "Enables modules to display entryscape ",
-            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-volunteer-manager",
             "fullName": "helsingborg-stad/api-volunteer-manager",
             "description": "Managing data for volunteers and their assignments",
@@ -161,6 +154,13 @@
             "fullName": "helsingborg-stad/modularity-timeline",
             "description": "A module to display a timeline",
             "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-entryscape",
+            "fullName": "helsingborg-stad/modularity-entryscape",
+            "description": "Enables modules to display entryscape ",
+            "url": "https://github.com/helsingborg-stad/modularity-entryscape"
         },
         {
             "owner": "helsingborg-stad",
@@ -196,13 +196,6 @@
             "fullName": "helsingborg-stad/api-alarm-integration",
             "description": "Alarmtj\u00e4nst f\u00f6r helsingborg stad. ",
             "url": "https://github.com/helsingborg-stad/api-alarm-integration"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api.helsingborg.se",
-            "fullName": "helsingborg-stad/api.helsingborg.se",
-            "description": "Website for delivering events to the people",
-            "url": "https://github.com/helsingborg-stad/api.helsingborg.se"
         },
         {
             "owner": "helsingborg-stad",
@@ -289,20 +282,6 @@
             "url": "https://github.com/helsingborg-stad/search-statistics"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "modularity-dynamic-guides",
-            "fullName": "helsingborg-stad/modularity-dynamic-guides",
-            "description": "Module for displaying interactive guides",
-            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-opening-hours",
-            "fullName": "Considbrs-Webdev/modularity-opening-hours",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-folder-browser",
             "fullName": "Considbrs-Webdev/modularity-folder-browser",
@@ -329,6 +308,20 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-dynamic-guides",
+            "fullName": "helsingborg-stad/modularity-dynamic-guides",
+            "description": "Module for displaying interactive guides",
+            "url": "https://github.com/helsingborg-stad/modularity-dynamic-guides"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-opening-hours",
+            "fullName": "Considbrs-Webdev/modularity-opening-hours",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-opening-hours"
         },
         {
             "owner": "helsingborg-stad",
