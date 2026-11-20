@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-20T07:26:35+00:00",
-    "count": 97,
+    "generatedAt": "2026-11-20T08:28:00+00:00",
+    "count": 96,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -311,13 +311,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-correct-file-paths",
             "fullName": "helsingborg-stad/wpmu-correct-file-paths",
             "description": "esolves incorrect file paths, when migrating databases between different environments.",
@@ -329,6 +322,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -927,39 +927,6 @@
                 "login": "nRamstedt",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/16800993?u=5f32ebc2004233b9102ef6566138977e3411c7f3&v=4",
                 "url": "https://github.com/nRamstedt",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc8AAAABQYw_0Q",
-            "title": "feat: allowing for dynamic popover anchoring points",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1380",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-19T12:14:39Z",
-            "number": 1380,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
                 "company": ""
             },
             "assignees": [],
