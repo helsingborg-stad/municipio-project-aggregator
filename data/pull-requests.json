@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-24T18:27:42+00:00",
+    "generatedAt": "2026-11-24T19:25:39+00:00",
     "count": 100,
     "repositories": [
         {
@@ -101,17 +101,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "multisite-role-propagation",
-            "fullName": "helsingborg-stad/multisite-role-propagation",
-            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
-            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "better-post-UI",
             "fullName": "helsingborg-stad/better-post-UI",
             "description": "Enhances WordPress admin UI on posts and pages. ",
             "url": "https://github.com/helsingborg-stad/better-post-UI"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "multisite-role-propagation",
+            "fullName": "helsingborg-stad/multisite-role-propagation",
+            "description": "Plugin to quickly set a role for a multisite user on multiple blogs in a network",
+            "url": "https://github.com/helsingborg-stad/multisite-role-propagation"
         },
         {
             "owner": "helsingborg-stad",
@@ -206,17 +206,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-guides",
-            "fullName": "helsingborg-stad/modularity-guides",
-            "description": "Manages guides for Municipio sites ",
-            "url": "https://github.com/helsingborg-stad/modularity-guides"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "modularity-form-builder",
             "fullName": "helsingborg-stad/modularity-form-builder",
             "description": "Simple form builder that uses acf for forms. ",
             "url": "https://github.com/helsingborg-stad/modularity-form-builder"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-guides",
+            "fullName": "helsingborg-stad/modularity-guides",
+            "description": "Manages guides for Municipio sites ",
+            "url": "https://github.com/helsingborg-stad/modularity-guides"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -240,18 +240,18 @@
             "url": "https://github.com/Considbrs-Webdev/modularity-noticeboard"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "modularity-recommend",
-            "fullName": "helsingborg-stad/modularity-recommend",
-            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
-            "url": "https://github.com/helsingborg-stad/modularity-recommend"
-        },
-        {
             "owner": "Considbrs-Webdev",
             "name": "modularity-link-cards",
             "fullName": "Considbrs-Webdev/modularity-link-cards",
             "description": "A grid of clickable link cards with icons.",
             "url": "https://github.com/Considbrs-Webdev/modularity-link-cards"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-recommend",
+            "fullName": "helsingborg-stad/modularity-recommend",
+            "description": "Modularity recommend. Display static or AI generated recommendation links. ",
+            "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
             "owner": "helsingborg-stad",
@@ -290,13 +290,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-correct-file-paths",
             "fullName": "helsingborg-stad/wpmu-correct-file-paths",
             "description": "esolves incorrect file paths, when migrating databases between different environments.",
@@ -308,6 +301,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -500,13 +500,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-invalidate-login-pagecache",
             "fullName": "helsingborg-stad/wpmu-invalidate-login-pagecache",
             "description": "Invalidates pagecache on submit of the login form.",
@@ -525,6 +518,27 @@
             "fullName": "Considbrs-Webdev/modularity-quick-links",
             "description": "A Modularity module that creates a responsive grid of link cards.",
             "url": "https://github.com/Considbrs-Webdev/modularity-quick-links"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-arcgis-map",
+            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -553,20 +567,6 @@
             "fullName": "helsingborg-stad/redirect",
             "description": "Functionality for redirecting between domain names. ",
             "url": "https://github.com/helsingborg-stad/redirect"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-arcgis-map",
-            "fullName": "Considbrs-Webdev/modularity-arcgis-map",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         }
     ],
     "authors": [
