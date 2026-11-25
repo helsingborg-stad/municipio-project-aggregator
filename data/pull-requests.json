@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-25T16:28:28+00:00",
+    "generatedAt": "2026-11-25T17:25:22+00:00",
     "count": 97,
     "repositories": [
         {
@@ -325,27 +325,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "acf-icon-field",
-            "fullName": "helsingborg-stad/acf-icon-field",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/acf-icon-field"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-focus-point",
-            "fullName": "helsingborg-stad/wpmu-focus-point",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "mod-my-pages",
-            "fullName": "helsingborg-stad/mod-my-pages",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/mod-my-pages"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "visit-custom-posttypes-taxonomies",
             "fullName": "helsingborg-stad/visit-custom-posttypes-taxonomies",
             "description": "",
@@ -364,6 +343,27 @@
             "fullName": "helsingborg-stad/broken-link-detector",
             "description": "Detects and fixes broken links (internally)",
             "url": "https://github.com/helsingborg-stad/broken-link-detector"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "acf-icon-field",
+            "fullName": "helsingborg-stad/acf-icon-field",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/acf-icon-field"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-focus-point",
+            "fullName": "helsingborg-stad/wpmu-focus-point",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/wpmu-focus-point"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "mod-my-pages",
+            "fullName": "helsingborg-stad/mod-my-pages",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/mod-my-pages"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -521,10 +521,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+            "name": "api-sponsor-manager",
+            "fullName": "helsingborg-stad/api-sponsor-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
         },
         {
             "owner": "Considbrs-Webdev",
@@ -535,10 +535,10 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "api-sponsor-manager",
-            "fullName": "helsingborg-stad/api-sponsor-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-sponsor-manager"
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
