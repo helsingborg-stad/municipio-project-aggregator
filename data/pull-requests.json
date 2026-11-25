@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-25T15:25:33+00:00",
-    "count": 96,
+    "generatedAt": "2026-11-25T16:28:28+00:00",
+    "count": 97,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -908,6 +908,39 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDORWsnoc8AAAABR3xxrw",
+            "title": "fix(admin): disable hidden vector custom-param inputs and align step with presets",
+            "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/19",
+            "repository": "Considbrs-Webdev/typesense-search",
+            "createdAt": "2026-11-25T15:29:14Z",
+            "number": 19,
+            "state": "OPEN",
+            "author": {
+                "login": "WilliamLundqvist",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
+                "url": "https://github.com/WilliamLundqvist",
+                "company": "Consid Bor\u00e5s AB"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDORWsnoc8AAAABRzS5xw",
             "title": "feat: add opt-in embedded search and network cross-site multi-search",
