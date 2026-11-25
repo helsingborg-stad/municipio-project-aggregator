@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-25T09:27:55+00:00",
-    "count": 100,
+    "generatedAt": "2026-11-25T10:26:20+00:00",
+    "count": 95,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -136,6 +136,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "modularity-testimonials",
             "fullName": "helsingborg-stad/modularity-testimonials",
             "description": "Modularity plugin to display testemonials",
@@ -147,13 +154,6 @@
             "fullName": "helsingborg-stad/webhooks-manager",
             "description": "Create and manage webhooks from WordPress action hooks",
             "url": "https://github.com/helsingborg-stad/webhooks-manager"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
         },
         {
             "owner": "helsingborg-stad",
@@ -1041,39 +1041,6 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOAuIygs8AAAABQpzkZQ",
-            "title": "fix: return no posts when filtered term does not exist",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2422",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-20T11:26:22Z",
-            "number": 2422,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOLwUbvs8AAAABQbHNSQ",
             "title": "Feat/backa sponsorship listings",
             "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/56",
@@ -1491,144 +1458,12 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOAuIygs8AAAABPydcrg",
-            "title": "fix: load user editable list script so private lists can be saved",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2411",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-17T09:48:24Z",
-            "number": 2411,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOA4iurc8AAAABPyBzDg",
-            "title": "feat: show when on answer options",
-            "url": "https://github.com/helsingborg-stad/modularity-guides/pull/33",
-            "repository": "helsingborg-stad/modularity-guides",
-            "createdAt": "2026-11-17T09:17:14Z",
-            "number": 33,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABPxKobg",
-            "title": "fix: align event sidebar card headings and wrap long organizer links",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2410",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-17T08:08:29Z",
-            "number": 2410,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOAuIygs8AAAABPlDUAw",
             "title": "feat: add image gallery to single event page",
             "url": "https://github.com/helsingborg-stad/Municipio/pull/2409",
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-11-16T16:05:47Z",
             "number": 2409,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABPj2XPg",
-            "title": "fix: count taxonomy filter terms among posts shown in the list",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2408",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-16T14:49:36Z",
-            "number": 2408,
             "state": "OPEN",
             "author": {
                 "login": "camitzdennis",
