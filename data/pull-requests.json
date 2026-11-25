@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-25T13:26:21+00:00",
-    "count": 98,
+    "generatedAt": "2026-11-25T14:26:53+00:00",
+    "count": 96,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -908,72 +908,6 @@
         }
     ],
     "items": [
-        {
-            "id": "PR_kwDOCquRHc8AAAABR1hRYA",
-            "title": "fix: update docs according to new drawer reqirements",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1384",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-25T13:08:15Z",
-            "number": 1384,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc8AAAABR1RMFA",
-            "title": "fix: drawer tests",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1383",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-25T12:51:18Z",
-            "number": 1383,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
         {
             "id": "PR_kwDORWsnoc8AAAABRzS5xw",
             "title": "feat: add opt-in embedded search and network cross-site multi-search",
