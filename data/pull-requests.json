@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-26T13:26:25+00:00",
-    "count": 88,
+    "generatedAt": "2026-11-26T14:26:54+00:00",
+    "count": 91,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -290,13 +290,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-correct-file-paths",
             "fullName": "helsingborg-stad/wpmu-correct-file-paths",
             "description": "esolves incorrect file paths, when migrating databases between different environments.",
@@ -308,6 +301,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
@@ -521,13 +521,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-sponsor-manager",
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
@@ -539,6 +532,13 @@
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -908,6 +908,112 @@
         }
     ],
     "items": [
+        {
+            "id": "PR_kwDOE96d8c8AAAABSIazqw",
+            "title": "fix: syncronize both attributes and classes with their respective lists.",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/788",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-11-26T14:23:07Z",
+            "number": 788,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
+        {
+            "id": "PR_kwDOAuIygs8AAAABSIOjiQ",
+            "title": "Fix/modularity fragment cache growth",
+            "url": "https://github.com/helsingborg-stad/Municipio/pull/2437",
+            "repository": "helsingborg-stad/Municipio",
+            "createdAt": "2026-11-26T14:10:39Z",
+            "number": 2437,
+            "state": "OPEN",
+            "author": {
+                "login": "thorbrink",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
+                "url": "https://github.com/thorbrink",
+                "company": "@helsingborg-stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 1
+            },
+            "relationships": [
+                {
+                    "event": "connected",
+                    "title": "Modularity fragment cache grows without limit and causes PHP OOM in object-cache.php",
+                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2435",
+                    "repository": "helsingborg-stad/Municipio"
+                }
+            ]
+        },
+        {
+            "id": "PR_kwDOE96d8c8AAAABSIMZog",
+            "title": "fix: add $componentName in views.",
+            "url": "https://github.com/helsingborg-stad/component-library/pull/786",
+            "repository": "helsingborg-stad/component-library",
+            "createdAt": "2026-11-26T14:08:22Z",
+            "number": 786,
+            "state": "OPEN",
+            "author": {
+                "login": "sebastianthulin",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
+                "url": "https://github.com/sebastianthulin",
+                "company": "Helsingborgs stad"
+            },
+            "assignees": [],
+            "labels": [],
+            "milestone": null,
+            "type": null,
+            "subIssues": {
+                "total": 0,
+                "completed": 0,
+                "percentCompleted": 0
+            },
+            "subIssueUrls": [],
+            "relationshipSummary": {
+                "blockedBy": 0,
+                "totalBlockedBy": 0,
+                "blocking": 0,
+                "totalBlocking": 0,
+                "linked": 0
+            },
+            "relationships": []
+        },
         {
             "id": "PR_kwDORWsnoc8AAAABR3xxrw",
             "title": "fix(admin): disable hidden vector custom-param inputs and align step with presets",
