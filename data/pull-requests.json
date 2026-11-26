@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-26T22:25:30+00:00",
+    "generatedAt": "2026-11-26T23:25:30+00:00",
     "count": 94,
     "repositories": [
         {
@@ -143,17 +143,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "modularity-timeline",
-            "fullName": "helsingborg-stad/modularity-timeline",
-            "description": "A module to display a timeline",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "api-volunteer-manager",
             "fullName": "helsingborg-stad/api-volunteer-manager",
             "description": "Managing data for volunteers and their assignments",
             "url": "https://github.com/helsingborg-stad/api-volunteer-manager"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-timeline",
+            "fullName": "helsingborg-stad/modularity-timeline",
+            "description": "A module to display a timeline",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline"
         },
         {
             "owner": "helsingborg-stad",
@@ -254,6 +254,13 @@
             "url": "https://github.com/helsingborg-stad/modularity-recommend"
         },
         {
+            "owner": "Considbrs-Webdev",
+            "name": "modularity-folder-browser",
+            "fullName": "Considbrs-Webdev/modularity-folder-browser",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
+        },
+        {
             "owner": "helsingborg-stad",
             "name": "wpmu-remove-user-endpoint",
             "fullName": "helsingborg-stad/wpmu-remove-user-endpoint",
@@ -266,13 +273,6 @@
             "fullName": "helsingborg-stad/miniorange-saml-20-single-sign-on",
             "description": "Fork of miniorange-saml-20-single-sign-on with added filters. ",
             "url": "https://github.com/helsingborg-stad/miniorange-saml-20-single-sign-on"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "modularity-folder-browser",
-            "fullName": "Considbrs-Webdev/modularity-folder-browser",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/modularity-folder-browser"
         },
         {
             "owner": "helsingborg-stad",
@@ -290,13 +290,6 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "municipio-e2e-tests",
-            "fullName": "helsingborg-stad/municipio-e2e-tests",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-correct-file-paths",
             "fullName": "helsingborg-stad/wpmu-correct-file-paths",
             "description": "esolves incorrect file paths, when migrating databases between different environments.",
@@ -308,6 +301,13 @@
             "fullName": "helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early",
             "description": "Throws a descriptive exception when an ACF field is accessed before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-fatal-error-when-used-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "municipio-e2e-tests",
+            "fullName": "helsingborg-stad/municipio-e2e-tests",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/municipio-e2e-tests"
         },
         {
             "owner": "helsingborg-stad",
