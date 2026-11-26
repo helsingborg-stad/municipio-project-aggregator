@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-26T08:29:21+00:00",
+    "generatedAt": "2026-11-26T09:27:18+00:00",
     "count": 90,
     "repositories": [
         {
@@ -521,6 +521,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api-sponsor-manager",
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
@@ -532,13 +539,6 @@
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -1042,7 +1042,7 @@
         },
         {
             "id": "PR_kwDOGyB3t88AAAABQrf_CQ",
-            "title": "6.4.1",
+            "title": "6.5.0",
             "url": "https://github.com/municipio-se/municipio-deployment/pull/244",
             "repository": "municipio-se/municipio-deployment",
             "createdAt": "2026-11-20T13:43:09Z",
