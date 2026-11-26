@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-26T11:25:25+00:00",
-    "count": 92,
+    "generatedAt": "2026-11-26T12:32:02+00:00",
+    "count": 89,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -909,72 +909,6 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOCquRHc8AAAABSFvwFQ",
-            "title": "feat: allow banner content to take a node instead of string",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1389",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-26T11:11:33Z",
-            "number": 1389,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc8AAAABSFty6g",
-            "title": "feat: check if chat banner is visible",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1388",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-26T11:09:29Z",
-            "number": 1388,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDORWsnoc8AAAABR3xxrw",
             "title": "fix(admin): disable hidden vector custom-param inputs and align step with presets",
             "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/19",
@@ -1020,39 +954,6 @@
                 "avatarUrl": "https://avatars.githubusercontent.com/u/157830304?u=1518f2787ea42dee9e4e4579a9b7a38ab91887f6&v=4",
                 "url": "https://github.com/WilliamLundqvist",
                 "company": "Consid Bor\u00e5s AB"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOCquRHc8AAAABRhNCbA",
-            "title": "feat: chat input cleared disabled state",
-            "url": "https://github.com/helsingborg-stad/styleguide/pull/1382",
-            "repository": "helsingborg-stad/styleguide",
-            "createdAt": "2026-11-24T10:44:10Z",
-            "number": 1382,
-            "state": "OPEN",
-            "author": {
-                "login": "NiclasNorin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/103985736?u=c40078a426bd0972d8af8c1d417731ede99dcd95&v=4",
-                "url": "https://github.com/NiclasNorin",
-                "company": ""
             },
             "assignees": [],
             "labels": [],
