@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-26T14:14:01+00:00",
+    "generatedAt": "2026-11-26T15:13:11+00:00",
     "count": 124,
     "repositories": [
         {
@@ -953,7 +953,7 @@
             },
             "relationships": [
                 {
-                    "event": "connected",
+                    "event": "cross-referenced",
                     "title": "Fix/modularity fragment cache growth",
                     "url": "https://github.com/helsingborg-stad/Municipio/pull/2437",
                     "repository": "helsingborg-stad/Municipio"
