@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-26T09:15:11+00:00",
-    "count": 124,
+    "generatedAt": "2026-11-26T10:13:36+00:00",
+    "count": 123,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -521,6 +521,13 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-equeue-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
+            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api-sponsor-manager",
             "fullName": "helsingborg-stad/api-sponsor-manager",
             "description": "",
@@ -532,13 +539,6 @@
             "fullName": "Considbrs-Webdev/modularity-arcgis-map",
             "description": "",
             "url": "https://github.com/Considbrs-Webdev/modularity-arcgis-map"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-equeue-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
-            "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
         },
         {
             "owner": "helsingborg-stad",
@@ -5480,59 +5480,6 @@
                     "title": "Fix: Scope devcontainer volume mount to project directory only",
                     "url": "https://github.com/municipio-se/municipio-deployment/pull/152",
                     "repository": "municipio-se/municipio-deployment"
-                }
-            ]
-        },
-        {
-            "id": "I_kwDOPl0lE87ajAfa",
-            "title": "Add When statement",
-            "url": "https://github.com/helsingborg-stad/wputilservice/issues/8",
-            "repository": "helsingborg-stad/wputilservice",
-            "createdAt": "2025-11-26T09:15:37Z",
-            "number": 8,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [
-                {
-                    "login": "Copilot",
-                    "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-                    "url": "https://github.com/Copilot",
-                    "company": ""
-                }
-            ],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 2
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "Add when() for conditional asset enqueuing",
-                    "url": "https://github.com/helsingborg-stad/wputilservice/pull/9",
-                    "repository": "helsingborg-stad/wputilservice"
-                },
-                {
-                    "event": "cross-referenced",
-                    "title": "Cannot enqueue assets correctly when plugin is used as a mu-plugin [v2]",
-                    "url": "https://github.com/helsingborg-stad/wputilservice/issues/18",
-                    "repository": "helsingborg-stad/wputilservice"
                 }
             ]
         }
