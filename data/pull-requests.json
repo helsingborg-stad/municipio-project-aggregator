@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-27T18:28:03+00:00",
+    "generatedAt": "2026-11-27T19:25:31+00:00",
     "count": 84,
     "repositories": [
         {
@@ -115,17 +115,17 @@
         },
         {
             "owner": "helsingborg-stad",
-            "name": "s3-uploads-custom-endpoint",
-            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
-        },
-        {
-            "owner": "helsingborg-stad",
             "name": "wpmu-acf-google-maps-key",
             "fullName": "helsingborg-stad/wpmu-acf-google-maps-key",
             "description": "Adds a field to enter a google maps api key for ACF",
             "url": "https://github.com/helsingborg-stad/wpmu-acf-google-maps-key"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "s3-uploads-custom-endpoint",
+            "fullName": "helsingborg-stad/s3-uploads-custom-endpoint",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/s3-uploads-custom-endpoint"
         },
         {
             "owner": "helsingborg-stad",
@@ -395,6 +395,48 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "wpmu-network-admin-url",
+            "fullName": "helsingborg-stad/wpmu-network-admin-url",
+            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
+            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wp-mu-plugins-url-everywhere",
+            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
+            "description": "Allow Plugins URL function to create urls towards any directory",
+            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-litespeed-common-settings",
+            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
+            "description": "Use blog 1 as the master for all settings in litespeed configuration",
+            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
+        },
+        {
+            "owner": "Considbrs-Webdev",
+            "name": "typesense-search",
+            "fullName": "Considbrs-Webdev/typesense-search",
+            "description": "",
+            "url": "https://github.com/Considbrs-Webdev/typesense-search"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "wpmu-fatal-error-when-translation-too-early",
+            "fullName": "helsingborg-stad/wpmu-fatal-error-when-translation-too-early",
+            "description": "Throws a descriptive exception when an translation is loaded before WordPress has initialized.",
+            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-translation-too-early"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "modularity-products",
+            "fullName": "helsingborg-stad/modularity-products",
+            "description": "Display products & offers matrix",
+            "url": "https://github.com/helsingborg-stad/modularity-products"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "api-exhibition-manager",
             "fullName": "helsingborg-stad/api-exhibition-manager",
             "description": "",
@@ -462,48 +504,6 @@
             "fullName": "helsingborg-stad/wpmu-fatal-error-when-equeue-too-early",
             "description": "Throws a descriptive exception when an enqueue or register of a asset is made before WordPress has initialized.",
             "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-equeue-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-network-admin-url",
-            "fullName": "helsingborg-stad/wpmu-network-admin-url",
-            "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
-            "url": "https://github.com/helsingborg-stad/wpmu-network-admin-url"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wp-mu-plugins-url-everywhere",
-            "fullName": "helsingborg-stad/wp-mu-plugins-url-everywhere",
-            "description": "Allow Plugins URL function to create urls towards any directory",
-            "url": "https://github.com/helsingborg-stad/wp-mu-plugins-url-everywhere"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-litespeed-common-settings",
-            "fullName": "helsingborg-stad/wpmu-litespeed-common-settings",
-            "description": "Use blog 1 as the master for all settings in litespeed configuration",
-            "url": "https://github.com/helsingborg-stad/wpmu-litespeed-common-settings"
-        },
-        {
-            "owner": "Considbrs-Webdev",
-            "name": "typesense-search",
-            "fullName": "Considbrs-Webdev/typesense-search",
-            "description": "",
-            "url": "https://github.com/Considbrs-Webdev/typesense-search"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "wpmu-fatal-error-when-translation-too-early",
-            "fullName": "helsingborg-stad/wpmu-fatal-error-when-translation-too-early",
-            "description": "Throws a descriptive exception when an translation is loaded before WordPress has initialized.",
-            "url": "https://github.com/helsingborg-stad/wpmu-fatal-error-when-translation-too-early"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "modularity-products",
-            "fullName": "helsingborg-stad/modularity-products",
-            "description": "Display products & offers matrix",
-            "url": "https://github.com/helsingborg-stad/modularity-products"
         },
         {
             "owner": "helsingborg-stad",
