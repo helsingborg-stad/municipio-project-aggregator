@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-27T13:25:30+00:00",
-    "count": 90,
+    "generatedAt": "2026-11-27T14:25:53+00:00",
+    "count": 87,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -811,6 +811,12 @@
             "company": ""
         },
         {
+            "login": "mange84a",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/6149816?u=ed3f86a3c663b8fc160dfde1f7203261632c00d7&v=4",
+            "url": "https://github.com/mange84a",
+            "company": "Magnus Andersson EF"
+        },
+        {
             "login": "michaelclaesson",
             "avatarUrl": "https://avatars.githubusercontent.com/u/18331514?v=4",
             "url": "https://github.com/michaelclaesson",
@@ -909,91 +915,18 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOE96d8c8AAAABSIazqw",
-            "title": "fix: syncronize both attributes and classes with their respective lists.",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/788",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-11-26T14:23:07Z",
-            "number": 788,
+            "id": "PR_kwDOBm8whs8AAAABSX3mhw",
+            "title": "Add an extra option to the dateformat",
+            "url": "https://github.com/helsingborg-stad/modularity-timeline/pull/16",
+            "repository": "helsingborg-stad/modularity-timeline",
+            "createdAt": "2026-11-27T14:05:28Z",
+            "number": 16,
             "state": "OPEN",
             "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABSIOjiQ",
-            "title": "Fix/modularity fragment cache growth",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2437",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-26T14:10:39Z",
-            "number": 2437,
-            "state": "OPEN",
-            "author": {
-                "login": "thorbrink",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/1064724?u=c160d0bbd448da06436bb83b1b60b1f37efbb887&v=4",
-                "url": "https://github.com/thorbrink",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "connected",
-                    "title": "Modularity fragment cache grows without limit and causes PHP OOM in object-cache.php",
-                    "url": "https://github.com/helsingborg-stad/Municipio/issues/2435",
-                    "repository": "helsingborg-stad/Municipio"
-                }
-            ]
-        },
-        {
-            "id": "PR_kwDOE96d8c8AAAABSIMZog",
-            "title": "fix: add $componentName in views.",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/786",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-11-26T14:08:22Z",
-            "number": 786,
-            "state": "OPEN",
-            "author": {
-                "login": "sebastianthulin",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/797129?u=5954273c02b122b8f41cb488b854ca85269fc581&v=4",
-                "url": "https://github.com/sebastianthulin",
-                "company": "Helsingborgs stad"
+                "login": "mange84a",
+                "avatarUrl": "https://avatars.githubusercontent.com/u/6149816?u=ed3f86a3c663b8fc160dfde1f7203261632c00d7&v=4",
+                "url": "https://github.com/mange84a",
+                "company": "Magnus Andersson EF"
             },
             "assignees": [],
             "labels": [],
@@ -1186,46 +1119,6 @@
             "repository": "helsingborg-stad/Municipio",
             "createdAt": "2026-11-17T12:47:18Z",
             "number": 2413,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "feat: fire danger levels block and alt color for strict fire ban",
-                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
-                    "repository": "helsingborg-stad/api-alarm-integration"
-                }
-            ]
-        },
-        {
-            "id": "PR_kwDOE96d8c8AAAABP07Y6g",
-            "title": "feat: add altColor property to notice",
-            "url": "https://github.com/helsingborg-stad/component-library/pull/782",
-            "repository": "helsingborg-stad/component-library",
-            "createdAt": "2026-11-17T12:47:15Z",
-            "number": 782,
             "state": "OPEN",
             "author": {
                 "login": "camitzdennis",
