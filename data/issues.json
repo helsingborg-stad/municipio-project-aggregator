@@ -5,7 +5,7 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-27T14:13:16+00:00",
+    "generatedAt": "2026-11-27T15:12:42+00:00",
     "count": 123,
     "repositories": [
         {
@@ -37,18 +37,18 @@
             "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "api-event-manager",
-            "fullName": "helsingborg-stad/api-event-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-event-manager"
-        },
-        {
             "owner": "municipio-se",
             "name": "municipio-deployment",
             "fullName": "municipio-se/municipio-deployment",
             "description": "Deploy Municipio",
             "url": "https://github.com/municipio-se/municipio-deployment"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-event-manager",
+            "fullName": "helsingborg-stad/api-event-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-event-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -381,6 +381,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -420,20 +434,6 @@
             "fullName": "helsingborg-stad/modularity-products",
             "description": "Display products & offers matrix",
             "url": "https://github.com/helsingborg-stad/modularity-products"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
         },
         {
             "owner": "helsingborg-stad",
