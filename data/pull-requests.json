@@ -5,8 +5,8 @@
         "municipio-se",
         "getmunicipio"
     ],
-    "generatedAt": "2026-11-27T14:25:53+00:00",
-    "count": 87,
+    "generatedAt": "2026-11-27T15:25:33+00:00",
+    "count": 84,
     "repositories": [
         {
             "owner": "helsingborg-stad",
@@ -37,18 +37,18 @@
             "url": "https://github.com/helsingborg-stad/wp-page-for-posttype"
         },
         {
-            "owner": "helsingborg-stad",
-            "name": "api-event-manager",
-            "fullName": "helsingborg-stad/api-event-manager",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-event-manager"
-        },
-        {
             "owner": "municipio-se",
             "name": "municipio-deployment",
             "fullName": "municipio-se/municipio-deployment",
             "description": "Deploy Municipio",
             "url": "https://github.com/municipio-se/municipio-deployment"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-event-manager",
+            "fullName": "helsingborg-stad/api-event-manager",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-event-manager"
         },
         {
             "owner": "helsingborg-stad",
@@ -381,6 +381,20 @@
         },
         {
             "owner": "helsingborg-stad",
+            "name": "multi-network-urls",
+            "fullName": "helsingborg-stad/multi-network-urls",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/multi-network-urls"
+        },
+        {
+            "owner": "helsingborg-stad",
+            "name": "api-volunteer-manager-integration",
+            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
+            "description": "",
+            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
+        },
+        {
+            "owner": "helsingborg-stad",
             "name": "wpmu-network-admin-url",
             "fullName": "helsingborg-stad/wpmu-network-admin-url",
             "description": "Fixes network ur's when running WordPress as multisite aquired by composer",
@@ -420,20 +434,6 @@
             "fullName": "helsingborg-stad/modularity-products",
             "description": "Display products & offers matrix",
             "url": "https://github.com/helsingborg-stad/modularity-products"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "multi-network-urls",
-            "fullName": "helsingborg-stad/multi-network-urls",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/multi-network-urls"
-        },
-        {
-            "owner": "helsingborg-stad",
-            "name": "api-volunteer-manager-integration",
-            "fullName": "helsingborg-stad/api-volunteer-manager-integration",
-            "description": "",
-            "url": "https://github.com/helsingborg-stad/api-volunteer-manager-integration"
         },
         {
             "owner": "helsingborg-stad",
@@ -812,9 +812,9 @@
         },
         {
             "login": "mange84a",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/6149816?u=ed3f86a3c663b8fc160dfde1f7203261632c00d7&v=4",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/6149816?v=4",
             "url": "https://github.com/mange84a",
-            "company": "Magnus Andersson EF"
+            "company": ""
         },
         {
             "login": "michaelclaesson",
@@ -915,39 +915,6 @@
     ],
     "items": [
         {
-            "id": "PR_kwDOBm8whs8AAAABSX3mhw",
-            "title": "Add an extra option to the dateformat",
-            "url": "https://github.com/helsingborg-stad/modularity-timeline/pull/16",
-            "repository": "helsingborg-stad/modularity-timeline",
-            "createdAt": "2026-11-27T14:05:28Z",
-            "number": 16,
-            "state": "OPEN",
-            "author": {
-                "login": "mange84a",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/6149816?u=ed3f86a3c663b8fc160dfde1f7203261632c00d7&v=4",
-                "url": "https://github.com/mange84a",
-                "company": "Magnus Andersson EF"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDORWsnoc8AAAABR3xxrw",
             "title": "fix(admin): disable hidden vector custom-param inputs and align step with presets",
             "url": "https://github.com/Considbrs-Webdev/typesense-search/pull/19",
@@ -1047,41 +1014,8 @@
             "relationships": []
         },
         {
-            "id": "PR_kwDOLwUbvs8AAAABQbHNSQ",
-            "title": "Feat/backa sponsorship listings",
-            "url": "https://github.com/helsingborg-stad/schema.org-transformer/pull/56",
-            "repository": "helsingborg-stad/schema.org-transformer",
-            "createdAt": "2026-11-19T14:49:19Z",
-            "number": 56,
-            "state": "OPEN",
-            "author": {
-                "login": "nRamstedt",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/16800993?u=5f32ebc2004233b9102ef6566138977e3411c7f3&v=4",
-                "url": "https://github.com/nRamstedt",
-                "company": ""
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 0
-            },
-            "relationships": []
-        },
-        {
             "id": "PR_kwDOAs7djs8AAAABP07dfA",
-            "title": "feat: fire danger levels block and alt color for strict fire ban",
+            "title": "fix: use danger notice with alt color for strict fire ban",
             "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
             "repository": "helsingborg-stad/api-alarm-integration",
             "createdAt": "2026-11-17T12:47:20Z",
@@ -1111,46 +1045,6 @@
                 "linked": 0
             },
             "relationships": []
-        },
-        {
-            "id": "PR_kwDOAuIygs8AAAABP07bTQ",
-            "title": "fix: print component styles for block previews in the editor",
-            "url": "https://github.com/helsingborg-stad/Municipio/pull/2413",
-            "repository": "helsingborg-stad/Municipio",
-            "createdAt": "2026-11-17T12:47:18Z",
-            "number": 2413,
-            "state": "OPEN",
-            "author": {
-                "login": "camitzdennis",
-                "avatarUrl": "https://avatars.githubusercontent.com/u/153924153?u=56c8f99798fa05d5cd4d86e282b5e7a91f4f5626&v=4",
-                "url": "https://github.com/camitzdennis",
-                "company": "@helsingborg-stad"
-            },
-            "assignees": [],
-            "labels": [],
-            "milestone": null,
-            "type": null,
-            "subIssues": {
-                "total": 0,
-                "completed": 0,
-                "percentCompleted": 0
-            },
-            "subIssueUrls": [],
-            "relationshipSummary": {
-                "blockedBy": 0,
-                "totalBlockedBy": 0,
-                "blocking": 0,
-                "totalBlocking": 0,
-                "linked": 1
-            },
-            "relationships": [
-                {
-                    "event": "cross-referenced",
-                    "title": "feat: fire danger levels block and alt color for strict fire ban",
-                    "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
-                    "repository": "helsingborg-stad/api-alarm-integration"
-                }
-            ]
         },
         {
             "id": "PR_kwDOCquRHc8AAAABP07WIA",
@@ -1186,7 +1080,7 @@
             "relationships": [
                 {
                     "event": "cross-referenced",
-                    "title": "feat: fire danger levels block and alt color for strict fire ban",
+                    "title": "fix: use danger notice with alt color for strict fire ban",
                     "url": "https://github.com/helsingborg-stad/api-alarm-integration/pull/45",
                     "repository": "helsingborg-stad/api-alarm-integration"
                 }
